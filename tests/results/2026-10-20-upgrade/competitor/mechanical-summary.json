@@ -1,0 +1,12 @@
+{
+  "cases_per_condition": 60,
+  "outputs": 120,
+  "protocol": 2,
+  "criteria_frozen_before_generation": true,
+  "literal_failures": 0,
+  "comment_statuses": {
+    "passed": 0,
+    "failed": 0,
+    "unsupported": 0
+  }
+}

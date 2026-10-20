@@ -1,0 +1,30 @@
+{
+  "id": "H053",
+  "condition": "baseline",
+  "status": "failed",
+  "started_at_utc": "2026-10-20T11:18:24.629603+00:00",
+  "prompt_sha256": "ca00382d8dd3343aa90b000c08542f89d78ef181ac25d6768bc03f24a70904b2",
+  "context_sha256": {},
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--color",
+    "never",
+    "--json",
+    "-C",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\baseline\\batch-087\\cli-attempt-01",
+    "-o",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\baseline\\batch-087\\cli-attempt-01\\final.json",
+    "--output-schema",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\baseline\\batch-087\\cli-attempt-01\\output-schema.json",
+    "-"
+  ],
+  "timeout_seconds": 180
+}

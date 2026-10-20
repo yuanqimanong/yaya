@@ -1,0 +1,6 @@
+{"type":"thread.started","thread_id":"01a15914-8f69-7bb0-b469-683f7f8c0c34"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"{\"id\":\"X003\",\"text\":\"您的申请已收到。审核预计需要三个工作日，目前尚无法保证审核结果，感谢您的理解。\",\"notes\":\"\",\"skill_used\":false}"}}
+{"type":"turn.completed","usage":{"input_tokens":19414,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":145,"reasoning_output_tokens":95}}

@@ -1,0 +1,612 @@
+{
+  "runner_protocol": 1,
+  "runner_sha256": "3b5e33fedcde06760fc196c60c197f4601287a800ba5d05a78431d534f581dfd",
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
+  ],
+  "manifest_sha256": "51044372ed4668ad4cab718c6dce83231ca4a591c8c7cbd5b360da7aed7af614",
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "conditions": [
+    "baseline"
+  ],
+  "baseline_kind": "competitor",
+  "competitor_sources": {
+    "humanizer": {
+      "repository": "blader/humanizer",
+      "commit": "8c307f367c91bd974002f10f2be2965d642c13df",
+      "obtained_at_utc": "2026-10-20T09:54:55.996314+00:00",
+      "retrieval": "GitHub public API commit lookup, raw.githubusercontent.com immutable revision downloads",
+      "executed_external_code": false,
+      "files": [
+        {
+          "path": "SKILL.md",
+          "url": "https://raw.githubusercontent.com/blader/humanizer/8c307f367c91bd974002f10f2be2965d642c13df/SKILL.md",
+          "bytes": 32348,
+          "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/blader/humanizer/8c307f367c91bd974002f10f2be2965d642c13df/LICENSE",
+          "bytes": 1066,
+          "sha256": "4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96"
+        }
+      ]
+    },
+    "humanizer-zh": {
+      "repository": "op7418/Humanizer-zh",
+      "commit": "f4518a8eab97b8bfebc66a89d34320a89bef6930",
+      "obtained_at_utc": "2026-10-20T09:54:56.114899+00:00",
+      "retrieval": "GitHub public API commit lookup, raw.githubusercontent.com immutable revision downloads",
+      "executed_external_code": false,
+      "files": [
+        {
+          "path": "SKILL.md",
+          "url": "https://raw.githubusercontent.com/op7418/Humanizer-zh/f4518a8eab97b8bfebc66a89d34320a89bef6930/SKILL.md",
+          "bytes": 20527,
+          "sha256": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/op7418/Humanizer-zh/f4518a8eab97b8bfebc66a89d34320a89bef6930/LICENSE",
+          "bytes": 1063,
+          "sha256": "aa00e74769e1b9d8e7fa7094dbfcca9b129a0ded6dce1cf4da050b99146d2fa7"
+        }
+      ]
+    }
+  },
+  "tool_policy": "forbidden in prompt; tool or unknown item events invalidate output",
+  "tool_claim": "no tool activity observed in accepted JSONL; tools are not physically disabled",
+  "project_instructions": "project_doc_max_bytes=0 for this process; host CLI configuration otherwise inherited",
+  "isolation": "one ephemeral CLI process and working directory per case",
+  "jobs": [
+    {
+      "directory": "baseline/batch-001",
+      "id": "H001",
+      "condition": "baseline",
+      "prompt_sha256": "abde2caf901ce8e9a23d8ee8f0ff88f82bd75d29701525fb028cef9a1cd63013",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-002",
+      "id": "H002",
+      "condition": "baseline",
+      "prompt_sha256": "4e92d054cdea2c48a116cc809558e65911c457a651402820f7cad5b564254114",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-003",
+      "id": "H003",
+      "condition": "baseline",
+      "prompt_sha256": "b1d1f39e8ceb73ce1fad0ed51a82747105ce6ed2d1cb2cbc349f0c1a51c8df70",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-004",
+      "id": "H004",
+      "condition": "baseline",
+      "prompt_sha256": "94089a5bd8052424ab2ef1bf50323ffff9fbc7a0d5d9385818eac0d93c3c1635",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-005",
+      "id": "H005",
+      "condition": "baseline",
+      "prompt_sha256": "d7b781b561e429a3dea280bca43b6ef6c6672239ec5b8c98e9504641f675b589",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-006",
+      "id": "H006",
+      "condition": "baseline",
+      "prompt_sha256": "c1f252fc12f926510c40ea18f22073c0cc037aa288734365d411463d9dedb722",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-007",
+      "id": "H007",
+      "condition": "baseline",
+      "prompt_sha256": "973a0618e6d4edd9133209f9325e5ff74b399daf3a10f4861f8956fa4bc6a544",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-008",
+      "id": "H008",
+      "condition": "baseline",
+      "prompt_sha256": "9a7f5c75bb36c434f60127458b707bb4c1d2ad3be78f5ef0e43107a087b48fe9",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-009",
+      "id": "H009",
+      "condition": "baseline",
+      "prompt_sha256": "4e00b786ac62691ded6767db8e663a8e4e5521c1c89dcf1b5807ff4ab81c8b6e",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-010",
+      "id": "H010",
+      "condition": "baseline",
+      "prompt_sha256": "19dd4fcf2bef1db9b510df8fd57ca379e17dec5adc1cc7730acad7659c55eaf1",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-011",
+      "id": "H011",
+      "condition": "baseline",
+      "prompt_sha256": "b40cc0a6d76889074e85bfe8f709ca92274e367f7e307c84a37277560adfea29",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-012",
+      "id": "H012",
+      "condition": "baseline",
+      "prompt_sha256": "fea8916f9e766067367e11159733f3e4c7ab29f89e5eec788ed61a072b005af5",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-013",
+      "id": "H013",
+      "condition": "baseline",
+      "prompt_sha256": "ec1f3158a3e5d178e0255237beef27561886cb2c89153c7e789da50523f5aa63",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-014",
+      "id": "H014",
+      "condition": "baseline",
+      "prompt_sha256": "96a6f65831399d9ebc1af9a9fbe0fd5eb2aef3c28b77e6e9aed6b5464dc27076",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-015",
+      "id": "H015",
+      "condition": "baseline",
+      "prompt_sha256": "b2ecc7f7854cf68be30a81447016c7b742edee98deadd4a8be7177b28024b6b8",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-016",
+      "id": "H016",
+      "condition": "baseline",
+      "prompt_sha256": "f689615f483266c4505a15c08abcd82544ea38bc261f540f97be4b978b201afd",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-017",
+      "id": "H017",
+      "condition": "baseline",
+      "prompt_sha256": "72e93d2c654d15810d547884d751bd9e183f41b70e188a04458be09de4dff969",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-018",
+      "id": "H018",
+      "condition": "baseline",
+      "prompt_sha256": "0f6edde993b9c6e61c1e4bd9480331a730a28e541266961157d99161004e5209",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-019",
+      "id": "H019",
+      "condition": "baseline",
+      "prompt_sha256": "d0d01608d198538d027d65645ffc44c346eb85b9cc0382ea195ad87e553d153e",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-020",
+      "id": "H020",
+      "condition": "baseline",
+      "prompt_sha256": "aef6c475dae9eb3be15952dcebe2fe8fffad2878f71ad2d7c309e4f8632e0060",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-021",
+      "id": "H021",
+      "condition": "baseline",
+      "prompt_sha256": "14c1d8e11e362db0a73e8993bd1a32b66998e97b9d81b179ab49082b427c5eaf",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-022",
+      "id": "H022",
+      "condition": "baseline",
+      "prompt_sha256": "3f330491b718577c99500458de1f98854c857a1d1366b2f74a53644528e85331",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-023",
+      "id": "H023",
+      "condition": "baseline",
+      "prompt_sha256": "0353290d4c223f59a1fb46ee3dd94bdf3d51455669e160fb9dd817bee45c9888",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-024",
+      "id": "H024",
+      "condition": "baseline",
+      "prompt_sha256": "ed4d22e2474cf9d4ccd09397d066a69f4bc81437b335e52f3a22c215be00070e",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-025",
+      "id": "H025",
+      "condition": "baseline",
+      "prompt_sha256": "92e0eff175f29c45db28eb0c0d6f5746170d423b74ad71b7ce5bd8367221aa2b",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-026",
+      "id": "H026",
+      "condition": "baseline",
+      "prompt_sha256": "68b99997f5805d5bd4b75d8b90c7ba2e4dcaf7c4b42d104a557cbf106059d2e4",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-027",
+      "id": "H027",
+      "condition": "baseline",
+      "prompt_sha256": "9c1dd72446d9ac7d082eafc121a87cd9c7413175fbf0b8e490b18de3ebd6fe93",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-028",
+      "id": "H028",
+      "condition": "baseline",
+      "prompt_sha256": "98b7318e10f2a666b06c39966580af5b66ae144b5b53818d10bef1cad625925a",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-029",
+      "id": "H029",
+      "condition": "baseline",
+      "prompt_sha256": "5131d1bc3e2e1f57ba9158660099c845d2282c11115f00e81b229d85e6159d7b",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-030",
+      "id": "H030",
+      "condition": "baseline",
+      "prompt_sha256": "e7290e421b2a727cf5e6f24105d37fae8f3665617103aaa808b185e1a05ce759",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-031",
+      "id": "H031",
+      "condition": "baseline",
+      "prompt_sha256": "1ff2fd701f170e804b802d45116988dc54c1c3bf3c625a0fd2edb1b1522271b2",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-032",
+      "id": "H032",
+      "condition": "baseline",
+      "prompt_sha256": "9d241b1e0b470eb3fb1b3a2eea10b8573d71d446c2ee95ad3a443e2f96fbe428",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-033",
+      "id": "H033",
+      "condition": "baseline",
+      "prompt_sha256": "1f8443b7ea05dc06e77eb5b0d0e57a929a9297749733b82fc447374478e27a55",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-034",
+      "id": "H034",
+      "condition": "baseline",
+      "prompt_sha256": "fa5ac45d64b5646a83f0bca35780adb471dc3068637319ac69301ba81338d2b7",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-035",
+      "id": "H035",
+      "condition": "baseline",
+      "prompt_sha256": "762228b1119937d398f01e2eebd6f684a413a5bd3e2062a5753caa4fa6272678",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-036",
+      "id": "H036",
+      "condition": "baseline",
+      "prompt_sha256": "5ed56faeba83b0121981a48baab06d7754c61a9b4f61387408e95d428880a961",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-037",
+      "id": "H037",
+      "condition": "baseline",
+      "prompt_sha256": "9f8d255891864ccb994b32b51b2f6bf8528435f012be7df0b9ebaa0e55c53c31",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-038",
+      "id": "H038",
+      "condition": "baseline",
+      "prompt_sha256": "81a2e43d90f9cbc7e3390a8bf25accbb9e18f9b6138e6be6e0cc330669c49fcc",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-039",
+      "id": "H039",
+      "condition": "baseline",
+      "prompt_sha256": "4eb49999094910835f18cbbd671b4a916427c62baa5ca891dbaadc3ddc7a78ef",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-040",
+      "id": "H040",
+      "condition": "baseline",
+      "prompt_sha256": "924e69c6f8944098af6e670c2d9420663c88f999048e0342ba31b74f1e14c572",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-041",
+      "id": "H041",
+      "condition": "baseline",
+      "prompt_sha256": "aff4699249a483306b8dd751b9d767e4f4967171922c7214edabb4f852081c31",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-042",
+      "id": "H042",
+      "condition": "baseline",
+      "prompt_sha256": "eddae0b59107652dbb23cf241b909246a374770aff1c1b7bbe0e9ecd77357cde",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-043",
+      "id": "H043",
+      "condition": "baseline",
+      "prompt_sha256": "a11bead259b66d9bc294f187079a22336b37f1019a71d0b4918df141bc374c95",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-044",
+      "id": "H044",
+      "condition": "baseline",
+      "prompt_sha256": "8a9c92dfec8cfa34c7cd64d4b832b9d74cc9b3f3c5406585bbec4d658608d3fa",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-045",
+      "id": "H045",
+      "condition": "baseline",
+      "prompt_sha256": "e4dcd8b7b7869b982d306fe29be58547f4fed610b7b1905e17325c2c14882545",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-046",
+      "id": "H046",
+      "condition": "baseline",
+      "prompt_sha256": "c4b87004d2e2b480612ebef0318b50f5a443da110a40c254d73e827a2950faa0",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-047",
+      "id": "H047",
+      "condition": "baseline",
+      "prompt_sha256": "9cbda5fc90e8a77375d7d8d709b760f82fef6c20e53f161c050a4e2b04bd6956",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-048",
+      "id": "H048",
+      "condition": "baseline",
+      "prompt_sha256": "a4782740a69c8cc9dea061c245da17947bae1c1030e284fe36ec73ec6ad6e4ff",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-049",
+      "id": "H049",
+      "condition": "baseline",
+      "prompt_sha256": "fea5e325c0f078d7c57a0126c443743e02f4bf73fb067e437c8abc5f27f6d852",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-050",
+      "id": "H050",
+      "condition": "baseline",
+      "prompt_sha256": "a64760c395f26185f273ad1c9efe9c7f3a1e364e1f8775149d5be19d82ad3369",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-051",
+      "id": "H051",
+      "condition": "baseline",
+      "prompt_sha256": "a968c65c53edbeae1ecfac4f70777115e931297faeb4de1df9b36b5e00b25fab",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-052",
+      "id": "H052",
+      "condition": "baseline",
+      "prompt_sha256": "db358422a72232b69b468eb673e3edb068c38d74e139de406e1c126aa0c96d7e",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-053",
+      "id": "H053",
+      "condition": "baseline",
+      "prompt_sha256": "008e3118ac5675f22d3726d3124b35ea9a00f76c7655b627f311a230c16caa45",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-054",
+      "id": "H054",
+      "condition": "baseline",
+      "prompt_sha256": "23dc7f133a4e1108e18efbe17ea8c06ea97e28901d2a10fb8d3c7d1f43fe0cf8",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-055",
+      "id": "H055",
+      "condition": "baseline",
+      "prompt_sha256": "82ceab5bf80f1233b7e17fc3846a02f30a398a2c6c8f1408dfdaf80d32eebd59",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-056",
+      "id": "H056",
+      "condition": "baseline",
+      "prompt_sha256": "64f6b5841b4b8188ed80b7ea48c3954c1517dc4ac263961f43d756c2a570b082",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-057",
+      "id": "H057",
+      "condition": "baseline",
+      "prompt_sha256": "0d4b882d8abf9b918a3a40767e7563a20cf16bbc395f0f633c82d42645ac7c35",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-058",
+      "id": "H058",
+      "condition": "baseline",
+      "prompt_sha256": "47b9af5cc939d139a9ab22d66eb9aa88493fc6fc39b57632ee8845d2d2020dff",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    },
+    {
+      "directory": "baseline/batch-059",
+      "id": "H059",
+      "condition": "baseline",
+      "prompt_sha256": "a88eb9630cc54380f4525b1a569c631839b20515baf7a5e1e0aaebee5633c9c0",
+      "context_sha256": {
+        "humanizer/SKILL.md": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+      }
+    },
+    {
+      "directory": "baseline/batch-060",
+      "id": "H060",
+      "condition": "baseline",
+      "prompt_sha256": "a46753711184de933123863523762a792d7ab681ae7947901bbd08727fcdf174",
+      "context_sha256": {
+        "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+      }
+    }
+  ]
+}

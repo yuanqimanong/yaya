@@ -1,0 +1,11 @@
+2026-10-20T10:35:50.993040Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:35:50.993352Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:35:51.007386Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T10:35:52.133776Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:35:55.855733Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:36:05.434705Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:36:05.434929Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:36:06.359039Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:36:14.519374Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:36:21.045072Z  WARN codex_core_plugins::manager: failed to refresh cached remote plugin catalog error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/list?scope=GLOBAL&limit=200: error decoding response body scope=Global
+2026-10-20T10:36:22.429828Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "H051",
+    "task": "humanize",
+    "language": "en",
+    "group": "protected",
+    "source_type": "original synthetic fixture; not authenticated human or AI authorship",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis unparalleled configuration enables a seamless experience. Read [guide][g].\n\n[g]: https://example.test/config",
+    "checks": [
+      "Preserve table rows and reference-link destination.",
+      "Do not invent what configuration achieves."
+    ],
+    "suite": "humanize"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "H015",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "这一看板充分彰显了我们追求卓越的坚定决心。它显示最近一次备份成功的时间，信息最多可能延迟十分钟。",
+    "checks": [
+      "保留备份成功时间与最多十分钟延迟。",
+      "不能写实时备份或保证备份成功。"
+    ],
+    "A": "看板显示最近一次备份成功的时间，信息最多可能延迟十分钟。",
+    "B": "看板显示最近一次备份成功的时间，信息最多可能延迟十分钟。"
+  },
+  {
+    "id": "H016",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "这不仅是一堂课，更是一场突破认知边界的成长之旅。课程用45分钟练习编写缺陷报告。",
+    "checks": [
+      "保留45分钟和缺陷报告练习。",
+      "不编课程成果或认证。"
+    ],
+    "A": "这堂课用45分钟练习编写缺陷报告。",
+    "B": "课程用45分钟练习编写缺陷报告。"
+  },
+  {
+    "id": "H017",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "让我们深入探讨本周工单的丰富图景。周一有14张未关闭工单，周五有9张，本周有2张工单重新打开。",
+    "checks": [
+      "数字与时间配对不变。",
+      "不能由净变化推断关闭数量。"
+    ],
+    "A": "周一有14张未关闭工单，周五有9张，本周有2张工单重新打开。",
+    "B": "本周工单情况：周一有14张未关闭工单，周五有9张。本周有2张工单重新打开。"
+  },
+  {
+    "id": "H018",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "这套强大而先进的方案通过无缝的能力进行图片格式转换。它把PNG转为JPEG，透明背景会丢失。",
+    "checks": [
+      "保留PNG到JPEG方向和透明背景丢失。",
+      "不得隐去限制。"
+    ],
+    "A": "这套方案可以将 PNG 转为 JPEG，转换后会丢失透明背景。",
+    "B": "这套方案可以将 PNG 转为 JPEG，转换后透明背景会丢失。"
+  },
+  {
+    "id": "H019",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "归根结底，这次迁移再次印证了创新的深远意义。由于验证步骤失败，迁移已暂停。",
+    "checks": [
+      "保留验证失败导致暂停。",
+      "不能变成迁移完成。"
+    ],
+    "A": "由于验证步骤失败，迁移已暂停。",
+    "B": "这次迁移再次印证了创新的深远意义。由于验证步骤失败，迁移已暂停。"
+  },
+  {
+    "id": "H020",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "我们正以系统性、全局性和前瞻性的视角推进本次配置调整。审批通过后，缓存有效期将从60秒改为30秒。",
+    "checks": [
+      "保留60到30秒和审批通过前提。",
+      "不能说已生效。"
+    ],
+    "A": "审批通过后，缓存有效期将从60秒改为30秒。",
+    "B": "我们正在推进本次配置调整。审批通过后，缓存有效期将从60秒改为30秒。"
+  },
+  {
+    "id": "H021",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "秉持客户至上的初心，我们很高兴通知您，换货寄出时间推迟了。目前还没有确定的发货日期。",
+    "checks": [
+      "保留寄出推迟和日期未知。",
+      "不得编造补偿、原因或保证。"
+    ],
+    "A": "换货寄出时间推迟了。目前还没有确定的发货日期。",
+    "B": "您的换货商品将延迟寄出，目前还没有确定的发货日期。"
+  },
+  {
+    "id": "H022",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "首先，本报告对发现进行了深入的概述。其次，对样本进行了全面的概述。样本来自一个部门的80份回复，不能代表全公司。",
+    "checks": [
+      "保留一个部门、80份、不能代表全公司。",
+      "减少重复铺垫，不能扩大样本范围。"
+    ],
+    "A": "本报告概述了发现和样本情况。样本来自一个部门的80份回复，不能代表全公司。",
+    "B": "本报告概述了调查发现和样本情况。样本来自一个部门的80份回复，不能代表全公司。"
+  },
+  {
+    "id": "H023",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "这一突破性功能将重新定义办公体验。用户可将一份文档置顶到自己的列表，共享列表不受影响。",
+    "checks": [
+      "保留一份、自己的列表、共享列表不受影响。",
+      "不新增团队或全局置顶。"
+    ],
+    "A": "用户可将一份文档置顶到自己的列表，共享列表不受影响。",
+    "B": "用户可将一份文档置顶到自己的列表，共享列表不受影响。"
+  },
+  {
+    "id": "H024",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "从本质上说，这项规定是对信任价值的深刻诠释。超过500元的报销申请必须由经理批准后才能付款。",
+    "checks": [
+      "保留超过500元、经理、批准后付款。",
+      "不能将必须变成建议或≥500。"
+    ],
+    "A": "超过500元的报销申请，必须经经理批准后才能付款。",
+    "B": "超过500元的报销申请必须由经理批准后才能付款。"
+  },
+  {
+    "id": "H025",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "The error is in the cache, not the database. Clear the cache before retrying.",
+    "checks": [
+      "Real contrast locates an error; preserve it.",
+      "Keep clear-cache-before-retry order."
+    ],
+    "A": "The error is in the cache, not the database. Clear the cache before retrying.",
+    "B": "The error is in the cache, not the database. Clear the cache before retrying."
+  },
+  {
+    "id": "H026",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "The records were deleted by the retention job. The audit log does not identify who changed the schedule.",
+    "checks": [
+      "Passive voice is useful; do not invent an actor.",
+      "Keep missing attribution."
+    ],
+    "A": "The records were deleted by the retention job. The audit log does not identify who changed the schedule.",
+    "B": "The records were deleted by the retention job. The audit log does not identify who changed the schedule."
+  }
+]

@@ -1,0 +1,10 @@
+2026-10-20T10:52:25.617857Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:52:25.618023Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:52:25.627349Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T10:52:26.475653Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:52:30.535090Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:52:31.806809Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:52:31.806847Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:52:32.518527Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:52:42.612405Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:52:42.628393Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response

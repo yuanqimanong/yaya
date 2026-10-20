@@ -1,0 +1,895 @@
+{
+  "script_sha256": {
+    "prose_scan.py": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+    "check_rewrite.py": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c",
+    "detect_tells.py": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800",
+    "tell_rules.json": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8"
+  },
+  "cases": [
+    {
+      "case": "html_comment_fence",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\html_comment_fence.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\html_comment_fence.after.md"
+      ],
+      "bytes": 55,
+      "exit": 1,
+      "elapsed_seconds": 0.1206,
+      "payload": {
+        "status": "failed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [
+          {
+            "category": "html",
+            "allowed": false,
+            "before": [
+              "<!-- Keep this source note.\n```text\nexact code\n```\n-->"
+            ],
+            "after": [
+              "<!-- Changed source note.\n```text\nexact code\n```\n-->"
+            ]
+          }
+        ],
+        "violations": [
+          {
+            "category": "html",
+            "allowed": false,
+            "before": [
+              "<!-- Keep this source note.\n```text\nexact code\n```\n-->"
+            ],
+            "after": [
+              "<!-- Changed source note.\n```text\nexact code\n```\n-->"
+            ]
+          }
+        ],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "html_comment_table",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\html_comment_table.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\html_comment_table.after.md"
+      ],
+      "bytes": 66,
+      "exit": 1,
+      "elapsed_seconds": 0.1189,
+      "payload": {
+        "status": "failed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [
+          {
+            "category": "html",
+            "allowed": false,
+            "before": [
+              "<!-- Keep this source note.\n| A | B |\n| --- | --- |\n| x | y |\n-->"
+            ],
+            "after": [
+              "<!-- Changed source note.\n| A | B |\n| --- | --- |\n| x | y |\n-->"
+            ]
+          }
+        ],
+        "violations": [
+          {
+            "category": "html",
+            "allowed": false,
+            "before": [
+              "<!-- Keep this source note.\n| A | B |\n| --- | --- |\n| x | y |\n-->"
+            ],
+            "after": [
+              "<!-- Changed source note.\n| A | B |\n| --- | --- |\n| x | y |\n-->"
+            ]
+          }
+        ],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "html_comment_detection",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\detect_tells.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\html_comment_detection.before.md",
+        "--language",
+        "en"
+      ],
+      "bytes": 69,
+      "exit": 0,
+      "elapsed_seconds": 0.1215,
+      "payload": {
+        "status": "ok",
+        "language": "en",
+        "findings": [],
+        "metrics": {
+          "characters": 69,
+          "candidates": 0,
+          "protected_spans": 1
+        },
+        "limitations": [
+          "Literal candidates only: each needs contextual review; zero findings does not mean good writing.",
+          "No authorship probability, semantic judgment, or instruction to delete a matching phrase.",
+          "Code, quoted spans, blockquotes, tables, and recognized markup are excluded.",
+          "Only paired quotes are excluded; unmatched quotation marks are treated as punctuation.",
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "collapsed_reference_code",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\collapsed_reference_code.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\collapsed_reference_code.after.md"
+      ],
+      "bytes": 24,
+      "exit": 1,
+      "elapsed_seconds": 0.1185,
+      "payload": {
+        "status": "failed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [
+          {
+            "category": "link_targets",
+            "allowed": false,
+            "before": [
+              "[A `x`][]",
+              "[A `x`]: url\n"
+            ],
+            "after": [
+              "[B `x`][]",
+              "[A `x`]: url\n"
+            ]
+          }
+        ],
+        "violations": [
+          {
+            "category": "link_targets",
+            "allowed": false,
+            "before": [
+              "[A `x`][]",
+              "[A `x`]: url\n"
+            ],
+            "after": [
+              "[B `x`][]",
+              "[A `x`]: url\n"
+            ]
+          }
+        ],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "shortcut_reference_code",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\shortcut_reference_code.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\shortcut_reference_code.after.md"
+      ],
+      "bytes": 22,
+      "exit": 1,
+      "elapsed_seconds": 0.1193,
+      "payload": {
+        "status": "failed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [
+          {
+            "category": "link_targets",
+            "allowed": false,
+            "before": [
+              "[A `x`]",
+              "[A `x`]: url\n"
+            ],
+            "after": [
+              "[A `x`]: url\n"
+            ]
+          }
+        ],
+        "violations": [
+          {
+            "category": "link_targets",
+            "allowed": false,
+            "before": [
+              "[A `x`]",
+              "[A `x`]: url\n"
+            ],
+            "after": [
+              "[A `x`]: url\n"
+            ]
+          }
+        ],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "single_column_table",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\single_column_table.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\single_column_table.after.md"
+      ],
+      "bytes": 27,
+      "exit": 1,
+      "elapsed_seconds": 0.1177,
+      "payload": {
+        "status": "failed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [
+          {
+            "category": "tables",
+            "allowed": false,
+            "before": [
+              "| Name |\n| --- |\n| Alice |\n"
+            ],
+            "after": [
+              "| Name |\n| --- |\n| Bob |\n"
+            ]
+          }
+        ],
+        "violations": [
+          {
+            "category": "tables",
+            "allowed": false,
+            "before": [
+              "| Name |\n| --- |\n| Alice |\n"
+            ],
+            "after": [
+              "| Name |\n| --- |\n| Bob |\n"
+            ]
+          }
+        ],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "apostrophe_url",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\apostrophe_url.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\apostrophe_url.after.md"
+      ],
+      "bytes": 53,
+      "exit": 0,
+      "elapsed_seconds": 0.1177,
+      "payload": {
+        "status": "passed",
+        "changed": false,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "hard_wrapped_quote",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\detect_tells.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\hard_wrapped_quote.before.md",
+        "--language",
+        "en"
+      ],
+      "bytes": 90,
+      "exit": 0,
+      "elapsed_seconds": 0.1197,
+      "payload": {
+        "status": "ok",
+        "language": "en",
+        "findings": [
+          {
+            "id": "en-stock-close",
+            "severity": "P2",
+            "line": 4,
+            "quote": "Only time will tell",
+            "message": "Check whether the ending adds information or repeats a generic conclusion.",
+            "weak_alone": true,
+            "kind": "literal_candidate",
+            "start": 65,
+            "end": 84
+          }
+        ],
+        "metrics": {
+          "characters": 86,
+          "candidates": 1,
+          "protected_spans": 1
+        },
+        "limitations": [
+          "Literal candidates only: each needs contextual review; zero findings does not mean good writing.",
+          "No authorship probability, semantic judgment, or instruction to delete a matching phrase.",
+          "Code, quoted spans, blockquotes, tables, and recognized markup are excluded.",
+          "Only paired quotes are excluded; unmatched quotation marks are treated as punctuation.",
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "inch_mark",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\detect_tells.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\inch_mark.before.md",
+        "--language",
+        "en"
+      ],
+      "bytes": 45,
+      "exit": 0,
+      "elapsed_seconds": 0.122,
+      "payload": {
+        "status": "ok",
+        "language": "en",
+        "findings": [
+          {
+            "id": "en-stock-close",
+            "severity": "P2",
+            "line": 1,
+            "quote": "Only time will tell",
+            "message": "Check whether the ending adds information or repeats a generic conclusion.",
+            "weak_alone": true,
+            "kind": "literal_candidate",
+            "start": 24,
+            "end": 43
+          }
+        ],
+        "metrics": {
+          "characters": 45,
+          "candidates": 1,
+          "protected_spans": 0
+        },
+        "limitations": [
+          "Literal candidates only: each needs contextual review; zero findings does not mean good writing.",
+          "No authorship probability, semantic judgment, or instruction to delete a matching phrase.",
+          "Code, quoted spans, blockquotes, tables, and recognized markup are excluded.",
+          "Only paired quotes are excluded; unmatched quotation marks are treated as punctuation.",
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported."
+        ]
+      },
+      "stderr": ""
+    }
+  ],
+  "numbers": {
+    "Wait 2 seconds.": [
+      "2 seconds"
+    ],
+    "Wait 2 secondhand customers.": [
+      "2"
+    ],
+    "Wait 2ms.": [
+      "2ms"
+    ],
+    "Wait 2MS.": [],
+    "Memory 256MiB.": [],
+    "Pay 30万元。": [
+      "30万元"
+    ],
+    "Cost 2 más.": [
+      "2 m"
+    ],
+    "Wait 2 minutes.": [
+      "2 minutes"
+    ]
+  },
+  "performance": [
+    {
+      "case": "perf_plain",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\perf_plain.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\perf_plain.after.md"
+      ],
+      "bytes": 1860000,
+      "exit": 0,
+      "elapsed_seconds": 3.8703,
+      "payload": {
+        "status": "passed",
+        "changed": false,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "perf_inline_code",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\perf_inline_code.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\perf_inline_code.after.md"
+      ],
+      "bytes": 1955000,
+      "exit": 0,
+      "elapsed_seconds": 4.718,
+      "payload": {
+        "status": "passed",
+        "changed": false,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "perf_digits",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\perf_digits.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\perf_digits.after.md"
+      ],
+      "bytes": 2000001,
+      "exit": 0,
+      "elapsed_seconds": 4.163,
+      "payload": {
+        "status": "passed",
+        "changed": false,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "perf_reference_spaces",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\perf_reference_spaces.before.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\perf_reference_spaces.after.md"
+      ],
+      "bytes": 2000006,
+      "exit": 2,
+      "elapsed_seconds": 0.9202,
+      "payload": {
+        "status": "unsupported",
+        "error": "Unsupported link reference definition.",
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "case": "perf_unmatched_quotes",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\detect_tells.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\0.2-tools-audit\\perf_unmatched_quotes.before.md",
+        "--language",
+        "en"
+      ],
+      "bytes": 36000,
+      "exit": 0,
+      "elapsed_seconds": 0.1509,
+      "payload": {
+        "status": "ok",
+        "language": "en",
+        "findings": [],
+        "metrics": {
+          "characters": 12000,
+          "candidates": 0,
+          "protected_spans": 0
+        },
+        "limitations": [
+          "Literal candidates only: each needs contextual review; zero findings does not mean good writing.",
+          "No authorship probability, semantic judgment, or instruction to delete a matching phrase.",
+          "Code, quoted spans, blockquotes, tables, and recognized markup are excluded.",
+          "Only paired quotes are excluded; unmatched quotation marks are treated as punctuation.",
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported."
+        ]
+      },
+      "stderr": ""
+    }
+  ],
+  "cli_errors": [
+    {
+      "script": "detect_tells.py",
+      "argv": [
+        "-",
+        "--language",
+        "en"
+      ],
+      "input_bytes": 1,
+      "exit": 2,
+      "payload": {
+        "status": "error",
+        "error": "Input must be valid UTF-8."
+      },
+      "stderr": ""
+    },
+    {
+      "script": "detect_tells.py",
+      "argv": [
+        "-",
+        "--language",
+        "en"
+      ],
+      "input_bytes": 3,
+      "exit": 2,
+      "payload": {
+        "status": "error",
+        "error": "NUL and lone-CR newlines are unsupported."
+      },
+      "stderr": ""
+    },
+    {
+      "script": "detect_tells.py",
+      "argv": [
+        "-",
+        "--language",
+        "en"
+      ],
+      "input_bytes": 10,
+      "exit": 2,
+      "payload": {
+        "status": "error",
+        "error": "NUL and lone-CR newlines are unsupported."
+      },
+      "stderr": ""
+    },
+    {
+      "script": "detect_tells.py",
+      "argv": [
+        "-",
+        "--language",
+        "en"
+      ],
+      "input_bytes": 2097153,
+      "exit": 2,
+      "payload": {
+        "status": "error",
+        "error": "Input exceeds 2 MiB."
+      },
+      "stderr": ""
+    },
+    {
+      "script": "detect_tells.py",
+      "argv": [
+        "-",
+        "--language",
+        "en",
+        "--fail-on",
+        "all"
+      ],
+      "input_bytes": 4,
+      "exit": 2,
+      "payload": {
+        "status": "error",
+        "error": "argument --fail-on: invalid choice: 'all' (choose from P1, P2)"
+      },
+      "stderr": ""
+    },
+    {
+      "script": "check_rewrite.py",
+      "argv": [
+        "-",
+        "-"
+      ],
+      "input_bytes": 4,
+      "exit": 2,
+      "payload": {
+        "status": "error",
+        "error": "Only one input may use stdin.",
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "script": "check_rewrite.py",
+      "argv": [],
+      "input_bytes": 0,
+      "exit": 2,
+      "payload": {
+        "status": "error",
+        "error": "the following arguments are required: before, after"
+      },
+      "stderr": ""
+    },
+    {
+      "script": "check_rewrite.py",
+      "argv": [
+        "absent-before-input.md",
+        "absent-after-input.md"
+      ],
+      "input_bytes": 0,
+      "exit": 2,
+      "payload": {
+        "status": "error",
+        "error": "Cannot read input (FileNotFoundError).",
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved."
+        ]
+      },
+      "stderr": ""
+    }
+  ]
+}

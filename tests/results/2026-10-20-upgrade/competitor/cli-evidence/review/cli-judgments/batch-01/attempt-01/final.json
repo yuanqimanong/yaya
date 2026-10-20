@@ -1,0 +1,208 @@
+{
+  "judgments": [
+    {
+      "id": "H001",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves that the sole release change is exporting shared notes as CSV. Removes inflated collaboration claims without adding capabilities."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Retains the already clear sentence stating the only change: shared notes can now be exported as CSV. Removes the promotional opening."
+      },
+      "preference": "tie",
+      "reason": "Both provide a concise, accurate rewrite. A explicitly retains release context; B preserves the clear original sentence. Neither has a material advantage."
+    },
+    {
+      "id": "H002",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Keeps the review in progress, the expected response by Tuesday, and the explicit lack of confirmation. Removes empty introductory wording."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "worse",
+        "evidence": "The final rewrite preserves the ongoing review and unconfirmed Tuesday expectation. However, the complete response duplicates the rewrite and adds unrequested draft and diagnostic labels."
+      },
+      "preference": "A",
+      "reason": "Both preserve the facts and uncertainty, but A delivers directly usable prose without B's repetition and process commentary."
+    },
+    {
+      "id": "H003",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the last successful backup time and its possible staleness of up to ten minutes. Removes the unsupported praise without suggesting real-time information."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the last successful backup time and the up-to-ten-minute staleness limitation. Removes the inflated opening."
+      },
+      "preference": "tie",
+      "reason": "The responses are identical and satisfy all supplied checks."
+    },
+    {
+      "id": "H004",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Retains bug-report writing practice and the 45-minute duration, with 'workshop' supported by the opening sentence. Adds no promised outcomes."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the clear sentence about practising bug-report writing in a 45-minute session and removes the limitless-potential rhetoric."
+      },
+      "preference": "tie",
+      "reason": "Both are natural and accurate. A incorporates the workshop context; B leaves the clear factual sentence unchanged. The difference is minor."
+    },
+    {
+      "id": "H005",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "worse",
+        "evidence": "Both copies correctly retain 14 open tickets on Monday, 9 on Friday, and two reopened tickets, without calculating closures. The added draft, diagnostic, and final-rewrite sections create unnecessary repetition."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the day-specific counts and two reopenings exactly, while removing the decorative opening. Makes no unsupported inference about closures."
+      },
+      "preference": "B",
+      "reason": "B supplies the requested prose directly. A contains the same accurate rewrite but surrounds and repeats it with unnecessary process material."
+    },
+    {
+      "id": "H006",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Keeps conversion from PNG to JPEG and explicitly states that transparency is lost. Replaces promotional wording with the concrete function."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves PNG-to-JPEG conversion and lost transparency, removing the inflated description without obscuring the limitation."
+      },
+      "preference": "tie",
+      "reason": "The responses are identical, clear, and complete."
+    },
+    {
+      "id": "H007",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Retains the paused migration and identifies failed verification as the cause. Removes the abstract innovation claim."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "States that the migration is paused because verification failed, preserving both status and causation without claiming completion."
+      },
+      "preference": "tie",
+      "reason": "The identical responses preserve the operative meaning and remove unnecessary rhetoric."
+    },
+    {
+      "id": "H008",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Keeps the future change from 60 seconds to 30 seconds and the approval prerequisite. Removes the padded implementation framing."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves both cache lifetime values and 'after approval,' without implying the change is already live."
+      },
+      "preference": "tie",
+      "reason": "The responses are identical and retain all quantities and conditions."
+    },
+    {
+      "id": "H009",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the replacement delay and unknown shipping date. 'Your replacement' is a natural customer-facing rendering of the notice; no compensation or guarantee is added."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Keeps the delay and lack of a shipping date, removing the customer-success framing and inappropriate expression of delight."
+      },
+      "preference": "tie",
+      "reason": "Both are clear and suitable notices. The small difference between 'your replacement' and 'the replacement' creates no material advantage in this context."
+    },
+    {
+      "id": "H010",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Consolidates the repeated overview wording and retains 80 responses from one department and the explicit warning that the sample is not company-representative."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "worse",
+        "evidence": "The rewrite accurately summarizes the report's scope and preserves all sample limitations. The complete response unnecessarily repeats the prose under draft and final labels and adds a diagnostic statement."
+      },
+      "preference": "A",
+      "reason": "B's underlying rewrite is clear, but A delivers an equally accurate consolidation without duplicated text or unrequested commentary."
+    },
+    {
+      "id": "H011",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Keeps the limit of one document, placement at the top of the user's own list, and unaffected shared lists. Removes the game-changer claim."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the one-document limit, own-list scope, and shared-list exception exactly while removing inflated promotion."
+      },
+      "preference": "tie",
+      "reason": "The responses are identical and preserve every scope restriction."
+    },
+    {
+      "id": "H012",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Plainly restates the source's trust-and-success claim. Preserves mandatory manager approval for claims strictly over $500 before payment."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Renders 'trust is the cornerstone of success' as 'trust is essential to success' and retains managers, the over-$500 threshold, and approval before payment."
+      },
+      "preference": "tie",
+      "reason": "Both simplify the rhetorical sentence while preserving its meaning and leave the clear approval requirement intact. Their wording differences are immaterial."
+    }
+  ]
+}

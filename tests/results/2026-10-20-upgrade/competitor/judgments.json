@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "H001",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves that the sole release change is exporting shared notes as CSV. Removes inflated collaboration claims without adding capabilities."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Retains the already clear sentence stating the only change: shared notes can now be exported as CSV. Removes the promotional opening."
+    },
+    "preference": "tie",
+    "reason": "Both provide a concise, accurate rewrite. A explicitly retains release context; B preserves the clear original sentence. Neither has a material advantage."
+  },
+  {
+    "id": "H002",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Keeps the review in progress, the expected response by Tuesday, and the explicit lack of confirmation. Removes empty introductory wording."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "worse",
+      "evidence": "The final rewrite preserves the ongoing review and unconfirmed Tuesday expectation. However, the complete response duplicates the rewrite and adds unrequested draft and diagnostic labels."
+    },
+    "preference": "A",
+    "reason": "Both preserve the facts and uncertainty, but A delivers directly usable prose without B's repetition and process commentary."
+  },
+  {
+    "id": "H003",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves the last successful backup time and its possible staleness of up to ten minutes. Removes the unsupported praise without suggesting real-time information."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves the last successful backup time and the up-to-ten-minute staleness limitation. Removes the inflated opening."
+    },
+    "preference": "tie",
+    "reason": "The responses are identical and satisfy all supplied checks."
+  },
+  {
+    "id": "H004",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Retains bug-report writing practice and the 45-minute duration, with 'workshop' supported by the opening sentence. Adds no promised outcomes."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves the clear sentence about practising bug-report writing in a 45-minute session and removes the limitless-potential rhetoric."
+    },
+    "preference": "tie",
+    "reason": "Both are natural and accurate. A incorporates the workshop context; B leaves the clear factual sentence unchanged. The difference is minor."
+  },
+  {
+    "id": "H005",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "worse",
+      "evidence": "Both copies correctly retain 14 open tickets on Monday, 9 on Friday, and two reopened tickets, without calculating closures. The added draft, diagnostic, and final-rewrite sections create unnecessary repetition."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves the day-specific counts and two reopenings exactly, while removing the decorative opening. Makes no unsupported inference about closures."
+    },
+    "preference": "B",
+    "reason": "B supplies the requested prose directly. A contains the same accurate rewrite but surrounds and repeats it with unnecessary process material."
+  },
+  {
+    "id": "H006",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Keeps conversion from PNG to JPEG and explicitly states that transparency is lost. Replaces promotional wording with the concrete function."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves PNG-to-JPEG conversion and lost transparency, removing the inflated description without obscuring the limitation."
+    },
+    "preference": "tie",
+    "reason": "The responses are identical, clear, and complete."
+  },
+  {
+    "id": "H007",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Retains the paused migration and identifies failed verification as the cause. Removes the abstract innovation claim."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "States that the migration is paused because verification failed, preserving both status and causation without claiming completion."
+    },
+    "preference": "tie",
+    "reason": "The identical responses preserve the operative meaning and remove unnecessary rhetoric."
+  },
+  {
+    "id": "H008",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Keeps the future change from 60 seconds to 30 seconds and the approval prerequisite. Removes the padded implementation framing."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves both cache lifetime values and 'after approval,' without implying the change is already live."
+    },
+    "preference": "tie",
+    "reason": "The responses are identical and retain all quantities and conditions."
+  },
+  {
+    "id": "H009",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves the replacement delay and unknown shipping date. 'Your replacement' is a natural customer-facing rendering of the notice; no compensation or guarantee is added."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Keeps the delay and lack of a shipping date, removing the customer-success framing and inappropriate expression of delight."
+    },
+    "preference": "tie",
+    "reason": "Both are clear and suitable notices. The small difference between 'your replacement' and 'the replacement' creates no material advantage in this context."
+  },
+  {
+    "id": "H010",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Consolidates the repeated overview wording and retains 80 responses from one department and the explicit warning that the sample is not company-representative."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "worse",
+      "evidence": "The rewrite accurately summarizes the report's scope and preserves all sample limitations. The complete response unnecessarily repeats the prose under draft and final labels and adds a diagnostic statement."
+    },
+    "preference": "A",
+    "reason": "B's underlying rewrite is clear, but A delivers an equally accurate consolidation without duplicated text or unrequested commentary."
+  },
+  {
+    "id": "H011",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Keeps the limit of one document, placement at the top of the user's own list, and unaffected shared lists. Removes the game-changer claim."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves the one-document limit, own-list scope, and shared-list exception exactly while removing inflated promotion."
+    },
+    "preference": "tie",
+    "reason": "The responses are identical and preserve every scope restriction."
+  },
+  {
+    "id": "H012",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Plainly restates the source's trust-and-success claim. Preserves mandatory manager approval for claims strictly over $500 before payment."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Renders 'trust is the cornerstone of success' as 'trust is essential to success' and retains managers, the over-$500 threshold, and approval before payment."
+    },
+    "preference": "tie",
+    "reason": "Both simplify the rhetorical sentence while preserving its meaning and leave the clear approval requirement intact. Their wording differences are immaterial."
+  },
+  {
+    "id": "H013",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留“只新增一项功能”及共享笔记导出为 CSV，删除“赋能团队”“开启高效协作新篇章”等无依据效果描述。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留唯一新增功能及导出对象、格式，直接说明更新内容，去掉空泛宣传。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，均准确、直接地完成精简。"
+  },
+  {
+    "id": "H014",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "“正在审核”保留进行中状态；“预计周二回复，但日期尚未确认”完整保留预期及不确定性，精简了名词化表达。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留审核进行中、预计周二回复和日期未确认，没有把预计改成承诺；删除“值得注意的是”等铺垫。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，事实、语气和精简效果一致。"
+  },
+  {
+    "id": "H015",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留最近一次备份成功的时间和最长十分钟的信息延迟；没有宣称实时显示或保证备份成功，删除自我赞扬。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留“最近一次备份成功的时间”和“最多可能延迟十分钟”，直接删除“追求卓越的坚定决心”等空话。"
+    },
+    "preference": "tie",
+    "reason": "两者均准确去掉空泛表述；延迟限制的两种措辞清楚等效，没有实质优劣。"
+  },
+  {
+    "id": "H016",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留用45分钟练习编写缺陷报告，没有添加成果或认证，删除“突破认知边界的成长之旅”。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "直接保留原文具体课程内容及45分钟时长，删除空泛的成长宣传。"
+    },
+    "preference": "tie",
+    "reason": "“这堂课”和“课程”在此处均自然准确，信息和用途一致。"
+  },
+  {
+    "id": "H017",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留周一14张、周五9张未关闭工单及本周2张重新打开的工单，没有推断关闭数量，删除空泛引导句。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留全部数字与时间、状态的对应关系，仅删除“深入探讨”“丰富图景”等铺垫。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，均保留清楚的原始数据并删去空话。"
+  },
+  {
+    "id": "H018",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "准确说明 PNG 转为 JPEG，并明确转换后丢失透明背景；删除“强大而先进”“无缝的能力”等空泛修饰。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留 PNG 到 JPEG 的方向及透明背景丢失的限制，以“可以将”自然说明方案能力。"
+    },
+    "preference": "tie",
+    "reason": "两者都清楚说明功能及限制，“将”与“可以将”的差异没有实质影响。"
+  },
+  {
+    "id": "H019",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留验证步骤失败导致迁移已暂停的因果和状态，完整删除“印证了创新的深远意义”等空泛评价。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "fail",
+      "quality": "same",
+      "evidence": "准确保留验证失败和迁移暂停，但仅删去“归根结底”，仍保留“这次迁移再次印证了创新的深远意义”，未完成去除空泛表达的核心要求。"
+    },
+    "preference": "A",
+    "reason": "A准确保留事实并完成精简；B仍保留主要空泛评价，任务完成度不足。"
+  },
+  {
+    "id": "H020",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留配置调整正在推进、审批通过后才从60秒改为30秒，没有声称已生效；删除三组空泛视角修饰。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留审批前提、未来变更状态及60秒到30秒的数值方向，去掉“系统性、全局性和前瞻性”等空泛描述。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，条件、数值和精简效果一致。"
+  },
+  {
+    "id": "H021",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留换货寄出推迟及发货日期未确定，没有添加原因、补偿或保证；“换货商品”明确了寄出对象。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留寄出推迟及日期未知，删除“客户至上”及与延期通知不协调的“很高兴通知您”。"
+    },
+    "preference": "tie",
+    "reason": "两者均直接、得体地传达延期和日期未定；补出“商品”与保留原句都可接受。"
+  },
+  {
+    "id": "H022",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留报告概述发现和样本的内容及先后表述，完整保留一个部门、80份回复、不能代表全公司的限制，减少重复措辞。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "将两句概述合并，仍说明报告涵盖发现和样本情况；一个部门、80份回复及代表性限制均完整保留。"
+    },
+    "preference": "tie",
+    "reason": "A保留原文先后组织，B合并后更紧凑；两者均自然清楚，未产生实质信息差异。"
+  },
+  {
+    "id": "H023",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留一份文档、自己的列表及共享列表不受影响，删除“突破性”“重新定义办公体验”的宣传。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留置顶数量和个人列表范围，明确共享列表不受影响，没有新增团队或全局置顶能力。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，均以具体功能说明替代空泛宣传。"
+  },
+  {
+    "id": "H024",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留“超过500元”、经理批准及批准后才能付款的强制条件，删除关于信任价值的空泛评价。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留金额阈值、批准主体和付款前提，没有将“超过”改为包含500元，也未弱化“必须”。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，均准确保留规定并删除空泛铺垫。"
+  },
+  {
+    "id": "H025",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves the cache-versus-database distinction and the instruction to clear the cache before retrying. The clear original remains unchanged."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves the cache-versus-database distinction and the instruction to clear the cache before retrying. The clear original remains unchanged."
+    },
+    "preference": "tie",
+    "reason": "Both reproduce the already direct source exactly, preserving the diagnosis and required action order."
+  },
+  {
+    "id": "H026",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Retains deletion by the retention job and the audit log's failure to identify who changed the schedule. Adds no attribution."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Retains deletion by the retention job and the audit log's failure to identify who changed the schedule. Adds no attribution."
+    },
+    "preference": "tie",
+    "reason": "Both appropriately leave the clear wording and useful passive construction unchanged while preserving missing attribution."
+  },
+  {
+    "id": "H027",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Keeps both restrictions verbatim: retry only after rollback and never retry authentication failures."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Keeps both restrictions verbatim: retry only after rollback and never retry authentication failures."
+    },
+    "preference": "tie",
+    "reason": "Both preserve the functional restrictions and satisfy the instruction to leave clear wording alone."
+  },
+  {
+    "id": "H028",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves three release stages in order: validate the package, deploy it, then check the service."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves three release stages in order: validate the package, deploy it, then check the service."
+    },
+    "preference": "tie",
+    "reason": "The identical responses retain the clear stage count and sequence without unnecessary elaboration."
+  },
+  {
+    "id": "H029",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves the quotation “a turning point” and explicitly attributes the description to the author, not the editor."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves the quotation “a turning point” and explicitly attributes the description to the author, not the editor."
+    },
+    "preference": "tie",
+    "reason": "Both retain the protected quotation and attribution distinction exactly; neither has an editorial advantage."
+  },
+  {
+    "id": "H030",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Keeps the timeout reduction to 5 seconds limited to this test and retains the production timeout of 30 seconds."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Keeps the timeout reduction to 5 seconds limited to this test and retains the production timeout of 30 seconds."
+    },
+    "preference": "tie",
+    "reason": "Both preserve the values and their respective scopes while appropriately leaving clear instructions unchanged."
+  },
+  {
+    "id": "H031",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Retains the narrator's relief when the repair worked and the whole morning spent tracing the leak, preserving first-person voice."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Retains the narrator's relief when the repair worked and the whole morning spent tracing the leak, preserving first-person voice."
+    },
+    "preference": "tie",
+    "reason": "Both leave the natural personal account intact, preserving its emotion and sequence of experience."
+  },
+  {
+    "id": "H032",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves the API contract that it returns either a value or an error and never both."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves the API contract that it returns either a value or an error and never both."
+    },
+    "preference": "tie",
+    "reason": "Both retain the explicit exclusivity and appropriately leave the clear technical wording unchanged."
+  },
+  {
+    "id": "H033",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Keeps the report's shortness linked to only one available result and preserves that the second experiment is still running."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Keeps the report's shortness linked to only one available result and preserves that the second experiment is still running."
+    },
+    "preference": "tie",
+    "reason": "Both preserve the causal explanation and incomplete experiment status in the already clear original."
+  },
+  {
+    "id": "H034",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Retains the technical term “closed-loop controller” and its use of feedback to adjust output."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Retains the technical term “closed-loop controller” and its use of feedback to adjust output."
+    },
+    "preference": "tie",
+    "reason": "Both correctly preserve the concise technical explanation without replacing necessary terminology."
+  },
+  {
+    "id": "H035",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves the Friday submission deadline and both required items: the signed invoice and the order number."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves the Friday submission deadline and both required items: the signed invoice and the order number."
+    },
+    "preference": "tie",
+    "reason": "Both retain the complete, direct instructions without adding framing or elaboration."
+  },
+  {
+    "id": "H036",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves both “may reject” and “if the token has expired,” retaining uncertainty and the expiration condition."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "Preserves both “may reject” and “if the token has expired,” retaining uncertainty and the expiration condition."
+    },
+    "preference": "tie",
+    "reason": "Both leave the clear conditional statement unchanged without turning possible rejection into a certainty."
+  },
+  {
+    "id": "H037",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "完整保留“缓存，不在数据库”的故障定位对比，以及先清空缓存再重试的顺序。原文已直接清楚，保留符合请求。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "完整保留“缓存，不在数据库”的故障定位对比，以及先清空缓存再重试的顺序。原文已直接清楚，保留符合请求。"
+    },
+    "preference": "tie",
+    "reason": "两份回应与原文相同，均保留有实际用途的对比和操作顺序，无实质差异。"
+  },
+  {
+    "id": "H038",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留记录由“保留策略任务”删除及日志未记录计划修改者两项信息，未补造修改者。原文表达明确，无须改写。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留记录由“保留策略任务”删除及日志未记录计划修改者两项信息，未补造修改者。原文表达明确，无须改写。"
+    },
+    "preference": "tie",
+    "reason": "两份回应完全相同，均准确保留有用途的被动表达和修改者信息缺失的事实。"
+  },
+  {
+    "id": "H039",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留“只有事务回滚完成后才能重试”的必要条件和“身份验证失败时不要重试”的禁令。原文已简明，保持原样符合请求。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留“只有事务回滚完成后才能重试”的必要条件和“身份验证失败时不要重试”的禁令。原文已简明，保持原样符合请求。"
+    },
+    "preference": "tie",
+    "reason": "两份回应均完整保留两项操作限定，文字完全一致，无质量差异。"
+  },
+  {
+    "id": "H040",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留发布的三步结构及“校验安装包→部署→检查服务”的次序。原文已自然直接，未改写符合请求。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留发布的三步结构及“校验安装包→部署→检查服务”的次序。原文已自然直接，未改写符合请求。"
+    },
+    "preference": "tie",
+    "reason": "两份回应完全一致，三步结构具有操作用途，保留原文均合理。"
+  },
+  {
+    "id": "H041",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "原样保留引文“转折点”，并明确它是作者判断、不是编辑结论。归属和否定均准确，原文无需删改。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "原样保留引文“转折点”，并明确它是作者判断、不是编辑结论。归属和否定均准确，原文无需删改。"
+    },
+    "preference": "tie",
+    "reason": "两份回应均保留引文及观点归属，未将作者判断转为编辑结论，且没有文字差异。"
+  },
+  {
+    "id": "H042",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留本次测试的超时改为5秒、生产环境仍为30秒，数值及各自适用范围准确。原文清楚，保留符合请求。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留本次测试的超时改为5秒、生产环境仍为30秒，数值及各自适用范围准确。原文清楚，保留符合请求。"
+    },
+    "preference": "tie",
+    "reason": "两份回应完全相同，均清楚区分测试变更与生产配置，无实质优势。"
+  },
+  {
+    "id": "H043",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留修好水管时松一口气的第一人称情绪，以及整个上午寻找漏水位置的经历。表达具体自然，原样保留符合请求。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留修好水管时松一口气的第一人称情绪，以及整个上午寻找漏水位置的经历。表达具体自然，原样保留符合请求。"
+    },
+    "preference": "tie",
+    "reason": "两份回应一致，均保留原文具体经历、时间信息和叙述声音，无须为改写而改写。"
+  },
+  {
+    "id": "H044",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留接口返回结果或错误、不会同时返回两者的约定。否定和互斥关系完整，原文已直接明确。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留接口返回结果或错误、不会同时返回两者的约定。否定和互斥关系完整，原文已直接明确。"
+    },
+    "preference": "tie",
+    "reason": "两份回应完全一致，均准确保留接口的二选一约定，保留原文合理。"
+  },
+  {
+    "id": "H045",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留报告较短是因为目前只有一项结果的因果关系，并保留第二次实验仍在进行的状态。原文简明，未改写符合请求。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留报告较短是因为目前只有一项结果的因果关系，并保留第二次实验仍在进行的状态。原文简明，未改写符合请求。"
+    },
+    "preference": "tie",
+    "reason": "两份回应相同，均完整保留结果数量、因果关系和实验进行状态，无质量差异。"
+  },
+  {
+    "id": "H046",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留专业术语“闭环控制器”及根据反馈调整输出的机制。原文没有明显空泛表达，保持原样符合请求。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留专业术语“闭环控制器”及根据反馈调整输出的机制。原文没有明显空泛表达，保持原样符合请求。"
+    },
+    "preference": "tie",
+    "reason": "两份回应完全一致，均正确保留控制领域术语和清楚的机制说明。"
+  },
+  {
+    "id": "H047",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留周五前提交表单的期限，以及附上签字后的发票和订单号的要求。未添加铺垫，原指令已清楚完整。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留周五前提交表单的期限，以及附上签字后的发票和订单号的要求。未添加铺垫，原指令已清楚完整。"
+    },
+    "preference": "tie",
+    "reason": "两份回应完全相同，均保留期限和全部提交要求，符合清楚之处可以不改的要求。"
+  },
+  {
+    "id": "H048",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留“如果令牌已过期”的条件和“可能拒绝请求”的不确定性，没有改成必然拒绝。原文自然直接，保留符合请求。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留“如果令牌已过期”的条件和“可能拒绝请求”的不确定性，没有改成必然拒绝。原文自然直接，保留符合请求。"
+    },
+    "preference": "tie",
+    "reason": "两份回应一致，均完整保留条件与可能性，准确性和编辑质量没有差异。"
+  },
+  {
+    "id": "H049",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留 frontmatter、代码、URL 和 {{account_id}}；$12 million 仍对应收入，8% 仍对应增长。删除 groundbreaking 和 seamlessly 后更直接。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留 frontmatter、代码、URL 和 {{account_id}}；收入金额与增长率配对不变，并简化了宣传措辞。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，均完成简化并保留所有受保护内容和数据关系。"
+  },
+  {
+    "id": "H050",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留 `cache_key`、标题引文及原有结构；12 ms 对应测试，70 ms 对应生产。仅删除空泛的“革命性的”。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留标识符、标题引文和两个耗时的环境归属；删除“革命性的”，未改变看板同时显示两个值的功能。"
+    },
+    "preference": "tie",
+    "reason": "响应完全相同，均准确完成要求。"
+  },
+  {
+    "id": "H051",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "表格和引用链接目标完全保留。“provides a smooth experience”延续原文的体验描述，没有补充具体功能；删除 unparalleled 后稍显自然，但仍较空泛。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留全部表格行、阅读指引和引用链接目标；删除缺乏具体信息的宣传句，没有虚构配置效果。"
+    },
+    "preference": "B",
+    "reason": "两者均保留具体信息。B 直接呈现配置与阅读指引，消除整句空泛宣传；A 仍保留模糊的体验表述。"
+  },
+  {
+    "id": "H052",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "逐字保留供应商引文及“尚未独立核实”的限定，没有将供应商保证变为作者承诺。受保护的引用无需改写。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "原样保留引用、供应商归属与未核实状态，符合保留引用和结构的要求。"
+    },
+    "preference": "tie",
+    "reason": "两份响应均与原文一致；保留引用内的宣传措辞是正确处理。"
+  },
+  {
+    "id": "H053",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "€40 仍为普通标价，€35 仍为截至 12 November 的折扣价；“Buy now”保留购买号召并去除夸张宣传。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留两个金额、价格角色及折扣截止日期，将空泛的购买宣传简化为直接的行动号召。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，信息准确且适合原有促销用途。"
+  },
+  {
+    "id": "H054",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "HTML 注释和 div 原样保留；“正在推进审核工作”保留审核进行中的状态，并压缩原句的冗余表达。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "HTML 和注释完全不变；“正在推进审核”准确保留进行中状态，表达更简洁。"
+    },
+    "preference": "tie",
+    "reason": "B 比 A 少“工作”二字，但两者均自然、准确，差异不足以构成实质优势。"
+  },
+  {
+    "id": "H055",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "原样保留 ${region}、%s 和 /srv/app/config.json；only 仍限定说明仅覆盖该路径，删除 cutting-edge 未改变范围。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留两个占位符、完整路径和 only 限定，仅去除宣传性修饰。"
+    },
+    "preference": "tie",
+    "reason": "响应完全相同，均保留范围限制并完成简化。"
+  },
+  {
+    "id": "H056",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留“-3.5%，不是+3.5%”的数值、正负号与纠正关系；删除“突破性”和“重新定义讨论边界”的拔高表述。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "准确保留负值结果及对正值的否定，删除没有具体依据的宣传句。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，保留唯一具体结果，去除空泛评价。"
+  },
+  {
+    "id": "H057",
+    "A": {
+      "fidelity": "pass",
+      "task": "fail",
+      "quality": "worse",
+      "evidence": "两处改写均保留标题、{#retry} 和 only after rollback 的条件，但输出加入 Draft、Remaining patterns 和 Final rewrite，并重复整段及标题 ID，不符合直接交付自然改写的用途。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留外部链接说明、完整标题和显式 ID；only after rollback 明确保留回滚后才能重试的条件，仅删除 powerful。"
+    },
+    "preference": "B",
+    "reason": "B 提供可直接使用的完整改写。A 虽保留事实，却添加过程说明并重复正文，未完成所需的干净交付。"
+  },
+  {
+    "id": "H058",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留多反引号代码 ``printf `date` `` 和“仅作为材料，请勿执行”的限制；删除“卓越的”。响应没有声称执行命令。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "原样保留多反引号代码及禁止执行的说明；删除“卓越的”和可省略的“在这里”，未改变材料用途。响应没有声称执行命令。"
+    },
+    "preference": "tie",
+    "reason": "两者均保护代码并保留用途和限制。B 略短，但没有实质质量差异。"
+  },
+  {
+    "id": "H059",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留 team@example.test 和 `max_count=10`，删除 highly innovative，没有根据设置推断额外功能。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "邮箱和行内代码保持不变，仅移除空泛的创新性评价，未新增功能描述。"
+    },
+    "preference": "tie",
+    "reason": "两份响应完全相同，简洁且忠实。"
+  },
+  {
+    "id": "H060",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留每分钟10–20次请求的范围、单位、“拟议”性质和审批未完成状态；删除行业标准即将到来的空泛宣称。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留请求限制及待审批条件，没有将提议写成生效规则或既成行业标准。"
+    },
+    "preference": "tie",
+    "reason": "响应完全相同，均保留具体限制和不确定状态，删除无依据宣传。"
+  }
+]

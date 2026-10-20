@@ -1,0 +1,18 @@
+[
+  {
+    "id": "zh-summary-ready",
+    "text": "{\"summary\":[\"新增CSV导出功能\",\"修复登录超时问题\",\"最低支持Python 3.10\"]}"
+  },
+  {
+    "id": "zh-summary-missing",
+    "text": "{\"summary\":\"需要总结的具体材料是什么？\"}"
+  },
+  {
+    "id": "en-risks-ready",
+    "text": "{\"risks\":[\"The service depends on a single supplier with no backup.\",\"Its cash reserve covers only two months of expenses.\"]}"
+  },
+  {
+    "id": "plain-explanation-no-page",
+    "text": "二分查找是在已排序的数据里找目标的方法。每次先看搜索范围中间的元素：如果它就是目标，便找到了；否则，根据两者的大小关系，只保留目标可能所在的一半，再重复这个过程。每轮都把搜索范围缩小一半，需要检查的数据就会很快减少。（原文页码：未提供）"
+  }
+]

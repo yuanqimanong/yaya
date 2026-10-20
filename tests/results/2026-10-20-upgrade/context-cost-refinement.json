@@ -1,0 +1,614 @@
+{
+  "date": "2026-10-20",
+  "unit": "UTF-8 bytes, not tokens",
+  "scope": "entry + one task reference + one language guide or patterns; excludes optional additional guidance and tool output",
+  "baseline": "context-cost.json",
+  "baseline_sha256": "1a3ffe39c98d373a3be8ff2defd5e9fc34564f1f9de9764b44067b740827d36f",
+  "core_archive_sha256": "ee912ab878e4d557189ba8c5c9abf08e369455dcfcb4d5abbeba0659a24a291a",
+  "rows": [
+    {
+      "task": "humanize",
+      "language": "en",
+      "before_bytes": 10245,
+      "bytes": 10349,
+      "delta_bytes": 104,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/humanize.md",
+          "bytes": 2936,
+          "sha256": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5"
+        },
+        {
+          "file": "core/yaya/languages/en/PATTERNS.md",
+          "bytes": 2665,
+          "sha256": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+        }
+      ]
+    },
+    {
+      "task": "humanize",
+      "language": "zh-Hans",
+      "before_bytes": 9940,
+      "bytes": 10098,
+      "delta_bytes": 158,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/humanize.md",
+          "bytes": 2936,
+          "sha256": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5"
+        },
+        {
+          "file": "core/yaya/languages/zh-Hans/PATTERNS.md",
+          "bytes": 2414,
+          "sha256": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b"
+        }
+      ]
+    },
+    {
+      "task": "humanize",
+      "language": "zh-Hant",
+      "before_bytes": 9203,
+      "bytes": 9307,
+      "delta_bytes": 104,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/humanize.md",
+          "bytes": 2936,
+          "sha256": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5"
+        },
+        {
+          "file": "language-packs/zh-Hant/PATTERNS.md",
+          "bytes": 1623,
+          "sha256": "ca1aa738f86582145d066bded336d4cd1e53c6bad6330519df538442c836ef35"
+        }
+      ]
+    },
+    {
+      "task": "humanize",
+      "language": "ja",
+      "before_bytes": 9691,
+      "bytes": 9795,
+      "delta_bytes": 104,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/humanize.md",
+          "bytes": 2936,
+          "sha256": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5"
+        },
+        {
+          "file": "language-packs/ja/PATTERNS.md",
+          "bytes": 2111,
+          "sha256": "1f6826b5b568233e8777e709f7b5f646bba040dad72ba9a4aeb770119106e8b1"
+        }
+      ]
+    },
+    {
+      "task": "humanize",
+      "language": "ko",
+      "before_bytes": 9802,
+      "bytes": 9906,
+      "delta_bytes": 104,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/humanize.md",
+          "bytes": 2936,
+          "sha256": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5"
+        },
+        {
+          "file": "language-packs/ko/PATTERNS.md",
+          "bytes": 2222,
+          "sha256": "a5a32071e475832271f308e4d1283e4577ec2976a6abaecae512b2cba142db0f"
+        }
+      ]
+    },
+    {
+      "task": "text",
+      "language": "en",
+      "before_bytes": 11042,
+      "bytes": 11042,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/text.md",
+          "bytes": 3205,
+          "sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1"
+        },
+        {
+          "file": "core/yaya/languages/en/GUIDE.md",
+          "bytes": 3089,
+          "sha256": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+        }
+      ]
+    },
+    {
+      "task": "text",
+      "language": "zh-Hans",
+      "before_bytes": 10789,
+      "bytes": 10789,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/text.md",
+          "bytes": 3205,
+          "sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1"
+        },
+        {
+          "file": "core/yaya/languages/zh-Hans/GUIDE.md",
+          "bytes": 2836,
+          "sha256": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+        }
+      ]
+    },
+    {
+      "task": "text",
+      "language": "zh-Hant",
+      "before_bytes": 10728,
+      "bytes": 10728,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/text.md",
+          "bytes": 3205,
+          "sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1"
+        },
+        {
+          "file": "language-packs/zh-Hant/GUIDE.md",
+          "bytes": 2775,
+          "sha256": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00"
+        }
+      ]
+    },
+    {
+      "task": "text",
+      "language": "ja",
+      "before_bytes": 11401,
+      "bytes": 11401,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/text.md",
+          "bytes": 3205,
+          "sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1"
+        },
+        {
+          "file": "language-packs/ja/GUIDE.md",
+          "bytes": 3448,
+          "sha256": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+        }
+      ]
+    },
+    {
+      "task": "text",
+      "language": "ko",
+      "before_bytes": 11414,
+      "bytes": 11414,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/text.md",
+          "bytes": 3205,
+          "sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1"
+        },
+        {
+          "file": "language-packs/ko/GUIDE.md",
+          "bytes": 3461,
+          "sha256": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9"
+        }
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "en",
+      "before_bytes": 10671,
+      "bytes": 10671,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/comments.md",
+          "bytes": 2834,
+          "sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc"
+        },
+        {
+          "file": "core/yaya/languages/en/GUIDE.md",
+          "bytes": 3089,
+          "sha256": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+        }
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "zh-Hans",
+      "before_bytes": 10418,
+      "bytes": 10418,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/comments.md",
+          "bytes": 2834,
+          "sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc"
+        },
+        {
+          "file": "core/yaya/languages/zh-Hans/GUIDE.md",
+          "bytes": 2836,
+          "sha256": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+        }
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "zh-Hant",
+      "before_bytes": 10357,
+      "bytes": 10357,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/comments.md",
+          "bytes": 2834,
+          "sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc"
+        },
+        {
+          "file": "language-packs/zh-Hant/GUIDE.md",
+          "bytes": 2775,
+          "sha256": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00"
+        }
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "ja",
+      "before_bytes": 11030,
+      "bytes": 11030,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/comments.md",
+          "bytes": 2834,
+          "sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc"
+        },
+        {
+          "file": "language-packs/ja/GUIDE.md",
+          "bytes": 3448,
+          "sha256": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+        }
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "ko",
+      "before_bytes": 11043,
+      "bytes": 11043,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/comments.md",
+          "bytes": 2834,
+          "sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc"
+        },
+        {
+          "file": "language-packs/ko/GUIDE.md",
+          "bytes": 3461,
+          "sha256": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9"
+        }
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "en",
+      "before_bytes": 10606,
+      "bytes": 10606,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/prompts.md",
+          "bytes": 2769,
+          "sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c"
+        },
+        {
+          "file": "core/yaya/languages/en/GUIDE.md",
+          "bytes": 3089,
+          "sha256": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+        }
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "zh-Hans",
+      "before_bytes": 10353,
+      "bytes": 10353,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/prompts.md",
+          "bytes": 2769,
+          "sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c"
+        },
+        {
+          "file": "core/yaya/languages/zh-Hans/GUIDE.md",
+          "bytes": 2836,
+          "sha256": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+        }
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "zh-Hant",
+      "before_bytes": 10292,
+      "bytes": 10292,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/prompts.md",
+          "bytes": 2769,
+          "sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c"
+        },
+        {
+          "file": "language-packs/zh-Hant/GUIDE.md",
+          "bytes": 2775,
+          "sha256": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00"
+        }
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "ja",
+      "before_bytes": 10965,
+      "bytes": 10965,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/prompts.md",
+          "bytes": 2769,
+          "sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c"
+        },
+        {
+          "file": "language-packs/ja/GUIDE.md",
+          "bytes": 3448,
+          "sha256": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+        }
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "ko",
+      "before_bytes": 10978,
+      "bytes": 10978,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/prompts.md",
+          "bytes": 2769,
+          "sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c"
+        },
+        {
+          "file": "language-packs/ko/GUIDE.md",
+          "bytes": 3461,
+          "sha256": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9"
+        }
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "en",
+      "before_bytes": 10623,
+      "bytes": 10623,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/style-learning.md",
+          "bytes": 2786,
+          "sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935"
+        },
+        {
+          "file": "core/yaya/languages/en/GUIDE.md",
+          "bytes": 3089,
+          "sha256": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+        }
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "zh-Hans",
+      "before_bytes": 10370,
+      "bytes": 10370,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/style-learning.md",
+          "bytes": 2786,
+          "sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935"
+        },
+        {
+          "file": "core/yaya/languages/zh-Hans/GUIDE.md",
+          "bytes": 2836,
+          "sha256": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+        }
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "zh-Hant",
+      "before_bytes": 10309,
+      "bytes": 10309,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/style-learning.md",
+          "bytes": 2786,
+          "sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935"
+        },
+        {
+          "file": "language-packs/zh-Hant/GUIDE.md",
+          "bytes": 2775,
+          "sha256": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00"
+        }
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "ja",
+      "before_bytes": 10982,
+      "bytes": 10982,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/style-learning.md",
+          "bytes": 2786,
+          "sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935"
+        },
+        {
+          "file": "language-packs/ja/GUIDE.md",
+          "bytes": 3448,
+          "sha256": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+        }
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "ko",
+      "before_bytes": 10995,
+      "bytes": 10995,
+      "delta_bytes": 0,
+      "files": [
+        {
+          "file": "core/yaya/SKILL.md",
+          "bytes": 4748,
+          "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+        },
+        {
+          "file": "core/yaya/references/style-learning.md",
+          "bytes": 2786,
+          "sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935"
+        },
+        {
+          "file": "language-packs/ko/GUIDE.md",
+          "bytes": 3461,
+          "sha256": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Byte totals are static file sizes, not measured model input tokens or quality.",
+    "Optional extra guidance, host prompts, user input, and tool output are excluded."
+  ]
+}

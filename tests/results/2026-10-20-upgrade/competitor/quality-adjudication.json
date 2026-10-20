@@ -1,0 +1,242 @@
+{
+  "status": "complete",
+  "review_type": "visible_condition_competitor_quality_adjudication",
+  "blind_review": false,
+  "scope": {
+    "case_ids": ["H002", "H005", "H010", "H019", "H051", "H057"],
+    "selection": "All six non-tie cases in this competitor comparison.",
+    "condition_labels": {
+      "skill": "Yaya",
+      "baseline": "competitor"
+    },
+    "changes_original_judgments": false,
+    "recalculates_summary": false,
+    "body_excerpt_comparison": "Used only to explain the observed preference. Draft/Final wrappers remain part of the original output and are not removed from scoring."
+  },
+  "sources": [
+    {
+      "path": "tests/results/2026-10-20-upgrade/competitor/summary.json",
+      "sha256": "a2b539f139037595f51850f786c3f63c2bab358f7103a00320a58edb8fe7e105"
+    },
+    {
+      "path": "tests/results/2026-10-20-upgrade/competitor/judgments.json",
+      "sha256": "202b0d0e5618e1892cb21c42eb27324ccb9b2103a4b021eb0ce12cc12b36181c"
+    },
+    {
+      "path": "tests/results/2026-10-20-upgrade/competitor/cases.json",
+      "sha256": "5c6d0eae9b500cc2a6afd8d9b806d9bacf791d644a2af7b8625c713486fa5a7f"
+    },
+    {
+      "path": "tests/results/2026-10-20-upgrade/competitor/outputs.json",
+      "sha256": "d5cfc731719d70849a825006e7dec60602ccaaddc0e9978e7e48fa52cec350e6"
+    },
+    {
+      "path": "tests/results/2026-10-20-upgrade/competitor/blind-key.json",
+      "sha256": "29ec4198eec90a49072259da7e5298612b904f44421141db4fd816f34f9b8987"
+    }
+  ],
+  "original_summary_preserved": {
+    "cases": 60,
+    "preferences": {
+      "skill": 4,
+      "baseline": 2,
+      "tie": 54,
+      "uncertain": 0
+    },
+    "conditions": {
+      "skill": {
+        "hard_pass": 59,
+        "hard_fail": 1,
+        "quality_better": 34,
+        "quality_same": 26
+      },
+      "baseline": {
+        "hard_pass": 59,
+        "hard_fail": 1,
+        "quality_better": 31,
+        "quality_worse": 4,
+        "quality_same": 25
+      }
+    }
+  },
+  "findings": {
+    "observed_skill_wins": 4,
+    "skill_wins_explained_by_complete_response_packaging": 4,
+    "packaging_wins_with_identical_final_body": ["H005", "H057"],
+    "packaging_wins_with_comparable_final_body": ["H002", "H010"],
+    "observed_competitor_wins_with_substantive_editing_advantage": ["H019", "H051"],
+    "confirmed_skill_task_incompletion": ["H019"],
+    "skill_under_editing_with_original_hard_pass_retained": ["H051"],
+    "competitor_delivery_failure_with_duplicate_explicit_heading_id": ["H057"],
+    "interpretation": "The four observed skill wins establish cleaner delivery in these cases, not four demonstrations of superior rewritten prose. H019 and H051 both retain a generic promotional proposition after surface-level editing, with different degrees and original task ratings."
+  },
+  "records": [
+    {
+      "id": "H002",
+      "classification": "packaging_driven_preference",
+      "original_preference": "skill",
+      "original_ratings": {
+        "skill": {"blind_label": "A", "fidelity": "pass", "task": "pass", "quality": "better"},
+        "baseline": {"blind_label": "B", "fidelity": "pass", "task": "pass", "quality": "worse"}
+      },
+      "original_reason": "Both preserve the facts and uncertainty, but A delivers directly usable prose without B's repetition and process commentary.",
+      "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+      "source": "It is important to note that we are currently in the process of reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+      "skill_output": "We are reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+      "competitor_output": "Draft: We're reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.\n\nRemaining patterns: None identified.\n\nFinal rewrite: We're reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+      "body_only_observation": {
+        "competitor_final_excerpt": "We're reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+        "equals_skill_body": false,
+        "difference": "We are versus We're is the only final-body difference.",
+        "assessment": "Both preserve ongoing review, expected Tuesday response, and an unconfirmed date. No clear skill advantage in the rewritten body is established."
+      },
+      "complete_response_observation": "The competitor repeats the same two-sentence rewrite under Draft and Final rewrite and inserts Remaining patterns. These labels are inside text, not merely external notes.",
+      "adjudication": "The preference is supported as a direct-usability and packaging advantage. The competitor's quality_worse rating concerns the complete response; its final prose itself is accurate and improved over the source.",
+      "score_change": false
+    },
+    {
+      "id": "H005",
+      "classification": "packaging_driven_preference",
+      "original_preference": "skill",
+      "original_ratings": {
+        "skill": {"blind_label": "B", "fidelity": "pass", "task": "pass", "quality": "better"},
+        "baseline": {"blind_label": "A", "fidelity": "pass", "task": "pass", "quality": "worse"}
+      },
+      "original_reason": "B supplies the requested prose directly. A contains the same accurate rewrite but surrounds and repeats it with unnecessary process material.",
+      "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+      "source": "Let us dive into the rich tapestry of the weekly report. There were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.",
+      "skill_output": "There were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.",
+      "competitor_output": "Draft:\nThere were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.\n\nRemaining patterns: None.\n\nFinal rewrite:\nThere were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.",
+      "body_only_observation": {
+        "competitor_final_excerpt": "There were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.",
+        "equals_skill_body": true,
+        "assessment": "The final bodies are character-identical after removing only the surrounding delivery label for this explanatory comparison. Both preserve the 14/Monday and 9/Friday associations and two reopenings, without inferring closures."
+      },
+      "complete_response_observation": "The competitor duplicates the exact useful sentence and inserts Draft, Remaining patterns, and Final rewrite. Yaya supplies the sentence once.",
+      "adjudication": "This is a packaging-only win, not evidence of better sentence editing or factual handling. The original full-response preference is retained.",
+      "score_change": false
+    },
+    {
+      "id": "H010",
+      "classification": "packaging_driven_preference",
+      "original_preference": "skill",
+      "original_ratings": {
+        "skill": {"blind_label": "A", "fidelity": "pass", "task": "pass", "quality": "better"},
+        "baseline": {"blind_label": "B", "fidelity": "pass", "task": "pass", "quality": "worse"}
+      },
+      "original_reason": "B's underlying rewrite is clear, but A delivers an equally accurate consolidation without duplicated text or unrequested commentary.",
+      "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+      "source": "First and foremost, the report provides an insightful overview of the findings. Furthermore, it provides an overview of the sample. The sample contains 80 responses from one department and is not representative of the whole company.",
+      "skill_output": "The report provides an overview of the findings and the sample. The sample contains 80 responses from one department and is not representative of the whole company.",
+      "competitor_output": "Draft:\nThe report summarizes the findings and describes the sample. The sample contains 80 responses from one department and is not representative of the whole company.\n\nRemaining patterns: None identified.\n\nFinal rewrite:\nThe report summarizes the findings and describes the sample. The sample contains 80 responses from one department and is not representative of the whole company.",
+      "body_only_observation": {
+        "competitor_final_excerpt": "The report summarizes the findings and describes the sample. The sample contains 80 responses from one department and is not representative of the whole company.",
+        "equals_skill_body": false,
+        "difference": "Yaya uses provides an overview of the findings and the sample; the competitor uses summarizes the findings and describes the sample.",
+        "assessment": "Both consolidate the repeated overview statements and preserve 80 responses, one department, and the lack of company-wide representativeness. The competitor's direct verbs are a reasonable alternative; the evidence does not establish a Yaya body-quality advantage."
+      },
+      "complete_response_observation": "The competitor repeats its full two-sentence rewrite and adds process labels. Yaya returns only its final passage.",
+      "adjudication": "The observed win is supported by cleaner complete delivery. It must not be reported as proof that Yaya wrote a better underlying summary sentence.",
+      "score_change": false
+    },
+    {
+      "id": "H019",
+      "classification": "confirmed_task_incompletion",
+      "original_preference": "baseline",
+      "original_ratings": {
+        "skill": {"blind_label": "B", "fidelity": "pass", "task": "fail", "quality": "same"},
+        "baseline": {"blind_label": "A", "fidelity": "pass", "task": "pass", "quality": "better"}
+      },
+      "original_reason": "A准确保留事实并完成精简；B仍保留主要空泛评价，任务完成度不足。",
+      "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+      "source": "归根结底，这次迁移再次印证了创新的深远意义。由于验证步骤失败，迁移已暂停。",
+      "skill_output": "这次迁移再次印证了创新的深远意义。由于验证步骤失败，迁移已暂停。",
+      "competitor_output": "由于验证步骤失败，迁移已暂停。",
+      "body_only_observation": {
+        "assessment": "The competitor removes the entire generic evaluative sentence; Yaya removes only 归根结底. The migration's pause and its cause remain identical in both outputs."
+      },
+      "complete_response_observation": "Neither output contains Draft/Final packaging. The difference is in the requested prose itself.",
+      "adjudication": "Confirmed Yaya task incompletion: the request explicitly asks to remove empty expression, yet the main empty proposition remains. Fidelity still passes because verification failure and migration suspension are preserved.",
+      "relation_to_H051": "Same broad failure mode as H051: a surface edit leaves the generic promotional proposition in place. H019 is stronger because the empty sentence is essentially unchanged and the request explicitly names removing 空泛表达.",
+      "causal_limit": "The observed output does not prove which rule caused the under-editing. It does not justify deleting all subjective opinions.",
+      "score_change": false
+    },
+    {
+      "id": "H051",
+      "classification": "substantive_under_editing_with_original_hard_pass",
+      "original_preference": "baseline",
+      "original_ratings": {
+        "skill": {"blind_label": "A", "fidelity": "pass", "task": "pass", "quality": "better"},
+        "baseline": {"blind_label": "B", "fidelity": "pass", "task": "pass", "quality": "better"}
+      },
+      "original_reason": "两者均保留具体信息。B 直接呈现配置与阅读指引，消除整句空泛宣传；A 仍保留模糊的体验表述。",
+      "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+      "checks": [
+        "Preserve table rows and reference-link destination.",
+        "Do not invent what configuration achieves."
+      ],
+      "source": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis unparalleled configuration enables a seamless experience. Read [guide][g].\n\n[g]: https://example.test/config",
+      "skill_output": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis configuration provides a smooth experience. Read [guide][g].\n\n[g]: https://example.test/config",
+      "competitor_output": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nRead [guide][g].\n\n[g]: https://example.test/config",
+      "body_only_observation": {
+        "source_promotional_sentence": "This unparalleled configuration enables a seamless experience.",
+        "skill_promotional_sentence": "This configuration provides a smooth experience.",
+        "competitor_treatment": "Deletes that sentence and retains the table and Read [guide][g].",
+        "assessment": "Yaya removes unparalleled and substitutes enables/seamless with provides/smooth. The remaining proposition still does not identify a concrete capability, user, condition, or supported outcome. The competitor's advantage is substantive editorial selection, not wrapper removal."
+      },
+      "protected_content_observation": "Both outputs preserve every table row, retry_limit = 2, the reference label [g], and https://example.test/config. No concrete configuration effect is invented. The generic experience claim is inherited from the source, so this is not a newly fabricated specific behavior.",
+      "complete_response_observation": "Both responses directly provide one Markdown document; no Draft/Final duplication explains this preference.",
+      "adjudication": "H051 does share H019's surface-editing/retained-empty-proposition mechanism. It is a meaningful under-editing signal despite the original task pass. Do not silently upgrade it to hard fail.",
+      "threshold_note": "The requests differ in explicitness: H019 directly says to remove 空泛表达, while H051 asks for natural/direct prose and protected-content preservation. H051 also removes an unsupported superlative, whereas H019 leaves its central sentence almost intact. The differing formal task ratings therefore should not be declared mechanically inconsistent solely from their shared mechanism.",
+      "recommended_follow_up": "Use this as an English transfer example when interpreting the already-running focused revision test. Do not add a rule banning smooth, experience, or promotional adjectives, and do not modify the frozen core during this review.",
+      "score_change": false
+    },
+    {
+      "id": "H057",
+      "classification": "packaging_driven_preference_with_duplicate_protected_id",
+      "original_preference": "skill",
+      "original_ratings": {
+        "skill": {"blind_label": "B", "fidelity": "pass", "task": "pass", "quality": "better"},
+        "baseline": {"blind_label": "A", "fidelity": "pass", "task": "fail", "quality": "worse"}
+      },
+      "original_reason": "B 提供可直接使用的完整改写。A 虽保留事实，却添加过程说明并重复正文，未完成所需的干净交付。",
+      "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+      "source": "The headings are linked externally.\n## Retry {#retry}\nOur powerful process retries only after rollback.",
+      "skill_output": "The headings are linked externally.\n## Retry {#retry}\nOur process retries only after rollback.",
+      "competitor_output": "Draft:\n\nThe headings are linked externally.\n## Retry {#retry}\nOur process retries only after rollback.\n\nRemaining patterns:\n- None identified.\n\nFinal rewrite:\n\nThe headings are linked externally.\n## Retry {#retry}\nOur process retries only after rollback.",
+      "body_only_observation": {
+        "competitor_final_excerpt": "The headings are linked externally.\n## Retry {#retry}\nOur process retries only after rollback.",
+        "equals_skill_body": true,
+        "assessment": "The final bodies are character-identical after isolating the final section for this explanatory comparison. Both delete powerful while preserving the external-link notice, heading/ID, and rollback-before-retry condition."
+      },
+      "complete_response_observation": {
+        "source_explicit_heading_occurrences": 1,
+        "skill_explicit_heading_occurrences": 1,
+        "competitor_explicit_heading_occurrences": 2,
+        "duplicate_fragment": "## Retry {#retry}",
+        "finding": "The competitor's full response duplicates the document and its explicit heading identifier. This is a concrete document-structure issue beyond optional prose commentary.",
+        "risk_limit": "Duplicate explicit identifiers may interfere with unique anchor targeting when the whole response is used as one document. No renderer was run, so an actual broken link is not claimed."
+      },
+      "adjudication": "The observed win and delivery defect arise from packaging and duplicate structure, not superior prose. Retain the original task fail; explain the duplicated protected ID when distinguishing it from H002/H005/H010, where similar packaging was rated task pass.",
+      "threshold_note": "Labels or a small editorial note alone are not a universal hard failure. If the distinction rests only on clean delivery, the other three packaged responses show that this run applied a higher failure threshold there. H057's duplicated explicit ID is the strongest concrete reason to treat this complete artifact more severely.",
+      "score_change": false
+    }
+  ],
+  "reporting_guidance": [
+    "Keep the formal result unchanged: 60 cases; skill/competitor/tie preferences 4/2/54; both conditions hard-pass 59/60.",
+    "Report that all four observed Yaya wins are explained by complete-response delivery packaging. Two final bodies are identical; the other two have no demonstrated Yaya prose-quality advantage.",
+    "Report the competitor's H019 and H051 wins as prose-level differences: it removes the full empty proposition while Yaya retains it after surface edits.",
+    "Do not publish a new score after stripping Draft/Final wrappers. Body excerpts here are diagnostic evidence, not replacement evaluation inputs.",
+    "H051 is related to H019 in mechanism, but its original hard pass remains unchanged and no retrospective rule or threshold change is applied.",
+    "This review knows the condition labels. It is not an additional blind evaluation or an independent rerun."
+  ],
+  "work_boundaries": {
+    "model_or_evaluation_cli_run": false,
+    "core_modified": false,
+    "cases_modified": false,
+    "outputs_modified": false,
+    "original_judgments_modified": false,
+    "summary_modified": false,
+    "new_rules_proposed_for_immediate_application": false
+  }
+}

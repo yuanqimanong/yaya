@@ -1,0 +1,8 @@
+[
+  {
+    "id": "H032",
+    "text": "The API returns either a value or an error. It never returns both.",
+    "notes": "The wording is already clear and direct; no changes made.",
+    "skill_used": false
+  }
+]

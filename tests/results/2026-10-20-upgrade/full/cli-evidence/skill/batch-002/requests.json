@@ -1,0 +1,7 @@
+[
+  {
+    "id": "en-finance",
+    "request": "Polish this for a financial update, using plain English.",
+    "input": "Revenue was $12 million, up 8% year over year. Margin rose from 20% to 23%. Management thinks demand may be recovering; order data was not supplied."
+  }
+]

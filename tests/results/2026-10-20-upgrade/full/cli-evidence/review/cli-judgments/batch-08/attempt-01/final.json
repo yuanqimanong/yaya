@@ -1,0 +1,208 @@
+{
+  "judgments": [
+    {
+      "id": "H051",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留完整表格、retry_limit=2、引用链接及其目标地址；将夸张的“unparalleled”和“seamless”改为较平实的“smooth”，没有新增配置功能。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留完整表格、retry_limit=2、引用链接及其目标地址；“provides a smooth experience”延续原文体验描述，语气更自然克制。"
+      },
+      "preference": "tie",
+      "reason": "两份回复完全相同，均保留受保护内容并减少宣传腔。"
+    },
+    {
+      "id": "H052",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "完整保留供应商引语，以及“尚未独立核实”的限制；不改写受保护引用是合理处理，说明文字本身已清楚。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留引用和未核实状态；“以上为供应商原话”与原文归属一致，没有把供应商保证变成自己的承诺。"
+      },
+      "preference": "tie",
+      "reason": "B略作压缩，A保留清楚原句；两者在准确性、清晰度和用途上没有实质差异。"
+    },
+    {
+      "id": "H053",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留标价€40、优惠价€35及截止日期12 November；“Buy now”保留购买号召，删除空泛的机会宣传。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "两项价格、价格角色和截止日期均保留；“list price”比“ordinary list price”更自然，购买号召也更直接。"
+      },
+      "preference": "B",
+      "reason": "两者均完成任务；B进一步去掉“ordinary list price”中的冗余修饰，表达更自然。"
+    },
+    {
+      "id": "H054",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "逐字保留release-id注释和HTML；“我们正在审核”保留审核进行中的状态，去掉“目前正在进行……工作的推进”的冗余。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "完整保留注释、HTML和审核正在推进的状态；正文明显缩短，但仍保留“推进”这一较抽象的表达。"
+      },
+      "preference": "A",
+      "reason": "A直接说明正在做什么，更充分地去除空泛表达，同时保留检查要求中的审核进行状态。"
+    },
+    {
+      "id": "H055",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留${region}、%s和/srv/app/config.json，并保留“only”的范围限制；仅删除无具体支撑的“cutting-edge”。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "两个占位符、文件路径及“cover only”均未改变；删除宣传性修饰后，指令更直接。"
+      },
+      "preference": "tie",
+      "reason": "回复完全相同，均准确保留模板内容和唯一覆盖范围。"
+    },
+    {
+      "id": "H056",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "完整保留“-3.5%，不是+3.5%”的数值、符号及纠正关系，删除无依据的突破性和重新定义表述。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留负数结果与对正数结果的明确否定，仅去掉后一句空泛拔高，没有改变结果。"
+      },
+      "preference": "tie",
+      "reason": "回复完全相同，删减准确且没有损失具体信息。"
+    },
+    {
+      "id": "H057",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留外部链接说明、标题“## Retry {#retry}”和“only after rollback”的先后条件；仅删除“powerful”。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "标题、显式ID和回滚后才重试的条件均未改变；删除泛化评价后更直接。"
+      },
+      "preference": "tie",
+      "reason": "回复完全相同，均保留链接锚点和执行条件。"
+    },
+    {
+      "id": "H058",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留双反引号包围的printf代码及其中的`date`；保留仅作材料、请勿执行的限制，没有提供执行结果或声称已执行。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "多反引号行内代码保持原样；删去“卓越”和冗余的“在这里”，同时保留材料用途与禁止执行的说明。"
+      },
+      "preference": "tie",
+      "reason": "回复完全相同，均在保护代码和用途限制的同时减少空泛修饰。"
+    },
+    {
+      "id": "H059",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留team@example.test和行内代码max_count=10；仅删除“highly innovative”，没有推断该设置的具体功能。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "联系邮箱和设置内容均未改变；删除无依据的创新性评价，文字更简洁。"
+      },
+      "preference": "tie",
+      "reason": "回复完全相同，保护内容和编辑效果一致。"
+    },
+    {
+      "id": "H060",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留每分钟10–20次请求的范围、单位、拟议性质和审批未完成状态；删除行业标准即将到来的拔高。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "完整保留具体限制及待审批条件，没有把拟议限制写成已生效规定，也没有宣称已成为标准。"
+      },
+      "preference": "tie",
+      "reason": "回复完全相同，均去掉空泛预测并保留关键不确定状态。"
+    },
+    {
+      "id": "H061",
+      "A": {
+        "fidelity": "pass",
+        "task": "fail",
+        "quality": "not_applicable",
+        "evidence": "准确指出三处空泛表达，并确认TXT转PDF是具体功能，没有猜测作者身份；但多次加入“建议删去或补充”“建议明确用户和用途”，超出检查要求限定的“只报告具体问题和理由”。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "not_applicable",
+        "evidence": "逐项指出背景笼统、对象和用途不明、无限效果缺乏依据；保留TXT转PDF这一事实，仅提供诊断，没有改稿或作者身份判断。"
+      },
+      "preference": "B",
+      "reason": "B严格限于问题和理由。A的诊断准确，但增加了用户未要求的修改建议；本任务不要求改写，因此不评改稿质量。"
+    },
+    {
+      "id": "H062",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "not_applicable",
+        "evidence": "明确将“game changer”归于客户引语，并将CSV支持识别为自己的具体总结；只给反馈，没有提供替换稿、要求删除引语或推断作者身份。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "not_applicable",
+        "evidence": "准确区分客户引用与自己的CSV功能陈述，结论为无需修改；没有改写正文、删除引用或作作者身份判断。"
+      },
+      "preference": "tie",
+      "reason": "两者都准确说明引语归属和总结的具体性，并遵守仅审阅措辞的范围；措辞及顺序差异没有实质影响。"
+    }
+  ]
+}

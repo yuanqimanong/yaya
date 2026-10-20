@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checks": [
+    "Report changes confined to requested section; original bytes retained elsewhere",
+    "Existing style and request hashes unchanged",
+    "Runtime snapshot hashes unchanged",
+    "Python checker passed; only ordinary comment line 3 changed",
+    "New style persisted at the requested isolated path",
+    "Original backups match supplied fixtures"
+  ],
+  "semantic_review": "860万元、同比6%、21%至22%均保持；补充1个百分点计算正确；未完成交付及日期未定保留。注释准确描述>=10。风格文件有复用指令和明确标为假设的例子。",
+  "reviewer": "root verification of files and actual helper result"
+}

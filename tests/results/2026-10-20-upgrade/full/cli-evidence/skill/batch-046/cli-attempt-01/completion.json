@@ -1,0 +1,80 @@
+{
+  "id": "H012",
+  "condition": "skill",
+  "status": "completed",
+  "started_at_utc": "2026-10-20T10:54:39.909048+00:00",
+  "prompt_sha256": "5c643baf619c1e4e01a1a04893d8269221fedcc9614d145fc2aacdbf8be7b614",
+  "context_sha256": {
+    "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+    "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+    "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+  },
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--color",
+    "never",
+    "--json",
+    "-C",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-046\\cli-attempt-01",
+    "-o",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-046\\cli-attempt-01\\final.json",
+    "--output-schema",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-046\\cli-attempt-01\\output-schema.json",
+    "-"
+  ],
+  "timeout_seconds": 180,
+  "elapsed_seconds": 45.267154400000436,
+  "returncode": 0,
+  "usage": [
+    {
+      "input_tokens": 21619,
+      "cached_input_tokens": 16768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 228,
+      "reasoning_output_tokens": 180
+    }
+  ],
+  "tool_or_unknown_items": [],
+  "diagnostics": [
+    {
+      "classification": "ignored_provider_configuration",
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_0",
+          "type": "error",
+          "message": "Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."
+        }
+      }
+    },
+    {
+      "classification": "ignored_provider_configuration",
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_1",
+          "type": "error",
+          "message": "Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."
+        }
+      }
+    }
+  ],
+  "malformed_jsonl_lines": 0,
+  "completed_turns": 1,
+  "failed_events": [],
+  "artifact_sha256": {
+    "prompt.txt": "5c643baf619c1e4e01a1a04893d8269221fedcc9614d145fc2aacdbf8be7b614",
+    "stdout.jsonl": "ea73c005848880914d3df33d6195e636b28deceef0d655b610264423eb552ea8",
+    "stderr.txt": "a979b63a83482026ca611540e75a638f30742942fe59608bc3dba4ac17ff1f04",
+    "final.json": "fb1673050df655abb5b997d4107922786c0d26fd1df4b82b8ada7d73d1d7b5b8",
+    "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+  }
+}

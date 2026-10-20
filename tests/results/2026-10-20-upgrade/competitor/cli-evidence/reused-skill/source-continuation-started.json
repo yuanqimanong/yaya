@@ -1,0 +1,1550 @@
+{
+  "protocol": 1,
+  "created_at_utc": "2026-10-20T10:50:33.571246+00:00",
+  "script_sha256": "a7cf5e3b3e7951d598919eff0461d4537d62ba9dc4c66ca170740d6d4ef7599a",
+  "original_cli_metadata_sha256": "30c7d35319394a7d3c5c3d750c9436ca4a36a8f740e47d7821ff1d4509f5fb32",
+  "manifest_sha256": "72bfaba7778ccf5cbb03a578a4976f7f5967c4ff03918fb68ebf75136b0e7e60",
+  "retry_infrastructure": true,
+  "workers": 3,
+  "timeout_seconds": 180,
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "preserved": [
+    {
+      "id": "zh-finance",
+      "condition": "skill",
+      "directory": "skill/batch-001",
+      "output_sha256": "44bc117ac7f3abbe2d4a59eadb91886cec21f314ec85223fda8f9e2df4ab4149"
+    },
+    {
+      "id": "zh-finance",
+      "condition": "baseline",
+      "directory": "baseline/batch-001",
+      "output_sha256": "34ed2b61ff5433bdbf442730d63aff73171672a85911ce66badb8c22c65fd0e3"
+    },
+    {
+      "id": "en-finance",
+      "condition": "skill",
+      "directory": "skill/batch-002",
+      "output_sha256": "b27159266df6d4efe67f07c7211ee13d2cdac5b3bf553334d8c1a07be27fb710"
+    },
+    {
+      "id": "en-finance",
+      "condition": "baseline",
+      "directory": "baseline/batch-002",
+      "output_sha256": "600480a65b0c1d89a507527d5e244ff989e7ca2bbeb87d29dbbf3c17c686d258"
+    },
+    {
+      "id": "hant-hk",
+      "condition": "skill",
+      "directory": "skill/batch-003",
+      "output_sha256": "ab95e1553f861e8bdb5348fb0008dd331909641c5b91228a7e841e69bc58f51b"
+    },
+    {
+      "id": "hant-hk",
+      "condition": "baseline",
+      "directory": "baseline/batch-003",
+      "output_sha256": "2417b983aadc648987f55c4d5def304b0d5f862a34fbd4e77aaccf5abdaeca52"
+    },
+    {
+      "id": "ja-text",
+      "condition": "skill",
+      "directory": "skill/batch-004",
+      "output_sha256": "b352f1f8629fb2a2ebec132b80bedb16626158da2ce1a6bf21a932ad1f422110"
+    },
+    {
+      "id": "ja-text",
+      "condition": "baseline",
+      "directory": "baseline/batch-004",
+      "output_sha256": "a1b67b97537842b3ede3a35b406f9f6c81d74f1a0b0540a36aab17edc849a0f7"
+    },
+    {
+      "id": "ko-text",
+      "condition": "skill",
+      "directory": "skill/batch-005",
+      "output_sha256": "1edab4a3aecbf441c73358a6b0f5f98a3a7bc31a0bacf921204fe43401a13944"
+    },
+    {
+      "id": "ko-text",
+      "condition": "baseline",
+      "directory": "baseline/batch-005",
+      "output_sha256": "1ce343464340fb8f06ff21da2dcd65016380d3f13792ff5ae0990d43b156a819"
+    },
+    {
+      "id": "zh-comments",
+      "condition": "skill",
+      "directory": "skill/batch-006",
+      "output_sha256": "d0ff2c7515771751ad4f198c676a5138e371b0239ad8a2d4818ad72db2512bee"
+    },
+    {
+      "id": "zh-comments",
+      "condition": "baseline",
+      "directory": "baseline/batch-006",
+      "output_sha256": "f6394e62d1a57caa973fd43d0957fc3417a6da86bebf8dab5a1a2ae29548be7b"
+    },
+    {
+      "id": "en-comments",
+      "condition": "skill",
+      "directory": "skill/batch-007",
+      "output_sha256": "398d7ae9abaed38a73a49ef822e98b46fe3421f7c3a61ee49a754e34706e49c6"
+    },
+    {
+      "id": "en-comments",
+      "condition": "baseline",
+      "directory": "baseline/batch-007",
+      "output_sha256": "a91c249444d066751e5bb943208ab3ad692c78d302f275bca86637c423f5161f"
+    },
+    {
+      "id": "hant-comments",
+      "condition": "skill",
+      "directory": "skill/batch-008",
+      "output_sha256": "7ddb5544691aced02ee7be362d4a35b2ed7ed71d87a24df348ef2b58bdbfd153"
+    },
+    {
+      "id": "hant-comments",
+      "condition": "baseline",
+      "directory": "baseline/batch-008",
+      "output_sha256": "b0142f73598458cc23d62c8dfd78bebfba7716156e7dfbd142ea819037580b9d"
+    },
+    {
+      "id": "ja-comments",
+      "condition": "skill",
+      "directory": "skill/batch-009",
+      "output_sha256": "a9102c77fdaf5bc9b50cdbc139680df680b035e3fc1476dca20510244d9f4e26"
+    },
+    {
+      "id": "ja-comments",
+      "condition": "baseline",
+      "directory": "baseline/batch-009",
+      "output_sha256": "f6adc56ff38a03b14210535125b640de08eaef845a380efedccdc0165402a88f"
+    },
+    {
+      "id": "ko-comments",
+      "condition": "skill",
+      "directory": "skill/batch-010",
+      "output_sha256": "9b106f6a2fb0992c763b50b7eb47f0447ba1b6021141474c4c12f00bd259deb0"
+    },
+    {
+      "id": "ko-comments",
+      "condition": "baseline",
+      "directory": "baseline/batch-010",
+      "output_sha256": "ce750ae4bb534924c6f04f00662ceb2338dd506c82ef2fb0022d5f5298771fcd"
+    },
+    {
+      "id": "zh-prompt",
+      "condition": "skill",
+      "directory": "skill/batch-011",
+      "output_sha256": "ee152e44e80ebe82c3a43144c6ce98953c83fc1bbc792386998b84936ccef85d"
+    },
+    {
+      "id": "zh-prompt",
+      "condition": "baseline",
+      "directory": "baseline/batch-011",
+      "output_sha256": "70d9aae4b16511ebd8a1064eaf386cc59174f9376569ec74983226fca1af835c"
+    },
+    {
+      "id": "en-prompt",
+      "condition": "skill",
+      "directory": "skill/batch-012",
+      "output_sha256": "47191b7018c74ef0e482798da138817ce5cd11221ea8ae56e6dcac10db4999b8"
+    },
+    {
+      "id": "en-prompt",
+      "condition": "baseline",
+      "directory": "baseline/batch-012",
+      "output_sha256": "1a10c9deea1199387379e3f346dc7c2f1f93e7724e9f7ea936bbbe7cd7903514"
+    },
+    {
+      "id": "hant-prompt",
+      "condition": "skill",
+      "directory": "skill/batch-013",
+      "output_sha256": "b4d9d1249c99be8d2c4d9de1060c243fd3b0141de2fff58c13f72ac6a273b0b9"
+    },
+    {
+      "id": "hant-prompt",
+      "condition": "baseline",
+      "directory": "baseline/batch-013",
+      "output_sha256": "7d905d980a72a9a12eb5d5ca5b302bec60e3af1ae728ba4b03c2e56dd33b5c31"
+    },
+    {
+      "id": "ja-prompt",
+      "condition": "skill",
+      "directory": "skill/batch-014",
+      "output_sha256": "9ce50412dce1fec3c2ea38e185d130d53ec0f9708bc86e64e4392afe68741c32"
+    },
+    {
+      "id": "ja-prompt",
+      "condition": "baseline",
+      "directory": "baseline/batch-014",
+      "output_sha256": "3027b79323182c69d37485591bde9c4aa8027faed15e8e0e4b49a1a10f97c3a4"
+    },
+    {
+      "id": "ko-prompt",
+      "condition": "skill",
+      "directory": "skill/batch-015",
+      "output_sha256": "75d25259d9b53b08d72f0deffd605fc53c6a408ec3f06d5b80e5026e1b48a67f"
+    },
+    {
+      "id": "ko-prompt",
+      "condition": "baseline",
+      "directory": "baseline/batch-015",
+      "output_sha256": "e5487d17537030c587375c76d99b8661d45cd7bee3c7ccbb0d2f34b83a94a997"
+    },
+    {
+      "id": "zh-style",
+      "condition": "skill",
+      "directory": "skill/batch-016",
+      "output_sha256": "ebb0484030ea9b6c2604fc80d56a5c21a61f9be53176fc63c98f3293d8932994"
+    },
+    {
+      "id": "zh-style",
+      "condition": "baseline",
+      "directory": "baseline/batch-016",
+      "output_sha256": "fff18908479e8398cd0d88740a00dca607ec7508a14108dc88742d409722f8b8"
+    },
+    {
+      "id": "en-style",
+      "condition": "skill",
+      "directory": "skill/batch-017",
+      "output_sha256": "bb4b077cc69a16dc78446c5ec4face2571af1836442e809442a6aef8d64f70aa"
+    },
+    {
+      "id": "en-style",
+      "condition": "baseline",
+      "directory": "baseline/batch-017",
+      "output_sha256": "c47529682acd5de9aa7a0971d93191a74807f5eefb314df95b490a40f310f5ed"
+    },
+    {
+      "id": "hant-style",
+      "condition": "skill",
+      "directory": "skill/batch-018",
+      "output_sha256": "6783193e285f14051a7cf3cbdef7ac0b8f061db53b9fb850653cf6925dc6b504"
+    },
+    {
+      "id": "hant-style",
+      "condition": "baseline",
+      "directory": "baseline/batch-018",
+      "output_sha256": "aef61e0b5908c9a1c2a900bc97a795ca643b955b9ebe6162f3e414e55d003bcd"
+    },
+    {
+      "id": "ja-style",
+      "condition": "skill",
+      "directory": "skill/batch-019",
+      "output_sha256": "64d0e4beb4ed8b1f4dff3839cebd1b0d0f20d0931b6cae68a89079df85a22d8c"
+    },
+    {
+      "id": "ja-style",
+      "condition": "baseline",
+      "directory": "baseline/batch-019",
+      "output_sha256": "04b558e48d47d59f06d63ea8464fd2e0401f6443dfb0311ea73e9c0eeb7e768a"
+    },
+    {
+      "id": "ko-style",
+      "condition": "skill",
+      "directory": "skill/batch-020",
+      "output_sha256": "b633782cc8cd29d083b5b2bfc5ce7f1ae591fff1537127eb5d891f3695570f90"
+    },
+    {
+      "id": "ko-style",
+      "condition": "baseline",
+      "directory": "baseline/batch-020",
+      "output_sha256": "390418f56d66648108f1ec75d4880ca89894e6257efa07c817efe7cf5a63cf8d"
+    },
+    {
+      "id": "clear-unchanged",
+      "condition": "skill",
+      "directory": "skill/batch-021",
+      "output_sha256": "db792164c77156793667dc9ddaf3aa0d0e5f214efbd5ba7c53f02159f54a9c94"
+    },
+    {
+      "id": "clear-unchanged",
+      "condition": "baseline",
+      "directory": "baseline/batch-021",
+      "output_sha256": "5490dc877fe22faea4df7e81c488f747a621a9577d8179b4492973afb8d8c6f9"
+    },
+    {
+      "id": "mixed-language",
+      "condition": "skill",
+      "directory": "skill/batch-022",
+      "output_sha256": "0a88d5b34685da4cec59f4945e703a8ed632f7ffdb3dbb759dede0770abd8ed0"
+    },
+    {
+      "id": "mixed-language",
+      "condition": "baseline",
+      "directory": "baseline/batch-022",
+      "output_sha256": "19c5814c1e7eda49909b1e4812ae33c18d1fe84945dfac7add7f8792cc663d39"
+    },
+    {
+      "id": "injection-material",
+      "condition": "skill",
+      "directory": "skill/batch-023",
+      "output_sha256": "d8fa4affe6915de6a7a07d5e487b44545d58518b68241728e562f595b6e1ae41"
+    },
+    {
+      "id": "injection-material",
+      "condition": "baseline",
+      "directory": "baseline/batch-023",
+      "output_sha256": "ed2c9042f3235c8f1837b05d74fc4a69f0dd468363225b83a01562b3a190985b"
+    },
+    {
+      "id": "negative-task",
+      "condition": "skill",
+      "directory": "skill/batch-024",
+      "output_sha256": "850df8f34e75d81f86d4071241603c71102394904f6a98523502b22a6c7541a4"
+    },
+    {
+      "id": "negative-task",
+      "condition": "baseline",
+      "directory": "baseline/batch-024",
+      "output_sha256": "0d69d24aa6fcd0ec0d73e635c00fdc3d50460a155fe53c65755dcc2328d79594"
+    },
+    {
+      "id": "downstream-style",
+      "condition": "skill",
+      "directory": "skill/batch-025",
+      "output_sha256": "62cb462f8b741081375384c8b4d67229085d953d59b9170f769fcef89d850e4e"
+    },
+    {
+      "id": "downstream-style",
+      "condition": "baseline",
+      "directory": "baseline/batch-025",
+      "output_sha256": "6afa65326732b47f5551e49bc867266d596c86663aec9e5d939887ab7ff0ecf3"
+    },
+    {
+      "id": "bare-zh",
+      "condition": "skill",
+      "directory": "skill/batch-026",
+      "output_sha256": "74adcda0d74393a0681b24653034c7bb14f3b15d79e3731970eca8f900ce3a51"
+    },
+    {
+      "id": "bare-zh",
+      "condition": "baseline",
+      "directory": "baseline/batch-026",
+      "output_sha256": "9085cb927f18725e4cd60fc93e6ffa8098dea2408d855c25263a8ff639adc076"
+    },
+    {
+      "id": "readme-no-presupposition",
+      "condition": "skill",
+      "directory": "skill/batch-027",
+      "output_sha256": "c9397189007aa2f9b1e46802abc977f5635261fc9d5b52894844db01b6ab6295"
+    },
+    {
+      "id": "readme-no-presupposition",
+      "condition": "baseline",
+      "directory": "baseline/batch-027",
+      "output_sha256": "b660046813c6551f8f2d3369257c65cc2084792d3ac499926b0cedae4423162d"
+    },
+    {
+      "id": "finance-pairing",
+      "condition": "skill",
+      "directory": "skill/batch-028",
+      "output_sha256": "6c1f336f436fd421121ed0cc673671daa4fb2d659ec7b7be6c749b2f36b3c444"
+    },
+    {
+      "id": "finance-pairing",
+      "condition": "baseline",
+      "directory": "baseline/batch-028",
+      "output_sha256": "357f2b5674e5cf58bb05ed922c82769a38e3b86df789070850323f931335a19a"
+    },
+    {
+      "id": "en-review-only",
+      "condition": "skill",
+      "directory": "skill/batch-029",
+      "output_sha256": "96e540c025d07e8bcf7ad2e85b34fc82e36fc6eb6d6ca5b2bc22bf99c50944ff"
+    },
+    {
+      "id": "en-review-only",
+      "condition": "baseline",
+      "directory": "baseline/batch-029",
+      "output_sha256": "d0c0227edb201dad99abd75c0d0df33afac01de0ef2b8f1c98a9c4141bb83676"
+    },
+    {
+      "id": "authorized-language-change",
+      "condition": "skill",
+      "directory": "skill/batch-030",
+      "output_sha256": "890e768f8a7771323f4d5516af3ce7ef1355d4073c9b529364ed89e8411e9a92"
+    },
+    {
+      "id": "authorized-language-change",
+      "condition": "baseline",
+      "directory": "baseline/batch-030",
+      "output_sha256": "dd57da49114ed40b40927b1c1d9525dcc2d96ce8186ebc5da264119f4d8ae980"
+    },
+    {
+      "id": "unsupported-ts-comments",
+      "condition": "skill",
+      "directory": "skill/batch-031",
+      "output_sha256": "57d36e4f7f060806dd5b1f6e35d206ff662b34c745dbab187cd2806c018ea9f1"
+    },
+    {
+      "id": "unsupported-ts-comments",
+      "condition": "baseline",
+      "directory": "baseline/batch-031",
+      "output_sha256": "2135bad630ae9239f542c585d3d49af21d41fc8f42b1079f6e71ebeafd6c7e02"
+    },
+    {
+      "id": "ja-clear-unchanged",
+      "condition": "skill",
+      "directory": "skill/batch-032",
+      "output_sha256": "6deb997a4d92d0cc236342e00c5f879e1d1fd373d3610a142f618244ca85dcc1"
+    },
+    {
+      "id": "ja-clear-unchanged",
+      "condition": "baseline",
+      "directory": "baseline/batch-032",
+      "output_sha256": "7d68a430f9dd29d55cecbe0562a1dbe45028f6af7a98212caa5aaf6a6448c621"
+    },
+    {
+      "id": "negative-code-task",
+      "condition": "skill",
+      "directory": "skill/batch-033",
+      "output_sha256": "477ace3be8fc3349924564b160d26f204102ad8f85e726c551627fddb33f73fc"
+    },
+    {
+      "id": "saved-style",
+      "condition": "skill",
+      "directory": "skill/batch-034",
+      "output_sha256": "354016ad6296b1a68d9c3480122209526b0b83ff9e1f87b1a19caccdf1414fc0"
+    },
+    {
+      "id": "saved-style",
+      "condition": "baseline",
+      "directory": "baseline/batch-034",
+      "output_sha256": "53b9ceefb0eec1369bff7aa2c3dc07cf79f227e1ca253300e2bdf0e05c8c5c1c"
+    },
+    {
+      "id": "H001",
+      "condition": "baseline",
+      "directory": "baseline/batch-035",
+      "output_sha256": "c3c8c32d9464f8ebf52bda262dd6c8e484a2d7d559ca0d4a2de01c8ba151917a"
+    },
+    {
+      "id": "H002",
+      "condition": "skill",
+      "directory": "skill/batch-036",
+      "output_sha256": "851ddc01cedf924ba0d5e277d9d1d252471366e33a66ef98425cdaeb48621fb8"
+    },
+    {
+      "id": "H002",
+      "condition": "baseline",
+      "directory": "baseline/batch-036",
+      "output_sha256": "432e6f7ecb362d63cba976d9f404cd269ec7c087ce86ededa8013be5c224bd2a"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "negative-code-task",
+      "condition": "baseline",
+      "directory": "baseline/batch-033",
+      "action": "retry_infrastructure",
+      "attempt": "cli-attempt-02",
+      "prior_failure": {
+        "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 1048576 bytes failed",
+        "returncode": 3221226505,
+        "error": "CLI exited with status 3221226505",
+        "attempt": "cli-attempt-01",
+        "completion_sha256": "f2f093860450d041d99bb9a85b3312a9b5857a7d1c832acbb15176becb18fe4a",
+        "started_sha256": "f1e260e8b6b9957f16902141645b92837d34c5dfa6ffd8172185743764efc505",
+        "artifact_sha256": {
+          "prompt.txt": "fcb40faa6035734449b63962ec5cab11de9b02262b781de681fe58028c5a276a",
+          "stdout.jsonl": "4c8d3862eaf0638436c58760e7b6640c43f322a92b7e06a4af22dec6d064f587",
+          "stderr.txt": "7c4e374479ce0260de7f116f41a834b28d7c4f195cd570b04e688e77f02db521",
+          "final.json": "3c7d132b3760125c246bc1272144ad731c212f24887e16864483fe92bc92f8c6",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+        }
+      }
+    },
+    {
+      "id": "H001",
+      "condition": "skill",
+      "directory": "skill/batch-035",
+      "action": "retry_infrastructure",
+      "attempt": "cli-attempt-02",
+      "prior_failure": {
+        "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 2029685 bytes failed",
+        "returncode": 3221226505,
+        "error": "CLI exited with status 3221226505",
+        "attempt": "cli-attempt-01",
+        "completion_sha256": "7c2e36a8cb24907246ea6d98e565b19e5c4dd7a2229d86431661b99a07157e32",
+        "started_sha256": "e42182f27102fde23e2428d564d2153b119e59086ce34180648c8758449450b1",
+        "artifact_sha256": {
+          "prompt.txt": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+          "stdout.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr.txt": "d76e8322abfaf3c09e2ddee0246babe41348283955467c448b7280198235a9f9",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+        }
+      }
+    },
+    {
+      "id": "H003",
+      "condition": "skill",
+      "directory": "skill/batch-037",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H003",
+      "condition": "baseline",
+      "directory": "baseline/batch-037",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H004",
+      "condition": "skill",
+      "directory": "skill/batch-038",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H004",
+      "condition": "baseline",
+      "directory": "baseline/batch-038",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H005",
+      "condition": "skill",
+      "directory": "skill/batch-039",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H005",
+      "condition": "baseline",
+      "directory": "baseline/batch-039",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H006",
+      "condition": "skill",
+      "directory": "skill/batch-040",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H006",
+      "condition": "baseline",
+      "directory": "baseline/batch-040",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H007",
+      "condition": "skill",
+      "directory": "skill/batch-041",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H007",
+      "condition": "baseline",
+      "directory": "baseline/batch-041",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H008",
+      "condition": "skill",
+      "directory": "skill/batch-042",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H008",
+      "condition": "baseline",
+      "directory": "baseline/batch-042",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H009",
+      "condition": "skill",
+      "directory": "skill/batch-043",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H009",
+      "condition": "baseline",
+      "directory": "baseline/batch-043",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H010",
+      "condition": "skill",
+      "directory": "skill/batch-044",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H010",
+      "condition": "baseline",
+      "directory": "baseline/batch-044",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H011",
+      "condition": "skill",
+      "directory": "skill/batch-045",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H011",
+      "condition": "baseline",
+      "directory": "baseline/batch-045",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H012",
+      "condition": "skill",
+      "directory": "skill/batch-046",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H012",
+      "condition": "baseline",
+      "directory": "baseline/batch-046",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H013",
+      "condition": "skill",
+      "directory": "skill/batch-047",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H013",
+      "condition": "baseline",
+      "directory": "baseline/batch-047",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H014",
+      "condition": "skill",
+      "directory": "skill/batch-048",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H014",
+      "condition": "baseline",
+      "directory": "baseline/batch-048",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H015",
+      "condition": "skill",
+      "directory": "skill/batch-049",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H015",
+      "condition": "baseline",
+      "directory": "baseline/batch-049",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H016",
+      "condition": "skill",
+      "directory": "skill/batch-050",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H016",
+      "condition": "baseline",
+      "directory": "baseline/batch-050",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H017",
+      "condition": "skill",
+      "directory": "skill/batch-051",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H017",
+      "condition": "baseline",
+      "directory": "baseline/batch-051",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H018",
+      "condition": "skill",
+      "directory": "skill/batch-052",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H018",
+      "condition": "baseline",
+      "directory": "baseline/batch-052",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H019",
+      "condition": "skill",
+      "directory": "skill/batch-053",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H019",
+      "condition": "baseline",
+      "directory": "baseline/batch-053",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H020",
+      "condition": "skill",
+      "directory": "skill/batch-054",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H020",
+      "condition": "baseline",
+      "directory": "baseline/batch-054",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H021",
+      "condition": "skill",
+      "directory": "skill/batch-055",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H021",
+      "condition": "baseline",
+      "directory": "baseline/batch-055",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H022",
+      "condition": "skill",
+      "directory": "skill/batch-056",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H022",
+      "condition": "baseline",
+      "directory": "baseline/batch-056",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H023",
+      "condition": "skill",
+      "directory": "skill/batch-057",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H023",
+      "condition": "baseline",
+      "directory": "baseline/batch-057",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H024",
+      "condition": "skill",
+      "directory": "skill/batch-058",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H024",
+      "condition": "baseline",
+      "directory": "baseline/batch-058",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H025",
+      "condition": "skill",
+      "directory": "skill/batch-059",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H025",
+      "condition": "baseline",
+      "directory": "baseline/batch-059",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H026",
+      "condition": "skill",
+      "directory": "skill/batch-060",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H026",
+      "condition": "baseline",
+      "directory": "baseline/batch-060",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H027",
+      "condition": "skill",
+      "directory": "skill/batch-061",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H027",
+      "condition": "baseline",
+      "directory": "baseline/batch-061",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H028",
+      "condition": "skill",
+      "directory": "skill/batch-062",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H028",
+      "condition": "baseline",
+      "directory": "baseline/batch-062",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H029",
+      "condition": "skill",
+      "directory": "skill/batch-063",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H029",
+      "condition": "baseline",
+      "directory": "baseline/batch-063",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H030",
+      "condition": "skill",
+      "directory": "skill/batch-064",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H030",
+      "condition": "baseline",
+      "directory": "baseline/batch-064",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H031",
+      "condition": "skill",
+      "directory": "skill/batch-065",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H031",
+      "condition": "baseline",
+      "directory": "baseline/batch-065",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H032",
+      "condition": "skill",
+      "directory": "skill/batch-066",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H032",
+      "condition": "baseline",
+      "directory": "baseline/batch-066",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H033",
+      "condition": "skill",
+      "directory": "skill/batch-067",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H033",
+      "condition": "baseline",
+      "directory": "baseline/batch-067",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H034",
+      "condition": "skill",
+      "directory": "skill/batch-068",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H034",
+      "condition": "baseline",
+      "directory": "baseline/batch-068",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H035",
+      "condition": "skill",
+      "directory": "skill/batch-069",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H035",
+      "condition": "baseline",
+      "directory": "baseline/batch-069",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H036",
+      "condition": "skill",
+      "directory": "skill/batch-070",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H036",
+      "condition": "baseline",
+      "directory": "baseline/batch-070",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H037",
+      "condition": "skill",
+      "directory": "skill/batch-071",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H037",
+      "condition": "baseline",
+      "directory": "baseline/batch-071",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H038",
+      "condition": "skill",
+      "directory": "skill/batch-072",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H038",
+      "condition": "baseline",
+      "directory": "baseline/batch-072",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H039",
+      "condition": "skill",
+      "directory": "skill/batch-073",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H039",
+      "condition": "baseline",
+      "directory": "baseline/batch-073",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H040",
+      "condition": "skill",
+      "directory": "skill/batch-074",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H040",
+      "condition": "baseline",
+      "directory": "baseline/batch-074",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H041",
+      "condition": "skill",
+      "directory": "skill/batch-075",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H041",
+      "condition": "baseline",
+      "directory": "baseline/batch-075",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H042",
+      "condition": "skill",
+      "directory": "skill/batch-076",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H042",
+      "condition": "baseline",
+      "directory": "baseline/batch-076",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H043",
+      "condition": "skill",
+      "directory": "skill/batch-077",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H043",
+      "condition": "baseline",
+      "directory": "baseline/batch-077",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H044",
+      "condition": "skill",
+      "directory": "skill/batch-078",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H044",
+      "condition": "baseline",
+      "directory": "baseline/batch-078",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H045",
+      "condition": "skill",
+      "directory": "skill/batch-079",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H045",
+      "condition": "baseline",
+      "directory": "baseline/batch-079",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H046",
+      "condition": "skill",
+      "directory": "skill/batch-080",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H046",
+      "condition": "baseline",
+      "directory": "baseline/batch-080",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H047",
+      "condition": "skill",
+      "directory": "skill/batch-081",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H047",
+      "condition": "baseline",
+      "directory": "baseline/batch-081",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H048",
+      "condition": "skill",
+      "directory": "skill/batch-082",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H048",
+      "condition": "baseline",
+      "directory": "baseline/batch-082",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H049",
+      "condition": "skill",
+      "directory": "skill/batch-083",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H049",
+      "condition": "baseline",
+      "directory": "baseline/batch-083",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H050",
+      "condition": "skill",
+      "directory": "skill/batch-084",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H050",
+      "condition": "baseline",
+      "directory": "baseline/batch-084",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H051",
+      "condition": "skill",
+      "directory": "skill/batch-085",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H051",
+      "condition": "baseline",
+      "directory": "baseline/batch-085",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H052",
+      "condition": "skill",
+      "directory": "skill/batch-086",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H052",
+      "condition": "baseline",
+      "directory": "baseline/batch-086",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H053",
+      "condition": "skill",
+      "directory": "skill/batch-087",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H053",
+      "condition": "baseline",
+      "directory": "baseline/batch-087",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H054",
+      "condition": "skill",
+      "directory": "skill/batch-088",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H054",
+      "condition": "baseline",
+      "directory": "baseline/batch-088",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H055",
+      "condition": "skill",
+      "directory": "skill/batch-089",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H055",
+      "condition": "baseline",
+      "directory": "baseline/batch-089",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H056",
+      "condition": "skill",
+      "directory": "skill/batch-090",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H056",
+      "condition": "baseline",
+      "directory": "baseline/batch-090",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H057",
+      "condition": "skill",
+      "directory": "skill/batch-091",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H057",
+      "condition": "baseline",
+      "directory": "baseline/batch-091",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H058",
+      "condition": "skill",
+      "directory": "skill/batch-092",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H058",
+      "condition": "baseline",
+      "directory": "baseline/batch-092",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H059",
+      "condition": "skill",
+      "directory": "skill/batch-093",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H059",
+      "condition": "baseline",
+      "directory": "baseline/batch-093",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H060",
+      "condition": "skill",
+      "directory": "skill/batch-094",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H060",
+      "condition": "baseline",
+      "directory": "baseline/batch-094",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H061",
+      "condition": "skill",
+      "directory": "skill/batch-095",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H061",
+      "condition": "baseline",
+      "directory": "baseline/batch-095",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H062",
+      "condition": "skill",
+      "directory": "skill/batch-096",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H062",
+      "condition": "baseline",
+      "directory": "baseline/batch-096",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H063",
+      "condition": "skill",
+      "directory": "skill/batch-097",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H063",
+      "condition": "baseline",
+      "directory": "baseline/batch-097",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H064",
+      "condition": "skill",
+      "directory": "skill/batch-098",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H064",
+      "condition": "baseline",
+      "directory": "baseline/batch-098",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H065",
+      "condition": "skill",
+      "directory": "skill/batch-099",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H065",
+      "condition": "baseline",
+      "directory": "baseline/batch-099",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H066",
+      "condition": "skill",
+      "directory": "skill/batch-100",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H066",
+      "condition": "baseline",
+      "directory": "baseline/batch-100",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H067",
+      "condition": "skill",
+      "directory": "skill/batch-101",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H067",
+      "condition": "baseline",
+      "directory": "baseline/batch-101",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H068",
+      "condition": "skill",
+      "directory": "skill/batch-102",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H068",
+      "condition": "baseline",
+      "directory": "baseline/batch-102",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H069",
+      "condition": "skill",
+      "directory": "skill/batch-103",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H069",
+      "condition": "baseline",
+      "directory": "baseline/batch-103",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H070",
+      "condition": "skill",
+      "directory": "skill/batch-104",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H070",
+      "condition": "baseline",
+      "directory": "baseline/batch-104",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H071",
+      "condition": "skill",
+      "directory": "skill/batch-105",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H071",
+      "condition": "baseline",
+      "directory": "baseline/batch-105",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H072",
+      "condition": "skill",
+      "directory": "skill/batch-106",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H072",
+      "condition": "baseline",
+      "directory": "baseline/batch-106",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X001",
+      "condition": "skill",
+      "directory": "skill/batch-107",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X001",
+      "condition": "baseline",
+      "directory": "baseline/batch-107",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X002",
+      "condition": "skill",
+      "directory": "skill/batch-108",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X002",
+      "condition": "baseline",
+      "directory": "baseline/batch-108",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X003",
+      "condition": "skill",
+      "directory": "skill/batch-109",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X003",
+      "condition": "baseline",
+      "directory": "baseline/batch-109",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X004",
+      "condition": "skill",
+      "directory": "skill/batch-110",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X004",
+      "condition": "baseline",
+      "directory": "baseline/batch-110",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X005",
+      "condition": "skill",
+      "directory": "skill/batch-111",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X005",
+      "condition": "baseline",
+      "directory": "baseline/batch-111",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X006",
+      "condition": "skill",
+      "directory": "skill/batch-112",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "X006",
+      "condition": "baseline",
+      "directory": "baseline/batch-112",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    }
+  ]
+}

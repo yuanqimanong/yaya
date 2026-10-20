@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "note": "Six original synthetic cross-scenario controls added after the user requested broader practical coverage; no model outputs existed at authoring.",
+  "cases": [
+    {
+      "id": "X001",
+      "task": "humanize",
+      "language": "zh-Hans",
+      "group": "long-form",
+      "request": "去掉这篇财务说明里的空泛表达，面向普通投资者。保留全部实质信息、段落主题与风险限定，不要缩成摘要。",
+      "input": "# 半年度业务说明\n\n## 收入与利润\n在不断变化的行业环境中，公司以坚定步伐书写新的增长篇章。上半年收入为4200万元，同比增长5%；毛利率由18%降至16%。其中，甲业务收入2600万元，同比下降2%；乙业务收入1600万元，同比增长18%。上述数据未经审计。收入增长并不意味着利润增长，公司尚未公布净利润。\n\n## 客户与交付\n以客户为中心的理念正在全面赋能业务发展。期末付费客户为310家，较年初增加12家。其中8家来自渠道合作，另外4家来自直接销售。另有25家客户处于试用阶段，未计入付费客户数量。公司预计下季度完成两个项目的交付，但客户验收时间尚未确定，相关款项不能提前确认为收入。\n\n## 产品与安排\n创新始终是驱动我们不断前行的重要引擎。新版本新增CSV导出和离线查看；离线状态下不能编辑内容，首次使用前必须联网同步。公司计划于11月进行小范围测试，是否全面开放取决于测试结果，不构成已经确定的上线承诺。\n\n## 风险与限制\n站在新的起点，公司将持续探索无限可能。当前两家供应商提供同一种关键部件，其中一家尚未通过新批次验收。备用库存预计可支持六周生产，这一估计以现有订单节奏为前提。原材料价格变化和验收延迟可能影响交付。以上判断来自公司内部计划，未获独立机构验证。",
+      "checks": [
+        "保留4200/5%、毛利率18到16、甲2600下降2%乙1600增长18%的配对。",
+        "保留未经审计、净利润未公布、310/12/8/4/25与试用不计入关系。",
+        "交付/验收/收入确认、离线只读首次同步、11月测试条件全部保留。",
+        "供应商2家/1家未通过、六周库存与订单假设及独立验证缺失保留。",
+        "不能缩成几句话或删段落主题，空泛宣传应减弱。"
+      ]
+    },
+    {
+      "id": "X002",
+      "task": "humanize",
+      "language": "en",
+      "group": "file-scope",
+      "request": "Rewrite only the Overview section below to sound natural and direct. Return the whole Markdown document. Keep every byte from the API heading onward unchanged.",
+      "input": "# Export notes\n\n## Overview\nIn a world of endless possibilities, our groundbreaking tool empowers your workflow. It exports shared notes as CSV; only trial accounts can use this feature for now.\n\n## API\nCall `export_notes(account_id)`.\n```json\n{\"format\":\"csv\",\"limit\":20}\n```\n\n## Other draft\nThis section is being revised by another author. Keep it.\n",
+      "checks": [
+        "Return complete document, edit only Overview.",
+        "Preserve exact API heading onward, code and other-author section.",
+        "Keep shared notes CSV and trial-account-only current availability."
+      ]
+    },
+    {
+      "id": "X003",
+      "task": "humanize",
+      "language": "zh-Hans",
+      "group": "explicit-transformation",
+      "request": "这句话事实已经清楚，请改成适合发给客户的温和语气，不要新增承诺。",
+      "input": "申请已收到。审核预计需要三个工作日，目前不能保证结果。",
+      "checks": [
+        "Must perform requested tone adaptation despite clear source.",
+        "Keep received state, expected three working days and no guaranteed result.",
+        "No invented feelings, escalation, guarantee or refund."
+      ]
+    },
+    {
+      "id": "X004",
+      "task": "humanize",
+      "language": "en",
+      "group": "author-voice",
+      "request": "Remove only redundant framing. Keep the narrator’s fragments, uncertainty and one deliberate dash.",
+      "input": "It is worth noting that I waited outside—again. Rain in my shoes. No answer. Perhaps they had left early; I could not tell.",
+      "checks": [
+        "Remove empty framing while preserving existing first-person voice and deliberate dash.",
+        "Keep uncertainty and inability to tell; no invented explanation or emotions."
+      ]
+    },
+    {
+      "id": "X005",
+      "task": "comments",
+      "language": "en",
+      "group": "code-context",
+      "request": "Rewrite only ordinary comments to describe the visible code accurately. Keep the code, docstrings, directives and line layout unchanged.",
+      "input": "def cached_value(cache: dict[str, tuple[int, str]], key: str, now: int):\n    \"\"\"Read one entry with a fixed expiry test.\"\"\"\n    # Seamlessly unlock a perfectly fresh result in all cases.\n    item = cache.get(key)\n    if item is None:\n        return None\n    expires_at, value = item\n    # Execute an incredibly powerful decision.\n    if now >= expires_at:\n        return None  # noqa: RET504\n    return value\n",
+      "checks": [
+        "Only ordinary comments may change.",
+        "No freshness guarantee for every call; expired/missing return None, future expiry returns value.",
+        "Comparison >= and directives/docstring/code remain exact."
+      ]
+    },
+    {
+      "id": "X006",
+      "task": "prompts",
+      "language": "zh-Hans",
+      "group": "prompt-contract",
+      "request": "去掉这个提示词里的空话，用普通读者能懂的措辞表达，保持执行行为不变。只交付改好的提示词。",
+      "input": "你是无与伦比的顶级审核专家。请以高度负责、细致入微的精神，仅根据{{单据}}核对金额和日期。不要推断缺失字段。字段不全时只提出1个澄清问题并等待回复，不要继续审核。字段齐全时按原单据顺序返回JSON数组，每项只含amount、date、issue三个键。金额相同不代表重复单据。",
+      "checks": [
+        "Return edited prompt, do not audit.",
+        "Preserve source-only placeholder, one clarification and wait/no continuation.",
+        "Preserve ordered JSON array and exact three keys when complete.",
+        "Keep no inference and equal-amount-not-duplicate rule."
+      ]
+    }
+  ]
+}

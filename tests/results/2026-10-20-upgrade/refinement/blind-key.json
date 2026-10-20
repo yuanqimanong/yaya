@@ -1,0 +1,42 @@
+{
+  "H019": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "H007": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "H031": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "H043": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "H067": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "H025": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "X001": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "H061": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "R001": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "R002": {
+    "A": "skill",
+    "B": "baseline"
+  }
+}

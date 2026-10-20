@@ -1,0 +1,11 @@
+2026-10-20T10:36:40.254184Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:36:40.316805Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:36:40.403953Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:36:40.404021Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:36:40.420125Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T10:36:40.613519Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="node_repl" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:36:41.665179Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:36:56.444916Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:36:59.519827Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:36:59.520127Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:05.371338Z  WARN codex_core_plugins::manager: failed to refresh cached remote plugin catalog error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/list?scope=GLOBAL&limit=200: error decoding response body scope=Global

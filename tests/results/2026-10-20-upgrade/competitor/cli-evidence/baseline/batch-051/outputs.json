@@ -1,0 +1,8 @@
+[
+  {
+    "id": "H051",
+    "text": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nRead [guide][g].\n\n[g]: https://example.test/config",
+    "notes": "Removed the promotional sentence. Preserved the table and reference link.",
+    "skill_used": false
+  }
+]

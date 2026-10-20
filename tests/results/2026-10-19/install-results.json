@@ -1,0 +1,56 @@
+[
+  {
+    "language": "zh-Hant",
+    "archive": "yaya-lang-zh-Hant-0.1.0.zip",
+    "sha256": "1213a10c16b12781770047e82b2f1d4f6d86fc50078dbfbd795c5ed0047e3588",
+    "command": [
+      "D:\\env\\miniconda3\\python.exe",
+      "core/yaya/scripts/packs.py",
+      "install",
+      "D:\\AIProjects\\yaya\\dist\\yaya-lang-zh-Hant-0.1.0.zip",
+      "--data-dir",
+      "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data",
+      "--sha256",
+      "1213a10c16b12781770047e82b2f1d4f6d86fc50078dbfbd795c5ed0047e3588"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"installed\", \"id\": \"zh-Hant\", \"path\": \"D:\\\\AIProjects\\\\yaya\\\\.tmp\\\\language-smoke\\\\data\\\\language-packs\\\\zh-Hant\", \"backup\": null}\n",
+    "stderr": ""
+  },
+  {
+    "language": "ja",
+    "archive": "yaya-lang-ja-0.1.0.zip",
+    "sha256": "fa8d7f67beda4fc72da1e94ca400d859a3607d9334b22ca403c9db1544e68a52",
+    "command": [
+      "D:\\env\\miniconda3\\python.exe",
+      "core/yaya/scripts/packs.py",
+      "install",
+      "D:\\AIProjects\\yaya\\dist\\yaya-lang-ja-0.1.0.zip",
+      "--data-dir",
+      "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data",
+      "--sha256",
+      "fa8d7f67beda4fc72da1e94ca400d859a3607d9334b22ca403c9db1544e68a52"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"installed\", \"id\": \"ja\", \"path\": \"D:\\\\AIProjects\\\\yaya\\\\.tmp\\\\language-smoke\\\\data\\\\language-packs\\\\ja\", \"backup\": null}\n",
+    "stderr": ""
+  },
+  {
+    "language": "ko",
+    "archive": "yaya-lang-ko-0.1.0.zip",
+    "sha256": "b659d61b43f164b19bcd27e43bcc70a788852d0763d068f76486ba8d1fcd85fe",
+    "command": [
+      "D:\\env\\miniconda3\\python.exe",
+      "core/yaya/scripts/packs.py",
+      "install",
+      "D:\\AIProjects\\yaya\\dist\\yaya-lang-ko-0.1.0.zip",
+      "--data-dir",
+      "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data",
+      "--sha256",
+      "b659d61b43f164b19bcd27e43bcc70a788852d0763d068f76486ba8d1fcd85fe"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\": \"installed\", \"id\": \"ko\", \"path\": \"D:\\\\AIProjects\\\\yaya\\\\.tmp\\\\language-smoke\\\\data\\\\language-packs\\\\ko\", \"backup\": null}\n",
+    "stderr": ""
+  }
+]

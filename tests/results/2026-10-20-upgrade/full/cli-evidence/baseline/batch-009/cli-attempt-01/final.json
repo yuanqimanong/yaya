@@ -1,0 +1,1 @@
+{"id":"ja-comments","text":"def retry(status):\n    # ステータスコードが429なら、再試行が必要と判定します\n    return status == 429\n","notes":"通常のコメントのみ変更しました。","skill_used":false}

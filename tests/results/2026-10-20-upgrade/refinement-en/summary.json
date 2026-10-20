@@ -1,0 +1,71 @@
+{
+  "cases": 1,
+  "conditions": {
+    "skill": {
+      "hard_fail": 1,
+      "quality_worse": 1
+    },
+    "baseline": {
+      "hard_pass": 1,
+      "quality_better": 1
+    }
+  },
+  "preferences": {
+    "skill": 0,
+    "baseline": 1,
+    "tie": 0,
+    "uncertain": 0
+  },
+  "groups": {
+    "protected": {
+      "cases": 1,
+      "conditions": {
+        "skill": {
+          "hard_fail": 1,
+          "quality_worse": 1
+        },
+        "baseline": {
+          "hard_pass": 1,
+          "quality_better": 1
+        }
+      },
+      "preferences": {
+        "baseline": 1
+      }
+    }
+  },
+  "execution": {
+    "status": "verified",
+    "local_planned_jobs": 2,
+    "local_successful_outputs": 2,
+    "local_first_attempt_failures": 0,
+    "local_recovery_calls": 0,
+    "local_process_calls": 2,
+    "reused_outputs": 0,
+    "not_started": 0,
+    "limitation": "Successful process execution does not establish response quality; recovery is not an independent repeat."
+  },
+  "limitations": [
+    "Model judgments, without native human calibration.",
+    "Generation isolation: fresh context per case.",
+    "A single run does not establish cross-model or repeated-run reliability.",
+    "Quality judgments are relative to the input; textual changes alone do not establish unnecessary editing.",
+    "A semantic pass does not establish tool use, persistence behavior, or unsupported-language parser validation."
+  ],
+  "details": [
+    {
+      "id": "H051",
+      "condition": "skill",
+      "hard_status": "fail",
+      "quality": "worse",
+      "evidence": "Preserves the table, retry_limit value of 2, and reference-link destination, but deletes the entire assertion that the configuration improves the experience. This removes meaning beyond trimming promotional language."
+    },
+    {
+      "id": "H051",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "Preserves the table and reference-link destination. 'Provides a smooth experience' retains the original experience claim without inventing a specific capability, while removing the promotional 'unparalleled' and simplifying the wording."
+    }
+  ]
+}

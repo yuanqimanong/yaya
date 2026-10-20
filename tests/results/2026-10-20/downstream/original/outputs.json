@@ -1,0 +1,18 @@
+[
+  {
+    "id": "zh-summary-ready",
+    "text": "{\"summary\":[\"新增 CSV 导出功能\",\"修复登录超时问题\",\"最低支持 Python 3.10\"]}"
+  },
+  {
+    "id": "zh-summary-missing",
+    "text": "{\"summary\":\"需要总结的原始材料是什么？\"}"
+  },
+  {
+    "id": "en-risks-ready",
+    "text": "{\"risks\":[\"The service depends on a single supplier and has no backup.\",\"The cash reserve covers only two months of expenses.\"]}"
+  },
+  {
+    "id": "plain-explanation-no-page",
+    "text": "二分查找要求数据已经排序。每轮把目标与当前搜索范围的中间元素比较；若相等则找到目标，否则根据排序方向保留目标可能所在的一半。反复缩小范围，直到找到目标或搜索范围为空。\n\n原文页码：未提供。"
+  }
+]

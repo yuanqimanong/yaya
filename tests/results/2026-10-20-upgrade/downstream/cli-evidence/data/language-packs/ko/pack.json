@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "id": "ko",
+  "version": "0.2.0",
+  "core_major": 0,
+  "name": "한국어",
+  "license": "MIT",
+  "quality": "experimental",
+  "direction": "ltr"
+}

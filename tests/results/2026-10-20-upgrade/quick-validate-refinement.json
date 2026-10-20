@@ -1,0 +1,17 @@
+{
+  "command": [
+    "D:\\env\\miniconda3\\python.exe",
+    "-X",
+    "utf8",
+    "D:/CODEX/skills/.system/skill-creator/scripts/quick_validate.py",
+    "core/yaya"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.127,
+  "stdout": "Skill is valid!\n",
+  "stderr": "",
+  "environment": {
+    "PYTHONPATH": "D:\\AIProjects\\yaya\\.tmp\\validation-deps",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

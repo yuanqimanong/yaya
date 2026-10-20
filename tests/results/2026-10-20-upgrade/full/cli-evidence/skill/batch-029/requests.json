@@ -1,0 +1,7 @@
+[
+  {
+    "id": "en-review-only",
+    "request": "Review this paragraph for clarity. Give feedback only; do not replace the paragraph.",
+    "input": "The migration might finish on Friday if the final check passes. We have not confirmed the date."
+  }
+]

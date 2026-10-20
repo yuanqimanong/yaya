@@ -1,0 +1,7 @@
+[
+  {
+    "id": "en-comments",
+    "request": "Make the comment useful to a maintainer; leave everything else unchanged.",
+    "input": "def lookup(items, key):\n    # Seamlessly harness the lookup operation.\n    return items.get(key)\n"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "id": "plain-explanation-no-page--original",
+    "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+    "input": "根据本文介绍二分查找：数据必须已经排序。每轮比较目标与中间元素，并把搜索范围缩小到相应的一半。摘录未提供页码。解释算法，引用原文页码。缺少页码就标注未提供，不得编造。"
+  }
+]

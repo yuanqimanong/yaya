@@ -1,0 +1,93 @@
+{
+  "id": "H024",
+  "condition": "baseline",
+  "status": "completed",
+  "attempt": 2,
+  "started_at_utc": "2026-10-20T11:44:10.583931+00:00",
+  "prior_failure": {
+    "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 4248 bytes failed",
+    "returncode": 3221226505,
+    "error": "CLI exited with status 3221226505",
+    "attempt": "cli-attempt-01",
+    "completion_sha256": "4de46e339cf61ce9d1c24417e8d1dab9046ddb40c59127922b8155812f632937",
+    "started_sha256": "d39517745e528ab09806722538a5ed502e7cade0bd876ae50fd7ae7748166e15",
+    "artifact_sha256": {
+      "prompt.txt": "ed4d22e2474cf9d4ccd09397d066a69f4bc81437b335e52f3a22c215be00070e",
+      "stdout.jsonl": "97bcfb1d8ae6cf88cca7b17297e83922f1d13e2dabd2849e4d64c1eec8b6ddae",
+      "stderr.txt": "0910d2ba8fea8765a472dc9715a3df2b040de7cdecc22fc235a9608a4f97e41d",
+      "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    }
+  },
+  "prompt_sha256": "ed4d22e2474cf9d4ccd09397d066a69f4bc81437b335e52f3a22c215be00070e",
+  "context_sha256": {
+    "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+  },
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--color",
+    "never",
+    "--json",
+    "-C",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-competitor02\\baseline\\batch-024\\cli-attempt-02",
+    "-o",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-competitor02\\baseline\\batch-024\\cli-attempt-02\\final.json",
+    "--output-schema",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-competitor02\\baseline\\batch-024\\cli-attempt-02\\output-schema.json",
+    "-"
+  ],
+  "timeout_seconds": 180,
+  "elapsed_seconds": 42.71645089999947,
+  "returncode": 0,
+  "usage": [
+    {
+      "input_tokens": 25424,
+      "cached_input_tokens": 16768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 145,
+      "reasoning_output_tokens": 102
+    }
+  ],
+  "tool_or_unknown_items": [],
+  "diagnostics": [
+    {
+      "classification": "ignored_provider_configuration",
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_0",
+          "type": "error",
+          "message": "Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."
+        }
+      }
+    },
+    {
+      "classification": "ignored_provider_configuration",
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_1",
+          "type": "error",
+          "message": "Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."
+        }
+      }
+    }
+  ],
+  "malformed_jsonl_lines": 0,
+  "completed_turns": 1,
+  "failed_events": [],
+  "artifact_sha256": {
+    "final.json": "3781bb4b3ae7d45cd375d03508da0ae8e521416d8d018ad08abbb32b384e861c",
+    "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+    "prompt.txt": "ed4d22e2474cf9d4ccd09397d066a69f4bc81437b335e52f3a22c215be00070e",
+    "stderr.txt": "218243289bd0ac8e58e3aa51bf1c79b371f0513e1ca6a9b9b90ee44557614848",
+    "stdout.jsonl": "0bca8a39f23e5adae4fd190ae3cf4a50f06be16ce179c3a2504c92ea721b261b"
+  }
+}

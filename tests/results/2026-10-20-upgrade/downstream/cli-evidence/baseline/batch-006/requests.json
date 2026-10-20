@@ -1,0 +1,7 @@
+[
+  {
+    "id": "en-risks-ready--edited",
+    "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+    "input": "You are an analyst. Use only The service depends on one supplier, which has no backup. Its cash reserve will cover two months of expenses. These are the two risks identified in this report.. Return exactly two risks in JSON with the key risks. If evidence is missing, ask one question and wait. Do not infer missing numbers."
+  }
+]

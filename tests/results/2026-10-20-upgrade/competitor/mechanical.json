@@ -1,0 +1,602 @@
+[
+  {
+    "id": "H001",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H001",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H002",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H002",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H003",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H003",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H004",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H004",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H005",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H005",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H006",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H006",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H007",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H007",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H008",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H008",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H009",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H009",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H010",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H010",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H011",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H011",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H012",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H012",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H013",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H013",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H014",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H014",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H015",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H015",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H016",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H016",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H017",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H017",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H018",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H018",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H019",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H019",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H020",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H020",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H021",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H021",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H022",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H022",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H023",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H023",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H024",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H024",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H025",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H025",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H026",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H026",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H027",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H027",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H028",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H028",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H029",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H029",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H030",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H030",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H031",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H031",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H032",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H032",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H033",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H033",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H034",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H034",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H035",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H035",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H036",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H036",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H037",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H037",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H038",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H038",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H039",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H039",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H040",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H040",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H041",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H041",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H042",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H042",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H043",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H043",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H044",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H044",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H045",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H045",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H046",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H046",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H047",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H047",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H048",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H048",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H049",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H049",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H050",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H050",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H051",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H051",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H052",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H052",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H053",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H053",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H054",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H054",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H055",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H055",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H056",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H056",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H057",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H057",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H058",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H058",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H059",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H059",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "H060",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "H060",
+    "condition": "baseline",
+    "literal_failures": []
+  }
+]

@@ -1,0 +1,32 @@
+--- before/report.md
++++ report.md
+@@ -2,7 +2,7 @@
+ 
+ ## 收入说明
+ 
+-本季收入为860万元，同比增长6%。毛利率从21%升至22%。交付尚未完成，相关款项暂未确认为收入。公司预计下月完成交付，但日期尚未确定。
++本季度收入为860万元，比去年同期增长6%。毛利率，即收入扣除营业成本后剩余金额占收入的比例，从21%升至22%。交付还未完成，相关款项暂未计入收入。公司预计下月完成交付，但具体日期尚未确定。
+ 
+ ## 接口说明
+ 
+--- before/metrics.py
++++ metrics.py
+@@ -1,6 +1,6 @@
+ def threshold(value):
+     """Return whether value reaches the fixed threshold."""
+-    # 在这里以卓越的效率进行一个判断的执行
++    # 判断 value 是否大于或等于 10。
+     return value >= 10  # noqa: PLR2004
+ 
+ 
+--- before/scoped-overview.md
++++ scoped-overview.md
+@@ -1,7 +1,7 @@
+ # Export notes
+ 
+ ## Overview
+-In a world of endless possibilities, our groundbreaking tool empowers your workflow. It exports shared notes as CSV; only trial accounts can use this feature for now.
++The tool exports shared notes as CSV. For now, this feature is available only to trial accounts.
+ 
+ ## API
+ Call `export_notes(account_id)`.

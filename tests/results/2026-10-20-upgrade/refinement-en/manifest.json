@@ -1,0 +1,70 @@
+{
+  "protocol": 2,
+  "cases": 1,
+  "batches_per_condition": 1,
+  "batch_size": 1,
+  "suites": [
+    "humanize.json"
+  ],
+  "pilot": false,
+  "conditions": [
+    "skill",
+    "baseline"
+  ],
+  "model": "inherited Codex host model; exact revision/settings unavailable",
+  "isolation": "fresh context per case",
+  "snapshot_sha256": {
+    "agents/openai.yaml": "e0f9ebc3b757c640fab09de8a85d9b22c94991ef5ba45e37a9da682825c77b5a",
+    "languages/en/examples.md": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3",
+    "languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0",
+    "languages/en/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "languages/en/pack.json": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f",
+    "languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58",
+    "languages/zh-Hans/examples.md": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc",
+    "languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f",
+    "languages/zh-Hans/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "languages/zh-Hans/pack.json": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475",
+    "languages/zh-Hans/PATTERNS.md": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b",
+    "LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+    "references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+    "references/language-packs.md": "3e455a40366e4d73465c6a332e993fc4b9523b1c7908d13ecb0613ad3998562d",
+    "references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+    "references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+    "references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+    "scripts/check_comments.py": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539",
+    "scripts/check_rewrite.py": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c",
+    "scripts/detect_tells.py": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800",
+    "scripts/packs.py": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2",
+    "scripts/prose_scan.py": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+    "scripts/tell_rules.json": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8",
+    "SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+    "version.json": "329a07bfe52861c949fcb2f410a5becfbf83529828fda414e909756f2464aad3"
+  },
+  "request_sha256": {
+    "skill/batch-001/requests.json": "4c83c3b00cfe450558ee5f4cf0186ad48cbc23ea1f4172a8f2507143124cfec1",
+    "baseline/batch-001/requests.json": "4c83c3b00cfe450558ee5f4cf0186ad48cbc23ea1f4172a8f2507143124cfec1"
+  },
+  "data_sha256": {
+    "data/language-packs/ja/examples.md": "5e4df0290629a59122d149215838aeafc987e2facca4f0b93db008c94de13205",
+    "data/language-packs/ja/GUIDE.md": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881",
+    "data/language-packs/ja/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "data/language-packs/ja/pack.json": "a56b425e7ab5071d523fbe75e4a7168897239a22644ca646edcddb621cfe0446",
+    "data/language-packs/ja/PATTERNS.md": "1f6826b5b568233e8777e709f7b5f646bba040dad72ba9a4aeb770119106e8b1",
+    "data/language-packs/ko/examples.md": "f373a5a66758614f6c624233e565e919b917de9bf33ffcb244c1b5479d2ca212",
+    "data/language-packs/ko/GUIDE.md": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9",
+    "data/language-packs/ko/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "data/language-packs/ko/pack.json": "623eab03dd51a3c521ff8593946838a97e2315b3d3f3cdcf96a3052e595a5dd8",
+    "data/language-packs/ko/PATTERNS.md": "a5a32071e475832271f308e4d1283e4577ec2976a6abaecae512b2cba142db0f",
+    "data/language-packs/zh-Hant/examples.md": "2c48ac1c68a5b2612f8afd349908995ae93a87e734ed5429010f3bac4c3093f4",
+    "data/language-packs/zh-Hant/GUIDE.md": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00",
+    "data/language-packs/zh-Hant/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "data/language-packs/zh-Hant/pack.json": "009f1cb5ec6d2581a84620bb278d549ce22daf587833635714c7ea430ad728c7",
+    "data/language-packs/zh-Hant/PATTERNS.md": "ca1aa738f86582145d066bded336d4cd1e53c6bad6330519df538442c836ef35"
+  },
+  "criteria_sha256": "e26df6dcca0f7b5ff388fd8ea2e5c3df3682f60cf32cd230a2c488d8217f758e",
+  "criteria_visible_to_generator": false,
+  "case_ids": [
+    "H051"
+  ]
+}

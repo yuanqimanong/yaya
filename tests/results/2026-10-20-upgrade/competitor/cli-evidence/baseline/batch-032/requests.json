@@ -1,0 +1,7 @@
+[
+  {
+    "id": "H032",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "The API returns either a value or an error. It never returns both."
+  }
+]

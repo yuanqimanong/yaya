@@ -1,0 +1,30 @@
+{
+  "documents": 14,
+  "local_links_checked": 91,
+  "missing_links": [],
+  "archives_match_source": [
+    {
+      "file": "yaya-core-0.2.0.zip",
+      "bytes": 43017,
+      "sha256": "ee912ab878e4d557189ba8c5c9abf08e369455dcfcb4d5abbeba0659a24a291a"
+    },
+    {
+      "file": "yaya-lang-ja-0.2.0.zip",
+      "bytes": 5384,
+      "sha256": "96a8cd2fbea76668de60e27a199e08ed74f6a5d021787c66efce481c0e836eb1"
+    },
+    {
+      "file": "yaya-lang-ko-0.2.0.zip",
+      "bytes": 5183,
+      "sha256": "07035954b0cd857e6809c20d9bc202618b2b322aefc21cf2d1873a6de2723c92"
+    },
+    {
+      "file": "yaya-lang-zh-Hant-0.2.0.zip",
+      "bytes": 5176,
+      "sha256": "ab496f5790a070aa5d62852abafa27d54f2c0326439b9a78cf8994b3fb3f385e"
+    }
+  ],
+  "removed_files": 5247,
+  "removed_bytes": 31712847,
+  "archived_evidence_files_verified": 4075
+}

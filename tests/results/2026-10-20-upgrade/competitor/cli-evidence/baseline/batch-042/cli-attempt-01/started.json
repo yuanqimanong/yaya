@@ -1,0 +1,32 @@
+{
+  "id": "H042",
+  "condition": "baseline",
+  "status": "failed",
+  "started_at_utc": "2026-10-20T11:48:48.428203+00:00",
+  "prompt_sha256": "eddae0b59107652dbb23cf241b909246a374770aff1c1b7bbe0e9ecd77357cde",
+  "context_sha256": {
+    "humanizer-zh/SKILL.md": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+  },
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--color",
+    "never",
+    "--json",
+    "-C",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-competitor02\\baseline\\batch-042\\cli-attempt-01",
+    "-o",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-competitor02\\baseline\\batch-042\\cli-attempt-01\\final.json",
+    "--output-schema",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-competitor02\\baseline\\batch-042\\cli-attempt-01\\output-schema.json",
+    "-"
+  ],
+  "timeout_seconds": 180
+}

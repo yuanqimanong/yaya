@@ -1,0 +1,24 @@
+{
+  "report_outside_income_section_byte_identical": true,
+  "existing_style_byte_identical": true,
+  "request_sha256_unchanged": true,
+  "original_backups_match_baseline_sha256": true,
+  "saved_metrics_matches_checked_candidate": true,
+  "style_utf8_readable_with_prompt_placeholder_and_example": true,
+  "comment_checker": {
+    "status": "passed",
+    "language": "python",
+    "changed_comment_lines": [
+      3
+    ],
+    "violations": [],
+    "limitations": [
+      "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+      "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+      "Docstrings, f-strings, t-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+      "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+      "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+      "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+[
+  {
+    "id": "downstream-style",
+    "request": "把下面提示词改成让AI用普通读者能懂的语言回答，其他要求保留。",
+    "input": "根据{{论文}}解释算法，引用原文页码。缺少页码就标注未提供，不得编造。",
+    "checks": [
+      "Add plain-language downstream requirement because explicitly requested",
+      "Preserve placeholder,citations,andmissing-pagecondition"
+    ],
+    "A": "根据{{论文}}，用普通读者能懂的语言解释算法，并引用原文页码。缺少页码时标注“未提供”，不得编造。",
+    "B": "根据{{论文}}，用普通读者能懂的语言解释算法，引用原文页码。缺少页码就标注“未提供”，不得编造。"
+  },
+  {
+    "id": "bare-zh",
+    "request": "润色这段话，保持原有字形。",
+    "input": "這份報告尚未完成，請勿對外發佈。",
+    "checks": [
+      "Infer Hant from prose rather than defaulting Hans",
+      "Preserve incomplete status and prohibition"
+    ],
+    "A": "這份報告尚未完成，請勿對外發佈。",
+    "B": "這份報告尚未完成，請暫勿對外發佈。"
+  },
+  {
+    "id": "readme-no-presupposition",
+    "request": "润色下面的 README 简介，让表达自然、直接。",
+    "input": "Lumo 是一个整理会议记录的工具，能提取待办事项并导出 Markdown。它目前支持中文和英文。",
+    "checks": [
+      "保留会议记录、待办事项、Markdown和中英支持",
+      "不得凭空加入读者误解、竞品对比、人物或AI检测等话题"
+    ],
+    "A": "Lumo 是一款会议记录整理工具，支持提取待办事项并导出为 Markdown，目前支持中文和英文。",
+    "B": "Lumo 是一款会议记录整理工具，可以提取待办事项并导出 Markdown。目前支持中文和英文。"
+  },
+  {
+    "id": "finance-pairing",
+    "request": "润色这段财务说明，保留具体口径。",
+    "input": "甲业务本季收入为975万元，同比下降7%；乙业务收入为640万元，同比增长4.5%。两项数据均未审计。公司尚未完成交付，不能确认对应收入。",
+    "checks": [
+      "两业务金额和增减方向配对正确",
+      "保留本季/同比、未审计、未完成和不能确认",
+      "不把业绩或交付状态改为完成"
+    ],
+    "A": "本季，甲业务收入为975万元，同比下降7%；乙业务收入为640万元，同比增长4.5%。两项数据均未经审计。公司尚未完成交付，不能确认对应收入。",
+    "B": "本季度，甲业务收入为975万元，同比下降7%；乙业务收入为640万元，同比增长4.5%。上述两项数据均未经审计。由于公司尚未完成交付，对应收入尚不能确认。"
+  },
+  {
+    "id": "en-review-only",
+    "request": "Review this paragraph for clarity. Give feedback only; do not replace the paragraph.",
+    "input": "The migration might finish on Friday if the final check passes. We have not confirmed the date.",
+    "checks": [
+      "Only feedback, no replacement paragraph",
+      "Preserve tentative date, condition and unconfirmed status"
+    ],
+    "A": "The paragraph is clear and appropriately cautious. The second sentence slightly repeats the uncertainty already conveyed by “might” and “if,” but helps emphasize that Friday is tentative. If readers need to plan around the migration, clarify when the final check will happen and when the date can be confirmed.",
+    "B": "The paragraph is clear. “Might finish” signals uncertainty, and “if the final check passes” states the condition. The second sentence reinforces that the date is unconfirmed. No changes are needed."
+  },
+  {
+    "id": "authorized-language-change",
+    "request": "将下面说明改写为简体中文，面向第一次使用的人，保留技术名称。",
+    "input": "Set retry_limit to 2. Retry only after the transaction has rolled back. Do not retry authentication failures.",
+    "checks": [
+      "Translate to zh-Hans as explicitly requested",
+      "retry_limit stays exact; value2; rollback prerequisite; auth failures prohibition"
+    ],
+    "A": "将 retry_limit（重试次数上限）设置为 2。\n只有在事务已回滚后，才能重试。\n如果身份验证失败，不要重试。",
+    "B": "将 retry_limit 设置为 2。\n只有在事务回滚（撤销本次事务的更改）完成后，才能重试。\n如果身份验证失败，不要重试。"
+  },
+  {
+    "id": "unsupported-ts-comments",
+    "request": "Rewrite only the ordinary comment in input.ts so it explains this code. Keep the code unchanged.",
+    "input": "export const value = \"http://example.test/#keep\";\n// Leverage an elegant operation to report the length.\nexport function lengthOf(text: string) { return text.length; }\n",
+    "checks": [
+      "Preserve code and string bytes",
+      "Describe string length without claiming grapheme count",
+      "Do not claim Python checker validates TypeScript"
+    ],
+    "A": "export const value = \"http://example.test/#keep\";\n// Returns the length of the supplied string.\nexport function lengthOf(text: string) { return text.length; }\n",
+    "B": "export const value = \"http://example.test/#keep\";\n// Return the length of text in UTF-16 code units.\nexport function lengthOf(text: string) { return text.length; }\n"
+  },
+  {
+    "id": "ja-clear-unchanged",
+    "request": "意味も文体も問題がなければ、そのまま返してください。",
+    "input": "申請後、3営業日以内に領収書を提出してください。",
+    "checks": [
+      "Keep adequate original unchanged"
+    ],
+    "A": "申請後、3営業日以内に領収書を提出してください。",
+    "B": "申請後、3営業日以内に領収書を提出してください。"
+  },
+  {
+    "id": "negative-code-task",
+    "request": "Write a Python function that returns the sum of two numbers.",
+    "input": "",
+    "checks": [
+      "Do not invoke editing skill for ordinary code creation",
+      "Correct function behavior"
+    ],
+    "A": "def add(a, b):\n    return a + b",
+    "B": "def add(a, b):\n    return a + b"
+  },
+  {
+    "id": "saved-style",
+    "request": "学习下面的表达风格，输出可复用的风格提示词和一个读书笔记提示词示例。这次只在当前对话里用，不要保存文件。",
+    "input": "先把问题讲清楚。再给一个例子。暂时回答不了的，写下还缺什么。",
+    "checks": [
+      "Reusable instructions and reading-note example",
+      "Do not create persistent style preferences/files",
+      "Do not transfer topic as a mandatory factual constraint"
+    ],
+    "A": "**可复用的风格提示词**\n\n请用简短、直接的语言回答。先把问题讲清楚：要解决什么，关键点是什么。再给一个具体例子，帮助理解。暂时回答不了的，明确说明，并写下还缺哪些信息。不要用猜测填补空白。\n\n**读书笔记提示词示例**\n\n请根据我提供的《[书名]》原文写一篇读书笔记。先讲清楚这段内容讨论什么问题、作者的观点是什么。再选一个原文中的例子，说明它如何支持作者的观点。暂时无法判断的地方，写下还缺哪些章节、上下文或证据。语言简洁，不堆砌术语。\n\n以上仅在当前对话中使用，不保存为文件。",
+    "B": "这段样稿体现出三点：短句直说，如“先把问题讲清楚”；用例子帮助理解，如“再给一个例子”；明确说明信息缺口，如“写下还缺什么”。样稿较短，以下作为当前对话的暂定风格。\n\n**可复用的风格提示词**\n\n用简短、直接的中文表达。先把问题或核心观点讲清楚，再给一个贴切的例子。暂时回答不了的，明确写出还缺哪些信息。保留必要的条件和不确定性，不编造事实。不加无关铺垫，解释到读者能理解为止。\n\n**读书笔记提示词示例**\n\n请根据以下阅读材料写一份读书笔记，供我日后回顾。\n\n先讲清楚这段内容讨论什么问题，以及作者的核心观点。再选材料中的一个例子，说明这个观点；如果材料没有合适的例子，可以自行举例，但要标明“自拟例子”。最后写下目前还没弄清楚的问题，以及需要补充哪些材料才能继续判断。\n\n用短句和常用词，保留必要术语。区分作者的观点和你的解释。不编造引文、页码或作者经历。\n\n阅读材料：\n[粘贴书中内容或阅读摘录]"
+  },
+  {
+    "id": "H001",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "In the ever-evolving landscape of office software, this groundbreaking release empowers teams to unlock a seamless new era of collaboration. The only change is that shared notes can now be exported as CSV.",
+    "checks": [
+      "Keep the sole change: shared notes can now export as CSV.",
+      "Remove inflated claims without adding features or outcomes."
+    ],
+    "A": "The only change in this release is that shared notes can now be exported as CSV.",
+    "B": "The only change is that shared notes can now be exported as CSV."
+  },
+  {
+    "id": "H002",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "It is important to note that we are currently in the process of reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+    "checks": [
+      "Keep review in progress, expected Tuesday response, and unconfirmed date.",
+      "Remove empty framing, not uncertainty."
+    ],
+    "A": "We’re reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+    "B": "We are reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed."
+  }
+]

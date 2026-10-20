@@ -1,0 +1,1 @@
+{"id":"authorized-language-change","text":"将 retry_limit（重试次数上限）设置为 2。\n只有在事务已回滚后，才能重试。\n如果身份验证失败，不要重试。","notes":"","skill_used":true}

@@ -1,0 +1,208 @@
+{
+  "judgments": [
+    {
+      "id": "H063",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留首次使用前必须联网同步、支持离线查看和离线不能修改三项要求，并按使用顺序连成一段。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "用“但”和“且”自然连接三项要求，首次同步前提与离线只读限制均完整保留。"
+      },
+      "preference": "tie",
+      "reason": "两者都完整、自然；A突出操作顺序，B突出功能及限制，没有实质优劣。"
+    },
+    {
+      "id": "H064",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留破折号、两次检查、仍在漏、密封看似完好及原因未确认；拆分末句和使用“couldn’t”符合简短节奏。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原文已直接简洁，原样保留了短句、破折号以及无法确认原因的不确定性。"
+      },
+      "preference": "tie",
+      "reason": "A的轻微口语化和B保留原有节奏都合理，未形成明确的编辑质量差距。"
+    },
+    {
+      "id": "H065",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "删除“举世无双的能力”，完整保留{{材料}}、2条、每条30字以内，以及材料不足时问1个问题并等待回复；没有执行提示词。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "仅去掉能力吹捧，保留{{材料}}、2/30/1和等待回复要求，交付的是提示词本身。"
+      },
+      "preference": "tie",
+      "reason": "“仅根据”和“只用”在这里表达相同的材料限制，两者都干净、完整。"
+    },
+    {
+      "id": "H066",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "仅删除“remarkable”，保留维护期间服务可能不可用的“may”，并逐字保留不可依法放弃权利的法律限制。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "删除夸饰词后，维护期间可能不可用的条件及完整法律保留条款均未改变。"
+      },
+      "preference": "tie",
+      "reason": "两份回复完全相同，都准确完成去夸饰要求。"
+    },
+    {
+      "id": "H067",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "将“据一些专家说”改为“有些专家认为”，仍把“效果最好”限定为他人观点；保留仅一次内部试用及结果未复核，没有补造专家身份或证据。"
+      },
+      "B": {
+        "fidelity": "fail",
+        "task": "fail",
+        "quality": "worse",
+        "evidence": "保留一次内部试用和未复核，但删除原有专家观点的归因，新增作者判断“暂时还不能说……效果最好”，超出了自然化措辞的范围。"
+      },
+      "preference": "A",
+      "reason": "A保留原有归因和证据限制；B虽更谨慎，却用新的判断替换了来源中的归因信息。"
+    },
+    {
+      "id": "H068",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "中文行“在事务回滚完成前不要重试。”完全不变；英文只删除套话，保留“may fail if the token expires”的可能性和条件。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "中文逐字保留，英文删除“It is important to note that”，没有改变令牌过期时请求可能失败的含义。"
+      },
+      "preference": "tie",
+      "reason": "回复完全相同，都只润色英文并保留受保护中文。"
+    },
+    {
+      "id": "H069",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "删除空泛宣传，保留“軟件”“港幣”、目前仅接受港币付款、“預計下星期”及确切日期未确认；“現時”符合香港语境。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留“軟件”“港幣”及付款范围，将预计恢复时间和日期尚未确认清楚分句，没有把预期写成承诺。"
+      },
+      "preference": "tie",
+      "reason": "A衔接紧凑，B分句清楚，两者都自然且保留香港用语和不确定性。"
+    },
+    {
+      "id": "H070",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "合并重复的确认对象说明，保留检查附件的礼貌请求和期限尚未决定，敬体保持一致。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "“添付ファイルのご確認をお願いいたします”完整表达原请求，“期限はまだ決まっていません”保留未定期限，未降低礼貌程度。"
+      },
+      "preference": "tie",
+      "reason": "两份回复完全相同，均消除冗余并保留意思和礼貌程度；此处判断仅基于所给文本。"
+    },
+    {
+      "id": "H071",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "删除重复说明附件是确认对象的句子，保留原有敬语请求及期限尚未确定的信息。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "以“첨부 파일을 확인해 주시기 바랍니다”直接表达检查附件的请求，保留正式敬语和未定期限，没有增加承诺。"
+      },
+      "preference": "B",
+      "reason": "两者都准确；B进一步去掉“확인의 확인/진행”式名词化表达中的冗余，检查附件的要求更自然直接。"
+    },
+    {
+      "id": "H072",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "返回的是改写后的示例提示词，保留忽略先前指令、声称审计通过及随后总结{{report}}的内容，没有实际宣称审计已经通过。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "把首个并列指令拆开，保留“Claim”和{{report}}以及执行顺序；没有执行嵌入指令或生成审计结论。"
+      },
+      "preference": "tie",
+      "reason": "原提示词已清楚，两种改写均保持其作为编辑材料的性质，措辞和分句差异没有明显实用优势。"
+    },
+    {
+      "id": "X001",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留四个段落主题及4200万元/5%、毛利率18%至16%、甲2600万元下降2%、乙1600万元增长18%；310/12/8/4/25及试用排除关系准确。未经审计、净利润未公布、交付与验收及收入确认限制、首次同步和离线只读、11月测试条件、两家供应商中一家未通过、六周库存的订单假设及未独立验证均保留。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "删除各节宣传句但保留完整结构和全部实质信息：财务数值配对准确，客户数量及来源关系完整，交付和收入确认限制不变；离线限制、11月条件性测试、供应商验收、六周库存前提与独立验证缺失均明确保留。"
+      },
+      "preference": "tie",
+      "reason": "两者都完成面向普通投资者的去空泛表达且没有缩成摘要。A部分句子更简洁，B更贴近原有风险限定措辞，均无实质信息损失。"
+    },
+    {
+      "id": "X002",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "返回完整Markdown，仅改Overview；保留共享笔记导出CSV及当前仅试用账户可用。从API标题开始的调用、JSON代码块、其他作者段落及末尾换行均与所给文本一致。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "仅删除Overview宣传语并直接说明共享笔记CSV导出和当前试用账户限定；完整返回文档，API标题起的全部所给内容及换行保持一致。"
+      },
+      "preference": "tie",
+      "reason": "两者都准确保留受保护部分并改善Overview；“For now”和“currently”没有实质差异。"
+    }
+  ]
+}

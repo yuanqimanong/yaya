@@ -1,0 +1,7 @@
+[
+  {
+    "id": "mixed-language",
+    "request": "润色中文说明，保留代码块、英文引用与数字。",
+    "input": "调用 `fetchUser(id)` 后，系统会进行一个结果的返回。引用：\"Do not retry.\" 超时为200 ms。\n```js\nconst label = \"返回结果\";\n```"
+  }
+]

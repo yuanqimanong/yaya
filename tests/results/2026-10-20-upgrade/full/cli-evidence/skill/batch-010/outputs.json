@@ -1,0 +1,8 @@
+[
+  {
+    "id": "ko-comments",
+    "text": "def has_items(items):\n    # 항목이 하나 이상 있는지 확인합니다.\n    return len(items) > 0\n",
+    "notes": "일반 주석만 수정했습니다. 도구를 통한 검증은 수행하지 않았습니다.",
+    "skill_used": true
+  }
+]

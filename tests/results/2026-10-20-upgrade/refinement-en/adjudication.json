@@ -1,0 +1,186 @@
+{
+  "status": "complete",
+  "review_type": "visible_condition_cross_run_consistency_adjudication",
+  "blind_review": false,
+  "case_id": "H051",
+  "changes_original_judgments": false,
+  "recalculates_summary": false,
+  "new_model_samples": 0,
+  "core_modified": false,
+  "comparison_method": {
+    "text_encoding": "UTF-8 of decoded JSON string values, without BOM.",
+    "normalization": "None. No trimming, newline conversion, paraphrasing, or wrapper removal.",
+    "checks_hash_encoding": "Ordered checks array serialized as compact JSON, then UTF-8 without BOM.",
+    "checks_compact_json": "[\"Preserve table rows and reference-link destination.\",\"Do not invent what configuration achieves.\"]",
+    "scope_limit": "Equality is established for the task request, input, ordered checks, and candidate text fields. It is not a claim that complete evaluator prompts, surrounding batches, notes, or model state were identical."
+  },
+  "case_material": {
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis unparalleled configuration enables a seamless experience. Read [guide][g].\n\n[g]: https://example.test/config",
+    "checks": [
+      "Preserve table rows and reference-link destination.",
+      "Do not invent what configuration achieves."
+    ]
+  },
+  "shared_material_fingerprints": {
+    "request": {
+      "sha256": "9031f7be082c53240938b5e028ea0253522d455ef8ff81853a4cc7a3da068364",
+      "utf8_bytes": 103
+    },
+    "input": {
+      "sha256": "adc224aeacb1b0e87deb98986508cc5e057b985e14e3a3ec652d7cd5544c56c7",
+      "utf8_bytes": 164
+    },
+    "checks_compact_json": {
+      "sha256": "84e4bc6075d966e894e20be6c393b8ecfe8db0e8d531e2be4452d962a0871fdf",
+      "utf8_bytes": 100
+    },
+    "checks_items": [
+      {
+        "index": 0,
+        "sha256": "6b79fd978b7769352e7a2c8a55db3bf1be755d42fc47f43942cd749d1baaf518",
+        "utf8_bytes": 51
+      },
+      {
+        "index": 1,
+        "sha256": "bc8c875815907ea261fcd39bb37e5e2bd9d530a20c22bf08e98662d2cda08b76",
+        "utf8_bytes": 42
+      }
+    ]
+  },
+  "equality_results": {
+    "requests_equal": true,
+    "inputs_equal": true,
+    "ordered_checks_equal": true,
+    "competitor_A_equals_refinement_en_B": true,
+    "competitor_B_equals_refinement_en_A": true,
+    "same_label_A_equal": false,
+    "same_label_B_equal": false,
+    "same_unordered_pair_of_candidate_texts": true,
+    "candidate_order_reversed": true
+  },
+  "candidate_variants": [
+    {
+      "variant": "retained_experience_sentence",
+      "text": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis configuration provides a smooth experience. Read [guide][g].\n\n[g]: https://example.test/config",
+      "sha256": "730cb6ae2f497a1cf0da9fead647d3af75928c2332324ef226b9f9dbe298cca2",
+      "utf8_bytes": 150,
+      "observations": [
+        {
+          "run": "competitor",
+          "label": "A",
+          "condition": "skill",
+          "fidelity": "pass",
+          "task": "pass",
+          "quality": "better",
+          "preferred": false,
+          "evidence": "表格和引用链接目标完全保留。“provides a smooth experience”延续原文的体验描述，没有补充具体功能；删除 unparalleled 后稍显自然，但仍较空泛。"
+        },
+        {
+          "run": "refinement-en",
+          "label": "B",
+          "condition": "baseline",
+          "fidelity": "pass",
+          "task": "pass",
+          "quality": "better",
+          "preferred": true,
+          "evidence": "Preserves the table and reference-link destination. 'Provides a smooth experience' retains the original experience claim without inventing a specific capability, while removing the promotional 'unparalleled' and simplifying the wording."
+        }
+      ]
+    },
+    {
+      "variant": "removed_experience_sentence",
+      "text": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nRead [guide][g].\n\n[g]: https://example.test/config",
+      "sha256": "1115a16f9438e933b0d9c1b711d5754a653720a474118932bcd35a1452b6e2ce",
+      "utf8_bytes": 101,
+      "observations": [
+        {
+          "run": "competitor",
+          "label": "B",
+          "condition": "baseline",
+          "fidelity": "pass",
+          "task": "pass",
+          "quality": "better",
+          "preferred": true,
+          "evidence": "保留全部表格行、阅读指引和引用链接目标；删除缺乏具体信息的宣传句，没有虚构配置效果。"
+        },
+        {
+          "run": "refinement-en",
+          "label": "A",
+          "condition": "skill",
+          "fidelity": "fail",
+          "task": "fail",
+          "quality": "worse",
+          "preferred": false,
+          "evidence": "Preserves the table, retry_limit value of 2, and reference-link destination, but deletes the entire assertion that the configuration improves the experience. This removes meaning beyond trimming promotional language."
+        }
+      ]
+    }
+  ],
+  "original_preferences": {
+    "competitor": {
+      "label": "B",
+      "preferred_variant": "removed_experience_sentence",
+      "reason": "两者均保留具体信息。B 直接呈现配置与阅读指引，消除整句空泛宣传；A 仍保留模糊的体验表述。"
+    },
+    "refinement-en": {
+      "label": "B",
+      "preferred_variant": "retained_experience_sentence",
+      "reason": "B makes the promotional sentence more natural while retaining its central claim. A is shorter but omits that claim, contrary to the request to preserve meaning."
+    }
+  },
+  "assessment": {
+    "classification": "confirmed_judgment_instability_with_semantic_boundary_dispute",
+    "confirmed": [
+      "The same deletion text changed from fidelity/task pass and preferred to fidelity/task fail and not preferred under identical request, source, and checks.",
+      "The same two text candidates occur in reverse A/B order.",
+      "Both judgments prefer label B, although B represents opposite editorial choices.",
+      "The table, retry_limit value 2, and reference-link target are preserved in both text variants."
+    ],
+    "not_established": [
+      "This single reversed pair does not prove position bias, condition bias, or a specific cause of the inconsistent judgments.",
+      "It does not establish that the entire evaluator context was identical. One summary covers 60 cases and the other covers one case; candidate notes and condition metadata also differ.",
+      "It does not by itself prove either a core regression or a successful semantic improvement."
+    ],
+    "semantic_boundary": {
+      "deletion_reading": "The phrase unparalleled/seamless experience offers no concrete capability, metric, condition, or independently informative reason, so it can be treated as promotional padding.",
+      "retention_reading": "The sentence still predicates a broad experience benefit of the configuration. The request says preserve meaning, so deleting that proposition can be considered loss even if the proposition is vague or unsupported.",
+      "what_checks_resolve": "The checks require table/link preservation and prohibit inventing effects. They do not explicitly resolve whether this inherited vague experience proposition must be retained.",
+      "adjudication": "The boundary remains disputed. This report does not replace either original judgment with a newly selected pass or fail."
+    },
+    "relation_to_prior_visible_review": "The earlier competitor quality review classified H051 as under-editing by adopting the promotional-padding reading. That interpretation remains a possible editorial reading, but it is not a uniquely established hard-fidelity ground truth. This cross-run contradiction must accompany it."
+  },
+  "core_recommendation": {
+    "action": "Do not make another core change or rollback solely to fit H051.",
+    "reason": "The proposed change produced a text already judged acceptable and preferred in the earlier comparison, and the identical text now receives the opposite hard judgment. Rewriting rules to chase either result would tune against unstable supervision rather than establish correctness.",
+    "current_boundary": "Keep the two current guidance changes frozen while reporting their authorized tests honestly. H051 alone establishes neither that they are safe nor that they introduced a regression.",
+    "future_resolution": "If a definitive policy is needed later, resolve the vague-claim versus padding distinction explicitly and independently of which condition benefits. Do not overwrite historical cases or resample repeatedly until obtaining a favorable verdict.",
+    "additional_sampling_requested_or_run": false
+  },
+  "original_summary_preserved": {
+    "competitor": {
+      "cases": 60,
+      "preferences": {"skill": 4, "baseline": 2, "tie": 54, "uncertain": 0},
+      "skill_hard_pass": 59,
+      "baseline_hard_pass": 59
+    },
+    "refinement-en": {
+      "cases": 1,
+      "preferences": {"skill": 0, "baseline": 1, "tie": 0, "uncertain": 0},
+      "skill": {"hard_fail": 1, "quality_worse": 1},
+      "baseline": {"hard_pass": 1, "quality_better": 1}
+    }
+  },
+  "source_hashes": [
+    {"path": "tests/results/2026-10-20-upgrade/competitor/summary.json", "sha256": "a2b539f139037595f51850f786c3f63c2bab358f7103a00320a58edb8fe7e105"},
+    {"path": "tests/results/2026-10-20-upgrade/competitor/judgments.json", "sha256": "202b0d0e5618e1892cb21c42eb27324ccb9b2103a4b021eb0ce12cc12b36181c"},
+    {"path": "tests/results/2026-10-20-upgrade/competitor/cases.json", "sha256": "5c6d0eae9b500cc2a6afd8d9b806d9bacf791d644a2af7b8625c713486fa5a7f"},
+    {"path": "tests/results/2026-10-20-upgrade/competitor/outputs.json", "sha256": "d5cfc731719d70849a825006e7dec60602ccaaddc0e9978e7e48fa52cec350e6"},
+    {"path": "tests/results/2026-10-20-upgrade/competitor/blind-key.json", "sha256": "29ec4198eec90a49072259da7e5298612b904f44421141db4fd816f34f9b8987"},
+    {"path": "tests/results/2026-10-20-upgrade/refinement-en/summary.json", "sha256": "20340ce577e9a2524de4435a5786b550ce6a5c1fdc1eec20389baf07af4e81c3"},
+    {"path": "tests/results/2026-10-20-upgrade/refinement-en/judgments.json", "sha256": "90e90934ed25a67534ed790af1bc37c59c688594efe8c24a93bddc59761243d3"},
+    {"path": "tests/results/2026-10-20-upgrade/refinement-en/cases.json", "sha256": "e26df6dcca0f7b5ff388fd8ea2e5c3df3682f60cf32cd230a2c488d8217f758e"},
+    {"path": "tests/results/2026-10-20-upgrade/refinement-en/outputs.json", "sha256": "19b2f9ee7b813af1f501b4a84af012b6ea93a50e9f095a7c3b009b38d07d12f0"},
+    {"path": "tests/results/2026-10-20-upgrade/refinement-en/blind-key.json", "sha256": "0a9d6920535d19892fbb1523cb2cecfcd0f77321f167000442d8333de19ac762"}
+  ]
+}

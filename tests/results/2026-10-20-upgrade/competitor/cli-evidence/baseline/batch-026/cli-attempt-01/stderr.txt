@@ -1,0 +1,11 @@
+2026-10-20T11:44:10.962771Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T11:44:10.963094Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T11:44:10.977985Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T11:44:12.177872Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T11:44:15.824503Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T11:44:17.227212Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T11:44:17.227245Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T11:44:17.977986Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T11:44:30.138364Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T11:44:36.270540Z  WARN codex_core::hook_runtime: after_agent hook failed; continuing turn_id=01a15920-4b5d-7ac2-99dd-1d214af6547f hook_name=legacy_notify error=文件名或扩展名太长。 (os error 206)
+2026-10-20T11:44:36.272635Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response

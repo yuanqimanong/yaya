@@ -1,0 +1,208 @@
+{
+  "judgments": [
+    {
+      "id": "H015",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留最近一次备份成功的时间及信息最多可能延迟十分钟，删除“追求卓越”等空泛表述，未增加实时性或成功保证。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留最近一次备份成功的时间及信息最多可能延迟十分钟，删除空泛宣传，未改变备份状态的含义。"
+      },
+      "preference": "tie",
+      "reason": "两份回答完全相同，均准确、直接地完成改写。"
+    },
+    {
+      "id": "H016",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "“这堂课用45分钟练习编写缺陷报告”保留时长与练习内容，删除“突破认知边界”等空泛描述，未虚构成果。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留原文清楚的课程说明及45分钟、编写缺陷报告两项信息，删除夸张铺垫。"
+      },
+      "preference": "tie",
+      "reason": "“这堂课”与“课程”均自然准确，没有实质质量差异。"
+    },
+    {
+      "id": "H017",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "完整保留周一14张、周五9张未关闭工单及本周2张重新打开的工单，未推断关闭数量，删除空泛引言。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "以“本周工单情况”替换空泛引言，正确保留三个数字与对应时间、状态，未新增关闭数量。"
+      },
+      "preference": "tie",
+      "reason": "A更紧凑，B提供简洁主题提示并分句；两者均清晰，差异不构成实质优势。"
+    },
+    {
+      "id": "H018",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "明确转换方向为PNG到JPEG，并保留“会丢失透明背景”的限制，删除“强大而先进”“无缝”等空泛修饰。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留PNG转JPEG及转换后透明背景丢失，准确呈现能力与限制，表达直接。"
+      },
+      "preference": "tie",
+      "reason": "仅限制说明的语序不同，事实、清晰度及用途一致。"
+    },
+    {
+      "id": "H019",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留验证步骤失败导致迁移暂停的因果关系和当前状态，删除关于创新意义的空泛评价。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "fail",
+        "quality": "same",
+        "evidence": "准确保留验证失败与迁移暂停，但仅去掉“归根结底”，仍保留“再次印证了创新的深远意义”这一主要空泛表达。"
+      },
+      "preference": "A",
+      "reason": "A完成去除空泛表达的要求；B虽然事实准确，但核心编辑任务未完成。"
+    },
+    {
+      "id": "H020",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留审批通过这一前提及缓存有效期将从60秒改为30秒，未写成已生效，删除空泛视角描述。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "将首句压缩为正在推进配置调整，保留原有进展信息，以及审批后从60秒改为30秒的条件与计划状态。"
+      },
+      "preference": "tie",
+      "reason": "A直接呈现调整计划，B保留简洁的进展背景；两者均自然且符合要求。"
+    },
+    {
+      "id": "H021",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留换货寄出推迟及发货日期尚未确定，删除空泛口号和与延期通知不协调的“很高兴”，未新增承诺。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "“您的换货商品将延迟寄出”保留面向客户的通知用途，同时明确日期未知，未编造原因、补偿或保证。"
+      },
+      "preference": "tie",
+      "reason": "A简洁直接，B保留自然的客户称谓；均适合延期通知，没有实质优劣。"
+    },
+    {
+      "id": "H022",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "合并重复的概述铺垫，并完整保留样本为一个部门的80份回复、不能代表全公司的范围限制。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "将重复铺垫合并为概述调查发现和样本情况，保留一个部门、80份回复及不能代表全公司的限制，未扩大样本范围。"
+      },
+      "preference": "tie",
+      "reason": "两者均有效减少重复并保留样本限制；“发现”与“调查发现”在该报告语境下无实质差异。"
+    },
+    {
+      "id": "H023",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "删除“突破性”“重新定义办公体验”等宣传语，保留一份文档、自己的列表和共享列表不受影响三项信息。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "完整保留个人列表置顶一份文档及共享列表不受影响，未新增团队或全局置顶能力，删除空泛宣传。"
+      },
+      "preference": "tie",
+      "reason": "回答完全相同，均准确完成任务。"
+    },
+    {
+      "id": "H024",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留严格超过500元的门槛、经理审批及批准后才能付款的强制顺序，删除关于信任价值的空泛解释。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留原文清楚的规定，包括超过500元、必须由经理批准后才能付款，未改为建议或包含恰好500元。"
+      },
+      "preference": "tie",
+      "reason": "A略调标点与措辞，B保留清楚原句；两者同样准确自然。"
+    },
+    {
+      "id": "H025",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留错误位于cache而非database的真实对比，以及先清除cache再重试的顺序，符合清楚措辞可以不改的要求。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "完整保留原文的故障定位与操作顺序，没有删除有用对比或作无必要改写。"
+      },
+      "preference": "tie",
+      "reason": "两者与原文完全一致；原文已自然直接，保留恰当。"
+    },
+    {
+      "id": "H026",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留记录由retention job删除，以及audit log未标明谁修改schedule的归因缺失，未虚构操作者，原文已清楚。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留有用的被动表达、删除记录的执行机制及修改schedule者身份未知的信息，符合无需修改清楚措辞的要求。"
+      },
+      "preference": "tie",
+      "reason": "两份回答完全相同，均保留了清楚且归因准确的原文。"
+    }
+  ]
+}

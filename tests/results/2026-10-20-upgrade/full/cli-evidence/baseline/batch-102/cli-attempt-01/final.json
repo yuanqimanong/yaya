@@ -1,0 +1,1 @@
+{"id":"H068","text":"在事务回滚完成前不要重试。\nThe request may fail if the token expires.","notes":"","skill_used":false}

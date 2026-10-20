@@ -1,0 +1,6 @@
+{"type":"thread.started","thread_id":"01a158f8-a779-7f23-99e0-05cd295e14b2"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"{\"id\":\"H022\",\"text\":\"本报告概述了调查发现和样本情况。样本来自一个部门的80份回复，不能代表全公司。\",\"notes\":\"\",\"skill_used\":false}"}}
+{"type":"turn.completed","usage":{"input_tokens":19441,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":366,"reasoning_output_tokens":311}}

@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "local_planned_jobs": 2,
+  "local_successful_outputs": 2,
+  "local_first_attempt_failures": 0,
+  "local_recovery_calls": 0,
+  "local_process_calls": 2,
+  "reused_outputs": 0,
+  "not_started": 0,
+  "limitation": "Successful process execution does not establish response quality; recovery is not an independent repeat."
+}

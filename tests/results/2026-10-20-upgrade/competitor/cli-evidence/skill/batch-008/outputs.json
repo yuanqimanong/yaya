@@ -1,0 +1,8 @@
+[
+  {
+    "id": "H008",
+    "text": "The cache lifetime will change from 60 seconds to 30 seconds after approval.",
+    "notes": "Removed the padded opening; left the clear second sentence unchanged.",
+    "skill_used": true
+  }
+]

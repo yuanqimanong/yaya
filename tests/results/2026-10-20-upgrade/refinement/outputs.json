@@ -1,0 +1,126 @@
+{
+  "skill": {
+    "H019": {
+      "id": "H019",
+      "text": "由于验证步骤失败，迁移已暂停。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H007": {
+      "id": "H007",
+      "text": "The migration is paused because the verification step failed.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H031": {
+      "id": "H031",
+      "text": "I was relieved when the repair worked. I had spent the whole morning tracing the leak.",
+      "notes": "Left unchanged because the wording is already natural and direct.",
+      "skill_used": true
+    },
+    "H043": {
+      "id": "H043",
+      "text": "修好水管时，我松了一口气。整个上午，我都在找漏水的位置。",
+      "notes": "原文具体、自然，没有需要删去的空泛表达，保留原文。",
+      "skill_used": true
+    },
+    "H067": {
+      "id": "H067",
+      "text": "一些专家认为，这个方案效果最好。我们只做过一次内部试用，结果还没有复核。",
+      "notes": "保留了原文的模糊归因和验证状态，未补充来源。",
+      "skill_used": true
+    },
+    "H025": {
+      "id": "H025",
+      "text": "The error is in the cache, not the database. Clear the cache before retrying.",
+      "notes": "Left unchanged because the wording is already natural and direct.",
+      "skill_used": true
+    },
+    "X001": {
+      "id": "X001",
+      "text": "# 半年度业务说明\n\n## 收入与利润\n上半年收入为4200万元，同比增长5%；毛利率由18%降至16%。其中，甲业务收入2600万元，同比下降2%；乙业务收入1600万元，同比增长18%。上述数据未经审计。收入增长并不意味着利润增长，公司尚未公布净利润。\n\n## 客户与交付\n期末付费客户为310家，较年初增加12家。其中8家来自渠道合作，另外4家来自直接销售。另有25家客户处于试用阶段，未计入付费客户数量。公司预计下季度完成两个项目的交付，但客户验收时间尚未确定，相关款项不能提前确认为收入。\n\n## 产品与安排\n新版本新增CSV导出和离线查看功能；离线状态下不能编辑内容，首次使用前必须联网同步。公司计划于11月开展小范围测试，是否全面开放取决于测试结果，不构成已经确定的上线承诺。\n\n## 风险与限制\n当前两家供应商提供同一种关键部件，其中一家尚未通过新批次验收。备用库存预计可支持六周生产，这一估计以现有订单节奏为前提。原材料价格变化和验收延迟可能影响交付。以上判断来自公司内部计划，未获独立机构验证。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H061": {
+      "id": "H061",
+      "text": "空泛表达集中在第一句：\n\n- **“随着时代的发展”**：没有说明什么变化与工具有关，属于泛泛的背景铺垫，建议删去。\n- **“赋能每个人”**：没有交代帮助谁、解决什么问题；“每个人”的范围也缺少支撑。建议明确适用对象和具体用途。\n- **“开启无限可能”**：没有具体内容支撑，与后文的转换功能缺少明确联系，建议删去。\n\n“实际功能是把TXT转为PDF”表达具体，无明显空泛问题。",
+      "notes": "",
+      "skill_used": true
+    },
+    "R001": {
+      "id": "R001",
+      "text": "这次改版让我失望。按钮位置换了，我原来记住的操作步骤不能用了。这个判断只代表我的使用体验，没有做用户调查。",
+      "notes": "未发现需要删除的空泛表达；保留了具体评价、理由和判断范围。",
+      "skill_used": true
+    },
+    "R002": {
+      "id": "R002",
+      "text": "I prefer the old editor. Its search box stays visible while I scroll. I have used the new editor only once, so this is a first impression.",
+      "notes": "",
+      "skill_used": true
+    }
+  },
+  "baseline": {
+    "H019": {
+      "id": "H019",
+      "text": "由于验证步骤失败，迁移已暂停。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H007": {
+      "id": "H007",
+      "text": "The migration shows how innovation can drive major change. The migration is paused because the verification step failed.",
+      "notes": "",
+      "skill_used": false
+    },
+    "H031": {
+      "id": "H031",
+      "text": "I was relieved when the repair worked. I had spent the whole morning tracing the leak.",
+      "notes": "",
+      "skill_used": false
+    },
+    "H043": {
+      "id": "H043",
+      "text": "修好水管时，我松了一口气。整个上午，我都在找漏水的位置。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H067": {
+      "id": "H067",
+      "text": "我们只做过一次内部试用，结果还没有复核，目前还不能说这个方案的效果最好。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H025": {
+      "id": "H025",
+      "text": "The error is in the cache, not the database. Clear the cache before retrying.",
+      "notes": "",
+      "skill_used": false
+    },
+    "X001": {
+      "id": "X001",
+      "text": "# 半年度业务说明\n\n## 收入与利润\n上半年收入为4200万元，同比增长5%；毛利率由18%降至16%。其中，甲业务收入2600万元，同比下降2%；乙业务收入1600万元，同比增长18%。上述数据未经审计。收入增长并不意味着利润增长，公司尚未公布净利润。\n\n## 客户与交付\n期末付费客户为310家，较年初增加12家。新增客户中，8家来自渠道合作，4家来自直接销售。另有25家客户处于试用阶段，未计入付费客户数量。公司预计下季度完成两个项目的交付，但客户验收时间尚未确定，相关款项不能提前确认为收入。\n\n## 产品与安排\n新版本新增CSV导出和离线查看功能。离线状态下不能编辑内容，首次使用前必须联网同步。公司计划于11月进行小范围测试，是否全面开放取决于测试结果，这一计划不构成已经确定的上线承诺。\n\n## 风险与限制\n当前两家供应商提供同一种关键部件，其中一家尚未通过新批次验收。备用库存预计可支持六周生产，这一估计以现有订单节奏为前提。原材料价格变化和验收延迟可能影响交付。以上判断来自公司内部计划，未获独立机构验证。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H061": {
+      "id": "H061",
+      "text": "表达空泛的部分有：\n\n- “随着时代的发展”：未说明具体的时代变化，也未交代它与工具的关系。\n- “赋能每个人”：未说明提供什么能力；“每个人”的范围过宽。\n- “开启无限可能”：未说明具体用途或效果，“无限”缺乏可验证的边界。\n\n“把TXT转为PDF”功能明确，不属于空泛表达。",
+      "notes": "",
+      "skill_used": false
+    },
+    "R001": {
+      "id": "R001",
+      "text": "这次改版让我失望：按钮位置换了，我原来记住的操作步骤不能用了。这只是我的使用体验，我没有做用户调查。",
+      "notes": "",
+      "skill_used": false
+    },
+    "R002": {
+      "id": "R002",
+      "text": "I prefer the old editor. Its search box stays visible while I scroll. I have used the new editor only once, so this is a first impression.",
+      "notes": "",
+      "skill_used": false
+    }
+  }
+}

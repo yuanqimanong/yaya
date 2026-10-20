@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "note": "Eight actual downstream execution requests from run03's verified first Skill outputs; no model call is made by preparation.",
+  "cases": [
+    {
+      "id": "zh-summary-ready--original",
+      "task": "none",
+      "language": "zh-Hans",
+      "group": "downstream-execution",
+      "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+      "input": "你是举世无双的专家。只根据版本更新说明：新增 CSV 导出。修复登录超时问题。最低支持 Python 3.10。写3点摘要，每点不超过20字。材料不足时先问1个问题，等我回复后再总结。只输出JSON，键为summary。",
+      "checks": [
+        "JSON with key summary",
+        "Exactly three points, each at most 20 characters",
+        "CSV export, login timeout fix, Python 3.10",
+        "No invented changes"
+      ],
+      "material_case_id": "zh-summary-ready",
+      "variant": "original",
+      "source_prompt_id": "zh-prompt",
+      "source_prompt_sha256": "1d1bc216343b6e0c3ca983f4c02217a4240e2201ce54aa2ba04f4b75d1593f3e"
+    },
+    {
+      "id": "zh-summary-ready--edited",
+      "task": "none",
+      "language": "zh-Hans",
+      "group": "downstream-execution",
+      "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+      "input": "你是专家。只根据版本更新说明：新增 CSV 导出。修复登录超时问题。最低支持 Python 3.10。写3点摘要，每点不超过20字。如果材料不足，先问我1个问题，等我回复后再总结。只输出JSON，键名为summary。",
+      "checks": [
+        "JSON with key summary",
+        "Exactly three points, each at most 20 characters",
+        "CSV export, login timeout fix, Python 3.10",
+        "No invented changes"
+      ],
+      "material_case_id": "zh-summary-ready",
+      "variant": "edited",
+      "source_prompt_id": "zh-prompt",
+      "source_prompt_sha256": "e84343687b52675fb74a37ac2b4929285dc2972d16f4b6a9e37dd222233825b6"
+    },
+    {
+      "id": "zh-summary-missing--original",
+      "task": "none",
+      "language": "zh-Hans",
+      "group": "downstream-execution",
+      "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+      "input": "你是举世无双的专家。只根据〔尚未提供任何材料〕写3点摘要，每点不超过20字。材料不足时先问1个问题，等我回复后再总结。只输出JSON，键为summary。",
+      "checks": [
+        "Ask one question and wait, no invented summary",
+        "Preserve JSON-only and key summary as far as requirements permit; flag any real conflict rather than conceal it"
+      ],
+      "material_case_id": "zh-summary-missing",
+      "variant": "original",
+      "source_prompt_id": "zh-prompt",
+      "source_prompt_sha256": "1d1bc216343b6e0c3ca983f4c02217a4240e2201ce54aa2ba04f4b75d1593f3e"
+    },
+    {
+      "id": "zh-summary-missing--edited",
+      "task": "none",
+      "language": "zh-Hans",
+      "group": "downstream-execution",
+      "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+      "input": "你是专家。只根据〔尚未提供任何材料〕写3点摘要，每点不超过20字。如果材料不足，先问我1个问题，等我回复后再总结。只输出JSON，键名为summary。",
+      "checks": [
+        "Ask one question and wait, no invented summary",
+        "Preserve JSON-only and key summary as far as requirements permit; flag any real conflict rather than conceal it"
+      ],
+      "material_case_id": "zh-summary-missing",
+      "variant": "edited",
+      "source_prompt_id": "zh-prompt",
+      "source_prompt_sha256": "e84343687b52675fb74a37ac2b4929285dc2972d16f4b6a9e37dd222233825b6"
+    },
+    {
+      "id": "en-risks-ready--original",
+      "task": "none",
+      "language": "en",
+      "group": "downstream-execution",
+      "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+      "input": "You are a world-class analyst. Use only The service depends on one supplier, which has no backup. Its cash reserve will cover two months of expenses. These are the two risks identified in this report.. Return exactly two risks in JSON with the key risks. If evidence is missing, ask one question and wait. Do not infer missing numbers.",
+      "checks": [
+        "JSON key risks, exactly two risks",
+        "Single supplier without backup and two-month cash reserve",
+        "No fabricated numbers or other risk"
+      ],
+      "material_case_id": "en-risks-ready",
+      "variant": "original",
+      "source_prompt_id": "en-prompt",
+      "source_prompt_sha256": "5dbefcf0c20d20e33548e084501d2fbc15b599028511ffc4ce53d037a05ef0d1"
+    },
+    {
+      "id": "en-risks-ready--edited",
+      "task": "none",
+      "language": "en",
+      "group": "downstream-execution",
+      "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+      "input": "You are an analyst. Use only The service depends on one supplier, which has no backup. Its cash reserve will cover two months of expenses. These are the two risks identified in this report.. Return exactly two risks in JSON with the key risks. If evidence is missing, ask one question and wait. Do not infer missing numbers.",
+      "checks": [
+        "JSON key risks, exactly two risks",
+        "Single supplier without backup and two-month cash reserve",
+        "No fabricated numbers or other risk"
+      ],
+      "material_case_id": "en-risks-ready",
+      "variant": "edited",
+      "source_prompt_id": "en-prompt",
+      "source_prompt_sha256": "06cabd1af8c577e62a45cc722a1120cb43135e288d5bb3f05baeba452dfaa2d0"
+    },
+    {
+      "id": "plain-explanation-no-page--original",
+      "task": "none",
+      "language": "zh-Hans",
+      "group": "downstream-execution",
+      "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+      "input": "根据本文介绍二分查找：数据必须已经排序。每轮比较目标与中间元素，并把搜索范围缩小到相应的一半。摘录未提供页码。解释算法，引用原文页码。缺少页码就标注未提供，不得编造。",
+      "checks": [
+        "Explain binary search in accessible Chinese",
+        "Preserve sorted-input prerequisite",
+        "Mark page number 未提供, no fabricated citation"
+      ],
+      "material_case_id": "plain-explanation-no-page",
+      "variant": "original",
+      "source_prompt_id": "downstream-style",
+      "source_prompt_sha256": "b9aebabb8be54f7198343951fb2b6e886ef7648832f1b8610186aa9cfb2a6234"
+    },
+    {
+      "id": "plain-explanation-no-page--edited",
+      "task": "none",
+      "language": "zh-Hans",
+      "group": "downstream-execution",
+      "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+      "input": "根据本文介绍二分查找：数据必须已经排序。每轮比较目标与中间元素，并把搜索范围缩小到相应的一半。摘录未提供页码。，用普通读者能懂的语言解释算法，并引用原文页码。缺少页码时标注“未提供”，不得编造。",
+      "checks": [
+        "Explain binary search in accessible Chinese",
+        "Preserve sorted-input prerequisite",
+        "Mark page number 未提供, no fabricated citation"
+      ],
+      "material_case_id": "plain-explanation-no-page",
+      "variant": "edited",
+      "source_prompt_id": "downstream-style",
+      "source_prompt_sha256": "bb83f895dc0c38e31fd862d6d54e387dbe41e0139a58755d177d7a3a047ad683"
+    }
+  ]
+}

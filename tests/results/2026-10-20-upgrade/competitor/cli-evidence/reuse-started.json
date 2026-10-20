@@ -1,0 +1,2389 @@
+{
+  "protocol": 1,
+  "created_at_utc": "2026-10-20T11:55:46.506067+00:00",
+  "script_sha256": "cb3c46dde759795d5a8572b0002756a65baa1c3ea2536ba806906e1f5358629d",
+  "source_run": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03",
+  "target_run": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-competitor02",
+  "case_count": 60,
+  "selection": "all frozen target IDs, first successful process execution; one proved infrastructure retry allowed; no output-based selection",
+  "source_cli_run_sha256": "30c7d35319394a7d3c5c3d750c9436ca4a36a8f740e47d7821ff1d4509f5fb32",
+  "target_cli_run_sha256": "780bfa42124482edab5b012933d1de7be9039f50d989b74c823bc89b5765885b",
+  "source_manifest_sha256": "72bfaba7778ccf5cbb03a578a4976f7f5967c4ff03918fb68ebf75136b0e7e60",
+  "target_manifest_sha256": "51044372ed4668ad4cab718c6dce83231ca4a591c8c7cbd5b360da7aed7af614",
+  "compared_settings": {
+    "runner_protocol": 1,
+    "runner_sha256": "3b5e33fedcde06760fc196c60c197f4601287a800ba5d05a78431d534f581dfd",
+    "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+    "command": [
+      "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
+    ],
+    "model": {
+      "configured": {
+        "model_provider": "openai_https",
+        "model": "gpt-6.1-sol",
+        "model_reasoning_effort": "high"
+      },
+      "exact_model_revision": "not provided by this runner",
+      "sampling": "host defaults; no model, reasoning, or sampling override"
+    },
+    "tool_policy": "forbidden in prompt; tool or unknown item events invalidate output",
+    "tool_claim": "no tool activity observed in accepted JSONL; tools are not physically disabled",
+    "project_instructions": "project_doc_max_bytes=0 for this process; host CLI configuration otherwise inherited",
+    "isolation": "one ephemeral CLI process and working directory per case"
+  },
+  "shared_snapshot_sha256": {
+    "agents/openai.yaml": "e0f9ebc3b757c640fab09de8a85d9b22c94991ef5ba45e37a9da682825c77b5a",
+    "languages/en/examples.md": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3",
+    "languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0",
+    "languages/en/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "languages/en/pack.json": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f",
+    "languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58",
+    "languages/zh-Hans/examples.md": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc",
+    "languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f",
+    "languages/zh-Hans/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "languages/zh-Hans/pack.json": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475",
+    "languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601",
+    "LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+    "references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+    "references/language-packs.md": "3e455a40366e4d73465c6a332e993fc4b9523b1c7908d13ecb0613ad3998562d",
+    "references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+    "references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+    "references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+    "scripts/check_comments.py": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539",
+    "scripts/check_rewrite.py": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c",
+    "scripts/detect_tells.py": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800",
+    "scripts/packs.py": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2",
+    "scripts/prose_scan.py": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+    "scripts/tell_rules.json": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8",
+    "SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+    "version.json": "329a07bfe52861c949fcb2f410a5becfbf83529828fda414e909756f2464aad3"
+  },
+  "shared_data_sha256": {
+    "data/language-packs/ja/examples.md": "5e4df0290629a59122d149215838aeafc987e2facca4f0b93db008c94de13205",
+    "data/language-packs/ja/GUIDE.md": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881",
+    "data/language-packs/ja/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "data/language-packs/ja/pack.json": "a56b425e7ab5071d523fbe75e4a7168897239a22644ca646edcddb621cfe0446",
+    "data/language-packs/ja/PATTERNS.md": "1f6826b5b568233e8777e709f7b5f646bba040dad72ba9a4aeb770119106e8b1",
+    "data/language-packs/ko/examples.md": "f373a5a66758614f6c624233e565e919b917de9bf33ffcb244c1b5479d2ca212",
+    "data/language-packs/ko/GUIDE.md": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9",
+    "data/language-packs/ko/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "data/language-packs/ko/pack.json": "623eab03dd51a3c521ff8593946838a97e2315b3d3f3cdcf96a3052e595a5dd8",
+    "data/language-packs/ko/PATTERNS.md": "a5a32071e475832271f308e4d1283e4577ec2976a6abaecae512b2cba142db0f",
+    "data/language-packs/zh-Hant/examples.md": "2c48ac1c68a5b2612f8afd349908995ae93a87e734ed5429010f3bac4c3093f4",
+    "data/language-packs/zh-Hant/GUIDE.md": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00",
+    "data/language-packs/zh-Hant/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "data/language-packs/zh-Hant/pack.json": "009f1cb5ec6d2581a84620bb278d549ce22daf587833635714c7ea430ad728c7",
+    "data/language-packs/zh-Hant/PATTERNS.md": "ca1aa738f86582145d066bded336d4cd1e53c6bad6330519df538442c836ef35"
+  },
+  "cases": [
+    {
+      "id": "H001",
+      "condition": "skill",
+      "source_kind": "recovered_after_infrastructure_failure",
+      "prior_failure": {
+        "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 2029685 bytes failed",
+        "returncode": 3221226505,
+        "error": "CLI exited with status 3221226505",
+        "attempt": "cli-attempt-01",
+        "completion_sha256": "7c2e36a8cb24907246ea6d98e565b19e5c4dd7a2229d86431661b99a07157e32",
+        "started_sha256": "e42182f27102fde23e2428d564d2153b119e59086ce34180648c8758449450b1",
+        "artifact_sha256": {
+          "prompt.txt": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+          "stdout.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr.txt": "d76e8322abfaf3c09e2ddee0246babe41348283955467c448b7280198235a9f9",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+        }
+      },
+      "continuation_started_sha256": "09ddd325580af6fde387f76be32f28d4998785be991952ae23646758bc0676c6",
+      "continuation_sha256": "55c7422c4318dc6ee86fb1b37ff36546488dc9759f31ab3bef0dd7b0a1251274",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-035\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-035\\cli-attempt-02",
+      "target_output": "skill/batch-001/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-001",
+      "source_request_sha256": "b748135aa83e6941e9a35cc327ba24212e0b2476b712981dec4207168748bb00",
+      "target_request_sha256": "b748135aa83e6941e9a35cc327ba24212e0b2476b712981dec4207168748bb00",
+      "prompt_sha256": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "e9ff7e139fe32d3c833c52e19e08cce7b837df8b8a4e23c941603cc27f4f2748",
+      "artifact_sha256": {
+        "completion.json": "c8ff323624a60d329111b9be0decbf5f73ba37d58aa675e940d86f7fa48aa200",
+        "final.json": "133775a225c968cd30318e83f1328d2f0d0d58b29b86409230d4f70ca7c28464",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+        "started.json": "7dc8a03b795af06ab34a2dd0647bc5d2dd6e7f00c03137ab6094ac9c553e4591",
+        "stderr.txt": "1de3c47206f8be65179241696acd4c24fb04daaba228f01ed3403bc77cbe5bd3",
+        "stdout.jsonl": "715f583ccf3b0cece673dd36219993318b92458a9a85c3170396a66ef056df87"
+      },
+      "attempt_sha256": {
+        "cli-attempt-02": {
+          "completion.json": "c8ff323624a60d329111b9be0decbf5f73ba37d58aa675e940d86f7fa48aa200",
+          "final.json": "133775a225c968cd30318e83f1328d2f0d0d58b29b86409230d4f70ca7c28464",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+          "started.json": "7dc8a03b795af06ab34a2dd0647bc5d2dd6e7f00c03137ab6094ac9c553e4591",
+          "stderr.txt": "1de3c47206f8be65179241696acd4c24fb04daaba228f01ed3403bc77cbe5bd3",
+          "stdout.jsonl": "715f583ccf3b0cece673dd36219993318b92458a9a85c3170396a66ef056df87"
+        },
+        "cli-attempt-01": {
+          "completion.json": "7c2e36a8cb24907246ea6d98e565b19e5c4dd7a2229d86431661b99a07157e32",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+          "started.json": "e42182f27102fde23e2428d564d2153b119e59086ce34180648c8758449450b1",
+          "stderr.txt": "d76e8322abfaf3c09e2ddee0246babe41348283955467c448b7280198235a9f9",
+          "stdout.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "id": "H002",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-036\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-036\\cli-attempt-01",
+      "target_output": "skill/batch-002/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-002",
+      "source_request_sha256": "a327dc9139ee91232199751bb6877616b276a0f2a427862c2a41e355d91e8fc4",
+      "target_request_sha256": "a327dc9139ee91232199751bb6877616b276a0f2a427862c2a41e355d91e8fc4",
+      "prompt_sha256": "68ba3e2fa49d906bbb7cc432a58687ff77e352570a2d99812fd93bdef2cdda7e",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "851ddc01cedf924ba0d5e277d9d1d252471366e33a66ef98425cdaeb48621fb8",
+      "artifact_sha256": {
+        "completion.json": "832edd6a740f361cc9a842d4532a5735a4b7bd94454a171676da4193b5c4f728",
+        "final.json": "891772830e0d06ef524b70c2f6a22013525ed31a2ba3df53bb2a53ed83febc1f",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "68ba3e2fa49d906bbb7cc432a58687ff77e352570a2d99812fd93bdef2cdda7e",
+        "started.json": "24bc02805a4b23b1f194b3e46519b6981a5ba8533e320e8fc57547daca009be6",
+        "stderr.txt": "5cdac6c7dc097bd67097f3666e5dd97ba232015db10d842297aa77f1d56c33cb",
+        "stdout.jsonl": "58c4aa7488b06e055243382ff4bc3ecc03645665bf1a218654f0d0c06f3597c2"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "832edd6a740f361cc9a842d4532a5735a4b7bd94454a171676da4193b5c4f728",
+          "final.json": "891772830e0d06ef524b70c2f6a22013525ed31a2ba3df53bb2a53ed83febc1f",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "68ba3e2fa49d906bbb7cc432a58687ff77e352570a2d99812fd93bdef2cdda7e",
+          "started.json": "24bc02805a4b23b1f194b3e46519b6981a5ba8533e320e8fc57547daca009be6",
+          "stderr.txt": "5cdac6c7dc097bd67097f3666e5dd97ba232015db10d842297aa77f1d56c33cb",
+          "stdout.jsonl": "58c4aa7488b06e055243382ff4bc3ecc03645665bf1a218654f0d0c06f3597c2"
+        }
+      }
+    },
+    {
+      "id": "H003",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-037\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-037\\cli-attempt-01",
+      "target_output": "skill/batch-003/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-003",
+      "source_request_sha256": "256c423962785394fc2c0b35470ba971697f331e2887f3acf1ee8379f6c149fb",
+      "target_request_sha256": "256c423962785394fc2c0b35470ba971697f331e2887f3acf1ee8379f6c149fb",
+      "prompt_sha256": "0851fbc992740e06d6e37cc1005ab2d388922ab387c617db8dd00dd8595f711f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "2a1519b473bae6231df0244d75aa159019616e684282d6765588b668ecb49e59",
+      "artifact_sha256": {
+        "completion.json": "8dba7fdc94aad1b0142a373e3b53f7e7564c15ba058ed4c2e5260c2970a8911f",
+        "final.json": "7290ab4f2053fc56ce0a90bd49a34bfde23ecb6b9c7be67e72ae90136ae34f0a",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "0851fbc992740e06d6e37cc1005ab2d388922ab387c617db8dd00dd8595f711f",
+        "started.json": "5dc3ba74e350262a5d5f9391eaea309075c0caaf6f709e6c30ca284561dae289",
+        "stderr.txt": "fa967921fa864e31b18d5ab417d76487888da492b3474e1fc2fe26dc4cad6034",
+        "stdout.jsonl": "020a46556e74fb8b3624a7779817bcef7f67545f1f8a2c47fd00896e27de33bd"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "8dba7fdc94aad1b0142a373e3b53f7e7564c15ba058ed4c2e5260c2970a8911f",
+          "final.json": "7290ab4f2053fc56ce0a90bd49a34bfde23ecb6b9c7be67e72ae90136ae34f0a",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "0851fbc992740e06d6e37cc1005ab2d388922ab387c617db8dd00dd8595f711f",
+          "started.json": "5dc3ba74e350262a5d5f9391eaea309075c0caaf6f709e6c30ca284561dae289",
+          "stderr.txt": "fa967921fa864e31b18d5ab417d76487888da492b3474e1fc2fe26dc4cad6034",
+          "stdout.jsonl": "020a46556e74fb8b3624a7779817bcef7f67545f1f8a2c47fd00896e27de33bd"
+        }
+      }
+    },
+    {
+      "id": "H004",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-038\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-038\\cli-attempt-01",
+      "target_output": "skill/batch-004/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-004",
+      "source_request_sha256": "c5d6ed05ee7e860f33d37791dc186751194050f5b96da9775bf581beacac64fb",
+      "target_request_sha256": "c5d6ed05ee7e860f33d37791dc186751194050f5b96da9775bf581beacac64fb",
+      "prompt_sha256": "82fecc9cf7383a92275e64d4aece3de1c57e7f002c40acb5c10509a1bd5efc6d",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "07c2d1d88e44156ae661f60abd43586d1e9aa90c2fc4f912d7d1654869391e35",
+      "artifact_sha256": {
+        "completion.json": "4730d0ce2be249b7216b8268a3784fa546ad63009cd17df5699a97c8833d57a0",
+        "final.json": "e3489839fd6585c3b2d02e01ec782deb7c27644449618fe356f3ff4ab95d8552",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "82fecc9cf7383a92275e64d4aece3de1c57e7f002c40acb5c10509a1bd5efc6d",
+        "started.json": "f8f20b61e76c33e49863c7df9bedd39e31698c9ffcfa5a098301018f664e805a",
+        "stderr.txt": "42b7dcfe853bf5ab4ca977ae9f1de2fc0a3b7bfa32cf40732fa45748d42e75a7",
+        "stdout.jsonl": "7ba7f1998f73ca5eb0bdcf41ff7826005ab0b2cc6f68b8777555f63a79ece1dc"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "4730d0ce2be249b7216b8268a3784fa546ad63009cd17df5699a97c8833d57a0",
+          "final.json": "e3489839fd6585c3b2d02e01ec782deb7c27644449618fe356f3ff4ab95d8552",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "82fecc9cf7383a92275e64d4aece3de1c57e7f002c40acb5c10509a1bd5efc6d",
+          "started.json": "f8f20b61e76c33e49863c7df9bedd39e31698c9ffcfa5a098301018f664e805a",
+          "stderr.txt": "42b7dcfe853bf5ab4ca977ae9f1de2fc0a3b7bfa32cf40732fa45748d42e75a7",
+          "stdout.jsonl": "7ba7f1998f73ca5eb0bdcf41ff7826005ab0b2cc6f68b8777555f63a79ece1dc"
+        }
+      }
+    },
+    {
+      "id": "H005",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-039\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-039\\cli-attempt-01",
+      "target_output": "skill/batch-005/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-005",
+      "source_request_sha256": "17c38512541d78788a478cc757a7cf13706e7a2f653503892bf276b2b28f48a9",
+      "target_request_sha256": "17c38512541d78788a478cc757a7cf13706e7a2f653503892bf276b2b28f48a9",
+      "prompt_sha256": "1ab919c43007881634e3ed42cdef1cd6bc8f3bd190e5f8a2af4d8a41e205f592",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "f2071fd419bf6bb2694c63d61b8d61bf6ad28d432b517e408e9e8e56173c3f67",
+      "artifact_sha256": {
+        "completion.json": "bee0845586bb62dd4a5566cc4e5a3f663c7a752ae7bb3269cc6f3a7b93c31480",
+        "final.json": "0f7048cd14479bab33cc1ad93dfd29c930ac7a0a8114cc93e572d565a43095fa",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "1ab919c43007881634e3ed42cdef1cd6bc8f3bd190e5f8a2af4d8a41e205f592",
+        "started.json": "3867cb8d639771f1cb9bff07f5afd195605c73ba43728020a3a3fea3c46bc8b4",
+        "stderr.txt": "93bf2403bef80791e75dcad2b4b9316ff2cb88a95d6abf06a4d263f5c18e9fb7",
+        "stdout.jsonl": "f72f55a92a841066e9a04f661ea81d8abc91da0abef03770502e5e783390c161"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "bee0845586bb62dd4a5566cc4e5a3f663c7a752ae7bb3269cc6f3a7b93c31480",
+          "final.json": "0f7048cd14479bab33cc1ad93dfd29c930ac7a0a8114cc93e572d565a43095fa",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "1ab919c43007881634e3ed42cdef1cd6bc8f3bd190e5f8a2af4d8a41e205f592",
+          "started.json": "3867cb8d639771f1cb9bff07f5afd195605c73ba43728020a3a3fea3c46bc8b4",
+          "stderr.txt": "93bf2403bef80791e75dcad2b4b9316ff2cb88a95d6abf06a4d263f5c18e9fb7",
+          "stdout.jsonl": "f72f55a92a841066e9a04f661ea81d8abc91da0abef03770502e5e783390c161"
+        }
+      }
+    },
+    {
+      "id": "H006",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-040\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-040\\cli-attempt-01",
+      "target_output": "skill/batch-006/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-006",
+      "source_request_sha256": "35eb73985ab10e29ec81a4b8cb16962792c298bd152512cd10c954042a567fbc",
+      "target_request_sha256": "35eb73985ab10e29ec81a4b8cb16962792c298bd152512cd10c954042a567fbc",
+      "prompt_sha256": "96a841de420b8a4b695f723159e1fc39affed067991935a753257a52c695cd9b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "3e474bc23e35e322467bca5e4a88ed69b85a9306a5d97214a6f65b4616793bf1",
+      "artifact_sha256": {
+        "completion.json": "3c1b70e2e80a5bda4ff7209f029b4f3c7ce39fe71bd737bfb9b5778f3a66133b",
+        "final.json": "257c790600cc99ecbf8978e9f7200f95763033bc19c2218d7ceefc0600b9d9e7",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "96a841de420b8a4b695f723159e1fc39affed067991935a753257a52c695cd9b",
+        "started.json": "24355ad84f759eb2ed331bc4f29bd75f3b7c787121db045939bc79e14f8ad29b",
+        "stderr.txt": "5ac1f65a17f8539a4eb328bff16d7c53383eec98f4dab8ff9bdb26c6b79a50a4",
+        "stdout.jsonl": "2e34870e1b39eafd1e5dd85c65f50b052ca0f497b052f1083bb2674e774bd5b9"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "3c1b70e2e80a5bda4ff7209f029b4f3c7ce39fe71bd737bfb9b5778f3a66133b",
+          "final.json": "257c790600cc99ecbf8978e9f7200f95763033bc19c2218d7ceefc0600b9d9e7",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "96a841de420b8a4b695f723159e1fc39affed067991935a753257a52c695cd9b",
+          "started.json": "24355ad84f759eb2ed331bc4f29bd75f3b7c787121db045939bc79e14f8ad29b",
+          "stderr.txt": "5ac1f65a17f8539a4eb328bff16d7c53383eec98f4dab8ff9bdb26c6b79a50a4",
+          "stdout.jsonl": "2e34870e1b39eafd1e5dd85c65f50b052ca0f497b052f1083bb2674e774bd5b9"
+        }
+      }
+    },
+    {
+      "id": "H007",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-041\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-041\\cli-attempt-01",
+      "target_output": "skill/batch-007/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-007",
+      "source_request_sha256": "ad578fc125162fa37dfff53b66685c8b4da7e8ae83b040741437925fc93c4bdf",
+      "target_request_sha256": "ad578fc125162fa37dfff53b66685c8b4da7e8ae83b040741437925fc93c4bdf",
+      "prompt_sha256": "37a46da65573b2d1104d106407a6ab997e1e93a8a3c0a5ea7da2394e08a536fe",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "ee4eb06f227d10b2fcf23241957c6c4879b51c4f4199da1a5745d081a739fbf7",
+      "artifact_sha256": {
+        "completion.json": "7b728c0b26191d66fa3898b8d754d24e085d2950a9e060c0f06a10a8f3da7bf6",
+        "final.json": "7aa08f2978da996f9e617c53475435999c39685b89587de8297801a4c38ac30f",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "37a46da65573b2d1104d106407a6ab997e1e93a8a3c0a5ea7da2394e08a536fe",
+        "started.json": "84cb2f3a444bff1fd27f537c812711ece80c98a6fbec84c77d2c8d46f9c793ce",
+        "stderr.txt": "33b05c8039fe6a644276d1854993ed4f5d0d92e805f14b865049fa3bef5c797f",
+        "stdout.jsonl": "2888b5f6d2a0e61f748e333734e71aa0b0b33e2f94e9cce12015a0170043e002"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "7b728c0b26191d66fa3898b8d754d24e085d2950a9e060c0f06a10a8f3da7bf6",
+          "final.json": "7aa08f2978da996f9e617c53475435999c39685b89587de8297801a4c38ac30f",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "37a46da65573b2d1104d106407a6ab997e1e93a8a3c0a5ea7da2394e08a536fe",
+          "started.json": "84cb2f3a444bff1fd27f537c812711ece80c98a6fbec84c77d2c8d46f9c793ce",
+          "stderr.txt": "33b05c8039fe6a644276d1854993ed4f5d0d92e805f14b865049fa3bef5c797f",
+          "stdout.jsonl": "2888b5f6d2a0e61f748e333734e71aa0b0b33e2f94e9cce12015a0170043e002"
+        }
+      }
+    },
+    {
+      "id": "H008",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-042\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-042\\cli-attempt-01",
+      "target_output": "skill/batch-008/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-008",
+      "source_request_sha256": "09942775fab460b29f5006d6b42fd0a93d3b15f6e815fd19264d0a96cf067116",
+      "target_request_sha256": "09942775fab460b29f5006d6b42fd0a93d3b15f6e815fd19264d0a96cf067116",
+      "prompt_sha256": "86a141ae700b19a72ff8ebef2b0ac7251232337da8197de442a1ec7b60d43b4d",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "49cced3d2744b6b0b2c059f5d386380b696ff6bcc083f34279de11a1ecc03762",
+      "artifact_sha256": {
+        "completion.json": "c8f575e2d8f1b883e9b6ba9c0667a7fb7c204a9cc978f5e525b0c4288f454903",
+        "final.json": "3f5031f63c704abad6c4592ee178736610786462e4e45ad13db810a4727895df",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "86a141ae700b19a72ff8ebef2b0ac7251232337da8197de442a1ec7b60d43b4d",
+        "started.json": "dda2359e417d1a5709d1e1fd67e1175215b13dc4a1358e7579958d20ea796649",
+        "stderr.txt": "7d0dbf39dd853427490052bae4294be33e820ac0dc27b31dcc38a9838e5caefc",
+        "stdout.jsonl": "01af5eb19315a852575c60b4a51e680bc96feeda78e15504b415374a040f758f"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "c8f575e2d8f1b883e9b6ba9c0667a7fb7c204a9cc978f5e525b0c4288f454903",
+          "final.json": "3f5031f63c704abad6c4592ee178736610786462e4e45ad13db810a4727895df",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "86a141ae700b19a72ff8ebef2b0ac7251232337da8197de442a1ec7b60d43b4d",
+          "started.json": "dda2359e417d1a5709d1e1fd67e1175215b13dc4a1358e7579958d20ea796649",
+          "stderr.txt": "7d0dbf39dd853427490052bae4294be33e820ac0dc27b31dcc38a9838e5caefc",
+          "stdout.jsonl": "01af5eb19315a852575c60b4a51e680bc96feeda78e15504b415374a040f758f"
+        }
+      }
+    },
+    {
+      "id": "H009",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-043\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-043\\cli-attempt-01",
+      "target_output": "skill/batch-009/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-009",
+      "source_request_sha256": "b3c290c11bcbb60926d5745d8bbdcb41a86d8dae84b869a7baa3c2a1a4dc5078",
+      "target_request_sha256": "b3c290c11bcbb60926d5745d8bbdcb41a86d8dae84b869a7baa3c2a1a4dc5078",
+      "prompt_sha256": "2fc07e5cf962c2a08592b57e5be88a0101391bec6edce870ac5e57ac875dd8b7",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "5e8231c886b6a431dc816e0ad48da59ead0550950f625a2cd9e465e1653a0f05",
+      "artifact_sha256": {
+        "completion.json": "f3a399dda95fefbce4048b9e44509f329dedb74edeb2743d100ccf2ad3d47e6b",
+        "final.json": "21abbee5130cfc28066865597856d8b9445feced4fadd0259dba302b959db764",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "2fc07e5cf962c2a08592b57e5be88a0101391bec6edce870ac5e57ac875dd8b7",
+        "started.json": "1e50e8f789072bcd46dbc4e9c89ae4ff270037eede79f33cccfb1ed9c11b4349",
+        "stderr.txt": "3777b02cf1d001d10cd7bd9df825ecbc44cf5c1cadaee8f2bf5c1e68d0f6592c",
+        "stdout.jsonl": "44bf9bf57d9fc612d56203b2b6bf703db1d2b843bf788bc5e5a1159c6c50c35f"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "f3a399dda95fefbce4048b9e44509f329dedb74edeb2743d100ccf2ad3d47e6b",
+          "final.json": "21abbee5130cfc28066865597856d8b9445feced4fadd0259dba302b959db764",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "2fc07e5cf962c2a08592b57e5be88a0101391bec6edce870ac5e57ac875dd8b7",
+          "started.json": "1e50e8f789072bcd46dbc4e9c89ae4ff270037eede79f33cccfb1ed9c11b4349",
+          "stderr.txt": "3777b02cf1d001d10cd7bd9df825ecbc44cf5c1cadaee8f2bf5c1e68d0f6592c",
+          "stdout.jsonl": "44bf9bf57d9fc612d56203b2b6bf703db1d2b843bf788bc5e5a1159c6c50c35f"
+        }
+      }
+    },
+    {
+      "id": "H010",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-044\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-044\\cli-attempt-01",
+      "target_output": "skill/batch-010/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-010",
+      "source_request_sha256": "c67a0df78cb380e8c6af8dc9c5e9719ef11dce0bbd71a948ed257b570463d2ef",
+      "target_request_sha256": "c67a0df78cb380e8c6af8dc9c5e9719ef11dce0bbd71a948ed257b570463d2ef",
+      "prompt_sha256": "84bc31e807ec314e50a24a170275d22c4998643ce1cda4d6517bbe5e7a6e5cf7",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "0d05a9cb1b64b7cdf8950ac919799366ea4d380f15bdb3bed49dcae877476bbe",
+      "artifact_sha256": {
+        "completion.json": "ba6a6d890443b9eca5978e7dc49ead78a4b339a13b9723392e940291012ed2c4",
+        "final.json": "12841dd3bed29d3cc4b75f381c0feeb63cf83efea76a632165d78754363c2f01",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "84bc31e807ec314e50a24a170275d22c4998643ce1cda4d6517bbe5e7a6e5cf7",
+        "started.json": "22469245a6e9e0505935ba1a84eb8b090dc286130b4c389e57a7c947a09004fd",
+        "stderr.txt": "dd2d016af5cb35b1a5a12babecb41ad38ac766538b2ffd7e2f3af18fe3565e46",
+        "stdout.jsonl": "0b5a6d37d9250f21e7e40b098d0811328f8e06a5030c8accee761e52ac89154d"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "ba6a6d890443b9eca5978e7dc49ead78a4b339a13b9723392e940291012ed2c4",
+          "final.json": "12841dd3bed29d3cc4b75f381c0feeb63cf83efea76a632165d78754363c2f01",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "84bc31e807ec314e50a24a170275d22c4998643ce1cda4d6517bbe5e7a6e5cf7",
+          "started.json": "22469245a6e9e0505935ba1a84eb8b090dc286130b4c389e57a7c947a09004fd",
+          "stderr.txt": "dd2d016af5cb35b1a5a12babecb41ad38ac766538b2ffd7e2f3af18fe3565e46",
+          "stdout.jsonl": "0b5a6d37d9250f21e7e40b098d0811328f8e06a5030c8accee761e52ac89154d"
+        }
+      }
+    },
+    {
+      "id": "H011",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-045\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-045\\cli-attempt-01",
+      "target_output": "skill/batch-011/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-011",
+      "source_request_sha256": "5ac9996ab1b227f10513f6ce47c732c2c5cdcdd5536471f3d3675351e28b7bd8",
+      "target_request_sha256": "5ac9996ab1b227f10513f6ce47c732c2c5cdcdd5536471f3d3675351e28b7bd8",
+      "prompt_sha256": "1ea300037c31bfc15bc3985e5445dc75992f421f6858261a5b9668674fc08436",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "d4cce31d6f2174b87fef14c2cdc7154502502012de5f9babe3e12de02bc95efa",
+      "artifact_sha256": {
+        "completion.json": "bee58144ef78f3b1ff24c7bbc8ae67bf870e8515ef87f5fd2784ac3c159683a2",
+        "final.json": "87747ca1e27336a173eeb3e41fdcbe9883aedff69b8b77038426a8dd9849a508",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "1ea300037c31bfc15bc3985e5445dc75992f421f6858261a5b9668674fc08436",
+        "started.json": "cb9c8d6c996f09550a4b155871dbe5b6dfed24f22d5f8d919dc4d306c7d60f44",
+        "stderr.txt": "2123077c95d13034a4254fbca0e4a83dbd34e4aecff3e842ce79aafe713bb6f4",
+        "stdout.jsonl": "527dac1b3ec4e23f607b66a5412053c0e6f9fbbc268dc74ec567b83b1d11c2b1"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "bee58144ef78f3b1ff24c7bbc8ae67bf870e8515ef87f5fd2784ac3c159683a2",
+          "final.json": "87747ca1e27336a173eeb3e41fdcbe9883aedff69b8b77038426a8dd9849a508",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "1ea300037c31bfc15bc3985e5445dc75992f421f6858261a5b9668674fc08436",
+          "started.json": "cb9c8d6c996f09550a4b155871dbe5b6dfed24f22d5f8d919dc4d306c7d60f44",
+          "stderr.txt": "2123077c95d13034a4254fbca0e4a83dbd34e4aecff3e842ce79aafe713bb6f4",
+          "stdout.jsonl": "527dac1b3ec4e23f607b66a5412053c0e6f9fbbc268dc74ec567b83b1d11c2b1"
+        }
+      }
+    },
+    {
+      "id": "H012",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-046\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-046\\cli-attempt-01",
+      "target_output": "skill/batch-012/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-012",
+      "source_request_sha256": "1ab9e71656e9ef5bf7177dde8e88131e80e26a40d5170a27244652dabbb712c8",
+      "target_request_sha256": "1ab9e71656e9ef5bf7177dde8e88131e80e26a40d5170a27244652dabbb712c8",
+      "prompt_sha256": "5c643baf619c1e4e01a1a04893d8269221fedcc9614d145fc2aacdbf8be7b614",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "e98769cb48f8f0e8bcccd004a68962debf19059d2ac6b8350e75157620db9d64",
+      "artifact_sha256": {
+        "completion.json": "3fd3f89cd2aaf552aaeab7d93b3fc89ae260b16793ab1812e86554c3ed26c6fd",
+        "final.json": "fb1673050df655abb5b997d4107922786c0d26fd1df4b82b8ada7d73d1d7b5b8",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "5c643baf619c1e4e01a1a04893d8269221fedcc9614d145fc2aacdbf8be7b614",
+        "started.json": "bcc8549660965ddfd80b92cc3a57076fd8a064053c50cf4f78b78f757aeb9fb5",
+        "stderr.txt": "a979b63a83482026ca611540e75a638f30742942fe59608bc3dba4ac17ff1f04",
+        "stdout.jsonl": "ea73c005848880914d3df33d6195e636b28deceef0d655b610264423eb552ea8"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "3fd3f89cd2aaf552aaeab7d93b3fc89ae260b16793ab1812e86554c3ed26c6fd",
+          "final.json": "fb1673050df655abb5b997d4107922786c0d26fd1df4b82b8ada7d73d1d7b5b8",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "5c643baf619c1e4e01a1a04893d8269221fedcc9614d145fc2aacdbf8be7b614",
+          "started.json": "bcc8549660965ddfd80b92cc3a57076fd8a064053c50cf4f78b78f757aeb9fb5",
+          "stderr.txt": "a979b63a83482026ca611540e75a638f30742942fe59608bc3dba4ac17ff1f04",
+          "stdout.jsonl": "ea73c005848880914d3df33d6195e636b28deceef0d655b610264423eb552ea8"
+        }
+      }
+    },
+    {
+      "id": "H013",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-047\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-047\\cli-attempt-01",
+      "target_output": "skill/batch-013/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-013",
+      "source_request_sha256": "7ec581404ef46771d9af512de5e69655755fde0aff620e70467542420e99eb8d",
+      "target_request_sha256": "7ec581404ef46771d9af512de5e69655755fde0aff620e70467542420e99eb8d",
+      "prompt_sha256": "30a4950e70ec2578734a45fda63e5732940d816ee8f2bf3e03e62ba4d44a580d",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "ec7e887ea6d807ed369a79576eede222263860dd130282e7f204742e47d9a91a",
+      "artifact_sha256": {
+        "completion.json": "e3e71b3adae9d8d1cc16f935c57c2fa9c6d9769f1197e8b43989b24d08fc0ac3",
+        "final.json": "915f1d6dbdc1329074756817c8be2eea1dc1651af3671298c3bf4204cdf99cce",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "30a4950e70ec2578734a45fda63e5732940d816ee8f2bf3e03e62ba4d44a580d",
+        "started.json": "8104032f7b585a98d792c3451825fbae4d490f8f57c106f26a09ef358c6c14b0",
+        "stderr.txt": "ed16c59be3dedac72e9c426f5c115c16af7c0dc2d547f0257bfc7a28cc233bd8",
+        "stdout.jsonl": "92d16bedd6a1252cf481977f8a70ea20a51f9ae5512f4224458bf19d53b6978e"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "e3e71b3adae9d8d1cc16f935c57c2fa9c6d9769f1197e8b43989b24d08fc0ac3",
+          "final.json": "915f1d6dbdc1329074756817c8be2eea1dc1651af3671298c3bf4204cdf99cce",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "30a4950e70ec2578734a45fda63e5732940d816ee8f2bf3e03e62ba4d44a580d",
+          "started.json": "8104032f7b585a98d792c3451825fbae4d490f8f57c106f26a09ef358c6c14b0",
+          "stderr.txt": "ed16c59be3dedac72e9c426f5c115c16af7c0dc2d547f0257bfc7a28cc233bd8",
+          "stdout.jsonl": "92d16bedd6a1252cf481977f8a70ea20a51f9ae5512f4224458bf19d53b6978e"
+        }
+      }
+    },
+    {
+      "id": "H014",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-048\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-048\\cli-attempt-01",
+      "target_output": "skill/batch-014/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-014",
+      "source_request_sha256": "d9c94f8911bf3666ff605c6dbfc224e536198f6fd4ff5d4a03d17e631f4eb4b6",
+      "target_request_sha256": "d9c94f8911bf3666ff605c6dbfc224e536198f6fd4ff5d4a03d17e631f4eb4b6",
+      "prompt_sha256": "ef6cacb61ba684c93d82cb3963ae62b4b294da1e38ba0224913c6d94b243c681",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "f5df443910ad8ef4fa2ca311e1d3b1aa20e8463022199cb23381738ec093ff16",
+      "artifact_sha256": {
+        "completion.json": "2649221482ec547dd8f7f4f290c75f0607a0693fe8177f17c9b12549ae25b4ae",
+        "final.json": "69c0ba9fad1bcec71f5248646084479f66f4bbbb42176daa391b080009a79fa3",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "ef6cacb61ba684c93d82cb3963ae62b4b294da1e38ba0224913c6d94b243c681",
+        "started.json": "cbcf0fc5e0461cd20096f3ced5f7b6720b00a3050aa2c627e2c63542cdb2f84a",
+        "stderr.txt": "9201c44a9173b8956129c78957c6d988bdca0f41859c69c7d5143e489d0f893d",
+        "stdout.jsonl": "32ae513436118beba756cd125f2bddf92483fa107ac2ecaa79a162fdeafc1b3a"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "2649221482ec547dd8f7f4f290c75f0607a0693fe8177f17c9b12549ae25b4ae",
+          "final.json": "69c0ba9fad1bcec71f5248646084479f66f4bbbb42176daa391b080009a79fa3",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "ef6cacb61ba684c93d82cb3963ae62b4b294da1e38ba0224913c6d94b243c681",
+          "started.json": "cbcf0fc5e0461cd20096f3ced5f7b6720b00a3050aa2c627e2c63542cdb2f84a",
+          "stderr.txt": "9201c44a9173b8956129c78957c6d988bdca0f41859c69c7d5143e489d0f893d",
+          "stdout.jsonl": "32ae513436118beba756cd125f2bddf92483fa107ac2ecaa79a162fdeafc1b3a"
+        }
+      }
+    },
+    {
+      "id": "H015",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-049\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-049\\cli-attempt-01",
+      "target_output": "skill/batch-015/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-015",
+      "source_request_sha256": "464ef3b405d760a562980c091af485d97bf6243051cb795702cab489ee8c6430",
+      "target_request_sha256": "464ef3b405d760a562980c091af485d97bf6243051cb795702cab489ee8c6430",
+      "prompt_sha256": "b24cfe60c3f66bb2d204737778c752dedb7a00a72b7a33310aa81219e888513f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "d76e855d21ccb3f0282ae0ce5d352ee11dcbea538797fa4f807dccfc8e05180d",
+      "artifact_sha256": {
+        "completion.json": "dd20d661549205050e740849b984531695cd03033581d7e7b73c12f0806a1ece",
+        "final.json": "52928cb34edf4b008d0032ee27a66093c45a5dc8f77d39442206b54c82e8b5b1",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "b24cfe60c3f66bb2d204737778c752dedb7a00a72b7a33310aa81219e888513f",
+        "started.json": "a407e2d59bb3ecf8cba1914ea912936a375ddffbd31956dd9328dd1391594766",
+        "stderr.txt": "bd9b08a29e8e059273a6d370227f96a8b96e7ba466d078a897f29aeb170bd323",
+        "stdout.jsonl": "e2a007a4c1ad3a75daee5c7dcf78630f5252d4ff41a823ca6c3421d140e14b2f"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "dd20d661549205050e740849b984531695cd03033581d7e7b73c12f0806a1ece",
+          "final.json": "52928cb34edf4b008d0032ee27a66093c45a5dc8f77d39442206b54c82e8b5b1",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "b24cfe60c3f66bb2d204737778c752dedb7a00a72b7a33310aa81219e888513f",
+          "started.json": "a407e2d59bb3ecf8cba1914ea912936a375ddffbd31956dd9328dd1391594766",
+          "stderr.txt": "bd9b08a29e8e059273a6d370227f96a8b96e7ba466d078a897f29aeb170bd323",
+          "stdout.jsonl": "e2a007a4c1ad3a75daee5c7dcf78630f5252d4ff41a823ca6c3421d140e14b2f"
+        }
+      }
+    },
+    {
+      "id": "H016",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-050\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-050\\cli-attempt-01",
+      "target_output": "skill/batch-016/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-016",
+      "source_request_sha256": "05d6de3523f8ed86fab95eb0ebaf4af9852a43ad8e47ff42f83e9b43a0cdbcfe",
+      "target_request_sha256": "05d6de3523f8ed86fab95eb0ebaf4af9852a43ad8e47ff42f83e9b43a0cdbcfe",
+      "prompt_sha256": "65a09492e3ebacc4f601fa9e85a0587b382b94c34657b05e4db0452a8c871721",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "138b6b773fabfde4f5713648bd24dc402d51ffb465d7b3764b5cea063f8fe344",
+      "artifact_sha256": {
+        "completion.json": "126a046750a50a18e552e1d6f7937a6b6b1d0e3eff9e906ed6a0960b8257c6ce",
+        "final.json": "7649620bd76e848e44fbf27313268957451760d44dd2449493a187a63e526e02",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "65a09492e3ebacc4f601fa9e85a0587b382b94c34657b05e4db0452a8c871721",
+        "started.json": "41a034fc858b00602a5d342736c044064bdc606eb5e96c27c264a2f4cfba89ac",
+        "stderr.txt": "c6f8564694abb928105ab695de13aee51bdb04debfaa94cb425af66023b820cd",
+        "stdout.jsonl": "23db5d5e69cc37585973ce1b4fcad9a17975d668e9f4627499feacbbeef13147"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "126a046750a50a18e552e1d6f7937a6b6b1d0e3eff9e906ed6a0960b8257c6ce",
+          "final.json": "7649620bd76e848e44fbf27313268957451760d44dd2449493a187a63e526e02",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "65a09492e3ebacc4f601fa9e85a0587b382b94c34657b05e4db0452a8c871721",
+          "started.json": "41a034fc858b00602a5d342736c044064bdc606eb5e96c27c264a2f4cfba89ac",
+          "stderr.txt": "c6f8564694abb928105ab695de13aee51bdb04debfaa94cb425af66023b820cd",
+          "stdout.jsonl": "23db5d5e69cc37585973ce1b4fcad9a17975d668e9f4627499feacbbeef13147"
+        }
+      }
+    },
+    {
+      "id": "H017",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-051\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-051\\cli-attempt-01",
+      "target_output": "skill/batch-017/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-017",
+      "source_request_sha256": "eaf315cc282c831a649ffafad989eb686dc7c3569e7ed191126fd2b67c1bd5eb",
+      "target_request_sha256": "eaf315cc282c831a649ffafad989eb686dc7c3569e7ed191126fd2b67c1bd5eb",
+      "prompt_sha256": "5aede5d660d698f9b4c866a7eba193ac361ff65b4f9d009d9204c086eb472554",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "a9d4877956c967c7d4a7b774c60f41d809a8d495c779ff7de84e6e20b71a12b4",
+      "artifact_sha256": {
+        "completion.json": "da4b211cf91d4d3fd4ce4959e7a6c5d39a021239999e92b1f38d2a6c341dc262",
+        "final.json": "acd2817d09c903afc4694325f2b130514e7908fe212af31fc033c6c6d79e2c04",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "5aede5d660d698f9b4c866a7eba193ac361ff65b4f9d009d9204c086eb472554",
+        "started.json": "599b1df76fd3d27b8770708cb009af97f24485897df2b3b97b8d627633bc0723",
+        "stderr.txt": "0c980783fec8a18939a61219430f6ed91028c8fa9b1c5ace696ee719503a3eee",
+        "stdout.jsonl": "387350d4e2099e6b8e787dbc8c18c76e71fcfac9e85b8efe386052cd0bfebff4"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "da4b211cf91d4d3fd4ce4959e7a6c5d39a021239999e92b1f38d2a6c341dc262",
+          "final.json": "acd2817d09c903afc4694325f2b130514e7908fe212af31fc033c6c6d79e2c04",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "5aede5d660d698f9b4c866a7eba193ac361ff65b4f9d009d9204c086eb472554",
+          "started.json": "599b1df76fd3d27b8770708cb009af97f24485897df2b3b97b8d627633bc0723",
+          "stderr.txt": "0c980783fec8a18939a61219430f6ed91028c8fa9b1c5ace696ee719503a3eee",
+          "stdout.jsonl": "387350d4e2099e6b8e787dbc8c18c76e71fcfac9e85b8efe386052cd0bfebff4"
+        }
+      }
+    },
+    {
+      "id": "H018",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-052\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-052\\cli-attempt-01",
+      "target_output": "skill/batch-018/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-018",
+      "source_request_sha256": "bfd5ee340061a0e102314276549a2678f91a65e490b22484785c4c38485e881b",
+      "target_request_sha256": "bfd5ee340061a0e102314276549a2678f91a65e490b22484785c4c38485e881b",
+      "prompt_sha256": "00651a49e3aac5b835811d5f668325f798b51da2fd5a07f1e5c74cd532394d1a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "2f0e29a1894f80d8ff0e79618074389bb1b4d7eec5c99bebfa69f8219aa9249e",
+      "artifact_sha256": {
+        "completion.json": "ba72c9c04187a2385f959a4a145ee50b44ae606de26792522614046c1ccd7a4d",
+        "final.json": "2b576584ddfd69dd6a85288b07b7033969ffa0d718b537c6101672f615cf32a7",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "00651a49e3aac5b835811d5f668325f798b51da2fd5a07f1e5c74cd532394d1a",
+        "started.json": "1f02e2d3f3acb8ad5847604370cedd0ababd78f7e22049b2a9e26492c9aaea34",
+        "stderr.txt": "a77eb992700a91fc56a8259d4de60d0c31ca7d1acfb700ebbb2543864ca6a3eb",
+        "stdout.jsonl": "0f00b93732ae600f1e1b3f5e4196d046c24b10d82ebd2f0cfd0617ed08024d3b"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "ba72c9c04187a2385f959a4a145ee50b44ae606de26792522614046c1ccd7a4d",
+          "final.json": "2b576584ddfd69dd6a85288b07b7033969ffa0d718b537c6101672f615cf32a7",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "00651a49e3aac5b835811d5f668325f798b51da2fd5a07f1e5c74cd532394d1a",
+          "started.json": "1f02e2d3f3acb8ad5847604370cedd0ababd78f7e22049b2a9e26492c9aaea34",
+          "stderr.txt": "a77eb992700a91fc56a8259d4de60d0c31ca7d1acfb700ebbb2543864ca6a3eb",
+          "stdout.jsonl": "0f00b93732ae600f1e1b3f5e4196d046c24b10d82ebd2f0cfd0617ed08024d3b"
+        }
+      }
+    },
+    {
+      "id": "H019",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-053\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-053\\cli-attempt-01",
+      "target_output": "skill/batch-019/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-019",
+      "source_request_sha256": "684f46031b84e04d00251fd56d6b38348831c318f9c532c8fff22d8f541152d0",
+      "target_request_sha256": "684f46031b84e04d00251fd56d6b38348831c318f9c532c8fff22d8f541152d0",
+      "prompt_sha256": "a862897955f19e6eeb1e5366defba61b48d19d730bf123e58b4e8f8e8dc6d46c",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "1ff83585daec0c9d369b65b108c6157872ea0cff4ccf89366930bb0d01d65f95",
+      "artifact_sha256": {
+        "completion.json": "b39c5e71af8dc478b061ef5a2f72c686e8301e42ba054f36f1de262541aafbea",
+        "final.json": "4d42849179d360d8658660820c8ee34d08d08233279c9758aa10939493569b17",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "a862897955f19e6eeb1e5366defba61b48d19d730bf123e58b4e8f8e8dc6d46c",
+        "started.json": "d54022b7d8b31e1ef7ee6e6e59f37b6beada11c2e3646826601d352f4741ed68",
+        "stderr.txt": "c61a015a8ea3042994161d87f93930cf3536ed31884c95f7bf5ce7e239d615be",
+        "stdout.jsonl": "77b06ddd0990c231ea48af58cbb5ab46f9e07fb447db1a09dd9b9f1b0e2240b1"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "b39c5e71af8dc478b061ef5a2f72c686e8301e42ba054f36f1de262541aafbea",
+          "final.json": "4d42849179d360d8658660820c8ee34d08d08233279c9758aa10939493569b17",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "a862897955f19e6eeb1e5366defba61b48d19d730bf123e58b4e8f8e8dc6d46c",
+          "started.json": "d54022b7d8b31e1ef7ee6e6e59f37b6beada11c2e3646826601d352f4741ed68",
+          "stderr.txt": "c61a015a8ea3042994161d87f93930cf3536ed31884c95f7bf5ce7e239d615be",
+          "stdout.jsonl": "77b06ddd0990c231ea48af58cbb5ab46f9e07fb447db1a09dd9b9f1b0e2240b1"
+        }
+      }
+    },
+    {
+      "id": "H020",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-054\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-054\\cli-attempt-01",
+      "target_output": "skill/batch-020/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-020",
+      "source_request_sha256": "cecf6903f2bdd7bb7ff79ca63e3180e1b76687caeb3174c2b26da65907b53c4e",
+      "target_request_sha256": "cecf6903f2bdd7bb7ff79ca63e3180e1b76687caeb3174c2b26da65907b53c4e",
+      "prompt_sha256": "8160cc3bf4d87061600d89035b2e3aa531dc4a8431303f698d82ca629d3b22a7",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "31e70ca6cfd4b2b612f26fa1b8b3d7624b4e1d5a9ab32582ec0781725fcbdd7d",
+      "artifact_sha256": {
+        "completion.json": "ef0ad33c19d4d11a04f399d593d4d2c8f03bac504ba8bd257f9640f566d17b4c",
+        "final.json": "a8c51fc0e33e0948ebee998461dc9571c3e4e7bfa9b89bf7057e260557d60f06",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "8160cc3bf4d87061600d89035b2e3aa531dc4a8431303f698d82ca629d3b22a7",
+        "started.json": "ecfa346066e80a385af48a49a8509cf9ec8eda99b5fca69650ad6820da41adb7",
+        "stderr.txt": "517b67184471dace40de793af049b60815a0297400fd590259bac615dea96d21",
+        "stdout.jsonl": "99dad000d4e6abbaea448468ab25792191eec93bd79a065218516f69297e2832"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "ef0ad33c19d4d11a04f399d593d4d2c8f03bac504ba8bd257f9640f566d17b4c",
+          "final.json": "a8c51fc0e33e0948ebee998461dc9571c3e4e7bfa9b89bf7057e260557d60f06",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "8160cc3bf4d87061600d89035b2e3aa531dc4a8431303f698d82ca629d3b22a7",
+          "started.json": "ecfa346066e80a385af48a49a8509cf9ec8eda99b5fca69650ad6820da41adb7",
+          "stderr.txt": "517b67184471dace40de793af049b60815a0297400fd590259bac615dea96d21",
+          "stdout.jsonl": "99dad000d4e6abbaea448468ab25792191eec93bd79a065218516f69297e2832"
+        }
+      }
+    },
+    {
+      "id": "H021",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-055\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-055\\cli-attempt-01",
+      "target_output": "skill/batch-021/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-021",
+      "source_request_sha256": "b784587ae4bab304ba225f2ae35b4a3c3665abad5d89f9e0b8f4ce3ea763f6d5",
+      "target_request_sha256": "b784587ae4bab304ba225f2ae35b4a3c3665abad5d89f9e0b8f4ce3ea763f6d5",
+      "prompt_sha256": "c1925efad3895f98461dc4306c8b9cb16981785ae0e8d02a9190a914c9217a16",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "763184c5b5408249f492ea0da75319c80c16bb3cb97fcbc143d81dba5e52a1e3",
+      "artifact_sha256": {
+        "completion.json": "cfd7f4fefd1285999ba47961c633a70423d2841039b132672c793826a3af7946",
+        "final.json": "979c04cdc33d7466f929dbcdd1e7901f53650558b0d16aaf6a0e8f334e9dd077",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "c1925efad3895f98461dc4306c8b9cb16981785ae0e8d02a9190a914c9217a16",
+        "started.json": "8512d06aa5ed77e44c82bed86f77c9098241bd80688c8dae96f490d8e411ad6e",
+        "stderr.txt": "27455aed53504fa241b1d73000fea927e6854b40ad40a68cd11b0aab0acd0834",
+        "stdout.jsonl": "f4dae693b9a07c5d7475475293b9d0828e18d84233959a009899c42b22e91f14"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "cfd7f4fefd1285999ba47961c633a70423d2841039b132672c793826a3af7946",
+          "final.json": "979c04cdc33d7466f929dbcdd1e7901f53650558b0d16aaf6a0e8f334e9dd077",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "c1925efad3895f98461dc4306c8b9cb16981785ae0e8d02a9190a914c9217a16",
+          "started.json": "8512d06aa5ed77e44c82bed86f77c9098241bd80688c8dae96f490d8e411ad6e",
+          "stderr.txt": "27455aed53504fa241b1d73000fea927e6854b40ad40a68cd11b0aab0acd0834",
+          "stdout.jsonl": "f4dae693b9a07c5d7475475293b9d0828e18d84233959a009899c42b22e91f14"
+        }
+      }
+    },
+    {
+      "id": "H022",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-056\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-056\\cli-attempt-01",
+      "target_output": "skill/batch-022/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-022",
+      "source_request_sha256": "8194f55a0ec5cd1eeae370b936cbb020a14bf918310ad01d7dbc7146896180ab",
+      "target_request_sha256": "8194f55a0ec5cd1eeae370b936cbb020a14bf918310ad01d7dbc7146896180ab",
+      "prompt_sha256": "c34379387a3edddec610ccb06685ce5efd2c4db3742b7418481193565f3afdd2",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "de58290bf44ffb6648fb39144d23338cbb992a4cd1842f799bb5045bdf32f568",
+      "artifact_sha256": {
+        "completion.json": "c840a74c42a88431a5ee5f3ec0ccc8be6672c888612ed9639b2ba069243b2ad7",
+        "final.json": "5868adf1872f24ff1ae0f30ff638b7e80a4ab9c84e8046018ad8ac3b398935c4",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "c34379387a3edddec610ccb06685ce5efd2c4db3742b7418481193565f3afdd2",
+        "started.json": "b51e8f3c06227547d24829af3202a04fd0a2738c332338e91d9a207988dc3147",
+        "stderr.txt": "7b1eb5000c9b368690bb11f4fffc1a16fb57bef8f5bc7ec36940cc1c32f0c94e",
+        "stdout.jsonl": "d7c12bd770cb9c688a139c0271c6f46da98ea1b82e474de7990350f1b38b5418"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "c840a74c42a88431a5ee5f3ec0ccc8be6672c888612ed9639b2ba069243b2ad7",
+          "final.json": "5868adf1872f24ff1ae0f30ff638b7e80a4ab9c84e8046018ad8ac3b398935c4",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "c34379387a3edddec610ccb06685ce5efd2c4db3742b7418481193565f3afdd2",
+          "started.json": "b51e8f3c06227547d24829af3202a04fd0a2738c332338e91d9a207988dc3147",
+          "stderr.txt": "7b1eb5000c9b368690bb11f4fffc1a16fb57bef8f5bc7ec36940cc1c32f0c94e",
+          "stdout.jsonl": "d7c12bd770cb9c688a139c0271c6f46da98ea1b82e474de7990350f1b38b5418"
+        }
+      }
+    },
+    {
+      "id": "H023",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-057\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-057\\cli-attempt-01",
+      "target_output": "skill/batch-023/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-023",
+      "source_request_sha256": "858d6f616b216af16ef51b698d11639bb3dbc3306d694a8723190f8b00788955",
+      "target_request_sha256": "858d6f616b216af16ef51b698d11639bb3dbc3306d694a8723190f8b00788955",
+      "prompt_sha256": "8fb6a782d64fed48e93a86df42cbb8f29d6dfc660a259febe3d99b3e3f4c32fb",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "ca7c0f653fd2b56ffac932b0d77b5b977b2288a2ac5ce42ea816f9c846d39d9c",
+      "artifact_sha256": {
+        "completion.json": "11541b1a388c646bbf3f6665008cb988a5f1a5662a8cd1b849fa12fccd4c742c",
+        "final.json": "9f6fff0e16401c8cc050822be9b823c9d9c66e81f5062232f773125352db26aa",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "8fb6a782d64fed48e93a86df42cbb8f29d6dfc660a259febe3d99b3e3f4c32fb",
+        "started.json": "a8a6fdd470a95d522c0d0f08eec65b81be7594c267e004469e9cfde47ab65996",
+        "stderr.txt": "263d94f1c96ca6bd5b2b71d6fff9c26eb3af126de7e5230ec7caada45a6e00f7",
+        "stdout.jsonl": "fc0388a91a57c324e2f6e7ac214f7934dff0b544917c0486628bb450f8eebed6"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "11541b1a388c646bbf3f6665008cb988a5f1a5662a8cd1b849fa12fccd4c742c",
+          "final.json": "9f6fff0e16401c8cc050822be9b823c9d9c66e81f5062232f773125352db26aa",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "8fb6a782d64fed48e93a86df42cbb8f29d6dfc660a259febe3d99b3e3f4c32fb",
+          "started.json": "a8a6fdd470a95d522c0d0f08eec65b81be7594c267e004469e9cfde47ab65996",
+          "stderr.txt": "263d94f1c96ca6bd5b2b71d6fff9c26eb3af126de7e5230ec7caada45a6e00f7",
+          "stdout.jsonl": "fc0388a91a57c324e2f6e7ac214f7934dff0b544917c0486628bb450f8eebed6"
+        }
+      }
+    },
+    {
+      "id": "H024",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-058\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-058\\cli-attempt-01",
+      "target_output": "skill/batch-024/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-024",
+      "source_request_sha256": "80b3c875f773bc8bf006b9f0816fdbe35b639998d5d668699ce33b87b0ba50ca",
+      "target_request_sha256": "80b3c875f773bc8bf006b9f0816fdbe35b639998d5d668699ce33b87b0ba50ca",
+      "prompt_sha256": "ad14e9f9266d0d00b216ef8bb0e5cef1df7a94f645444b2b8668d36ac732a51b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "0d4210629c16d83ecf2a0cdef7eaccdec211dbc59aaebd07e5eb52611f7cc8a1",
+      "artifact_sha256": {
+        "completion.json": "10bb925e6c6159ad46b6ab7ac900f0fbf6ae78eb1802e0288569b089d80103b2",
+        "final.json": "1f00dbc2caa9bbbd5db52e7e1acaf518d5bb01343351ef3b097db93991829e2a",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "ad14e9f9266d0d00b216ef8bb0e5cef1df7a94f645444b2b8668d36ac732a51b",
+        "started.json": "15bfc46be14790123687e5e71d1192cf5a0b91964f02eb856cb94979e1bf2297",
+        "stderr.txt": "712525eb418ffc22e5ebe571f11937c8aed77b37320667940d416e5cac2117e9",
+        "stdout.jsonl": "078727c6f561f1f8622f0c2ae839b85e89bdba48d7ed03de901bcc0545e0079f"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "10bb925e6c6159ad46b6ab7ac900f0fbf6ae78eb1802e0288569b089d80103b2",
+          "final.json": "1f00dbc2caa9bbbd5db52e7e1acaf518d5bb01343351ef3b097db93991829e2a",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "ad14e9f9266d0d00b216ef8bb0e5cef1df7a94f645444b2b8668d36ac732a51b",
+          "started.json": "15bfc46be14790123687e5e71d1192cf5a0b91964f02eb856cb94979e1bf2297",
+          "stderr.txt": "712525eb418ffc22e5ebe571f11937c8aed77b37320667940d416e5cac2117e9",
+          "stdout.jsonl": "078727c6f561f1f8622f0c2ae839b85e89bdba48d7ed03de901bcc0545e0079f"
+        }
+      }
+    },
+    {
+      "id": "H025",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-059\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-059\\cli-attempt-01",
+      "target_output": "skill/batch-025/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-025",
+      "source_request_sha256": "587901c31d4f9af95ce260b26ac5770f588839e706ad7dc835688addc10976af",
+      "target_request_sha256": "587901c31d4f9af95ce260b26ac5770f588839e706ad7dc835688addc10976af",
+      "prompt_sha256": "994a5a233d9d339a519af40127726b3e558d9f6ea4035abed182bdd4544ebe0f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "34054baf2b0eef010d6ec3dc473afdadc99c91882fd3e2f0e1b14a1b60ac3b39",
+      "artifact_sha256": {
+        "completion.json": "d4bf82dd91ff0d82eedc445080f3bccf199c6f0f68d6a2a1f52dac74f86495fe",
+        "final.json": "d62787798a3a5bbe73071808151f0b3059e2a23c9c489f03e624adfdc6d2b3a5",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "994a5a233d9d339a519af40127726b3e558d9f6ea4035abed182bdd4544ebe0f",
+        "started.json": "0dd03bc39fc693443f063b190ef0b85f620cb04245f2e994dfd16a6420c9e406",
+        "stderr.txt": "feff882d86fdd788a8d44ec2fd56bd8266f126b8ed99b89da1209895a4f4aa7c",
+        "stdout.jsonl": "7dbf2d0b3b15cae9851727e94959b333fe7cef29cbeb3fc319a8bbfbb916b57d"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "d4bf82dd91ff0d82eedc445080f3bccf199c6f0f68d6a2a1f52dac74f86495fe",
+          "final.json": "d62787798a3a5bbe73071808151f0b3059e2a23c9c489f03e624adfdc6d2b3a5",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "994a5a233d9d339a519af40127726b3e558d9f6ea4035abed182bdd4544ebe0f",
+          "started.json": "0dd03bc39fc693443f063b190ef0b85f620cb04245f2e994dfd16a6420c9e406",
+          "stderr.txt": "feff882d86fdd788a8d44ec2fd56bd8266f126b8ed99b89da1209895a4f4aa7c",
+          "stdout.jsonl": "7dbf2d0b3b15cae9851727e94959b333fe7cef29cbeb3fc319a8bbfbb916b57d"
+        }
+      }
+    },
+    {
+      "id": "H026",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-060\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-060\\cli-attempt-01",
+      "target_output": "skill/batch-026/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-026",
+      "source_request_sha256": "045100355d4f0d047c31ae918bc1b93d4280a8849e8ec98681ab8aed6ee15bf8",
+      "target_request_sha256": "045100355d4f0d047c31ae918bc1b93d4280a8849e8ec98681ab8aed6ee15bf8",
+      "prompt_sha256": "16848777195785c78af726281725f8190e9ad7c049ce1400d51877f4862ec845",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "7dda5f4520957141b8efc7238cb67fa2e859de8130cd0241cca912f6e6be1e59",
+      "artifact_sha256": {
+        "completion.json": "9d9ac6e284addca98c6bcb9842d6728685cf023faccf9a7640c0fb9a7c9dfff0",
+        "final.json": "fab588a17c90ce8c20f8adab8ace0ceef1f6f39c25d043c322ec115be452c952",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "16848777195785c78af726281725f8190e9ad7c049ce1400d51877f4862ec845",
+        "started.json": "0b999db642b6bcf7caea4a0d10c24c3f40292945d4c8a545ec6b6c21b3d3b653",
+        "stderr.txt": "ab25ade7809e6e33f2022ba5f6434baecbb313dfdd137c24e2ca4456c1a1124d",
+        "stdout.jsonl": "fef098de99f0940229cbd2d607719d44a86421964bebfb1db0af20262ea6759e"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "9d9ac6e284addca98c6bcb9842d6728685cf023faccf9a7640c0fb9a7c9dfff0",
+          "final.json": "fab588a17c90ce8c20f8adab8ace0ceef1f6f39c25d043c322ec115be452c952",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "16848777195785c78af726281725f8190e9ad7c049ce1400d51877f4862ec845",
+          "started.json": "0b999db642b6bcf7caea4a0d10c24c3f40292945d4c8a545ec6b6c21b3d3b653",
+          "stderr.txt": "ab25ade7809e6e33f2022ba5f6434baecbb313dfdd137c24e2ca4456c1a1124d",
+          "stdout.jsonl": "fef098de99f0940229cbd2d607719d44a86421964bebfb1db0af20262ea6759e"
+        }
+      }
+    },
+    {
+      "id": "H027",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-061\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-061\\cli-attempt-01",
+      "target_output": "skill/batch-027/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-027",
+      "source_request_sha256": "eff9410ccf3c7a71de1c74729a21651307e04e31472d97ec83d8f330fadeb05d",
+      "target_request_sha256": "eff9410ccf3c7a71de1c74729a21651307e04e31472d97ec83d8f330fadeb05d",
+      "prompt_sha256": "d71d2a666cccfc18625acc2789e287c69c2425bee03e7f66d67ad6c45ca9be7a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "734d5587bec65aa51306bec3f603f5feece1cd49136f88e68f9b2b9f709c9e05",
+      "artifact_sha256": {
+        "completion.json": "f935ce7263d85937789ed2d40f52cf9de588bb09eb1d814dd3c848cf3060d8e6",
+        "final.json": "96862ff4ec8af4dbd08c2385370a167889513b17121a5c7ffb2bd2bbf80fcd38",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "d71d2a666cccfc18625acc2789e287c69c2425bee03e7f66d67ad6c45ca9be7a",
+        "started.json": "c779d870b22fa3b58f06262b19581621958f1a58ba5c1a2fbeb06020e8ad20ed",
+        "stderr.txt": "9c1c771fb9f54e7e9d628c41df42675cdc402f9bd53a94365f867a7df54b25f9",
+        "stdout.jsonl": "266b211069996fc27c1dc3b1be6fc98bb069302c39e5b81b2dc5513db53656d1"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "f935ce7263d85937789ed2d40f52cf9de588bb09eb1d814dd3c848cf3060d8e6",
+          "final.json": "96862ff4ec8af4dbd08c2385370a167889513b17121a5c7ffb2bd2bbf80fcd38",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "d71d2a666cccfc18625acc2789e287c69c2425bee03e7f66d67ad6c45ca9be7a",
+          "started.json": "c779d870b22fa3b58f06262b19581621958f1a58ba5c1a2fbeb06020e8ad20ed",
+          "stderr.txt": "9c1c771fb9f54e7e9d628c41df42675cdc402f9bd53a94365f867a7df54b25f9",
+          "stdout.jsonl": "266b211069996fc27c1dc3b1be6fc98bb069302c39e5b81b2dc5513db53656d1"
+        }
+      }
+    },
+    {
+      "id": "H028",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-062\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-062\\cli-attempt-01",
+      "target_output": "skill/batch-028/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-028",
+      "source_request_sha256": "e8f3a22b2f67485aa7c6ea684c864712eda2360c4529845ff20e0d8da158aa65",
+      "target_request_sha256": "e8f3a22b2f67485aa7c6ea684c864712eda2360c4529845ff20e0d8da158aa65",
+      "prompt_sha256": "96135ceabe31d96919a1c573a132850eea3e1f9deb47b9cb6397205bc091ea85",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "28d111a368d65db95a28c132c5b320899f78d79440f93df718ee0114e3b8ec6d",
+      "artifact_sha256": {
+        "completion.json": "b96c571f3e1b44a2735772317755ebee5f5f9c99b2e4e25283cbdf031f0a3b1e",
+        "final.json": "f15e01e9880c1ec911c15e51812a10292aa531cdadd1a94bbee7bc2d3bcf9ad4",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "96135ceabe31d96919a1c573a132850eea3e1f9deb47b9cb6397205bc091ea85",
+        "started.json": "1a614e3d1add4d7d867502bd95c1da4458fefd156b1d60f9637094718427aa36",
+        "stderr.txt": "9d2f9b75cc4ee5c6a5dcf7b72794aeeb411011182e98705da6f1f083f11d7d42",
+        "stdout.jsonl": "b5ce87848d37abfe5658f7df58e0495a66dd96807e491f3539f55563088a88cb"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "b96c571f3e1b44a2735772317755ebee5f5f9c99b2e4e25283cbdf031f0a3b1e",
+          "final.json": "f15e01e9880c1ec911c15e51812a10292aa531cdadd1a94bbee7bc2d3bcf9ad4",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "96135ceabe31d96919a1c573a132850eea3e1f9deb47b9cb6397205bc091ea85",
+          "started.json": "1a614e3d1add4d7d867502bd95c1da4458fefd156b1d60f9637094718427aa36",
+          "stderr.txt": "9d2f9b75cc4ee5c6a5dcf7b72794aeeb411011182e98705da6f1f083f11d7d42",
+          "stdout.jsonl": "b5ce87848d37abfe5658f7df58e0495a66dd96807e491f3539f55563088a88cb"
+        }
+      }
+    },
+    {
+      "id": "H029",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-063\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-063\\cli-attempt-01",
+      "target_output": "skill/batch-029/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-029",
+      "source_request_sha256": "0e0c70f74d56461da41df0ba57cda520e601a410a39e595dfe4a5aef01f5f5b2",
+      "target_request_sha256": "0e0c70f74d56461da41df0ba57cda520e601a410a39e595dfe4a5aef01f5f5b2",
+      "prompt_sha256": "96fa5ad348a6586b19d5ee7b3764fac80f2fd765d9b4fa0f92303d2ac5ec130f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "b42c248b5c06b80214c7bb3715bdd0ba931dcbaf590722690984ff43c1fa147e",
+      "artifact_sha256": {
+        "completion.json": "760d06935c434810be535dd82574fbbd678bce33f16099328cf45c5ac8583e5b",
+        "final.json": "d7a6069acd1018171a462c1805cf3476f499724d3a5700d088219d16554e9eb5",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "96fa5ad348a6586b19d5ee7b3764fac80f2fd765d9b4fa0f92303d2ac5ec130f",
+        "started.json": "a62a13b1ba26dd65b835f6cade32d8ed415dd589d267f463f8a47258340e1be3",
+        "stderr.txt": "368cd5c08e9467d651ef094d41c85e83c16c033c34ba9b17b733bdabc41653c2",
+        "stdout.jsonl": "1f848ad3c43572b3929f3c9f25667bb5d1069b528aba9ba1ca85c66a917b7753"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "760d06935c434810be535dd82574fbbd678bce33f16099328cf45c5ac8583e5b",
+          "final.json": "d7a6069acd1018171a462c1805cf3476f499724d3a5700d088219d16554e9eb5",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "96fa5ad348a6586b19d5ee7b3764fac80f2fd765d9b4fa0f92303d2ac5ec130f",
+          "started.json": "a62a13b1ba26dd65b835f6cade32d8ed415dd589d267f463f8a47258340e1be3",
+          "stderr.txt": "368cd5c08e9467d651ef094d41c85e83c16c033c34ba9b17b733bdabc41653c2",
+          "stdout.jsonl": "1f848ad3c43572b3929f3c9f25667bb5d1069b528aba9ba1ca85c66a917b7753"
+        }
+      }
+    },
+    {
+      "id": "H030",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-064\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-064\\cli-attempt-01",
+      "target_output": "skill/batch-030/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-030",
+      "source_request_sha256": "1d55bad2b5cb602d7530f80b22fa54d9d2f1c6e3e0a56bdce23fc3a13bc6aec4",
+      "target_request_sha256": "1d55bad2b5cb602d7530f80b22fa54d9d2f1c6e3e0a56bdce23fc3a13bc6aec4",
+      "prompt_sha256": "972e8f740a1afe0cf54f337fd30f00d97a26f8b95bb6e81b8db4cb76e84ebe2c",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "36f67c90a9df311062f203adca877e0b6ade4ffe03513a2393e1361dcb852ce9",
+      "artifact_sha256": {
+        "completion.json": "85f5ecbe1d21fc315b6adda21d73fb9b446260b9476c5152eb812efb8b491b29",
+        "final.json": "2bec6eb35f530b072d4b1baa1f11c318c6ef6546e597089316c503929d616839",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "972e8f740a1afe0cf54f337fd30f00d97a26f8b95bb6e81b8db4cb76e84ebe2c",
+        "started.json": "b4fd0c2a11af2811e74b8e3672862dd4246800101574ea0c0d56ffc74d5ebfa4",
+        "stderr.txt": "3b8dc894e0a14f2c41943a41b8b648412e32c1819a96caabe19894a9b659eb96",
+        "stdout.jsonl": "906bb6b8a37190a51c0e707f9744c63c7cb27e7cc5aab422cf76b23e3bc5bc62"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "85f5ecbe1d21fc315b6adda21d73fb9b446260b9476c5152eb812efb8b491b29",
+          "final.json": "2bec6eb35f530b072d4b1baa1f11c318c6ef6546e597089316c503929d616839",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "972e8f740a1afe0cf54f337fd30f00d97a26f8b95bb6e81b8db4cb76e84ebe2c",
+          "started.json": "b4fd0c2a11af2811e74b8e3672862dd4246800101574ea0c0d56ffc74d5ebfa4",
+          "stderr.txt": "3b8dc894e0a14f2c41943a41b8b648412e32c1819a96caabe19894a9b659eb96",
+          "stdout.jsonl": "906bb6b8a37190a51c0e707f9744c63c7cb27e7cc5aab422cf76b23e3bc5bc62"
+        }
+      }
+    },
+    {
+      "id": "H031",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-065\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-065\\cli-attempt-01",
+      "target_output": "skill/batch-031/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-031",
+      "source_request_sha256": "ea0118d78625e39797b1ad5df4a50fe1884e42bbacc0b589d54a249ca7d91772",
+      "target_request_sha256": "ea0118d78625e39797b1ad5df4a50fe1884e42bbacc0b589d54a249ca7d91772",
+      "prompt_sha256": "660543b8b84364c682387b47daee688fc1c37f5450f2f0db570df66e000d0577",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "e4500cbcc6330374a9efb742d4ce7aaceef060263828af5fea9772176a58ead7",
+      "artifact_sha256": {
+        "completion.json": "2f864ac77e78c4e2d275e42ae91df4843b1729a48bd16b8f4bd7a1d43d9edf18",
+        "final.json": "9cf55d2c87bb9a61d6802f5092649be5fc144711ac6b6d87c5ad7bf31d9ee663",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "660543b8b84364c682387b47daee688fc1c37f5450f2f0db570df66e000d0577",
+        "started.json": "8f10a2295ad4c8d4c848476f430596e74146a52b795029c3553e6f11cbe0bf52",
+        "stderr.txt": "4cfb9d78a3405aee15c6b919830e6497222cfd9ebb97509e2a58472902868b89",
+        "stdout.jsonl": "78eb93312a34059cce9f279012334d11ce218948fa9a71f9f954e1cd0bb5229a"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "2f864ac77e78c4e2d275e42ae91df4843b1729a48bd16b8f4bd7a1d43d9edf18",
+          "final.json": "9cf55d2c87bb9a61d6802f5092649be5fc144711ac6b6d87c5ad7bf31d9ee663",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "660543b8b84364c682387b47daee688fc1c37f5450f2f0db570df66e000d0577",
+          "started.json": "8f10a2295ad4c8d4c848476f430596e74146a52b795029c3553e6f11cbe0bf52",
+          "stderr.txt": "4cfb9d78a3405aee15c6b919830e6497222cfd9ebb97509e2a58472902868b89",
+          "stdout.jsonl": "78eb93312a34059cce9f279012334d11ce218948fa9a71f9f954e1cd0bb5229a"
+        }
+      }
+    },
+    {
+      "id": "H032",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-066\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-066\\cli-attempt-01",
+      "target_output": "skill/batch-032/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-032",
+      "source_request_sha256": "91f241ffdf6f87cc196df891674cfcd906b8d3774f3bc858688c9772979aafe1",
+      "target_request_sha256": "91f241ffdf6f87cc196df891674cfcd906b8d3774f3bc858688c9772979aafe1",
+      "prompt_sha256": "d086368bd85ab5d32114cb1dd6a2506580d5a3c6c73b2298cd4a4394382057b6",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "62bfa91979750f9e63f019b7945835922f36108f0f96a1ee05d45c8d2c140fae",
+      "artifact_sha256": {
+        "completion.json": "81c8f6e173f375c9860cc76490f70a7cd58e71096a57b90443443d61052425f8",
+        "final.json": "aaeb6d636014659aaab9c59f493a61e88f9a3f8f3b7c595457a54d71597c67e2",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "d086368bd85ab5d32114cb1dd6a2506580d5a3c6c73b2298cd4a4394382057b6",
+        "started.json": "d9c1ef2dafff2c10ec6ec134cd6ba7225a7f243a2e24e901adc56cfdc0bc70cb",
+        "stderr.txt": "7f2d6907369f49be61d749b98a6b79760567011f0d16e2a11a1154c0ae3b588c",
+        "stdout.jsonl": "d1e75717380cc44c80f653f58e968f3e63ff9222210ca864583fe3cf4846269a"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "81c8f6e173f375c9860cc76490f70a7cd58e71096a57b90443443d61052425f8",
+          "final.json": "aaeb6d636014659aaab9c59f493a61e88f9a3f8f3b7c595457a54d71597c67e2",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "d086368bd85ab5d32114cb1dd6a2506580d5a3c6c73b2298cd4a4394382057b6",
+          "started.json": "d9c1ef2dafff2c10ec6ec134cd6ba7225a7f243a2e24e901adc56cfdc0bc70cb",
+          "stderr.txt": "7f2d6907369f49be61d749b98a6b79760567011f0d16e2a11a1154c0ae3b588c",
+          "stdout.jsonl": "d1e75717380cc44c80f653f58e968f3e63ff9222210ca864583fe3cf4846269a"
+        }
+      }
+    },
+    {
+      "id": "H033",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-067\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-067\\cli-attempt-01",
+      "target_output": "skill/batch-033/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-033",
+      "source_request_sha256": "32152255f4d75b79ebb48b584592d428eee78fc6499abc96b552af86a6f742d5",
+      "target_request_sha256": "32152255f4d75b79ebb48b584592d428eee78fc6499abc96b552af86a6f742d5",
+      "prompt_sha256": "601c5de5b5289d7473f38c666fe8d03cd5f15b526e36fce5132ca7ac444643f4",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "2f30e92ab56af3a111eb38e0655c1db5c63a337aad06128840d0338d298d4583",
+      "artifact_sha256": {
+        "completion.json": "66947660c8a267c9498dda7f9974244784f1f7ab0d788bb565df8f4ef2fc1ac8",
+        "final.json": "588239b5cf3373d1fac6d570b237bff41e7a9a3cce897e526b9e6ed066a0cf81",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "601c5de5b5289d7473f38c666fe8d03cd5f15b526e36fce5132ca7ac444643f4",
+        "started.json": "1d9ed9ca8d49c92dde8d4294800c98c7e895ed44b70d8f0ae50eee1b2b2e50a5",
+        "stderr.txt": "7b6807d23787e4bcbbc445833c51bffd2d4e4ec7a878692ed4602a196ebca08c",
+        "stdout.jsonl": "ab49809eb9f344c1ad29d9bcfe22280de066e77e7003f2d6b59d61d55cc1ad31"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "66947660c8a267c9498dda7f9974244784f1f7ab0d788bb565df8f4ef2fc1ac8",
+          "final.json": "588239b5cf3373d1fac6d570b237bff41e7a9a3cce897e526b9e6ed066a0cf81",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "601c5de5b5289d7473f38c666fe8d03cd5f15b526e36fce5132ca7ac444643f4",
+          "started.json": "1d9ed9ca8d49c92dde8d4294800c98c7e895ed44b70d8f0ae50eee1b2b2e50a5",
+          "stderr.txt": "7b6807d23787e4bcbbc445833c51bffd2d4e4ec7a878692ed4602a196ebca08c",
+          "stdout.jsonl": "ab49809eb9f344c1ad29d9bcfe22280de066e77e7003f2d6b59d61d55cc1ad31"
+        }
+      }
+    },
+    {
+      "id": "H034",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-068\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-068\\cli-attempt-01",
+      "target_output": "skill/batch-034/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-034",
+      "source_request_sha256": "c57526b46f494c3225b53767c5d48ef2044917273117253270fbe4b399f63a69",
+      "target_request_sha256": "c57526b46f494c3225b53767c5d48ef2044917273117253270fbe4b399f63a69",
+      "prompt_sha256": "01d3f511b7db7a0110ec311a4cac8cc188e51d815331b0419164e771e8429d6b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "dddb76505365471adf9f7046d1e720f197a86338758b78207e471918a0ad360b",
+      "artifact_sha256": {
+        "completion.json": "84846150d48264b59d26e49d1411df9dcaff87d3cd27f87555bdf8432426c69a",
+        "final.json": "03321c6631506575d441a198b7be46628a5c50aee6b4f64d637cb975c3919a8f",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "01d3f511b7db7a0110ec311a4cac8cc188e51d815331b0419164e771e8429d6b",
+        "started.json": "8482c6464fcd2c0386b8a55a914b31adaf8f67f5d9d4c487deb81eaea59a590a",
+        "stderr.txt": "e6cc4fd6cfa0ffc174a1abba85a1ed0b0b582dec288786494567edae938b2e28",
+        "stdout.jsonl": "2b53e2553dcf229e41931603c04e4055c5925544a6ad3827b7eeb8107f296b3e"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "84846150d48264b59d26e49d1411df9dcaff87d3cd27f87555bdf8432426c69a",
+          "final.json": "03321c6631506575d441a198b7be46628a5c50aee6b4f64d637cb975c3919a8f",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "01d3f511b7db7a0110ec311a4cac8cc188e51d815331b0419164e771e8429d6b",
+          "started.json": "8482c6464fcd2c0386b8a55a914b31adaf8f67f5d9d4c487deb81eaea59a590a",
+          "stderr.txt": "e6cc4fd6cfa0ffc174a1abba85a1ed0b0b582dec288786494567edae938b2e28",
+          "stdout.jsonl": "2b53e2553dcf229e41931603c04e4055c5925544a6ad3827b7eeb8107f296b3e"
+        }
+      }
+    },
+    {
+      "id": "H035",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-069\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-069\\cli-attempt-01",
+      "target_output": "skill/batch-035/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-035",
+      "source_request_sha256": "3a1f8f82c2b710b24d03de55ae1d0439eb95365692961689b1a7082e405bead5",
+      "target_request_sha256": "3a1f8f82c2b710b24d03de55ae1d0439eb95365692961689b1a7082e405bead5",
+      "prompt_sha256": "d47aaba4c1e00967d1849ae7641ae63588f854eaec62e6eba28e25d5092e666a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "63c7e8f54cfb5b4b338c89256319ae6427e5182e726f94d3763b4557214175ee",
+      "artifact_sha256": {
+        "completion.json": "56ba686c7786168831d9036c0db5e864d1d4febe7c89e40aa816987ff17433a1",
+        "final.json": "4835d631d5b5554f587fd282e78edb22152b7f45f64c2cf6488c460c6abaf88a",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "d47aaba4c1e00967d1849ae7641ae63588f854eaec62e6eba28e25d5092e666a",
+        "started.json": "dae6865a0fbfbde7d25e53e8f9b24121443201cb005f09c2b1e653370d724d94",
+        "stderr.txt": "dd1c4570dafe3a87d5d716d933f832d9a4d1f9bec67ceb36362983678369ead6",
+        "stdout.jsonl": "7a6d551f03a9603b156a9773ec5cc70f1518284c3ee7fb4f7b351a9ad02bf42a"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "56ba686c7786168831d9036c0db5e864d1d4febe7c89e40aa816987ff17433a1",
+          "final.json": "4835d631d5b5554f587fd282e78edb22152b7f45f64c2cf6488c460c6abaf88a",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "d47aaba4c1e00967d1849ae7641ae63588f854eaec62e6eba28e25d5092e666a",
+          "started.json": "dae6865a0fbfbde7d25e53e8f9b24121443201cb005f09c2b1e653370d724d94",
+          "stderr.txt": "dd1c4570dafe3a87d5d716d933f832d9a4d1f9bec67ceb36362983678369ead6",
+          "stdout.jsonl": "7a6d551f03a9603b156a9773ec5cc70f1518284c3ee7fb4f7b351a9ad02bf42a"
+        }
+      }
+    },
+    {
+      "id": "H036",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-070\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-070\\cli-attempt-01",
+      "target_output": "skill/batch-036/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-036",
+      "source_request_sha256": "455d5918eede86af0cc0f23a948ebbeae29c89f2c991446970d2a4e818aa3921",
+      "target_request_sha256": "455d5918eede86af0cc0f23a948ebbeae29c89f2c991446970d2a4e818aa3921",
+      "prompt_sha256": "9f0c16de30db37fcc68cd0dab8c556369e9843c603be036c9d5aff3486463f81",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "b386976406f98800e80070522dbfbedb78064c177a9db3b67e0de89a7e632783",
+      "artifact_sha256": {
+        "completion.json": "7c2b4cad91cbcf9d120c83d830e6f1fa0577e08f7f25e0c10d74cf2303859031",
+        "final.json": "f24da66bc8bb5404de9785fb141d259fd1bf2e4698eb38bc99e2cfe8d1536810",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "9f0c16de30db37fcc68cd0dab8c556369e9843c603be036c9d5aff3486463f81",
+        "started.json": "f66624c0b020651ea8b1d5c5626605897d0c0d0548c4b60c462da373bc801980",
+        "stderr.txt": "064989b57763b738183b028c00a5e788bc5790800c6827e3a2b4d8060a36bfaa",
+        "stdout.jsonl": "65a69d33ffe8db212897af01743730f73207a11a98aaa0651f0de59f93fea601"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "7c2b4cad91cbcf9d120c83d830e6f1fa0577e08f7f25e0c10d74cf2303859031",
+          "final.json": "f24da66bc8bb5404de9785fb141d259fd1bf2e4698eb38bc99e2cfe8d1536810",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "9f0c16de30db37fcc68cd0dab8c556369e9843c603be036c9d5aff3486463f81",
+          "started.json": "f66624c0b020651ea8b1d5c5626605897d0c0d0548c4b60c462da373bc801980",
+          "stderr.txt": "064989b57763b738183b028c00a5e788bc5790800c6827e3a2b4d8060a36bfaa",
+          "stdout.jsonl": "65a69d33ffe8db212897af01743730f73207a11a98aaa0651f0de59f93fea601"
+        }
+      }
+    },
+    {
+      "id": "H037",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-071\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-071\\cli-attempt-01",
+      "target_output": "skill/batch-037/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-037",
+      "source_request_sha256": "a97002c676f6bd81851c1b90fd73af193add8b1a882ffe17235f24e14bd4e3f4",
+      "target_request_sha256": "a97002c676f6bd81851c1b90fd73af193add8b1a882ffe17235f24e14bd4e3f4",
+      "prompt_sha256": "eeb00805e4a4dea3004d93468d8697e7acb59091388ed7db7b86707294a64e54",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "390d552ff4dded989cb6692558186e01563015e12e82af521be19bc7033f0dd5",
+      "artifact_sha256": {
+        "completion.json": "cc91032102f87a84192daa8756db508f22a1f33cd6b81d0e947606a8bf91b32e",
+        "final.json": "d5ff906959d9127cf21cb62bf76bc03613cd21290846f51081cd47fe40c57f21",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "eeb00805e4a4dea3004d93468d8697e7acb59091388ed7db7b86707294a64e54",
+        "started.json": "ee03fc58dd330dacd1172b988ba10863569b48f7dcf4d00246c91492d9af7ff7",
+        "stderr.txt": "81b9e9163e2f4ff8281d74f078995f41f79ce3aad94283557ecbde9336661c58",
+        "stdout.jsonl": "235ed7dd3c33c2fe917a9bb444b55489666b01de54c90242135899e06f8c3d84"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "cc91032102f87a84192daa8756db508f22a1f33cd6b81d0e947606a8bf91b32e",
+          "final.json": "d5ff906959d9127cf21cb62bf76bc03613cd21290846f51081cd47fe40c57f21",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "eeb00805e4a4dea3004d93468d8697e7acb59091388ed7db7b86707294a64e54",
+          "started.json": "ee03fc58dd330dacd1172b988ba10863569b48f7dcf4d00246c91492d9af7ff7",
+          "stderr.txt": "81b9e9163e2f4ff8281d74f078995f41f79ce3aad94283557ecbde9336661c58",
+          "stdout.jsonl": "235ed7dd3c33c2fe917a9bb444b55489666b01de54c90242135899e06f8c3d84"
+        }
+      }
+    },
+    {
+      "id": "H038",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-072\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-072\\cli-attempt-01",
+      "target_output": "skill/batch-038/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-038",
+      "source_request_sha256": "f624c6c7f9b3827a1961fd879204be0cd46bdbc90658071e6800f253d156531c",
+      "target_request_sha256": "f624c6c7f9b3827a1961fd879204be0cd46bdbc90658071e6800f253d156531c",
+      "prompt_sha256": "b3e9aced6ba5668c9d6278326bd59b6cf0c00f46b73b328dab708f428118853b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "e0041894608c69fc64cd84d6f906d0ddb75fe44a15cabc052715feba8a7fd233",
+      "artifact_sha256": {
+        "completion.json": "4209a5c3f9df225273bc9852a2135cb3739759b465157c0d12bb71a0d2b680f0",
+        "final.json": "ff947a36a1ee9565a199423d74ae7e08b67f2dc108091945229e03d433efcce3",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "b3e9aced6ba5668c9d6278326bd59b6cf0c00f46b73b328dab708f428118853b",
+        "started.json": "05d03376602dcc0b411c4822f8f0c3ed1d3fedf27c414a1ac93df02d5906ee0e",
+        "stderr.txt": "067be048a737322a5be89df33282852882717d855bd70401137b274b93163b39",
+        "stdout.jsonl": "811f248e5833548e56575b1dd13e1edf8df20db2ad778069efe5a34e176abb69"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "4209a5c3f9df225273bc9852a2135cb3739759b465157c0d12bb71a0d2b680f0",
+          "final.json": "ff947a36a1ee9565a199423d74ae7e08b67f2dc108091945229e03d433efcce3",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "b3e9aced6ba5668c9d6278326bd59b6cf0c00f46b73b328dab708f428118853b",
+          "started.json": "05d03376602dcc0b411c4822f8f0c3ed1d3fedf27c414a1ac93df02d5906ee0e",
+          "stderr.txt": "067be048a737322a5be89df33282852882717d855bd70401137b274b93163b39",
+          "stdout.jsonl": "811f248e5833548e56575b1dd13e1edf8df20db2ad778069efe5a34e176abb69"
+        }
+      }
+    },
+    {
+      "id": "H039",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-073\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-073\\cli-attempt-01",
+      "target_output": "skill/batch-039/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-039",
+      "source_request_sha256": "ebc5fb9ddd79419764ae2f75e775b122417c4db5c38e89c4929a095af59086fd",
+      "target_request_sha256": "ebc5fb9ddd79419764ae2f75e775b122417c4db5c38e89c4929a095af59086fd",
+      "prompt_sha256": "e9b9998ae00350db206be1f8e8131d1be0414de1a8dd7b92688806b7fdf62bad",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "625532baf9e9ec97364d13ff27124e471bc94d935612bec4a607b3e75feebf18",
+      "artifact_sha256": {
+        "completion.json": "7f1696e2f9916ec73e6ec601d43f0da4e575c4c714a0c2bdc6fae6d27a0de052",
+        "final.json": "c876cad7c01b8feaa2d8764ee81b732e34e7407c8051389fa4830c6dc249b6ef",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "e9b9998ae00350db206be1f8e8131d1be0414de1a8dd7b92688806b7fdf62bad",
+        "started.json": "f774c582faf676957c7e7472a5f946aa5306dc1d72148b35acec0c983d318364",
+        "stderr.txt": "1ea803f4c94cd74c9560147569e159c10b15aafe43e2e6af9a1fad98571fa007",
+        "stdout.jsonl": "fbbd8dfd8099ac00a9b7ace1c5d7e169793cef58ea523b1c8704966f697458dc"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "7f1696e2f9916ec73e6ec601d43f0da4e575c4c714a0c2bdc6fae6d27a0de052",
+          "final.json": "c876cad7c01b8feaa2d8764ee81b732e34e7407c8051389fa4830c6dc249b6ef",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "e9b9998ae00350db206be1f8e8131d1be0414de1a8dd7b92688806b7fdf62bad",
+          "started.json": "f774c582faf676957c7e7472a5f946aa5306dc1d72148b35acec0c983d318364",
+          "stderr.txt": "1ea803f4c94cd74c9560147569e159c10b15aafe43e2e6af9a1fad98571fa007",
+          "stdout.jsonl": "fbbd8dfd8099ac00a9b7ace1c5d7e169793cef58ea523b1c8704966f697458dc"
+        }
+      }
+    },
+    {
+      "id": "H040",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-074\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-074\\cli-attempt-01",
+      "target_output": "skill/batch-040/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-040",
+      "source_request_sha256": "2159a92638179819b0fabfe9137fd27dc3949cfa4db2ca66d43cff76775e9c98",
+      "target_request_sha256": "2159a92638179819b0fabfe9137fd27dc3949cfa4db2ca66d43cff76775e9c98",
+      "prompt_sha256": "24fa3b9fe05022773cc60b35accf320cdc6126137dca4444d83f017bca74c166",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "034822f7311a3dc797fedccede62e46f07627fa05483356e4dc7f248d34e124c",
+      "artifact_sha256": {
+        "completion.json": "5e1e794d45b21c6c39b99e61a6dbf3e0dd69008159d127b4d05dc889e8247d47",
+        "final.json": "9c6e1088f762fe3849699b5ae78d8a7c34093d12f6cef5bc06863f5b5a5f87de",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "24fa3b9fe05022773cc60b35accf320cdc6126137dca4444d83f017bca74c166",
+        "started.json": "860947c313ba8bd1d9a98f4c7a430429888f664ad7920e822f988463a0ff4567",
+        "stderr.txt": "8361e65ba4c03f5f9370cfc7bf0f08ca1f96869ce898c9ef47c07e0502b44883",
+        "stdout.jsonl": "14dd4c950f7980e5f2e7a853dd51defb218954efd0c6eb5280dfb176413d3344"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "5e1e794d45b21c6c39b99e61a6dbf3e0dd69008159d127b4d05dc889e8247d47",
+          "final.json": "9c6e1088f762fe3849699b5ae78d8a7c34093d12f6cef5bc06863f5b5a5f87de",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "24fa3b9fe05022773cc60b35accf320cdc6126137dca4444d83f017bca74c166",
+          "started.json": "860947c313ba8bd1d9a98f4c7a430429888f664ad7920e822f988463a0ff4567",
+          "stderr.txt": "8361e65ba4c03f5f9370cfc7bf0f08ca1f96869ce898c9ef47c07e0502b44883",
+          "stdout.jsonl": "14dd4c950f7980e5f2e7a853dd51defb218954efd0c6eb5280dfb176413d3344"
+        }
+      }
+    },
+    {
+      "id": "H041",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-075\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-075\\cli-attempt-01",
+      "target_output": "skill/batch-041/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-041",
+      "source_request_sha256": "06e7eb506ac5ac32b0183512a9cd530d5044d244089ef5c9f703b896eb6bef4d",
+      "target_request_sha256": "06e7eb506ac5ac32b0183512a9cd530d5044d244089ef5c9f703b896eb6bef4d",
+      "prompt_sha256": "8ad2dc218ad8154d9c1362545288d2ac8cd6adc62d1d8775ec792831e3326e2f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "c37dcfca56da3f56568886a8f4bfa3a765bc47cb59c4b679a732eb5cd3cdd12d",
+      "artifact_sha256": {
+        "completion.json": "9f8129ced3adaa60b473099031164c9f24e7b96e838eaa7e90ef51e2cbb2e463",
+        "final.json": "2b26978b520565d3c04b11a91f940621d3d10cd5e731cddbd0cb0905e0c172af",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "8ad2dc218ad8154d9c1362545288d2ac8cd6adc62d1d8775ec792831e3326e2f",
+        "started.json": "d20cd75e02cd025c2736b3f0cc3ea1f3b0e793084b451bdba4caaa30ed7e4d9f",
+        "stderr.txt": "35c0cfe17b72e47c1e704929f592588f04293791e9cc02bd95c4bf6e9569c68b",
+        "stdout.jsonl": "565ac1ebee920d9b42bc7b4f04e00131d537373ce78e16008f7c43e03dd7f332"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "9f8129ced3adaa60b473099031164c9f24e7b96e838eaa7e90ef51e2cbb2e463",
+          "final.json": "2b26978b520565d3c04b11a91f940621d3d10cd5e731cddbd0cb0905e0c172af",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "8ad2dc218ad8154d9c1362545288d2ac8cd6adc62d1d8775ec792831e3326e2f",
+          "started.json": "d20cd75e02cd025c2736b3f0cc3ea1f3b0e793084b451bdba4caaa30ed7e4d9f",
+          "stderr.txt": "35c0cfe17b72e47c1e704929f592588f04293791e9cc02bd95c4bf6e9569c68b",
+          "stdout.jsonl": "565ac1ebee920d9b42bc7b4f04e00131d537373ce78e16008f7c43e03dd7f332"
+        }
+      }
+    },
+    {
+      "id": "H042",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-076\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-076\\cli-attempt-01",
+      "target_output": "skill/batch-042/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-042",
+      "source_request_sha256": "2a8345ec2ecbda2447ebbb4bf933feed8bb1b3cecb26ff2ec85a005bca57aae5",
+      "target_request_sha256": "2a8345ec2ecbda2447ebbb4bf933feed8bb1b3cecb26ff2ec85a005bca57aae5",
+      "prompt_sha256": "67b64f5033a8af20e7ac9eace58062cfd48b1eb094138e5a8d97f4e90e120a0b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "42b3d0c63370f8a5250508e41aec5f80eab79918218de2f1e2e169680b3a6c9d",
+      "artifact_sha256": {
+        "completion.json": "9d3f1b5151060ffde17b49d4d7bd1689c3033e54ba14e1d4bda06c5192c2873a",
+        "final.json": "c6b65062995e836bfabd4456fc8de8ec49ccb138c79d9dcb3f0da90070eff023",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "67b64f5033a8af20e7ac9eace58062cfd48b1eb094138e5a8d97f4e90e120a0b",
+        "started.json": "8b806180da659da376599e164bb0498df4899e07dca3f675b16c868de0020cbc",
+        "stderr.txt": "769bc74030c8245b66023a2967cd51d627983560a24f2b85833fcb3e4776a47f",
+        "stdout.jsonl": "3c22835f1cc6205c2538a3f3fa6ad3a7294d5b8d6ace860c2b40dd15df55cac9"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "9d3f1b5151060ffde17b49d4d7bd1689c3033e54ba14e1d4bda06c5192c2873a",
+          "final.json": "c6b65062995e836bfabd4456fc8de8ec49ccb138c79d9dcb3f0da90070eff023",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "67b64f5033a8af20e7ac9eace58062cfd48b1eb094138e5a8d97f4e90e120a0b",
+          "started.json": "8b806180da659da376599e164bb0498df4899e07dca3f675b16c868de0020cbc",
+          "stderr.txt": "769bc74030c8245b66023a2967cd51d627983560a24f2b85833fcb3e4776a47f",
+          "stdout.jsonl": "3c22835f1cc6205c2538a3f3fa6ad3a7294d5b8d6ace860c2b40dd15df55cac9"
+        }
+      }
+    },
+    {
+      "id": "H043",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-077\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-077\\cli-attempt-01",
+      "target_output": "skill/batch-043/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-043",
+      "source_request_sha256": "da934abbbe27e36c11c19518acc79b069ef679dc1a4596f5e46033e8dd61bd49",
+      "target_request_sha256": "da934abbbe27e36c11c19518acc79b069ef679dc1a4596f5e46033e8dd61bd49",
+      "prompt_sha256": "bc181927aa79ba9da6dd23e1389f9ccba3f846613e25099a7c5342c4f1fdd512",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "1a3e714f238e311a62cd3e3ac31607c50ff9520c3318df4c7afada2bde4eaea0",
+      "artifact_sha256": {
+        "completion.json": "2aac3002fc2d02936e8f5b40e5b922a11d6c52592a193dc252eb834d2c808149",
+        "final.json": "39d71507d3156df9418ff374c9dd32aef4aa032a7e42265c237bac56a9950574",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "bc181927aa79ba9da6dd23e1389f9ccba3f846613e25099a7c5342c4f1fdd512",
+        "started.json": "8d44295886c2a6e26ab07e8c83ce3e408f148dc1b46a6ee7d2a8d5cca66bd74d",
+        "stderr.txt": "f43dadee085c469182500201efcc7ad91b7bd69ee632a7c2f14dd31204c43d1c",
+        "stdout.jsonl": "25eeaf3dddbbb39bef67cf2275e0d8f22efc780b958dde2ec0db6c12c1f6e3df"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "2aac3002fc2d02936e8f5b40e5b922a11d6c52592a193dc252eb834d2c808149",
+          "final.json": "39d71507d3156df9418ff374c9dd32aef4aa032a7e42265c237bac56a9950574",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "bc181927aa79ba9da6dd23e1389f9ccba3f846613e25099a7c5342c4f1fdd512",
+          "started.json": "8d44295886c2a6e26ab07e8c83ce3e408f148dc1b46a6ee7d2a8d5cca66bd74d",
+          "stderr.txt": "f43dadee085c469182500201efcc7ad91b7bd69ee632a7c2f14dd31204c43d1c",
+          "stdout.jsonl": "25eeaf3dddbbb39bef67cf2275e0d8f22efc780b958dde2ec0db6c12c1f6e3df"
+        }
+      }
+    },
+    {
+      "id": "H044",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-078\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-078\\cli-attempt-01",
+      "target_output": "skill/batch-044/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-044",
+      "source_request_sha256": "c780448059a51d66d7f49781baf6368f559e3fc862fadb929942951cef8ea7ed",
+      "target_request_sha256": "c780448059a51d66d7f49781baf6368f559e3fc862fadb929942951cef8ea7ed",
+      "prompt_sha256": "137c0db970930813460f02146d2282bef0e6492ebb668b30ce26cdc00cc98bbb",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "ad38949f91102fcbf4c614c3f12a76e1bf31fe2463e831982c6c475f1993e372",
+      "artifact_sha256": {
+        "completion.json": "b0351bd428d6f3b85f2a44a5eb56b11ede846a39deb7e5caba6d23cdd0c2c86c",
+        "final.json": "9ea59c93718ceea649f28fd15c9a1e2f3668fcc3578b4b1b7202067acc151c44",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "137c0db970930813460f02146d2282bef0e6492ebb668b30ce26cdc00cc98bbb",
+        "started.json": "c8f4fd7e486df68acd9458c11f3435d5f02fffe0b899e29bb9dd8521f499293b",
+        "stderr.txt": "6844d37ff0b860f4c33f595baae8052c7ab05da3b8c264800880bda4b11c6454",
+        "stdout.jsonl": "87e35861e820731c28eebc748f6a7960174ac5e4b785e2158c5233f60f40d7a4"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "b0351bd428d6f3b85f2a44a5eb56b11ede846a39deb7e5caba6d23cdd0c2c86c",
+          "final.json": "9ea59c93718ceea649f28fd15c9a1e2f3668fcc3578b4b1b7202067acc151c44",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "137c0db970930813460f02146d2282bef0e6492ebb668b30ce26cdc00cc98bbb",
+          "started.json": "c8f4fd7e486df68acd9458c11f3435d5f02fffe0b899e29bb9dd8521f499293b",
+          "stderr.txt": "6844d37ff0b860f4c33f595baae8052c7ab05da3b8c264800880bda4b11c6454",
+          "stdout.jsonl": "87e35861e820731c28eebc748f6a7960174ac5e4b785e2158c5233f60f40d7a4"
+        }
+      }
+    },
+    {
+      "id": "H045",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-079\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-079\\cli-attempt-01",
+      "target_output": "skill/batch-045/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-045",
+      "source_request_sha256": "f62dd9b95b5cf169c6118b839583c03330cdfcb9f80695f55b386a269c4a5e7c",
+      "target_request_sha256": "f62dd9b95b5cf169c6118b839583c03330cdfcb9f80695f55b386a269c4a5e7c",
+      "prompt_sha256": "ffe1794d02db21abb91f9c30a15db1898d12734c457fe122ee76dd2ac6c825df",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "dee2ab388dd6fcdb38f2b6ab46ad5c8d28cfc10104be5b8db4a56c9118343d59",
+      "artifact_sha256": {
+        "completion.json": "96d17d34bde71303efb766847947ca33f6b0052839a7b391a0ab2a0bc864b665",
+        "final.json": "781c6d6f0ce6d7da40e238de256c39c1c8c777bba5c33bd7e0d267247860202d",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "ffe1794d02db21abb91f9c30a15db1898d12734c457fe122ee76dd2ac6c825df",
+        "started.json": "05c19b00c65286b52238e8689d4808f495b2d9febd11b214180885c861f827c1",
+        "stderr.txt": "a5d5d2ab7f2362f386d7997561d307d2310cbcb20e9f61def202aaacb1806f58",
+        "stdout.jsonl": "9d2b644d0d155adc6c3ce26788c8693256c99a5f05d7a822151033d38a49798d"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "96d17d34bde71303efb766847947ca33f6b0052839a7b391a0ab2a0bc864b665",
+          "final.json": "781c6d6f0ce6d7da40e238de256c39c1c8c777bba5c33bd7e0d267247860202d",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "ffe1794d02db21abb91f9c30a15db1898d12734c457fe122ee76dd2ac6c825df",
+          "started.json": "05c19b00c65286b52238e8689d4808f495b2d9febd11b214180885c861f827c1",
+          "stderr.txt": "a5d5d2ab7f2362f386d7997561d307d2310cbcb20e9f61def202aaacb1806f58",
+          "stdout.jsonl": "9d2b644d0d155adc6c3ce26788c8693256c99a5f05d7a822151033d38a49798d"
+        }
+      }
+    },
+    {
+      "id": "H046",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-080\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-080\\cli-attempt-01",
+      "target_output": "skill/batch-046/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-046",
+      "source_request_sha256": "111a4c6dd0e5f18d12e4b1a5c97df3858ca1ac267ebf2ff8d1c1e55309cd3042",
+      "target_request_sha256": "111a4c6dd0e5f18d12e4b1a5c97df3858ca1ac267ebf2ff8d1c1e55309cd3042",
+      "prompt_sha256": "0ceb897d44b4ad73b6eed533844ba049f0c94ca2a4bd64b24bf082476b9eedbe",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "d89a0158006e8453a17a4d6fe2fd3dceaaa5eee6e58b1aca9f0525ba70f55ab5",
+      "artifact_sha256": {
+        "completion.json": "673a7cead2da5de9e3ceae88dcdb7794c4547f03763bf3a4d70a81ffc0ebe2a8",
+        "final.json": "016a99c5f3304c9dd7943dec3ee9ccc3560bd9dc2363f38d1b74cc5d7b2768ff",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "0ceb897d44b4ad73b6eed533844ba049f0c94ca2a4bd64b24bf082476b9eedbe",
+        "started.json": "2367ae0fadbe25923a9ce8766855ac06911afcf9260e61611d1c4b61c8e9d843",
+        "stderr.txt": "012e326215359c6c913e53a659ddec9e0ebff35b72397c4fbf633597e060861a",
+        "stdout.jsonl": "b83620dae4b185d500c7ec8e3af91c58a60b7a4098a5ac0a6c23bbb704b4691f"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "673a7cead2da5de9e3ceae88dcdb7794c4547f03763bf3a4d70a81ffc0ebe2a8",
+          "final.json": "016a99c5f3304c9dd7943dec3ee9ccc3560bd9dc2363f38d1b74cc5d7b2768ff",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "0ceb897d44b4ad73b6eed533844ba049f0c94ca2a4bd64b24bf082476b9eedbe",
+          "started.json": "2367ae0fadbe25923a9ce8766855ac06911afcf9260e61611d1c4b61c8e9d843",
+          "stderr.txt": "012e326215359c6c913e53a659ddec9e0ebff35b72397c4fbf633597e060861a",
+          "stdout.jsonl": "b83620dae4b185d500c7ec8e3af91c58a60b7a4098a5ac0a6c23bbb704b4691f"
+        }
+      }
+    },
+    {
+      "id": "H047",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-081\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-081\\cli-attempt-01",
+      "target_output": "skill/batch-047/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-047",
+      "source_request_sha256": "eeab1899c545f1384d6ab7573ed6dd76c5bbb6466c05d6ec8d014ca9e0c85169",
+      "target_request_sha256": "eeab1899c545f1384d6ab7573ed6dd76c5bbb6466c05d6ec8d014ca9e0c85169",
+      "prompt_sha256": "cc860927c453e096a65880136d8a6a38df84fe78f0c09eb0998015c9c2bd1740",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "1ea9100796012becd085dc3676c306cfc5e8b01dd5eced14ee685771c6f0456f",
+      "artifact_sha256": {
+        "completion.json": "469ad6b79f4bf2d83621df9255e375b4902a7bacf61f3047843d597372f17ae1",
+        "final.json": "6ddf09e0479103ef2b52225568ae5b7a93c680080bd019739a05faf297805849",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "cc860927c453e096a65880136d8a6a38df84fe78f0c09eb0998015c9c2bd1740",
+        "started.json": "d27b92dd099a666465596b6db2694f64de3b46cd708e1450f4300c592c848951",
+        "stderr.txt": "752954d5315ce58d0066f9b677992d867cafcaaf21f2170f0cf029e634f8cba2",
+        "stdout.jsonl": "b9e1dfcb935095044b300e8a0db5fb490635c67fdd8f515d7aafed72aa85d24c"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "469ad6b79f4bf2d83621df9255e375b4902a7bacf61f3047843d597372f17ae1",
+          "final.json": "6ddf09e0479103ef2b52225568ae5b7a93c680080bd019739a05faf297805849",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "cc860927c453e096a65880136d8a6a38df84fe78f0c09eb0998015c9c2bd1740",
+          "started.json": "d27b92dd099a666465596b6db2694f64de3b46cd708e1450f4300c592c848951",
+          "stderr.txt": "752954d5315ce58d0066f9b677992d867cafcaaf21f2170f0cf029e634f8cba2",
+          "stdout.jsonl": "b9e1dfcb935095044b300e8a0db5fb490635c67fdd8f515d7aafed72aa85d24c"
+        }
+      }
+    },
+    {
+      "id": "H048",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-082\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-082\\cli-attempt-01",
+      "target_output": "skill/batch-048/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-048",
+      "source_request_sha256": "23f099f8ea2409d7962dee603e1f10cbc0505197ddfff4ae8313bd6d28c93dfe",
+      "target_request_sha256": "23f099f8ea2409d7962dee603e1f10cbc0505197ddfff4ae8313bd6d28c93dfe",
+      "prompt_sha256": "ea2451f950a7c45f4099517f9b17f76655cad68a87a80da21ff9a588e2423687",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "54d618b8cea1fbcf98944d62d59eddfdcdf120e8b936d0eb9a5aa21a9f16f57e",
+      "artifact_sha256": {
+        "completion.json": "35c61bd7ad8007323346501504a5841a6302ac6aae33034922dc27ea4632148a",
+        "final.json": "ffbca858aa5c1a897429a2d0c2963067e18149d3ecf98ca5003eb2450043086b",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "ea2451f950a7c45f4099517f9b17f76655cad68a87a80da21ff9a588e2423687",
+        "started.json": "e1533e993d449e53e384f471a8ecc5ecab9fa43bb9a6d893be03d38353050c79",
+        "stderr.txt": "970992e84f4197bb74b33427ad3b160f10f06c04ac8f8816ed30db0625b939dc",
+        "stdout.jsonl": "46479d323116f54107eef5617e56ab2f89c285192b58001ba4ef69aa446a392c"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "35c61bd7ad8007323346501504a5841a6302ac6aae33034922dc27ea4632148a",
+          "final.json": "ffbca858aa5c1a897429a2d0c2963067e18149d3ecf98ca5003eb2450043086b",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "ea2451f950a7c45f4099517f9b17f76655cad68a87a80da21ff9a588e2423687",
+          "started.json": "e1533e993d449e53e384f471a8ecc5ecab9fa43bb9a6d893be03d38353050c79",
+          "stderr.txt": "970992e84f4197bb74b33427ad3b160f10f06c04ac8f8816ed30db0625b939dc",
+          "stdout.jsonl": "46479d323116f54107eef5617e56ab2f89c285192b58001ba4ef69aa446a392c"
+        }
+      }
+    },
+    {
+      "id": "H049",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-083\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-083\\cli-attempt-01",
+      "target_output": "skill/batch-049/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-049",
+      "source_request_sha256": "e1dd50ece35b2e687b7bd86ae7abe96fa3e8ac1f7896793c6155a8e8209bd999",
+      "target_request_sha256": "e1dd50ece35b2e687b7bd86ae7abe96fa3e8ac1f7896793c6155a8e8209bd999",
+      "prompt_sha256": "efb26194868d9a94ac888d6d179c5ed3af0783c337da2017573ee75f38e9abef",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "751f92ea1798d6f8dd0a481017c1156170bc450942b07685393afc464f9d0bd4",
+      "artifact_sha256": {
+        "completion.json": "e49dee0695811b7e044aab8b929dde8b17699cd2b6d77f62ea004bb39e0c1833",
+        "final.json": "a0743580f4a736fa042a3f53c02129bf10a869d9b489c9e22b70e4210ef11b9d",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "efb26194868d9a94ac888d6d179c5ed3af0783c337da2017573ee75f38e9abef",
+        "started.json": "5243f645d05f34d2ce952301b3e383bad77e3ff2212f40a00f9389b5179ad8fd",
+        "stderr.txt": "72d0931efbe09ea93833a6e4e39447995ace876d238a69403d8dcfe56c21ba31",
+        "stdout.jsonl": "bd08c99c6a5dd0e17ced68ab54064cab88002fbff92250d9fc97975186345bc0"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "e49dee0695811b7e044aab8b929dde8b17699cd2b6d77f62ea004bb39e0c1833",
+          "final.json": "a0743580f4a736fa042a3f53c02129bf10a869d9b489c9e22b70e4210ef11b9d",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "efb26194868d9a94ac888d6d179c5ed3af0783c337da2017573ee75f38e9abef",
+          "started.json": "5243f645d05f34d2ce952301b3e383bad77e3ff2212f40a00f9389b5179ad8fd",
+          "stderr.txt": "72d0931efbe09ea93833a6e4e39447995ace876d238a69403d8dcfe56c21ba31",
+          "stdout.jsonl": "bd08c99c6a5dd0e17ced68ab54064cab88002fbff92250d9fc97975186345bc0"
+        }
+      }
+    },
+    {
+      "id": "H050",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-084\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-084\\cli-attempt-01",
+      "target_output": "skill/batch-050/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-050",
+      "source_request_sha256": "01a94ecba2ab01e16aa11160b3c9c2a3023aa5c87c7b3dee091bb78eabcfbd69",
+      "target_request_sha256": "01a94ecba2ab01e16aa11160b3c9c2a3023aa5c87c7b3dee091bb78eabcfbd69",
+      "prompt_sha256": "09200acca6d1a1423d8b23c3666ba3b3dc68bc2f3200b5378c9954ec67b4c567",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "79bb2a41b80d213d1c9eb1277922f85314110ec09e8b6f0430374cb92bf89313",
+      "artifact_sha256": {
+        "completion.json": "7d620eba74216be9570eb67f3a978a92f779b44bdecb25d49ec4bf4f727d5db3",
+        "final.json": "43b3289cca8652428ebd8d20008e380c5625bd97e1aa6270695cf11e4c409656",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "09200acca6d1a1423d8b23c3666ba3b3dc68bc2f3200b5378c9954ec67b4c567",
+        "started.json": "48266e0604afda85e72441197eb7619387303eb2b3069f5f39fc42720eb0fa55",
+        "stderr.txt": "a71cb8ca374900becb8976dd4747df8c03f6bd609720a6d2c7a6c74bd2e1ce60",
+        "stdout.jsonl": "9e0fbeb73e386a148ed96ee59160b1a729b9d5b4d3e7819bdfe99d7814ec7c16"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "7d620eba74216be9570eb67f3a978a92f779b44bdecb25d49ec4bf4f727d5db3",
+          "final.json": "43b3289cca8652428ebd8d20008e380c5625bd97e1aa6270695cf11e4c409656",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "09200acca6d1a1423d8b23c3666ba3b3dc68bc2f3200b5378c9954ec67b4c567",
+          "started.json": "48266e0604afda85e72441197eb7619387303eb2b3069f5f39fc42720eb0fa55",
+          "stderr.txt": "a71cb8ca374900becb8976dd4747df8c03f6bd609720a6d2c7a6c74bd2e1ce60",
+          "stdout.jsonl": "9e0fbeb73e386a148ed96ee59160b1a729b9d5b4d3e7819bdfe99d7814ec7c16"
+        }
+      }
+    },
+    {
+      "id": "H051",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-085\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-085\\cli-attempt-01",
+      "target_output": "skill/batch-051/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-051",
+      "source_request_sha256": "4c83c3b00cfe450558ee5f4cf0186ad48cbc23ea1f4172a8f2507143124cfec1",
+      "target_request_sha256": "4c83c3b00cfe450558ee5f4cf0186ad48cbc23ea1f4172a8f2507143124cfec1",
+      "prompt_sha256": "2b7a5a4346056cec8270284f1bd3f0429ce7da89b36896bdf1174feb58c15db6",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "80c95bbb0f83c684ab49e33c8e731a6f2e8c6dd70cdf305c971d5908955b922d",
+      "artifact_sha256": {
+        "completion.json": "28eed2db6917a6dce2782ae3870a9df17a58f360be5c64159a2673bf40ae34d6",
+        "final.json": "cff440a69e116643d349eb0e2280f6ca2ded9870bfd7229177c974919e9b8eda",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "2b7a5a4346056cec8270284f1bd3f0429ce7da89b36896bdf1174feb58c15db6",
+        "started.json": "c864bf27a801db61ff905d99d88f1646b3526c797b1353ad2261f7243db4dabe",
+        "stderr.txt": "8aa0361fe97f8084dcecf11d526fe09a08167761687e063d34ae4709806a5274",
+        "stdout.jsonl": "76255ed6e54d92321c4a7ec8bff07dca31b48784a5870bdf9cbefdf61f3d9d96"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "28eed2db6917a6dce2782ae3870a9df17a58f360be5c64159a2673bf40ae34d6",
+          "final.json": "cff440a69e116643d349eb0e2280f6ca2ded9870bfd7229177c974919e9b8eda",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "2b7a5a4346056cec8270284f1bd3f0429ce7da89b36896bdf1174feb58c15db6",
+          "started.json": "c864bf27a801db61ff905d99d88f1646b3526c797b1353ad2261f7243db4dabe",
+          "stderr.txt": "8aa0361fe97f8084dcecf11d526fe09a08167761687e063d34ae4709806a5274",
+          "stdout.jsonl": "76255ed6e54d92321c4a7ec8bff07dca31b48784a5870bdf9cbefdf61f3d9d96"
+        }
+      }
+    },
+    {
+      "id": "H052",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-086\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-086\\cli-attempt-01",
+      "target_output": "skill/batch-052/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-052",
+      "source_request_sha256": "329596971c26e54d03a3977bc4e6918e6638b7c16784944f1692f526e29ff6b1",
+      "target_request_sha256": "329596971c26e54d03a3977bc4e6918e6638b7c16784944f1692f526e29ff6b1",
+      "prompt_sha256": "19b5a4d729b6e44a5bdbc9f0a761f0a919ec758dfc09696985fbe49d8a2eb0d8",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "4245f2fdffa32ab29ecbe695f373d994781f23916f374a896e860928e3fb00b0",
+      "artifact_sha256": {
+        "completion.json": "4b825ca0b8d17892f8bb13601cb2bac71fa4959b77cee6e1a50b9399ad9d0d34",
+        "final.json": "4c06e56e223e30fbe5853ebb7c2e0ebc0ed09059161fdba08dafb1ba972b2e15",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "19b5a4d729b6e44a5bdbc9f0a761f0a919ec758dfc09696985fbe49d8a2eb0d8",
+        "started.json": "43f74e98c491e974b98ec9bc294537dba9ec5698d716efe7cf64625b35af4ce1",
+        "stderr.txt": "57024567a6373ca8934304acc28e7c9e1e202f2c615948c283058138f6f9bf0b",
+        "stdout.jsonl": "45dffd9b3d9783a847bd8649f3d903e68b9c70a855ef9abe4abab8b63e3d5529"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "4b825ca0b8d17892f8bb13601cb2bac71fa4959b77cee6e1a50b9399ad9d0d34",
+          "final.json": "4c06e56e223e30fbe5853ebb7c2e0ebc0ed09059161fdba08dafb1ba972b2e15",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "19b5a4d729b6e44a5bdbc9f0a761f0a919ec758dfc09696985fbe49d8a2eb0d8",
+          "started.json": "43f74e98c491e974b98ec9bc294537dba9ec5698d716efe7cf64625b35af4ce1",
+          "stderr.txt": "57024567a6373ca8934304acc28e7c9e1e202f2c615948c283058138f6f9bf0b",
+          "stdout.jsonl": "45dffd9b3d9783a847bd8649f3d903e68b9c70a855ef9abe4abab8b63e3d5529"
+        }
+      }
+    },
+    {
+      "id": "H053",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-087\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-087\\cli-attempt-01",
+      "target_output": "skill/batch-053/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-053",
+      "source_request_sha256": "8e1982a1364b598147a0dfff6abcc7e937d91a25d91c74cacddcd63bb83f7096",
+      "target_request_sha256": "8e1982a1364b598147a0dfff6abcc7e937d91a25d91c74cacddcd63bb83f7096",
+      "prompt_sha256": "5bbb4071726ee7c8fc1beef305d540a37a7edee87d15274e2e4f45598dbf83e3",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "4234e797951bef87d9bf0b1bbe3c160d7f819a679b6f114791864c38dda8caa7",
+      "artifact_sha256": {
+        "completion.json": "abe5e334b1552c8d1a44a0bdddd65bb6f884f15aeb63fdc77b1b427aab57246e",
+        "final.json": "8a2e485c300bc7882de6b67b23c689a53fa980e052eee9efe46b8418802f75d5",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "5bbb4071726ee7c8fc1beef305d540a37a7edee87d15274e2e4f45598dbf83e3",
+        "started.json": "1663415342e57ae3b9a276b935cb1d583971a0f875c6eaea0f9bf57fa924776e",
+        "stderr.txt": "4b5b774aa3a19d3d202b5db0134713d1a7fe02dd3a046390fcf04aaf4cc88da7",
+        "stdout.jsonl": "fd8103eec670b768185e1f47e3dce41fe3a818278df7cf9b59c5ecffcf18c166"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "abe5e334b1552c8d1a44a0bdddd65bb6f884f15aeb63fdc77b1b427aab57246e",
+          "final.json": "8a2e485c300bc7882de6b67b23c689a53fa980e052eee9efe46b8418802f75d5",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "5bbb4071726ee7c8fc1beef305d540a37a7edee87d15274e2e4f45598dbf83e3",
+          "started.json": "1663415342e57ae3b9a276b935cb1d583971a0f875c6eaea0f9bf57fa924776e",
+          "stderr.txt": "4b5b774aa3a19d3d202b5db0134713d1a7fe02dd3a046390fcf04aaf4cc88da7",
+          "stdout.jsonl": "fd8103eec670b768185e1f47e3dce41fe3a818278df7cf9b59c5ecffcf18c166"
+        }
+      }
+    },
+    {
+      "id": "H054",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-088\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-088\\cli-attempt-01",
+      "target_output": "skill/batch-054/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-054",
+      "source_request_sha256": "578382f2717e0fe12aa3afb6ee556b450f7dddc450115537f32b61e6f809b492",
+      "target_request_sha256": "578382f2717e0fe12aa3afb6ee556b450f7dddc450115537f32b61e6f809b492",
+      "prompt_sha256": "1aa12be81563e2f4683164c72c49c4063e8c86aff98578984522f1f6d3b07e31",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "5405c072d27d86d01a682b15489470f552f098595555dffc67789f3bf3ce4a29",
+      "artifact_sha256": {
+        "completion.json": "75032cb64d9919c9ebed2c8e44d8082d5482d626e88cd32379a461764791d278",
+        "final.json": "8c4cd63da40e8e85751a6d33355558d70472ba0225daa735e0d4d3e26cb66684",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "1aa12be81563e2f4683164c72c49c4063e8c86aff98578984522f1f6d3b07e31",
+        "started.json": "a6e5756484a00a6c8e7d0280ffdb0aebd73e88416a327378c0184292177c233e",
+        "stderr.txt": "6a685e04a8f29765876d9eb0b7ed4858453de6972e4c3655f2e5bfc504112be2",
+        "stdout.jsonl": "2e56e530af93171b029fcc60999040e50c381bee7cf142ee27da1542d5231013"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "75032cb64d9919c9ebed2c8e44d8082d5482d626e88cd32379a461764791d278",
+          "final.json": "8c4cd63da40e8e85751a6d33355558d70472ba0225daa735e0d4d3e26cb66684",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "1aa12be81563e2f4683164c72c49c4063e8c86aff98578984522f1f6d3b07e31",
+          "started.json": "a6e5756484a00a6c8e7d0280ffdb0aebd73e88416a327378c0184292177c233e",
+          "stderr.txt": "6a685e04a8f29765876d9eb0b7ed4858453de6972e4c3655f2e5bfc504112be2",
+          "stdout.jsonl": "2e56e530af93171b029fcc60999040e50c381bee7cf142ee27da1542d5231013"
+        }
+      }
+    },
+    {
+      "id": "H055",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-089\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-089\\cli-attempt-01",
+      "target_output": "skill/batch-055/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-055",
+      "source_request_sha256": "f4027954d6251a70d5c801c7a60f0e5802e2e48776b9ad2f0d313046540151cf",
+      "target_request_sha256": "f4027954d6251a70d5c801c7a60f0e5802e2e48776b9ad2f0d313046540151cf",
+      "prompt_sha256": "24cb05ce78b063797fd66cf913cc73c67fd15da1e92a8873977f02a34d079fd2",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "b75ace4386a7c02ec3deb50e4fb6c46769365221f9a5ba95d3ca885f1ca02f29",
+      "artifact_sha256": {
+        "completion.json": "687e7876c15febdf1d18af5927ab7fec5be876e59007c5c3ce375107bbc17990",
+        "final.json": "ff197ec8cf7646e7223a8d91e2f1a3d57ac4f0b4c0d6c33ee4837cadfb2ddbb4",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "24cb05ce78b063797fd66cf913cc73c67fd15da1e92a8873977f02a34d079fd2",
+        "started.json": "05a96fe6cb61fb0d83ba5ee3c4028a5daef3e11779878f59b07d0482e2312edf",
+        "stderr.txt": "b4054e946b114f91474410c92c85f7ec68ca2feaab042945b0ca054861161641",
+        "stdout.jsonl": "3a1a1d6bad87f323d2f4bda00f762ab4ba97de081ed8eacb810faed93270699a"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "687e7876c15febdf1d18af5927ab7fec5be876e59007c5c3ce375107bbc17990",
+          "final.json": "ff197ec8cf7646e7223a8d91e2f1a3d57ac4f0b4c0d6c33ee4837cadfb2ddbb4",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "24cb05ce78b063797fd66cf913cc73c67fd15da1e92a8873977f02a34d079fd2",
+          "started.json": "05a96fe6cb61fb0d83ba5ee3c4028a5daef3e11779878f59b07d0482e2312edf",
+          "stderr.txt": "b4054e946b114f91474410c92c85f7ec68ca2feaab042945b0ca054861161641",
+          "stdout.jsonl": "3a1a1d6bad87f323d2f4bda00f762ab4ba97de081ed8eacb810faed93270699a"
+        }
+      }
+    },
+    {
+      "id": "H056",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-090\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-090\\cli-attempt-01",
+      "target_output": "skill/batch-056/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-056",
+      "source_request_sha256": "6766004205856f88202d6d84906d7964c27b5d641f46ce87477e86c2465ab299",
+      "target_request_sha256": "6766004205856f88202d6d84906d7964c27b5d641f46ce87477e86c2465ab299",
+      "prompt_sha256": "3a9067b404245de2d2d305ee1ba8f025a004b06eb04fd57f4de8dff00cb2dbef",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "24837b90c338ef31dd54e8b9fc458bddfdc9b5155fb117597025dc3d2c526fea",
+      "artifact_sha256": {
+        "completion.json": "4a5c4d64dd60e3add49f24c21b7ab4579be682c9ad4bc0069f628d0795502c75",
+        "final.json": "3a8a4761c8c37ea172a872b73cfa21f5bdffaeaa62d94987ebbd531733c492c8",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "3a9067b404245de2d2d305ee1ba8f025a004b06eb04fd57f4de8dff00cb2dbef",
+        "started.json": "196d47c93b8cfe6b90544999f294556d8bfcc5931bcf88a4cddf771bbecb2776",
+        "stderr.txt": "a7a5ae7999c3fe2ecf1f718f47901e9fd7a892ec99ddbd540f4983a907bd0ad6",
+        "stdout.jsonl": "9da68cf5325ae3837fa6e0ca141f632feee1c0d84266f8262610fef7a5c905e0"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "4a5c4d64dd60e3add49f24c21b7ab4579be682c9ad4bc0069f628d0795502c75",
+          "final.json": "3a8a4761c8c37ea172a872b73cfa21f5bdffaeaa62d94987ebbd531733c492c8",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "3a9067b404245de2d2d305ee1ba8f025a004b06eb04fd57f4de8dff00cb2dbef",
+          "started.json": "196d47c93b8cfe6b90544999f294556d8bfcc5931bcf88a4cddf771bbecb2776",
+          "stderr.txt": "a7a5ae7999c3fe2ecf1f718f47901e9fd7a892ec99ddbd540f4983a907bd0ad6",
+          "stdout.jsonl": "9da68cf5325ae3837fa6e0ca141f632feee1c0d84266f8262610fef7a5c905e0"
+        }
+      }
+    },
+    {
+      "id": "H057",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-091\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-091\\cli-attempt-01",
+      "target_output": "skill/batch-057/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-057",
+      "source_request_sha256": "d87c0993571a4e1fd604629f7a26c5ab2e852ebcc172f17ef37dc9b705f00152",
+      "target_request_sha256": "d87c0993571a4e1fd604629f7a26c5ab2e852ebcc172f17ef37dc9b705f00152",
+      "prompt_sha256": "2df6cc1f82be05f55b55e5c9e3ebd0f839b9f7671334e6c7e4ed3850f3b5604c",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "65e0a40d00afb19a60dece26be204db3e1ca31669b07fd3b662c7ab5c71cf111",
+      "artifact_sha256": {
+        "completion.json": "bbcea91bddfe3d13c8f9d1e8fccdbca0982e39126cc33c657d6d144278dd0408",
+        "final.json": "4519d96a11949f1f27535441c60e2bebfee10545802a23a10c0192688ebb1290",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "2df6cc1f82be05f55b55e5c9e3ebd0f839b9f7671334e6c7e4ed3850f3b5604c",
+        "started.json": "ab32f43bc6565f51b95b61768bd93c2b7e6c9ae18d59d5339779c0906c4f9556",
+        "stderr.txt": "948b1e322555ac5e4b885234eee398b660c375fd1ab0f160d3f855ce94fb4fb6",
+        "stdout.jsonl": "5fc1ebe2905d033fc46649b190d63d57fcebcfd181939e1df63eb1c6e28d93b7"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "bbcea91bddfe3d13c8f9d1e8fccdbca0982e39126cc33c657d6d144278dd0408",
+          "final.json": "4519d96a11949f1f27535441c60e2bebfee10545802a23a10c0192688ebb1290",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "2df6cc1f82be05f55b55e5c9e3ebd0f839b9f7671334e6c7e4ed3850f3b5604c",
+          "started.json": "ab32f43bc6565f51b95b61768bd93c2b7e6c9ae18d59d5339779c0906c4f9556",
+          "stderr.txt": "948b1e322555ac5e4b885234eee398b660c375fd1ab0f160d3f855ce94fb4fb6",
+          "stdout.jsonl": "5fc1ebe2905d033fc46649b190d63d57fcebcfd181939e1df63eb1c6e28d93b7"
+        }
+      }
+    },
+    {
+      "id": "H058",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-092\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-092\\cli-attempt-01",
+      "target_output": "skill/batch-058/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-058",
+      "source_request_sha256": "f3e095a554a0348731830ebe6b24e8c354075956bd91c58bab4c46d0856897ec",
+      "target_request_sha256": "f3e095a554a0348731830ebe6b24e8c354075956bd91c58bab4c46d0856897ec",
+      "prompt_sha256": "e8b9db6453e1e9d62a395562a76ae5d26d1459d7b8f173e8e7a39adf4ad7740b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "416b3c03b98d522059b967160d11f88ba29c65984b1b02dedc4cdb88f7c79326",
+      "artifact_sha256": {
+        "completion.json": "3010124fc5e9cabada1ce8b3b4349d66fdd8dca312ce10cabf3b2eb2cbd075c7",
+        "final.json": "276a511def6bee68cd1fa91a8a57ba2b6f35b40b7ff04c5225530b0a51ee0b5c",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "e8b9db6453e1e9d62a395562a76ae5d26d1459d7b8f173e8e7a39adf4ad7740b",
+        "started.json": "cbff78ec179c017a4b67a3fe3fd0e1163ad6ed19e3e8b399b9e6ab16e30c1190",
+        "stderr.txt": "3c5f7aaed15e6e6719a2b68354f5b0093116c23e29702f55a283c3cc718b911f",
+        "stdout.jsonl": "07e71af89934c568963af05b78e409845f4becf27fb4e5080b262e04a218c856"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "3010124fc5e9cabada1ce8b3b4349d66fdd8dca312ce10cabf3b2eb2cbd075c7",
+          "final.json": "276a511def6bee68cd1fa91a8a57ba2b6f35b40b7ff04c5225530b0a51ee0b5c",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "e8b9db6453e1e9d62a395562a76ae5d26d1459d7b8f173e8e7a39adf4ad7740b",
+          "started.json": "cbff78ec179c017a4b67a3fe3fd0e1163ad6ed19e3e8b399b9e6ab16e30c1190",
+          "stderr.txt": "3c5f7aaed15e6e6719a2b68354f5b0093116c23e29702f55a283c3cc718b911f",
+          "stdout.jsonl": "07e71af89934c568963af05b78e409845f4becf27fb4e5080b262e04a218c856"
+        }
+      }
+    },
+    {
+      "id": "H059",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-093\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-093\\cli-attempt-01",
+      "target_output": "skill/batch-059/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-059",
+      "source_request_sha256": "2f58754804d8614692a65778095fdfdd91fb434af08bd0cd52675d83a6837d2a",
+      "target_request_sha256": "2f58754804d8614692a65778095fdfdd91fb434af08bd0cd52675d83a6837d2a",
+      "prompt_sha256": "405db8823771fb5b43cad4a928ddcc57c5797cb9211a60ff9e2ddcbe4dce7f56",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      },
+      "output_sha256": "98e69fe9f333a8422cf4066be63d2845f713e9b5e1bc535429cdf886c392c338",
+      "artifact_sha256": {
+        "completion.json": "1f6a6d154b7c99293cc288d18273373d95a88be9e8a86237b2982a1c26690984",
+        "final.json": "1ff1d6966519f7cb3b540b07d8166350fee1fd7e85c30f232e7d3605e97334a7",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "405db8823771fb5b43cad4a928ddcc57c5797cb9211a60ff9e2ddcbe4dce7f56",
+        "started.json": "1909ea78573e96dd8d42487ae381c88a3f200100619106e3164a8bfbd96fc87b",
+        "stderr.txt": "b0582a698491ee56c9c218a768bf3cab73dafe1e37fbadc3919e0f54da3ef98a",
+        "stdout.jsonl": "a1b5ce71448b0c0cbf663dda66c02515891d42741b8965ab6c412c2f484b4a94"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "1f6a6d154b7c99293cc288d18273373d95a88be9e8a86237b2982a1c26690984",
+          "final.json": "1ff1d6966519f7cb3b540b07d8166350fee1fd7e85c30f232e7d3605e97334a7",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "405db8823771fb5b43cad4a928ddcc57c5797cb9211a60ff9e2ddcbe4dce7f56",
+          "started.json": "1909ea78573e96dd8d42487ae381c88a3f200100619106e3164a8bfbd96fc87b",
+          "stderr.txt": "b0582a698491ee56c9c218a768bf3cab73dafe1e37fbadc3919e0f54da3ef98a",
+          "stdout.jsonl": "a1b5ce71448b0c0cbf663dda66c02515891d42741b8965ab6c412c2f484b4a94"
+        }
+      }
+    },
+    {
+      "id": "H060",
+      "condition": "skill",
+      "source_kind": "first_cli_attempt",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-094\\outputs.json",
+      "source_attempt": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-094\\cli-attempt-01",
+      "target_output": "skill/batch-060/outputs.json",
+      "archived_source_evidence": "reused-skill/batch-060",
+      "source_request_sha256": "96b2f5ab15f2f7f3bf48a32d7f898cb1b263a4d26c61c8946a70ff61e6f9a578",
+      "target_request_sha256": "96b2f5ab15f2f7f3bf48a32d7f898cb1b263a4d26c61c8946a70ff61e6f9a578",
+      "prompt_sha256": "7bfcc49854156fa934a902a4e517a7897db186112a6a3c6949fd00e79e35b38a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      },
+      "output_sha256": "7b6bf0ef4e72f5b67415fadad38ecd57302066fa2fee76792e74e7801898f265",
+      "artifact_sha256": {
+        "completion.json": "32bea9091a65110143bb64bdaf3337c9dbe9f70faecb8ac493f13b8007c34ef5",
+        "final.json": "499ef38b7510b1967fc24cfb61e77bd035e9dcf7a35b92e43e6491b39b9e1646",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+        "prompt.txt": "7bfcc49854156fa934a902a4e517a7897db186112a6a3c6949fd00e79e35b38a",
+        "started.json": "3aa1876bd7170da6756f476b61d93a93813c3f0060010d3de278722470e56625",
+        "stderr.txt": "88a0331521b0970e522a4fba8dacc23f074033d587a9418085aa6708bcd0960c",
+        "stdout.jsonl": "211ec90637033c81e9c78454367c792f89e1a7e6799f09cc34274da8d86ad72f"
+      },
+      "attempt_sha256": {
+        "cli-attempt-01": {
+          "completion.json": "32bea9091a65110143bb64bdaf3337c9dbe9f70faecb8ac493f13b8007c34ef5",
+          "final.json": "499ef38b7510b1967fc24cfb61e77bd035e9dcf7a35b92e43e6491b39b9e1646",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+          "prompt.txt": "7bfcc49854156fa934a902a4e517a7897db186112a6a3c6949fd00e79e35b38a",
+          "started.json": "3aa1876bd7170da6756f476b61d93a93813c3f0060010d3de278722470e56625",
+          "stderr.txt": "88a0331521b0970e522a4fba8dacc23f074033d587a9418085aa6708bcd0960c",
+          "stdout.jsonl": "211ec90637033c81e9c78454367c792f89e1a7e6799f09cc34274da8d86ad72f"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Configuration equality does not establish an undisclosed service-side model revision.",
+    "Reused outputs are not new samples or independent repeats."
+  ]
+}

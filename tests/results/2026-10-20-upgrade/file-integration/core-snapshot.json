@@ -1,0 +1,32 @@
+{
+  "purpose": "Independent file-edit/style-save execution; no historical outputs or scenario checks consumed",
+  "seeded_existing_style": true,
+  "core_hashes_before": {
+    "core/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+    "core/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+    "core/yaya/references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+    "core/yaya/references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+    "core/yaya/scripts/check_comments.py": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539",
+    "core/yaya/scripts/check_rewrite.py": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c",
+    "core/yaya/scripts/prose_scan.py": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+    "core/yaya/scripts/packs.py": "3e1df3e234819c8b8c0e6d8c2fdc64dcbcc634c7469b6ec2c5f0f753a6fc78ea"
+  },
+  "core_hashes_after": {
+    "core/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+    "core/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+    "core/yaya/references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+    "core/yaya/references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+    "core/yaya/scripts/check_comments.py": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539",
+    "core/yaya/scripts/check_rewrite.py": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c",
+    "core/yaya/scripts/prose_scan.py": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+    "core/yaya/scripts/packs.py": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2"
+  },
+  "core_hash_changed_during_run": [
+    "core/yaya/scripts/packs.py"
+  ],
+  "additional_guidance_hashes": {
+    "core/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+    "core/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58",
+    "core/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+  }
+}

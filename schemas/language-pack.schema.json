@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Yaya language pack manifest",
+  "description": "The initial format permits optional data-only PATTERNS.md. Restricted BCP 47 profile; registry membership and editorial quality require contribution review.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format_version", "id", "version", "core_major", "name", "license", "quality", "direction"],
+  "properties": {
+    "format_version": {"type": "integer", "const": 1},
+    "id": {"type": "string", "pattern": "^[a-z]{2,3}(?:-[A-Z][a-z]{3})?(?:-[A-Z]{2}|-[0-9]{3})?(?:-(?:[a-z0-9]{5,8}|[0-9][a-z0-9]{3}))*$"},
+    "version": {"type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(?:-((?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)(?:\\.(?:0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*))*))?(?:\\+[0-9A-Za-z-]+(?:\\.[0-9A-Za-z-]+)*)?$"},
+    "core_major": {"type": "integer", "minimum": 0},
+    "name": {"type": "string", "minLength": 1, "maxLength": 100, "pattern": "\\S"},
+    "license": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9.+-]*$"},
+    "quality": {"enum": ["experimental", "reviewed"]},
+    "direction": {"enum": ["ltr", "rtl"]}
+  }
+}

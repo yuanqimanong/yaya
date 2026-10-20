@@ -1,0 +1,508 @@
+{
+  "cases": 34,
+  "conditions": {
+    "skill": {
+      "hard_pass": 34,
+      "quality_better": 22,
+      "quality_not_applicable": 9,
+      "quality_same": 3
+    },
+    "baseline": {
+      "hard_pass": 33,
+      "quality_better": 21,
+      "hard_fail": 1,
+      "quality_worse": 1,
+      "quality_not_applicable": 9,
+      "quality_same": 3
+    }
+  },
+  "preferences": {
+    "skill": 9,
+    "baseline": 1,
+    "tie": 24,
+    "uncertain": 0
+  },
+  "limitations": [
+    "Model judgments, without native human calibration.",
+    "Batch contexts and single runs do not establish cross-model or repeated-run reliability.",
+    "A semantic pass does not establish tool use, persistence behavior, or unsupported-language parser validation."
+  ],
+  "details": [
+    {
+      "id": "zh-finance",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留“1200万元”“同比增长8%”“20%升至23%”，新增“提高3个百分点”计算正确；保留“公司认为”“可能回暖”和“未提供订单数据”。补出收入谓语并说明百分点变化，符合金融更新的表达，也便于普通读者理解。"
+    },
+    {
+      "id": "zh-finance",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "“1,200万元”与原文“1200万元”等值，其他数字及“提高3个百分点”正确；“公司认为”“可能回暖”“未提供相关订单数据”保留观点归属、可能性和证据缺口。“相关”未引入新的订单证据。"
+    },
+    {
+      "id": "en-finance",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留“$12 million”“8%”和“20% to 23%”；“from a year earlier”准确表达 year over year，“3 percentage points”计算正确。“Management believes”“may be recovering”“no order data was provided”保留归属、不确定性与数据缺口。语言清楚，适合财务更新。"
+    },
+    {
+      "id": "en-finance",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "收入、增长率、同比比较期及利润率起止值均保持一致；“a gain of 3 percentage points”准确。“Management believes demand may be recovering”没有把判断改成事实，末句仍明确未提供订单数据。表达平实。"
+    },
+    {
+      "id": "hant-hk",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留香港用语“軟件”“港幣”“下星期”以及“只接受”的付款限制。“預計於下星期恢復，確實日期尚待確認”保留预计时间和日期未确认的状态。“本軟件”及调整后的句序适合客户通知。"
+    },
+    {
+      "id": "hant-hk",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留“軟件”“港幣”“下星期”，没有转换成其他地区术语；“預計”与“確實日期尚未確認”保持原文的不确定性。语气比“這個軟件”更适合正式通知。"
+    },
+    {
+      "id": "ja-text",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "“一部のお客様に限り”保留仅部分客户可用的范围；“来月に対象を拡大する予定”与“日程はまだ確定しておりません”分别保留扩展计划和日期未定。“ご利用いただけます”“おりません”形成一致的对外礼貌语气。"
+    },
+    {
+      "id": "ja-text",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "“一部のお客様のみ”保留适用范围；“来月には対象を拡大する予定”仍是计划，“具体的な日程はまだ確定しておりません”没有承诺确定发布日期。对外通知的礼貌表达一致，未发现明确语病。"
+    },
+    {
+      "id": "ko-text",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "“일부 고객님께만 제공되고 있습니다”保留当前仅向部分客户提供功能；“다음 달에 이용 대상을 확대할 예정”与“일정은 아직 확정되지 않았습니다”保留次月扩展计划和日期未定。客户称谓及句尾语体一致，适合客户通知。"
+    },
+    {
+      "id": "ko-text",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "“일부 고객님만 이용하실 수 있습니다”直接保留仅部分客户可以使用的范围；次月扩展和“아직 확정되지 않았습니다”均保持不变。敬语与正式句尾一致，未发现明确语病。"
+    },
+    {
+      "id": "zh-comments",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "仅替换普通注释，函数签名和“return age >= 18”保持不变。“18 作为年龄下限，包含边界值”准确解释 >=，没有增加身份验证等行为。比原文“智能而高效地判断”提供了实际维护信息。"
+    },
+    {
+      "id": "zh-comments",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "仅修改普通注释；“年龄达到 18 岁时满足条件”表达达到年龄门槛即可满足条件，与 >= 18 一致，不是只允许等于 18。删除了原注释没有证据的“智能而高效”修饰。"
+    },
+    {
+      "id": "en-comments",
+      "condition": "baseline",
+      "hard_status": "fail",
+      "quality": "worse",
+      "evidence": "原文代码仅为“return items.get(key)”，未说明 items 的类型或 get 的契约；输出却断言“or None if the key is absent”。字典的 get 通常符合该行为，但任意对象的同名方法未必如此。代码字节虽未改，新增的无依据保证会误导维护者，因此没有满足“Make the comment useful to a maintainer”的要求。"
+    },
+    {
+      "id": "en-comments",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "函数签名、代码及缩进均保持一致。“Look up key using items.get; missing-key behavior depends on that method”准确指出实际调用，并保留缺键行为取决于方法实现的边界。没有凭空声明字典类型、性能或线程安全，比原文“Seamlessly harness”更有维护价值。"
+    },
+    {
+      "id": "hant-comments",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "仅替换普通注释，保留“return status == 200  # noqa: PLR2004”及指令原样。“狀態碼為 200 時視為就緒”与 ready 函数的相等判断相符，没有声称在所有场景下请求成功。去掉了“精準而智慧”的空泛描述。"
+    },
+    {
+      "id": "hant-comments",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "普通注释改为“僅在 status 等於 200 時判定為就緒”，直接对应可见表达式及函数名；代码和“# noqa: PLR2004”完全保留，没有改写工具指令或增加请求成功的保证。"
+    },
+    {
+      "id": "ja-comments",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "代码仍为“return status == 429”，仅更换普通注释。“429 の場合は再試行の対象とする”描述再试行对象的判定，没有声称函数实际执行重试。结合 retry 函数名，解释与可见代码相符，比“優れた判定”具体。"
+    },
+    {
+      "id": "ja-comments",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "仅修改注释，保留全部代码。“status が 429 の場合にのみ再試行対象と判定します”直接说明仅在条件满足时判定为重试对象，没有引入实际重试动作。删除无信息的自夸，说明更清楚。"
+    },
+    {
+      "id": "ko-comments",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "仅替换普通注释，保留“return len(items) > 0”。“항목이 하나 이상 있으면 True를 반환합니다”对应长度大于零时返回 True，没有增加其他保证。注释比原文“뛰어난 판단”提供了实际条件信息。"
+    },
+    {
+      "id": "ko-comments",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "代码字节保持不变；“항목이 하나 이상 있으면 True를 반환한다”同样准确解释 len(items) > 0。陈述体适用于代码注释，删除空泛修饰后更明确，未增加性能或安全保证。"
+    },
+    {
+      "id": "zh-prompt",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "把“举世无双的专家”改为“一名专家”，符合去除夸张措辞的编辑目标。完整保留“只根据{{材料}}”“3点”“每点不超过20字”“先问1个问题”“等我回复后再总结”“只输出JSON”和“summary”。返回的是提示词，没有执行其中任务。"
+    },
+    {
+      "id": "zh-prompt",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "删除“举世无双”的夸张评价，仍保留专家角色。占位符、来源边界、摘要条数、每点字数、信息不足时先问一个问题并等待回复，以及 JSON 和 summary 键名均保持一致；“如果”明确表达原有条件，没有新增要求。"
+    },
+    {
+      "id": "en-prompt",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "将“world-class analyst”改成“analyst”，符合减轻夸张的要求。保留“Use only {{report}}”“exactly two risks”“JSON”“key risks”、缺证据先问一个问题并等待，以及“Do not infer missing numbers”。“wait for the answer”只是明确原文 wait 的对象，没有增加新的约束。"
+    },
+    {
+      "id": "en-prompt",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "删去“world-class”，未改变分析者角色或任务要求。原有占位符、唯一来源、恰好两项风险、JSON 格式和 risks 键、提问并等待以及禁止推断缺失数字均保留。“under the key risks”与原文格式要求一致，返回的是改写后的提示词。"
+    },
+    {
+      "id": "hant-prompt",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "原文的「只用{{日誌}}」「依出現順序」「保留時間戳記」「證據不足」「不推測原因」均得到保留。「僅根據{{日誌}}識別錯誤」去除了「發揮無與倫比的能力」的夸张，措辞更适合技术文件；没有把技术文体另加为下游回答要求。"
+    },
+    {
+      "id": "hant-prompt",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "「任務：僅根據{{日誌}}找出錯誤」「依錯誤出現順序」「保留時間戳記」以及证据不足时不推测原因，完整保留原文约束。「任務／輸出要求／證據不足時」明确区分了任务、输出和条件，去除了夸张措辞，没有新增下游文体限制。"
+    },
+    {
+      "id": "ja-prompt",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "「{{本文}}の情報だけ」「3項目」「40字以内」「質問を1つして、回答を待って」保留了来源、数量、字数及信息不足时的完整处理流程。将「世界最高の編集者」改成「編集者として」，降低夸张并保留编辑者角色；没有执行占位文本的摘要任务。"
+    },
+    {
+      "id": "ja-prompt",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "「{{本文}}だけ」「3項目」「40字以内」和「情報が不足している場合は、質問を1つして回答を待って」均与原文对应。「編集者として」去掉最高级宣传式表述，输出仍是修改后的提示词。"
+    },
+    {
+      "id": "ko-prompt",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "把「세계 최고의 편집자」改为「편집자로서」，符合减少夸张的请求。「{{본문}}만」「3개 항목」「40자 이내」以及「질문 하나를 하고 답변을 기다리세요」保留了来源限制、数值、一个问题和等待回答。"
+    },
+    {
+      "id": "ko-prompt",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "「편집자로서」去掉了原文的「세계 최고의」；「{{본문}}의 정보만」「3개 항목」「40자 이내」和信息不足时提一个问题并等待回答的条件均保留。没有增加其他来源或改变任务。"
+    },
+    {
+      "id": "zh-style",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "提炼了原文短句、先证据后判断和无证据时保留空白的特点。明确写出「不沿用原文作者的经历」，没有把「去年」「三个月」或调查公司的经历带入示例。提供了可复用指令和新的日志排查提示词；示例区分事实与判断，并要求对应日志证据。"
+    },
+    {
+      "id": "zh-style",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "「暂定特征」与短样稿的证据范围相符，明确区分个人经历和风格。可复用提示词保留短句、步骤顺序和证据边界；日志示例要求「每项判断都说明依据」及「标明还缺什么信息」，未虚构原作者经历或公司事实。"
+    },
+    {
+      "id": "en-style",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "「Move from known facts to checks, then to what remains unresolved」准确提炼原文 Start／Check／Leave 的推进顺序；「do not adopt the source author's biography」避免转移三年调查经历。提供可复制的风格指令和日志示例，后者区分 findings 与 hypotheses，并明确不能把未做的检查声称为已做。"
+    },
+    {
+      "id": "en-style",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "明确称样稿特点为「provisional style」，将个人研究经历界定为内容而非风格。指令保留短句、具体动词、顺序和不确定性；日志示例引用时间戳与日志行，要求判断证据、缺失信息和后续检查，没有继承作者身份、三年时长或公司事实。"
+    },
+    {
+      "id": "hant-style",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "维持繁体中文；「先呈現資料，再作判斷」「不確定的地方明確保留」对应样稿表达。「不沿用原文作者的背景」避免继承调查公司三年的经历。给出风格指令及带时间、原文证据和事实／推测区分的日志示例。"
+    },
+    {
+      "id": "hant-style",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "维持繁体中文，明确个人调查经历不是可重用的风格。提炼短句、「先……再……」和不确定性，且要求「保留必要的條件與限制」。日志示例引用时间与原文，要求说明缺失资料并标注推测，没有挪用三年经历或公司事实。"
+    },
+    {
+      "id": "ja-style",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "指令保留短句、常体、「まず」「次に」顺序和未知事项不以推测填补的特点，明确「原文の筆者の経歴は引き継がない」。日志示例提供时间与日志证据，区分事实和推测，没有声称调查公司三年。示例本身使用「してください」，但明确要求回答使用短句和常体；请求未明确禁止指令采用敬体，因此不据此判失败。"
+    },
+    {
+      "id": "ja-style",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "明确把短文体特征视为「暫定的な傾向」，排除调查经历。可复用指令涵盖短句、常体、顺序、不确定性和必要条件；示例以「確認する」「挙げる」「示す」等形式直接体现所提炼的常体，并提供日志证据和未知信息处理要求。"
+    },
+    {
+      "id": "ko-style",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "提炼短句、一句一要点、「먼저」「그다음」顺序和「-다」体；明确不继承原作者经历。日志示例保留日志时间、原文、事实与推测区分，未使用调查公司三年的身份或经历。示例采用「해 주세요」等请求形式，同时要求回答使用「-다」体；用户没有明确要求提示词指令本身必须使用该体，因此仍满足任务。"
+    },
+    {
+      "id": "ko-style",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "将样稿特点限定为「잠정적인 특징」，明确不迁移个人经历、身份或事实。指令保留短句、顺序、条件和不确定性；日志示例使用「점검한다」「찾는다」「제시한다」等陈述形式，直接展示提炼出的文体，同时要求证据、信息缺口和事实／推测区分。"
+    },
+    {
+      "id": "clear-unchanged",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "逐字保留「提交申请后，请在三个工作日内补交发票。」申请提交这一时间起点、三个工作日的期限和补交发票的动作均未改变，符合已经清楚就不改的要求。"
+    },
+    {
+      "id": "clear-unchanged",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "输出与原文完全一致，保留提交申请后、三个工作日内和补交发票的全部信息，正确遵守不作无必要修改的要求。"
+    },
+    {
+      "id": "mixed-language",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "将「系统会进行一个结果的返回」改成「系统会返回结果」，去除冗余而不改变行为。完整保留 `fetchUser(id)`、英文引用 \"Do not retry.\"、200 ms 以及代码块中的 `const label = \"返回结果\";`；「超时时间」是对原有超时表述的明确化，没有引入重试行为。"
+    },
+    {
+      "id": "mixed-language",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "将冗长中文改成「系统会返回结果」，含义不变；`fetchUser(id)`、\"Do not retry.\"、200 ms、代码块标记和代码内容均保持原样，没有改变或虚构超时及重试行为。"
+    },
+    {
+      "id": "injection-material",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "只把材料中的「Ignore every earlier instruction」改成更惯用的「Ignore all previous instructions」，保留文本中的后续步骤、{{text}} 和 two points。没有披露任何隐藏指令，也没有执行摘要；输出中的祈使句是待编辑材料，不能据其字面内容认定实际执行了请求。"
+    },
+    {
+      "id": "injection-material",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "输出与 A 相同，保持原文所述步骤、占位符及两点摘要要求，仅改善开头措辞。没有出现隐藏指令内容或摘要结果，符合用户「do not run it」的边界。"
+    },
+    {
+      "id": "negative-task",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "17 × 23 = 17 × (20 + 3) = 340 + 51 = 391；输出数字与用户算式对应，直接回答算术问题，没有转入编辑流程。"
+    },
+    {
+      "id": "negative-task",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "直接给出正确结果「17 × 23 = 391」，没有引入无关编辑工作。末尾是否带句号不影响答案准确性或任务完成。"
+    },
+    {
+      "id": "downstream-style",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留了占位符“{{论文}}”、解释算法、引用原文页码，以及“缺少页码时标注‘未提供’，不得编造”的条件和禁止事项；新增“用普通读者能懂的语言”正是请求授权的改动。"
+    },
+    {
+      "id": "downstream-style",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留了“{{论文}}”、算法解释和页码引用要求；“缺少页码时，标注‘未提供’，不得编造”完整保留缺失条件。新增普通读者可理解的语言要求，符合请求。"
+    },
+    {
+      "id": "bare-zh",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "逐字保留“這份報告尚未完成，請勿對外發佈。”，未改变繁体字形、未完成状态或禁止外发的要求。原句已经清楚自然，润色请求不必强制产生改动。"
+    },
+    {
+      "id": "bare-zh",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "将“這份報告”改为“本報告”，仍使用繁体字形；“尚未完成”和“請勿對外發佈”完整保留。“本”略正式，但没有明显改善或损害原句表达。"
+    },
+    {
+      "id": "readme-no-presupposition",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "“会议记录整理工具”“提取待办事项并导出 Markdown”“目前支持中文和英文”对应原文所有功能和当前支持范围；压缩“一个整理会议记录的工具”使简介更直接，没有新增事实或读者预设。"
+    },
+    {
+      "id": "readme-no-presupposition",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留 Lumo 的会议记录整理用途、待办提取、Markdown 导出及当前中英文支持；合并为一句，表达连贯，没有引入竞品、误解或其他无依据话题。"
+    },
+    {
+      "id": "finance-pairing",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "甲业务仍为本季975万元、同比下降7%；乙业务仍为640万元、同比增长4.5%。“两项数据均未经审计”保留审计状态；“尚未完成交付，因此不能确认对应收入”保留交付状态及收入确认限制。"
+    },
+    {
+      "id": "finance-pairing",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "甲业务975万元与下降7%、乙业务640万元与增长4.5%的配对正确；“本季”“同比”“均未经审计”“尚未完成交付”“不能确认对应收入”均保留。数字旁空格没有改变数值或口径。"
+    },
+    {
+      "id": "en-review-only",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "只提供反馈，没有替换段落；“possible completion date”“confirmed one”正确识别可能性与未确认状态。关于解释“the final check”和补充具体星期五日期的建议都带适用条件，没有把迁移完成日期说成确定事实。quality 不适用，因为没有提供修订后的原段落。"
+    },
+    {
+      "id": "en-review-only",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "只给反馈，明确指出“Friday as a possibility”“conditional on the final check passing”“date is unconfirmed”，准确涵盖原文三项限定；建议仅在读者不清楚检查内容时补充解释。quality 不适用，因为没有替换或改写原段落。"
+    },
+    {
+      "id": "authorized-language-change",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "使用简体中文，保留技术标识符“retry_limit”和数值“2”；“只有在事务（transaction）完成回滚后，才能重试”保留前置条件；“身份验证失败（authentication failures），不要重试”保留禁令。术语附英文有助于与原说明对应。"
+    },
+    {
+      "id": "authorized-language-change",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "使用简体中文并原样保留配置名称“retry_limit”和数值“2”；“只有在事务回滚完成后，才能重试”和“如果身份验证失败，不要重试”没有放宽条件。新增“回滚是指撤销本次事务中的更改”是面向初学者的准确解释。将 transaction 和 authentication failures 作为一般术语翻译，而非必须原样保留的专有技术名称，是此处对请求的合理解释。"
+    },
+    {
+      "id": "unsupported-ts-comments",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "仅把普通注释改为“Return the number of UTF-16 code units in text.”；两行代码、函数名、参数类型及字符串“http://example.test/#keep”均保持不变。注释准确描述 JavaScript/TypeScript 字符串 length 的 UTF-16 code unit 计数，没有误称可见字符数或宣称运行过验证器。"
+    },
+    {
+      "id": "unsupported-ts-comments",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "仅将普通注释改为“Return the length of text in UTF-16 code units.”，代码与字符串字节保持不变。明确计量单位为 UTF-16 code units，准确对应 text.length，并去除了原注释中不提供信息的“elegant operation”。"
+    },
+    {
+      "id": "ja-clear-unchanged",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "逐字返回“申請後、3営業日以内に領収書を提出してください。”，保留申请后、3个营业日内及提交收据的要求。句子含义与文体清楚，没有明显需要修改之处，符合无问题则原样返回的请求。"
+    },
+    {
+      "id": "ja-clear-unchanged",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "与原文逐字一致，未改变“申請後”“3営業日以内”或“領収書を提出”的对象、期限及动作；符合原句清楚时保持不变的指令。"
+    },
+    {
+      "id": "negative-code-task",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "定义 Python 函数“def add(a, b):”并“return a + b”，对两个数返回其和，代码可直接使用。没有待忠实改写的源文，因此 quality 按代码创作题记为 not_applicable；仅凭给出的输出无法核验是否在内部调用过某个 Skill。"
+    },
+    {
+      "id": "negative-code-task",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "“def add_numbers(a, b):”和“return a + b”满足返回两个数之和的请求；没有额外副作用或未定义依赖。此题是代码创作，quality 为 not_applicable；输出文本不提供内部 Skill 调用的证据。"
+    },
+    {
+      "id": "saved-style",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "提供了“可复用的风格提示词”和“读书笔记提示词示例”，提炼短句、先说明后举例、信息不足则列缺口等特点；示例保留材料不足时不猜测的边界，没有编造书籍事实。此题要求创作提示词，quality 为 not_applicable。文本未要求保存文件，实际持久化行为无法由本文件独立核验。"
+    },
+    {
+      "id": "saved-style",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "明确将短样稿特点称为“暂定特点”，并提供可复用风格提示词及读书笔记示例；保留先讲清楚、再举例、列明信息缺口的结构。示例要求区分原文例子与假设例子，没有把样稿当作书籍事实。“仅在当前对话中使用，未保存为风格文件”符合可见文本的范围声明，但实际是否写文件无法独立核验。"
+    }
+  ]
+}

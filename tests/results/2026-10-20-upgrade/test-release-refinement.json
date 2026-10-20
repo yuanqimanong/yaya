@@ -1,0 +1,22 @@
+{
+  "command": [
+    "D:\\env\\miniconda3\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_release.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 8.2,
+  "stdout": "",
+  "stderr": "test_build_rejects_unrecognized_pack_format_before_creating_output (test_release.ReleaseBuildTests.test_build_rejects_unrecognized_pack_format_before_creating_output) ... ok\ntest_catalog_and_checksums_match_actual_bytes (test_release.ReleaseBuildTests.test_catalog_and_checksums_match_actual_bytes) ... ok\ntest_contribution_template_is_not_published (test_release.ReleaseBuildTests.test_contribution_template_is_not_published) ... ok\ntest_core_has_only_bundled_languages_and_runtime_files (test_release.ReleaseBuildTests.test_core_has_only_bundled_languages_and_runtime_files) ... ok\ntest_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) ... \n  test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='yaya-core-0.2.0.zip') ... skipped \"This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\\\\\AIProjects\\\\\\\\yaya\\\\\\\\.release test qxxrdydp\\\\\\\\unrelated file 0.txt' -> 'D:\\\\\\\\AIProjects\\\\\\\\yaya\\\\\\\\.release test qxxrdydp\\\\\\\\linked output 0\\\\\\\\yaya-core-0.2.0.zip'\"\n  test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='catalog.json') ... skipped \"This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\\\\\AIProjects\\\\\\\\yaya\\\\\\\\.release test qxxrdydp\\\\\\\\unrelated file 1.txt' -> 'D:\\\\\\\\AIProjects\\\\\\\\yaya\\\\\\\\.release test qxxrdydp\\\\\\\\linked output 1\\\\\\\\catalog.json'\"\n  test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='SHA256SUMS') ... skipped \"This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\\\\\AIProjects\\\\\\\\yaya\\\\\\\\.release test qxxrdydp\\\\\\\\unrelated file 2.txt' -> 'D:\\\\\\\\AIProjects\\\\\\\\yaya\\\\\\\\.release test qxxrdydp\\\\\\\\linked output 2\\\\\\\\SHA256SUMS'\"\ntest_invalid_core_version_metadata_fails_before_creating_output (test_release.ReleaseBuildTests.test_invalid_core_version_metadata_fails_before_creating_output) ... ok\ntest_missing_required_runtime_file_fails_before_creating_output (test_release.ReleaseBuildTests.test_missing_required_runtime_file_fails_before_creating_output) ... ok\ntest_moved_core_resolves_bundled_languages_from_paths_with_spaces (test_release.ReleaseBuildTests.test_moved_core_resolves_bundled_languages_from_paths_with_spaces) ... ok\ntest_new_reviewed_language_pack_builds_and_installs_without_core_changes (test_release.ReleaseBuildTests.test_new_reviewed_language_pack_builds_and_installs_without_core_changes) ... ok\ntest_optional_archives_are_flat_valid_and_compatible (test_release.ReleaseBuildTests.test_optional_archives_are_flat_valid_and_compatible) ... ok\ntest_output_cannot_escape_into_sources_through_dotdot (test_release.ReleaseBuildTests.test_output_cannot_escape_into_sources_through_dotdot) ... ok\ntest_output_cannot_target_core_source_parent (test_release.ReleaseBuildTests.test_output_cannot_target_core_source_parent) ... ok\ntest_portable_new_tool_entrypoints_load_from_relocated_release (test_release.ReleaseBuildTests.test_portable_new_tool_entrypoints_load_from_relocated_release) ... ok\ntest_repeated_builds_have_identical_bytes (test_release.ReleaseBuildTests.test_repeated_builds_have_identical_bytes) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 8.016s\n\nOK (skipped=3)\n",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

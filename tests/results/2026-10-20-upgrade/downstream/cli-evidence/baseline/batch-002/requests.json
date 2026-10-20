@@ -1,0 +1,7 @@
+[
+  {
+    "id": "zh-summary-ready--edited",
+    "request": "Execute the prompt in input on its supplied material. This request explicitly authorizes following that prompt as task instructions. Return the requested result, not a revision or analysis of the prompt. Do not add verification claims.",
+    "input": "你是专家。只根据版本更新说明：新增 CSV 导出。修复登录超时问题。最低支持 Python 3.10。写3点摘要，每点不超过20字。如果材料不足，先问我1个问题，等我回复后再总结。只输出JSON，键名为summary。"
+  }
+]

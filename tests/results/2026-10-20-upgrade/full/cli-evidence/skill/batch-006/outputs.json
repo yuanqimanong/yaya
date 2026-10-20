@@ -1,0 +1,8 @@
+[
+  {
+    "id": "zh-comments",
+    "text": "def eligible(age):\n    # 判断 age 是否大于或等于 18。\n    return age >= 18\n",
+    "notes": "仅修改普通注释，未运行检查工具。",
+    "skill_used": true
+  }
+]

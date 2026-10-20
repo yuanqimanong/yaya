@@ -1,0 +1,2042 @@
+{
+  "runner_protocol": 1,
+  "runner_sha256": "3d1e94c2c735e1623b1cd0a89f591255b6dd6e7f9978e1aa0372ffad15811d71",
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
+  ],
+  "manifest_sha256": "ecf53763c9fa96bb6a447f9e5c31e4ac2789b5c3d718ee4e5cc16142ef26f7c9",
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "conditions": [
+    "skill",
+    "baseline"
+  ],
+  "baseline_kind": "no_skill",
+  "competitor_sources": {},
+  "tool_policy": "forbidden in prompt; tool or unknown item events invalidate output",
+  "tool_claim": "no tool activity observed in accepted JSONL; tools are not physically disabled",
+  "project_instructions": "project_doc_max_bytes=0 for this process; host CLI configuration otherwise inherited",
+  "isolation": "one ephemeral CLI process and working directory per case",
+  "jobs": [
+    {
+      "directory": "skill/batch-001",
+      "id": "zh-finance",
+      "condition": "skill",
+      "prompt_sha256": "a5d361661830fd33ed8d759af0e6b3d3537c04f3c4ca5d2f6010c9fedcea5c9d",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-001",
+      "id": "zh-finance",
+      "condition": "baseline",
+      "prompt_sha256": "7febb9e07ae4cfc978ac2446c542f8d9ca64e4efc8dd03dcbd41ba3801b01459",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-002",
+      "id": "en-finance",
+      "condition": "skill",
+      "prompt_sha256": "05a464e64a8b37f8363c168aefb139612e68a93c30e7267d7b90d2347cdffa2a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      }
+    },
+    {
+      "directory": "baseline/batch-002",
+      "id": "en-finance",
+      "condition": "baseline",
+      "prompt_sha256": "d9875a71da00f9f90c84dcd6c427ff8862dfb02df3e8dcef3eeeac6fc7eee38b",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-003",
+      "id": "hant-hk",
+      "condition": "skill",
+      "prompt_sha256": "6afbef4184ce28749004d6572db08010f77a1d3e2b39104ce403c8be290c14e4",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "data/language-packs/zh-Hant/GUIDE.md": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00"
+      }
+    },
+    {
+      "directory": "baseline/batch-003",
+      "id": "hant-hk",
+      "condition": "baseline",
+      "prompt_sha256": "223321f071615025bb230aeaee42c5c03c672434c3e6e1b766ff6f5a58ee071a",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-004",
+      "id": "ja-text",
+      "condition": "skill",
+      "prompt_sha256": "3f3eecff6572adf346138f289c8af64b4924c0f235ae7dcdcf7e857fb5424ceb",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "data/language-packs/ja/GUIDE.md": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+      }
+    },
+    {
+      "directory": "baseline/batch-004",
+      "id": "ja-text",
+      "condition": "baseline",
+      "prompt_sha256": "0766357eb3ba61b8f1294dedcab21f978c6edadbd65a0c7ec2e978a71c33403b",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-005",
+      "id": "ko-text",
+      "condition": "skill",
+      "prompt_sha256": "2ba6c6d635b202b7468f455a021a124fb0d4269eabc5981653c4df18c61c9a35",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "data/language-packs/ko/GUIDE.md": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9"
+      }
+    },
+    {
+      "directory": "baseline/batch-005",
+      "id": "ko-text",
+      "condition": "baseline",
+      "prompt_sha256": "476a30a26c6ec5de18b90d3040301635173454240cc57cb30a6e03032b06867d",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-006",
+      "id": "zh-comments",
+      "condition": "skill",
+      "prompt_sha256": "95218239c919f121da6dafeeeb69c94678d0139744284966505ba3a9de19aa25",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-006",
+      "id": "zh-comments",
+      "condition": "baseline",
+      "prompt_sha256": "998a953c67b8715ce87b9380248c20c1e5af30439586be850d252f86e1f9c917",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-007",
+      "id": "en-comments",
+      "condition": "skill",
+      "prompt_sha256": "517c97a919520fc8a3945c10aa781cb5c4f5b6e4def56e2c86f86b19e9ef59fd",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      }
+    },
+    {
+      "directory": "baseline/batch-007",
+      "id": "en-comments",
+      "condition": "baseline",
+      "prompt_sha256": "ceaf5dee3f14a721564d0084a173cf0075d767d3f6adcd4e2e45c89225c4ad11",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-008",
+      "id": "hant-comments",
+      "condition": "skill",
+      "prompt_sha256": "9106c990ea2730451ad282459a1808203b372aaa5434302c6bc8a86535f0ce97",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+        "data/language-packs/zh-Hant/GUIDE.md": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00"
+      }
+    },
+    {
+      "directory": "baseline/batch-008",
+      "id": "hant-comments",
+      "condition": "baseline",
+      "prompt_sha256": "fee536f5b67e84011df7314eeec0ca2522885baaa36ede976129fba3fe0633c0",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-009",
+      "id": "ja-comments",
+      "condition": "skill",
+      "prompt_sha256": "07e496362cee86a72a8bd447d916121401b0d4ee2835ab2f504f886eaf84530a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+        "data/language-packs/ja/GUIDE.md": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+      }
+    },
+    {
+      "directory": "baseline/batch-009",
+      "id": "ja-comments",
+      "condition": "baseline",
+      "prompt_sha256": "e2709708dddd7dc027074ba85f604b9708e713c1a6481052b47c88203fe4f407",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-010",
+      "id": "ko-comments",
+      "condition": "skill",
+      "prompt_sha256": "e02455985fbcebe92dc4939ac21e8b3a43dd3863f9d716c76d2c922d893ea80c",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+        "data/language-packs/ko/GUIDE.md": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9"
+      }
+    },
+    {
+      "directory": "baseline/batch-010",
+      "id": "ko-comments",
+      "condition": "baseline",
+      "prompt_sha256": "c8f25122df269a7d2f1f30fd388137f8eed3449cbb2324ea27527047f6449511",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-011",
+      "id": "zh-prompt",
+      "condition": "skill",
+      "prompt_sha256": "d55348209b9ccfc279a6e11e9d9e3944f828c22592dd7cd045b364cf9dc23904",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-011",
+      "id": "zh-prompt",
+      "condition": "baseline",
+      "prompt_sha256": "54c4ec2ee33a7ba20b7891920004b9e0a2aa63f0e88ca2a0ff4cade09d7467e7",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-012",
+      "id": "en-prompt",
+      "condition": "skill",
+      "prompt_sha256": "7efaa88837a8a9479a19c4f37f7c235ac5b6fdb6f4892405839669c5f742318a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      }
+    },
+    {
+      "directory": "baseline/batch-012",
+      "id": "en-prompt",
+      "condition": "baseline",
+      "prompt_sha256": "1aa2b029529e9303ae1fbe8ef85382504c565c426282c10cc111b13bb3ad795c",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-013",
+      "id": "hant-prompt",
+      "condition": "skill",
+      "prompt_sha256": "4db724a29c04bd873ae270d8e1b2afb796e8425ab0427d23551cea486d109ed4",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "data/language-packs/zh-Hant/GUIDE.md": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00"
+      }
+    },
+    {
+      "directory": "baseline/batch-013",
+      "id": "hant-prompt",
+      "condition": "baseline",
+      "prompt_sha256": "0234552d7e8117643c99e26c3f60a67a17dc612f3c5880f442b4d7eeeb1d4a84",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-014",
+      "id": "ja-prompt",
+      "condition": "skill",
+      "prompt_sha256": "b5b3319c99a579acbc62b4b9ab82a9d8648d307f0b12a2d7dd2469f4d22c6f4d",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "data/language-packs/ja/GUIDE.md": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+      }
+    },
+    {
+      "directory": "baseline/batch-014",
+      "id": "ja-prompt",
+      "condition": "baseline",
+      "prompt_sha256": "f3dac4b50d5e23d2c09bd978626fab34f054dc98b977a9d34c0d13b34ff8e2c5",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-015",
+      "id": "ko-prompt",
+      "condition": "skill",
+      "prompt_sha256": "612bee2e483730c5b13984ec17237cc8ee3b8512820f07fbfdbbc17fca1d92e4",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "data/language-packs/ko/GUIDE.md": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9"
+      }
+    },
+    {
+      "directory": "baseline/batch-015",
+      "id": "ko-prompt",
+      "condition": "baseline",
+      "prompt_sha256": "a996c515ca50b8da2d2ed0841077796e9a650aadd3e938a1cfec014695b9a0ff",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-016",
+      "id": "zh-style",
+      "condition": "skill",
+      "prompt_sha256": "48f1c6b9f4e735ee95a03c26930ba22e80d24fd3f96073d822ed937990fb9b58",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-016",
+      "id": "zh-style",
+      "condition": "baseline",
+      "prompt_sha256": "2e6dc46cd53a8b5077c7b2718c2ea5a972eda268216c5d7c2fac010b4793920b",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-017",
+      "id": "en-style",
+      "condition": "skill",
+      "prompt_sha256": "c286ca34e08733ccfb35969f57fd9c54f731da0b4ab991dcda67c10cf6c6e4b0",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      }
+    },
+    {
+      "directory": "baseline/batch-017",
+      "id": "en-style",
+      "condition": "baseline",
+      "prompt_sha256": "198eb0b278afde9941f9d6d44dad51ab85c208bb65b4e9a9f1ee8a0677aa81ec",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-018",
+      "id": "hant-style",
+      "condition": "skill",
+      "prompt_sha256": "af4a2feab3a6d96801ea3804d626a4d612d52cd406eb268e184a52d14d67c1ba",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+        "data/language-packs/zh-Hant/GUIDE.md": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00"
+      }
+    },
+    {
+      "directory": "baseline/batch-018",
+      "id": "hant-style",
+      "condition": "baseline",
+      "prompt_sha256": "4b388f024383458b17232aa0ea4ea5eaa6a8c2f8cd93529984e69657d56bb1a0",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-019",
+      "id": "ja-style",
+      "condition": "skill",
+      "prompt_sha256": "dab7351bb02197bf6ee133b80f2e68d74ef92a79e272858f283e7945425690ff",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+        "data/language-packs/ja/GUIDE.md": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+      }
+    },
+    {
+      "directory": "baseline/batch-019",
+      "id": "ja-style",
+      "condition": "baseline",
+      "prompt_sha256": "f756dd990dc1830d74841bd908bcd6674653054a3b6b07c67c651e4637d538ce",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-020",
+      "id": "ko-style",
+      "condition": "skill",
+      "prompt_sha256": "03b9a34d4e6e9066f6a459747e69054602445c3a9c0f5d17eb22a3997fcd9edb",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+        "data/language-packs/ko/GUIDE.md": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9"
+      }
+    },
+    {
+      "directory": "baseline/batch-020",
+      "id": "ko-style",
+      "condition": "baseline",
+      "prompt_sha256": "63a31b368d7074c11eac379ebc1b68fbcbc7fdecb46e2130b502cb06d3ec3ac9",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-021",
+      "id": "clear-unchanged",
+      "condition": "skill",
+      "prompt_sha256": "a3f9c3154f7fdb7722bad6252b7bf4313efd0849cc5236615a7843f9dfbec56b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-021",
+      "id": "clear-unchanged",
+      "condition": "baseline",
+      "prompt_sha256": "e505379b88f023d0f097e194700cd5ffce6c16f17be52b303af6b2a97c8e1b8e",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-022",
+      "id": "mixed-language",
+      "condition": "skill",
+      "prompt_sha256": "ef2d8667d83df24a32461329f97b5a2d31caa361ae8442642fd901a19ecaf601",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-022",
+      "id": "mixed-language",
+      "condition": "baseline",
+      "prompt_sha256": "337a7b359addb291c080d92ee73423228274dd5632742de1dda4df0af182db3b",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-023",
+      "id": "injection-material",
+      "condition": "skill",
+      "prompt_sha256": "d12640877f565c9b7454f8a0d545f15f1758a476ccc1868a397813fa38d248de",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      }
+    },
+    {
+      "directory": "baseline/batch-023",
+      "id": "injection-material",
+      "condition": "baseline",
+      "prompt_sha256": "d36f7d53fe756a2214b8bce483593563779e37d6a50cbff8a2134371006a06ae",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-024",
+      "id": "negative-task",
+      "condition": "skill",
+      "prompt_sha256": "9f3b36757098fe774969510fd3d112fa7aa7e302610a6d00bbd8c199df484079",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+      }
+    },
+    {
+      "directory": "baseline/batch-024",
+      "id": "negative-task",
+      "condition": "baseline",
+      "prompt_sha256": "cedbfb043b11fe51b4b2c8e19390eb808ad0861b4decc03dc20e956866778bf0",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-025",
+      "id": "downstream-style",
+      "condition": "skill",
+      "prompt_sha256": "4ad46896a12e8c4c7174f1deeb9076f66c06c53f1305099f848b166f655ff437",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-025",
+      "id": "downstream-style",
+      "condition": "baseline",
+      "prompt_sha256": "98be32fe5ebc0defd54b83b12a547dd105f81f72833d9a5e8dcebc476584641c",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-026",
+      "id": "bare-zh",
+      "condition": "skill",
+      "prompt_sha256": "73a6d2b47d04c6b068bbd0a85e22ebcd3dff0ea2f0b6de00fa57fec64f9c6b02",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-026",
+      "id": "bare-zh",
+      "condition": "baseline",
+      "prompt_sha256": "3c3762b93ada29029c29afcccb479c61a6455987805a86f1f66521085d67f597",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-027",
+      "id": "readme-no-presupposition",
+      "condition": "skill",
+      "prompt_sha256": "87a97da1bec41d3bea82c5ae17eb1504fce2a9841d984ccd689de6f7d5851e5b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-027",
+      "id": "readme-no-presupposition",
+      "condition": "baseline",
+      "prompt_sha256": "75d821aaa291da51876107030d76bc95e05e75c7c408c593873344cdd135c2bb",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-028",
+      "id": "finance-pairing",
+      "condition": "skill",
+      "prompt_sha256": "ccea9ce2749948f0671a627c6708b3e63a6217ff518f121f82c6632bc69cc619",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-028",
+      "id": "finance-pairing",
+      "condition": "baseline",
+      "prompt_sha256": "ffcf4cd700dd4bf1376da9976cadc0f22c8440dad6e67fcb7bf35e1dd0b76f29",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-029",
+      "id": "en-review-only",
+      "condition": "skill",
+      "prompt_sha256": "3e38e9bed69cdeee07cd94a75f50c1bbd71d1fb4d81fd70686baeb75e913524a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      }
+    },
+    {
+      "directory": "baseline/batch-029",
+      "id": "en-review-only",
+      "condition": "baseline",
+      "prompt_sha256": "e304d1b46b7d28ee86250fadc034973e1b5dc916280f999bac8a1b5e730702ab",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-030",
+      "id": "authorized-language-change",
+      "condition": "skill",
+      "prompt_sha256": "d51fa9ad9faf3c96d5967e598367aa281f0515a14b185bac8f4d6f782d62b33c",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      }
+    },
+    {
+      "directory": "baseline/batch-030",
+      "id": "authorized-language-change",
+      "condition": "baseline",
+      "prompt_sha256": "ffa603b8068b041401f6bf2d0906848c826b26e86e9dd36b54beb98a61b333a6",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-031",
+      "id": "unsupported-ts-comments",
+      "condition": "skill",
+      "prompt_sha256": "59b0a940b54551f18524198125a2167c9cbcabe452d08e5ea71775f1df6f005b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      }
+    },
+    {
+      "directory": "baseline/batch-031",
+      "id": "unsupported-ts-comments",
+      "condition": "baseline",
+      "prompt_sha256": "7f9b606571895a0264e95a6e19c620ceabdba51d9353fd16b412cea54310d053",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-032",
+      "id": "ja-clear-unchanged",
+      "condition": "skill",
+      "prompt_sha256": "28a6e894daa2c6f84c905991ea4a55cd8d743934a572aa26ab303f5180e21605",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/text.md": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "data/language-packs/ja/GUIDE.md": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+      }
+    },
+    {
+      "directory": "baseline/batch-032",
+      "id": "ja-clear-unchanged",
+      "condition": "baseline",
+      "prompt_sha256": "0f36d928c01049caa44ac9916afeff06188c3fe391c2a3c9ea6a030bd898e8bc",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-033",
+      "id": "negative-code-task",
+      "condition": "skill",
+      "prompt_sha256": "f12f4a102c36f12bd53d938b1a048a3eb883ca48ff40179c9ef2a633c2a1db45",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+      }
+    },
+    {
+      "directory": "baseline/batch-033",
+      "id": "negative-code-task",
+      "condition": "baseline",
+      "prompt_sha256": "fcb40faa6035734449b63962ec5cab11de9b02262b781de681fe58028c5a276a",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-034",
+      "id": "saved-style",
+      "condition": "skill",
+      "prompt_sha256": "141b2d9ca77125cd7e989135092248d42a66e9e3b8088c2d65cdb57a0138311c",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-034",
+      "id": "saved-style",
+      "condition": "baseline",
+      "prompt_sha256": "5deec3b1178fcdce39c03f7ea928d4503171351e84c46b4b760c994bfdc30bb3",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-035",
+      "id": "H001",
+      "condition": "skill",
+      "prompt_sha256": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-035",
+      "id": "H001",
+      "condition": "baseline",
+      "prompt_sha256": "655f7ed40a4d26251021d0fcf318b5e380dcce4b80e00e2b098503cf028e65ce",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-036",
+      "id": "H002",
+      "condition": "skill",
+      "prompt_sha256": "68ba3e2fa49d906bbb7cc432a58687ff77e352570a2d99812fd93bdef2cdda7e",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-036",
+      "id": "H002",
+      "condition": "baseline",
+      "prompt_sha256": "c98ee128a58fd7beca51a38ab7d71b2bf4005e67e0257363c2eeda5158d195e3",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-037",
+      "id": "H003",
+      "condition": "skill",
+      "prompt_sha256": "0851fbc992740e06d6e37cc1005ab2d388922ab387c617db8dd00dd8595f711f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-037",
+      "id": "H003",
+      "condition": "baseline",
+      "prompt_sha256": "00c54d584d9af666d98615bf0780d5e14d8d354ce8edd198dc4e8425fd610248",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-038",
+      "id": "H004",
+      "condition": "skill",
+      "prompt_sha256": "82fecc9cf7383a92275e64d4aece3de1c57e7f002c40acb5c10509a1bd5efc6d",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-038",
+      "id": "H004",
+      "condition": "baseline",
+      "prompt_sha256": "35ecd266ded046c9d71e9e57097e3f62ae6d2a9363620c4accfc953af36a9e2a",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-039",
+      "id": "H005",
+      "condition": "skill",
+      "prompt_sha256": "1ab919c43007881634e3ed42cdef1cd6bc8f3bd190e5f8a2af4d8a41e205f592",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-039",
+      "id": "H005",
+      "condition": "baseline",
+      "prompt_sha256": "59a53696ea34d1e4db84aac2333634f6b380e96939147082484f1ff8632b8a53",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-040",
+      "id": "H006",
+      "condition": "skill",
+      "prompt_sha256": "96a841de420b8a4b695f723159e1fc39affed067991935a753257a52c695cd9b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-040",
+      "id": "H006",
+      "condition": "baseline",
+      "prompt_sha256": "82653a1c88dadbf2c259ffeb9b998fd2a6344a1b9208fb67d4e23999cc842478",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-041",
+      "id": "H007",
+      "condition": "skill",
+      "prompt_sha256": "37a46da65573b2d1104d106407a6ab997e1e93a8a3c0a5ea7da2394e08a536fe",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-041",
+      "id": "H007",
+      "condition": "baseline",
+      "prompt_sha256": "65ccaf3c4d6a90193520123f8d3565d021196d11ae13a138bbab85e6fd6d138a",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-042",
+      "id": "H008",
+      "condition": "skill",
+      "prompt_sha256": "86a141ae700b19a72ff8ebef2b0ac7251232337da8197de442a1ec7b60d43b4d",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-042",
+      "id": "H008",
+      "condition": "baseline",
+      "prompt_sha256": "3c1a328c2fdf0225253b75c8e132a67e2112471ffd1d025f609acc2514182ad5",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-043",
+      "id": "H009",
+      "condition": "skill",
+      "prompt_sha256": "2fc07e5cf962c2a08592b57e5be88a0101391bec6edce870ac5e57ac875dd8b7",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-043",
+      "id": "H009",
+      "condition": "baseline",
+      "prompt_sha256": "c106fbca6ecec7759b9de221c2ea954be0977bf3edb3ed72bbb3c9b215f305da",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-044",
+      "id": "H010",
+      "condition": "skill",
+      "prompt_sha256": "84bc31e807ec314e50a24a170275d22c4998643ce1cda4d6517bbe5e7a6e5cf7",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-044",
+      "id": "H010",
+      "condition": "baseline",
+      "prompt_sha256": "91ada81c01b324933865ddb0128c65081534d16862a26d438f1bfdf4248e7e3d",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-045",
+      "id": "H011",
+      "condition": "skill",
+      "prompt_sha256": "1ea300037c31bfc15bc3985e5445dc75992f421f6858261a5b9668674fc08436",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-045",
+      "id": "H011",
+      "condition": "baseline",
+      "prompt_sha256": "a9719c68a57fb5a8b5b1b0c938eafb3212934e42570b955e7b7901c8481e646e",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-046",
+      "id": "H012",
+      "condition": "skill",
+      "prompt_sha256": "5c643baf619c1e4e01a1a04893d8269221fedcc9614d145fc2aacdbf8be7b614",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-046",
+      "id": "H012",
+      "condition": "baseline",
+      "prompt_sha256": "deff18616f04b9f7910ef6100f2386c0cc271dfaaf01038f5bcf3ada4f733537",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-047",
+      "id": "H013",
+      "condition": "skill",
+      "prompt_sha256": "30a4950e70ec2578734a45fda63e5732940d816ee8f2bf3e03e62ba4d44a580d",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-047",
+      "id": "H013",
+      "condition": "baseline",
+      "prompt_sha256": "a5f6328ac6127711dbdf12576b613314501e09530115b29040e736320e50de81",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-048",
+      "id": "H014",
+      "condition": "skill",
+      "prompt_sha256": "ef6cacb61ba684c93d82cb3963ae62b4b294da1e38ba0224913c6d94b243c681",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-048",
+      "id": "H014",
+      "condition": "baseline",
+      "prompt_sha256": "9458999b6255dc2051a9b499f1c2b3546cd983959dc49dbfb3d13106c685d0dd",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-049",
+      "id": "H015",
+      "condition": "skill",
+      "prompt_sha256": "b24cfe60c3f66bb2d204737778c752dedb7a00a72b7a33310aa81219e888513f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-049",
+      "id": "H015",
+      "condition": "baseline",
+      "prompt_sha256": "9d4cce2c4b421d1992a0d4c36a0c4dc52141b6ac7664e7c10291a31457229664",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-050",
+      "id": "H016",
+      "condition": "skill",
+      "prompt_sha256": "65a09492e3ebacc4f601fa9e85a0587b382b94c34657b05e4db0452a8c871721",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-050",
+      "id": "H016",
+      "condition": "baseline",
+      "prompt_sha256": "3bf6912d4a13d9bf7aca48731300f212d627059332562b4ee4db6275292297df",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-051",
+      "id": "H017",
+      "condition": "skill",
+      "prompt_sha256": "5aede5d660d698f9b4c866a7eba193ac361ff65b4f9d009d9204c086eb472554",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-051",
+      "id": "H017",
+      "condition": "baseline",
+      "prompt_sha256": "477a49ffcf8094f6af9858dad6f0d5960811dc47062891361e31c86318d14c41",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-052",
+      "id": "H018",
+      "condition": "skill",
+      "prompt_sha256": "00651a49e3aac5b835811d5f668325f798b51da2fd5a07f1e5c74cd532394d1a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-052",
+      "id": "H018",
+      "condition": "baseline",
+      "prompt_sha256": "e08786b6ba51bc3c48ee42d0a503118ca34c5e56986cfa6ff48c38b2ac93b798",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-053",
+      "id": "H019",
+      "condition": "skill",
+      "prompt_sha256": "a862897955f19e6eeb1e5366defba61b48d19d730bf123e58b4e8f8e8dc6d46c",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-053",
+      "id": "H019",
+      "condition": "baseline",
+      "prompt_sha256": "d536ad7793f7929cca1952cfc2890973f603502b7aeaa9ceb076e09472c61ce7",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-054",
+      "id": "H020",
+      "condition": "skill",
+      "prompt_sha256": "8160cc3bf4d87061600d89035b2e3aa531dc4a8431303f698d82ca629d3b22a7",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-054",
+      "id": "H020",
+      "condition": "baseline",
+      "prompt_sha256": "60e3f3c19cdbeab4108bfc23ab882471efa9e58eddac449f0549119f6e97fb41",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-055",
+      "id": "H021",
+      "condition": "skill",
+      "prompt_sha256": "c1925efad3895f98461dc4306c8b9cb16981785ae0e8d02a9190a914c9217a16",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-055",
+      "id": "H021",
+      "condition": "baseline",
+      "prompt_sha256": "6852cd0eab2d6c41f5642676643b49b786a0ae8b612a42d9ddc8e63977ea64e7",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-056",
+      "id": "H022",
+      "condition": "skill",
+      "prompt_sha256": "c34379387a3edddec610ccb06685ce5efd2c4db3742b7418481193565f3afdd2",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-056",
+      "id": "H022",
+      "condition": "baseline",
+      "prompt_sha256": "996f63ca44c862ae15b411b35d0d1fce6141c8783369e523abfbc274260372b4",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-057",
+      "id": "H023",
+      "condition": "skill",
+      "prompt_sha256": "8fb6a782d64fed48e93a86df42cbb8f29d6dfc660a259febe3d99b3e3f4c32fb",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-057",
+      "id": "H023",
+      "condition": "baseline",
+      "prompt_sha256": "ad0bfcdb5b21f6d045b908b98e98b996bba41c20f267e1d32e00f520a1776e7d",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-058",
+      "id": "H024",
+      "condition": "skill",
+      "prompt_sha256": "ad14e9f9266d0d00b216ef8bb0e5cef1df7a94f645444b2b8668d36ac732a51b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-058",
+      "id": "H024",
+      "condition": "baseline",
+      "prompt_sha256": "d1f004e7026e6a909b52becccaf94d151bff3f14e40d79976e215b8d50f8e8c1",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-059",
+      "id": "H025",
+      "condition": "skill",
+      "prompt_sha256": "994a5a233d9d339a519af40127726b3e558d9f6ea4035abed182bdd4544ebe0f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-059",
+      "id": "H025",
+      "condition": "baseline",
+      "prompt_sha256": "e50ed5ddf26db506079c510f824633c7b95a9ff5b82cd568edd726f7041db9fb",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-060",
+      "id": "H026",
+      "condition": "skill",
+      "prompt_sha256": "16848777195785c78af726281725f8190e9ad7c049ce1400d51877f4862ec845",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-060",
+      "id": "H026",
+      "condition": "baseline",
+      "prompt_sha256": "1588f6be8192fc0a663bacb48d537b0f7ba8255fa5f8169da865c351f5f38eb1",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-061",
+      "id": "H027",
+      "condition": "skill",
+      "prompt_sha256": "d71d2a666cccfc18625acc2789e287c69c2425bee03e7f66d67ad6c45ca9be7a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-061",
+      "id": "H027",
+      "condition": "baseline",
+      "prompt_sha256": "d23940a1bab20ed9355e954e94023feeca9cc798b88c9379da80765952dd03e3",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-062",
+      "id": "H028",
+      "condition": "skill",
+      "prompt_sha256": "96135ceabe31d96919a1c573a132850eea3e1f9deb47b9cb6397205bc091ea85",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-062",
+      "id": "H028",
+      "condition": "baseline",
+      "prompt_sha256": "bc5b721c3e69e06407651a51bbc056d8f3fd5266059f809c98ac4dc6fe909584",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-063",
+      "id": "H029",
+      "condition": "skill",
+      "prompt_sha256": "96fa5ad348a6586b19d5ee7b3764fac80f2fd765d9b4fa0f92303d2ac5ec130f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-063",
+      "id": "H029",
+      "condition": "baseline",
+      "prompt_sha256": "d79c2a36496e2b2f8948389a50527d09f55a368ff5a2a7a3e817203c32560d84",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-064",
+      "id": "H030",
+      "condition": "skill",
+      "prompt_sha256": "972e8f740a1afe0cf54f337fd30f00d97a26f8b95bb6e81b8db4cb76e84ebe2c",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-064",
+      "id": "H030",
+      "condition": "baseline",
+      "prompt_sha256": "b6bbd9840f7620470b255486908734d316b2be120884d2a9ccf73a393bad6ad4",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-065",
+      "id": "H031",
+      "condition": "skill",
+      "prompt_sha256": "660543b8b84364c682387b47daee688fc1c37f5450f2f0db570df66e000d0577",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-065",
+      "id": "H031",
+      "condition": "baseline",
+      "prompt_sha256": "32ed0dd1c9c3df28c317df63bfd4e5828789848a66a04bc4057ae7cbedb2d8df",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-066",
+      "id": "H032",
+      "condition": "skill",
+      "prompt_sha256": "d086368bd85ab5d32114cb1dd6a2506580d5a3c6c73b2298cd4a4394382057b6",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-066",
+      "id": "H032",
+      "condition": "baseline",
+      "prompt_sha256": "6f57a77be4ad5eafdd18cf3d33e8cf4e43f5cd4973eba721639b263bddd560ac",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-067",
+      "id": "H033",
+      "condition": "skill",
+      "prompt_sha256": "601c5de5b5289d7473f38c666fe8d03cd5f15b526e36fce5132ca7ac444643f4",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-067",
+      "id": "H033",
+      "condition": "baseline",
+      "prompt_sha256": "19d1e708ee881a7cde1c136db33526b52f3b13d16b83488703b523f2c8a49fc5",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-068",
+      "id": "H034",
+      "condition": "skill",
+      "prompt_sha256": "01d3f511b7db7a0110ec311a4cac8cc188e51d815331b0419164e771e8429d6b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-068",
+      "id": "H034",
+      "condition": "baseline",
+      "prompt_sha256": "501cf1f8a85f87f43b7106257fa949eed89643c6fec2758bb47a4e09e5c2a3ea",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-069",
+      "id": "H035",
+      "condition": "skill",
+      "prompt_sha256": "d47aaba4c1e00967d1849ae7641ae63588f854eaec62e6eba28e25d5092e666a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-069",
+      "id": "H035",
+      "condition": "baseline",
+      "prompt_sha256": "5d434fda7ca902c25d3cb5eef2a7eab798fbefeafbfe3bf7d238348af9ee1fde",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-070",
+      "id": "H036",
+      "condition": "skill",
+      "prompt_sha256": "9f0c16de30db37fcc68cd0dab8c556369e9843c603be036c9d5aff3486463f81",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-070",
+      "id": "H036",
+      "condition": "baseline",
+      "prompt_sha256": "67ab3fb09083715fd14ce8517847b900daf7e27e0f4a8a754482449725fd4ce7",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-071",
+      "id": "H037",
+      "condition": "skill",
+      "prompt_sha256": "eeb00805e4a4dea3004d93468d8697e7acb59091388ed7db7b86707294a64e54",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-071",
+      "id": "H037",
+      "condition": "baseline",
+      "prompt_sha256": "bb0c5a1392e17e83fd54f0c727122d35163ead5d586bdc43d52f9c8c19c22fb4",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-072",
+      "id": "H038",
+      "condition": "skill",
+      "prompt_sha256": "b3e9aced6ba5668c9d6278326bd59b6cf0c00f46b73b328dab708f428118853b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-072",
+      "id": "H038",
+      "condition": "baseline",
+      "prompt_sha256": "c0fc996f78659fbbec0d54c3ea8e71de80dae7deb82f9a761c0a4c0172d1ff76",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-073",
+      "id": "H039",
+      "condition": "skill",
+      "prompt_sha256": "e9b9998ae00350db206be1f8e8131d1be0414de1a8dd7b92688806b7fdf62bad",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-073",
+      "id": "H039",
+      "condition": "baseline",
+      "prompt_sha256": "7ec91c400b4f1f1d6517b090f76af314193ac8c71ebec43f519ec21f55a2f51c",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-074",
+      "id": "H040",
+      "condition": "skill",
+      "prompt_sha256": "24fa3b9fe05022773cc60b35accf320cdc6126137dca4444d83f017bca74c166",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-074",
+      "id": "H040",
+      "condition": "baseline",
+      "prompt_sha256": "5365164ed5416e0b4a6bccca67cc3df23e91f6c915d92e1d9a7b6d7ca0b8ecb5",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-075",
+      "id": "H041",
+      "condition": "skill",
+      "prompt_sha256": "8ad2dc218ad8154d9c1362545288d2ac8cd6adc62d1d8775ec792831e3326e2f",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-075",
+      "id": "H041",
+      "condition": "baseline",
+      "prompt_sha256": "7bb88a271ea4fb8a525a4705220f2a0ef37f9022a84f63f48008ae37e1f483c9",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-076",
+      "id": "H042",
+      "condition": "skill",
+      "prompt_sha256": "67b64f5033a8af20e7ac9eace58062cfd48b1eb094138e5a8d97f4e90e120a0b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-076",
+      "id": "H042",
+      "condition": "baseline",
+      "prompt_sha256": "c54ebef2f4071f2ca524648bcdb94eadfc7db29b65533eabbb3f2b75eea33866",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-077",
+      "id": "H043",
+      "condition": "skill",
+      "prompt_sha256": "bc181927aa79ba9da6dd23e1389f9ccba3f846613e25099a7c5342c4f1fdd512",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-077",
+      "id": "H043",
+      "condition": "baseline",
+      "prompt_sha256": "f7f7c90c65756060e70181bea3eda19537925118f69184b52e04b677ad9b6780",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-078",
+      "id": "H044",
+      "condition": "skill",
+      "prompt_sha256": "137c0db970930813460f02146d2282bef0e6492ebb668b30ce26cdc00cc98bbb",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-078",
+      "id": "H044",
+      "condition": "baseline",
+      "prompt_sha256": "ffeea08ac3fe5705aca2f7e64c330050959ec2b49837de3b1a5ca7c7205085d9",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-079",
+      "id": "H045",
+      "condition": "skill",
+      "prompt_sha256": "ffe1794d02db21abb91f9c30a15db1898d12734c457fe122ee76dd2ac6c825df",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-079",
+      "id": "H045",
+      "condition": "baseline",
+      "prompt_sha256": "fba584687577a3217468883b841fb14bdd757c5786db6bc9787623ce75eec958",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-080",
+      "id": "H046",
+      "condition": "skill",
+      "prompt_sha256": "0ceb897d44b4ad73b6eed533844ba049f0c94ca2a4bd64b24bf082476b9eedbe",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-080",
+      "id": "H046",
+      "condition": "baseline",
+      "prompt_sha256": "77503553feee6638170f05946e46da66f0af207b6ec5acbd8e25e76a28148b5d",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-081",
+      "id": "H047",
+      "condition": "skill",
+      "prompt_sha256": "cc860927c453e096a65880136d8a6a38df84fe78f0c09eb0998015c9c2bd1740",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-081",
+      "id": "H047",
+      "condition": "baseline",
+      "prompt_sha256": "0746028c1a3cca7b68a43d048879032685ebd7368b3dfc4a512e38fafc0b0116",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-082",
+      "id": "H048",
+      "condition": "skill",
+      "prompt_sha256": "ea2451f950a7c45f4099517f9b17f76655cad68a87a80da21ff9a588e2423687",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-082",
+      "id": "H048",
+      "condition": "baseline",
+      "prompt_sha256": "3129ad943fbf09b94282400bc066cf404844653b7f381688a5dd5698c64db7a4",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-083",
+      "id": "H049",
+      "condition": "skill",
+      "prompt_sha256": "efb26194868d9a94ac888d6d179c5ed3af0783c337da2017573ee75f38e9abef",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-083",
+      "id": "H049",
+      "condition": "baseline",
+      "prompt_sha256": "30a31333a0f8a1ea61354454f2676dc4b4e0f38faad9ad764143242fad7c8ba5",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-084",
+      "id": "H050",
+      "condition": "skill",
+      "prompt_sha256": "09200acca6d1a1423d8b23c3666ba3b3dc68bc2f3200b5378c9954ec67b4c567",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-084",
+      "id": "H050",
+      "condition": "baseline",
+      "prompt_sha256": "1b4405d82f72a69b6931c5d0791ccc71c4210f904987f5cea88506defd240d04",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-085",
+      "id": "H051",
+      "condition": "skill",
+      "prompt_sha256": "2b7a5a4346056cec8270284f1bd3f0429ce7da89b36896bdf1174feb58c15db6",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-085",
+      "id": "H051",
+      "condition": "baseline",
+      "prompt_sha256": "5480715586202c16f690bf86fcef05c4ca769b6d6f1227e880bc9391dce4d9d9",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-086",
+      "id": "H052",
+      "condition": "skill",
+      "prompt_sha256": "19b5a4d729b6e44a5bdbc9f0a761f0a919ec758dfc09696985fbe49d8a2eb0d8",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-086",
+      "id": "H052",
+      "condition": "baseline",
+      "prompt_sha256": "f1fbb41730859df1f1c0a5d319f40fecc6a4cc8e63ff31ee32dd32ee7404d51b",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-087",
+      "id": "H053",
+      "condition": "skill",
+      "prompt_sha256": "5bbb4071726ee7c8fc1beef305d540a37a7edee87d15274e2e4f45598dbf83e3",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-087",
+      "id": "H053",
+      "condition": "baseline",
+      "prompt_sha256": "ca00382d8dd3343aa90b000c08542f89d78ef181ac25d6768bc03f24a70904b2",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-088",
+      "id": "H054",
+      "condition": "skill",
+      "prompt_sha256": "1aa12be81563e2f4683164c72c49c4063e8c86aff98578984522f1f6d3b07e31",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-088",
+      "id": "H054",
+      "condition": "baseline",
+      "prompt_sha256": "57a0e0a023c86b9073a9d7d3a9e040bc471946759a14078ead6f7e1b90218816",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-089",
+      "id": "H055",
+      "condition": "skill",
+      "prompt_sha256": "24cb05ce78b063797fd66cf913cc73c67fd15da1e92a8873977f02a34d079fd2",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-089",
+      "id": "H055",
+      "condition": "baseline",
+      "prompt_sha256": "e77727de06e7467c65f691387dbcefaca2437659146544d33886100e5fbe6ce4",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-090",
+      "id": "H056",
+      "condition": "skill",
+      "prompt_sha256": "3a9067b404245de2d2d305ee1ba8f025a004b06eb04fd57f4de8dff00cb2dbef",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-090",
+      "id": "H056",
+      "condition": "baseline",
+      "prompt_sha256": "537254ee8ace9683998a98b4fb9b3f159c94dfe0f8be988959b3bdcb5308cd73",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-091",
+      "id": "H057",
+      "condition": "skill",
+      "prompt_sha256": "2df6cc1f82be05f55b55e5c9e3ebd0f839b9f7671334e6c7e4ed3850f3b5604c",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-091",
+      "id": "H057",
+      "condition": "baseline",
+      "prompt_sha256": "f059f4f42614ac9957a0ebcc340420642e6369bf4e494d00bd8a8ecce633f234",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-092",
+      "id": "H058",
+      "condition": "skill",
+      "prompt_sha256": "e8b9db6453e1e9d62a395562a76ae5d26d1459d7b8f173e8e7a39adf4ad7740b",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-092",
+      "id": "H058",
+      "condition": "baseline",
+      "prompt_sha256": "892c69922a8d30e1dd77f31772d25b97f022694df2f086d6116206d38d593b3b",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-093",
+      "id": "H059",
+      "condition": "skill",
+      "prompt_sha256": "405db8823771fb5b43cad4a928ddcc57c5797cb9211a60ff9e2ddcbe4dce7f56",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-093",
+      "id": "H059",
+      "condition": "baseline",
+      "prompt_sha256": "ce3838327944a4a33d4c15da966e2eb6997336ce652add047d20e0f3c1f4fa4f",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-094",
+      "id": "H060",
+      "condition": "skill",
+      "prompt_sha256": "7bfcc49854156fa934a902a4e517a7897db186112a6a3c6949fd00e79e35b38a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-094",
+      "id": "H060",
+      "condition": "baseline",
+      "prompt_sha256": "fe7998d591e77ca4324672bf0987ae8d660ff97c47899f60a92e0dd44e40a1ea",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-095",
+      "id": "H061",
+      "condition": "skill",
+      "prompt_sha256": "bfed3b5d01da388585f75dafca18757c14cd7b53dd3735ad5c7a79d250b4be99",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-095",
+      "id": "H061",
+      "condition": "baseline",
+      "prompt_sha256": "02b6a65fc4366df6403efffb3347c27d20cb59140f0d7fdb038cff28069682d5",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-096",
+      "id": "H062",
+      "condition": "skill",
+      "prompt_sha256": "7ce7293afee1aa885ea5dfbb401bce18017f9a35dc627d3a841dcb0f389d1647",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-096",
+      "id": "H062",
+      "condition": "baseline",
+      "prompt_sha256": "8a3f8a67bfb532c48d4060c52ccca6a6809e2fd07a8f0b6bbd8de8702d42f5e7",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-097",
+      "id": "H063",
+      "condition": "skill",
+      "prompt_sha256": "6fe5b9d2f959e94ffdfd30ac06350e024df6f0e76e6563873b4393691e76cca1",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-097",
+      "id": "H063",
+      "condition": "baseline",
+      "prompt_sha256": "6511e0dad9b32769f1826e8bcd88401a9f26103b9cd9af42b5701545f47680a1",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-098",
+      "id": "H064",
+      "condition": "skill",
+      "prompt_sha256": "c1ec02427b572819a9034fdead4df6d1b3de723db8162a4445554a8d6954cd58",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-098",
+      "id": "H064",
+      "condition": "baseline",
+      "prompt_sha256": "0f197d42558f5e39b3a5aa7ab950a5998abd8f0ce3cd385150292a16c04d207b",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-099",
+      "id": "H065",
+      "condition": "skill",
+      "prompt_sha256": "39a81051c0294ab705dfe78f49a905eb64437b5eeeddb5c3247ec5b2148b96c8",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-099",
+      "id": "H065",
+      "condition": "baseline",
+      "prompt_sha256": "68155b875d2924fdd811bebc51086d40fa597f6566ba899b3e16e21707f2e2fd",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-100",
+      "id": "H066",
+      "condition": "skill",
+      "prompt_sha256": "fc1ee6790ba6cf93cce3f096e4c0326329d01350d7dedad6228ea809f6cd45db",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-100",
+      "id": "H066",
+      "condition": "baseline",
+      "prompt_sha256": "17d8146cc20ba3787e02fc249c303818f3aa589d826f74f1b237653308e9307c",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-101",
+      "id": "H067",
+      "condition": "skill",
+      "prompt_sha256": "4e607c50de22e43f4ba0e68a5dfad29a30eda2b2e6f684c638e51577ac938e87",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-101",
+      "id": "H067",
+      "condition": "baseline",
+      "prompt_sha256": "5e716552123e4a61769bb148bad420ed08b1ad7dd9e3d721a0226fc727958ba6",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-102",
+      "id": "H068",
+      "condition": "skill",
+      "prompt_sha256": "ef687b07e89f1fcbaa6a89dfb1fae7e93e6c42d4afd3c5a55a5abb5a198a4100",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-102",
+      "id": "H068",
+      "condition": "baseline",
+      "prompt_sha256": "1025f3f1e7fc6296d219db6289a91cd4618c3d7f7f73599b90a21f56dc53ccfb",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-103",
+      "id": "H069",
+      "condition": "skill",
+      "prompt_sha256": "377d4dc5e40902995cab03bb21bc6006a8f3969a3e2672503c1161d59100dc34",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "data/language-packs/zh-Hant/PATTERNS.md": "ca1aa738f86582145d066bded336d4cd1e53c6bad6330519df538442c836ef35"
+      }
+    },
+    {
+      "directory": "baseline/batch-103",
+      "id": "H069",
+      "condition": "baseline",
+      "prompt_sha256": "17cab83a59dc59d0ceb7f115e5a6ce267e5e18b1529fbd2ad9add340dd3f55c1",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-104",
+      "id": "H070",
+      "condition": "skill",
+      "prompt_sha256": "b99419181ea2cb086e9272006ce5afa5120ca18d2c261b91d228a088eca39833",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "data/language-packs/ja/PATTERNS.md": "1f6826b5b568233e8777e709f7b5f646bba040dad72ba9a4aeb770119106e8b1"
+      }
+    },
+    {
+      "directory": "baseline/batch-104",
+      "id": "H070",
+      "condition": "baseline",
+      "prompt_sha256": "a42a9c9d1b5366b079f1adc008554eb13bb53f90b14ec418a13b80dcf89820ee",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-105",
+      "id": "H071",
+      "condition": "skill",
+      "prompt_sha256": "c2f859923c97ace8d6d2d68dfcdd1f9264d78477e9375e600cdcef5e4787e983",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "data/language-packs/ko/PATTERNS.md": "a5a32071e475832271f308e4d1283e4577ec2976a6abaecae512b2cba142db0f"
+      }
+    },
+    {
+      "directory": "baseline/batch-105",
+      "id": "H071",
+      "condition": "baseline",
+      "prompt_sha256": "9d9ba28ac826ba31e09c1ae952e19b353648d24885f41110cc9e6b854c4a7cb8",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-106",
+      "id": "H072",
+      "condition": "skill",
+      "prompt_sha256": "eb5968fa8bde2161b52268d9dc5ed38e2a70278e51036f0b624ba23fecdc9e78",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-106",
+      "id": "H072",
+      "condition": "baseline",
+      "prompt_sha256": "4d75da3e04f736694c38d41cd37534d53b87a808c4e5d8d85737a551a66d04db",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-107",
+      "id": "X001",
+      "condition": "skill",
+      "prompt_sha256": "1597f10455dc4b59da8c6c298e06f13340f7410a2e231e226b19a3899247a126",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-107",
+      "id": "X001",
+      "condition": "baseline",
+      "prompt_sha256": "e83aefe4072cc80d670a920b70ccf0572e17dfd864f9d60cb8b3b2fac0542253",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-108",
+      "id": "X002",
+      "condition": "skill",
+      "prompt_sha256": "6ceb831bdf2800d487e073757e9a31438bc9a8a1edde3cc27d56514953178b7d",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-108",
+      "id": "X002",
+      "condition": "baseline",
+      "prompt_sha256": "168fb41d49b69bed099f0b322fd321e77eb7190365e3bdbe3830e0eacc5acc08",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-109",
+      "id": "X003",
+      "condition": "skill",
+      "prompt_sha256": "569511d125ad7fa72537424aedb775d4419079435db9ba42674a14232b81ebb7",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+      }
+    },
+    {
+      "directory": "baseline/batch-109",
+      "id": "X003",
+      "condition": "baseline",
+      "prompt_sha256": "fb145e955a8395e136e71e29e03617da3f883790bc27f273aa45725c5cc45855",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-110",
+      "id": "X004",
+      "condition": "skill",
+      "prompt_sha256": "610c17ee2d8a09582fca3fd0200e9829c58f61497a33c3fa0a005059f2cc715e",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-110",
+      "id": "X004",
+      "condition": "baseline",
+      "prompt_sha256": "3e10285f6caddb8cb755e3869b066f47b3b20a4044dd035303d75fc3bdf70cd1",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-111",
+      "id": "X005",
+      "condition": "skill",
+      "prompt_sha256": "46c4604ce6a5e75845553ac5a314493f39bb097df7de7a04eea322e2c15e65c2",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/comments.md": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      }
+    },
+    {
+      "directory": "baseline/batch-111",
+      "id": "X005",
+      "condition": "baseline",
+      "prompt_sha256": "6eabb95b300b9503b1282a539c98efbeed3f968c026fb62f1ebf58be4db23fbd",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-112",
+      "id": "X006",
+      "condition": "skill",
+      "prompt_sha256": "b275cfdaaeeb1be3be8dca96c501ed2e081be60eeb8c30573746256c8b6240c5",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      }
+    },
+    {
+      "directory": "baseline/batch-112",
+      "id": "X006",
+      "condition": "baseline",
+      "prompt_sha256": "bba024e45a4f6614392a59982406df96202c07433e9d86675d091927a63a4ed1",
+      "context_sha256": {}
+    }
+  ]
+}

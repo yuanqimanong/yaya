@@ -1,0 +1,13 @@
+{
+  "format_version": 1,
+  "rules": [
+    {"id":"en-empty-opener","language":"en","severity":"P2","phrases":["in today's rapidly evolving landscape","in the ever-evolving landscape","in today's fast-paced world"],"message":"Check whether this opening adds relevant context before the main point."},
+    {"id":"en-hype","language":"en","severity":"P2","phrases":["a groundbreaking testament","unlock unparalleled potential","revolutionize the way we"],"message":"Check whether this claim has concrete support; retain established technical uses."},
+    {"id":"en-stock-close","language":"en","severity":"P2","phrases":["paving the way for a brighter future","the possibilities are truly endless","only time will tell"],"message":"Check whether the ending adds information or repeats a generic conclusion."},
+    {"id":"en-light-verb","language":"en","severity":"P2","phrases":["conduct an analysis of","perform an evaluation of","carry out an implementation of"],"message":"A direct verb may be clearer; retain distinctions needed by the context."},
+    {"id":"zh-empty-opener","language":"zh-Hans","severity":"P2","phrases":["在当今快速发展的时代","在这个日新月异的时代","随着时代的不断发展"],"message":"检查开头是否提供了正文需要的背景；没有信息时可以直述主题。"},
+    {"id":"zh-light-verb","language":"zh-Hans","severity":"P2","phrases":["进行分析","进行研究","进行讨论","进行优化"],"message":"检查能否直接使用动词；时态、过程或术语需要时保留“进行”。"},
+    {"id":"zh-hype","language":"zh-Hans","severity":"P2","phrases":["开启全新篇章","注入强劲动能","具有划时代的意义"],"message":"检查评价是否有具体依据；不能从词句本身判断夸大或虚假。"},
+    {"id":"zh-stock-close","language":"zh-Hans","severity":"P2","phrases":["让我们拭目以待","未来可期，让我们","共同谱写更加辉煌"],"message":"检查结尾是否补充信息，还是重复通用祝愿。"}
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "D:\\env\\miniconda3\\python.exe",
+    "-B",
+    "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\packs.py",
+    "resolve",
+    "--language",
+    "zh-Hans",
+    "--project",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration"
+  ],
+  "exit": 0,
+  "stdout": {
+    "requested": "zh-Hans",
+    "available": true,
+    "resolved": "zh-Hans",
+    "guide": "D:\\AIProjects\\yaya\\core\\yaya\\languages\\zh-Hans\\GUIDE.md",
+    "examples": "D:\\AIProjects\\yaya\\core\\yaya\\languages\\zh-Hans\\examples.md",
+    "patterns": "D:\\AIProjects\\yaya\\core\\yaya\\languages\\zh-Hans\\PATTERNS.md",
+    "status": "ready",
+    "source": "bundled",
+    "path": "D:\\AIProjects\\yaya\\core\\yaya\\languages\\zh-Hans",
+    "quality": "experimental",
+    "version": "0.2.0",
+    "format_version": 2
+  },
+  "stderr": ""
+}

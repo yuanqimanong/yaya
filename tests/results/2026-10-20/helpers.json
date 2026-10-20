@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-20",
+  "scope": "Standard-library helper scripts and their full deterministic unit/integration suite",
+  "environment": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+    "executable": "D:\\env\\miniconda3\\python.exe"
+  },
+  "command": "python -m unittest discover -s tests -p 'test_*.py' -v",
+  "baseline": {
+    "tests_run": 69,
+    "failures": 0,
+    "errors": 0,
+    "skip_entries": 7
+  },
+  "result": {
+    "status": "passed_with_skips",
+    "tests_run": 76,
+    "fully_passed_methods": 71,
+    "failure_entries": 0,
+    "error_entries": 0,
+    "skip_entries": 7,
+    "duration_seconds": 12.25,
+    "skipped": [
+      {
+        "test": "test_packs.PackChecks.test_linked_backup_directory_prevents_move",
+        "reason": "Directory symlinks and junctions unavailable"
+      },
+      {
+        "test": "test_packs.PackChecks.test_linked_data_root_and_destination_rejected",
+        "reason": "Directory symlinks and junctions unavailable"
+      },
+      {
+        "test": "test_packs.PackChecks.test_linked_empty_resolution_root_is_invalid_not_missing",
+        "reason": "Directory symlinks and junctions unavailable"
+      },
+      {
+        "test": "test_packs.PackChecks.test_linked_pack_directory_and_backups_rejected",
+        "reason": "Directory symlinks and junctions unavailable"
+      },
+      {
+        "test": "test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets (filename='yaya-core-0.1.0.zip')",
+        "reason": "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\unrelated file 0.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\linked output 0\\\\yaya-core-0.1.0.zip'"
+      },
+      {
+        "test": "test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets (filename='catalog.json')",
+        "reason": "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\unrelated file 1.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\linked output 1\\\\catalog.json'"
+      },
+      {
+        "test": "test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets (filename='SHA256SUMS')",
+        "reason": "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\unrelated file 2.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\linked output 2\\\\SHA256SUMS'"
+      }
+    ],
+    "failures": [],
+    "errors": [],
+    "passed_methods": [
+      "test_comments.CommentChecks.test_bom_must_be_preserved",
+      "test_comments.CommentChecks.test_cannot_introduce_directive_by_rewriting_prose",
+      "test_comments.CommentChecks.test_cli_json_and_exit_codes",
+      "test_comments.CommentChecks.test_code_string_and_whitespace_changes_fail",
+      "test_comments.CommentChecks.test_comment_addition_deletion_or_layout_change_fails",
+      "test_comments.CommentChecks.test_commented_doctest_output_is_protected",
+      "test_comments.CommentChecks.test_crlf_and_mixed_newlines_preserved",
+      "test_comments.CommentChecks.test_directive_after_prose_is_protected",
+      "test_comments.CommentChecks.test_docstrings_and_doctests_in_strings_are_immutable",
+      "test_comments.CommentChecks.test_doctest_blocks_stop_at_code_and_blank_line_boundaries",
+      "test_comments.CommentChecks.test_empty_sources_and_stub",
+      "test_comments.CommentChecks.test_encoding_cookie_and_legacy_encoding",
+      "test_comments.CommentChecks.test_fstring_comments_are_immutable",
+      "test_comments.CommentChecks.test_hashes_inside_strings_are_not_comments",
+      "test_comments.CommentChecks.test_invalid_baseline_is_unsupported_candidate_is_failed",
+      "test_comments.CommentChecks.test_javascript_and_typescript_are_unsupported",
+      "test_comments.CommentChecks.test_known_directives_are_protected",
+      "test_comments.CommentChecks.test_lone_cr_is_never_treated_as_mutable_comment_text",
+      "test_comments.CommentChecks.test_multiline_expression_preserves_comments_and_executable_structure",
+      "test_comments.CommentChecks.test_ordinary_comment_rewrites",
+      "test_comments.CommentChecks.test_second_line_encoding_cookie_is_protected",
+      "test_comments.CommentChecks.test_triple_string_comment_markers_are_immutable",
+      "test_comments.CommentChecks.test_unicode_is_preserved_outside_comments",
+      "test_comments.CommentChecks.test_unicode_line_separator_in_string_is_not_physical_line",
+      "test_comments.CommentChecks.test_unterminated_last_comment_can_be_edited",
+      "test_packs.PackChecks.test_archive_sha256_and_archive_limit_before_mutation",
+      "test_packs.PackChecks.test_bad_zip_and_invalid_metadata_leave_no_stage_or_install",
+      "test_packs.PackChecks.test_bundled_fallback_does_not_cross_scripts",
+      "test_packs.PackChecks.test_cleanup_failure_preserves_recovery_error_and_paths",
+      "test_packs.PackChecks.test_cli_errors_are_json_and_mutually_exclusive_locations_fail",
+      "test_packs.PackChecks.test_corrupt_latest_backup_is_not_silently_skipped",
+      "test_packs.PackChecks.test_directory_id_mismatch_is_invalid",
+      "test_packs.PackChecks.test_duplicate_and_case_colliding_archive_members_rejected",
+      "test_packs.PackChecks.test_empty_binary_invalid_utf8_and_unexpected_files_fail",
+      "test_packs.PackChecks.test_exact_pack_before_fallback_in_same_location",
+      "test_packs.PackChecks.test_external_reviewed_pack_lifecycle_with_unicode_and_spaced_paths",
+      "test_packs.PackChecks.test_failed_install_move_restores_previous_pack",
+      "test_packs.PackChecks.test_failed_install_recovery_reports_preserved_backup",
+      "test_packs.PackChecks.test_failed_rollback_move_restores_current_pack",
+      "test_packs.PackChecks.test_failed_rollback_recovery_reports_preserved_current_pack",
+      "test_packs.PackChecks.test_fallback_sequence_and_chinese_region_inference",
+      "test_packs.PackChecks.test_file_at_pack_root_is_invalid_not_missing",
+      "test_packs.PackChecks.test_incompatible_pack_is_explicit_and_blocks_fallback",
+      "test_packs.PackChecks.test_install_idempotence_and_explicit_replace",
+      "test_packs.PackChecks.test_invalid_higher_priority_pack_blocks_fallback",
+      "test_packs.PackChecks.test_location_precedence_before_specificity",
+      "test_packs.PackChecks.test_metadata_protocol_is_strict",
+      "test_packs.PackChecks.test_missing_lookup_is_read_only",
+      "test_packs.PackChecks.test_project_install_is_separate_from_user_and_core",
+      "test_packs.PackChecks.test_remote_url_is_not_implicitly_downloaded",
+      "test_packs.PackChecks.test_remove_is_reversible_and_missing_is_explicit",
+      "test_packs.PackChecks.test_reported_link_guard_blocks_empty_roots_even_without_os_link_support",
+      "test_packs.PackChecks.test_reviewed_quality_requires_evidence",
+      "test_packs.PackChecks.test_rollback_swaps_current_and_previous_versions",
+      "test_packs.PackChecks.test_semver_prerelease_build_and_ascii_boundaries",
+      "test_packs.PackChecks.test_stale_stat_cannot_bypass_file_or_archive_read_limit",
+      "test_packs.PackChecks.test_symlink_and_special_file_archive_members_rejected",
+      "test_packs.PackChecks.test_tag_profile_and_canonical_casing",
+      "test_packs.PackChecks.test_traversal_nested_absolute_and_extra_archive_members_rejected",
+      "test_packs.PackChecks.test_uncompressed_member_and_total_size_limits",
+      "test_packs.PackChecks.test_wrong_existing_id_blocks_install_remove_and_rollback",
+      "test_release.ReleaseBuildTests.test_catalog_and_checksums_match_actual_bytes",
+      "test_release.ReleaseBuildTests.test_contribution_template_is_not_published",
+      "test_release.ReleaseBuildTests.test_core_has_only_bundled_languages_and_runtime_files",
+      "test_release.ReleaseBuildTests.test_invalid_core_version_metadata_fails_before_creating_output",
+      "test_release.ReleaseBuildTests.test_moved_core_resolves_bundled_languages_from_paths_with_spaces",
+      "test_release.ReleaseBuildTests.test_new_reviewed_language_pack_builds_and_installs_without_core_changes",
+      "test_release.ReleaseBuildTests.test_optional_archives_are_flat_valid_and_compatible",
+      "test_release.ReleaseBuildTests.test_output_cannot_escape_into_sources_through_dotdot",
+      "test_release.ReleaseBuildTests.test_output_cannot_target_core_source_parent",
+      "test_release.ReleaseBuildTests.test_repeated_builds_have_identical_bytes"
+    ]
+  },
+  "fixes": [
+    {
+      "file": "scripts/build_release.py",
+      "problem": "The builder accepted core/ as an output path, placing generated ZIP/catalog assets in the source hierarchy.",
+      "before": "Regression test reproduced exit code 0 and generated assets under a copied source/core directory.",
+      "after": "The full core/ source subtree is rejected before any output is created.",
+      "regression": "test_release.ReleaseBuildTests.test_output_cannot_target_core_source_parent"
+    },
+    {
+      "file": "scripts/build_release.py",
+      "problem": "Boolean/float compatibility fields and duplicate core version JSON keys were accepted; missing/wrong-type metadata raised uncaught TypeError or KeyError.",
+      "before": "Eight malformed metadata cases failed the new regression before the fix: four bool/float cases and a duplicate-key case incorrectly succeeded; three wrong-shape/type cases emitted Traceback.",
+      "after": "Strict JSON parsing and explicit required-field/type/SemVer checks reject malformed metadata before generating release assets. Missing fields, null version, nonobject JSON, duplicate keys, non-SemVer, and incompatible major are covered.",
+      "regression": "test_release.ReleaseBuildTests.test_invalid_core_version_metadata_fails_before_creating_output"
+    }
+  ],
+  "new_coverage": [
+    "Third-party reviewed sr-Latn-RS package: flat ZIP including REVIEW.md, prerelease/build SemVer, SHA-256 install, locale fallback, no core modification.",
+    "External reviewed es-419 package lifecycle at a path containing Chinese characters and spaces: install, idempotence, replace, rollback, remove, restore, inventory.",
+    "SemVer ASCII, prerelease identifiers, build metadata, leading zeros, malformed separators and unsupported numeric characters.",
+    "Multiline Python expressions: ordinary comment edits succeed while code or indentation changes fail.",
+    "Commented doctest block boundaries: output remains protected, separate ordinary comments editable, new doctest prompts rejected.",
+    "Release archive checks permit the optional REVIEW.md defined by the pack specification."
+  ],
+  "compatibility": {
+    "runtime_tested": [
+      "CPython 3.13.5 on Windows"
+    ],
+    "python_3_10_grammar": {
+      "status": "passed",
+      "files": [
+        "core/yaya/scripts/packs.py",
+        "core/yaya/scripts/check_comments.py",
+        "scripts/build_release.py",
+        "tests/test_packs.py",
+        "tests/test_comments.py",
+        "tests/test_release.py"
+      ]
+    },
+    "python_3_10_api_review": "Only standard-library APIs available in Python 3.10 are used; Path.is_junction is feature-detected and Windows reparse attributes provide the existing fallback.",
+    "python_3_10_runtime": "not available; not executed",
+    "python_3_14_runtime": "py -0p reports a stale D:\\env\\Python314\\python.exe registration; the executable is absent and py -3.14 cannot start"
+  },
+  "limitations": [
+    "Four real directory-link tests and three output-file-symlink subtests were skipped because this Windows session cannot create the links. A simulated Path.is_symlink guard test passed, but does not replace real link integration tests.",
+    "Only Python 3.13.5 was executed. Python 3.10 grammar/API checks do not prove runtime compatibility; Linux and the CI matrix were not executed here.",
+    "Python 3.14 t-string interpolation may need protection equivalent to f-strings; this was identified by static inspection only and was not runtime-verified or modified in this pass.",
+    "Concurrent hostile filesystem mutation and interrupted OS processes are outside the deterministic suite; injected rename/cleanup failures are covered.",
+    "Language writing quality is outside these helper tests and must be judged separately from metadata/package validity."
+  ],
+  "rollback": "Undo the two recorded build_release.py validation changes and restore packs.strict_json to its original fixed pack.json document label; tests and reports may remain independently. No actual user language-pack data was modified."
+}

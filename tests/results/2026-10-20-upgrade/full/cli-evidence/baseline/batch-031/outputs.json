@@ -1,0 +1,8 @@
+[
+  {
+    "id": "unsupported-ts-comments",
+    "text": "export const value = \"http://example.test/#keep\";\n// Returns the length of the supplied string.\nexport function lengthOf(text: string) { return text.length; }\n",
+    "notes": "",
+    "skill_used": false
+  }
+]

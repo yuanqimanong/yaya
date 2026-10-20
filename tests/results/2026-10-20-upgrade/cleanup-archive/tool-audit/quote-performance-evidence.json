@@ -1,0 +1,29 @@
+[
+  {
+    "characters": 1000,
+    "bytes": 3000,
+    "seconds": 0.218,
+    "exit": 0,
+    "status": "ok"
+  },
+  {
+    "characters": 2000,
+    "bytes": 6000,
+    "seconds": 0.483,
+    "exit": 0,
+    "status": "ok"
+  },
+  {
+    "characters": 4000,
+    "bytes": 12000,
+    "seconds": 1.546,
+    "exit": 0,
+    "status": "ok"
+  },
+  {
+    "characters": 12000,
+    "bytes": 36000,
+    "seconds": 5.009,
+    "timeout": 5
+  }
+]

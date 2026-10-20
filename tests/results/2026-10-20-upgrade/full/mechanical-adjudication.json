@@ -1,0 +1,251 @@
+{
+  "status": "complete",
+  "review_type": "visible_condition_mechanical_alert_adjudication",
+  "blind_review": false,
+  "scope": "All records whose status is not passed in prose-mechanical.json. This is a condition-visible follow-up, not the independent anonymous evaluation.",
+  "source_report": {
+    "path": "tests/results/2026-10-20-upgrade/full/prose-mechanical.json",
+    "sha256": "47950fe6449e493f65ed8a13fc7a95fea174a890116e1ff68f8a178521f236db",
+    "run": "tests/runs/2026-10-20-v02-run03",
+    "total_records": 126,
+    "non_passed_records": 3,
+    "original_conditions": {
+      "skill": {
+        "passed": 61,
+        "failed": 1,
+        "unsupported": 1,
+        "error": 0
+      },
+      "baseline": {
+        "passed": 62,
+        "failed": 0,
+        "unsupported": 1,
+        "error": 0
+      }
+    }
+  },
+  "method": [
+    "Read every non-passed checker record and the matching records in full/cases.json and the original batch requests/outputs.",
+    "Compare the identified protected material directly, then inspect the complete corresponding source/output for changed facts, relationships, conditions, and structure.",
+    "Verify source/output text SHA-256 values against the existing checker report and verify batch input equality with full/cases.json.",
+    "Do not rerun the checker or model CLI. Do not alter checker statuses, outputs, summary, criteria, or the frozen core."
+  ],
+  "summary": {
+    "reviewed_records": 3,
+    "original_failed": 1,
+    "original_unsupported": 2,
+    "original_error": 0,
+    "confirmed_literal_number_occurrence_changes": 1,
+    "confirmed_changed_html_or_comment_fragments": 0,
+    "confirmed_substantive_semantic_errors": 0,
+    "unresolved_semantic_judgments": 0,
+    "adjudication_changes_checker_status": false,
+    "limitation": "Only the three non-passed records were semantically adjudicated here. No claim is made that the 123 passed records, the full matrix, or other task types are error-free."
+  },
+  "records": [
+    {
+      "id": "H054",
+      "condition": "skill",
+      "checker_status": "unsupported",
+      "checker_exit": 2,
+      "checker_error": "Raw HTML blocks are unsupported.",
+      "checker_violations": [],
+      "case_path": "tests/results/2026-10-20-upgrade/full/cases.json",
+      "request_path": "tests/runs/2026-10-20-v02-run03/skill/batch-088/requests.json",
+      "output_path": "tests/runs/2026-10-20-v02-run03/skill/batch-088/outputs.json",
+      "before_sha256": "3ccde1acb9d9720d3ae0aab3e33784ed3a64fc0efe01480d042707992f371e9e",
+      "after_sha256": "3ebcece10d6979745a1c2046e5c12db170ad0d4021478858a53007e70dd79147",
+      "before_matches_report": true,
+      "after_matches_report": true,
+      "case_matches_batch_input": true,
+      "protected_fragment_changed": false,
+      "semantic_change": false,
+      "substantive_error": false,
+      "adjudication": "unsupported_syntax_with_protected_fragments_preserved",
+      "evidence": [
+        {
+          "kind": "html_comment",
+          "source": "<!-- release-id: r8 -->",
+          "output": "<!-- release-id: r8 -->",
+          "finding": "Identical characters and position on the first line. The release identifier was not changed."
+        },
+        {
+          "kind": "raw_html",
+          "source": "<div id=\"status\">Pending</div>",
+          "output": "<div id=\"status\">Pending</div>",
+          "finding": "Identical opening tag, status attribute, Pending text, and closing tag. Direct comparison of the first two lines, including their separating newline, is equal."
+        },
+        {
+          "kind": "prose_semantics",
+          "source": "我们目前正在进行审核工作的推进。",
+          "output": "我们正在推进审核。",
+          "finding": "The actor remains 我们 and the review remains in progress. Removing 目前 and the nominalized wording does not turn ongoing work into a completed result."
+        }
+      ],
+      "reason": "The checker did not support this input syntax; it did not report a changed HTML span. Direct inspection satisfies this case's protection checks, but the original unsupported status remains unsupported."
+    },
+    {
+      "id": "H054",
+      "condition": "baseline",
+      "checker_status": "unsupported",
+      "checker_exit": 2,
+      "checker_error": "Raw HTML blocks are unsupported.",
+      "checker_violations": [],
+      "case_path": "tests/results/2026-10-20-upgrade/full/cases.json",
+      "request_path": "tests/runs/2026-10-20-v02-run03/baseline/batch-088/requests.json",
+      "output_path": "tests/runs/2026-10-20-v02-run03/baseline/batch-088/outputs.json",
+      "before_sha256": "3ccde1acb9d9720d3ae0aab3e33784ed3a64fc0efe01480d042707992f371e9e",
+      "after_sha256": "ec9a1bc6972785308c2fb61d29355d56a098f7646a9b64d71b3a11206a080223",
+      "before_matches_report": true,
+      "after_matches_report": true,
+      "case_matches_batch_input": true,
+      "protected_fragment_changed": false,
+      "semantic_change": false,
+      "substantive_error": false,
+      "adjudication": "unsupported_syntax_with_protected_fragments_preserved",
+      "evidence": [
+        {
+          "kind": "html_comment",
+          "source": "<!-- release-id: r8 -->",
+          "output": "<!-- release-id: r8 -->",
+          "finding": "The comment and release identifier are unchanged."
+        },
+        {
+          "kind": "raw_html",
+          "source": "<div id=\"status\">Pending</div>",
+          "output": "<div id=\"status\">Pending</div>",
+          "finding": "The HTML block is unchanged. Direct comparison of the first two lines, including their separating newline, is equal."
+        },
+        {
+          "kind": "prose_semantics",
+          "source": "我们目前正在进行审核工作的推进。",
+          "output": "我们正在审核。",
+          "finding": "The output preserves the actor and ongoing review state required by the case. It does not claim completion, approval, or a different workflow state."
+        }
+      ],
+      "reason": "The unsupported result reflects the checker's raw-HTML limitation. Manual comparison finds no protection violation or substantive semantic error, without converting the checker record into passed."
+    },
+    {
+      "id": "X001",
+      "condition": "skill",
+      "checker_status": "failed",
+      "checker_exit": 1,
+      "checker_error": null,
+      "checker_violations": [
+        {
+          "category": "numbers",
+          "allowed": false,
+          "before": [
+            "4200万元",
+            "5%",
+            "18%",
+            "16%",
+            "2600万元",
+            "2%",
+            "1600万元",
+            "18%",
+            "310",
+            "12",
+            "8",
+            "4",
+            "25",
+            "11"
+          ],
+          "after": [
+            "4200万元",
+            "5%",
+            "18%",
+            "16%",
+            "2600万元",
+            "2%",
+            "1600万元",
+            "18%",
+            "310",
+            "12",
+            "12",
+            "8",
+            "4",
+            "25",
+            "11"
+          ]
+        }
+      ],
+      "case_path": "tests/results/2026-10-20-upgrade/full/cases.json",
+      "request_path": "tests/runs/2026-10-20-v02-run03/skill/batch-107/requests.json",
+      "output_path": "tests/runs/2026-10-20-v02-run03/skill/batch-107/outputs.json",
+      "before_sha256": "4c6169bb606eca1e124067059e38b43e027aa7655da82eae97aadf223843c304",
+      "after_sha256": "49912ad713967f087eb0c4d5c8480614e345094a3107a856ecf7634a29eb5f1f",
+      "before_matches_report": true,
+      "after_matches_report": true,
+      "case_matches_batch_input": true,
+      "protected_fragment_changed": true,
+      "protected_change_kind": "An existing number is repeated once in unprotected prose, changing the number-lexeme multiset but not its value or associated population.",
+      "semantic_change": false,
+      "substantive_error": false,
+      "adjudication": "literal_number_multiset_difference_without_substantive_error",
+      "evidence": [
+        {
+          "kind": "reported_number_difference",
+          "source": "期末付费客户为310家，较年初增加12家。其中8家来自渠道合作，另外4家来自直接销售。",
+          "output": "期末付费客户为310家，较年初增加12家。新增的12家客户中，8家来自渠道合作，4家来自直接销售。",
+          "finding": "The source contains one Arabic 12 and the output contains two. The second 12 restates the immediately preceding increase to replace 其中 with an explicit referent; 8 + 4 = 12. No new customer count is asserted, and 310 remains the period-end total rather than the increase."
+        },
+        {
+          "kind": "financial_values_and_pairings",
+          "source": "上半年收入为4200万元，同比增长5%；毛利率由18%降至16%。其中，甲业务收入2600万元，同比下降2%；乙业务收入1600万元，同比增长18%。上述数据未经审计。收入增长并不意味着利润增长，公司尚未公布净利润。",
+          "output": "上半年收入为4200万元，同比增长5%；毛利率由18%降至16%。其中，甲业务收入2600万元，同比下降2%；乙业务收入1600万元，同比增长18%。上述数据未经审计。收入增长并不意味着利润增长，公司尚未公布净利润。",
+          "finding": "Identical substantive passage. Values, owners, increase/decrease directions, unaudited status, and unpublished net profit are preserved."
+        },
+        {
+          "kind": "customer_exclusion_and_revenue_recognition",
+          "source": "另有25家客户处于试用阶段，未计入付费客户数量。公司预计下季度完成两个项目的交付，但客户验收时间尚未确定，相关款项不能提前确认为收入。",
+          "output": "另有25家客户处于试用阶段，未计入付费客户数量。公司预计下季度完成两个项目的交付，但客户验收时间尚未确定，相关款项不能提前确认为收入。",
+          "finding": "Identical. The 25 trial customers remain excluded, two deliveries remain a forecast, acceptance timing stays uncertain, and premature revenue recognition remains prohibited."
+        },
+        {
+          "kind": "product_limitations",
+          "source": "新版本新增CSV导出和离线查看；离线状态下不能编辑内容，首次使用前必须联网同步。",
+          "output": "新版本新增CSV导出和离线查看功能；离线状态下不能编辑内容，首次使用前必须联网同步。",
+          "finding": "The added generic noun 功能 does not change either feature. The offline editing prohibition and initial online synchronization requirement are identical."
+        },
+        {
+          "kind": "conditional_release",
+          "source": "公司计划于11月进行小范围测试，是否全面开放取决于测试结果，不构成已经确定的上线承诺。",
+          "output": "公司计划于11月开展小范围测试，是否全面开放取决于测试结果，这一安排不构成已经确定的上线承诺。",
+          "finding": "进行/开展 and the explicit subject 这一安排 clarify wording. November remains a small-scale test plan; broad availability remains conditional rather than promised."
+        },
+        {
+          "kind": "risk_and_supporting_assumptions",
+          "source": "当前两家供应商提供同一种关键部件，其中一家尚未通过新批次验收。备用库存预计可支持六周生产，这一估计以现有订单节奏为前提。原材料价格变化和验收延迟可能影响交付。以上判断来自公司内部计划，未获独立机构验证。",
+          "output": "当前两家供应商提供同一种关键部件，其中一家尚未通过新批次验收。备用库存预计可支持六周生产，这一估计以现有订单节奏为前提。原材料价格变化和验收延迟可能影响交付。以上判断来自公司内部计划，未获独立机构验证。",
+          "finding": "Identical. Two suppliers, one unaccepted batch, six-week estimate, order-pace assumption, delivery risk, internal attribution, and lack of independent verification all survive."
+        },
+        {
+          "kind": "document_structure",
+          "source": [
+            "# 半年度业务说明",
+            "## 收入与利润",
+            "## 客户与交付",
+            "## 产品与安排",
+            "## 风险与限制"
+          ],
+          "output": [
+            "# 半年度业务说明",
+            "## 收入与利润",
+            "## 客户与交付",
+            "## 产品与安排",
+            "## 风险与限制"
+          ],
+          "finding": "Heading text and order match exactly; substantive detail remains under every original section. Removed passages are the generic promotional introductions targeted by the request, rather than a conversion to a short summary."
+        }
+      ],
+      "reason": "The failed result correctly detects a real difference in literal number occurrence counts. It does not establish a numerical or semantic mistake: the only added occurrence repeats the already stated increase while clarifying its referent. Keep failed in the mechanical report and record this separate substantive adjudication."
+    }
+  ],
+  "reporting_guidance": [
+    "Report one mechanical failed and two unsupported records exactly as recorded.",
+    "Separately state that direct review of these three records found zero confirmed substantive protection or semantic errors.",
+    "Do not relabel unsupported as passed, remove the duplicated number to improve the score, or reinterpret the failed result as a parser malfunction.",
+    "Do not use this condition-visible follow-up as an anonymous preference judgment or as a replacement for the ongoing formal evaluation."
+  ]
+}

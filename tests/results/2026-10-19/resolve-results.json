@@ -1,0 +1,106 @@
+[
+  {
+    "language": "zh-Hant",
+    "command": [
+      "D:\\env\\miniconda3\\python.exe",
+      "core/yaya/scripts/packs.py",
+      "resolve",
+      "--language",
+      "zh-Hant",
+      "--data-dir",
+      "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data"
+    ],
+    "exit_code": 0,
+    "result": {
+      "requested": "zh-Hant",
+      "available": true,
+      "resolved": "zh-Hant",
+      "guide": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\zh-Hant\\GUIDE.md",
+      "examples": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\zh-Hant\\examples.md",
+      "status": "ready",
+      "source": "user",
+      "path": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\zh-Hant",
+      "quality": "experimental",
+      "version": "0.1.0"
+    },
+    "stderr": ""
+  },
+  {
+    "language": "zh-HK",
+    "command": [
+      "D:\\env\\miniconda3\\python.exe",
+      "core/yaya/scripts/packs.py",
+      "resolve",
+      "--language",
+      "zh-HK",
+      "--data-dir",
+      "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data"
+    ],
+    "exit_code": 0,
+    "result": {
+      "requested": "zh-HK",
+      "available": true,
+      "resolved": "zh-Hant",
+      "guide": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\zh-Hant\\GUIDE.md",
+      "examples": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\zh-Hant\\examples.md",
+      "status": "ready",
+      "source": "user",
+      "path": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\zh-Hant",
+      "quality": "experimental",
+      "version": "0.1.0"
+    },
+    "stderr": ""
+  },
+  {
+    "language": "ja",
+    "command": [
+      "D:\\env\\miniconda3\\python.exe",
+      "core/yaya/scripts/packs.py",
+      "resolve",
+      "--language",
+      "ja",
+      "--data-dir",
+      "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data"
+    ],
+    "exit_code": 0,
+    "result": {
+      "requested": "ja",
+      "available": true,
+      "resolved": "ja",
+      "guide": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\ja\\GUIDE.md",
+      "examples": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\ja\\examples.md",
+      "status": "ready",
+      "source": "user",
+      "path": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\ja",
+      "quality": "experimental",
+      "version": "0.1.0"
+    },
+    "stderr": ""
+  },
+  {
+    "language": "ko",
+    "command": [
+      "D:\\env\\miniconda3\\python.exe",
+      "core/yaya/scripts/packs.py",
+      "resolve",
+      "--language",
+      "ko",
+      "--data-dir",
+      "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data"
+    ],
+    "exit_code": 0,
+    "result": {
+      "requested": "ko",
+      "available": true,
+      "resolved": "ko",
+      "guide": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\ko\\GUIDE.md",
+      "examples": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\ko\\examples.md",
+      "status": "ready",
+      "source": "user",
+      "path": "D:\\AIProjects\\yaya\\.tmp\\language-smoke\\data\\language-packs\\ko",
+      "quality": "experimental",
+      "version": "0.1.0"
+    },
+    "stderr": ""
+  }
+]

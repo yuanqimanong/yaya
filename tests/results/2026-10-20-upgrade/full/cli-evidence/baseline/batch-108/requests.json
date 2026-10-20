@@ -1,0 +1,7 @@
+[
+  {
+    "id": "X002",
+    "request": "Rewrite only the Overview section below to sound natural and direct. Return the whole Markdown document. Keep every byte from the API heading onward unchanged.",
+    "input": "# Export notes\n\n## Overview\nIn a world of endless possibilities, our groundbreaking tool empowers your workflow. It exports shared notes as CSV; only trial accounts can use this feature for now.\n\n## API\nCall `export_notes(account_id)`.\n```json\n{\"format\":\"csv\",\"limit\":20}\n```\n\n## Other draft\nThis section is being revised by another author. Keep it.\n"
+  }
+]

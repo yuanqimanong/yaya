@@ -1,0 +1,84 @@
+test_bom_must_be_preserved (test_comments.CommentChecks.test_bom_must_be_preserved) ... ok
+test_cannot_introduce_directive_by_rewriting_prose (test_comments.CommentChecks.test_cannot_introduce_directive_by_rewriting_prose) ... ok
+test_cli_json_and_exit_codes (test_comments.CommentChecks.test_cli_json_and_exit_codes) ... ok
+test_code_string_and_whitespace_changes_fail (test_comments.CommentChecks.test_code_string_and_whitespace_changes_fail) ... ok
+test_comment_addition_deletion_or_layout_change_fails (test_comments.CommentChecks.test_comment_addition_deletion_or_layout_change_fails) ... ok
+test_commented_doctest_output_is_protected (test_comments.CommentChecks.test_commented_doctest_output_is_protected) ... ok
+test_crlf_and_mixed_newlines_preserved (test_comments.CommentChecks.test_crlf_and_mixed_newlines_preserved) ... ok
+test_directive_after_prose_is_protected (test_comments.CommentChecks.test_directive_after_prose_is_protected) ... ok
+test_docstrings_and_doctests_in_strings_are_immutable (test_comments.CommentChecks.test_docstrings_and_doctests_in_strings_are_immutable) ... ok
+test_doctest_blocks_stop_at_code_and_blank_line_boundaries (test_comments.CommentChecks.test_doctest_blocks_stop_at_code_and_blank_line_boundaries) ... ok
+test_empty_sources_and_stub (test_comments.CommentChecks.test_empty_sources_and_stub) ... ok
+test_encoding_cookie_and_legacy_encoding (test_comments.CommentChecks.test_encoding_cookie_and_legacy_encoding) ... ok
+test_fstring_comments_are_immutable (test_comments.CommentChecks.test_fstring_comments_are_immutable) ... ok
+test_hashes_inside_strings_are_not_comments (test_comments.CommentChecks.test_hashes_inside_strings_are_not_comments) ... ok
+test_invalid_baseline_is_unsupported_candidate_is_failed (test_comments.CommentChecks.test_invalid_baseline_is_unsupported_candidate_is_failed) ... ok
+test_javascript_and_typescript_are_unsupported (test_comments.CommentChecks.test_javascript_and_typescript_are_unsupported) ... ok
+test_known_directives_are_protected (test_comments.CommentChecks.test_known_directives_are_protected) ... ok
+test_lone_cr_is_never_treated_as_mutable_comment_text (test_comments.CommentChecks.test_lone_cr_is_never_treated_as_mutable_comment_text) ... ok
+test_multiline_expression_preserves_comments_and_executable_structure (test_comments.CommentChecks.test_multiline_expression_preserves_comments_and_executable_structure) ... ok
+test_ordinary_comment_rewrites (test_comments.CommentChecks.test_ordinary_comment_rewrites) ... ok
+test_second_line_encoding_cookie_is_protected (test_comments.CommentChecks.test_second_line_encoding_cookie_is_protected) ... ok
+test_triple_string_comment_markers_are_immutable (test_comments.CommentChecks.test_triple_string_comment_markers_are_immutable) ... ok
+test_unicode_is_preserved_outside_comments (test_comments.CommentChecks.test_unicode_is_preserved_outside_comments) ... ok
+test_unicode_line_separator_in_string_is_not_physical_line (test_comments.CommentChecks.test_unicode_line_separator_in_string_is_not_physical_line) ... ok
+test_unterminated_last_comment_can_be_edited (test_comments.CommentChecks.test_unterminated_last_comment_can_be_edited) ... ok
+test_archive_sha256_and_archive_limit_before_mutation (test_packs.PackChecks.test_archive_sha256_and_archive_limit_before_mutation) ... ok
+test_bad_zip_and_invalid_metadata_leave_no_stage_or_install (test_packs.PackChecks.test_bad_zip_and_invalid_metadata_leave_no_stage_or_install) ... ok
+test_bundled_fallback_does_not_cross_scripts (test_packs.PackChecks.test_bundled_fallback_does_not_cross_scripts) ... ok
+test_cleanup_failure_preserves_recovery_error_and_paths (test_packs.PackChecks.test_cleanup_failure_preserves_recovery_error_and_paths) ... ok
+test_cli_errors_are_json_and_mutually_exclusive_locations_fail (test_packs.PackChecks.test_cli_errors_are_json_and_mutually_exclusive_locations_fail) ... ok
+test_corrupt_latest_backup_is_not_silently_skipped (test_packs.PackChecks.test_corrupt_latest_backup_is_not_silently_skipped) ... ok
+test_directory_id_mismatch_is_invalid (test_packs.PackChecks.test_directory_id_mismatch_is_invalid) ... ok
+test_duplicate_and_case_colliding_archive_members_rejected (test_packs.PackChecks.test_duplicate_and_case_colliding_archive_members_rejected) ... ok
+test_empty_binary_invalid_utf8_and_unexpected_files_fail (test_packs.PackChecks.test_empty_binary_invalid_utf8_and_unexpected_files_fail) ... ok
+test_exact_pack_before_fallback_in_same_location (test_packs.PackChecks.test_exact_pack_before_fallback_in_same_location) ... ok
+test_external_reviewed_pack_lifecycle_with_unicode_and_spaced_paths (test_packs.PackChecks.test_external_reviewed_pack_lifecycle_with_unicode_and_spaced_paths) ... ok
+test_failed_install_move_restores_previous_pack (test_packs.PackChecks.test_failed_install_move_restores_previous_pack) ... ok
+test_failed_install_recovery_reports_preserved_backup (test_packs.PackChecks.test_failed_install_recovery_reports_preserved_backup) ... ok
+test_failed_rollback_move_restores_current_pack (test_packs.PackChecks.test_failed_rollback_move_restores_current_pack) ... ok
+test_failed_rollback_recovery_reports_preserved_current_pack (test_packs.PackChecks.test_failed_rollback_recovery_reports_preserved_current_pack) ... ok
+test_fallback_sequence_and_chinese_region_inference (test_packs.PackChecks.test_fallback_sequence_and_chinese_region_inference) ... ok
+test_file_at_pack_root_is_invalid_not_missing (test_packs.PackChecks.test_file_at_pack_root_is_invalid_not_missing) ... ok
+test_incompatible_pack_is_explicit_and_blocks_fallback (test_packs.PackChecks.test_incompatible_pack_is_explicit_and_blocks_fallback) ... ok
+test_install_idempotence_and_explicit_replace (test_packs.PackChecks.test_install_idempotence_and_explicit_replace) ... ok
+test_invalid_higher_priority_pack_blocks_fallback (test_packs.PackChecks.test_invalid_higher_priority_pack_blocks_fallback) ... ok
+test_linked_backup_directory_prevents_move (test_packs.PackChecks.test_linked_backup_directory_prevents_move) ... skipped 'Directory symlinks and junctions unavailable'
+test_linked_data_root_and_destination_rejected (test_packs.PackChecks.test_linked_data_root_and_destination_rejected) ... skipped 'Directory symlinks and junctions unavailable'
+test_linked_empty_resolution_root_is_invalid_not_missing (test_packs.PackChecks.test_linked_empty_resolution_root_is_invalid_not_missing) ... skipped 'Directory symlinks and junctions unavailable'
+test_linked_pack_directory_and_backups_rejected (test_packs.PackChecks.test_linked_pack_directory_and_backups_rejected) ... skipped 'Directory symlinks and junctions unavailable'
+test_location_precedence_before_specificity (test_packs.PackChecks.test_location_precedence_before_specificity) ... ok
+test_metadata_protocol_is_strict (test_packs.PackChecks.test_metadata_protocol_is_strict) ... ok
+test_missing_lookup_is_read_only (test_packs.PackChecks.test_missing_lookup_is_read_only) ... ok
+test_project_install_is_separate_from_user_and_core (test_packs.PackChecks.test_project_install_is_separate_from_user_and_core) ... ok
+test_remote_url_is_not_implicitly_downloaded (test_packs.PackChecks.test_remote_url_is_not_implicitly_downloaded) ... ok
+test_remove_is_reversible_and_missing_is_explicit (test_packs.PackChecks.test_remove_is_reversible_and_missing_is_explicit) ... ok
+test_reported_link_guard_blocks_empty_roots_even_without_os_link_support (test_packs.PackChecks.test_reported_link_guard_blocks_empty_roots_even_without_os_link_support) ... ok
+test_reviewed_quality_requires_evidence (test_packs.PackChecks.test_reviewed_quality_requires_evidence) ... ok
+test_rollback_swaps_current_and_previous_versions (test_packs.PackChecks.test_rollback_swaps_current_and_previous_versions) ... ok
+test_semver_prerelease_build_and_ascii_boundaries (test_packs.PackChecks.test_semver_prerelease_build_and_ascii_boundaries) ... ok
+test_stale_stat_cannot_bypass_file_or_archive_read_limit (test_packs.PackChecks.test_stale_stat_cannot_bypass_file_or_archive_read_limit) ... ok
+test_symlink_and_special_file_archive_members_rejected (test_packs.PackChecks.test_symlink_and_special_file_archive_members_rejected) ... ok
+test_tag_profile_and_canonical_casing (test_packs.PackChecks.test_tag_profile_and_canonical_casing) ... ok
+test_traversal_nested_absolute_and_extra_archive_members_rejected (test_packs.PackChecks.test_traversal_nested_absolute_and_extra_archive_members_rejected) ... ok
+test_uncompressed_member_and_total_size_limits (test_packs.PackChecks.test_uncompressed_member_and_total_size_limits) ... ok
+test_wrong_existing_id_blocks_install_remove_and_rollback (test_packs.PackChecks.test_wrong_existing_id_blocks_install_remove_and_rollback) ... ok
+test_catalog_and_checksums_match_actual_bytes (test_release.ReleaseBuildTests.test_catalog_and_checksums_match_actual_bytes) ... ok
+test_contribution_template_is_not_published (test_release.ReleaseBuildTests.test_contribution_template_is_not_published) ... ok
+test_core_has_only_bundled_languages_and_runtime_files (test_release.ReleaseBuildTests.test_core_has_only_bundled_languages_and_runtime_files) ... ok
+test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) ... 
+  test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='yaya-core-0.1.0.zip') ... skipped "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\unrelated file 0.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\linked output 0\\\\yaya-core-0.1.0.zip'"
+  test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='catalog.json') ... skipped "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\unrelated file 1.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\linked output 1\\\\catalog.json'"
+  test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='SHA256SUMS') ... skipped "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\unrelated file 2.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test e60xaor4\\\\linked output 2\\\\SHA256SUMS'"
+test_invalid_core_version_metadata_fails_before_creating_output (test_release.ReleaseBuildTests.test_invalid_core_version_metadata_fails_before_creating_output) ... ok
+test_moved_core_resolves_bundled_languages_from_paths_with_spaces (test_release.ReleaseBuildTests.test_moved_core_resolves_bundled_languages_from_paths_with_spaces) ... ok
+test_new_reviewed_language_pack_builds_and_installs_without_core_changes (test_release.ReleaseBuildTests.test_new_reviewed_language_pack_builds_and_installs_without_core_changes) ... ok
+test_optional_archives_are_flat_valid_and_compatible (test_release.ReleaseBuildTests.test_optional_archives_are_flat_valid_and_compatible) ... ok
+test_output_cannot_escape_into_sources_through_dotdot (test_release.ReleaseBuildTests.test_output_cannot_escape_into_sources_through_dotdot) ... ok
+test_output_cannot_target_core_source_parent (test_release.ReleaseBuildTests.test_output_cannot_target_core_source_parent) ... ok
+test_repeated_builds_have_identical_bytes (test_release.ReleaseBuildTests.test_repeated_builds_have_identical_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 76 tests in 12.250s
+
+OK (skipped=7)

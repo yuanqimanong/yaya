@@ -1,0 +1,8 @@
+[
+  {
+    "id": "H026",
+    "text": "The records were deleted by the retention job. The audit log does not identify who changed the schedule.",
+    "notes": "Left unchanged because the wording is already clear and direct.",
+    "skill_used": false
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "H051",
+    "A": {
+      "fidelity": "fail",
+      "task": "fail",
+      "quality": "worse",
+      "evidence": "Preserves the table, retry_limit value of 2, and reference-link destination, but deletes the entire assertion that the configuration improves the experience. This removes meaning beyond trimming promotional language."
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "Preserves the table and reference-link destination. 'Provides a smooth experience' retains the original experience claim without inventing a specific capability, while removing the promotional 'unparalleled' and simplifying the wording."
+    },
+    "preference": "B",
+    "reason": "B makes the promotional sentence more natural while retaining its central claim. A is shorter but omits that claim, contrary to the request to preserve meaning."
+  }
+]

@@ -1,0 +1,6 @@
+{"type":"thread.started","thread_id":"01a158cf-2865-7140-bc61-cc8139ddc6a8"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"{\"id\":\"hant-hk\",\"text\":\"本軟件目前只接受港幣付款。其他付款方式預計於下星期恢復，確實日期尚待確認。\",\"notes\":\"\",\"skill_used\":true}"}}
+{"type":"turn.completed","usage":{"input_tokens":21144,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":215,"reasoning_output_tokens":155}}

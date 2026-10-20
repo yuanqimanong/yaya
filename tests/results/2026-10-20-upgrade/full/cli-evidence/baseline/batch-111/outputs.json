@@ -1,0 +1,8 @@
+[
+  {
+    "id": "X005",
+    "text": "def cached_value(cache: dict[str, tuple[int, str]], key: str, now: int):\n    \"\"\"Read one entry with a fixed expiry test.\"\"\"\n    # Look up the entry and return None if it is missing.\n    item = cache.get(key)\n    if item is None:\n        return None\n    expires_at, value = item\n    # Return None if the entry has reached or passed its expiry time.\n    if now >= expires_at:\n        return None  # noqa: RET504\n    return value\n",
+    "notes": "Only the two ordinary comments were rewritten; code, docstring, directive, and line layout were preserved.",
+    "skill_used": false
+  }
+]

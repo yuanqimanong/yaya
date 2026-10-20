@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "judgments": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "A": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "fidelity": {"type": "string", "enum": ["pass", "fail", "uncertain"]},
+              "task": {"type": "string", "enum": ["pass", "fail", "uncertain"]},
+              "quality": {"type": "string", "enum": ["better", "same", "worse", "uncertain", "not_applicable"]},
+              "evidence": {"type": "string", "minLength": 1}
+            },
+            "required": ["fidelity", "task", "quality", "evidence"]
+          },
+          "B": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "fidelity": {"type": "string", "enum": ["pass", "fail", "uncertain"]},
+              "task": {"type": "string", "enum": ["pass", "fail", "uncertain"]},
+              "quality": {"type": "string", "enum": ["better", "same", "worse", "uncertain", "not_applicable"]},
+              "evidence": {"type": "string", "minLength": 1}
+            },
+            "required": ["fidelity", "task", "quality", "evidence"]
+          },
+          "preference": {"type": "string", "enum": ["A", "B", "tie", "uncertain"]},
+          "reason": {"type": "string", "minLength": 1}
+        },
+        "required": ["id", "A", "B", "preference", "reason"]
+      }
+    }
+  },
+  "required": ["judgments"]
+}

@@ -1,0 +1,32 @@
+{
+  "protocol": 1,
+  "runner_sha256": "a5c04057fd66ff72ae4ba8cb728cbcfe5d3f89b4129f5e623c7cf5c91fe82fc8",
+  "shared_runner_sha256": "3b5e33fedcde06760fc196c60c197f4601287a800ba5d05a78431d534f581dfd",
+  "schema_sha256": "a6fe04cd571c993aa5e09042ea950bff0f8de1e4754dad7ebd04e45ea66c4d0e",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
+  ],
+  "destination": "D:\\AIProjects\\yaya\\tests\\results\\2026-10-20-upgrade\\refinement-en",
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "isolation": "one ephemeral CLI context per anonymous review batch, at most 12 pairs",
+  "blindness": "only id/request/input/checks/A/B; no source key, Skill or generator notes read",
+  "tool_policy": "forbidden in prompt; no tool activity observed in accepted JSONL; not physically disabled",
+  "batches": [
+    {
+      "batch": "batch-01.json",
+      "ids": [
+        "H051"
+      ],
+      "packet_sha256": "5caeb07f249c737a266b479d11410f439f33a145a1a59440e1e7f777ceab385a",
+      "prompt_sha256": "ab0f6f5b24c0c87283889215236aedeb151b804840f3b03b945b400fd6eb0033"
+    }
+  ]
+}

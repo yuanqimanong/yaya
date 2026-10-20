@@ -1,0 +1,166 @@
+{
+  "status": "passed",
+  "checks": {
+    "sha256:before/report.md": true,
+    "sha256:before/metrics.py": true,
+    "sha256:before/scoped-overview.md": true,
+    "sha256:before/styles/existing.md": true,
+    "sha256:after/report.md": true,
+    "sha256:after/metrics.py": true,
+    "sha256:after/scoped-overview.md": true,
+    "sha256:after/styles/plain.md": true,
+    "sha256:after/styles/existing.md": true,
+    "sha256:request.md": true,
+    "sha256:x002-input-request.json": true,
+    "sha256:recoverable.diff": true,
+    "sha256:candidate-validation.json": true,
+    "sha256:saved-validation.json": true,
+    "sha256:core-snapshot.json": true,
+    "sha256:resolve-en.json": true,
+    "sha256:resolve-zh-Hans.json": true,
+    "sha256:response.md": true,
+    "sha256:save-result.json": true,
+    "sha256:verify.py": true,
+    "sha256:verify_release.py": true,
+    "report.md:prefix_equal": true,
+    "report.md:suffix_equal": true,
+    "report.md:headings_equal": true,
+    "scoped-overview.md:prefix_equal": true,
+    "scoped-overview.md:suffix_equal": true,
+    "scoped-overview.md:headings_equal": true,
+    "python:ast_equal": true,
+    "python:noncomment_tokens_equal": true,
+    "python:docstring_equal": true,
+    "python:noqa_line_equal": true,
+    "python:string_line_equal": true,
+    "existing_style:bytes_equal": true,
+    "new_style:separate_path": true
+  },
+  "tool_results": [
+    {
+      "file": "report.md",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-20-upgrade\\file-integration\\before\\report.md",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-20-upgrade\\file-integration\\after\\report.md"
+      ],
+      "exit": 0,
+      "payload": {
+        "status": "passed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "file": "metrics.py",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_comments.py",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-20-upgrade\\file-integration\\before\\metrics.py",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-20-upgrade\\file-integration\\after\\metrics.py"
+      ],
+      "exit": 0,
+      "payload": {
+        "status": "passed",
+        "language": "python",
+        "changed_comment_lines": [
+          3
+        ],
+        "violations": [],
+        "limitations": [
+          "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+          "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+          "Docstrings, f-strings, t-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+          "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+          "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+          "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "file": "scoped-overview.md",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-20-upgrade\\file-integration\\before\\scoped-overview.md",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-20-upgrade\\file-integration\\after\\scoped-overview.md"
+      ],
+      "exit": 0,
+      "payload": {
+        "status": "passed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    }
+  ],
+  "runtime_hashes": {
+    "check_comments.py": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539",
+    "check_rewrite.py": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c",
+    "prose_scan.py": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596"
+  }
+}

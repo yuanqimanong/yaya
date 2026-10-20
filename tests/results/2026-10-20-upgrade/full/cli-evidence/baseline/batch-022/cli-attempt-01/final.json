@@ -1,0 +1,1 @@
+{"id":"mixed-language","text":"调用 `fetchUser(id)` 后，系统会返回结果。引用：\"Do not retry.\" 超时时间为200 ms。\n```js\nconst label = \"返回结果\";\n```","notes":"","skill_used":false}

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "H051",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis unparalleled configuration enables a seamless experience. Read [guide][g].\n\n[g]: https://example.test/config",
+    "checks": [
+      "Preserve table rows and reference-link destination.",
+      "Do not invent what configuration achieves."
+    ],
+    "A": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nRead [guide][g].\n\n[g]: https://example.test/config",
+    "B": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis configuration provides a smooth experience. Read [guide][g].\n\n[g]: https://example.test/config"
+  }
+]

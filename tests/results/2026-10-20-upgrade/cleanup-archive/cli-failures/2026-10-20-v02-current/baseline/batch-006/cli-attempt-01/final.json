@@ -1,0 +1,1 @@
+{"id":"zh-comments","text":"def eligible(age):\n    # 判断年龄是否达到 18 岁\n    return age >= 18\n","notes":"","skill_used":false}

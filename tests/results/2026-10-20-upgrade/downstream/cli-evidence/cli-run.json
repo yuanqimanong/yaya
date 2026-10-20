@@ -1,0 +1,85 @@
+{
+  "runner_protocol": 1,
+  "runner_sha256": "3b5e33fedcde06760fc196c60c197f4601287a800ba5d05a78431d534f581dfd",
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
+  ],
+  "manifest_sha256": "e84c16532a751b194e78abb26e134189c7cf819e63910154b4f1710776887cd7",
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "conditions": [
+    "baseline"
+  ],
+  "baseline_kind": "no_skill",
+  "competitor_sources": {},
+  "tool_policy": "forbidden in prompt; tool or unknown item events invalidate output",
+  "tool_claim": "no tool activity observed in accepted JSONL; tools are not physically disabled",
+  "project_instructions": "project_doc_max_bytes=0 for this process; host CLI configuration otherwise inherited",
+  "isolation": "one ephemeral CLI process and working directory per case",
+  "jobs": [
+    {
+      "directory": "baseline/batch-001",
+      "id": "zh-summary-ready--original",
+      "condition": "baseline",
+      "prompt_sha256": "66dbd3a1bbdaedc4c53af9c78e4e17f3ad513f029933eab56154ec6fe50ef610",
+      "context_sha256": {}
+    },
+    {
+      "directory": "baseline/batch-002",
+      "id": "zh-summary-ready--edited",
+      "condition": "baseline",
+      "prompt_sha256": "1d4afaa40c6f289e7b3e6e48973d825f8de5db04d5b0c4cc18f77c9922a4e4d4",
+      "context_sha256": {}
+    },
+    {
+      "directory": "baseline/batch-003",
+      "id": "zh-summary-missing--original",
+      "condition": "baseline",
+      "prompt_sha256": "32c5c3dea469935b8ea2e9cfae312d8d78343011a0df0ee577b2b1247f9f951d",
+      "context_sha256": {}
+    },
+    {
+      "directory": "baseline/batch-004",
+      "id": "zh-summary-missing--edited",
+      "condition": "baseline",
+      "prompt_sha256": "ef54af0a86c9aa01374c24597d0c5c6568e37c7b7a6899898657dfe736746e8b",
+      "context_sha256": {}
+    },
+    {
+      "directory": "baseline/batch-005",
+      "id": "en-risks-ready--original",
+      "condition": "baseline",
+      "prompt_sha256": "00c92b09a1c5ceedbed09ce4298f051d1b866e0c5720f0843cb89e72aadc3433",
+      "context_sha256": {}
+    },
+    {
+      "directory": "baseline/batch-006",
+      "id": "en-risks-ready--edited",
+      "condition": "baseline",
+      "prompt_sha256": "0702c8a7558038973a6179855a686f5e3af4897fcd2303cd8c08a748aa52b3de",
+      "context_sha256": {}
+    },
+    {
+      "directory": "baseline/batch-007",
+      "id": "plain-explanation-no-page--original",
+      "condition": "baseline",
+      "prompt_sha256": "b4279034c8317b1de79fffe815612b18b0ce7608912676f48f9ee7d8c44bbfe0",
+      "context_sha256": {}
+    },
+    {
+      "directory": "baseline/batch-008",
+      "id": "plain-explanation-no-page--edited",
+      "condition": "baseline",
+      "prompt_sha256": "8a6d84930779dfe35f0cb19ac623363a0e2e88d332d6defdfd2e73602e877e64",
+      "context_sha256": {}
+    }
+  ]
+}

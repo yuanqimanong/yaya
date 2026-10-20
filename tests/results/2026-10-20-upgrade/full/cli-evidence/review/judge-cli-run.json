@@ -1,0 +1,206 @@
+{
+  "protocol": 1,
+  "runner_sha256": "a5c04057fd66ff72ae4ba8cb728cbcfe5d3f89b4129f5e623c7cf5c91fe82fc8",
+  "shared_runner_sha256": "3b5e33fedcde06760fc196c60c197f4601287a800ba5d05a78431d534f581dfd",
+  "schema_sha256": "a6fe04cd571c993aa5e09042ea950bff0f8de1e4754dad7ebd04e45ea66c4d0e",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
+  ],
+  "destination": "D:\\AIProjects\\yaya\\tests\\results\\2026-10-20-upgrade\\full",
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "isolation": "one ephemeral CLI context per anonymous review batch, at most 12 pairs",
+  "blindness": "only id/request/input/checks/A/B; no source key, Skill or generator notes read",
+  "tool_policy": "forbidden in prompt; no tool activity observed in accepted JSONL; not physically disabled",
+  "batches": [
+    {
+      "batch": "batch-01.json",
+      "ids": [
+        "zh-finance",
+        "en-finance",
+        "hant-hk",
+        "ja-text",
+        "ko-text",
+        "zh-comments",
+        "en-comments",
+        "hant-comments",
+        "ja-comments",
+        "ko-comments",
+        "zh-prompt",
+        "en-prompt"
+      ],
+      "packet_sha256": "f7b5e96b316a3350557248a29917583abbe85f6f9a1233475b039a26fe4d2ed6",
+      "prompt_sha256": "ef9bfc8eb1683c2eab48678a1da369df4b0294b7f0dca78b66e4ea4aaf0c9c21"
+    },
+    {
+      "batch": "batch-02.json",
+      "ids": [
+        "hant-prompt",
+        "ja-prompt",
+        "ko-prompt",
+        "zh-style",
+        "en-style",
+        "hant-style",
+        "ja-style",
+        "ko-style",
+        "clear-unchanged",
+        "mixed-language",
+        "injection-material",
+        "negative-task"
+      ],
+      "packet_sha256": "ba338335ce512ba49825f2688f66121482f4c46a715b39be64b3a614aae6a7e3",
+      "prompt_sha256": "dc731e236701a5496044d31a50a8f2d752f57fe06cf150d57972d476959957c1"
+    },
+    {
+      "batch": "batch-03.json",
+      "ids": [
+        "downstream-style",
+        "bare-zh",
+        "readme-no-presupposition",
+        "finance-pairing",
+        "en-review-only",
+        "authorized-language-change",
+        "unsupported-ts-comments",
+        "ja-clear-unchanged",
+        "negative-code-task",
+        "saved-style",
+        "H001",
+        "H002"
+      ],
+      "packet_sha256": "2103703135e551e5b0ccaa89d92345c6fa81990008252e9ab9eea80f2e042781",
+      "prompt_sha256": "7288ee03ea32c465cdd1e87b1ab88aa6c95ff7a73010c22fc3e2cf2e364ca39d"
+    },
+    {
+      "batch": "batch-04.json",
+      "ids": [
+        "H003",
+        "H004",
+        "H005",
+        "H006",
+        "H007",
+        "H008",
+        "H009",
+        "H010",
+        "H011",
+        "H012",
+        "H013",
+        "H014"
+      ],
+      "packet_sha256": "4602d481cfae6adadb1ab7ad926c5514ed067987874c0f6f6d4c86051cf50802",
+      "prompt_sha256": "cac73fed3fe72fa141c5828258a6c970022424746fa8ace1472c79461162a738"
+    },
+    {
+      "batch": "batch-05.json",
+      "ids": [
+        "H015",
+        "H016",
+        "H017",
+        "H018",
+        "H019",
+        "H020",
+        "H021",
+        "H022",
+        "H023",
+        "H024",
+        "H025",
+        "H026"
+      ],
+      "packet_sha256": "efb177b683171469e9a093e4e4eb16933bc85872ab74a15f3db6d142891265f4",
+      "prompt_sha256": "db7f3af1a9dba98dfc51707672546d2793b70365d122975a252f719c8bcd9778"
+    },
+    {
+      "batch": "batch-06.json",
+      "ids": [
+        "H027",
+        "H028",
+        "H029",
+        "H030",
+        "H031",
+        "H032",
+        "H033",
+        "H034",
+        "H035",
+        "H036",
+        "H037",
+        "H038"
+      ],
+      "packet_sha256": "977bca83d7a26d6dda544fea2517305f36892840acab6d192ebaf7ba7c50a1ae",
+      "prompt_sha256": "ac3f1278d4b675af4e0a775956c908b8d49c5314c5ad1b7150140269f4d0c429"
+    },
+    {
+      "batch": "batch-07.json",
+      "ids": [
+        "H039",
+        "H040",
+        "H041",
+        "H042",
+        "H043",
+        "H044",
+        "H045",
+        "H046",
+        "H047",
+        "H048",
+        "H049",
+        "H050"
+      ],
+      "packet_sha256": "7e3342180a18400996b2c71c9a42ada3cb52a01c1dfc3a01df2e7c46053dd55e",
+      "prompt_sha256": "e0724d32ecd79ffc04af858b3807e00a006ee12de69c755c863e65eb02b23ce5"
+    },
+    {
+      "batch": "batch-08.json",
+      "ids": [
+        "H051",
+        "H052",
+        "H053",
+        "H054",
+        "H055",
+        "H056",
+        "H057",
+        "H058",
+        "H059",
+        "H060",
+        "H061",
+        "H062"
+      ],
+      "packet_sha256": "390c21dbef4d429d0455790e0363380244769e50d6cacdf1be2554df3db5f3bf",
+      "prompt_sha256": "6c7ba925e25bfed05a43f9a31126e11ca990453dc43208e36a8434811d051e8f"
+    },
+    {
+      "batch": "batch-09.json",
+      "ids": [
+        "H063",
+        "H064",
+        "H065",
+        "H066",
+        "H067",
+        "H068",
+        "H069",
+        "H070",
+        "H071",
+        "H072",
+        "X001",
+        "X002"
+      ],
+      "packet_sha256": "25e454a458dced8d4700f20a9999305fb4e41fc1ffc5b7971a10d7be636f9ea4",
+      "prompt_sha256": "7bdcd3d568785c47dde8ac13afdb47d6516439d83324aa964d2261e376a62dfd"
+    },
+    {
+      "batch": "batch-10.json",
+      "ids": [
+        "X003",
+        "X004",
+        "X005",
+        "X006"
+      ],
+      "packet_sha256": "0e2300a466f66ffaa40ade9598cb22f312405e11f6086f79ebcdeff9fcf88556",
+      "prompt_sha256": "b783f040f2f4b95e5a6aecebc39ac4b6f28f20920628cafc67700e852e5ae41b"
+    }
+  ]
+}

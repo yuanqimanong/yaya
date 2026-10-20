@@ -1,0 +1,6 @@
+{"type":"thread.started","thread_id":"01a158cf-28c5-7222-a284-e4d0cf944dda"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"{\"id\":\"zh-finance\",\"text\":\"本期收入为1200万元，同比增长8%；毛利率由20%升至23%，提高了3个百分点。公司认为需求可能回暖，但未提供订单数据。\",\"notes\":\"仅依据所提供文本润色，未核验财务数据。\",\"skill_used\":true}"}}
+{"type":"turn.completed","usage":{"input_tokens":20980,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":297,"reasoning_output_tokens":215}}

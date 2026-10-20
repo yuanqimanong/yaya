@@ -1,0 +1,38 @@
+{
+  "batch": "batch-10.json",
+  "status": "failed",
+  "identity": {
+    "batch": "batch-10.json",
+    "ids": [
+      "X003",
+      "X004",
+      "X005",
+      "X006"
+    ],
+    "packet_sha256": "0e2300a466f66ffaa40ade9598cb22f312405e11f6086f79ebcdeff9fcf88556",
+    "prompt_sha256": "b783f040f2f4b95e5a6aecebc39ac4b6f28f20920628cafc67700e852e5ae41b"
+  },
+  "schema_sha256": "a6fe04cd571c993aa5e09042ea950bff0f8de1e4754dad7ebd04e45ea66c4d0e",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--color",
+    "never",
+    "--json",
+    "-C",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\review\\cli-judgments\\batch-10\\attempt-01",
+    "-o",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\review\\cli-judgments\\batch-10\\attempt-01\\final.json",
+    "--output-schema",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\review\\cli-judgments\\batch-10\\attempt-01\\output-schema.json",
+    "-"
+  ],
+  "timeout_seconds": 300.0,
+  "started_at_utc": "2026-10-20T11:42:21.589807+00:00"
+}

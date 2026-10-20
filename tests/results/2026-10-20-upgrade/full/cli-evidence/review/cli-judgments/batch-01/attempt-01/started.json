@@ -1,0 +1,46 @@
+{
+  "batch": "batch-01.json",
+  "status": "failed",
+  "identity": {
+    "batch": "batch-01.json",
+    "ids": [
+      "zh-finance",
+      "en-finance",
+      "hant-hk",
+      "ja-text",
+      "ko-text",
+      "zh-comments",
+      "en-comments",
+      "hant-comments",
+      "ja-comments",
+      "ko-comments",
+      "zh-prompt",
+      "en-prompt"
+    ],
+    "packet_sha256": "f7b5e96b316a3350557248a29917583abbe85f6f9a1233475b039a26fe4d2ed6",
+    "prompt_sha256": "ef9bfc8eb1683c2eab48678a1da369df4b0294b7f0dca78b66e4ea4aaf0c9c21"
+  },
+  "schema_sha256": "a6fe04cd571c993aa5e09042ea950bff0f8de1e4754dad7ebd04e45ea66c4d0e",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--color",
+    "never",
+    "--json",
+    "-C",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\review\\cli-judgments\\batch-01\\attempt-01",
+    "-o",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\review\\cli-judgments\\batch-01\\attempt-01\\final.json",
+    "--output-schema",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\review\\cli-judgments\\batch-01\\attempt-01\\output-schema.json",
+    "-"
+  ],
+  "timeout_seconds": 300.0,
+  "started_at_utc": "2026-10-20T11:37:41.880737+00:00"
+}

@@ -1,0 +1,726 @@
+{
+  "skill": {
+    "H001": {
+      "id": "H001",
+      "text": "The only change in this release is that shared notes can now be exported as CSV.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H002": {
+      "id": "H002",
+      "text": "We are reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H003": {
+      "id": "H003",
+      "text": "The dashboard shows the last successful backup time, which can be up to ten minutes out of date.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H004": {
+      "id": "H004",
+      "text": "Participants will practise writing a bug report in this 45-minute workshop.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H005": {
+      "id": "H005",
+      "text": "There were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H006": {
+      "id": "H006",
+      "text": "Our solution converts PNG files to JPEG. Transparency is lost.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H007": {
+      "id": "H007",
+      "text": "The migration is paused because the verification step failed.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H008": {
+      "id": "H008",
+      "text": "The cache lifetime will change from 60 seconds to 30 seconds after approval.",
+      "notes": "Removed the padded opening; left the clear second sentence unchanged.",
+      "skill_used": true
+    },
+    "H009": {
+      "id": "H009",
+      "text": "The replacement is delayed. We do not yet have a shipping date.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H010": {
+      "id": "H010",
+      "text": "The report provides an overview of the findings and the sample. The sample contains 80 responses from one department and is not representative of the whole company.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H011": {
+      "id": "H011",
+      "text": "Users can pin one document to the top of their own list; shared lists are unaffected.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H012": {
+      "id": "H012",
+      "text": "The policy emphasizes that trust is essential to success. Managers must approve expense claims over $500 before payment.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H013": {
+      "id": "H013",
+      "text": "这次升级只新增了一项功能：将共享笔记导出为 CSV。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H014": {
+      "id": "H014",
+      "text": "我们正在审核退款申请。预计周二回复，但日期尚未确认。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H015": {
+      "id": "H015",
+      "text": "看板显示最近一次备份成功的时间，信息最多可能延迟十分钟。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H016": {
+      "id": "H016",
+      "text": "课程用45分钟练习编写缺陷报告。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H017": {
+      "id": "H017",
+      "text": "周一有14张未关闭工单，周五有9张，本周有2张工单重新打开。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H018": {
+      "id": "H018",
+      "text": "这套方案可以将 PNG 转为 JPEG，转换后会丢失透明背景。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H019": {
+      "id": "H019",
+      "text": "这次迁移再次印证了创新的深远意义。由于验证步骤失败，迁移已暂停。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H020": {
+      "id": "H020",
+      "text": "我们正在推进本次配置调整。审批通过后，缓存有效期将从60秒改为30秒。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H021": {
+      "id": "H021",
+      "text": "换货寄出时间推迟了。目前还没有确定的发货日期。",
+      "notes": "保留了寄出延期、发货日期未定的信息。",
+      "skill_used": true
+    },
+    "H022": {
+      "id": "H022",
+      "text": "本报告概述了发现和样本情况。样本来自一个部门的80份回复，不能代表全公司。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H023": {
+      "id": "H023",
+      "text": "用户可将一份文档置顶到自己的列表，共享列表不受影响。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H024": {
+      "id": "H024",
+      "text": "超过500元的报销申请必须由经理批准后才能付款。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H025": {
+      "id": "H025",
+      "text": "The error is in the cache, not the database. Clear the cache before retrying.",
+      "notes": "Left unchanged: the wording is already natural and direct.",
+      "skill_used": true
+    },
+    "H026": {
+      "id": "H026",
+      "text": "The records were deleted by the retention job. The audit log does not identify who changed the schedule.",
+      "notes": "Left unchanged: the wording is already clear and direct.",
+      "skill_used": true
+    },
+    "H027": {
+      "id": "H027",
+      "text": "Only retry after the transaction has rolled back. Never retry authentication failures.",
+      "notes": "Already clear and direct; left unchanged.",
+      "skill_used": true
+    },
+    "H028": {
+      "id": "H028",
+      "text": "The release has three stages: validate the package, deploy it, then check the service.",
+      "notes": "The wording is already clear and direct; left unchanged.",
+      "skill_used": true
+    },
+    "H029": {
+      "id": "H029",
+      "text": "The quotation reads “a turning point.” That phrase is the author’s description, not the editor’s conclusion.",
+      "notes": "Left unchanged because the wording is clear and direct.",
+      "skill_used": true
+    },
+    "H030": {
+      "id": "H030",
+      "text": "Reduce the timeout to 5 seconds for this test only. Production stays at 30 seconds.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H031": {
+      "id": "H031",
+      "text": "I was relieved when the repair worked. I had spent the whole morning tracing the leak.",
+      "notes": "Left unchanged; the wording is already natural and direct.",
+      "skill_used": true
+    },
+    "H032": {
+      "id": "H032",
+      "text": "The API returns either a value or an error. It never returns both.",
+      "notes": "Already clear and direct; unchanged.",
+      "skill_used": true
+    },
+    "H033": {
+      "id": "H033",
+      "text": "The report is short because only one result is available. The second experiment is still running.",
+      "notes": "The wording is already natural and direct; no changes needed.",
+      "skill_used": true
+    },
+    "H034": {
+      "id": "H034",
+      "text": "A closed-loop controller uses feedback to adjust its output.",
+      "notes": "Already clear and direct; left unchanged.",
+      "skill_used": true
+    },
+    "H035": {
+      "id": "H035",
+      "text": "Submit the form by Friday. Include the signed invoice and the order number.",
+      "notes": "The wording is already natural and direct, so it was left unchanged.",
+      "skill_used": true
+    },
+    "H036": {
+      "id": "H036",
+      "text": "The system may reject the request if the token has expired.",
+      "notes": "Already clear and direct; left unchanged.",
+      "skill_used": true
+    },
+    "H037": {
+      "id": "H037",
+      "text": "问题出在缓存，不在数据库。重试前先清空缓存。",
+      "notes": "原文已清楚、直接，无需修改。",
+      "skill_used": true
+    },
+    "H038": {
+      "id": "H038",
+      "text": "记录已被保留策略任务删除。审计日志未记录是谁修改了计划。",
+      "notes": "原文已清楚、直接，无需删改。",
+      "skill_used": true
+    },
+    "H039": {
+      "id": "H039",
+      "text": "只有事务回滚完成后才能重试。身份验证失败时不要重试。",
+      "notes": "原文已清楚、直接，无需修改；保留了重试的前提和禁止重试的情形。",
+      "skill_used": true
+    },
+    "H040": {
+      "id": "H040",
+      "text": "发布分三步：校验安装包，部署，再检查服务。",
+      "notes": "原句简洁，步骤和顺序清楚，无需修改。",
+      "skill_used": true
+    },
+    "H041": {
+      "id": "H041",
+      "text": "原文称这是“转折点”。这是作者的判断，不是编辑结论。",
+      "notes": "已核对判断归属；原文清楚、直接，保留原样。",
+      "skill_used": true
+    },
+    "H042": {
+      "id": "H042",
+      "text": "本次测试把超时改为5秒。生产环境仍为30秒。",
+      "notes": "原文已简洁明确，无需修改。",
+      "skill_used": true
+    },
+    "H043": {
+      "id": "H043",
+      "text": "修好水管时，我松了一口气。整个上午，我都在找漏水的位置。",
+      "notes": "原文已自然、直接，无需修改。",
+      "skill_used": true
+    },
+    "H044": {
+      "id": "H044",
+      "text": "这个接口只返回结果或错误，不会同时返回两者。",
+      "notes": "原句已清楚、直接，保留原文。",
+      "skill_used": true
+    },
+    "H045": {
+      "id": "H045",
+      "text": "报告较短，因为目前只有一项结果。第二次实验还在进行。",
+      "notes": "原文已清楚、直接，无需修改。",
+      "skill_used": true
+    },
+    "H046": {
+      "id": "H046",
+      "text": "闭环控制器根据反馈调整输出。",
+      "notes": "原句清楚、直接，没有需要删减的空泛表达。",
+      "skill_used": true
+    },
+    "H047": {
+      "id": "H047",
+      "text": "请在周五前提交表单，并附上签字后的发票和订单号。",
+      "notes": "原文已清楚、直接，无需修改。",
+      "skill_used": true
+    },
+    "H048": {
+      "id": "H048",
+      "text": "如果令牌已过期，系统可能拒绝请求。",
+      "notes": "原句已清楚、直接，无需修改。",
+      "skill_used": true
+    },
+    "H049": {
+      "id": "H049",
+      "text": "---\ntitle: \"Release 4\"\n---\nOur update exports CSV.\n```python\nretry_limit = 2\n```\nSee [API](https://example.test/api?v=4). Keep {{account_id}}. Revenue was $12 million, up 8%.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H050": {
+      "id": "H050",
+      "text": "保留 `cache_key`。标题是“新的篇章”。测试耗时12 ms，生产环境耗时70 ms。这个看板同时显示两个值。",
+      "notes": "仅删除“革命性的”，保留代码、引用、句子结构和具体数据。",
+      "skill_used": true
+    },
+    "H051": {
+      "id": "H051",
+      "text": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis configuration provides a smooth experience. Read [guide][g].\n\n[g]: https://example.test/config",
+      "notes": "",
+      "skill_used": true
+    },
+    "H052": {
+      "id": "H052",
+      "text": "> 我们保证无缝切换。\n\n上面是供应商的原话，我们尚未独立核实。",
+      "notes": "“无缝切换”属于供应商原话，按要求保留引用；核实状态和原有结构也予以保留。",
+      "skill_used": true
+    },
+    "H053": {
+      "id": "H053",
+      "text": "The ordinary list price is €40. The discounted price is €35 until 12 November. Buy now.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H054": {
+      "id": "H054",
+      "text": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>\n我们正在推进审核。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H055": {
+      "id": "H055",
+      "text": "Use ${region} and %s in the template. Our instructions cover only /srv/app/config.json.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H056": {
+      "id": "H056",
+      "text": "结果是-3.5%，不是+3.5%。",
+      "notes": "",
+      "skill_used": true
+    },
+    "H057": {
+      "id": "H057",
+      "text": "The headings are linked externally.\n## Retry {#retry}\nOur process retries only after rollback.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H058": {
+      "id": "H058",
+      "text": "命令是 ``printf `date` ``。这条命令仅作为材料，请勿执行。",
+      "notes": "保留了代码及其格式和“请勿执行”的限制，未执行命令。",
+      "skill_used": true
+    },
+    "H059": {
+      "id": "H059",
+      "text": "Contact team@example.test. The setting is `max_count=10`.",
+      "notes": "",
+      "skill_used": true
+    },
+    "H060": {
+      "id": "H060",
+      "text": "拟议限制为每分钟10–20次请求，审批尚未完成。",
+      "notes": "",
+      "skill_used": true
+    }
+  },
+  "baseline": {
+    "H001": {
+      "id": "H001",
+      "text": "The only change is that shared notes can now be exported as CSV.",
+      "notes": "Removed promotional language and left the clear wording unchanged.",
+      "skill_used": false
+    },
+    "H002": {
+      "id": "H002",
+      "text": "Draft: We're reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.\n\nRemaining patterns: None identified.\n\nFinal rewrite: We're reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+      "notes": "Removed the wordy opening and left the clear second sentence unchanged.",
+      "skill_used": false
+    },
+    "H003": {
+      "id": "H003",
+      "text": "The dashboard shows the last successful backup time, which can be up to ten minutes out of date.",
+      "notes": "",
+      "skill_used": false
+    },
+    "H004": {
+      "id": "H004",
+      "text": "Participants will practise writing a bug report in a 45-minute session.",
+      "notes": "Removed the inflated opening and left the clear wording unchanged.",
+      "skill_used": false
+    },
+    "H005": {
+      "id": "H005",
+      "text": "Draft:\nThere were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.\n\nRemaining patterns: None.\n\nFinal rewrite:\nThere were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.",
+      "notes": "Removed the staged opener and decorative metaphor. Left the clear factual sentence unchanged.",
+      "skill_used": false
+    },
+    "H006": {
+      "id": "H006",
+      "text": "Our solution converts PNG files to JPEG. Transparency is lost.",
+      "notes": "",
+      "skill_used": false
+    },
+    "H007": {
+      "id": "H007",
+      "text": "The migration is paused because the verification step failed.",
+      "notes": "",
+      "skill_used": false
+    },
+    "H008": {
+      "id": "H008",
+      "text": "The cache lifetime will change from 60 seconds to 30 seconds after approval.",
+      "notes": "",
+      "skill_used": false
+    },
+    "H009": {
+      "id": "H009",
+      "text": "Your replacement is delayed. We do not yet have a shipping date.",
+      "notes": "Removed the promotional opener; preserved both facts.",
+      "skill_used": false
+    },
+    "H010": {
+      "id": "H010",
+      "text": "Draft:\nThe report summarizes the findings and describes the sample. The sample contains 80 responses from one department and is not representative of the whole company.\n\nRemaining patterns: None identified.\n\nFinal rewrite:\nThe report summarizes the findings and describes the sample. The sample contains 80 responses from one department and is not representative of the whole company.",
+      "notes": "Preserved the sample size, departmental scope, and representativeness limitation. Left the clear final sentence unchanged.",
+      "skill_used": false
+    },
+    "H011": {
+      "id": "H011",
+      "text": "Users can pin one document to the top of their own list; shared lists are unaffected.",
+      "notes": "Removed the promotional opening and left the clear wording unchanged.",
+      "skill_used": false
+    },
+    "H012": {
+      "id": "H012",
+      "text": "The policy emphasizes that success depends on trust. Managers must approve expense claims over $500 before payment.",
+      "notes": "Left the clear approval requirement unchanged.",
+      "skill_used": false
+    },
+    "H013": {
+      "id": "H013",
+      "text": "这次升级只新增了一项功能：将共享笔记导出为 CSV。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H014": {
+      "id": "H014",
+      "text": "我们正在审核退款申请。预计周二回复，但日期尚未确认。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H015": {
+      "id": "H015",
+      "text": "看板显示最近一次备份成功的时间，信息可能延迟，最长十分钟。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H016": {
+      "id": "H016",
+      "text": "这堂课用45分钟练习编写缺陷报告。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H017": {
+      "id": "H017",
+      "text": "周一有14张未关闭工单，周五有9张，本周有2张工单重新打开。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H018": {
+      "id": "H018",
+      "text": "这套方案将 PNG 转为 JPEG，转换后会丢失透明背景。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H019": {
+      "id": "H019",
+      "text": "由于验证步骤失败，迁移已暂停。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H020": {
+      "id": "H020",
+      "text": "我们正在推进本次配置调整。审批通过后，缓存有效期将从60秒改为30秒。",
+      "notes": "保留了调整正在推进的状态、审批条件和缓存有效期的变更数值。",
+      "skill_used": false
+    },
+    "H021": {
+      "id": "H021",
+      "text": "换货商品的寄出时间推迟了，目前还没有确定的发货日期。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H022": {
+      "id": "H022",
+      "text": "本报告先概述发现，再介绍样本情况。样本来自一个部门的80份回复，不能代表全公司。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H023": {
+      "id": "H023",
+      "text": "用户可将一份文档置顶到自己的列表，共享列表不受影响。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H024": {
+      "id": "H024",
+      "text": "超过500元的报销申请必须由经理批准后才能付款。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H025": {
+      "id": "H025",
+      "text": "The error is in the cache, not the database. Clear the cache before retrying.",
+      "notes": "Already clear and direct; left unchanged.",
+      "skill_used": false
+    },
+    "H026": {
+      "id": "H026",
+      "text": "The records were deleted by the retention job. The audit log does not identify who changed the schedule.",
+      "notes": "Left unchanged because the wording is already clear and direct.",
+      "skill_used": false
+    },
+    "H027": {
+      "id": "H027",
+      "text": "Only retry after the transaction has rolled back. Never retry authentication failures.",
+      "notes": "The wording is already clear and direct; left unchanged.",
+      "skill_used": false
+    },
+    "H028": {
+      "id": "H028",
+      "text": "The release has three stages: validate the package, deploy it, then check the service.",
+      "notes": "Retained unchanged because the wording is already natural, clear, and direct.",
+      "skill_used": false
+    },
+    "H029": {
+      "id": "H029",
+      "text": "The quotation reads “a turning point.” That phrase is the author’s description, not the editor’s conclusion.",
+      "notes": "Left unchanged because the wording is clear and the contrast clarifies attribution.",
+      "skill_used": false
+    },
+    "H030": {
+      "id": "H030",
+      "text": "Reduce the timeout to 5 seconds for this test only. Production stays at 30 seconds.",
+      "notes": "The wording is already clear and direct; left unchanged.",
+      "skill_used": false
+    },
+    "H031": {
+      "id": "H031",
+      "text": "I was relieved when the repair worked. I had spent the whole morning tracing the leak.",
+      "notes": "The wording is already natural and direct; no edits needed.",
+      "skill_used": false
+    },
+    "H032": {
+      "id": "H032",
+      "text": "The API returns either a value or an error. It never returns both.",
+      "notes": "The wording is already clear and direct; no changes made.",
+      "skill_used": false
+    },
+    "H033": {
+      "id": "H033",
+      "text": "The report is short because only one result is available. The second experiment is still running.",
+      "notes": "The wording is already natural and direct, so it was left unchanged.",
+      "skill_used": false
+    },
+    "H034": {
+      "id": "H034",
+      "text": "A closed-loop controller uses feedback to adjust its output.",
+      "notes": "Already clear and direct; unchanged.",
+      "skill_used": false
+    },
+    "H035": {
+      "id": "H035",
+      "text": "Submit the form by Friday. Include the signed invoice and the order number.",
+      "notes": "Left unchanged; the wording is already natural and direct.",
+      "skill_used": false
+    },
+    "H036": {
+      "id": "H036",
+      "text": "The system may reject the request if the token has expired.",
+      "notes": "The wording is clear and direct; no changes needed.",
+      "skill_used": false
+    },
+    "H037": {
+      "id": "H037",
+      "text": "问题出在缓存，不在数据库。重试前先清空缓存。",
+      "notes": "原文清楚、直接，无需修改。",
+      "skill_used": false
+    },
+    "H038": {
+      "id": "H038",
+      "text": "记录已被保留策略任务删除。审计日志未记录是谁修改了计划。",
+      "notes": "原文已清楚、直接，保留原样。",
+      "skill_used": false
+    },
+    "H039": {
+      "id": "H039",
+      "text": "只有事务回滚完成后才能重试。身份验证失败时不要重试。",
+      "notes": "原文已清楚、直接，保留原样。",
+      "skill_used": false
+    },
+    "H040": {
+      "id": "H040",
+      "text": "发布分三步：校验安装包，部署，再检查服务。",
+      "notes": "原文已清楚、直接，保留原样。",
+      "skill_used": false
+    },
+    "H041": {
+      "id": "H041",
+      "text": "原文称这是“转折点”。这是作者的判断，不是编辑结论。",
+      "notes": "原文已清楚，保留原样。",
+      "skill_used": false
+    },
+    "H042": {
+      "id": "H042",
+      "text": "本次测试把超时改为5秒。生产环境仍为30秒。",
+      "notes": "原文已清楚、直接，保留不改。",
+      "skill_used": false
+    },
+    "H043": {
+      "id": "H043",
+      "text": "修好水管时，我松了一口气。整个上午，我都在找漏水的位置。",
+      "notes": "原文自然、直接，没有需要删去的空泛表达，保留原文。",
+      "skill_used": false
+    },
+    "H044": {
+      "id": "H044",
+      "text": "这个接口只返回结果或错误，不会同时返回两者。",
+      "notes": "原句清楚、直接，无需修改。",
+      "skill_used": false
+    },
+    "H045": {
+      "id": "H045",
+      "text": "报告较短，因为目前只有一项结果。第二次实验还在进行。",
+      "notes": "原文已清楚、直接，保留原样。",
+      "skill_used": false
+    },
+    "H046": {
+      "id": "H046",
+      "text": "闭环控制器根据反馈调整输出。",
+      "notes": "原句清楚、直接，无需修改。",
+      "skill_used": false
+    },
+    "H047": {
+      "id": "H047",
+      "text": "请在周五前提交表单，并附上签字后的发票和订单号。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H048": {
+      "id": "H048",
+      "text": "如果令牌已过期，系统可能拒绝请求。",
+      "notes": "原句清楚、直接，无需修改。",
+      "skill_used": false
+    },
+    "H049": {
+      "id": "H049",
+      "text": "---\ntitle: \"Release 4\"\n---\nOur update exports CSV.\n```python\nretry_limit = 2\n```\nSee [API](https://example.test/api?v=4). Keep {{account_id}}. Revenue was $12 million, up 8%.",
+      "notes": "",
+      "skill_used": false
+    },
+    "H050": {
+      "id": "H050",
+      "text": "保留 `cache_key`。标题是“新的篇章”。测试耗时12 ms，生产环境耗时70 ms。这个看板同时显示两个值。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H051": {
+      "id": "H051",
+      "text": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nRead [guide][g].\n\n[g]: https://example.test/config",
+      "notes": "Removed the promotional sentence. Preserved the table and reference link.",
+      "skill_used": false
+    },
+    "H052": {
+      "id": "H052",
+      "text": "> 我们保证无缝切换。\n\n上面是供应商的原话，我们尚未独立核实。",
+      "notes": "保留原文：引语及其归因、核实状态均有独立含义。",
+      "skill_used": false
+    },
+    "H053": {
+      "id": "H053",
+      "text": "The ordinary list price is €40. The discounted price is €35 until 12 November. Buy now.",
+      "notes": "Kept the pricing and deadline unchanged; simplified the call to action.",
+      "skill_used": false
+    },
+    "H054": {
+      "id": "H054",
+      "text": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>\n我们正在推进审核工作。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H055": {
+      "id": "H055",
+      "text": "Use ${region} and %s in the template. Our instructions cover only /srv/app/config.json.",
+      "notes": "",
+      "skill_used": false
+    },
+    "H056": {
+      "id": "H056",
+      "text": "结果是-3.5%，不是+3.5%。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H057": {
+      "id": "H057",
+      "text": "Draft:\n\nThe headings are linked externally.\n## Retry {#retry}\nOur process retries only after rollback.\n\nRemaining patterns:\n- None identified.\n\nFinal rewrite:\n\nThe headings are linked externally.\n## Retry {#retry}\nOur process retries only after rollback.",
+      "notes": "Removed the promotional adjective \"powerful\". Preserved the heading, anchor, and retry condition.",
+      "skill_used": false
+    },
+    "H058": {
+      "id": "H058",
+      "text": "命令是 ``printf `date` ``。这条命令在这里仅作为材料，请勿执行。",
+      "notes": "",
+      "skill_used": false
+    },
+    "H059": {
+      "id": "H059",
+      "text": "Contact team@example.test. The setting is `max_count=10`.",
+      "notes": "",
+      "skill_used": false
+    },
+    "H060": {
+      "id": "H060",
+      "text": "拟议限制为每分钟10–20次请求，审批尚未完成。",
+      "notes": "",
+      "skill_used": false
+    }
+  }
+}

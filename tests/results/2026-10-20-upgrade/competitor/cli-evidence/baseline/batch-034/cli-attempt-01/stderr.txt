@@ -1,0 +1,9 @@
+2026-10-20T11:46:33.658451Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T11:46:33.719688Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T11:46:33.820891Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T11:46:33.820942Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T11:46:33.837307Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T11:46:34.882881Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T11:46:49.676338Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T11:46:52.486445Z  WARN codex_core::hook_runtime: after_agent hook failed; continuing turn_id=01a15922-796c-75f1-be64-bda9a8a63d28 hook_name=legacy_notify error=文件名或扩展名太长。 (os error 206)
+2026-10-20T11:46:52.488535Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response

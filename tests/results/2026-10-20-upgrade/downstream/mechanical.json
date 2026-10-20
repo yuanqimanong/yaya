@@ -1,0 +1,94 @@
+[
+  {
+    "id": "zh-summary-ready--original",
+    "variant": "original",
+    "case": "zh-summary-ready",
+    "text_sha256": "2590dee4e3fea9aa1d6596d7dc38ec2c27e2f237ad773b41c00f1e775a322358",
+    "json_only": true,
+    "keys": [
+      "summary"
+    ],
+    "points": 3,
+    "character_counts": [
+      11,
+      8,
+      16
+    ]
+  },
+  {
+    "id": "zh-summary-ready--edited",
+    "variant": "edited",
+    "case": "zh-summary-ready",
+    "text_sha256": "2590dee4e3fea9aa1d6596d7dc38ec2c27e2f237ad773b41c00f1e775a322358",
+    "json_only": true,
+    "keys": [
+      "summary"
+    ],
+    "points": 3,
+    "character_counts": [
+      11,
+      8,
+      16
+    ]
+  },
+  {
+    "id": "zh-summary-missing--original",
+    "variant": "original",
+    "case": "zh-summary-missing",
+    "text_sha256": "9ffd62d4b61698db08ce301da449e29a1e256f05566e23beb57ed39726eebc04",
+    "json_only": true,
+    "keys": [
+      "summary"
+    ],
+    "question_marks": 1,
+    "summary_value_type": "string"
+  },
+  {
+    "id": "zh-summary-missing--edited",
+    "variant": "edited",
+    "case": "zh-summary-missing",
+    "text_sha256": "5f5707da23a719d42cc458c66f01a6f6cda0c0cc5c9954e87fbfd12d19bc169e",
+    "json_only": true,
+    "keys": [
+      "summary"
+    ],
+    "question_marks": 1,
+    "summary_value_type": "string"
+  },
+  {
+    "id": "en-risks-ready--original",
+    "variant": "original",
+    "case": "en-risks-ready",
+    "text_sha256": "4d16b2a578200b71d0bafdc3f2a38eccd31416a36518cec310ac6c818f83aa15",
+    "json_only": true,
+    "keys": [
+      "risks"
+    ],
+    "risks": 2
+  },
+  {
+    "id": "en-risks-ready--edited",
+    "variant": "edited",
+    "case": "en-risks-ready",
+    "text_sha256": "a46c94d56f892101ec3687ff5d1583de2117d2c7eb1dc609f5cdd78a52eb28a3",
+    "json_only": true,
+    "keys": [
+      "risks"
+    ],
+    "risks": 2
+  },
+  {
+    "id": "plain-explanation-no-page--original",
+    "variant": "original",
+    "case": "plain-explanation-no-page",
+    "text_sha256": "691fcad17cad8b5a7d3f64fc8da68901068267b09d1faad2d0bbcd3f89d29a83",
+    "missing_page_marker_present": true
+  },
+  {
+    "id": "plain-explanation-no-page--edited",
+    "variant": "edited",
+    "case": "plain-explanation-no-page",
+    "text_sha256": "624fc4705f0e8a830807ffe587744fe3c275030a2d38185a7803c58b90dccf7d",
+    "missing_page_marker_present": true
+  }
+]

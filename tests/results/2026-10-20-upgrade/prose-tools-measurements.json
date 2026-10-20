@@ -1,0 +1,35 @@
+{
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "detector_10004_words_ms": [
+    122.355,
+    139.382,
+    143.586,
+    88.696,
+    82.956
+  ],
+  "median_ms": 122.355,
+  "adversarial": [
+    {
+      "characters": 100006,
+      "status": "unsupported",
+      "ms": 24.311
+    },
+    {
+      "characters": 100004,
+      "status": "unsupported",
+      "ms": 0.341
+    },
+    {
+      "characters": 100011,
+      "status": "ok",
+      "ms": 198.363
+    },
+    {
+      "characters": 100010,
+      "status": "ok",
+      "ms": 142.788
+    }
+  ],
+  "scope": "In-process detector; excludes interpreter startup, file I/O, JSON serialization. One host only."
+}

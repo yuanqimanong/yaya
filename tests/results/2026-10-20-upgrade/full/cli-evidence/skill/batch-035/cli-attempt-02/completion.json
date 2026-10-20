@@ -1,0 +1,95 @@
+{
+  "id": "H001",
+  "condition": "skill",
+  "status": "completed",
+  "attempt": 2,
+  "started_at_utc": "2026-10-20T10:50:33.581201+00:00",
+  "prior_failure": {
+    "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 2029685 bytes failed",
+    "returncode": 3221226505,
+    "error": "CLI exited with status 3221226505",
+    "attempt": "cli-attempt-01",
+    "completion_sha256": "7c2e36a8cb24907246ea6d98e565b19e5c4dd7a2229d86431661b99a07157e32",
+    "started_sha256": "e42182f27102fde23e2428d564d2153b119e59086ce34180648c8758449450b1",
+    "artifact_sha256": {
+      "prompt.txt": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+      "stdout.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr.txt": "d76e8322abfaf3c09e2ddee0246babe41348283955467c448b7280198235a9f9",
+      "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    }
+  },
+  "prompt_sha256": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+  "context_sha256": {
+    "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+    "snapshot/yaya/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+    "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+  },
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--color",
+    "never",
+    "--json",
+    "-C",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-035\\cli-attempt-02",
+    "-o",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-035\\cli-attempt-02\\final.json",
+    "--output-schema",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-035\\cli-attempt-02\\output-schema.json",
+    "-"
+  ],
+  "timeout_seconds": 180,
+  "elapsed_seconds": 33.57438249999905,
+  "returncode": 0,
+  "usage": [
+    {
+      "input_tokens": 21628,
+      "cached_input_tokens": 16768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 192,
+      "reasoning_output_tokens": 148
+    }
+  ],
+  "tool_or_unknown_items": [],
+  "diagnostics": [
+    {
+      "classification": "ignored_provider_configuration",
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_0",
+          "type": "error",
+          "message": "Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."
+        }
+      }
+    },
+    {
+      "classification": "ignored_provider_configuration",
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_1",
+          "type": "error",
+          "message": "Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."
+        }
+      }
+    }
+  ],
+  "malformed_jsonl_lines": 0,
+  "completed_turns": 1,
+  "failed_events": [],
+  "artifact_sha256": {
+    "final.json": "133775a225c968cd30318e83f1328d2f0d0d58b29b86409230d4f70ca7c28464",
+    "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+    "prompt.txt": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+    "stderr.txt": "1de3c47206f8be65179241696acd4c24fb04daaba228f01ed3403bc77cbe5bd3",
+    "stdout.jsonl": "715f583ccf3b0cece673dd36219993318b92458a9a85c3170396a66ef056df87"
+  }
+}

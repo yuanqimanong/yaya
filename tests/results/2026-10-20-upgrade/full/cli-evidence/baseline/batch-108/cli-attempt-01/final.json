@@ -1,0 +1,1 @@
+{"id":"X002","text":"# Export notes\n\n## Overview\nThe tool exports shared notes as CSV. This feature is currently available only to trial accounts.\n\n## API\nCall `export_notes(account_id)`.\n```json\n{\"format\":\"csv\",\"limit\":20}\n```\n\n## Other draft\nThis section is being revised by another author. Keep it.\n","notes":"","skill_used":false}

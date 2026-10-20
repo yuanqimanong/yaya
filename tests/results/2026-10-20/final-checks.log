@@ -1,0 +1,342 @@
+UNITTEST
+test_bom_must_be_preserved (test_comments.CommentChecks.test_bom_must_be_preserved) ... ok
+test_cannot_introduce_directive_by_rewriting_prose (test_comments.CommentChecks.test_cannot_introduce_directive_by_rewriting_prose) ... ok
+test_cli_json_and_exit_codes (test_comments.CommentChecks.test_cli_json_and_exit_codes) ... ok
+test_code_string_and_whitespace_changes_fail (test_comments.CommentChecks.test_code_string_and_whitespace_changes_fail) ... ok
+test_comment_addition_deletion_or_layout_change_fails (test_comments.CommentChecks.test_comment_addition_deletion_or_layout_change_fails) ... ok
+test_commented_doctest_output_is_protected (test_comments.CommentChecks.test_commented_doctest_output_is_protected) ... ok
+test_crlf_and_mixed_newlines_preserved (test_comments.CommentChecks.test_crlf_and_mixed_newlines_preserved) ... ok
+test_directive_after_prose_is_protected (test_comments.CommentChecks.test_directive_after_prose_is_protected) ... ok
+test_docstrings_and_doctests_in_strings_are_immutable (test_comments.CommentChecks.test_docstrings_and_doctests_in_strings_are_immutable) ... ok
+test_doctest_blocks_stop_at_code_and_blank_line_boundaries (test_comments.CommentChecks.test_doctest_blocks_stop_at_code_and_blank_line_boundaries) ... ok
+test_empty_sources_and_stub (test_comments.CommentChecks.test_empty_sources_and_stub) ... ok
+test_encoding_cookie_and_legacy_encoding (test_comments.CommentChecks.test_encoding_cookie_and_legacy_encoding) ... ok
+test_fstring_comments_are_immutable (test_comments.CommentChecks.test_fstring_comments_are_immutable) ... ok
+test_hashes_inside_strings_are_not_comments (test_comments.CommentChecks.test_hashes_inside_strings_are_not_comments) ... ok
+test_invalid_baseline_is_unsupported_candidate_is_failed (test_comments.CommentChecks.test_invalid_baseline_is_unsupported_candidate_is_failed) ... ok
+test_javascript_and_typescript_are_unsupported (test_comments.CommentChecks.test_javascript_and_typescript_are_unsupported) ... ok
+test_known_directives_are_protected (test_comments.CommentChecks.test_known_directives_are_protected) ... ok
+test_lone_cr_is_never_treated_as_mutable_comment_text (test_comments.CommentChecks.test_lone_cr_is_never_treated_as_mutable_comment_text) ... ok
+test_multiline_expression_preserves_comments_and_executable_structure (test_comments.CommentChecks.test_multiline_expression_preserves_comments_and_executable_structure) ... ok
+test_ordinary_comment_rewrites (test_comments.CommentChecks.test_ordinary_comment_rewrites) ... ok
+test_second_line_encoding_cookie_is_protected (test_comments.CommentChecks.test_second_line_encoding_cookie_is_protected) ... ok
+test_triple_string_comment_markers_are_immutable (test_comments.CommentChecks.test_triple_string_comment_markers_are_immutable) ... ok
+test_tstring_comments_are_immutable (test_comments.CommentChecks.test_tstring_comments_are_immutable) ... skipped 'Template strings require Python 3.14+'
+test_unicode_is_preserved_outside_comments (test_comments.CommentChecks.test_unicode_is_preserved_outside_comments) ... ok
+test_unicode_line_separator_in_string_is_not_physical_line (test_comments.CommentChecks.test_unicode_line_separator_in_string_is_not_physical_line) ... ok
+test_unterminated_last_comment_can_be_edited (test_comments.CommentChecks.test_unterminated_last_comment_can_be_edited) ... ok
+test_complete_output_is_required (test_evals.EvaluationIntegrity.test_complete_output_is_required) ... ok
+test_packets_must_match_cases_even_with_valid_hashes (test_evals.EvaluationIntegrity.test_packets_must_match_cases_even_with_valid_hashes) ... ok
+test_reject_duplicate_json_keys (test_evals.EvaluationIntegrity.test_reject_duplicate_json_keys) ... ok
+test_reject_empty_malformed_or_contaminated_outputs (test_evals.EvaluationIntegrity.test_reject_empty_malformed_or_contaminated_outputs) ... ok
+test_snapshot_and_criteria_mutations_are_rejected (test_evals.EvaluationIntegrity.test_snapshot_and_criteria_mutations_are_rejected) ... ok
+test_summary_rejects_incomplete_ratings_and_preference_over_hard_failure (test_evals.EvaluationIntegrity.test_summary_rejects_incomplete_ratings_and_preference_over_hard_failure) ... ok
+test_archive_sha256_and_archive_limit_before_mutation (test_packs.PackChecks.test_archive_sha256_and_archive_limit_before_mutation) ... ok
+test_bad_zip_and_invalid_metadata_leave_no_stage_or_install (test_packs.PackChecks.test_bad_zip_and_invalid_metadata_leave_no_stage_or_install) ... ok
+test_bundled_fallback_does_not_cross_scripts (test_packs.PackChecks.test_bundled_fallback_does_not_cross_scripts) ... ok
+test_cleanup_failure_preserves_recovery_error_and_paths (test_packs.PackChecks.test_cleanup_failure_preserves_recovery_error_and_paths) ... ok
+test_cli_errors_are_json_and_mutually_exclusive_locations_fail (test_packs.PackChecks.test_cli_errors_are_json_and_mutually_exclusive_locations_fail) ... ok
+test_corrupt_latest_backup_is_not_silently_skipped (test_packs.PackChecks.test_corrupt_latest_backup_is_not_silently_skipped) ... ok
+test_directory_id_mismatch_is_invalid (test_packs.PackChecks.test_directory_id_mismatch_is_invalid) ... ok
+test_duplicate_and_case_colliding_archive_members_rejected (test_packs.PackChecks.test_duplicate_and_case_colliding_archive_members_rejected) ... ok
+test_empty_binary_invalid_utf8_and_unexpected_files_fail (test_packs.PackChecks.test_empty_binary_invalid_utf8_and_unexpected_files_fail) ... ok
+test_exact_pack_before_fallback_in_same_location (test_packs.PackChecks.test_exact_pack_before_fallback_in_same_location) ... ok
+test_external_reviewed_pack_lifecycle_with_unicode_and_spaced_paths (test_packs.PackChecks.test_external_reviewed_pack_lifecycle_with_unicode_and_spaced_paths) ... ok
+test_failed_install_move_restores_previous_pack (test_packs.PackChecks.test_failed_install_move_restores_previous_pack) ... ok
+test_failed_install_recovery_reports_preserved_backup (test_packs.PackChecks.test_failed_install_recovery_reports_preserved_backup) ... ok
+test_failed_rollback_move_restores_current_pack (test_packs.PackChecks.test_failed_rollback_move_restores_current_pack) ... ok
+test_failed_rollback_recovery_reports_preserved_current_pack (test_packs.PackChecks.test_failed_rollback_recovery_reports_preserved_current_pack) ... ok
+test_fallback_sequence_and_chinese_region_inference (test_packs.PackChecks.test_fallback_sequence_and_chinese_region_inference) ... ok
+test_file_at_pack_root_is_invalid_not_missing (test_packs.PackChecks.test_file_at_pack_root_is_invalid_not_missing) ... ok
+test_incompatible_pack_is_explicit_and_blocks_fallback (test_packs.PackChecks.test_incompatible_pack_is_explicit_and_blocks_fallback) ... ok
+test_install_idempotence_and_explicit_replace (test_packs.PackChecks.test_install_idempotence_and_explicit_replace) ... ok
+test_invalid_higher_priority_pack_blocks_fallback (test_packs.PackChecks.test_invalid_higher_priority_pack_blocks_fallback) ... ok
+test_linked_backup_directory_prevents_move (test_packs.PackChecks.test_linked_backup_directory_prevents_move) ... skipped 'Directory symlinks and junctions unavailable'
+test_linked_data_root_and_destination_rejected (test_packs.PackChecks.test_linked_data_root_and_destination_rejected) ... skipped 'Directory symlinks and junctions unavailable'
+test_linked_empty_resolution_root_is_invalid_not_missing (test_packs.PackChecks.test_linked_empty_resolution_root_is_invalid_not_missing) ... skipped 'Directory symlinks and junctions unavailable'
+test_linked_pack_directory_and_backups_rejected (test_packs.PackChecks.test_linked_pack_directory_and_backups_rejected) ... skipped 'Directory symlinks and junctions unavailable'
+test_location_precedence_before_specificity (test_packs.PackChecks.test_location_precedence_before_specificity) ... ok
+test_metadata_protocol_is_strict (test_packs.PackChecks.test_metadata_protocol_is_strict) ... ok
+test_missing_lookup_is_read_only (test_packs.PackChecks.test_missing_lookup_is_read_only) ... ok
+test_project_install_is_separate_from_user_and_core (test_packs.PackChecks.test_project_install_is_separate_from_user_and_core) ... ok
+test_remote_url_is_not_implicitly_downloaded (test_packs.PackChecks.test_remote_url_is_not_implicitly_downloaded) ... ok
+test_remove_is_reversible_and_missing_is_explicit (test_packs.PackChecks.test_remove_is_reversible_and_missing_is_explicit) ... ok
+test_reported_link_guard_blocks_empty_roots_even_without_os_link_support (test_packs.PackChecks.test_reported_link_guard_blocks_empty_roots_even_without_os_link_support) ... ok
+test_reviewed_quality_requires_evidence (test_packs.PackChecks.test_reviewed_quality_requires_evidence) ... ok
+test_rollback_swaps_current_and_previous_versions (test_packs.PackChecks.test_rollback_swaps_current_and_previous_versions) ... ok
+test_semver_prerelease_build_and_ascii_boundaries (test_packs.PackChecks.test_semver_prerelease_build_and_ascii_boundaries) ... ok
+test_stale_stat_cannot_bypass_file_or_archive_read_limit (test_packs.PackChecks.test_stale_stat_cannot_bypass_file_or_archive_read_limit) ... ok
+test_symlink_and_special_file_archive_members_rejected (test_packs.PackChecks.test_symlink_and_special_file_archive_members_rejected) ... ok
+test_tag_profile_and_canonical_casing (test_packs.PackChecks.test_tag_profile_and_canonical_casing) ... ok
+test_traversal_nested_absolute_and_extra_archive_members_rejected (test_packs.PackChecks.test_traversal_nested_absolute_and_extra_archive_members_rejected) ... ok
+test_uncompressed_member_and_total_size_limits (test_packs.PackChecks.test_uncompressed_member_and_total_size_limits) ... ok
+test_wrong_existing_id_blocks_install_remove_and_rollback (test_packs.PackChecks.test_wrong_existing_id_blocks_install_remove_and_rollback) ... ok
+test_catalog_and_checksums_match_actual_bytes (test_release.ReleaseBuildTests.test_catalog_and_checksums_match_actual_bytes) ... ok
+test_contribution_template_is_not_published (test_release.ReleaseBuildTests.test_contribution_template_is_not_published) ... ok
+test_core_has_only_bundled_languages_and_runtime_files (test_release.ReleaseBuildTests.test_core_has_only_bundled_languages_and_runtime_files) ... ok
+test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) ... 
+  test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='yaya-core-0.1.0.zip') ... skipped "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test 4960dvqj\\\\unrelated file 0.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test 4960dvqj\\\\linked output 0\\\\yaya-core-0.1.0.zip'"
+  test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='catalog.json') ... skipped "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test 4960dvqj\\\\unrelated file 1.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test 4960dvqj\\\\linked output 1\\\\catalog.json'"
+  test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='SHA256SUMS') ... skipped "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test 4960dvqj\\\\unrelated file 2.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test 4960dvqj\\\\linked output 2\\\\SHA256SUMS'"
+test_invalid_core_version_metadata_fails_before_creating_output (test_release.ReleaseBuildTests.test_invalid_core_version_metadata_fails_before_creating_output) ... ok
+test_moved_core_resolves_bundled_languages_from_paths_with_spaces (test_release.ReleaseBuildTests.test_moved_core_resolves_bundled_languages_from_paths_with_spaces) ... ok
+test_new_reviewed_language_pack_builds_and_installs_without_core_changes (test_release.ReleaseBuildTests.test_new_reviewed_language_pack_builds_and_installs_without_core_changes) ... ok
+test_optional_archives_are_flat_valid_and_compatible (test_release.ReleaseBuildTests.test_optional_archives_are_flat_valid_and_compatible) ... ok
+test_output_cannot_escape_into_sources_through_dotdot (test_release.ReleaseBuildTests.test_output_cannot_escape_into_sources_through_dotdot) ... ok
+test_output_cannot_target_core_source_parent (test_release.ReleaseBuildTests.test_output_cannot_target_core_source_parent) ... ok
+test_repeated_builds_have_identical_bytes (test_release.ReleaseBuildTests.test_repeated_builds_have_identical_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 83 tests in 22.394s
+
+OK (skipped=8)
+
+SKILL QUICK_VALIDATE
+Skill is valid!
+
+JSON SCHEMA
+{
+  "status": "passed",
+  "validator": "Draft202012Validator",
+  "jsonschema_version": "4.25.1",
+  "dependency_path": "D:\\AIProjects\\yaya\\.tmp\\validation-deps",
+  "schema_valid": true,
+  "manifest_count": 6,
+  "manifests": [
+    {
+      "path": "core/yaya/languages/en/pack.json",
+      "id": "en",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "path": "core/yaya/languages/zh-Hans/pack.json",
+      "id": "zh-Hans",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "path": "language-packs/ja/pack.json",
+      "id": "ja",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "path": "language-packs/ko/pack.json",
+      "id": "ko",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "path": "language-packs/zh-Hant/pack.json",
+      "id": "zh-Hant",
+      "status": "passed",
+      "errors": []
+    },
+    {
+      "path": "templates/language-pack/pack.json",
+      "id": "fr",
+      "status": "passed",
+      "errors": []
+    }
+  ]
+}
+
+PYTHON 3.10 GRAMMAR
+{
+  "status": "passed",
+  "files_checked": 11,
+  "files": [
+    {
+      "path": "core/yaya/scripts/check_comments.py",
+      "status": "passed"
+    },
+    {
+      "path": "core/yaya/scripts/packs.py",
+      "status": "passed"
+    },
+    {
+      "path": "scripts/build_release.py",
+      "status": "passed"
+    },
+    {
+      "path": "tests/evals/collect.py",
+      "status": "passed"
+    },
+    {
+      "path": "tests/evals/integration/metrics.py",
+      "status": "passed"
+    },
+    {
+      "path": "tests/evals/prepare.py",
+      "status": "passed"
+    },
+    {
+      "path": "tests/evals/summarize.py",
+      "status": "passed"
+    },
+    {
+      "path": "tests/test_comments.py",
+      "status": "passed"
+    },
+    {
+      "path": "tests/test_evals.py",
+      "status": "passed"
+    },
+    {
+      "path": "tests/test_packs.py",
+      "status": "passed"
+    },
+    {
+      "path": "tests/test_release.py",
+      "status": "passed"
+    }
+  ],
+  "limitation": "Parsed by Python 3.13.5 with feature_version=(3, 10); this is not a Python 3.10 runtime execution."
+}
+
+RELEASE BUILD
+{
+  "catalog_version": 1,
+  "core": {
+    "version": "0.1.0",
+    "bundled_languages": [
+      "en",
+      "zh-Hans"
+    ],
+    "file": "yaya-core-0.1.0.zip",
+    "sha256": "2a0c7b070af52abaf0bc1d483b354a8378fc1cd46a8458dc6cc8c2f778deb582",
+    "bytes": 27712
+  },
+  "language_packs": [
+    {
+      "format_version": 1,
+      "id": "ja",
+      "version": "0.1.0",
+      "core_major": 0,
+      "name": "\u65e5\u672c\u8a9e",
+      "license": "MIT",
+      "quality": "experimental",
+      "direction": "ltr",
+      "file": "yaya-lang-ja-0.1.0.zip",
+      "sha256": "fa8d7f67beda4fc72da1e94ca400d859a3607d9334b22ca403c9db1544e68a52",
+      "bytes": 4228
+    },
+    {
+      "format_version": 1,
+      "id": "ko",
+      "version": "0.1.0",
+      "core_major": 0,
+      "name": "\ud55c\uad6d\uc5b4",
+      "license": "MIT",
+      "quality": "experimental",
+      "direction": "ltr",
+      "file": "yaya-lang-ko-0.1.0.zip",
+      "sha256": "b659d61b43f164b19bcd27e43bcc70a788852d0763d068f76486ba8d1fcd85fe",
+      "bytes": 4056
+    },
+    {
+      "format_version": 1,
+      "id": "zh-Hant",
+      "version": "0.1.0",
+      "core_major": 0,
+      "name": "\u7e41\u9ad4\u4e2d\u6587",
+      "license": "MIT",
+      "quality": "experimental",
+      "direction": "ltr",
+      "file": "yaya-lang-zh-Hant-0.1.0.zip",
+      "sha256": "1213a10c16b12781770047e82b2f1d4f6d86fc50078dbfbd795c5ed0047e3588",
+      "bytes": 4074
+    }
+  ]
+}
+
+RELEASE CONTENT/HASH VERIFICATION
+{
+  "core": {
+    "members": [
+      "yaya/LICENSE",
+      "yaya/SKILL.md",
+      "yaya/agents/openai.yaml",
+      "yaya/languages/en/GUIDE.md",
+      "yaya/languages/en/LICENSE",
+      "yaya/languages/en/examples.md",
+      "yaya/languages/en/pack.json",
+      "yaya/languages/zh-Hans/GUIDE.md",
+      "yaya/languages/zh-Hans/LICENSE",
+      "yaya/languages/zh-Hans/examples.md",
+      "yaya/languages/zh-Hans/pack.json",
+      "yaya/references/comments.md",
+      "yaya/references/language-packs.md",
+      "yaya/references/prompts.md",
+      "yaya/references/style-learning.md",
+      "yaya/references/text.md",
+      "yaya/scripts/check_comments.py",
+      "yaya/scripts/packs.py",
+      "yaya/version.json"
+    ],
+    "bundled_languages": [
+      "en",
+      "zh-Hans"
+    ],
+    "runtime_only": true,
+    "crc_check": "passed"
+  },
+  "optional_packs": [
+    {
+      "id": "ja",
+      "file": "yaya-lang-ja-0.1.0.zip",
+      "members": [
+        "GUIDE.md",
+        "LICENSE",
+        "examples.md",
+        "pack.json"
+      ],
+      "crc_check": "passed"
+    },
+    {
+      "id": "ko",
+      "file": "yaya-lang-ko-0.1.0.zip",
+      "members": [
+        "GUIDE.md",
+        "LICENSE",
+        "examples.md",
+        "pack.json"
+      ],
+      "crc_check": "passed"
+    },
+    {
+      "id": "zh-Hant",
+      "file": "yaya-lang-zh-Hant-0.1.0.zip",
+      "members": [
+        "GUIDE.md",
+        "LICENSE",
+        "examples.md",
+        "pack.json"
+      ],
+      "crc_check": "passed"
+    }
+  ],
+  "assets": [
+    {
+      "file": "yaya-core-0.1.0.zip",
+      "sha256": "2a0c7b070af52abaf0bc1d483b354a8378fc1cd46a8458dc6cc8c2f778deb582",
+      "bytes": 27712
+    },
+    {
+      "file": "yaya-lang-ja-0.1.0.zip",
+      "sha256": "fa8d7f67beda4fc72da1e94ca400d859a3607d9334b22ca403c9db1544e68a52",
+      "bytes": 4228
+    },
+    {
+      "file": "yaya-lang-ko-0.1.0.zip",
+      "sha256": "b659d61b43f164b19bcd27e43bcc70a788852d0763d068f76486ba8d1fcd85fe",
+      "bytes": 4056
+    },
+    {
+      "file": "yaya-lang-zh-Hant-0.1.0.zip",
+      "sha256": "1213a10c16b12781770047e82b2f1d4f6d86fc50078dbfbd795c5ed0047e3588",
+      "bytes": 4074
+    }
+  ]
+}

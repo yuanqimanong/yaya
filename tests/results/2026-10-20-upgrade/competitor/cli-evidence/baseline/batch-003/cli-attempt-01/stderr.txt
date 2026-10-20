@@ -1,0 +1,12 @@
+2026-10-20T10:31:37.101746Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:31:37.102029Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:31:37.140427Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T10:31:39.890772Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:31:41.887385Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:31:41.888923Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL: error sending request for url (https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL)
+2026-10-20T10:31:48.054373Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:31:48.054415Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:31:48.841904Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:32:01.644305Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:32:03.422456Z  WARN codex_core::hook_runtime: after_agent hook failed; continuing turn_id=01a158dd-dc73-7ad2-a92f-aec3572179fd hook_name=legacy_notify error=文件名或扩展名太长。 (os error 206)
+2026-10-20T10:32:03.423952Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response

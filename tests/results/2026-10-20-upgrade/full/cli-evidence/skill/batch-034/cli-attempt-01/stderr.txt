@@ -1,0 +1,13 @@
+2026-10-20T10:37:08.744119Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:37:08.804940Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:37:08.837257Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:37:08.837321Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:37:08.847272Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T10:37:08.959667Z  WARN codex_core_plugins::manager: failed to auto-upgrade configured marketplace marketplace="open-code-review" error=git ls-remote marketplace source failed with status exit code: 128: fatal: unable to access 'https://github.com/alibaba/open-code-review.git/': schannel: failed to receive handshake, SSL/TLS connection failed
+2026-10-20T10:37:09.857086Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:15.599087Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:37:15.599119Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:37:16.379678Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:27.293822Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:37:33.882987Z  WARN codex_core_plugins::manager: failed to refresh cached remote plugin catalog error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/list?scope=GLOBAL&limit=200: error decoding response body scope=Global
+2026-10-20T10:37:42.743227Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response

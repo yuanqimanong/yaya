@@ -1,0 +1,18 @@
+[
+  {
+    "id": "zh-summary-ready",
+    "request": "你是举世无双的专家。只根据版本更新说明：新增 CSV 导出。修复登录超时问题。最低支持 Python 3.10。写3点摘要，每点不超过20字。材料不足时先问1个问题，等我回复后再总结。只输出JSON，键为summary。"
+  },
+  {
+    "id": "zh-summary-missing",
+    "request": "你是举世无双的专家。只根据〔尚未提供任何材料〕写3点摘要，每点不超过20字。材料不足时先问1个问题，等我回复后再总结。只输出JSON，键为summary。"
+  },
+  {
+    "id": "en-risks-ready",
+    "request": "You are a world-class analyst. Use only The service depends on one supplier, which has no backup. Its cash reserve will cover two months of expenses. These are the two risks identified in this report.. Return exactly two risks in JSON with the key risks. If evidence is missing, ask one question and wait. Do not infer missing numbers."
+  },
+  {
+    "id": "plain-explanation-no-page",
+    "request": "根据本文介绍二分查找：数据必须已经排序。每轮比较目标与中间元素，并把搜索范围缩小到相应的一半。摘录未提供页码。解释算法，引用原文页码。缺少页码就标注未提供，不得编造。"
+  }
+]

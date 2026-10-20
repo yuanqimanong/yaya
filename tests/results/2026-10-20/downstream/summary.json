@@ -1,0 +1,97 @@
+{
+  "executions": 8,
+  "passed": 8,
+  "reviewer": "root semantic review, not blind; JSON/count checks executed with Python",
+  "isolation": "one fresh context per condition, four cases in each batch",
+  "conclusion": "No observed contract regression in these samples; no measured downstream superiority.",
+  "checks": [
+    {
+      "condition": "original",
+      "id": "zh-summary-ready",
+      "mechanical": {
+        "json": true,
+        "points": 3,
+        "character_counts": [
+          11,
+          8,
+          16
+        ]
+      },
+      "semantic_review": "保留 CSV 导出、登录超时修复、Python 3.10；没有添加其他更新。",
+      "status": "pass"
+    },
+    {
+      "condition": "original",
+      "id": "zh-summary-missing",
+      "mechanical": {
+        "json": true,
+        "question_marks": 1
+      },
+      "semantic_review": "仅询问原始材料，没有生成摘要或擅自继续。",
+      "status": "pass"
+    },
+    {
+      "condition": "original",
+      "id": "en-risks-ready",
+      "mechanical": {
+        "json": true,
+        "risks": 2
+      },
+      "semantic_review": "只列单一供应商无备份、现金仅够两个月两项风险，数字和对象对应。",
+      "status": "pass"
+    },
+    {
+      "condition": "original",
+      "id": "plain-explanation-no-page",
+      "mechanical": {
+        "missing_page_label": true
+      },
+      "semantic_review": "保留已排序前提、中间比较及减半范围，页码为未提供；用中文说明，无虚构引用。",
+      "status": "pass"
+    },
+    {
+      "condition": "skill",
+      "id": "zh-summary-ready",
+      "mechanical": {
+        "json": true,
+        "points": 3,
+        "character_counts": [
+          9,
+          8,
+          15
+        ]
+      },
+      "semantic_review": "保留 CSV 导出、登录超时修复、Python 3.10；没有添加其他更新。",
+      "status": "pass"
+    },
+    {
+      "condition": "skill",
+      "id": "zh-summary-missing",
+      "mechanical": {
+        "json": true,
+        "question_marks": 1
+      },
+      "semantic_review": "仅询问原始材料，没有生成摘要或擅自继续。",
+      "status": "pass"
+    },
+    {
+      "condition": "skill",
+      "id": "en-risks-ready",
+      "mechanical": {
+        "json": true,
+        "risks": 2
+      },
+      "semantic_review": "只列单一供应商无备份、现金仅够两个月两项风险，数字和对象对应。",
+      "status": "pass"
+    },
+    {
+      "condition": "skill",
+      "id": "plain-explanation-no-page",
+      "mechanical": {
+        "missing_page_label": true
+      },
+      "semantic_review": "保留已排序前提、中间比较及减半范围，页码为未提供；用中文说明，无虚构引用。",
+      "status": "pass"
+    }
+  ]
+}

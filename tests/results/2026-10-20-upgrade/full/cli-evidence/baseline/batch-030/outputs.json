@@ -1,0 +1,8 @@
+[
+  {
+    "id": "authorized-language-change",
+    "text": "将 retry_limit 设置为 2。\n只有在事务回滚（撤销本次事务的更改）完成后，才能重试。\n如果身份验证失败，不要重试。",
+    "notes": "",
+    "skill_used": false
+  }
+]

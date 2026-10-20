@@ -1,0 +1,208 @@
+{
+  "judgments": [
+    {
+      "id": "H003",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the last successful backup time and its possible ten-minute staleness exactly. Removes the inflated opening without implying real-time reporting."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the backup information and staleness limitation. Simplifies the opening, although 'reflects our commitment to excellence' remains generic promotional language."
+      },
+      "preference": "A",
+      "reason": "A communicates the dashboard's function and limitation more directly; B retains an opening that adds little useful information."
+    },
+    {
+      "id": "H004",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Keeps bug-report writing practice and the 45-minute duration, while retaining the workshop context. Adds no certification or promised outcome."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Retains the already-clear sentence about practising bug-report writing in a 45-minute session and removes the inflated potential claim."
+      },
+      "preference": "tie",
+      "reason": "Both are clear and faithful. A integrates the workshop context; B preserves the original factual sentence unchanged. Neither has a material advantage."
+    },
+    {
+      "id": "H005",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Keeps 14 open tickets on Monday, 9 on Friday, and two reopenings. Replaces the ornate introduction with a plain weekly-report introduction without inferring closures."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the complete factual sentence, including both day-count pairings and two reopened tickets. Removes the rhetorical introduction and makes no closure calculation."
+      },
+      "preference": "tie",
+      "reason": "A retains a useful report introduction; B goes straight to the figures. Both are natural and preserve all substantive information."
+    },
+    {
+      "id": "H006",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "States the PNG-to-JPEG conversion direction and explicitly retains 'Transparency is lost.' Removes the promotional wording."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "States the PNG-to-JPEG conversion direction and explicitly retains 'Transparency is lost.' Removes the promotional wording."
+      },
+      "preference": "tie",
+      "reason": "The responses are identical and clearly preserve both the function and its limitation."
+    },
+    {
+      "id": "H007",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the migration's paused status and failed verification as its cause. Simplifies the innovation statement, although that opening remains abstract."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Retains the clear operational statement unchanged: the migration is paused because verification failed. Makes no completed-migration claim."
+      },
+      "preference": "B",
+      "reason": "B delivers the relevant status and cause directly. A's generic innovation statement still distracts from the operational message."
+    },
+    {
+      "id": "H008",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Keeps the change from 60 to 30 seconds conditional on approval. Simplifies the implementation opening but retains a general statement about considering all aspects."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the exact cache-lifetime change and approval prerequisite in the original clear sentence. Does not suggest the change is already live."
+      },
+      "preference": "B",
+      "reason": "B states the planned change and its condition without the generic process preamble retained by A."
+    },
+    {
+      "id": "H009",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the replacement delay and unknown shipping date. 'Your replacement' fits the customer-facing notification context, and no compensation or guarantee is added."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves the delayed replacement and lack of a shipping date, while removing the inappropriate celebratory framing."
+      },
+      "preference": "tie",
+      "reason": "Both deliver the same clear customer update. A is slightly more personal; B stays closer to the source's wording."
+    },
+    {
+      "id": "H010",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Consolidates the repeated overview statements and retains 80 responses, one department, and the explicit lack of company-wide representativeness."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Removes the repeated overview construction and preserves all sample limitations. Retains the source's evaluative adjective 'insightful.'"
+      },
+      "preference": "A",
+      "reason": "A is more direct and neutral, combining the report's coverage cleanly without the generic praise retained by B."
+    },
+    {
+      "id": "H011",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves one-document pinning to the user's own list and explicitly states that shared lists are unaffected. Removes the exaggerated opening."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Preserves one-document pinning to the user's own list and explicitly states that shared lists are unaffected. Removes the exaggerated opening."
+      },
+      "preference": "tie",
+      "reason": "The responses are identical and retain all scope restrictions in clear wording."
+    },
+    {
+      "id": "H012",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Simplifies the trust statement and preserves the mandatory requirement for managers to approve claims strictly over $500 before payment."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "Simplifies the trust statement and retains managers, the 'over $500' threshold, mandatory approval, and approval before payment."
+      },
+      "preference": "tie",
+      "reason": "Both improve the opening comparably and leave the clear requirement unchanged. 'Reminds us' and 'emphasizes' create no material difference."
+    },
+    {
+      "id": "H013",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "直接说明只新增一项功能：将共享笔记导出为 CSV。保留功能范围和格式，删除空泛的协作效果宣传。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "直接说明只新增一项功能：将共享笔记导出为 CSV。保留功能范围和格式，删除空泛的协作效果宣传。"
+      },
+      "preference": "tie",
+      "reason": "两者完全相同，均准确保留唯一新增功能，并直接交代更新内容。"
+    },
+    {
+      "id": "H014",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "将名词化表达改为“正在审核退款申请”，保留审核进行中、预计周二回复及日期尚未确认，没有改成承诺。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "精简审核表述，并保留“预计周二”和“具体日期尚未确认”，准确表达当前进度与时间的不确定性。"
+      },
+      "preference": "tie",
+      "reason": "两者均自然、直接且完整保留不确定性。A 分句更清晰，B 衔接更紧凑，无实质优劣。"
+    }
+  ]
+}

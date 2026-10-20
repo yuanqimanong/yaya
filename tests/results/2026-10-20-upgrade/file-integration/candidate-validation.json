@@ -1,0 +1,153 @@
+{
+  "tool_results": [
+    {
+      "file": "report.md",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\before\\report.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\candidates\\report.md"
+      ],
+      "exit": 0,
+      "payload": {
+        "status": "passed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "file": "metrics.py",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_comments.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\before\\metrics.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\candidates\\metrics.py"
+      ],
+      "exit": 0,
+      "payload": {
+        "status": "passed",
+        "language": "python",
+        "changed_comment_lines": [
+          3
+        ],
+        "violations": [],
+        "limitations": [
+          "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+          "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+          "Docstrings, f-strings, t-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+          "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+          "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+          "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "file": "scoped-overview.md",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\before\\scoped-overview.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\candidates\\scoped-overview.md"
+      ],
+      "exit": 0,
+      "payload": {
+        "status": "passed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    }
+  ],
+  "boundary_checks": {
+    "report_before_target_bytes_equal": true,
+    "report_from_interface_heading_bytes_equal": true,
+    "overview_before_target_bytes_equal": true,
+    "overview_from_api_heading_bytes_equal": true,
+    "report_heading_bytes_equal": true,
+    "overview_heading_bytes_equal": true,
+    "python_ast_equal": true,
+    "python_noncomment_token_values_equal": true,
+    "python_docstring_equal": true,
+    "python_noqa_line_bytes_equal": true,
+    "python_label_line_bytes_equal": true,
+    "exactly_one_ordinary_comment_changed": true,
+    "existing_style_bytes_equal": true,
+    "new_style_does_not_overwrite_existing_path": true
+  },
+  "comment_changes": [
+    [
+      "# 在这里以卓越的效率进行一个判断的执行",
+      "# 判断 value 是否大于或等于 10。"
+    ]
+  ],
+  "protected_region_sha256": {
+    "report_interface_onward_before": "d72afca9662a5f6124250203c3ab50aa174f8af3c5505ae1abbce075c2f4f1d9",
+    "report_interface_onward_after": "d72afca9662a5f6124250203c3ab50aa174f8af3c5505ae1abbce075c2f4f1d9",
+    "overview_api_onward_before": "ebb6adc74d3361b8557204a23219fc45763fcc1098b876e198ceadcba05e317b",
+    "overview_api_onward_after": "ebb6adc74d3361b8557204a23219fc45763fcc1098b876e198ceadcba05e317b",
+    "existing_style": "e068d9ccb40a877aed3bc3b48987c9fe2218088518b8667ca71a5ee0df1e6269"
+  }
+}

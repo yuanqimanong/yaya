@@ -1,0 +1,528 @@
+[
+  {
+    "id": "zh-finance",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "zh-finance",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "en-finance",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "en-finance",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "hant-hk",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "hant-hk",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "ja-text",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "ja-text",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "ko-text",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "ko-text",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "zh-comments",
+    "condition": "skill",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "zh-comments",
+    "condition": "baseline",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "en-comments",
+    "condition": "skill",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "en-comments",
+    "condition": "baseline",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "hant-comments",
+    "condition": "skill",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "hant-comments",
+    "condition": "baseline",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "ja-comments",
+    "condition": "skill",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "ja-comments",
+    "condition": "baseline",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "ko-comments",
+    "condition": "skill",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "ko-comments",
+    "condition": "baseline",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "passed",
+      "language": "python",
+      "changed_comment_lines": [
+        2
+      ],
+      "violations": [],
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "zh-prompt",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "zh-prompt",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "en-prompt",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "en-prompt",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "hant-prompt",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "hant-prompt",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "ja-prompt",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "ja-prompt",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "ko-prompt",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "ko-prompt",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "zh-style",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "zh-style",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "en-style",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "en-style",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "hant-style",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "hant-style",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "ja-style",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "ja-style",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "ko-style",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "ko-style",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "clear-unchanged",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "clear-unchanged",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "mixed-language",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "mixed-language",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "injection-material",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "injection-material",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "negative-task",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "negative-task",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "downstream-style",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "downstream-style",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "bare-zh",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "bare-zh",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "readme-no-presupposition",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "readme-no-presupposition",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "finance-pairing",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "finance-pairing",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "en-review-only",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "en-review-only",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "authorized-language-change",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "authorized-language-change",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "unsupported-ts-comments",
+    "condition": "skill",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "unsupported",
+      "language": "python",
+      "reason": "Only Python .py/.pyi baselines are supported; use a host-language parser and review the candidate diff.",
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "unsupported-ts-comments",
+    "condition": "baseline",
+    "literal_failures": [],
+    "comment_boundary": {
+      "status": "unsupported",
+      "language": "python",
+      "reason": "Only Python .py/.pyi baselines are supported; use a host-language parser and review the candidate diff.",
+      "limitations": [
+        "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+        "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+        "Docstrings, f-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+        "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+        "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+        "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+      ]
+    }
+  },
+  {
+    "id": "ja-clear-unchanged",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "ja-clear-unchanged",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "negative-code-task",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "negative-code-task",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "saved-style",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "saved-style",
+    "condition": "baseline",
+    "literal_failures": []
+  }
+]

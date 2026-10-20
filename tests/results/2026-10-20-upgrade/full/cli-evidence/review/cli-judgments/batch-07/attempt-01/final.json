@@ -1,0 +1,208 @@
+{
+  "judgments": [
+    {
+      "id": "H039",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留“回滚完成后才能重试”和“身份验证失败时不要重试”两项操作条件；原文已直接清楚，允许不改。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留重试的前提及禁止重试的情形，没有弱化条件或否定；符合清楚内容可不改的要求。"
+      },
+      "preference": "tie",
+      "reason": "两者完全相同，均保留必要操作条件，表达清楚。"
+    },
+    {
+      "id": "H040",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留“三步”及校验安装包、部署、检查服务的顺序；原文没有需要删去的空泛表达。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "完整保留发布步骤数量和执行次序，未改变流程用途；原样保留符合请求。"
+      },
+      "preference": "tie",
+      "reason": "两者相同，均保留有实际用途的三步结构。"
+    },
+    {
+      "id": "H041",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留引文“转折点”，并明确归于“原文作者的判断”，同时保留“不是编辑结论”的界定；合并后意思清楚。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留引文、作者归属及对编辑结论的否定；原文已自然直接，允许不改。"
+      },
+      "preference": "tie",
+      "reason": "A合并为一句，B保留两句；两者均清楚区分作者判断与编辑结论，没有实质优劣。"
+    },
+    {
+      "id": "H042",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "完整保留本次测试改为5秒、生产环境仍为30秒的范围和数值对应；原文已清楚。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留“本次测试”限定及生产环境“仍为30秒”，没有将测试变更扩大到生产；符合可不改要求。"
+      },
+      "preference": "tie",
+      "reason": "两者完全相同，均准确保留测试与生产环境的区别。"
+    },
+    {
+      "id": "H043",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留第一人称、修好水管时的放松情绪，以及整个上午寻找漏水位置的经历；这些具体内容无需删改。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留“松了一口气”和“整个上午”的经历与情绪，维持原有叙述声音；符合请求。"
+      },
+      "preference": "tie",
+      "reason": "两者相同，均保留自然、具体的个人叙述。"
+    },
+    {
+      "id": "H044",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留返回结果或错误且不会同时返回两者的接口约定；原文已直接，原样保留合理。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "完整保留二选一及互斥关系，没有删除具有约束作用的否定表述；满足请求。"
+      },
+      "preference": "tie",
+      "reason": "两者完全相同，均准确表达接口的互斥返回约定。"
+    },
+    {
+      "id": "H045",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留报告较短是因为目前只有一项结果的因果关系，以及第二次实验仍在进行的状态；原文已清楚。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留“目前只有一项结果”和“还在进行”，没有改变结果数量、时间限定或实验状态；符合请求。"
+      },
+      "preference": "tie",
+      "reason": "两者相同，均保留必要的原因说明和进行状态。"
+    },
+    {
+      "id": "H046",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留领域术语“闭环控制器”及其根据反馈调整输出的功能；没有将技术术语当作空话删去。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留“闭环”和反馈调整输出的关系；句子已简洁明确，允许不改。"
+      },
+      "preference": "tie",
+      "reason": "两者完全相同，均保持术语准确和表达简洁。"
+    },
+    {
+      "id": "H047",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留周五前提交表单、附签字后的发票和订单号的完整要求；没有增加铺垫。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留截止时间、表单、签字要求和订单号；原指令清楚，保留即可完成任务。"
+      },
+      "preference": "tie",
+      "reason": "两者相同，均准确保留可执行指令且没有赘述。"
+    },
+    {
+      "id": "H048",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "保留“如果令牌已过期”的条件和“可能拒绝”的不确定性；原句已自然直接。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "原样保留“如果”与“可能”，没有把有条件的可能结果改为确定结果；符合请求。"
+      },
+      "preference": "tie",
+      "reason": "两者完全相同，均保留条件和不确定性。"
+    },
+    {
+      "id": "H049",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "完整保留frontmatter、Python代码、URL及{{account_id}}，并保留收入$12 million与增长8%的对应；删去“groundbreaking”和“seamlessly”，使CSV导出说明更直接。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "受保护的frontmatter、代码、链接地址和占位符均原样保留，收入及增幅未变；将宣传性句子简化为“Our update exports CSV.”，完成编辑要求。"
+      },
+      "preference": "tie",
+      "reason": "两者完全相同，均删除宣传性修饰并准确保留所有受保护内容与具体数据。"
+    },
+    {
+      "id": "H050",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留`cache_key`、标题引文“新的篇章”、句子结构及测试12 ms与生产70 ms的对应；删去“革命性的”，保留看板同时显示两个值的功能。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留代码标识符、标题引文和测试12 ms、生产70 ms，维持原有句子结构；“看板同时显示两个值”去除空泛修饰且功能含义不变。"
+      },
+      "preference": "tie",
+      "reason": "两者均有效去除“革命性的”并保留关键内容；B另删“这个”，但在此语境中没有实质清晰度优势。"
+    }
+  ]
+}

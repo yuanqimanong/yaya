@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+dist/
+.yaya/
+.tmp/
+tests/tmp*/
+tests/runs/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,231 @@
+{
+  "kind": "Supplemental exact comparisons; not a new model run or semantic verdict.",
+  "source_sha256": {
+    "cases.json": "b0dc4b2e057eaa60dbdafb8cda3054637000d8958cece94cea685b5a8dec6fa4",
+    "outputs.json": "08b55961d97e6481338533bbbf66becd301693236168ce2391c9b54f2406f614"
+  },
+  "clear_group": {
+    "skill": {
+      "cases": 24,
+      "exactly_unchanged": 24,
+      "records": [
+        {
+          "id": "H025",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H026",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H027",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H028",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H029",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H030",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H031",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H032",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H033",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H034",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H035",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H036",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H037",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H038",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H039",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H040",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H041",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H042",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H043",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H044",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H045",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H046",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H047",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H048",
+          "exactly_unchanged": true
+        }
+      ]
+    },
+    "baseline": {
+      "cases": 24,
+      "exactly_unchanged": 22,
+      "records": [
+        {
+          "id": "H025",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H026",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H027",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H028",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H029",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H030",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H031",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H032",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H033",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H034",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H035",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H036",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H037",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H038",
+          "exactly_unchanged": false
+        },
+        {
+          "id": "H039",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H040",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H041",
+          "exactly_unchanged": false
+        },
+        {
+          "id": "H042",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H043",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H044",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H045",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H046",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H047",
+          "exactly_unchanged": true
+        },
+        {
+          "id": "H048",
+          "exactly_unchanged": true
+        }
+      ]
+    }
+  },
+  "scoped_document": {
+    "skill": {
+      "id": "X002",
+      "prefix_unchanged": true,
+      "api_to_end_unchanged": true,
+      "contains_overview": true,
+      "before_api_tail_sha256": "ebb6adc74d3361b8557204a23219fc45763fcc1098b876e198ceadcba05e317b",
+      "after_api_tail_sha256": "ebb6adc74d3361b8557204a23219fc45763fcc1098b876e198ceadcba05e317b"
+    },
+    "baseline": {
+      "id": "X002",
+      "prefix_unchanged": true,
+      "api_to_end_unchanged": true,
+      "contains_overview": true,
+      "before_api_tail_sha256": "ebb6adc74d3361b8557204a23219fc45763fcc1098b876e198ceadcba05e317b",
+      "after_api_tail_sha256": "ebb6adc74d3361b8557204a23219fc45763fcc1098b876e198ceadcba05e317b"
+    }
+  }
+}

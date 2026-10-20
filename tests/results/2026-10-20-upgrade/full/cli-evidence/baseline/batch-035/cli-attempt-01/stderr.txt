@@ -1,0 +1,18 @@
+2026-10-20T10:37:26.760692Z  WARN codex_core_plugins::manager: failed to load recommended plugins error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL: error sending request for url (https://chatgpt.com/backend-api/ps/plugins/suggested/codex?scope=GLOBAL)
+2026-10-20T10:37:26.761152Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:37:26.821628Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:37:26.855506Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:37:26.855577Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:37:26.891457Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T10:37:27.129849Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="cua_repl" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:27.203770Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:28.037009Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:37:28.037050Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:37:28.062556Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="codex-security" error=页面文件太小，无法完成操作。 (os error 1455)
+2026-10-20T10:37:28.078804Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:28.209534Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="cua_repl" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:45.497253Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:37:46.819248Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:46.819282Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:46.819291Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: 页面文件太小，无法完成操作。 (os error 1455)
+2026-10-20T10:37:51.890931Z  WARN codex_core_plugins::manager: failed to refresh cached remote plugin catalog error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/list?scope=GLOBAL&limit=200: error decoding response body scope=Global

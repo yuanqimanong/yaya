@@ -1,0 +1,1 @@
+{"id":"en-comments","text":"def lookup(items, key):\n    # Return None if the key is missing.\n    return items.get(key)\n","notes":"","skill_used":false}

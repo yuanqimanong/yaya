@@ -1,0 +1,134 @@
+[
+  {
+    "id": "H001",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "In the ever-evolving landscape of office software, this groundbreaking release empowers teams to unlock a seamless new era of collaboration. The only change is that shared notes can now be exported as CSV.",
+    "checks": [
+      "Keep the sole change: shared notes can now export as CSV.",
+      "Remove inflated claims without adding features or outcomes."
+    ],
+    "A": "The only change in this release is that shared notes can now be exported as CSV.",
+    "B": "The only change is that shared notes can now be exported as CSV."
+  },
+  {
+    "id": "H002",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "It is important to note that we are currently in the process of reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+    "checks": [
+      "Keep review in progress, expected Tuesday response, and unconfirmed date.",
+      "Remove empty framing, not uncertainty."
+    ],
+    "A": "We are reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.",
+    "B": "Draft: We're reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed.\n\nRemaining patterns: None identified.\n\nFinal rewrite: We're reviewing the refund request. We expect to respond by Tuesday, although that date has not been confirmed."
+  },
+  {
+    "id": "H003",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "The dashboard stands as a testament to our unwavering commitment to excellence. It shows the last successful backup time, which can be up to ten minutes out of date.",
+    "checks": [
+      "Keep last successful backup time and up-to-ten-minute staleness.",
+      "Do not suggest real-time or guaranteed backup success."
+    ],
+    "A": "The dashboard shows the last successful backup time, which can be up to ten minutes out of date.",
+    "B": "The dashboard shows the last successful backup time, which can be up to ten minutes out of date."
+  },
+  {
+    "id": "H004",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "The workshop is not merely a workshop; it is a journey toward unlocking limitless potential. Participants will practise writing a bug report in a 45-minute session.",
+    "checks": [
+      "Keep bug-report practice and 45 minutes.",
+      "Do not invent certification or participants’ outcomes."
+    ],
+    "A": "Participants will practise writing a bug report in this 45-minute workshop.",
+    "B": "Participants will practise writing a bug report in a 45-minute session."
+  },
+  {
+    "id": "H005",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "Let us dive into the rich tapestry of the weekly report. There were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.",
+    "checks": [
+      "Keep counts paired to days and two reopenings.",
+      "Do not infer a closure count from net change."
+    ],
+    "A": "Draft:\nThere were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.\n\nRemaining patterns: None.\n\nFinal rewrite:\nThere were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week.",
+    "B": "There were 14 open tickets on Monday and 9 on Friday; two tickets were reopened during the week."
+  },
+  {
+    "id": "H006",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "Our robust and cutting-edge solution seamlessly facilitates the execution of file conversion. It converts PNG files to JPEG. Transparency is lost.",
+    "checks": [
+      "Keep PNG to JPEG direction and lost transparency.",
+      "Do not hide the limitation under promotional wording."
+    ],
+    "A": "Our solution converts PNG files to JPEG. Transparency is lost.",
+    "B": "Our solution converts PNG files to JPEG. Transparency is lost."
+  },
+  {
+    "id": "H007",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "Ultimately, in the grand scheme of things, the migration underscores the transformative power of innovation. The migration is paused because the verification step failed.",
+    "checks": [
+      "Keep migration paused and failed verification as cause.",
+      "No completed-migration claim."
+    ],
+    "A": "The migration is paused because the verification step failed.",
+    "B": "The migration is paused because the verification step failed."
+  },
+  {
+    "id": "H008",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "We are taking a holistic and comprehensive approach to the implementation of this simple change. The cache lifetime will change from 60 seconds to 30 seconds after approval.",
+    "checks": [
+      "Keep 60 to 30 seconds and approval prerequisite.",
+      "No claim that change is already live."
+    ],
+    "A": "The cache lifetime will change from 60 seconds to 30 seconds after approval.",
+    "B": "The cache lifetime will change from 60 seconds to 30 seconds after approval."
+  },
+  {
+    "id": "H009",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "With an unwavering focus on customer success, we are delighted to inform you that the replacement is delayed. We do not yet have a shipping date.",
+    "checks": [
+      "Keep delay and unknown shipping date.",
+      "No invented apology story, compensation, or guarantee."
+    ],
+    "A": "Your replacement is delayed. We do not yet have a shipping date.",
+    "B": "The replacement is delayed. We do not yet have a shipping date."
+  },
+  {
+    "id": "H010",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "First and foremost, the report provides an insightful overview of the findings. Furthermore, it provides an overview of the sample. The sample contains 80 responses from one department and is not representative of the whole company.",
+    "checks": [
+      "Keep 80 responses, one department, and not representative.",
+      "Consolidate repeated overview wording without expanding scope."
+    ],
+    "A": "The report provides an overview of the findings and the sample. The sample contains 80 responses from one department and is not representative of the whole company.",
+    "B": "Draft:\nThe report summarizes the findings and describes the sample. The sample contains 80 responses from one department and is not representative of the whole company.\n\nRemaining patterns: None identified.\n\nFinal rewrite:\nThe report summarizes the findings and describes the sample. The sample contains 80 responses from one department and is not representative of the whole company."
+  },
+  {
+    "id": "H011",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "This feature is a game changer, redefining what is possible. Users can pin one document to the top of their own list; shared lists are unaffected.",
+    "checks": [
+      "Keep one document, own list, shared lists unaffected.",
+      "Do not claim global pinning."
+    ],
+    "A": "Users can pin one document to the top of their own list; shared lists are unaffected.",
+    "B": "Users can pin one document to the top of their own list; shared lists are unaffected."
+  },
+  {
+    "id": "H012",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "At its core, the policy is a powerful reminder that trust is the cornerstone of success. Managers must approve expense claims over $500 before payment.",
+    "checks": [
+      "Keep managers, strictly over $500, approval before payment.",
+      "Do not turn requirement into advice."
+    ],
+    "A": "The policy emphasizes that success depends on trust. Managers must approve expense claims over $500 before payment.",
+    "B": "The policy emphasizes that trust is essential to success. Managers must approve expense claims over $500 before payment."
+  }
+]

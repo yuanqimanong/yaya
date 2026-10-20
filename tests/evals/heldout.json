@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "note": "Held out from runtime guidance at creation; retain failed outputs and label any case reused for iteration as regression.",
+  "cases": [
+    {
+      "id": "readme-no-presupposition",
+      "task": "text",
+      "language": "zh-Hans",
+      "request": "润色下面的 README 简介，让表达自然、直接。",
+      "input": "Lumo 是一个整理会议记录的工具，能提取待办事项并导出 Markdown。它目前支持中文和英文。",
+      "checks": [
+        "保留会议记录、待办事项、Markdown和中英支持",
+        "不得凭空加入读者误解、竞品对比、人物或AI检测等话题"
+      ]
+    },
+    {
+      "id": "finance-pairing",
+      "task": "text",
+      "language": "zh-Hans",
+      "request": "润色这段财务说明，保留具体口径。",
+      "input": "甲业务本季收入为975万元，同比下降7%；乙业务收入为640万元，同比增长4.5%。两项数据均未审计。公司尚未完成交付，不能确认对应收入。",
+      "checks": [
+        "两业务金额和增减方向配对正确",
+        "保留本季/同比、未审计、未完成和不能确认",
+        "不把业绩或交付状态改为完成"
+      ]
+    },
+    {
+      "id": "en-review-only",
+      "task": "text",
+      "language": "en",
+      "request": "Review this paragraph for clarity. Give feedback only; do not replace the paragraph.",
+      "input": "The migration might finish on Friday if the final check passes. We have not confirmed the date.",
+      "checks": [
+        "Only feedback, no replacement paragraph",
+        "Preserve tentative date, condition and unconfirmed status"
+      ]
+    },
+    {
+      "id": "authorized-language-change",
+      "task": "text",
+      "language": "en",
+      "request": "将下面说明改写为简体中文，面向第一次使用的人，保留技术名称。",
+      "input": "Set retry_limit to 2. Retry only after the transaction has rolled back. Do not retry authentication failures.",
+      "checks": [
+        "Translate to zh-Hans as explicitly requested",
+        "retry_limit stays exact; value2; rollback prerequisite; auth failures prohibition"
+      ]
+    },
+    {
+      "id": "unsupported-ts-comments",
+      "task": "comments",
+      "language": "en",
+      "request": "Rewrite only the ordinary comment in input.ts so it explains this code. Keep the code unchanged.",
+      "input": "export const value = \"http://example.test/#keep\";\n// Leverage an elegant operation to report the length.\nexport function lengthOf(text: string) { return text.length; }\n",
+      "checks": [
+        "Preserve code and string bytes",
+        "Describe string length without claiming grapheme count",
+        "Do not claim Python checker validates TypeScript"
+      ]
+    },
+    {
+      "id": "ja-clear-unchanged",
+      "task": "text",
+      "language": "ja",
+      "request": "意味も文体も問題がなければ、そのまま返してください。",
+      "input": "申請後、3営業日以内に領収書を提出してください。",
+      "checks": [
+        "Keep adequate original unchanged"
+      ]
+    },
+    {
+      "id": "negative-code-task",
+      "task": "none",
+      "language": "en",
+      "request": "Write a Python function that returns the sum of two numbers.",
+      "input": "",
+      "checks": [
+        "Do not invoke editing skill for ordinary code creation",
+        "Correct function behavior"
+      ]
+    },
+    {
+      "id": "saved-style",
+      "task": "style-learning",
+      "language": "zh-Hans",
+      "request": "学习下面的表达风格，输出可复用的风格提示词和一个读书笔记提示词示例。这次只在当前对话里用，不要保存文件。",
+      "input": "先把问题讲清楚。再给一个例子。暂时回答不了的，写下还缺什么。",
+      "checks": [
+        "Reusable instructions and reading-note example",
+        "Do not create persistent style preferences/files",
+        "Do not transfer topic as a mandatory factual constraint"
+      ]
+    }
+  ]
+}

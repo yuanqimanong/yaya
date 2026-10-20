@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yaya · 牙牙学语"
+  short_description: "润色正文、代码注释与提示词，按领域和读者调整表达，并从样稿提炼风格"
+  default_prompt: "用 $yaya 优化这段内容，保留原意和关键约束，并按我指定的风格表达。"

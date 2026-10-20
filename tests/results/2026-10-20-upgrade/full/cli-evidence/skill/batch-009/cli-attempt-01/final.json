@@ -1,0 +1,1 @@
+{"id":"ja-comments","text":"def retry(status):\n    # status が 429 なら True、それ以外は False を返します。\n    return status == 429\n","notes":"ツールによる検証は行っていません。","skill_used":true}

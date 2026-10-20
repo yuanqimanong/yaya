@@ -1,0 +1,7 @@
+[
+  {
+    "id": "ko-comments",
+    "request": "일반 주석만 명확하게 수정해 주세요.",
+    "input": "def has_items(items):\n    # 여기에서 뛰어난 판단을 수행합니다\n    return len(items) > 0\n"
+  }
+]

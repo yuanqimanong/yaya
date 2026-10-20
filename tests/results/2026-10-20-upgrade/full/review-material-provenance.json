@@ -1,0 +1,43 @@
+{
+  "status": "local_source_review",
+  "reason": "Automatic approval questioned whether synthetic financial and code fixtures were real private user data.",
+  "cases": 112,
+  "review_packets": 10,
+  "material_scope": "Original test requests and synthetic fixtures in tests/evals plus generated answers from the existing validated run; no production document, customer report, repository source tree, authentication or host configuration is an input to the judge prompt.",
+  "source_notes": {
+    "cases.json": {
+      "note": "Original regression cases. checks are review criteria, not proof of quality or automatic AI detection.",
+      "sha256": "dd112089a20aff352e83a1a094a749627c0ed4bd512d2c055ecf176e4bbac88c"
+    },
+    "heldout.json": {
+      "note": "Held out from runtime guidance at creation; retain failed outputs and label any case reused for iteration as regression.",
+      "sha256": "3b4054009aaf052a55f639c6d0cb8ccad7af8827c3a81b11a42fadb9c5bbceac"
+    },
+    "humanize.json": {
+      "note": "72 original synthetic fixtures, six groups of 12. Clear texts are not claimed to be verified human-authored. Together with the existing 34 cases this defines 106 cases; defined coverage is not executed coverage. Group labels and checks are hidden from generators.",
+      "sha256": "01213f8cbe93211585589abbfa81a928e40ee73bfafc6e78bae6ef830a224b50"
+    },
+    "scenarios.json": {
+      "note": "Six original synthetic cross-scenario controls added after the user requested broader practical coverage; no model outputs existed at authoring.",
+      "sha256": "b56429b03940d7d3120eda305d4e2b36373075504491f9a20ee5ddf58e806017"
+    }
+  },
+  "clarifications": {
+    "X001": "Fictional half-year company statement authored in scenarios.json for this test, not a company filing.",
+    "X005": "A small cached_value example authored in scenarios.json, not production application code.",
+    "prior_generation": "These same materials were used by the already completed same-host model run. Generated answers passed CLI tool-activity auditing."
+  },
+  "review_sha256": {
+    "batch-01.json": "f7b5e96b316a3350557248a29917583abbe85f6f9a1233475b039a26fe4d2ed6",
+    "batch-02.json": "ba338335ce512ba49825f2688f66121482f4c46a715b39be64b3a614aae6a7e3",
+    "batch-03.json": "2103703135e551e5b0ccaa89d92345c6fa81990008252e9ab9eea80f2e042781",
+    "batch-04.json": "4602d481cfae6adadb1ab7ad926c5514ed067987874c0f6f6d4c86051cf50802",
+    "batch-05.json": "efb177b683171469e9a093e4e4eb16933bc85872ab74a15f3db6d142891265f4",
+    "batch-06.json": "977bca83d7a26d6dda544fea2517305f36892840acab6d192ebaf7ba7c50a1ae",
+    "batch-07.json": "7e3342180a18400996b2c71c9a42ada3cb52a01c1dfc3a01df2e7c46053dd55e",
+    "batch-08.json": "390c21dbef4d429d0455790e0363380244769e50d6cacdf1be2554df3db5f3bf",
+    "batch-09.json": "25e454a458dced8d4700f20a9999305fb4e41fc1ffc5b7971a10d7be636f9ea4",
+    "batch-10.json": "0e2300a466f66ffaa40ade9598cb22f312405e11f6086f79ebcdeff9fcf88556"
+  },
+  "decision": "Request normal approval again for the same command using this source evidence; do not change command, data, destination or permissions to bypass review."
+}

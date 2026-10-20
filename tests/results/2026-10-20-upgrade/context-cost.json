@@ -1,0 +1,256 @@
+{
+  "unit": "UTF-8 bytes, not tokens",
+  "scope": "entry + one task reference + one language guide or patterns; excludes optional additional guidance and tool output",
+  "rows": [
+    {
+      "task": "humanize",
+      "language": "en",
+      "bytes": 10245,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/humanize.md",
+        "core/yaya/languages/en/PATTERNS.md"
+      ]
+    },
+    {
+      "task": "humanize",
+      "language": "zh-Hans",
+      "bytes": 9940,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/humanize.md",
+        "core/yaya/languages/zh-Hans/PATTERNS.md"
+      ]
+    },
+    {
+      "task": "humanize",
+      "language": "zh-Hant",
+      "bytes": 9203,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/humanize.md",
+        "language-packs/zh-Hant/PATTERNS.md"
+      ]
+    },
+    {
+      "task": "humanize",
+      "language": "ja",
+      "bytes": 9691,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/humanize.md",
+        "language-packs/ja/PATTERNS.md"
+      ]
+    },
+    {
+      "task": "humanize",
+      "language": "ko",
+      "bytes": 9802,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/humanize.md",
+        "language-packs/ko/PATTERNS.md"
+      ]
+    },
+    {
+      "task": "text",
+      "language": "en",
+      "bytes": 11042,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/text.md",
+        "core/yaya/languages/en/GUIDE.md"
+      ]
+    },
+    {
+      "task": "text",
+      "language": "zh-Hans",
+      "bytes": 10789,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/text.md",
+        "core/yaya/languages/zh-Hans/GUIDE.md"
+      ]
+    },
+    {
+      "task": "text",
+      "language": "zh-Hant",
+      "bytes": 10728,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/text.md",
+        "language-packs/zh-Hant/GUIDE.md"
+      ]
+    },
+    {
+      "task": "text",
+      "language": "ja",
+      "bytes": 11401,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/text.md",
+        "language-packs/ja/GUIDE.md"
+      ]
+    },
+    {
+      "task": "text",
+      "language": "ko",
+      "bytes": 11414,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/text.md",
+        "language-packs/ko/GUIDE.md"
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "en",
+      "bytes": 10671,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/comments.md",
+        "core/yaya/languages/en/GUIDE.md"
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "zh-Hans",
+      "bytes": 10418,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/comments.md",
+        "core/yaya/languages/zh-Hans/GUIDE.md"
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "zh-Hant",
+      "bytes": 10357,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/comments.md",
+        "language-packs/zh-Hant/GUIDE.md"
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "ja",
+      "bytes": 11030,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/comments.md",
+        "language-packs/ja/GUIDE.md"
+      ]
+    },
+    {
+      "task": "comments",
+      "language": "ko",
+      "bytes": 11043,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/comments.md",
+        "language-packs/ko/GUIDE.md"
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "en",
+      "bytes": 10606,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/prompts.md",
+        "core/yaya/languages/en/GUIDE.md"
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "zh-Hans",
+      "bytes": 10353,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/prompts.md",
+        "core/yaya/languages/zh-Hans/GUIDE.md"
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "zh-Hant",
+      "bytes": 10292,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/prompts.md",
+        "language-packs/zh-Hant/GUIDE.md"
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "ja",
+      "bytes": 10965,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/prompts.md",
+        "language-packs/ja/GUIDE.md"
+      ]
+    },
+    {
+      "task": "prompts",
+      "language": "ko",
+      "bytes": 10978,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/prompts.md",
+        "language-packs/ko/GUIDE.md"
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "en",
+      "bytes": 10623,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/style-learning.md",
+        "core/yaya/languages/en/GUIDE.md"
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "zh-Hans",
+      "bytes": 10370,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/style-learning.md",
+        "core/yaya/languages/zh-Hans/GUIDE.md"
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "zh-Hant",
+      "bytes": 10309,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/style-learning.md",
+        "language-packs/zh-Hant/GUIDE.md"
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "ja",
+      "bytes": 10982,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/style-learning.md",
+        "language-packs/ja/GUIDE.md"
+      ]
+    },
+    {
+      "task": "style-learning",
+      "language": "ko",
+      "bytes": 10995,
+      "files": [
+        "core/yaya/SKILL.md",
+        "core/yaya/references/style-learning.md",
+        "language-packs/ko/GUIDE.md"
+      ]
+    }
+  ]
+}

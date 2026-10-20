@@ -1,0 +1,1 @@
+{"id":"hant-comments","text":"def ready(status):\n    # 判斷狀態是否為 200\n    return status == 200  # noqa: PLR2004\n","notes":"","skill_used":false}

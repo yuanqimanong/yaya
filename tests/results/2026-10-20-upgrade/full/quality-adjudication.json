@@ -1,0 +1,348 @@
+{
+  "status": "complete",
+  "review_type": "visible_condition_independent_quality_adjudication",
+  "blind_review": false,
+  "scope": {
+    "case_ids": ["H019", "H061", "en-comments", "H067", "H053", "H054", "H071"],
+    "purpose": "Independently distinguish confirmed defects, a disputed criterion interpretation, and minor style preferences in the specified formal judgments.",
+    "changes_original_judgments": false,
+    "recalculates_summary": false
+  },
+  "sources": [
+    {
+      "path": "tests/results/2026-10-20-upgrade/full/summary.json",
+      "sha256": "a507e2d9e97057f8ed047b9131c0261ecd7d3d688edb5d9701cf617186cc4520"
+    },
+    {
+      "path": "tests/results/2026-10-20-upgrade/full/judgments.json",
+      "sha256": "d691061fc06d16756b9dd3865aaf712e86c4589398c39178a8ee7090e9ad70e9"
+    },
+    {
+      "path": "tests/results/2026-10-20-upgrade/full/cases.json",
+      "sha256": "b0dc4b2e057eaa60dbdafb8cda3054637000d8958cece94cea685b5a8dec6fa4"
+    },
+    {
+      "path": "tests/results/2026-10-20-upgrade/full/outputs.json",
+      "sha256": "08b55961d97e6481338533bbbf66becd301693236168ce2391c9b54f2406f614"
+    },
+    {
+      "path": "tests/results/2026-10-20-upgrade/full/blind-key.json",
+      "sha256": "d9bd8e317600d95d9ab8aab242366aabf2880b1b172a3481e79ac4201e048fc0"
+    }
+  ],
+  "original_summary_preserved": {
+    "cases": 112,
+    "preferences": {
+      "skill": 14,
+      "baseline": 5,
+      "tie": 93,
+      "uncertain": 0
+    },
+    "conditions": {
+      "skill": {
+        "hard_pass": 110,
+        "hard_fail": 2
+      },
+      "baseline": {
+        "hard_pass": 110,
+        "hard_fail": 2
+      }
+    }
+  },
+  "classification_counts_for_this_targeted_review_only": {
+    "confirmed_defect": 3,
+    "criterion_dispute": 1,
+    "minor_style_preference": 3
+  },
+  "records": [
+    {
+      "id": "H019",
+      "focus_condition": "skill",
+      "classification": "confirmed_defect",
+      "defect_type": "task_incompletion",
+      "original_judgment": {
+        "blind_label": "B",
+        "fidelity": "pass",
+        "task": "fail",
+        "quality": "same",
+        "hard_status": "fail",
+        "preference_condition": "baseline",
+        "evidence": "准确保留验证失败与迁移暂停，但仅去掉“归根结底”，仍保留“再次印证了创新的深远意义”这一主要空泛表达。"
+      },
+      "user_request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+      "case_checks": ["保留验证失败导致暂停。", "不能变成迁移完成。"],
+      "source": "归根结底，这次迁移再次印证了创新的深远意义。由于验证步骤失败，迁移已暂停。",
+      "skill_output": "这次迁移再次印证了创新的深远意义。由于验证步骤失败，迁移已暂停。",
+      "baseline_output": "由于验证步骤失败，迁移已暂停。",
+      "independent_assessment": "确认主要去空泛任务未完成；这不是事实错误。保留原 task fail 有充分的用户请求依据。",
+      "evidence": [
+        {
+          "source_fragment": "归根结底，这次迁移再次印证了创新的深远意义。",
+          "output_fragment": "这次迁移再次印证了创新的深远意义。",
+          "finding": "只删除“归根结底”，整句仍没有说明何种创新、何种具体意义或怎样被验证；主要笼统拔高仍在。"
+        },
+        {
+          "source_fragment": "由于验证步骤失败，迁移已暂停。",
+          "output_fragment": "由于验证步骤失败，迁移已暂停。",
+          "finding": "可核实的因果和暂停状态逐字保留，因此 fidelity pass 合理；不能将任务完成度缺陷误称为把暂停写成完成。"
+        }
+      ],
+      "criterion_alignment": "checks 只列事实保护项，但用户另外明确要求去掉空泛表达。未完成这一要求不是事后增加判据。",
+      "recommended_follow_up": "如后续修规则，应限定为：无具体对象、理由或独立信息的笼统拔高句，在用户明确要求去空泛时可以整句删除；不得推广为删除所有评价或作者实质观点。",
+      "causal_limit": "输出缺陷已证实，但仅凭这个案例不能证实根因就是某条规则过度保护作者判断。规则解释属于待验证假设，不能替代新的独立验证。"
+    },
+    {
+      "id": "H061",
+      "focus_condition": "skill",
+      "classification": "criterion_dispute",
+      "defect_type": "disputed_scope_interpretation",
+      "original_judgment": {
+        "blind_label": "A",
+        "fidelity": "pass",
+        "task": "fail",
+        "quality": "not_applicable",
+        "hard_status": "fail",
+        "preference_condition": "baseline",
+        "evidence": "准确指出三处空泛表达，并确认TXT转PDF是具体功能，没有猜测作者身份；但多次加入“建议删去或补充”“建议明确用户和用途”，超出检查要求限定的“只报告具体问题和理由”。"
+      },
+      "user_request": "只检查下面哪里表达空泛，不要改写，也不要猜作者身份。",
+      "case_checks": [
+        "只报告具体问题和理由，不返回完整改稿。",
+        "不判断AI作者概率；保留TXT到PDF事实。"
+      ],
+      "source": "随着时代的发展，这个工具赋能每个人，开启无限可能。实际功能是把TXT转为PDF。",
+      "skill_output": "空泛表达集中在第一句：\n\n- “随着时代的发展”：背景过于笼统，没有说明时代变化与工具功能的关系，建议删去或补充具体背景。\n- “赋能每个人”：没有说明帮助谁、解决什么问题；“每个人”的适用范围也需要依据，建议明确用户和用途。\n- “开启无限可能”：没有具体场景或效果支撑，建议删去或说明实际用途。\n\n“实际功能是把TXT转为PDF”表达具体、清楚，没有明显空泛问题。",
+      "baseline_output": "空泛表达有三处：\n\n- “随着时代的发展”：泛泛交代背景，没有说明与工具功能的具体关系。\n- “赋能每个人”：没有说明帮助谁、解决什么问题；“每个人”的范围也过大。\n- “开启无限可能”：没有给出具体用途或效果，“无限”缺乏依据。\n\n“把TXT转为PDF”是明确的功能描述，不空泛。",
+      "independent_assessment": "不确认存在与事实捏造、实际改写同等明确的硬缺陷。输出是诊断加建议方向，没有返回替换句或完整改稿，也没有作者身份判断。原 fail 保留为评测事实；其任务边界解释应单独标注争议。",
+      "evidence": [
+        {
+          "source_fragment": "不要改写，也不要猜作者身份。",
+          "output_fragment": "建议删去或补充具体背景；建议明确用户和用途；建议删去或说明实际用途。",
+          "finding": "这些是对诊断项的行动方向，没有提供改写后的正文，没有补造具体背景或用户群，也没有给出作者身份或概率。不能直接将“建议”当作已经进行了改写。"
+        },
+        {
+          "source_fragment": "随着时代的发展；赋能每个人；开启无限可能。",
+          "output_fragment": "背景过于笼统；没有说明帮助谁、解决什么问题；没有具体场景或效果支撑。",
+          "finding": "三项问题和理由均对应原文，诊断本身准确。"
+        },
+        {
+          "source_fragment": "实际功能是把TXT转为PDF。",
+          "output_fragment": "“实际功能是把TXT转为PDF”表达具体、清楚，没有明显空泛问题。",
+          "finding": "功能事实被原样引用并正确识别，没有转换成别的功能。"
+        }
+      ],
+      "criterion_alignment": {
+        "strict_check_reading": "若把 checks 的“只报告具体问题和理由”视为封闭输出清单，修改方向确实是清单外内容；用户开头“只检查”也为更克制的回答提供一定依据。",
+        "user_request_reading": "用户显式禁止的是改写和猜作者身份，并未直接说“不要给修改建议”。诊断附简短修改方向仍可合理解释为检查结果，而非改稿。",
+        "disputed_step": "把上述清单读法升级为“任何建议方向都是硬失败”，采用了比“不要改写”更窄的操作口径。原评审可以偏好更严格贴题的 baseline，但硬失败的确定性不足。",
+        "no_retroactive_edit": "不更改当前 case、checks、judgments 或 summary，不把本复核折算为新的通过率。"
+      },
+      "recommended_follow_up": "后续独立任务可在用户明确要求只列问题、不要建议时省去修改方向；一般审阅允许短建议。不要为了这一有争议的判据全局禁止有用建议，也不要强制每次审阅都附建议。",
+      "confidence": "事实核对高；对“只检查”的最窄范围解释存在真实歧义。"
+    },
+    {
+      "id": "en-comments",
+      "focus_condition": "baseline",
+      "classification": "confirmed_defect",
+      "defect_type": "unsupported_behavioral_contract",
+      "original_judgment": {
+        "blind_label": "A",
+        "fidelity": "fail",
+        "task": "fail",
+        "quality": "worse",
+        "hard_status": "fail",
+        "preference_condition": "skill",
+        "evidence": "代码字节保持不变，但“or None if the key is absent”断言了输入未建立的行为。源码仅调用items.get(key)，没有说明items的类型或get对缺失键的处理，注释因此可能误导维护者。"
+      },
+      "user_request": "Make the comment useful to a maintainer; leave everything else unchanged.",
+      "case_checks": [
+        "Do not claim thread safety or performance",
+        "Preserve code bytes",
+        "Do not assume items is a dictionary without context"
+      ],
+      "source": "def lookup(items, key):\n    # Seamlessly harness the lookup operation.\n    return items.get(key)\n",
+      "baseline_output": "def lookup(items, key):\n    # Return the value for key, or None if the key is absent.\n    return items.get(key)\n",
+      "skill_output": "def lookup(items, key):\n    # Missing-key behavior depends on the implementation of items.get.\n    return items.get(key)\n",
+      "independent_assessment": "确认缺陷。源码未建立缺失键返回 None 的契约，原 fidelity/task fail 有据。",
+      "evidence": [
+        {
+          "source_fragment": "def lookup(items, key): ... return items.get(key)",
+          "output_fragment": "or None if the key is absent",
+          "finding": "没有 items 类型、get 实现或文档，不能将某种常见 get 语义当作已知事实。"
+        },
+        {
+          "source_fragment": "return items.get(key)",
+          "output_fragment": "return items.get(key)",
+          "finding": "可执行代码保持不变。缺陷在注释新增了未经支持的行为保证，不是代码遭到改动。"
+        }
+      ],
+      "criterion_alignment": "checks 将有用且准确的维护说明具体化，没有加入与用户目标冲突的额外要求。",
+      "recommended_follow_up": "保持当前实现依赖说明；不为解决此 baseline 错误向核心追加针对某个 API 名称的特例。"
+    },
+    {
+      "id": "H067",
+      "focus_condition": "baseline",
+      "classification": "confirmed_defect",
+      "defect_type": "lost_attribution_and_new_author_conclusion",
+      "original_judgment": {
+        "blind_label": "B",
+        "fidelity": "fail",
+        "task": "fail",
+        "quality": "worse",
+        "hard_status": "fail",
+        "preference_condition": "skill",
+        "evidence": "保留一次内部试用和未复核，但删除原有专家观点的归因，新增作者判断“暂时还不能说……效果最好”，超出了自然化措辞的范围。"
+      },
+      "user_request": "改得自然些，但不要补造来源。",
+      "case_checks": [
+        "不编专家身份或证据。",
+        "不把最好写成已证实；指出归因缺口或保留其未核实属性。"
+      ],
+      "source": "据一些专家说，这个方案效果最好。我们只有一次内部试用，结果尚未复核。",
+      "baseline_output": "我们目前只做过一次内部试用，结果还没复核，暂时还不能说这个方案效果最好。",
+      "skill_output": "有些专家认为，这个方案效果最好。我们只做过一次内部试用，结果还没有复核。",
+      "independent_assessment": "确认忠实度缺陷。baseline 没有伪造专家身份，但它删除了原文的观点归属，并用作者的新判断替代了被归属的观点。",
+      "evidence": [
+        {
+          "source_fragment": "据一些专家说，这个方案效果最好。",
+          "output_fragment": "暂时还不能说这个方案效果最好。",
+          "finding": "“一些专家作出最佳评价”与“作者目前不能作出最佳评价”不是同一陈述。证据谨慎程度增加并不能补偿原归因被删除。"
+        },
+        {
+          "source_fragment": "我们只有一次内部试用，结果尚未复核。",
+          "output_fragment": "我们目前只做过一次内部试用，结果还没复核",
+          "finding": "试用次数和未复核状态保留，问题集中在前述观点及其发言者变化，不应扩大称为所有信息均被改坏。"
+        }
+      ],
+      "criterion_alignment": "checks 允许说明来源缺口或保留未核实属性，但不等于授权把归属他人的观点替换成作者自己的结论。",
+      "recommended_follow_up": "保留有些专家认为的归因；若要说明出处缺失，作为独立注记呈现。无需根据本项新增重复的来源保护规则。"
+    },
+    {
+      "id": "H053",
+      "focus_condition": "skill",
+      "classification": "minor_style_preference",
+      "defect_type": null,
+      "original_judgment": {
+        "blind_label": "A",
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "hard_status": "pass",
+        "preference_condition": "baseline",
+        "reason": "两者均完成任务；B进一步去掉“ordinary list price”中的冗余修饰，表达更自然。"
+      },
+      "user_request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+      "case_checks": ["Preserve both amounts, roles, and end date."],
+      "source": "The ordinary list price is €40. The discounted price is €35 until 12 November. Unlock an unparalleled opportunity to buy.",
+      "skill_output": "The ordinary list price is €40. The discounted price is €35 until 12 November. Buy now.",
+      "baseline_output": "The list price is €40. The discounted price is €35 until 12 November. Buy now.",
+      "independent_assessment": "两者都完成实质任务。baseline 去掉 ordinary 的偏好合理但幅度很小，不构成 Yaya 的事实或范围缺陷。",
+      "evidence": [
+        {
+          "source_fragment": "ordinary list price is €40; discounted price is €35 until 12 November",
+          "output_fragment": "两者均保留 €40 标价、€35 优惠价及 12 November 截止日期。",
+          "finding": "金额、角色和时间完全一致。"
+        },
+        {
+          "source_fragment": "Unlock an unparalleled opportunity to buy.",
+          "output_fragment": "Buy now.",
+          "finding": "两者均去掉空泛宣传并保留购买号召；剩余差别仅为 ordinary。"
+        }
+      ],
+      "criterion_alignment": "原 hard pass 合理。自然度偏好不应上升为必须删除 ordinary 或所有类似形容词的硬规则。",
+      "recommended_follow_up": "保留原偏好结果；不增加针对 ordinary/list price 的词汇规则。"
+    },
+    {
+      "id": "H054",
+      "focus_condition": "skill",
+      "classification": "minor_style_preference",
+      "defect_type": null,
+      "original_judgment": {
+        "blind_label": "B",
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "hard_status": "pass",
+        "preference_condition": "baseline",
+        "reason": "A直接说明正在做什么，更充分地去除空泛表达，同时保留检查要求中的审核进行状态。"
+      },
+      "user_request": "去掉空泛表达，保留代码、引用、结构和具体数据。",
+      "case_checks": ["保留HTML与注释。", "保留审核进行中。"],
+      "source": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>\n我们目前正在进行审核工作的推进。",
+      "skill_output": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>\n我们正在推进审核。",
+      "baseline_output": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>\n我们正在审核。",
+      "independent_assessment": "两者保护内容和状态都正确。baseline 更直接，但“推进审核”在本句并未制造新事实或妨碍理解，差别属于轻微表达偏好。",
+      "evidence": [
+        {
+          "source_fragment": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>",
+          "output_fragment": "两者的前两行均与原文逐字相同。",
+          "finding": "无 HTML、标识符、注释或 Pending 状态变化。"
+        },
+        {
+          "source_fragment": "我们目前正在进行审核工作的推进。",
+          "output_fragment": "skill：我们正在推进审核。 baseline：我们正在审核。",
+          "finding": "两者都删除多层名词化与重复时间标记，并保留审核进行中。不能仅因仍有“推进”就断定主要任务未完成。"
+        }
+      ],
+      "criterion_alignment": "正式质量评审的双方 hard pass 合理；此前机械 unsupported 来自原始 HTML 支持边界，与此处文风偏好是两件事。",
+      "recommended_follow_up": "不将“推进”列为一律删除词，也不据此修改保护规则。"
+    },
+    {
+      "id": "H071",
+      "focus_condition": "skill",
+      "classification": "minor_style_preference",
+      "defect_type": null,
+      "original_judgment": {
+        "blind_label": "A",
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "hard_status": "pass",
+        "preference_condition": "baseline",
+        "reason": "两者都准确；B进一步去掉“확인의 확인/진행”式名词化表达中的冗余，检查附件的要求更自然直接。"
+      },
+      "user_request": "불필요한 반복만 줄여 주세요. 의미와 존댓말은 유지해 주세요.",
+      "case_checks": [
+        "Retain checking attachment and no fixed deadline.",
+        "Retain appropriate politeness; no promise."
+      ],
+      "source": "첨부 파일의 확인을 진행해 주시기 바랍니다. 확인할 대상은 첨부 파일입니다. 기한은 아직 정해지지 않았습니다.",
+      "skill_output": "첨부 파일의 확인을 진행해 주시기 바랍니다. 기한은 아직 정해지지 않았습니다.",
+      "baseline_output": "첨부 파일을 확인해 주시기 바랍니다. 기한은 아직 정해지지 않았습니다.",
+      "independent_assessment": "两者均删除了重复说明附件是检查对象的句子，保留尊敬语与未定期限。baseline 进一步简化名词化结构的偏好可以成立；Yaya 已完成用户明确要求，并非硬失败。",
+      "evidence": [
+        {
+          "source_fragment": "확인할 대상은 첨부 파일입니다.",
+          "output_fragment": "两者都删除这一重复句。",
+          "finding": "明确的去重复任务已由两者完成。"
+        },
+        {
+          "source_fragment": "첨부 파일의 확인을 진행해 주시기 바랍니다.",
+          "output_fragment": "skill：첨부 파일의 확인을 진행해 주시기 바랍니다. baseline：첨부 파일을 확인해 주시기 바랍니다.",
+          "finding": "baseline 将“进行附件确认”改为直接的“请确认附件”；两者仍是正式礼貌请求，不增加承诺。用户使用“반복만”（只减少重复），也支持 Yaya 保留其他措辞的选择。"
+        },
+        {
+          "source_fragment": "기한은 아직 정해지지 않았습니다.",
+          "output_fragment": "기한은 아직 정해지지 않았습니다.",
+          "finding": "两者均原样保留期限尚未确定。"
+        }
+      ],
+      "criterion_alignment": "checks 与用户请求一致，双方 hard pass 合理。偏好说明中的“확인의 확인/진행”不是源文或输出的准确引文；实际存在的是“첨부 파일의 확인을 진행”。应将其理解为名词化简化，而非输出含有“확인의 확인”重复。",
+      "recommended_follow_up": "不为单次韩语轻微偏好添加词汇禁令；如需校准自然度，使用母语编辑验证。原评审理由的措辞瑕疵记录在本复核，不直接改写原 reason。"
+    }
+  ],
+  "recommended_reporting": [
+    "原始结果保持：112题，偏好skill/baseline/tie为14/5/93；两条件硬项通过均为110/112。",
+    "另行说明：在定向复核的四个原硬失败中，H019/skill、en-comments/baseline、H067/baseline有明确缺陷；H061/skill为检查范围判据争议。",
+    "三项额外skill落后案例H053/H054/H071均为双方合格后的轻微文风偏好，不应包装为实质失败。",
+    "本复核知晓条件，不能称为新的盲评；不替代原112题结果，不给出修改后的总分或通过率。"
+  ],
+  "work_boundaries": {
+    "model_or_evaluation_cli_run": false,
+    "core_modified": false,
+    "cases_modified": false,
+    "outputs_modified": false,
+    "original_judgments_modified": false,
+    "summary_modified": false
+  }
+}

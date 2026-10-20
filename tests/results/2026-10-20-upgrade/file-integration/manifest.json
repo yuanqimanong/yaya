@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "description": "Minimal retained evidence from the actual isolated file integration run; no copied core source or generated evaluation outputs",
+  "source_directory": "tests/runs/2026-10-20-v02-file-integration",
+  "files": [
+    {
+      "path": "before/report.md",
+      "source": "tests/runs/2026-10-20-v02-file-integration/before/report.md",
+      "bytes": 441,
+      "sha256": "58e5d20f13ec6ed79d075e23dd2a12c235fd4491160eeeabc18b231441a52305"
+    },
+    {
+      "path": "before/metrics.py",
+      "source": "tests/runs/2026-10-20-v02-file-integration/before/metrics.py",
+      "bytes": 214,
+      "sha256": "1c41ee33606c2031fc7019287b71ac0066d0a0ff505895de6482f7368c21016a"
+    },
+    {
+      "path": "before/scoped-overview.md",
+      "source": "tests/runs/2026-10-20-v02-file-integration/before/scoped-overview.md",
+      "bytes": 350,
+      "sha256": "b9e3d2f6c4e5c19d8ffbfa9f604cead412ec27be943a3f2ca7fb84fed0a618cc"
+    },
+    {
+      "path": "before/styles/existing.md",
+      "source": "tests/runs/2026-10-20-v02-file-integration/before/styles/existing.md",
+      "bytes": 103,
+      "sha256": "e068d9ccb40a877aed3bc3b48987c9fe2218088518b8667ca71a5ee0df1e6269"
+    },
+    {
+      "path": "after/report.md",
+      "source": "tests/runs/2026-10-20-v02-file-integration/after/report.md",
+      "bytes": 522,
+      "sha256": "8bba9383ec2a3c157d226a2630f251ed62336ba8517ff8ce3eddc9e027e1b21f"
+    },
+    {
+      "path": "after/metrics.py",
+      "source": "tests/runs/2026-10-20-v02-file-integration/after/metrics.py",
+      "bytes": 200,
+      "sha256": "cdb5df8f73c197a0cac9a2d02df68a138fd7cec24694cc0624eac789a97db6cb"
+    },
+    {
+      "path": "after/scoped-overview.md",
+      "source": "tests/runs/2026-10-20-v02-file-integration/after/scoped-overview.md",
+      "bytes": 280,
+      "sha256": "d920476206976afb74b70de013c7547f4b518d2e99c5d4a16b6ebf3d14af487a"
+    },
+    {
+      "path": "after/styles/plain.md",
+      "source": "tests/runs/2026-10-20-v02-file-integration/after/styles/plain.md",
+      "bytes": 1098,
+      "sha256": "cf02f113dfc40a41e4e0f925bd60ad1fa126ededf6c625ba5240c9e532927bef"
+    },
+    {
+      "path": "after/styles/existing.md",
+      "source": "tests/runs/2026-10-20-v02-file-integration/after/styles/existing.md",
+      "bytes": 103,
+      "sha256": "e068d9ccb40a877aed3bc3b48987c9fe2218088518b8667ca71a5ee0df1e6269"
+    },
+    {
+      "path": "request.md",
+      "source": "tests/runs/2026-10-20-v02-file-integration/request.md",
+      "bytes": 620,
+      "sha256": "3472e2497ef40b2da12625fe97444d9c5137b249a88ec8fae83e9d7dc2693746"
+    },
+    {
+      "path": "x002-input-request.json",
+      "source": "tests/runs/2026-10-20-v02-file-integration/x002-input-request.json",
+      "bytes": 598,
+      "sha256": "f388d87ae45fbeb5bc7bd8acff13a0676ecb41a90e6c21a5fb05cbf7438d10b4"
+    },
+    {
+      "path": "recoverable.diff",
+      "source": "tests/runs/2026-10-20-v02-file-integration/recoverable.diff",
+      "bytes": 1250,
+      "sha256": "bb310120276fe921fe864812c596adf9ee0d3f821bd60dc2f5a047e9c370140a"
+    },
+    {
+      "path": "candidate-validation.json",
+      "source": "tests/runs/2026-10-20-v02-file-integration/candidate-validation.json",
+      "bytes": 6988,
+      "sha256": "9bb8d1acdcbe28bd00e37c8e6d076c91e0924ff22cca0a3fbf7819cdf7c08f03"
+    },
+    {
+      "path": "saved-validation.json",
+      "source": "tests/runs/2026-10-20-v02-file-integration/saved-validation.json",
+      "bytes": 6817,
+      "sha256": "89ec437a1bc36c78540604cfc41deab72afec82dd480e43d6bdbdc18a1bf620a"
+    },
+    {
+      "path": "core-snapshot.json",
+      "source": "tests/runs/2026-10-20-v02-file-integration/core-snapshot.json",
+      "bytes": 2377,
+      "sha256": "f3ee1851c0adba0c4fb00599738d36ecd442405a29aa402d671b6b286f394ec0"
+    },
+    {
+      "path": "resolve-en.json",
+      "source": "tests/runs/2026-10-20-v02-file-integration/resolve-en.json",
+      "bytes": 827,
+      "sha256": "5fec09251ab50cedc175ac89904a05ff9fb6fba85551b8d7987758b2ee622320"
+    },
+    {
+      "path": "resolve-zh-Hans.json",
+      "source": "tests/runs/2026-10-20-v02-file-integration/resolve-zh-Hans.json",
+      "bytes": 862,
+      "sha256": "997e484ffb20e256da476f66c0f861fdddc988cd0ad9abec06c87ff3ccf2e73d"
+    },
+    {
+      "path": "response.md",
+      "source": "tests/runs/2026-10-20-v02-file-integration/response.md",
+      "bytes": 404,
+      "sha256": "9909a7c602ceb0599e9735a34996ed5f4a561d11735f58dd250da0e480d283c5"
+    },
+    {
+      "path": "save-result.json",
+      "source": "tests/runs/2026-10-20-v02-file-integration/save-result.json",
+      "bytes": 741,
+      "sha256": "57100ead6b1ba3adb81574c9ffed4b2acac13179a0429385547382aef34e9f01"
+    },
+    {
+      "path": "verify.py",
+      "source": "retained evidence verification script",
+      "bytes": 3993,
+      "sha256": "0f2849cf76be1710c2bd0d10edd9fa4f7bcb5ce9e4e20843654954058d728c9e"
+    },
+    {
+      "path": "verify_release.py",
+      "source": "retained evidence verification script",
+      "bytes": 6510,
+      "sha256": "2805abc8121b9e929c4f7482115cd945f3b69c571eb9ca878a6d5c653a2edf71"
+    }
+  ],
+  "instructions": "Run python -B tests/results/2026-10-20-upgrade/file-integration/verify.py to recheck retained before/after artifacts. Historical command output paths are preserved as executed.",
+  "generated_verification_outputs": [
+    "retained-verification.json",
+    "release-verification.json"
+  ]
+}

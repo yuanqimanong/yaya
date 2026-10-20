@@ -1,0 +1,208 @@
+{
+  "judgments": [
+    {
+      "id": "zh-finance",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留1200万元、同比8%及毛利率20%至23%；新增的“提高3个百分点”计算正确。保留“公司认为”“可能”及未提供订单数据的限制，表述简洁易懂。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "全部数字、观点归属和不确定性均保留。“毛利水平有所改善”与毛利率上升一致，“仍有待验证”延续审慎语气，没有虚构订单证据，但增加了评述。"
+      },
+      "preference": "A",
+      "reason": "A用“3个百分点”帮助普通读者理解变化，同时保持简洁。B的补充合理，但重复强调改善和验证，信息增益较小。"
+    },
+    {
+      "id": "en-finance",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留$12 million、同比8%、20%至23%，以及管理层认为需求“may be recovering”和未提供订单数据。“from a year earlier”准确表达同比，语言自然。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "与A完全相同；金额、同比期间、利润率变化、管理层归属及需求恢复的不确定性均保留，未新增订单证据。"
+      },
+      "preference": "tie",
+      "reason": "两份回答完全一致，均符合使用通俗英语润色财务更新的要求。"
+    },
+    {
+      "id": "hant-hk",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留香港用语“軟件”“港幣”和当前只接受港币付款的条件。“預計於下星期恢復”“確實日期尚待確認”保留预计时间及日期未确认的状态。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留“軟件”“港幣”“只接受”，以及预计下星期恢复其他付款方式、具体日期尚未确认。措辞适合客户通知。"
+      },
+      "preference": "tie",
+      "reason": "“確實日期尚待確認”和“具體日期尚未確認”都清楚表达相同限制，没有实质质量差异。"
+    },
+    {
+      "id": "ja-text",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "“一部のお客様に限り”明确保留有限开放范围；下月扩大仍为“予定”，具体日程仍未确定。“ご利用いただけます”适合对外通知。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "“一部のお客様に限定して”保留范围限制；扩大提供对象是计划，未承诺确定日期。“提供しております”“確定しておりません”的礼貌程度一致。"
+      },
+      "preference": "tie",
+      "reason": "A更侧重客户如何使用，B更侧重公司的提供安排；两者均自然、礼貌且准确，正式程度的差异不足以构成明显优势。"
+    },
+    {
+      "id": "ko-text",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "“일부 고객에게 제공되고 있습니다”保留目前向部分客户提供的范围；下月扩大仍为计划，具体时间仍未确定。全文使用一致的正式礼貌体。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "“일부 고객만”明确保留“仅部分客户”；下月扩大计划与日期未确定均保留。“이용하실 수 있습니다”自然地面向客户表达。"
+      },
+      "preference": "B",
+      "reason": "B用“만”更明确地保留仅限部分客户的条件，同时使用自然的客户敬语；A也准确，但限制表达稍弱。"
+    },
+    {
+      "id": "zh-comments",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "只修改普通注释，代码保持不变。“age 是否大于或等于18”准确对应age >= 18，去掉了没有信息量的能力夸饰。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "只修改注释。“年龄是否达到18岁”包含等于18的边界，与age >= 18一致，没有引入身份核验等行为。"
+      },
+      "preference": "tie",
+      "reason": "A直接对应变量和运算符，B用更自然的业务语言说明同一条件。两者都清楚、准确，没有实质优势。"
+    },
+    {
+      "id": "en-comments",
+      "A": {
+        "fidelity": "fail",
+        "task": "fail",
+        "quality": "worse",
+        "evidence": "代码字节保持不变，但“or None if the key is absent”断言了输入未建立的行为。源码仅调用items.get(key)，没有说明items的类型或get对缺失键的处理，注释因此可能误导维护者。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "仅修改普通注释，代码保持不变。明确说明缺失键行为取决于items.get的实现，没有擅自假定字典类型、性能或线程安全。"
+      },
+      "preference": "B",
+      "reason": "B尊重源码中未确定的get语义；A把常见字典行为写成了确定保证，存在事实忠实度问题。"
+    },
+    {
+      "id": "hant-comments",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "只将普通注释改为“判斷狀態是否為200”，准确描述相等比较。代码及“# noqa: PLR2004”原样保留，没有扩展为请求必然成功。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "“狀態為200時回傳True”描述比较的返回结果，未声称所有场景中的请求成功。代码和noqa指令均保持不变。"
+      },
+      "preference": "tie",
+      "reason": "A强调比较条件，B强调满足条件时的返回值；均比原来的空泛注释有用，差异不构成明显优势。"
+    },
+    {
+      "id": "ja-comments",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "仅修改普通注释。结合函数名retry，将status == 429表述为重试判定，没有声称代码实际执行重试；但比直接描述比较结果多了一层用途解释。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "仅修改普通注释，准确说明status为429时返回True，否则返回False，直接对应return status == 429，没有声称执行重试。"
+      },
+      "preference": "B",
+      "reason": "B直接说明条件和两个返回结果，维护者无需借助对函数用途的解释即可理解行为。A也未违反禁止声称实际重试的要求。"
+    },
+    {
+      "id": "ko-comments",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "代码保持不变，注释“항목이 하나 이상 있는지 확인합니다”准确说明len(items) > 0的非空检查，删除了原来的空泛夸饰。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "与A完全相同；只修改普通注释，准确描述至少包含一个项目的长度条件，没有新增性能或其他保证。"
+      },
+      "preference": "tie",
+      "reason": "两份回答完全一致，均准确、自然地说明长度检查。"
+    },
+    {
+      "id": "zh-prompt",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留{{材料}}、仅依据材料、3点、每点不超过20字、先问1个问题并等待回复，以及JSON和summary键。没有执行提示词；表达更口语化，但“顶尖专家”仍有夸饰。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "完整保留占位符、来源边界、数量和字数限制、提问后等待，以及JSON和summary键。将“举世无双的专家”简化为“专家”，没有新增后续输出的语气要求。"
+      },
+      "preference": "B",
+      "reason": "B保留全部可执行要求，同时更彻底地去掉夸张角色描述。A虽有改善，仍保留“顶尖专家”，且略显冗长。"
+    },
+    {
+      "id": "en-prompt",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "保留{{report}}和仅分析该材料的边界，明确risks键包含恰好两个风险；缺证据时问一个问题并等待、不得推断缺失数字均保留。返回的是修订提示词，没有执行风险分析。"
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "better",
+        "evidence": "仅将“world-class analyst”简化为“analyst”，完整保留占位符、来源限制、恰好两个风险、JSON键risks、提问等待和禁止推断数字的要求。"
+      },
+      "preference": "tie",
+      "reason": "A更直接，并明确风险位于risks键下；B保留分析师角色，改动简洁。两者都去掉夸饰并保留实质要求，没有明显优劣。"
+    }
+  ]
+}

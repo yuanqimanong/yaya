@@ -1,0 +1,48 @@
+{
+  "runner_protocol": 1,
+  "runner_sha256": "3b5e33fedcde06760fc196c60c197f4601287a800ba5d05a78431d534f581dfd",
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
+  ],
+  "manifest_sha256": "92bed7f21a84714d0dcafe32c21c7461ad44f6b25ccea29b057f178634e206ed",
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "conditions": [
+    "skill",
+    "baseline"
+  ],
+  "baseline_kind": "no_skill",
+  "competitor_sources": {},
+  "tool_policy": "forbidden in prompt; tool or unknown item events invalidate output",
+  "tool_claim": "no tool activity observed in accepted JSONL; tools are not physically disabled",
+  "project_instructions": "project_doc_max_bytes=0 for this process; host CLI configuration otherwise inherited",
+  "isolation": "one ephemeral CLI process and working directory per case",
+  "jobs": [
+    {
+      "directory": "skill/batch-001",
+      "id": "H051",
+      "condition": "skill",
+      "prompt_sha256": "f516a69f79772172cce9576d050578b8b5ada88504bb4ed88fafb9e5298047c6",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-001",
+      "id": "H051",
+      "condition": "baseline",
+      "prompt_sha256": "5480715586202c16f690bf86fcef05c4ca769b6d6f1227e880bc9391dce4d9d9",
+      "context_sha256": {}
+    }
+  ]
+}

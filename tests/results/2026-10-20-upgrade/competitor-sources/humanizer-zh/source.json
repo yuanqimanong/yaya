@@ -1,0 +1,21 @@
+{
+  "repository": "op7418/Humanizer-zh",
+  "commit": "f4518a8eab97b8bfebc66a89d34320a89bef6930",
+  "obtained_at_utc": "2026-10-20T09:54:56.114899+00:00",
+  "retrieval": "GitHub public API commit lookup, raw.githubusercontent.com immutable revision downloads",
+  "executed_external_code": false,
+  "files": [
+    {
+      "path": "SKILL.md",
+      "url": "https://raw.githubusercontent.com/op7418/Humanizer-zh/f4518a8eab97b8bfebc66a89d34320a89bef6930/SKILL.md",
+      "bytes": 20527,
+      "sha256": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/op7418/Humanizer-zh/f4518a8eab97b8bfebc66a89d34320a89bef6930/LICENSE",
+      "bytes": 1063,
+      "sha256": "aa00e74769e1b9d8e7fa7094dbfcca9b129a0ded6dce1cf4da050b99146d2fa7"
+    }
+  ]
+}

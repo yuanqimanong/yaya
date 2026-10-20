@@ -1,0 +1,12 @@
+2026-10-20T10:32:24.695443Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:32:24.695629Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:32:24.705135Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T10:32:25.828994Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:32:29.262126Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:32:29.262410Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:32:29.614840Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:32:30.116821Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:32:41.506610Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:32:46.624132Z  WARN codex_core::hook_runtime: after_agent hook failed; continuing turn_id=01a158de-95e9-7ec0-af60-f7374f34fc1a hook_name=legacy_notify error=文件名或扩展名太长。 (os error 206)
+2026-10-20T10:32:46.625426Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:32:54.760124Z  WARN codex_core_plugins::manager: failed to refresh cached remote plugin catalog error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/list?scope=GLOBAL&limit=200: error decoding response body scope=Global

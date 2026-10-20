@@ -1,0 +1,7 @@
+[
+  {
+    "id": "zh-comments",
+    "request": "用计算机领域的风格优化注释。只改普通注释。",
+    "input": "def eligible(age):\n    # 这里智能而高效地判断是不是满足条件\n    return age >= 18\n"
+  }
+]

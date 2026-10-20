@@ -1,0 +1,92 @@
+{
+  "id": "negative-code-task",
+  "condition": "baseline",
+  "status": "completed",
+  "attempt": 2,
+  "started_at_utc": "2026-10-20T10:50:33.581545+00:00",
+  "prior_failure": {
+    "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 1048576 bytes failed",
+    "returncode": 3221226505,
+    "error": "CLI exited with status 3221226505",
+    "attempt": "cli-attempt-01",
+    "completion_sha256": "f2f093860450d041d99bb9a85b3312a9b5857a7d1c832acbb15176becb18fe4a",
+    "started_sha256": "f1e260e8b6b9957f16902141645b92837d34c5dfa6ffd8172185743764efc505",
+    "artifact_sha256": {
+      "prompt.txt": "fcb40faa6035734449b63962ec5cab11de9b02262b781de681fe58028c5a276a",
+      "stdout.jsonl": "4c8d3862eaf0638436c58760e7b6640c43f322a92b7e06a4af22dec6d064f587",
+      "stderr.txt": "7c4e374479ce0260de7f116f41a834b28d7c4f195cd570b04e688e77f02db521",
+      "final.json": "3c7d132b3760125c246bc1272144ad731c212f24887e16864483fe92bc92f8c6",
+      "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    }
+  },
+  "prompt_sha256": "fcb40faa6035734449b63962ec5cab11de9b02262b781de681fe58028c5a276a",
+  "context_sha256": {},
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--color",
+    "never",
+    "--json",
+    "-C",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\baseline\\batch-033\\cli-attempt-02",
+    "-o",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\baseline\\batch-033\\cli-attempt-02\\final.json",
+    "--output-schema",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\baseline\\batch-033\\cli-attempt-02\\output-schema.json",
+    "-"
+  ],
+  "timeout_seconds": 180,
+  "elapsed_seconds": 35.03636610000103,
+  "returncode": 0,
+  "usage": [
+    {
+      "input_tokens": 19407,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 108,
+      "reasoning_output_tokens": 66
+    }
+  ],
+  "tool_or_unknown_items": [],
+  "diagnostics": [
+    {
+      "classification": "ignored_provider_configuration",
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_0",
+          "type": "error",
+          "message": "Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."
+        }
+      }
+    },
+    {
+      "classification": "ignored_provider_configuration",
+      "event": {
+        "type": "item.completed",
+        "item": {
+          "id": "item_1",
+          "type": "error",
+          "message": "Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."
+        }
+      }
+    }
+  ],
+  "malformed_jsonl_lines": 0,
+  "completed_turns": 1,
+  "failed_events": [],
+  "artifact_sha256": {
+    "final.json": "3c7d132b3760125c246bc1272144ad731c212f24887e16864483fe92bc92f8c6",
+    "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+    "prompt.txt": "fcb40faa6035734449b63962ec5cab11de9b02262b781de681fe58028c5a276a",
+    "stderr.txt": "a21e39a86a4e02652f5e806283646573f608495c0a25cdb6e775cc14bd1094da",
+    "stdout.jsonl": "8bb2f15aa0ddd57cd1783801b2b0306d303f07c7f5a08bf67b387f0d7d13fb56"
+  }
+}

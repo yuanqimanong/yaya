@@ -1,0 +1,24 @@
+{
+  "saved": {
+    "report.md": {
+      "sha256": "8bba9383ec2a3c157d226a2630f251ed62336ba8517ff8ce3eddc9e027e1b21f",
+      "matches_candidate": true
+    },
+    "metrics.py": {
+      "sha256": "cdb5df8f73c197a0cac9a2d02df68a138fd7cec24694cc0624eac789a97db6cb",
+      "matches_candidate": true
+    },
+    "scoped-overview.md": {
+      "sha256": "d920476206976afb74b70de013c7547f4b518d2e99c5d4a16b6ebf3d14af487a",
+      "matches_candidate": true
+    },
+    "styles/plain.md": {
+      "sha256": "cf02f113dfc40a41e4e0f925bd60ad1fa126ededf6c625ba5240c9e532927bef",
+      "created_new_path": true
+    }
+  },
+  "existing_style_bytes_unchanged": true,
+  "core_hash_changed_during_run": [
+    "core/yaya/scripts/packs.py"
+  ]
+}

@@ -1,0 +1,1 @@
+{"id":"unsupported-ts-comments","text":"export const value = \"http://example.test/#keep\";\n// Return the length of text in UTF-16 code units.\nexport function lengthOf(text: string) { return text.length; }\n","notes":"Only the ordinary comment was changed. No tools or automated checks were run; external language overrides were not resolved.","skill_used":true}

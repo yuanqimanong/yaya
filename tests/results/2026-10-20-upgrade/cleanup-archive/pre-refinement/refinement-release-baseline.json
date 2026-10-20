@@ -1,0 +1,35 @@
+{
+  "preserved": {
+    "tests/results/2026-10-20-upgrade/context-cost.json": "1a3ffe39c98d373a3be8ff2defd5e9fc34564f1f9de9764b44067b740827d36f",
+    "tests/results/2026-10-20-upgrade/file-integration/release-verification.json": "a629ad4bd73b80400e2f10a5e190f29eba54756cf7624ce32341bffd69bf8ec0",
+    ".tmp/pre-refinement-0.2/yaya-core-0.2.0.zip": "f1f5c3e317917e268e1a0e463a84f14bbcec2ff48a49f0ab6449f126e9ad4101",
+    ".tmp/pre-refinement-0.2/references/humanize.md": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+    ".tmp/pre-refinement-0.2/languages/zh-Hans/PATTERNS.md": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+  },
+  "dist": {
+    "catalog.json": {
+      "sha256": "83343a19a58a3b634659982ff7c9b01c77591ce3c013b8a9537101a9ed9bd51c",
+      "bytes": 1388
+    },
+    "SHA256SUMS": {
+      "sha256": "e4e829a1b9c095560412085df9f4f19a5e1f2359b9f9bb4f22a6e272bff16e30",
+      "bytes": 358
+    },
+    "yaya-core-0.2.0.zip": {
+      "sha256": "f1f5c3e317917e268e1a0e463a84f14bbcec2ff48a49f0ab6449f126e9ad4101",
+      "bytes": 42937
+    },
+    "yaya-lang-ja-0.2.0.zip": {
+      "sha256": "96a8cd2fbea76668de60e27a199e08ed74f6a5d021787c66efce481c0e836eb1",
+      "bytes": 5384
+    },
+    "yaya-lang-ko-0.2.0.zip": {
+      "sha256": "07035954b0cd857e6809c20d9bc202618b2b322aefc21cf2d1873a6de2723c92",
+      "bytes": 5183
+    },
+    "yaya-lang-zh-Hant-0.2.0.zip": {
+      "sha256": "ab496f5790a070aa5d62852abafa27d54f2c0326439b9a78cf8994b3fb3f385e",
+      "bytes": 5176
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "verified_at_utc": "2026-10-20T12:18:50.936558+00:00",
+  "status": "completed",
+  "planned_process_calls": 8,
+  "successful_first_attempts": 8,
+  "failed_attempts": 0,
+  "recovery_calls": 0,
+  "not_started": 0,
+  "variants": {
+    "original": 4,
+    "edited": 4
+  },
+  "local_cli_condition": "baseline",
+  "guidance_loaded": [],
+  "workers": 2,
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "usage_totals": {
+    "input_tokens": 156107,
+    "cached_input_tokens": 72320,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1610,
+    "reasoning_output_tokens": 908
+  },
+  "records": [
+    {
+      "id": "zh-summary-ready--original",
+      "status": "completed",
+      "returncode": 0,
+      "attempt": "cli-attempt-01",
+      "elapsed_seconds": 41.04624110000441,
+      "output_sha256": "cdd56c01c2f5154fdec7ea6a142e968b606a2989bf8594ac2cc0e4e13a3702fd",
+      "completion_sha256": "61e3caacba45e081a0530f6bc1f2e32213da59fb6e8099070fe1af5d28bef10b",
+      "tool_events": 0,
+      "known_config_diagnostics": 2,
+      "usage": [
+        {
+          "input_tokens": 19511,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 133,
+          "reasoning_output_tokens": 75
+        }
+      ]
+    },
+    {
+      "id": "zh-summary-ready--edited",
+      "status": "completed",
+      "returncode": 0,
+      "attempt": "cli-attempt-01",
+      "elapsed_seconds": 46.592319799994584,
+      "output_sha256": "8434ab294d0864c82de179fc107750c496c4cafe3ddd1733c82218c18a238e73",
+      "completion_sha256": "8dfcecebabf5b7cbba6bf05852068a071b610498a8b5760c2676b817e087a2a3",
+      "tool_events": 0,
+      "known_config_diagnostics": 2,
+      "usage": [
+        {
+          "input_tokens": 19508,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 172,
+          "reasoning_output_tokens": 114
+        }
+      ]
+    },
+    {
+      "id": "zh-summary-missing--original",
+      "status": "completed",
+      "returncode": 0,
+      "attempt": "cli-attempt-01",
+      "elapsed_seconds": 39.50262180000573,
+      "output_sha256": "503d669ba970922671b41372cb7045cb66e5be0117a7108abeddc41b73ce5448",
+      "completion_sha256": "6e5d36c0ce187da5b74b9e3d68c9b2b59545b4d44b7a9bf59730b6c3a75a0c2e",
+      "tool_events": 0,
+      "known_config_diagnostics": 2,
+      "usage": [
+        {
+          "input_tokens": 19495,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 150,
+          "reasoning_output_tokens": 106
+        }
+      ]
+    },
+    {
+      "id": "zh-summary-missing--edited",
+      "status": "completed",
+      "returncode": 0,
+      "attempt": "cli-attempt-01",
+      "elapsed_seconds": 45.127928999994765,
+      "output_sha256": "b74955ab70513a03bffb5dd23e284e60e95a154831f71a3d7fff0bd2f3998306",
+      "completion_sha256": "e487c728b5605cc6b6ae345b0f476d26af7b4ca6e47a36dc642a56b37163c3fc",
+      "tool_events": 0,
+      "known_config_diagnostics": 2,
+      "usage": [
+        {
+          "input_tokens": 19492,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 167,
+          "reasoning_output_tokens": 123
+        }
+      ]
+    },
+    {
+      "id": "en-risks-ready--original",
+      "status": "completed",
+      "returncode": 0,
+      "attempt": "cli-attempt-01",
+      "elapsed_seconds": 43.690607600001385,
+      "output_sha256": "91b17cf7ed4d7ba6cab92f6aaf2fd69ebfe883673b030da33ec43f59bb70f65e",
+      "completion_sha256": "9be1baf531abf9c1c5a864c784817d5e06d479b50234843d7f0a944fc91f1cbb",
+      "tool_events": 0,
+      "known_config_diagnostics": 2,
+      "usage": [
+        {
+          "input_tokens": 19512,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 166,
+          "reasoning_output_tokens": 103
+        }
+      ]
+    },
+    {
+      "id": "en-risks-ready--edited",
+      "status": "completed",
+      "returncode": 0,
+      "attempt": "cli-attempt-01",
+      "elapsed_seconds": 40.77966749999905,
+      "output_sha256": "3af584d9289dd0f49cb20bd289d12053d17b09cba2661e3bd8036c72e91159a6",
+      "completion_sha256": "d35ea6fe7ed2c5e472a508098cf609e21291f0f21015c67760ec64f1113ec137",
+      "tool_events": 0,
+      "known_config_diagnostics": 2,
+      "usage": [
+        {
+          "input_tokens": 19510,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 142,
+          "reasoning_output_tokens": 80
+        }
+      ]
+    },
+    {
+      "id": "plain-explanation-no-page--original",
+      "status": "completed",
+      "returncode": 0,
+      "attempt": "cli-attempt-01",
+      "elapsed_seconds": 47.851195900002494,
+      "output_sha256": "759a2f40da09ff7d5def2313ad31430bae2bfb0164ad3a51e60c8e600f32c8b5",
+      "completion_sha256": "810e027fe96e824e9983ea27ede7df504cb48b55a81eeb1af9590896ee5df3e4",
+      "tool_events": 0,
+      "known_config_diagnostics": 2,
+      "usage": [
+        {
+          "input_tokens": 19535,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 348,
+          "reasoning_output_tokens": 155
+        }
+      ]
+    },
+    {
+      "id": "plain-explanation-no-page--edited",
+      "status": "completed",
+      "returncode": 0,
+      "attempt": "cli-attempt-01",
+      "elapsed_seconds": 47.70065400000021,
+      "output_sha256": "9416d039b7f603ab34edf0a95710e35fa29f814b02ba587a809c58c64f2e22dc",
+      "completion_sha256": "fc31d00d1609d176a5c7e4af45c0ec46dd0abf1ef9831145a0775842abced7db",
+      "tool_events": 0,
+      "known_config_diagnostics": 2,
+      "usage": [
+        {
+          "input_tokens": 19544,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 332,
+          "reasoning_output_tokens": 152
+        }
+      ]
+    }
+  ],
+  "runner_sha256": "3b5e33fedcde06760fc196c60c197f4601287a800ba5d05a78431d534f581dfd",
+  "manifest_sha256": "e84c16532a751b194e78abb26e134189c7cf819e63910154b4f1710776887cd7",
+  "cli_metadata_sha256": "6c319579d605643a4ae608005b965c5b2cc88e920b9831780aad5f519045f6b4",
+  "limitations": [
+    "One model configuration and one execution per variant; not a quality benchmark.",
+    "No tool activity observed in the accepted logs; tools were not physically disabled."
+  ]
+}

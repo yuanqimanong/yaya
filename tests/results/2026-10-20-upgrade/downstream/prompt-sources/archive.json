@@ -1,0 +1,33 @@
+{
+  "sha256": {
+    "manifest.json": "72bfaba7778ccf5cbb03a578a4976f7f5967c4ff03918fb68ebf75136b0e7e60",
+    "cli-run.json": "30c7d35319394a7d3c5c3d750c9436ca4a36a8f740e47d7821ff1d4509f5fb32",
+    "zh-prompt/cli-attempt-01/completion.json": "c26d386d175be50af8ce48bf395b7d134ada1f90e67657e0be04e68da18d7b92",
+    "zh-prompt/cli-attempt-01/final.json": "b6bdda6a02c4beda91b7cd8023a1b417257b987320ceae7d45349025db1331f2",
+    "zh-prompt/cli-attempt-01/output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+    "zh-prompt/cli-attempt-01/prompt.txt": "d55348209b9ccfc279a6e11e9d9e3944f828c22592dd7cd045b364cf9dc23904",
+    "zh-prompt/cli-attempt-01/started.json": "77b3dad32f6bc19220b2416da202a6e4cee7baf1dba83f99dab485bb6ca335a9",
+    "zh-prompt/cli-attempt-01/stderr.txt": "80ccf87d2f7fe8a9a0dff1dffc3d7cf3faf5f2bfbdcf65753101340dfe03a774",
+    "zh-prompt/cli-attempt-01/stdout.jsonl": "ebd20839b52dc630d51aa2236d6c11f471fbbf214b1e5598b4f23a2a8ffd21fc",
+    "zh-prompt/outputs.json": "ee152e44e80ebe82c3a43144c6ce98953c83fc1bbc792386998b84936ccef85d",
+    "en-prompt/cli-attempt-01/completion.json": "ed590e434db946d4b32ee2c5b878903369c1dff35374d59d529e9806842cd02b",
+    "en-prompt/cli-attempt-01/final.json": "69ddab3cefb6a221b5898eaab6e6fa8578fa89124ecddff7398df2d31bfbcb08",
+    "en-prompt/cli-attempt-01/output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+    "en-prompt/cli-attempt-01/prompt.txt": "7efaa88837a8a9479a19c4f37f7c235ac5b6fdb6f4892405839669c5f742318a",
+    "en-prompt/cli-attempt-01/started.json": "be5e1e5d5bb5c9ba27a586f98c95436c5fcd377efec443a07d6923b023886a2e",
+    "en-prompt/cli-attempt-01/stderr.txt": "eb4df742db199cd0198fe0999f165f571e6af8b4edc3213e806bff6b77980c69",
+    "en-prompt/cli-attempt-01/stdout.jsonl": "f76eaf14ee29421d2b2e46360e91ceaece4f2d64224ddc04c56b56a2c5cd1ae1",
+    "en-prompt/outputs.json": "47191b7018c74ef0e482798da138817ce5cd11221ea8ae56e6dcac10db4999b8",
+    "downstream-style/cli-attempt-01/completion.json": "c447bf3b9672b6782b5cd6613e7c0946830153fe226751d6f85a5c776269c078",
+    "downstream-style/cli-attempt-01/final.json": "58d73a06791d7861fde069b59a3c63553c42953c320de29360f99ab835d358d3",
+    "downstream-style/cli-attempt-01/output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+    "downstream-style/cli-attempt-01/prompt.txt": "4ad46896a12e8c4c7174f1deeb9076f66c06c53f1305099f848b166f655ff437",
+    "downstream-style/cli-attempt-01/started.json": "fcda31e532eb2e1d57d20280a0c6c35d2da4d993b58b3d1d0fc87c2be4834df3",
+    "downstream-style/cli-attempt-01/stderr.txt": "9d568e8167c01bbabaa971a7989852d91a8e2c2f04c798dabdd1b6b23f91dce5",
+    "downstream-style/cli-attempt-01/stdout.jsonl": "fd9d22f2585be25021254345e6321455f802497f6b147c2eac177a519851f166",
+    "downstream-style/outputs.json": "62cb462f8b741081375384c8b4d67229085d953d59b9170f769fcef89d850e4e"
+  },
+  "source_provenance_sha256": "1a41e5735ff8bc5130744f87d5cfae4d503f9346e020785eca7e160957e72f7d",
+  "verified_sources": 3,
+  "verified_substitutions": 8
+}

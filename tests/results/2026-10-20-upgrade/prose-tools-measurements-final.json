@@ -1,0 +1,47 @@
+{
+  "phase": "after-independent-audit-fixes",
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "detector_10004_words_ms": [
+    92.613,
+    87.228,
+    88.319,
+    87.504,
+    87.056
+  ],
+  "median_ms": 87.504,
+  "adversarial": [
+    {
+      "characters": 100006,
+      "status": "unsupported",
+      "ms": 51.36
+    },
+    {
+      "characters": 100004,
+      "status": "unsupported",
+      "ms": 38.37
+    },
+    {
+      "characters": 100011,
+      "status": "ok",
+      "ms": 170.879
+    },
+    {
+      "characters": 100010,
+      "status": "ok",
+      "ms": 115.445
+    },
+    {
+      "characters": 100021,
+      "status": "ok",
+      "ms": 193.082
+    }
+  ],
+  "scope": "In-process detector; excludes interpreter startup, file I/O, JSON serialization. One host only.",
+  "sha256": {
+    "prose_scan.py": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+    "detect_tells.py": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800",
+    "check_rewrite.py": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c",
+    "tell_rules.json": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8"
+  }
+}

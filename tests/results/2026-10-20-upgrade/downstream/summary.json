@@ -1,0 +1,55 @@
+{
+  "evaluation": "downstream prompt contract smoke check",
+  "generation": {
+    "planned": 8,
+    "completed_first_attempts": 8,
+    "failed": 0,
+    "retries": 0,
+    "original": 4,
+    "edited": 4
+  },
+  "contract_results": {
+    "original": {"pass": 4, "fail": 0, "uncertain": 0},
+    "edited": {"pass": 4, "fail": 0, "uncertain": 0}
+  },
+  "review_method": {
+    "mechanical": "JSON parsing, exact keys, item counts, summary character counts including spaces and punctuation, question-mark count and missing-page marker.",
+    "semantic": "The host assistant read all eight complete outputs against the frozen source material and checks. This was not blinded, not an additional model call and not a native human review.",
+    "overall_rule": "All frozen checks satisfied in the observed response. No extra downstream turns were executed."
+  },
+  "cases": [
+    {
+      "id": "zh-summary-ready",
+      "original": "pass",
+      "edited": "pass",
+      "evidence": "Both responses are identical JSON with only summary and three entries: 新增 CSV 导出功能; 修复登录超时问题; 最低支持 Python 3.10. Character counts are 11, 8 and 16. All three facts come from the supplied material."
+    },
+    {
+      "id": "zh-summary-missing",
+      "original": "pass",
+      "edited": "pass",
+      "evidence": "Original asks 请提供需要总结的材料？; edited asks 你需要总结的材料是什么？. Each is one question in the JSON summary string, without an invented summary or extra prose.",
+      "interpretation": "The conditional ask-and-wait branch takes precedence over generating three summary points. The prompt does not specify the type of summary. Waiting is observed only as the current answer stopping after the question; no follow-up turn was tested."
+    },
+    {
+      "id": "en-risks-ready",
+      "original": "pass",
+      "edited": "pass",
+      "evidence": "Both JSON responses contain only risks with exactly two strings: dependence on one supplier without backup and cash reserves covering two months. No extra risks or numbers were added."
+    },
+    {
+      "id": "plain-explanation-no-page",
+      "original": "pass",
+      "edited": "pass",
+      "evidence": "Both retain the sorted-data prerequisite and explain comparing the middle element to halve the remaining search range. Both mark the page number 未提供. Original uses explicit steps; edited uses a guess-the-number analogy. Neither invents a page number.",
+      "interpretation": "Plain-language delivery was explicitly added only to the edited prompt. Both observed outputs are accessible; this check does not quantify a readability improvement."
+    }
+  ],
+  "limitations": [
+    "Four synthetic materials, three source prompts, one model configuration and one execution per variant.",
+    "Original and edited variants are separate downstream executions with no Yaya guidance loaded. They are not the main benchmark's Skill and baseline conditions.",
+    "This supports observed contract preservation for these four pairs only; it does not establish general prompt equivalence or quality improvement.",
+    "No additional missing-evidence English case, citation-present case, adversarial document or multi-turn continuation was tested.",
+    "The API-facing configured model name is recorded; an exact service-side model revision is unavailable."
+  ]
+}

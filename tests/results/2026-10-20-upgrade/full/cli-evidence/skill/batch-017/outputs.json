@@ -1,0 +1,8 @@
+[
+  {
+    "id": "en-style",
+    "text": "Reusable style instructions:\n- Use short sentences and direct verbs.\n- Organize around what is known, what can be checked, and what remains unresolved.\n- State uncertainty plainly. Leave unsupported conclusions open.\n- Keep the tone calm and practical.\n- Transfer expression habits without borrowing personal history or credentials.\n\nExample prompt:\nReview the logs below. Start with what they show. Cite relevant timestamps and entries. Check each suspected cause against the available evidence. Separate confirmed findings from possible explanations. Leave unresolved causes open, and name the next check needed for each. Keep sentences short and recommendations concrete.\n\nLogs:\n[PASTE LOGS HERE]",
+    "notes": "The style guidance is provisional because the sample is brief. External language overrides were not resolved; only the supplied guidance was used.",
+    "skill_used": true
+  }
+]

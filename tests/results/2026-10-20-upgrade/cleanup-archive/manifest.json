@@ -1,0 +1,1374 @@
+{
+  "date": "2026-10-20",
+  "purpose": "Preserve referenced evidence before removing temporary runs; original bytes and paths retained in this manifest.",
+  "files": [
+    {
+      "original": ".tmp/pre-refinement-0.2/yaya-core-0.2.0.zip",
+      "archived": "pre-refinement/yaya-core-0.2.0.zip",
+      "bytes": 42937,
+      "sha256": "f1f5c3e317917e268e1a0e463a84f14bbcec2ff48a49f0ab6449f126e9ad4101"
+    },
+    {
+      "original": ".tmp/refinement-release-baseline.json",
+      "archived": "pre-refinement/refinement-release-baseline.json",
+      "bytes": 1560,
+      "sha256": "b6c0120bc890f34bba79afb54bb36c02f99e3c1e5d784609b17465aaa156196b"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/apostrophe_url.after.md",
+      "archived": "tool-audit/apostrophe_url.after.md",
+      "bytes": 53,
+      "sha256": "d12e467d43e8600a512ddb6b67c6ec837da13aa841edad11054337015a9e66bd"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/apostrophe_url.before.md",
+      "archived": "tool-audit/apostrophe_url.before.md",
+      "bytes": 53,
+      "sha256": "d12e467d43e8600a512ddb6b67c6ec837da13aa841edad11054337015a9e66bd"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/collapsed_reference_code.after.md",
+      "archived": "tool-audit/collapsed_reference_code.after.md",
+      "bytes": 24,
+      "sha256": "745f9db85b8c64c8e5c16f67e0f84257fba34f36e82a72b1f3b3662a3a8bacf6"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/collapsed_reference_code.before.md",
+      "archived": "tool-audit/collapsed_reference_code.before.md",
+      "bytes": 24,
+      "sha256": "2e10e983110bb9548e5e20c55ec9d63264b05a0cd0c2606591ded3d1dc565550"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/hard_wrapped_quote.before.md",
+      "archived": "tool-audit/hard_wrapped_quote.before.md",
+      "bytes": 90,
+      "sha256": "cc9ec4b71f699154c05183d16225b507823971bd141f4439e7752fc793700b76"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/html_comment_detection.before.md",
+      "archived": "tool-audit/html_comment_detection.before.md",
+      "bytes": 69,
+      "sha256": "746710a5874f27f80d4e6761a02f28a83e4da3367df23c412944592569511421"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/html_comment_fence.after.md",
+      "archived": "tool-audit/html_comment_fence.after.md",
+      "bytes": 53,
+      "sha256": "7d9a426c6eb58682ca7e6615e41838d11619fd938e450fde51794658c9bf216f"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/html_comment_fence.before.md",
+      "archived": "tool-audit/html_comment_fence.before.md",
+      "bytes": 55,
+      "sha256": "2cee75ce52e5bbb397446957ca0b335a53e1e14cef969455de671d6efce40213"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/html_comment_table.after.md",
+      "archived": "tool-audit/html_comment_table.after.md",
+      "bytes": 64,
+      "sha256": "03a848f91eb731db0cc2097b1eed53935ea9bda3949fab99233d2787081ffd6b"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/html_comment_table.before.md",
+      "archived": "tool-audit/html_comment_table.before.md",
+      "bytes": 66,
+      "sha256": "6c653c5a97b464fb799d7fc236db8e0524024f384108a556c52f84925e24252e"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/inch_mark.before.md",
+      "archived": "tool-audit/inch_mark.before.md",
+      "bytes": 45,
+      "sha256": "84e943866cf5ff228cc141b364bb1731f7f1eee69fee4ebc5862f2aa634ef6b0"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/perf_unmatched_quotes.before.md",
+      "archived": "tool-audit/perf_unmatched_quotes.before.md",
+      "bytes": 36000,
+      "sha256": "8a69adbc7407d721ed87f713dcaef1091f9d5f9619e53c6673831cffd9e3a2df"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/prose-audit-evidence.json",
+      "archived": "tool-audit/prose-audit-evidence.json",
+      "bytes": 33354,
+      "sha256": "c473be84782e62475138e8dc4fcbf042b54209fc9b2e3f8b4e43283b23d810e3"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/prose_audit_repro.py",
+      "archived": "tool-audit/prose_audit_repro.py",
+      "bytes": 5858,
+      "sha256": "e91763dcde8952ed99a7e2489eda3462412a1a5c1330104dff3515dfb995796b"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/quote-performance-evidence.json",
+      "archived": "tool-audit/quote-performance-evidence.json",
+      "bytes": 448,
+      "sha256": "4460636e7856f059baa42ec80d968ae7133e5039fbfc94d50b9098eaec515e25"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/shortcut_reference_code.after.md",
+      "archived": "tool-audit/shortcut_reference_code.after.md",
+      "bytes": 22,
+      "sha256": "f5034052aa0a749ab8a22943a5b92cf20c757779d564b23ce150fc6f36c2e706"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/shortcut_reference_code.before.md",
+      "archived": "tool-audit/shortcut_reference_code.before.md",
+      "bytes": 22,
+      "sha256": "9a7b115cff59476103bbced6928ea5e443dd7d8cc895910989cdd42af5a71fab"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/single_column_table.after.md",
+      "archived": "tool-audit/single_column_table.after.md",
+      "bytes": 25,
+      "sha256": "de8f8371c605603d00796c87ae8b0c10cfb5b4895f7f24a356c4d213bc5c925a"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/single_column_table.before.md",
+      "archived": "tool-audit/single_column_table.before.md",
+      "bytes": 27,
+      "sha256": "83d3781437c8010119e7de03dea538112ff40909fa4df020a822d0bc07a9718e"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/unmatched-quotes-1000.md",
+      "archived": "tool-audit/unmatched-quotes-1000.md",
+      "bytes": 3000,
+      "sha256": "9a050d8813940b3cb1e6259b0ec90f2e2f7617fa592e39db132228d94af4b728"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/unmatched-quotes-12000.md",
+      "archived": "tool-audit/unmatched-quotes-12000.md",
+      "bytes": 36000,
+      "sha256": "8a69adbc7407d721ed87f713dcaef1091f9d5f9619e53c6673831cffd9e3a2df"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/unmatched-quotes-2000.md",
+      "archived": "tool-audit/unmatched-quotes-2000.md",
+      "bytes": 6000,
+      "sha256": "c299fb97c8e62852b97874e903a8ecce224189b5aed99b1bc131759a1984a73d"
+    },
+    {
+      "original": "tests/runs/0.2-tools-audit/unmatched-quotes-4000.md",
+      "archived": "tool-audit/unmatched-quotes-4000.md",
+      "bytes": 12000,
+      "sha256": "c289b8080a1c9e44b9537aab933c01e4dd1d03bb2bdf98b0155a194aff1aa2d4"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/cli-run.json",
+      "archived": "cli-failures/2026-10-20-v02-current/cli-run.json",
+      "bytes": 88934,
+      "sha256": "b331c3860ccb02968328f7f6c0e66e933859bea6c8a3bb782ace775f0a7ca449"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/criteria.json",
+      "archived": "cli-failures/2026-10-20-v02-current/criteria.json",
+      "bytes": 65499,
+      "sha256": "b0dc4b2e057eaa60dbdafb8cda3054637000d8958cece94cea685b5a8dec6fa4"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/manifest.json",
+      "archived": "cli-failures/2026-10-20-v02-current/manifest.json",
+      "bytes": 30677,
+      "sha256": "72bfaba7778ccf5cbb03a578a4976f7f5967c4ff03918fb68ebf75136b0e7e60"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/completion.json",
+      "bytes": 3092,
+      "sha256": "fda0e18190e905baef8a03b5af7cc710d6a2bd6bee589f270f63cef51905f9de"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/final.json",
+      "bytes": 268,
+      "sha256": "77c8660c46ad2c23eebdf1addbee8e7ad2cbacc592f5bbe147d97b38a2921bf5"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/prompt.txt",
+      "bytes": 984,
+      "sha256": "7febb9e07ae4cfc978ac2446c542f8d9ca64e4efc8dd03dcbd41ba3801b01459"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/started.json",
+      "bytes": 1020,
+      "sha256": "6cd1ace1650173bc6ed6ea3315b7b2f673c44d551791271c2ce02a486fd60c15"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/stderr.txt",
+      "bytes": 1444,
+      "sha256": "de99c98046a8f415938df9b9edc6b71640bf9302d5cb0798067fd6ddc9e2606b"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-001/cli-attempt-01/stdout.jsonl",
+      "bytes": 1505,
+      "sha256": "446c3a708b42b2c1e4412f51e25142f18612cef1036e82252280ed633536f6a7"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/completion.json",
+      "bytes": 3092,
+      "sha256": "cd6f43ea4f4c2378e30395521074e98cd32a9bd644e906225acf1f1298637512"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/final.json",
+      "bytes": 238,
+      "sha256": "8f27053827345e7e6b55ea8afadeeb1686d83f2a8e29b77958b40e4c27393fbb"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/prompt.txt",
+      "bytes": 996,
+      "sha256": "d9875a71da00f9f90c84dcd6c427ff8862dfb02df3e8dcef3eeeac6fc7eee38b"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/started.json",
+      "bytes": 1020,
+      "sha256": "fdeedf3cc50ea5ac1a53c035e2d65edbfcc432d63be9097cffb87c27a63171aa"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/stderr.txt",
+      "bytes": 1444,
+      "sha256": "4e025367e33ce239c9a38014cfbcf9586c8f0f079af54701564f0f8e50fdf54e"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-002/cli-attempt-01/stdout.jsonl",
+      "bytes": 2050,
+      "sha256": "feae617e60a8eb6b2d7b6d30f86a144580d97a0a7af7fc324168a5a6a2d09a11"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/completion.json",
+      "bytes": 3089,
+      "sha256": "b3f34b3f5ebce96dbc1f1c843496789edeff41497f7b10c61774abee0e32465c"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/final.json",
+      "bytes": 167,
+      "sha256": "f5e767cffe498d3ff5e13a68f2eddd88523140a8e6c38a9e6029ab6de06a2dc1"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/prompt.txt",
+      "bytes": 957,
+      "sha256": "223321f071615025bb230aeaee42c5c03c672434c3e6e1b766ff6f5a58ee071a"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/started.json",
+      "bytes": 1017,
+      "sha256": "e4483eeb4a806ad56285e13688d8440af59cb8a4d22bcd821e532b2058e796a4"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/stderr.txt",
+      "bytes": 1444,
+      "sha256": "313051a050d02f05f803b06c0a6fdff1a46dfc56cef2c60849d38ff1c6c15cf3"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-003/cli-attempt-01/stdout.jsonl",
+      "bytes": 1404,
+      "sha256": "df804262f2c443fc43376a02dc0b56658ba8637f33886f68f82beb34f856e8a6"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/completion.json",
+      "bytes": 3087,
+      "sha256": "c5af801873afaaac92fc81c939b7d0f31867173cdfc840dacab9a3ac4baa3c0a"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/final.json",
+      "bytes": 227,
+      "sha256": "f5e1e034e9ccf81c69ff392989dd6105d35f92f53601b00025cad37880b954fe"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/prompt.txt",
+      "bytes": 1026,
+      "sha256": "0766357eb3ba61b8f1294dedcab21f978c6edadbd65a0c7ec2e978a71c33403b"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/started.json",
+      "bytes": 1017,
+      "sha256": "46cb4a2ca03fb1a39e86792d24a6b45e26f9f595bc771bbae2d652e3eba09b36"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/stderr.txt",
+      "bytes": 1444,
+      "sha256": "2ec939f100e7d59974a5822273832287cdd4d12feb16294540e5e11d63f60e83"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-004/cli-attempt-01/stdout.jsonl",
+      "bytes": 2056,
+      "sha256": "e58c19677dc52a71fe81a410291ad0261465dcb1ecd8a1813edc12ebe270176f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-005/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-005/cli-attempt-01/final.json",
+      "bytes": 238,
+      "sha256": "d85be709950bb090a4eafe7d777e5de7ad20c4c734dec16fa317531e94de4fe6"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-005/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-005/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-005/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-005/cli-attempt-01/prompt.txt",
+      "bytes": 1007,
+      "sha256": "476a30a26c6ec5de18b90d3040301635173454240cc57cb30a6e03032b06867d"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-005/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-005/cli-attempt-01/started.json",
+      "bytes": 1017,
+      "sha256": "2437fb5424a333480247d33e634f9814087e1612befc4ceb9aad5727686bc9d5"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-006/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-006/cli-attempt-01/final.json",
+      "bytes": 141,
+      "sha256": "69eba7a982b255745184d66f96651f9532fa77e0c6dbbad8b1850ded960a0d8f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-006/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-006/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-006/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-006/cli-attempt-01/prompt.txt",
+      "bytes": 957,
+      "sha256": "998a953c67b8715ce87b9380248c20c1e5af30439586be850d252f86e1f9c917"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-006/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-006/cli-attempt-01/started.json",
+      "bytes": 1021,
+      "sha256": "7481e9cc515c8f299a808093d378676e64ee0b84ddd1969b08316ab0419b802c"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-007/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-007/cli-attempt-01/final.json",
+      "bytes": 154,
+      "sha256": "0164ab7917ce77faa7c36e8426385cfe4b03b5ee7589733338678316ea3b2365"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-007/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-007/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-007/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-007/cli-attempt-01/prompt.txt",
+      "bytes": 966,
+      "sha256": "ceaf5dee3f14a721564d0084a173cf0075d767d3f6adcd4e2e45c89225c4ad11"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-007/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-007/cli-attempt-01/started.json",
+      "bytes": 1021,
+      "sha256": "c6b0a1127e878f87899736066cacf8fe7fb931fb25c7b236899e310261e2a34d"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-008/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-008/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-008/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-008/cli-attempt-01/prompt.txt",
+      "bytes": 932,
+      "sha256": "fee536f5b67e84011df7314eeec0ca2522885baaa36ede976129fba3fe0633c0"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/baseline/batch-008/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/baseline/batch-008/cli-attempt-01/started.json",
+      "bytes": 1023,
+      "sha256": "3740d955eeacb9a232813ee07e941d388ceecf04e97f496af10145b37a261d61"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/completion.json",
+      "bytes": 3404,
+      "sha256": "ab4165664a27d1d2e3b7127b8604f2cd0be8c875f21bcf2492fcbcae72ed8ce3"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/final.json",
+      "bytes": 272,
+      "sha256": "7d918480b768293d115697ba357359efcf48e4edb553c979f0b3c68d122cdef4"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/prompt.txt",
+      "bytes": 12171,
+      "sha256": "a5d361661830fd33ed8d759af0e6b3d3537c04f3c4ca5d2f6010c9fedcea5c9d"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/started.json",
+      "bytes": 1332,
+      "sha256": "c201bebc7e3facc56d71c0ab5a649daa452abb6a6a3b456eeee16db8bc7d92f4"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/stderr.txt",
+      "bytes": 1444,
+      "sha256": "1d8d5a76efe0f567c7e41489855aa20611c059facf6a62dfeee887c486cf7822"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-001/cli-attempt-01/stdout.jsonl",
+      "bytes": 1509,
+      "sha256": "db72c98c36aebec0c116452652a0ee32df736c480018e1c55ea8ed6111b56f06"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/completion.json",
+      "bytes": 3398,
+      "sha256": "b373202571848438abccd0b63f3005f6c1206d7d7e8589f63e76cc8cbdc4836d"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/final.json",
+      "bytes": 216,
+      "sha256": "aefe3b112195a276a9fd572d46b1ad2579a58dcb5f923f17ef08c51891520837"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/prompt.txt",
+      "bytes": 12431,
+      "sha256": "05a464e64a8b37f8363c168aefb139612e68a93c30e7267d7b90d2347cdffa2a"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/started.json",
+      "bytes": 1327,
+      "sha256": "53d73eee6062acbd58507888f106c4c68a926372d15bd6ea1d2f388c7ccf19f8"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/stderr.txt",
+      "bytes": 1444,
+      "sha256": "3a763bc97c8b6f5079a36a902567f7f058fe7db98c217186c3a7c7d49a6006f3"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-002/cli-attempt-01/stdout.jsonl",
+      "bytes": 2001,
+      "sha256": "0b556e939836d8ad7d5a399a80171819676019b24150953834b8372f48144c52"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/completion.json",
+      "bytes": 3397,
+      "sha256": "66c37002e14f77d09f96d10561dc873b7521f11d54f636ede1dc7ff78ebea242"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/final.json",
+      "bytes": 166,
+      "sha256": "1551a662be72c88e12129df986a0b61ae0af9b2fbe4a0e894874b1e7f33d7b4a"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/prompt.txt",
+      "bytes": 12080,
+      "sha256": "6afbef4184ce28749004d6572db08010f77a1d3e2b39104ce403c8be290c14e4"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/started.json",
+      "bytes": 1325,
+      "sha256": "34f189982becd2581c7507c854e84eb8d12d5b30f8ec856cfa08388ce24fc64f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/stderr.txt",
+      "bytes": 1444,
+      "sha256": "1500af864dc907c35fec028492f8640e1b1d59ba3bc40af3ed743d608a5c2cfe"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-003/cli-attempt-01/stdout.jsonl",
+      "bytes": 1403,
+      "sha256": "b019969e3f8be09753dd8d33fc540dcbc2af61ebc06c79141f46ef7ed39e5e06"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/completion.json",
+      "bytes": 3392,
+      "sha256": "5f43ecc468c392dc108f87e0e903acd1b36787f656b7d1ed8091e9bcdc890ac3"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/final.json",
+      "bytes": 238,
+      "sha256": "7de8c5e2825c50b05a4d1c51c95e397f7f8b046ac987cbb50db248a4874cc781"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/prompt.txt",
+      "bytes": 12816,
+      "sha256": "3f3eecff6572adf346138f289c8af64b4924c0f235ae7dcdcf7e857fb5424ceb"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/started.json",
+      "bytes": 1320,
+      "sha256": "e0fc8c2de8d1e8d0d8ed01734c2f0b589176d6b13a4083363bff5f0b16b68382"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/stderr.txt",
+      "bytes": 1444,
+      "sha256": "e74bfabedc918e3362868abcfa952a8e4095c1b324d932049f38871650552308"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-004/cli-attempt-01/stdout.jsonl",
+      "bytes": 1475,
+      "sha256": "bcfa1584d728d9806629de87c5e76e027dfe1f1fe17f9caa55410b920a8dc79f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-005/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-005/cli-attempt-01/final.json",
+      "bytes": 238,
+      "sha256": "efeac15e01f4af68e475b0e0569cda3d0a75c9786e6b9b54197d7ddb020e1fd7"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-005/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-005/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-005/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-005/cli-attempt-01/prompt.txt",
+      "bytes": 12810,
+      "sha256": "2ba6c6d635b202b7468f455a021a124fb0d4269eabc5981653c4df18c61c9a35"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-005/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-005/cli-attempt-01/started.json",
+      "bytes": 1320,
+      "sha256": "5554799d52bc893154df254697fc975fd3cfc3f3646d40c92dd7c2b9649a3fb7"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-006/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-006/cli-attempt-01/final.json",
+      "bytes": 203,
+      "sha256": "876a5c4d80d73653c76805a4506667d0a110815bdc68f3c3f1f066b09a9b8d9b"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-006/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-006/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-006/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-006/cli-attempt-01/prompt.txt",
+      "bytes": 11784,
+      "sha256": "95218239c919f121da6dafeeeb69c94678d0139744284966505ba3a9de19aa25"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-006/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-006/cli-attempt-01/started.json",
+      "bytes": 1337,
+      "sha256": "6df031fa31546f87575db544100673a67ac249819b60e77e1c1a25abf970ca98"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-007/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-007/cli-attempt-01/final.json",
+      "bytes": 251,
+      "sha256": "cbba47310a05d7d5d5985d0c51fb9303adc4d105abc614092bd939921069fa95"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-007/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-007/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-007/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-007/cli-attempt-01/prompt.txt",
+      "bytes": 12041,
+      "sha256": "517c97a919520fc8a3945c10aa781cb5c4f5b6e4def56e2c86f86b19e9ef59fd"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-007/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-007/cli-attempt-01/started.json",
+      "bytes": 1332,
+      "sha256": "f80d2b4b656a72db260b25b0cc7f9e919fcd9f5f7d35640cf94e6794d29e98a9"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-008/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-008/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-008/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-008/cli-attempt-01/prompt.txt",
+      "bytes": 11695,
+      "sha256": "9106c990ea2730451ad282459a1808203b372aaa5434302c6bc8a86535f0ce97"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/skill/batch-008/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-current/skill/batch-008/cli-attempt-01/started.json",
+      "bytes": 1335,
+      "sha256": "febccb4a800bf91ff57f83aba5f991ca1b71eaa391d928105294e26e4c75e0f5"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/agents/openai.yaml",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/agents/openai.yaml",
+      "bytes": 291,
+      "sha256": "e0f9ebc3b757c640fab09de8a85d9b22c94991ef5ba45e37a9da682825c77b5a"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/en/examples.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/en/examples.md",
+      "bytes": 2548,
+      "sha256": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/en/GUIDE.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/en/GUIDE.md",
+      "bytes": 3089,
+      "sha256": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/en/LICENSE",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/en/LICENSE",
+      "bytes": 1074,
+      "sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/en/pack.json",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/en/pack.json",
+      "bytes": 183,
+      "sha256": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/en/PATTERNS.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/en/PATTERNS.md",
+      "bytes": 2665,
+      "sha256": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/examples.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/examples.md",
+      "bytes": 2323,
+      "sha256": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/GUIDE.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/GUIDE.md",
+      "bytes": 2836,
+      "sha256": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/LICENSE",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/LICENSE",
+      "bytes": 1074,
+      "sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/pack.json",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/pack.json",
+      "bytes": 193,
+      "sha256": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/PATTERNS.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/languages/zh-Hans/PATTERNS.md",
+      "bytes": 2360,
+      "sha256": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/LICENSE",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/LICENSE",
+      "bytes": 1074,
+      "sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/references/comments.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/references/comments.md",
+      "bytes": 2834,
+      "sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/references/humanize.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/references/humanize.md",
+      "bytes": 2832,
+      "sha256": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/references/language-packs.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/references/language-packs.md",
+      "bytes": 3661,
+      "sha256": "3e455a40366e4d73465c6a332e993fc4b9523b1c7908d13ecb0613ad3998562d"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/references/prompts.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/references/prompts.md",
+      "bytes": 2769,
+      "sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/references/style-learning.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/references/style-learning.md",
+      "bytes": 2786,
+      "sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/references/text.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/references/text.md",
+      "bytes": 3205,
+      "sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/scripts/check_comments.py",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/scripts/check_comments.py",
+      "bytes": 9002,
+      "sha256": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/scripts/check_rewrite.py",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/scripts/check_rewrite.py",
+      "bytes": 3996,
+      "sha256": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/scripts/detect_tells.py",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/scripts/detect_tells.py",
+      "bytes": 3557,
+      "sha256": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/scripts/packs.py",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/scripts/packs.py",
+      "bytes": 17526,
+      "sha256": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/scripts/prose_scan.py",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/scripts/prose_scan.py",
+      "bytes": 16876,
+      "sha256": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/scripts/tell_rules.json",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/scripts/tell_rules.json",
+      "bytes": 2028,
+      "sha256": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/SKILL.md",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/SKILL.md",
+      "bytes": 4748,
+      "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-current/snapshot/yaya/version.json",
+      "archived": "cli-failures/2026-10-20-v02-current/snapshot/yaya/version.json",
+      "bytes": 51,
+      "sha256": "329a07bfe52861c949fcb2f410a5becfbf83529828fda414e909756f2464aad3"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/cli-run.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/cli-run.json",
+      "bytes": 22744,
+      "sha256": "d7319b68e3ad82678cce97ed0a500efce0572ed7ff039105de3cfb0ffbd2c822"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/criteria.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/criteria.json",
+      "bytes": 35538,
+      "sha256": "5c6d0eae9b500cc2a6afd8d9b806d9bacf791d644a2af7b8625c713486fa5a7f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/manifest.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/manifest.json",
+      "bytes": 18473,
+      "sha256": "51044372ed4668ad4cab718c6dce83231ca4a591c8c7cbd5b360da7aed7af614"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-001/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-001/cli-attempt-01/final.json",
+      "bytes": 314,
+      "sha256": "76128366159a0cf49551404e6fc13ee84f1cb36f66e946fee704c5dfc22f1225"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-001/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-001/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-001/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-001/cli-attempt-01/prompt.txt",
+      "bytes": 34010,
+      "sha256": "abde2caf901ce8e9a23d8ee8f0ff88f82bd75d29701525fb028cef9a1cd63013"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-001/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-001/cli-attempt-01/started.json",
+      "bytes": 1119,
+      "sha256": "1e08da09b4e4f2d6f9f17b6ac74ac90a645da0df0e78f144cedaaafe8f91ddf2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-002/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-002/cli-attempt-01/final.json",
+      "bytes": 334,
+      "sha256": "3b0b072bdc41c5d0a97169bbce2de7f5e4e7e17ee48a6cd0de2d96f4551a2737"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-002/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-002/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-002/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-002/cli-attempt-01/prompt.txt",
+      "bytes": 33974,
+      "sha256": "4e92d054cdea2c48a116cc809558e65911c457a651402820f7cad5b564254114"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-002/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-002/cli-attempt-01/started.json",
+      "bytes": 1119,
+      "sha256": "485ca364f861689b738608526a07ab88ac167d562abaeb4414472c4a4e5dcb80"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-003/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-003/cli-attempt-01/final.json",
+      "bytes": 302,
+      "sha256": "2e0b7f3448d4f7a4bbe1082f9769598f9ab059edbe34587123aba18627798606"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-003/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-003/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-003/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-003/cli-attempt-01/prompt.txt",
+      "bytes": 33970,
+      "sha256": "b1d1f39e8ceb73ce1fad0ed51a82747105ce6ed2d1cb2cbc349f0c1a51c8df70"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-003/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-003/cli-attempt-01/started.json",
+      "bytes": 1119,
+      "sha256": "762a7714ad62ea0d22f21ec48c17f562b303ae239ee4386fb7f2208c3745e514"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-004/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-004/cli-attempt-01/final.json",
+      "bytes": 338,
+      "sha256": "1257ae6387bc932b647476834291562f3ecbf6a5ceadfe1bc75fba23586b8dd2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-004/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-004/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-004/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-004/cli-attempt-01/prompt.txt",
+      "bytes": 33969,
+      "sha256": "94089a5bd8052424ab2ef1bf50323ffff9fbc7a0d5d9385818eac0d93c3c1635"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/baseline/batch-004/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/baseline/batch-004/cli-attempt-01/started.json",
+      "bytes": 1119,
+      "sha256": "6df5fa68dc95354879290c243bf3b84a4ee7b4a59cc98b747a2b5cd983b9cb50"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/agents/openai.yaml",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/agents/openai.yaml",
+      "bytes": 291,
+      "sha256": "e0f9ebc3b757c640fab09de8a85d9b22c94991ef5ba45e37a9da682825c77b5a"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/en/examples.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/en/examples.md",
+      "bytes": 2548,
+      "sha256": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/en/GUIDE.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/en/GUIDE.md",
+      "bytes": 3089,
+      "sha256": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/en/LICENSE",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/en/LICENSE",
+      "bytes": 1074,
+      "sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/en/pack.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/en/pack.json",
+      "bytes": 183,
+      "sha256": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/en/PATTERNS.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/en/PATTERNS.md",
+      "bytes": 2665,
+      "sha256": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/examples.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/examples.md",
+      "bytes": 2323,
+      "sha256": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/GUIDE.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/GUIDE.md",
+      "bytes": 2836,
+      "sha256": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/LICENSE",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/LICENSE",
+      "bytes": 1074,
+      "sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/pack.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/pack.json",
+      "bytes": 193,
+      "sha256": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/PATTERNS.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/languages/zh-Hans/PATTERNS.md",
+      "bytes": 2360,
+      "sha256": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/LICENSE",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/LICENSE",
+      "bytes": 1074,
+      "sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/references/comments.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/references/comments.md",
+      "bytes": 2834,
+      "sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/references/humanize.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/references/humanize.md",
+      "bytes": 2832,
+      "sha256": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/references/language-packs.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/references/language-packs.md",
+      "bytes": 3661,
+      "sha256": "3e455a40366e4d73465c6a332e993fc4b9523b1c7908d13ecb0613ad3998562d"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/references/prompts.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/references/prompts.md",
+      "bytes": 2769,
+      "sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/references/style-learning.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/references/style-learning.md",
+      "bytes": 2786,
+      "sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/references/text.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/references/text.md",
+      "bytes": 3205,
+      "sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/scripts/check_comments.py",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/scripts/check_comments.py",
+      "bytes": 9002,
+      "sha256": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/scripts/check_rewrite.py",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/scripts/check_rewrite.py",
+      "bytes": 3996,
+      "sha256": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/scripts/detect_tells.py",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/scripts/detect_tells.py",
+      "bytes": 3557,
+      "sha256": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/scripts/packs.py",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/scripts/packs.py",
+      "bytes": 17526,
+      "sha256": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/scripts/prose_scan.py",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/scripts/prose_scan.py",
+      "bytes": 16876,
+      "sha256": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/scripts/tell_rules.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/scripts/tell_rules.json",
+      "bytes": 2028,
+      "sha256": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/SKILL.md",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/SKILL.md",
+      "bytes": 4748,
+      "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-competitor/snapshot/yaya/version.json",
+      "archived": "cli-failures/2026-10-20-v02-competitor/snapshot/yaya/version.json",
+      "bytes": 51,
+      "sha256": "329a07bfe52861c949fcb2f410a5becfbf83529828fda414e909756f2464aad3"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/cli-run.json",
+      "archived": "cli-failures/2026-10-20-v02-full/cli-run.json",
+      "bytes": 88934,
+      "sha256": "000738989423a82ef252b95b70646a013ba908232d2c8f48a0dddf4813eec0d4"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/criteria.json",
+      "archived": "cli-failures/2026-10-20-v02-full/criteria.json",
+      "bytes": 65499,
+      "sha256": "b0dc4b2e057eaa60dbdafb8cda3054637000d8958cece94cea685b5a8dec6fa4"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/manifest.json",
+      "archived": "cli-failures/2026-10-20-v02-full/manifest.json",
+      "bytes": 30677,
+      "sha256": "ecf53763c9fa96bb6a447f9e5c31e4ac2789b5c3d718ee4e5cc16142ef26f7c9"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/completion.json",
+      "bytes": 1916,
+      "sha256": "0abfde8ec163a723e2d1a564b7e100b7d873ccfe3a629caed42ac122b3067b21"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/final.json",
+      "bytes": 319,
+      "sha256": "4cb63614e8209388e9f0b9dd442806d6c1cb2e0728cb7d950ddc5a2e706bf067"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/prompt.txt",
+      "bytes": 984,
+      "sha256": "7febb9e07ae4cfc978ac2446c542f8d9ca64e4efc8dd03dcbd41ba3801b01459"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/started.json",
+      "bytes": 1011,
+      "sha256": "c38121ace214a71e6f71027d36d2ea874263fecfc41d86bf88191d1ea2d07aa8"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/stderr.txt",
+      "bytes": 1325,
+      "sha256": "10f08ea375dbaf0b785219400d182d6901df1868e1d88c29c2255d8b5c38cd08"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-full/baseline/batch-001/cli-attempt-01/stdout.jsonl",
+      "bytes": 1556,
+      "sha256": "cf5adca35e1866e7d63e4f4d7da3973cbfcfa7c8ec3d3c3bc6456f4f1651e989"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/completion.json",
+      "archived": "cli-failures/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/completion.json",
+      "bytes": 2228,
+      "sha256": "496c7919774aaf07eef9ddba576a25ac70c67da6abc02fa2bc5fb07a883af8a1"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/final.json",
+      "archived": "cli-failures/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/final.json",
+      "bytes": 308,
+      "sha256": "804877071254881eff227169432f2bb3e2da9c597a136b733fe39950bfe05fc2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/output-schema.json",
+      "archived": "cli-failures/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/output-schema.json",
+      "bytes": 358,
+      "sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/prompt.txt",
+      "archived": "cli-failures/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/prompt.txt",
+      "bytes": 12171,
+      "sha256": "a5d361661830fd33ed8d759af0e6b3d3537c04f3c4ca5d2f6010c9fedcea5c9d"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/started.json",
+      "archived": "cli-failures/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/started.json",
+      "bytes": 1323,
+      "sha256": "9b7d40acbeec566c9105ed4eba7285d43f7a6d1abb2caa3f6b21ac0318db84d9"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/stderr.txt",
+      "archived": "cli-failures/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/stderr.txt",
+      "bytes": 1325,
+      "sha256": "3f33851432d88ed9fea2f466388e3ca887f6745a634881461dbf875f2afa8bf2"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/stdout.jsonl",
+      "archived": "cli-failures/2026-10-20-v02-full/skill/batch-001/cli-attempt-01/stdout.jsonl",
+      "bytes": 1545,
+      "sha256": "385e8486a50aced8cd76ce8d393e5f4c0101589bb6a4c0628c4a09f7952fd5b7"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/agents/openai.yaml",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/agents/openai.yaml",
+      "bytes": 291,
+      "sha256": "e0f9ebc3b757c640fab09de8a85d9b22c94991ef5ba45e37a9da682825c77b5a"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/en/examples.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/en/examples.md",
+      "bytes": 2548,
+      "sha256": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/en/GUIDE.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/en/GUIDE.md",
+      "bytes": 3089,
+      "sha256": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/en/LICENSE",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/en/LICENSE",
+      "bytes": 1074,
+      "sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/en/pack.json",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/en/pack.json",
+      "bytes": 173,
+      "sha256": "3603980120f17faf5a41fec8534354f33ce9dea1630fbf9dec441f1dac2dcf17"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/en/PATTERNS.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/en/PATTERNS.md",
+      "bytes": 2665,
+      "sha256": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/examples.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/examples.md",
+      "bytes": 2323,
+      "sha256": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/GUIDE.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/GUIDE.md",
+      "bytes": 2836,
+      "sha256": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/LICENSE",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/LICENSE",
+      "bytes": 1074,
+      "sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/pack.json",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/pack.json",
+      "bytes": 183,
+      "sha256": "b13748e9c8cab20c1766f8becbf3ecf59fda6d1c93e9bebd89dd564a0f0ae5f8"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/PATTERNS.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/languages/zh-Hans/PATTERNS.md",
+      "bytes": 2360,
+      "sha256": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/LICENSE",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/LICENSE",
+      "bytes": 1074,
+      "sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/references/comments.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/references/comments.md",
+      "bytes": 2834,
+      "sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/references/humanize.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/references/humanize.md",
+      "bytes": 2832,
+      "sha256": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/references/language-packs.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/references/language-packs.md",
+      "bytes": 3692,
+      "sha256": "035d5b5f11d01f98d22c851c26942b4be2635f26eb0f6cf65ddf137c5f44e054"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/references/prompts.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/references/prompts.md",
+      "bytes": 2769,
+      "sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/references/style-learning.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/references/style-learning.md",
+      "bytes": 2786,
+      "sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/references/text.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/references/text.md",
+      "bytes": 3205,
+      "sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/scripts/check_comments.py",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/scripts/check_comments.py",
+      "bytes": 9002,
+      "sha256": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/scripts/check_rewrite.py",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/scripts/check_rewrite.py",
+      "bytes": 3996,
+      "sha256": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/scripts/detect_tells.py",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/scripts/detect_tells.py",
+      "bytes": 3557,
+      "sha256": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/scripts/packs.py",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/scripts/packs.py",
+      "bytes": 17698,
+      "sha256": "3e1df3e234819c8b8c0e6d8c2fdc64dcbcc634c7469b6ec2c5f0f753a6fc78ea"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/scripts/prose_scan.py",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/scripts/prose_scan.py",
+      "bytes": 16876,
+      "sha256": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/scripts/tell_rules.json",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/scripts/tell_rules.json",
+      "bytes": 2028,
+      "sha256": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/SKILL.md",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/SKILL.md",
+      "bytes": 4748,
+      "sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901"
+    },
+    {
+      "original": "tests/runs/2026-10-20-v02-full/snapshot/yaya/version.json",
+      "archived": "cli-failures/2026-10-20-v02-full/snapshot/yaya/version.json",
+      "bytes": 51,
+      "sha256": "05cab5a628456ec81b31e9b0de639dfe5f217bf5b98ab5493837ee0964052e4c"
+    }
+  ]
+}

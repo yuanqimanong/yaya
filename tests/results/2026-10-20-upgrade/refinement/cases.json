@@ -1,0 +1,145 @@
+[
+  {
+    "id": "H019",
+    "task": "humanize",
+    "language": "zh-Hans",
+    "group": "needs-edit",
+    "source_type": "original synthetic fixture; not authenticated human or AI authorship",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "归根结底，这次迁移再次印证了创新的深远意义。由于验证步骤失败，迁移已暂停。",
+    "checks": [
+      "保留验证失败导致暂停。",
+      "不能变成迁移完成。"
+    ],
+    "suite": "humanize"
+  },
+  {
+    "id": "H007",
+    "task": "humanize",
+    "language": "en",
+    "group": "needs-edit",
+    "source_type": "original synthetic fixture; not authenticated human or AI authorship",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "Ultimately, in the grand scheme of things, the migration underscores the transformative power of innovation. The migration is paused because the verification step failed.",
+    "checks": [
+      "Keep migration paused and failed verification as cause.",
+      "No completed-migration claim."
+    ],
+    "suite": "humanize"
+  },
+  {
+    "id": "H031",
+    "task": "humanize",
+    "language": "en",
+    "group": "clear",
+    "source_type": "original synthetic fixture; not authenticated human or AI authorship",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "I was relieved when the repair worked. I had spent the whole morning tracing the leak.",
+    "checks": [
+      "Existing first-person emotion and experience may stay.",
+      "Do not remove voice merely to appear neutral."
+    ],
+    "suite": "humanize"
+  },
+  {
+    "id": "H043",
+    "task": "humanize",
+    "language": "zh-Hans",
+    "group": "clear",
+    "source_type": "original synthetic fixture; not authenticated human or AI authorship",
+    "request": "去掉这段文字的空泛表达，让它自然、直接。保留原意和用途；已经清楚的地方可以不改。",
+    "input": "修好水管时，我松了一口气。整个上午，我都在找漏水的位置。",
+    "checks": [
+      "已有第一人称经历与情绪可保留。"
+    ],
+    "suite": "humanize"
+  },
+  {
+    "id": "H067",
+    "task": "humanize",
+    "language": "zh-Hans",
+    "group": "scope",
+    "source_type": "original synthetic fixture; not authenticated human or AI authorship",
+    "request": "改得自然些，但不要补造来源。",
+    "input": "据一些专家说，这个方案效果最好。我们只有一次内部试用，结果尚未复核。",
+    "checks": [
+      "不编专家身份或证据。",
+      "不把最好写成已证实；指出归因缺口或保留其未核实属性。"
+    ],
+    "suite": "humanize"
+  },
+  {
+    "id": "H025",
+    "task": "humanize",
+    "language": "en",
+    "group": "clear",
+    "source_type": "original synthetic fixture; not authenticated human or AI authorship",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "The error is in the cache, not the database. Clear the cache before retrying.",
+    "checks": [
+      "Real contrast locates an error; preserve it.",
+      "Keep clear-cache-before-retry order."
+    ],
+    "suite": "humanize"
+  },
+  {
+    "id": "X001",
+    "task": "humanize",
+    "language": "zh-Hans",
+    "group": "long-form",
+    "request": "去掉这篇财务说明里的空泛表达，面向普通投资者。保留全部实质信息、段落主题与风险限定，不要缩成摘要。",
+    "input": "# 半年度业务说明\n\n## 收入与利润\n在不断变化的行业环境中，公司以坚定步伐书写新的增长篇章。上半年收入为4200万元，同比增长5%；毛利率由18%降至16%。其中，甲业务收入2600万元，同比下降2%；乙业务收入1600万元，同比增长18%。上述数据未经审计。收入增长并不意味着利润增长，公司尚未公布净利润。\n\n## 客户与交付\n以客户为中心的理念正在全面赋能业务发展。期末付费客户为310家，较年初增加12家。其中8家来自渠道合作，另外4家来自直接销售。另有25家客户处于试用阶段，未计入付费客户数量。公司预计下季度完成两个项目的交付，但客户验收时间尚未确定，相关款项不能提前确认为收入。\n\n## 产品与安排\n创新始终是驱动我们不断前行的重要引擎。新版本新增CSV导出和离线查看；离线状态下不能编辑内容，首次使用前必须联网同步。公司计划于11月进行小范围测试，是否全面开放取决于测试结果，不构成已经确定的上线承诺。\n\n## 风险与限制\n站在新的起点，公司将持续探索无限可能。当前两家供应商提供同一种关键部件，其中一家尚未通过新批次验收。备用库存预计可支持六周生产，这一估计以现有订单节奏为前提。原材料价格变化和验收延迟可能影响交付。以上判断来自公司内部计划，未获独立机构验证。",
+    "checks": [
+      "保留4200/5%、毛利率18到16、甲2600下降2%乙1600增长18%的配对。",
+      "保留未经审计、净利润未公布、310/12/8/4/25与试用不计入关系。",
+      "交付/验收/收入确认、离线只读首次同步、11月测试条件全部保留。",
+      "供应商2家/1家未通过、六周库存与订单假设及独立验证缺失保留。",
+      "不能缩成几句话或删段落主题，空泛宣传应减弱。"
+    ],
+    "suite": "scenarios"
+  },
+  {
+    "id": "H061",
+    "task": "humanize",
+    "language": "zh-Hans",
+    "group": "scope",
+    "source_type": "original synthetic fixture; not authenticated human or AI authorship",
+    "request": "只检查下面哪里表达空泛，不要改写，也不要猜作者身份。",
+    "input": "随着时代的发展，这个工具赋能每个人，开启无限可能。实际功能是把TXT转为PDF。",
+    "checks": [
+      "只报告具体问题和理由，不返回完整改稿。",
+      "不判断AI作者概率；保留TXT到PDF事实。"
+    ],
+    "suite": "humanize"
+  },
+  {
+    "id": "R001",
+    "task": "humanize",
+    "language": "zh-Hans",
+    "group": "substantive-opinion",
+    "source_type": "original synthetic regression fixture",
+    "request": "去掉空泛表达，保留作者的具体观点和论据。",
+    "input": "这次改版让我失望。按钮位置换了，我原来记住的操作步骤不能用了。这个判断只代表我的使用体验，没有做用户调查。",
+    "checks": [
+      "保留作者失望这一具体评价及按钮位置改变、既有操作步骤失效的理由。",
+      "保留仅个人体验和没有用户调查的证据范围。",
+      "不把意见改成已经证实的普遍产品缺陷，也不删掉作者情绪来追求中性。"
+    ],
+    "suite": "refinement"
+  },
+  {
+    "id": "R002",
+    "task": "humanize",
+    "language": "en",
+    "group": "substantive-opinion",
+    "source_type": "original synthetic regression fixture",
+    "request": "Remove empty framing while keeping my specific judgment and the limits of my evidence.",
+    "input": "It is worth noting that I prefer the old editor. Its search box stays visible while I scroll. I have used the new editor only once, so this is a first impression.",
+    "checks": [
+      "Remove redundant introductory framing.",
+      "Keep preference for the old editor and the visible-search-box reason.",
+      "Preserve one use of the new editor and first-impression uncertainty; no new evidence or universal claim."
+    ],
+    "suite": "refinement"
+  }
+]

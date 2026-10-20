@@ -1,0 +1,5 @@
+# Keep source, release inputs, and evaluation evidence byte-for-byte across hosts.
+# Their recorded SHA-256 values must survive Git checkout without EOL conversion.
+* -text
+# CRLF is a preserved line ending, not trailing whitespace.
+* whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

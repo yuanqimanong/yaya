@@ -1,0 +1,7 @@
+[
+  {
+    "id": "H027",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "Only retry after the transaction has rolled back. Never retry authentication failures."
+  }
+]

@@ -1,0 +1,1 @@
+{"id":"en-prompt","text":"Analyze only {{report}}. Return JSON with a \"risks\" key containing exactly two risks. If evidence is missing, ask one question and wait. Do not infer missing numbers.","notes":"","skill_used":false}

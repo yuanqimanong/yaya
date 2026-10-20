@@ -1,0 +1,6 @@
+{
+  "command": "python -B -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "seconds": 59.672,
+  "python": "3.13.5"
+}

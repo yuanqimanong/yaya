@@ -1,0 +1,7 @@
+[
+  {
+    "id": "en-style",
+    "request": "Extract reusable style instructions and illustrate them with a prompt for reviewing logs.",
+    "input": "Start with what you know. Check what you can. Leave the rest open. I spent three years researching this company."
+  }
+]

@@ -1,0 +1,434 @@
+{
+  "protocol": 1,
+  "created_at_utc": "2026-10-20T11:44:10.575066+00:00",
+  "script_sha256": "a7cf5e3b3e7951d598919eff0461d4537d62ba9dc4c66ca170740d6d4ef7599a",
+  "original_cli_metadata_sha256": "780bfa42124482edab5b012933d1de7be9039f50d989b74c823bc89b5765885b",
+  "manifest_sha256": "51044372ed4668ad4cab718c6dce83231ca4a591c8c7cbd5b360da7aed7af614",
+  "retry_infrastructure": true,
+  "workers": 3,
+  "timeout_seconds": 180,
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "preserved": [
+    {
+      "id": "H001",
+      "condition": "baseline",
+      "directory": "baseline/batch-001",
+      "output_sha256": "24900458f138e75e116ef1fcb589f07c185963fdba9c09609ffb94aacb4a9e82"
+    },
+    {
+      "id": "H002",
+      "condition": "baseline",
+      "directory": "baseline/batch-002",
+      "output_sha256": "caafbbf8998ca3fb9e89dd3f9149235f69b1798889be52c5c9788a4d5d481c3e"
+    },
+    {
+      "id": "H003",
+      "condition": "baseline",
+      "directory": "baseline/batch-003",
+      "output_sha256": "6a8fd823c1650b435eb1b19cca7a1b1e3b0300488a6c2b5d6632e7e10da9e7fb"
+    },
+    {
+      "id": "H004",
+      "condition": "baseline",
+      "directory": "baseline/batch-004",
+      "output_sha256": "5f480e146f818e22b62e798f7aaa7bb0edbae12bfd0e223a1b2bdd23ecc8a866"
+    },
+    {
+      "id": "H005",
+      "condition": "baseline",
+      "directory": "baseline/batch-005",
+      "output_sha256": "62258d6173981e9dedbbb9b0dad0377363ab68ffdf8c53d0101fba776c78ab8d"
+    },
+    {
+      "id": "H006",
+      "condition": "baseline",
+      "directory": "baseline/batch-006",
+      "output_sha256": "996c72a4ffbe33773a3ae42279b65660bbe504f6890682be08580c53bd1d6567"
+    },
+    {
+      "id": "H007",
+      "condition": "baseline",
+      "directory": "baseline/batch-007",
+      "output_sha256": "c474e52fe783a88da32df2056951b64a005ecb8f82f3225c2dbddffb4f14ce24"
+    },
+    {
+      "id": "H008",
+      "condition": "baseline",
+      "directory": "baseline/batch-008",
+      "output_sha256": "a9758934bb4631c27c2686fef485047ff8657eaef68caee67995d0f6d5054653"
+    },
+    {
+      "id": "H009",
+      "condition": "baseline",
+      "directory": "baseline/batch-009",
+      "output_sha256": "bb680a2b74ba6b0bb83def8c3b27127cdc4a6825e50a1bcd53c325f169ada3f4"
+    },
+    {
+      "id": "H010",
+      "condition": "baseline",
+      "directory": "baseline/batch-010",
+      "output_sha256": "9e59fe75910b31c7982b5c3030f65e22a589b4644c0c73ea41fdbb53f00a4b35"
+    },
+    {
+      "id": "H011",
+      "condition": "baseline",
+      "directory": "baseline/batch-011",
+      "output_sha256": "7b1bd944b8257af53c66b3c77b18e3066bfa6245af6096cd852d36d574c70703"
+    },
+    {
+      "id": "H012",
+      "condition": "baseline",
+      "directory": "baseline/batch-012",
+      "output_sha256": "136ca11e9be6030a7ffb881d927ae68985709dcbcf29f8957b9c74ead2b0f074"
+    },
+    {
+      "id": "H013",
+      "condition": "baseline",
+      "directory": "baseline/batch-013",
+      "output_sha256": "f4f37b4e99d75c9bf7aac91057b7739c30dc0e7177e4aa41e5a8c72a76dfe600"
+    },
+    {
+      "id": "H014",
+      "condition": "baseline",
+      "directory": "baseline/batch-014",
+      "output_sha256": "81d2b65c85fbc599c00fa9dd91befe41f5b67aa4a5e3005a9b5359d46a73618e"
+    },
+    {
+      "id": "H015",
+      "condition": "baseline",
+      "directory": "baseline/batch-015",
+      "output_sha256": "1586ccad74d6b6cfd27dfe488545c21ce5457f18e88ffb00cbac8b4be92354d8"
+    },
+    {
+      "id": "H016",
+      "condition": "baseline",
+      "directory": "baseline/batch-016",
+      "output_sha256": "3afef34434e9799be4d9e6b4bd534ac08c4f97781b75bd9972e502e42a9c5b6c"
+    },
+    {
+      "id": "H017",
+      "condition": "baseline",
+      "directory": "baseline/batch-017",
+      "output_sha256": "dabc554490e27661e9d380b0dcd362c3208b96a393a3d24e92a0f1de25c2ece4"
+    },
+    {
+      "id": "H018",
+      "condition": "baseline",
+      "directory": "baseline/batch-018",
+      "output_sha256": "77af6f7f211274089aad2f28f94afacd8239ebb80333fbc99b4f246a961435bd"
+    },
+    {
+      "id": "H019",
+      "condition": "baseline",
+      "directory": "baseline/batch-019",
+      "output_sha256": "c841fa315cb9778b0873b1404d9ab7bdfbbcb64c106bc9370f5047bcf73c9577"
+    },
+    {
+      "id": "H020",
+      "condition": "baseline",
+      "directory": "baseline/batch-020",
+      "output_sha256": "24173580df32ed2086173d6498bed83880ecb2bb5252ca0653dbcb18efffc519"
+    },
+    {
+      "id": "H021",
+      "condition": "baseline",
+      "directory": "baseline/batch-021",
+      "output_sha256": "c271e62e526a95b3663d4ac75986d49b4dd743c6e9eb3c81864edc1d70a00be3"
+    },
+    {
+      "id": "H022",
+      "condition": "baseline",
+      "directory": "baseline/batch-022",
+      "output_sha256": "27e97907129ffe1916eedd1184edd6de7f640e7e62e552f7edcb8bd770a94fa7"
+    },
+    {
+      "id": "H023",
+      "condition": "baseline",
+      "directory": "baseline/batch-023",
+      "output_sha256": "51fe0379330b0aa99ba296bb58d9ab27e269ffd3a1e71b7227d7c2b2380725e7"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "H024",
+      "condition": "baseline",
+      "directory": "baseline/batch-024",
+      "action": "retry_infrastructure",
+      "attempt": "cli-attempt-02",
+      "prior_failure": {
+        "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 4248 bytes failed",
+        "returncode": 3221226505,
+        "error": "CLI exited with status 3221226505",
+        "attempt": "cli-attempt-01",
+        "completion_sha256": "4de46e339cf61ce9d1c24417e8d1dab9046ddb40c59127922b8155812f632937",
+        "started_sha256": "d39517745e528ab09806722538a5ed502e7cade0bd876ae50fd7ae7748166e15",
+        "artifact_sha256": {
+          "prompt.txt": "ed4d22e2474cf9d4ccd09397d066a69f4bc81437b335e52f3a22c215be00070e",
+          "stdout.jsonl": "97bcfb1d8ae6cf88cca7b17297e83922f1d13e2dabd2849e4d64c1eec8b6ddae",
+          "stderr.txt": "0910d2ba8fea8765a472dc9715a3df2b040de7cdecc22fc235a9608a4f97e41d",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+        }
+      }
+    },
+    {
+      "id": "H025",
+      "condition": "baseline",
+      "directory": "baseline/batch-025",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H026",
+      "condition": "baseline",
+      "directory": "baseline/batch-026",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H027",
+      "condition": "baseline",
+      "directory": "baseline/batch-027",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H028",
+      "condition": "baseline",
+      "directory": "baseline/batch-028",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H029",
+      "condition": "baseline",
+      "directory": "baseline/batch-029",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H030",
+      "condition": "baseline",
+      "directory": "baseline/batch-030",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H031",
+      "condition": "baseline",
+      "directory": "baseline/batch-031",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H032",
+      "condition": "baseline",
+      "directory": "baseline/batch-032",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H033",
+      "condition": "baseline",
+      "directory": "baseline/batch-033",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H034",
+      "condition": "baseline",
+      "directory": "baseline/batch-034",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H035",
+      "condition": "baseline",
+      "directory": "baseline/batch-035",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H036",
+      "condition": "baseline",
+      "directory": "baseline/batch-036",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H037",
+      "condition": "baseline",
+      "directory": "baseline/batch-037",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H038",
+      "condition": "baseline",
+      "directory": "baseline/batch-038",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H039",
+      "condition": "baseline",
+      "directory": "baseline/batch-039",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H040",
+      "condition": "baseline",
+      "directory": "baseline/batch-040",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H041",
+      "condition": "baseline",
+      "directory": "baseline/batch-041",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H042",
+      "condition": "baseline",
+      "directory": "baseline/batch-042",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H043",
+      "condition": "baseline",
+      "directory": "baseline/batch-043",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H044",
+      "condition": "baseline",
+      "directory": "baseline/batch-044",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H045",
+      "condition": "baseline",
+      "directory": "baseline/batch-045",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H046",
+      "condition": "baseline",
+      "directory": "baseline/batch-046",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H047",
+      "condition": "baseline",
+      "directory": "baseline/batch-047",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H048",
+      "condition": "baseline",
+      "directory": "baseline/batch-048",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H049",
+      "condition": "baseline",
+      "directory": "baseline/batch-049",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H050",
+      "condition": "baseline",
+      "directory": "baseline/batch-050",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H051",
+      "condition": "baseline",
+      "directory": "baseline/batch-051",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H052",
+      "condition": "baseline",
+      "directory": "baseline/batch-052",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H053",
+      "condition": "baseline",
+      "directory": "baseline/batch-053",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H054",
+      "condition": "baseline",
+      "directory": "baseline/batch-054",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H055",
+      "condition": "baseline",
+      "directory": "baseline/batch-055",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H056",
+      "condition": "baseline",
+      "directory": "baseline/batch-056",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H057",
+      "condition": "baseline",
+      "directory": "baseline/batch-057",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H058",
+      "condition": "baseline",
+      "directory": "baseline/batch-058",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H059",
+      "condition": "baseline",
+      "directory": "baseline/batch-059",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    },
+    {
+      "id": "H060",
+      "condition": "baseline",
+      "directory": "baseline/batch-060",
+      "action": "start",
+      "attempt": "cli-attempt-01"
+    }
+  ]
+}

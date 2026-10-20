@@ -1,0 +1,21 @@
+{
+  "repository": "blader/humanizer",
+  "commit": "8c307f367c91bd974002f10f2be2965d642c13df",
+  "obtained_at_utc": "2026-10-20T09:54:55.996314+00:00",
+  "retrieval": "GitHub public API commit lookup, raw.githubusercontent.com immutable revision downloads",
+  "executed_external_code": false,
+  "files": [
+    {
+      "path": "SKILL.md",
+      "url": "https://raw.githubusercontent.com/blader/humanizer/8c307f367c91bd974002f10f2be2965d642c13df/SKILL.md",
+      "bytes": 32348,
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/blader/humanizer/8c307f367c91bd974002f10f2be2965d642c13df/LICENSE",
+      "bytes": 1066,
+      "sha256": "4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96"
+    }
+  ]
+}

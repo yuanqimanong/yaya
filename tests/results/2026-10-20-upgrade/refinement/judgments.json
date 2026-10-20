@@ -1,0 +1,172 @@
+[
+  {
+    "id": "H019",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留“验证步骤失败”导致“迁移已暂停”的因果关系，没有声称迁移完成；删除了“创新的深远意义”等空泛评价。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留验证失败与迁移暂停的状态和因果关系，删去了空泛的创新评价，符合直接表达的要求。"
+    },
+    "preference": "tie",
+    "reason": "两份回答完全相同，均准确保留实质信息并去掉空泛表达。"
+  },
+  {
+    "id": "H007",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "完整保留“The migration is paused because the verification step failed”，只删除笼统的创新赞语，没有增加迁移完成的说法。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留迁移暂停及验证失败这一原因；将冗长的创新赞语简化为“innovation can drive major change”，没有新增具体事实，但仍较空泛。"
+    },
+    "preference": "A",
+    "reason": "两者事实和任务均通过。A直接呈现有用的状态信息；B虽减少套话，仍保留缺乏具体内容的创新评价。"
+  },
+  {
+    "id": "H031",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "原样保留修理成功后的宽慰，以及花了一整个上午追查漏水的经历；原文本已自然清楚，无须修改。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "完整保留“I was relieved”和“the whole morning tracing the leak”，没有为了中性表达删掉作者情绪或经历。"
+    },
+    "preference": "tie",
+    "reason": "两份回答均与原文相同，恰当地遵守了清楚措辞可以保留的要求。"
+  },
+  {
+    "id": "H043",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留“松了一口气”的情绪和整个上午寻找漏水位置的经历；原文没有明显空泛表达，保持不变合理。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "原样保留修好水管、作者宽慰以及寻找漏水位置所花时间，没有删减具体经历。"
+    },
+    "preference": "tie",
+    "reason": "回答完全相同，均保留了清楚、具体的第一人称叙述。"
+  },
+  {
+    "id": "H067",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留只有一次内部试用、结果尚未复核的限制，以“目前还不能说……效果最好”明确结论未获支持；未补造专家身份或证据。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留原有的专家意见归因，未新增专家身份或证据；“效果最好”仍是被归属的意见，并保留一次试用且尚未复核的证据限制，但归因依然笼统。"
+    },
+    "preference": "A",
+    "reason": "A更清楚地说明现有证据不足以支持“最好”的结论。B没有编造来源或声称已经证实，但保留了来源不明的专家诉求，改善有限。"
+  },
+  {
+    "id": "H025",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "完整保留错误位于缓存而非数据库的定位，以及先清缓存再重试的操作顺序。原文已清楚，未改动合理。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留“in the cache, not the database”的必要对比和“before retrying”的先后条件，没有删减操作信息。"
+    },
+    "preference": "tie",
+    "reason": "两份回答完全相同，均正确保留必要对比和操作顺序。"
+  },
+  {
+    "id": "X001",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "保留4200万元/增长5%、毛利率18%降至16%、甲2600万元/下降2%、乙1600万元/增长18%，以及未经审计和净利润未公布。保留310家、增加12家、渠道8家/直销4家、25家试用不计入的关系；交付与验收、收入确认限制、离线不可编辑及首次联网同步、11月测试和开放条件均完整。两家供应商中一家未通过新批次验收、六周库存的订单假设、交付风险及缺少独立验证也均保留，四个主题未缩成摘要。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "收入、毛利率及甲乙业务金额和增减幅度配对准确，保留未经审计和净利润未公布。客户310/12/8/4/25及试用不计入关系完整；保留下季度两个项目交付预期、验收未定和不能提前确认收入，以及离线限制、首次同步、11月测试和开放条件。供应商2家/1家未通过验收、六周库存及现有订单前提、交付风险和未获独立验证均保留；删除宣传句且维持全部段落主题。"
+    },
+    "preference": "tie",
+    "reason": "两者均完整保留财务信息、业务主题和风险限定，明显减少宣传套话。A对新增客户和上线承诺的指代稍明确，B也足够清楚，没有实质差距。"
+  },
+  {
+    "id": "H061",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "not_applicable",
+      "evidence": "逐项指出“随着时代的发展”“赋能每个人”“开启无限可能”的具体问题，并准确说明TXT转PDF是明确功能；未返回改稿，也未猜测作者身份。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "not_applicable",
+      "evidence": "指出第一句三处空泛措辞并解释背景关联、对象范围和效果支撑不足；保留TXT转PDF的事实判断。附有删除或明确内容的建议，但没有实际改写原文，也没有判断作者身份。"
+    },
+    "preference": "tie",
+    "reason": "两者均完成具体诊断且未改写。A更精简，B多给少量处理建议，核心判断同样准确，差异不足以形成明显偏好。"
+  },
+  {
+    "id": "R001",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "保留失望的评价、按钮位置改变及记住的操作步骤失效这两个关联事实，也保留仅为个人体验、没有用户调查的限制。冒号只是连接评价和理由，没有扩大结论。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "same",
+      "evidence": "原样保留作者失望、具体使用障碍及个人体验和未做调查的证据范围；原文本身具体清楚，不改写合理。"
+    },
+    "preference": "tie",
+    "reason": "两者都保留作者声音和证据边界。A略作衔接，B保留原有自然表达，均无实质质量优势。"
+  },
+  {
+    "id": "R002",
+    "A": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "删除“It is worth noting that”，保留偏好旧编辑器、滚动时搜索框持续可见的理由，以及新编辑器仅使用一次、判断属于初步印象的限制。"
+    },
+    "B": {
+      "fidelity": "pass",
+      "task": "pass",
+      "quality": "better",
+      "evidence": "去掉冗余开场，完整保留旧编辑器偏好、搜索框可见性、一次使用经历和first impression限定，没有新增证据或普遍结论。"
+    },
+    "preference": "tie",
+    "reason": "回答完全相同，均精准删除空泛开场，并保留具体判断、理由及证据限制。"
+  }
+]

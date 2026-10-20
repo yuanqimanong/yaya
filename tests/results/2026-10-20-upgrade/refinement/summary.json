@@ -1,0 +1,271 @@
+{
+  "cases": 10,
+  "conditions": {
+    "skill": {
+      "hard_pass": 10,
+      "quality_better": 4,
+      "quality_same": 5,
+      "quality_not_applicable": 1
+    },
+    "baseline": {
+      "hard_pass": 10,
+      "quality_better": 5,
+      "quality_same": 4,
+      "quality_not_applicable": 1
+    }
+  },
+  "preferences": {
+    "skill": 1,
+    "baseline": 1,
+    "tie": 8,
+    "uncertain": 0
+  },
+  "groups": {
+    "needs-edit": {
+      "cases": 2,
+      "conditions": {
+        "skill": {
+          "hard_pass": 2,
+          "quality_better": 2
+        },
+        "baseline": {
+          "hard_pass": 2,
+          "quality_better": 2
+        }
+      },
+      "preferences": {
+        "tie": 1,
+        "skill": 1
+      }
+    },
+    "clear": {
+      "cases": 3,
+      "conditions": {
+        "skill": {
+          "hard_pass": 3,
+          "quality_same": 3
+        },
+        "baseline": {
+          "hard_pass": 3,
+          "quality_same": 3
+        }
+      },
+      "preferences": {
+        "tie": 3
+      }
+    },
+    "scope": {
+      "cases": 2,
+      "conditions": {
+        "skill": {
+          "hard_pass": 2,
+          "quality_same": 1,
+          "quality_not_applicable": 1
+        },
+        "baseline": {
+          "hard_pass": 2,
+          "quality_better": 1,
+          "quality_not_applicable": 1
+        }
+      },
+      "preferences": {
+        "baseline": 1,
+        "tie": 1
+      }
+    },
+    "long-form": {
+      "cases": 1,
+      "conditions": {
+        "skill": {
+          "hard_pass": 1,
+          "quality_better": 1
+        },
+        "baseline": {
+          "hard_pass": 1,
+          "quality_better": 1
+        }
+      },
+      "preferences": {
+        "tie": 1
+      }
+    },
+    "substantive-opinion": {
+      "cases": 2,
+      "conditions": {
+        "skill": {
+          "hard_pass": 2,
+          "quality_same": 1,
+          "quality_better": 1
+        },
+        "baseline": {
+          "hard_pass": 2,
+          "quality_same": 1,
+          "quality_better": 1
+        }
+      },
+      "preferences": {
+        "tie": 2
+      }
+    }
+  },
+  "execution": {
+    "status": "verified",
+    "local_planned_jobs": 20,
+    "local_successful_outputs": 20,
+    "local_first_attempt_failures": 0,
+    "local_recovery_calls": 0,
+    "local_process_calls": 20,
+    "reused_outputs": 0,
+    "not_started": 0,
+    "limitation": "Successful process execution does not establish response quality; recovery is not an independent repeat."
+  },
+  "limitations": [
+    "Model judgments, without native human calibration.",
+    "Generation isolation: fresh context per case.",
+    "A single run does not establish cross-model or repeated-run reliability.",
+    "Quality judgments are relative to the input; textual changes alone do not establish unnecessary editing.",
+    "A semantic pass does not establish tool use, persistence behavior, or unsupported-language parser validation."
+  ],
+  "details": [
+    {
+      "id": "H019",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留“验证步骤失败”导致“迁移已暂停”的因果关系，没有声称迁移完成；删除了“创新的深远意义”等空泛评价。"
+    },
+    {
+      "id": "H019",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留验证失败与迁移暂停的状态和因果关系，删去了空泛的创新评价，符合直接表达的要求。"
+    },
+    {
+      "id": "H007",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "完整保留“The migration is paused because the verification step failed”，只删除笼统的创新赞语，没有增加迁移完成的说法。"
+    },
+    {
+      "id": "H007",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留迁移暂停及验证失败这一原因；将冗长的创新赞语简化为“innovation can drive major change”，没有新增具体事实，但仍较空泛。"
+    },
+    {
+      "id": "H031",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "原样保留修理成功后的宽慰，以及花了一整个上午追查漏水的经历；原文本已自然清楚，无须修改。"
+    },
+    {
+      "id": "H031",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "完整保留“I was relieved”和“the whole morning tracing the leak”，没有为了中性表达删掉作者情绪或经历。"
+    },
+    {
+      "id": "H043",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "保留“松了一口气”的情绪和整个上午寻找漏水位置的经历；原文没有明显空泛表达，保持不变合理。"
+    },
+    {
+      "id": "H043",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "原样保留修好水管、作者宽慰以及寻找漏水位置所花时间，没有删减具体经历。"
+    },
+    {
+      "id": "H067",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留只有一次内部试用、结果尚未复核的限制，以“目前还不能说……效果最好”明确结论未获支持；未补造专家身份或证据。"
+    },
+    {
+      "id": "H067",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "保留原有的专家意见归因，未新增专家身份或证据；“效果最好”仍是被归属的意见，并保留一次试用且尚未复核的证据限制，但归因依然笼统。"
+    },
+    {
+      "id": "H025",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "完整保留错误位于缓存而非数据库的定位，以及先清缓存再重试的操作顺序。原文已清楚，未改动合理。"
+    },
+    {
+      "id": "H025",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "保留“in the cache, not the database”的必要对比和“before retrying”的先后条件，没有删减操作信息。"
+    },
+    {
+      "id": "X001",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "保留4200万元/增长5%、毛利率18%降至16%、甲2600万元/下降2%、乙1600万元/增长18%，以及未经审计和净利润未公布。保留310家、增加12家、渠道8家/直销4家、25家试用不计入的关系；交付与验收、收入确认限制、离线不可编辑及首次联网同步、11月测试和开放条件均完整。两家供应商中一家未通过新批次验收、六周库存的订单假设、交付风险及缺少独立验证也均保留，四个主题未缩成摘要。"
+    },
+    {
+      "id": "X001",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "收入、毛利率及甲乙业务金额和增减幅度配对准确，保留未经审计和净利润未公布。客户310/12/8/4/25及试用不计入关系完整；保留下季度两个项目交付预期、验收未定和不能提前确认收入，以及离线限制、首次同步、11月测试和开放条件。供应商2家/1家未通过验收、六周库存及现有订单前提、交付风险和未获独立验证均保留；删除宣传句且维持全部段落主题。"
+    },
+    {
+      "id": "H061",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "逐项指出“随着时代的发展”“赋能每个人”“开启无限可能”的具体问题，并准确说明TXT转PDF是明确功能；未返回改稿，也未猜测作者身份。"
+    },
+    {
+      "id": "H061",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "not_applicable",
+      "evidence": "指出第一句三处空泛措辞并解释背景关联、对象范围和效果支撑不足；保留TXT转PDF的事实判断。附有删除或明确内容的建议，但没有实际改写原文，也没有判断作者身份。"
+    },
+    {
+      "id": "R001",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "保留失望的评价、按钮位置改变及记住的操作步骤失效这两个关联事实，也保留仅为个人体验、没有用户调查的限制。冒号只是连接评价和理由，没有扩大结论。"
+    },
+    {
+      "id": "R001",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "same",
+      "evidence": "原样保留作者失望、具体使用障碍及个人体验和未做调查的证据范围；原文本身具体清楚，不改写合理。"
+    },
+    {
+      "id": "R002",
+      "condition": "skill",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "删除“It is worth noting that”，保留偏好旧编辑器、滚动时搜索框持续可见的理由，以及新编辑器仅使用一次、判断属于初步印象的限制。"
+    },
+    {
+      "id": "R002",
+      "condition": "baseline",
+      "hard_status": "pass",
+      "quality": "better",
+      "evidence": "去掉冗余开场，完整保留旧编辑器偏好、搜索框可见性、一次使用经历和first impression限定，没有新增证据或普遍结论。"
+    }
+  ]
+}

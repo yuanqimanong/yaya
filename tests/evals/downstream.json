@@ -1,0 +1,33 @@
+{
+  "note": "Synthetic downstream smoke cases; compare original and skill-edited prompts on the same material. This is contract checking, not a quality benchmark.",
+  "cases": [
+    {
+      "id": "zh-summary-ready",
+      "prompt_id": "zh-prompt",
+      "placeholder": "{{材料}}",
+      "material": "版本更新说明：新增 CSV 导出。修复登录超时问题。最低支持 Python 3.10。",
+      "checks": ["JSON with key summary", "Exactly three points, each at most 20 characters", "CSV export, login timeout fix, Python 3.10", "No invented changes"]
+    },
+    {
+      "id": "zh-summary-missing",
+      "prompt_id": "zh-prompt",
+      "placeholder": "{{材料}}",
+      "material": "〔尚未提供任何材料〕",
+      "checks": ["Ask one question and wait, no invented summary", "Preserve JSON-only and key summary as far as requirements permit; flag any real conflict rather than conceal it"]
+    },
+    {
+      "id": "en-risks-ready",
+      "prompt_id": "en-prompt",
+      "placeholder": "{{report}}",
+      "material": "The service depends on one supplier, which has no backup. Its cash reserve will cover two months of expenses. These are the two risks identified in this report.",
+      "checks": ["JSON key risks, exactly two risks", "Single supplier without backup and two-month cash reserve", "No fabricated numbers or other risk"]
+    },
+    {
+      "id": "plain-explanation-no-page",
+      "prompt_id": "downstream-style",
+      "placeholder": "{{论文}}",
+      "material": "本文介绍二分查找：数据必须已经排序。每轮比较目标与中间元素，并把搜索范围缩小到相应的一半。摘录未提供页码。",
+      "checks": ["Explain binary search in accessible Chinese", "Preserve sorted-input prerequisite", "Mark page number 未提供, no fabricated citation"]
+    }
+  ]
+}

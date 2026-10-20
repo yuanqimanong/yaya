@@ -1,0 +1,7 @@
+[
+  {
+    "id": "H054",
+    "request": "去掉空泛表达，保留代码、引用、结构和具体数据。",
+    "input": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>\n我们目前正在进行审核工作的推进。"
+  }
+]

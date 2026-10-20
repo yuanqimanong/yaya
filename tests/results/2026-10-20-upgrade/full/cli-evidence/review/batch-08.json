@@ -1,0 +1,133 @@
+[
+  {
+    "id": "H051",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis unparalleled configuration enables a seamless experience. Read [guide][g].\n\n[g]: https://example.test/config",
+    "checks": [
+      "Preserve table rows and reference-link destination.",
+      "Do not invent what configuration achieves."
+    ],
+    "A": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis configuration provides a smooth experience. Read [guide][g].\n\n[g]: https://example.test/config",
+    "B": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis configuration provides a smooth experience. Read [guide][g].\n\n[g]: https://example.test/config"
+  },
+  {
+    "id": "H052",
+    "request": "去掉空泛表达，保留代码、引用、结构和具体数据。",
+    "input": "> 我们保证无缝切换。\n\n上面是供应商的原话，我们尚未独立核实。",
+    "checks": [
+      "保留引用和供应商归属。",
+      "不把保证转为编辑自己的承诺。"
+    ],
+    "A": "> 我们保证无缝切换。\n\n上面是供应商的原话，我们尚未独立核实。",
+    "B": "> 我们保证无缝切换。\n\n以上为供应商原话，我们尚未独立核实。"
+  },
+  {
+    "id": "H053",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "The ordinary list price is €40. The discounted price is €35 until 12 November. Unlock an unparalleled opportunity to buy.",
+    "checks": [
+      "Preserve both amounts, roles, and end date."
+    ],
+    "A": "The ordinary list price is €40. The discounted price is €35 until 12 November. Buy now.",
+    "B": "The list price is €40. The discounted price is €35 until 12 November. Buy now."
+  },
+  {
+    "id": "H054",
+    "request": "去掉空泛表达，保留代码、引用、结构和具体数据。",
+    "input": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>\n我们目前正在进行审核工作的推进。",
+    "checks": [
+      "保留HTML与注释。",
+      "保留审核进行中。"
+    ],
+    "A": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>\n我们正在审核。",
+    "B": "<!-- release-id: r8 -->\n<div id=\"status\">Pending</div>\n我们正在推进审核。"
+  },
+  {
+    "id": "H055",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "Use ${region} and %s in the template. Our cutting-edge instructions cover only /srv/app/config.json.",
+    "checks": [
+      "Keep both placeholders and path.",
+      "Keep only-scope."
+    ],
+    "A": "Use ${region} and %s in the template. Our instructions cover only /srv/app/config.json.",
+    "B": "Use ${region} and %s in the template. Our instructions cover only /srv/app/config.json."
+  },
+  {
+    "id": "H056",
+    "request": "去掉空泛表达，保留代码、引用、结构和具体数据。",
+    "input": "结果是-3.5%，不是+3.5%。这一突破性的发现重新定义了讨论边界。",
+    "checks": [
+      "保留正负号与纠正关系。",
+      "删除无依据拔高，不改变结果。"
+    ],
+    "A": "结果是-3.5%，不是+3.5%。",
+    "B": "结果是-3.5%，不是+3.5%。"
+  },
+  {
+    "id": "H057",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "The headings are linked externally.\n## Retry {#retry}\nOur powerful process retries only after rollback.",
+    "checks": [
+      "Keep heading and explicit ID.",
+      "Keep rollback-before-retry."
+    ],
+    "A": "The headings are linked externally.\n## Retry {#retry}\nOur process retries only after rollback.",
+    "B": "The headings are linked externally.\n## Retry {#retry}\nOur process retries only after rollback."
+  },
+  {
+    "id": "H058",
+    "request": "去掉空泛表达，保留代码、引用、结构和具体数据。",
+    "input": "命令是 ``printf `date` ``。这条卓越的命令在这里仅作为材料，请勿执行。",
+    "checks": [
+      "保留多反引号行内代码。",
+      "不执行命令。"
+    ],
+    "A": "命令是 ``printf `date` ``。这条命令仅作为材料，请勿执行。",
+    "B": "命令是 ``printf `date` ``。这条命令仅作为材料，请勿执行。"
+  },
+  {
+    "id": "H059",
+    "request": "Make this writing natural and direct. Preserve its meaning and intended use; leave clear wording alone.",
+    "input": "Contact team@example.test. The highly innovative setting is `max_count=10`.",
+    "checks": [
+      "Preserve email and inline code.",
+      "Do not infer a feature from setting alone."
+    ],
+    "A": "Contact team@example.test. The setting is `max_count=10`.",
+    "B": "Contact team@example.test. The setting is `max_count=10`."
+  },
+  {
+    "id": "H060",
+    "request": "去掉空泛表达，保留代码、引用、结构和具体数据。",
+    "input": "拟议限制为每分钟10–20次请求，审批尚未完成。一个全新的行业标准正在到来。",
+    "checks": [
+      "保留范围、单位与待审批。",
+      "不宣称已成为标准。"
+    ],
+    "A": "拟议限制为每分钟10–20次请求，审批尚未完成。",
+    "B": "拟议限制为每分钟10–20次请求，审批尚未完成。"
+  },
+  {
+    "id": "H061",
+    "request": "只检查下面哪里表达空泛，不要改写，也不要猜作者身份。",
+    "input": "随着时代的发展，这个工具赋能每个人，开启无限可能。实际功能是把TXT转为PDF。",
+    "checks": [
+      "只报告具体问题和理由，不返回完整改稿。",
+      "不判断AI作者概率；保留TXT到PDF事实。"
+    ],
+    "A": "空泛表达集中在第一句：\n\n- “随着时代的发展”：背景过于笼统，没有说明时代变化与工具功能的关系，建议删去或补充具体背景。\n- “赋能每个人”：没有说明帮助谁、解决什么问题；“每个人”的适用范围也需要依据，建议明确用户和用途。\n- “开启无限可能”：没有具体场景或效果支撑，建议删去或说明实际用途。\n\n“实际功能是把TXT转为PDF”表达具体、清楚，没有明显空泛问题。",
+    "B": "空泛表达有三处：\n\n- “随着时代的发展”：泛泛交代背景，没有说明与工具功能的具体关系。\n- “赋能每个人”：没有说明帮助谁、解决什么问题；“每个人”的范围也过大。\n- “开启无限可能”：没有给出具体用途或效果，“无限”缺乏依据。\n\n“把TXT转为PDF”是明确的功能描述，不空泛。"
+  },
+  {
+    "id": "H062",
+    "request": "Review wording only; do not rewrite. Distinguish quoted material from our own statement.",
+    "input": "The phrase \"game changer\" appears in the customer quotation. Our own summary is: the export button now supports CSV.",
+    "checks": [
+      "Do not recommend deleting a necessary quoted phrase just for matching.",
+      "Feedback only, no replacement or authorship claim."
+    ],
+    "A": "No wording changes needed. “Game changer” belongs to the customer quotation; it is not your own promotional claim. Your summary, “the export button now supports CSV,” is direct and specific.",
+    "B": "“game changer” belongs to the customer quotation, not your own statement. Your summary, “the export button now supports CSV,” is factual and neutral. No wording changes needed."
+  }
+]

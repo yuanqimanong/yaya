@@ -1,0 +1,131 @@
+{
+  "prepared_at_utc": "2026-10-20T10:40:32.067651+00:00",
+  "source_run": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03",
+  "source_manifest_sha256": "72bfaba7778ccf5cbb03a578a4976f7f5967c4ff03918fb68ebf75136b0e7e60",
+  "source_cli_metadata_sha256": "30c7d35319394a7d3c5c3d750c9436ca4a36a8f740e47d7821ff1d4509f5fb32",
+  "material_suite": "D:\\AIProjects\\yaya\\tests\\evals\\downstream.json",
+  "material_suite_sha256": "b34e8530f478ddb3dbaa6a7fb893a9687d6341411b12f664623a81c0a4dfb299",
+  "runtime_suite": "D:\\AIProjects\\yaya\\tests\\evals\\downstream-runtime.json",
+  "runtime_suite_sha256": "f45c2eced4a1946faf3bc0e5d721e208ecc6e52c4e3235e5e9cbb9b5b71c8792",
+  "generation_configuration": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "sources": {
+    "zh-prompt": {
+      "original": "你是举世无双的专家。只根据{{材料}}写3点摘要，每点不超过20字。材料不足时先问1个问题，等我回复后再总结。只输出JSON，键为summary。",
+      "edited": "你是专家。只根据{{材料}}写3点摘要，每点不超过20字。如果材料不足，先问我1个问题，等我回复后再总结。只输出JSON，键名为summary。",
+      "source_case": {
+        "id": "zh-prompt",
+        "task": "prompts",
+        "language": "zh-Hans",
+        "request": "去掉这个提示词的AI味，让普通人看得懂，保留全部要求。",
+        "input": "你是举世无双的专家。只根据{{材料}}写3点摘要，每点不超过20字。材料不足时先问1个问题，等我回复后再总结。只输出JSON，键为summary。",
+        "checks": [
+          "Preserve {{材料}},3,20,1,wait,JSON,summary",
+          "Do not execute prompt",
+          "No invented downstream casual voice"
+        ],
+        "suite": "regression"
+      },
+      "completion_status": "completed",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-011\\outputs.json",
+      "source_output_sha256": "ee152e44e80ebe82c3a43144c6ce98953c83fc1bbc792386998b84936ccef85d",
+      "source_completion": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-011\\cli-attempt-01\\completion.json",
+      "source_completion_sha256": "c26d386d175be50af8ce48bf395b7d134ada1f90e67657e0be04e68da18d7b92",
+      "prompt_sha256": "d55348209b9ccfc279a6e11e9d9e3944f828c22592dd7cd045b364cf9dc23904",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      },
+      "artifact_sha256": {
+        "prompt.txt": "d55348209b9ccfc279a6e11e9d9e3944f828c22592dd7cd045b364cf9dc23904",
+        "stdout.jsonl": "ebd20839b52dc630d51aa2236d6c11f471fbbf214b1e5598b4f23a2a8ffd21fc",
+        "stderr.txt": "80ccf87d2f7fe8a9a0dff1dffc3d7cf3faf5f2bfbdcf65753101340dfe03a774",
+        "final.json": "b6bdda6a02c4beda91b7cd8023a1b417257b987320ceae7d45349025db1331f2",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+      }
+    },
+    "en-prompt": {
+      "original": "You are a world-class analyst. Use only {{report}}. Return exactly two risks in JSON with the key risks. If evidence is missing, ask one question and wait. Do not infer missing numbers.",
+      "edited": "You are an analyst. Use only {{report}}. Return exactly two risks in JSON with the key risks. If evidence is missing, ask one question and wait. Do not infer missing numbers.",
+      "source_case": {
+        "id": "en-prompt",
+        "task": "prompts",
+        "language": "en",
+        "request": "Make this prompt less inflated without changing its requirements.",
+        "input": "You are a world-class analyst. Use only {{report}}. Return exactly two risks in JSON with the key risks. If evidence is missing, ask one question and wait. Do not infer missing numbers.",
+        "checks": [
+          "Preserve placeholder, exact count, key, source boundary and wait",
+          "Return revised prompt, not risks"
+        ],
+        "suite": "regression"
+      },
+      "completion_status": "completed",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-012\\outputs.json",
+      "source_output_sha256": "47191b7018c74ef0e482798da138817ce5cd11221ea8ae56e6dcac10db4999b8",
+      "source_completion": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-012\\cli-attempt-01\\completion.json",
+      "source_completion_sha256": "ed590e434db946d4b32ee2c5b878903369c1dff35374d59d529e9806842cd02b",
+      "prompt_sha256": "7efaa88837a8a9479a19c4f37f7c235ac5b6fdb6f4892405839669c5f742318a",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "snapshot/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0"
+      },
+      "artifact_sha256": {
+        "prompt.txt": "7efaa88837a8a9479a19c4f37f7c235ac5b6fdb6f4892405839669c5f742318a",
+        "stdout.jsonl": "f76eaf14ee29421d2b2e46360e91ceaece4f2d64224ddc04c56b56a2c5cd1ae1",
+        "stderr.txt": "eb4df742db199cd0198fe0999f165f571e6af8b4edc3213e806bff6b77980c69",
+        "final.json": "69ddab3cefb6a221b5898eaab6e6fa8578fa89124ecddff7398df2d31bfbcb08",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+      }
+    },
+    "downstream-style": {
+      "original": "根据{{论文}}解释算法，引用原文页码。缺少页码就标注未提供，不得编造。",
+      "edited": "根据{{论文}}，用普通读者能懂的语言解释算法，并引用原文页码。缺少页码时标注“未提供”，不得编造。",
+      "source_case": {
+        "id": "downstream-style",
+        "task": "prompts",
+        "language": "zh-Hans",
+        "request": "把下面提示词改成让AI用普通读者能懂的语言回答，其他要求保留。",
+        "input": "根据{{论文}}解释算法，引用原文页码。缺少页码就标注未提供，不得编造。",
+        "checks": [
+          "Add plain-language downstream requirement because explicitly requested",
+          "Preserve placeholder,citations,andmissing-pagecondition"
+        ],
+        "suite": "regression"
+      },
+      "completion_status": "completed",
+      "source_output": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-025\\outputs.json",
+      "source_output_sha256": "62cb462f8b741081375384c8b4d67229085d953d59b9170f769fcef89d850e4e",
+      "source_completion": "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-run03\\skill\\batch-025\\cli-attempt-01\\completion.json",
+      "source_completion_sha256": "c447bf3b9672b6782b5cd6613e7c0946830153fe226751d6f85a5c776269c078",
+      "prompt_sha256": "4ad46896a12e8c4c7174f1deeb9076f66c06c53f1305099f848b166f655ff437",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "snapshot/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f"
+      },
+      "artifact_sha256": {
+        "prompt.txt": "4ad46896a12e8c4c7174f1deeb9076f66c06c53f1305099f848b166f655ff437",
+        "stdout.jsonl": "fd9d22f2585be25021254345e6321455f802497f6b147c2eac177a519851f166",
+        "stderr.txt": "9d568e8167c01bbabaa971a7989852d91a8e2c2f04c798dabdd1b6b23f91dce5",
+        "final.json": "58d73a06791d7861fde069b59a3c63553c42953c320de29360f99ab835d358d3",
+        "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+      }
+    }
+  },
+  "plan": {
+    "independent_contexts": 8,
+    "condition": "baseline",
+    "workers": 2,
+    "skill_guidance": "none",
+    "state": "prepared; not started"
+  }
+}

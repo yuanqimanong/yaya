@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "id": "fr",
+  "version": "0.2.0",
+  "core_major": 0,
+  "name": "Français — exemple de contribution",
+  "license": "MIT",
+  "quality": "experimental",
+  "direction": "ltr"
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "D:\\env\\miniconda3\\python.exe",
+    "-X",
+    "utf8",
+    "scripts/build_release.py"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.676,
+  "stdout": "{\n  \"catalog_version\": 1,\n  \"core\": {\n    \"version\": \"0.2.0\",\n    \"bundled_languages\": [\n      \"en\",\n      \"zh-Hans\"\n    ],\n    \"file\": \"yaya-core-0.2.0.zip\",\n    \"sha256\": \"ee912ab878e4d557189ba8c5c9abf08e369455dcfcb4d5abbeba0659a24a291a\",\n    \"bytes\": 43017\n  },\n  \"language_packs\": [\n    {\n      \"format_version\": 1,\n      \"id\": \"ja\",\n      \"version\": \"0.2.0\",\n      \"core_major\": 0,\n      \"name\": \"\\u65e5\\u672c\\u8a9e\",\n      \"license\": \"MIT\",\n      \"quality\": \"experimental\",\n      \"direction\": \"ltr\",\n      \"file\": \"yaya-lang-ja-0.2.0.zip\",\n      \"sha256\": \"96a8cd2fbea76668de60e27a199e08ed74f6a5d021787c66efce481c0e836eb1\",\n      \"bytes\": 5384\n    },\n    {\n      \"format_version\": 1,\n      \"id\": \"ko\",\n      \"version\": \"0.2.0\",\n      \"core_major\": 0,\n      \"name\": \"\\ud55c\\uad6d\\uc5b4\",\n      \"license\": \"MIT\",\n      \"quality\": \"experimental\",\n      \"direction\": \"ltr\",\n      \"file\": \"yaya-lang-ko-0.2.0.zip\",\n      \"sha256\": \"07035954b0cd857e6809c20d9bc202618b2b322aefc21cf2d1873a6de2723c92\",\n      \"bytes\": 5183\n    },\n    {\n      \"format_version\": 1,\n      \"id\": \"zh-Hant\",\n      \"version\": \"0.2.0\",\n      \"core_major\": 0,\n      \"name\": \"\\u7e41\\u9ad4\\u4e2d\\u6587\",\n      \"license\": \"MIT\",\n      \"quality\": \"experimental\",\n      \"direction\": \"ltr\",\n      \"file\": \"yaya-lang-zh-Hant-0.2.0.zip\",\n      \"sha256\": \"ab496f5790a070aa5d62852abafa27d54f2c0326439b9a78cf8994b3fb3f385e\",\n      \"bytes\": 5176\n    }\n  ]\n}\n",
+  "stderr": "",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

@@ -1,0 +1,6 @@
+{"type":"thread.started","thread_id":"01a158dd-3f41-78c2-8d87-61a0b73ffe36"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"item.completed","item":{"id":"item_1","type":"error","message":"Codex is ignoring 3 unrecognized configuration settings. Check for typos or deprecated settings.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.model_reasoning_effort` is ignored.\n  user (D:\\CODEX\\config.toml): `model_providers.openai_https.notify` is ignored."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"{\"id\":\"ko-text\",\"text\":\"새 기능은 현재 일부 고객에게 제공되고 있습니다. 다음 달에 이용 대상을 확대할 예정이며, 구체적인 일정은 아직 확정되지 않았습니다.\",\"notes\":\"\",\"skill_used\":false}"}}
+{"type":"turn.completed","usage":{"input_tokens":18512,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":192,"reasoning_output_tokens":131}}

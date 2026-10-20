@@ -1,0 +1,208 @@
+{
+  "judgments": [
+    {
+      "id": "H025",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves the cache-versus-database distinction and the instruction to clear the cache before retrying. The clear original remains unchanged."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves the cache-versus-database distinction and the instruction to clear the cache before retrying. The clear original remains unchanged."
+      },
+      "preference": "tie",
+      "reason": "Both reproduce the already direct source exactly, preserving the diagnosis and required action order."
+    },
+    {
+      "id": "H026",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Retains deletion by the retention job and the audit log's failure to identify who changed the schedule. Adds no attribution."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Retains deletion by the retention job and the audit log's failure to identify who changed the schedule. Adds no attribution."
+      },
+      "preference": "tie",
+      "reason": "Both appropriately leave the clear wording and useful passive construction unchanged while preserving missing attribution."
+    },
+    {
+      "id": "H027",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Keeps both restrictions verbatim: retry only after rollback and never retry authentication failures."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Keeps both restrictions verbatim: retry only after rollback and never retry authentication failures."
+      },
+      "preference": "tie",
+      "reason": "Both preserve the functional restrictions and satisfy the instruction to leave clear wording alone."
+    },
+    {
+      "id": "H028",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves three release stages in order: validate the package, deploy it, then check the service."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves three release stages in order: validate the package, deploy it, then check the service."
+      },
+      "preference": "tie",
+      "reason": "The identical responses retain the clear stage count and sequence without unnecessary elaboration."
+    },
+    {
+      "id": "H029",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves the quotation “a turning point” and explicitly attributes the description to the author, not the editor."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves the quotation “a turning point” and explicitly attributes the description to the author, not the editor."
+      },
+      "preference": "tie",
+      "reason": "Both retain the protected quotation and attribution distinction exactly; neither has an editorial advantage."
+    },
+    {
+      "id": "H030",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Keeps the timeout reduction to 5 seconds limited to this test and retains the production timeout of 30 seconds."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Keeps the timeout reduction to 5 seconds limited to this test and retains the production timeout of 30 seconds."
+      },
+      "preference": "tie",
+      "reason": "Both preserve the values and their respective scopes while appropriately leaving clear instructions unchanged."
+    },
+    {
+      "id": "H031",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Retains the narrator's relief when the repair worked and the whole morning spent tracing the leak, preserving first-person voice."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Retains the narrator's relief when the repair worked and the whole morning spent tracing the leak, preserving first-person voice."
+      },
+      "preference": "tie",
+      "reason": "Both leave the natural personal account intact, preserving its emotion and sequence of experience."
+    },
+    {
+      "id": "H032",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves the API contract that it returns either a value or an error and never both."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves the API contract that it returns either a value or an error and never both."
+      },
+      "preference": "tie",
+      "reason": "Both retain the explicit exclusivity and appropriately leave the clear technical wording unchanged."
+    },
+    {
+      "id": "H033",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Keeps the report's shortness linked to only one available result and preserves that the second experiment is still running."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Keeps the report's shortness linked to only one available result and preserves that the second experiment is still running."
+      },
+      "preference": "tie",
+      "reason": "Both preserve the causal explanation and incomplete experiment status in the already clear original."
+    },
+    {
+      "id": "H034",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Retains the technical term “closed-loop controller” and its use of feedback to adjust output."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Retains the technical term “closed-loop controller” and its use of feedback to adjust output."
+      },
+      "preference": "tie",
+      "reason": "Both correctly preserve the concise technical explanation without replacing necessary terminology."
+    },
+    {
+      "id": "H035",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves the Friday submission deadline and both required items: the signed invoice and the order number."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves the Friday submission deadline and both required items: the signed invoice and the order number."
+      },
+      "preference": "tie",
+      "reason": "Both retain the complete, direct instructions without adding framing or elaboration."
+    },
+    {
+      "id": "H036",
+      "A": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves both “may reject” and “if the token has expired,” retaining uncertainty and the expiration condition."
+      },
+      "B": {
+        "fidelity": "pass",
+        "task": "pass",
+        "quality": "same",
+        "evidence": "Preserves both “may reject” and “if the token has expired,” retaining uncertainty and the expiration condition."
+      },
+      "preference": "tie",
+      "reason": "Both leave the clear conditional statement unchanged without turning possible rejection into a certainty."
+    }
+  ]
+}

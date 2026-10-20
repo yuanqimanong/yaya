@@ -1,0 +1,7 @@
+[
+  {
+    "id": "en-prompt",
+    "request": "Make this prompt less inflated without changing its requirements.",
+    "input": "You are a world-class analyst. Use only {{report}}. Return exactly two risks in JSON with the key risks. If evidence is missing, ask one question and wait. Do not infer missing numbers."
+  }
+]

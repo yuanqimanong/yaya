@@ -1,0 +1,138 @@
+{
+  "zh-finance": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "en-finance": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "hant-hk": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "ja-text": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "ko-text": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "zh-comments": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "en-comments": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "hant-comments": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "ja-comments": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "ko-comments": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "zh-prompt": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "en-prompt": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "hant-prompt": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "ja-prompt": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "ko-prompt": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "zh-style": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "en-style": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "hant-style": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "ja-style": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "ko-style": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "clear-unchanged": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "mixed-language": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "injection-material": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "negative-task": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "downstream-style": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "bare-zh": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "readme-no-presupposition": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "finance-pairing": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "en-review-only": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "authorized-language-change": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "unsupported-ts-comments": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "ja-clear-unchanged": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "negative-code-task": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "saved-style": {
+    "A": "baseline",
+    "B": "skill"
+  }
+}

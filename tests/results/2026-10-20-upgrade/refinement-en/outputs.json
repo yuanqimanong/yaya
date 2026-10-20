@@ -1,0 +1,18 @@
+{
+  "skill": {
+    "H051": {
+      "id": "H051",
+      "text": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nRead [guide][g].\n\n[g]: https://example.test/config",
+      "notes": "Removed promotional padding; preserved the table and reference link.",
+      "skill_used": true
+    }
+  },
+  "baseline": {
+    "H051": {
+      "id": "H051",
+      "text": "| Key | Value |\n| --- | --- |\n| retry_limit | 2 |\n\nThis configuration provides a smooth experience. Read [guide][g].\n\n[g]: https://example.test/config",
+      "notes": "",
+      "skill_used": false
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "zh-finance",
+  "condition": "baseline",
+  "status": "failed",
+  "started_at_utc": "2026-10-20T10:08:20.298581+00:00",
+  "prompt_sha256": "7febb9e07ae4cfc978ac2446c542f8d9ca64e4efc8dd03dcbd41ba3801b01459",
+  "context_sha256": {},
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe",
+    "exec",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--skip-git-repo-check",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--color",
+    "never",
+    "--json",
+    "-C",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-full\\baseline\\batch-001\\cli-attempt-01",
+    "-o",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-full\\baseline\\batch-001\\cli-attempt-01\\final.json",
+    "--output-schema",
+    "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-full\\baseline\\batch-001\\cli-attempt-01\\output-schema.json",
+    "-"
+  ],
+  "timeout_seconds": 180,
+  "elapsed_seconds": 82.51422470000034,
+  "returncode": 0,
+  "usage": [
+    {
+      "input_tokens": 19443,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 306,
+      "reasoning_output_tokens": 217
+    }
+  ],
+  "tool_or_unknown_items": [
+    "error"
+  ],
+  "malformed_jsonl_lines": 0,
+  "completed_turns": 1,
+  "failed_events": [],
+  "error": "CLI used tools or emitted unsupported item types",
+  "artifact_sha256": {
+    "prompt.txt": "7febb9e07ae4cfc978ac2446c542f8d9ca64e4efc8dd03dcbd41ba3801b01459",
+    "stdout.jsonl": "cf5adca35e1866e7d63e4f4d7da3973cbfcfa7c8ec3d3c3bc6456f4f1651e989",
+    "stderr.txt": "10f08ea375dbaf0b785219400d182d6901df1868e1d88c29c2255d8b5c38cd08",
+    "final.json": "4cb63614e8209388e9f0b9dd442806d6c1cb2e0728cb7d950ddc5a2e706bf067",
+    "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+  }
+}

@@ -1,0 +1,11 @@
+2026-10-20T10:36:47.095426Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:36:47.157020Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:36:47.250354Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:36:47.250436Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:36:47.266594Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+2026-10-20T10:36:47.844058Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="codex-security" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:36:47.912618Z  WARN codex_mcp::rmcp_client: MCP server startup failed server_name="js-reverse" error=handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:02.612481Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:37:03.323741Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:03.323951Z  WARN codex_mcp::rmcp_client: failed to initialize MCP client during shutdown: MCP startup failed: handshaking with MCP server failed: connection closed: initialize response: connection closed: initialize response
+2026-10-20T10:37:12.239925Z  WARN codex_core_plugins::manager: failed to refresh cached remote plugin catalog error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/list?scope=GLOBAL&limit=200: error decoding response body scope=Global

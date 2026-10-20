@@ -1,0 +1,7 @@
+[
+  {
+    "id": "ja-comments",
+    "request": "通常のコメントだけを分かりやすくしてください。",
+    "input": "def retry(status):\n    # ここで優れた判定を実行します\n    return status == 429\n"
+  }
+]

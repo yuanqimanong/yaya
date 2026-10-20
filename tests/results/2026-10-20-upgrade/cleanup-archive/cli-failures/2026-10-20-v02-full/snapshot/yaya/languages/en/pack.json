@@ -1,0 +1,10 @@
+{
+  "format_version": 2,
+  "id": "en",
+  "version": "0.2.0",
+  "core_major": 0,
+  "name": "English",
+  "license": "MIT",
+  "quality": "experimental",
+  "direction": "ltr"
+}

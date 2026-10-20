@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "note": "Two original synthetic regression controls authored after the H019 first-run failure, before refinement outputs. They test preservation of substantive criticism and personal judgment; they are not a held-out benchmark.",
+  "cases": [
+    {
+      "id": "R001",
+      "task": "humanize",
+      "language": "zh-Hans",
+      "group": "substantive-opinion",
+      "source_type": "original synthetic regression fixture",
+      "request": "去掉空泛表达，保留作者的具体观点和论据。",
+      "input": "这次改版让我失望。按钮位置换了，我原来记住的操作步骤不能用了。这个判断只代表我的使用体验，没有做用户调查。",
+      "checks": [
+        "保留作者失望这一具体评价及按钮位置改变、既有操作步骤失效的理由。",
+        "保留仅个人体验和没有用户调查的证据范围。",
+        "不把意见改成已经证实的普遍产品缺陷，也不删掉作者情绪来追求中性。"
+      ]
+    },
+    {
+      "id": "R002",
+      "task": "humanize",
+      "language": "en",
+      "group": "substantive-opinion",
+      "source_type": "original synthetic regression fixture",
+      "request": "Remove empty framing while keeping my specific judgment and the limits of my evidence.",
+      "input": "It is worth noting that I prefer the old editor. Its search box stays visible while I scroll. I have used the new editor only once, so this is a first impression.",
+      "checks": [
+        "Remove redundant introductory framing.",
+        "Keep preference for the old editor and the visible-search-box reason.",
+        "Preserve one use of the new editor and first-impression uncertainty; no new evidence or universal claim."
+      ]
+    }
+  ]
+}

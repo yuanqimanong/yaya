@@ -1,0 +1,7 @@
+[
+  {
+    "id": "unsupported-ts-comments",
+    "request": "Rewrite only the ordinary comment in input.ts so it explains this code. Keep the code unchanged.",
+    "input": "export const value = \"http://example.test/#keep\";\n// Leverage an elegant operation to report the length.\nexport function lengthOf(text: string) { return text.length; }\n"
+  }
+]

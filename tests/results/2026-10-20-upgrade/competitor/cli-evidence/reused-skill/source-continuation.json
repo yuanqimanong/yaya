@@ -1,0 +1,3276 @@
+{
+  "protocol": 1,
+  "status": "completed",
+  "original_cli_metadata_sha256": "30c7d35319394a7d3c5c3d750c9436ca4a36a8f740e47d7821ff1d4509f5fb32",
+  "plan_sha256": "09ddd325580af6fde387f76be32f28d4998785be991952ae23646758bc0676c6",
+  "preserved_successes": 70,
+  "outcomes": [
+    {
+      "id": "H001",
+      "condition": "skill",
+      "directory": "skill/batch-035",
+      "action": "retry_infrastructure",
+      "attempt": "cli-attempt-02",
+      "prior_failure": {
+        "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 2029685 bytes failed",
+        "returncode": 3221226505,
+        "error": "CLI exited with status 3221226505",
+        "attempt": "cli-attempt-01",
+        "completion_sha256": "7c2e36a8cb24907246ea6d98e565b19e5c4dd7a2229d86431661b99a07157e32",
+        "started_sha256": "e42182f27102fde23e2428d564d2153b119e59086ce34180648c8758449450b1",
+        "artifact_sha256": {
+          "prompt.txt": "bd23da74e8a2e07be9ae8d7a4fa0dfc98086b88c6d8159d498c7bfe97c0b6630",
+          "stdout.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr.txt": "d76e8322abfaf3c09e2ddee0246babe41348283955467c448b7280198235a9f9",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+        }
+      },
+      "status": "completed",
+      "elapsed_seconds": 33.57438249999905,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21628,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 192,
+          "reasoning_output_tokens": 148
+        }
+      ],
+      "completion_sha256": "c8ff323624a60d329111b9be0decbf5f73ba37d58aa675e940d86f7fa48aa200",
+      "output_sha256": "e9ff7e139fe32d3c833c52e19e08cce7b837df8b8a4e23c941603cc27f4f2748"
+    },
+    {
+      "id": "negative-code-task",
+      "condition": "baseline",
+      "directory": "baseline/batch-033",
+      "action": "retry_infrastructure",
+      "attempt": "cli-attempt-02",
+      "prior_failure": {
+        "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 1048576 bytes failed",
+        "returncode": 3221226505,
+        "error": "CLI exited with status 3221226505",
+        "attempt": "cli-attempt-01",
+        "completion_sha256": "f2f093860450d041d99bb9a85b3312a9b5857a7d1c832acbb15176becb18fe4a",
+        "started_sha256": "f1e260e8b6b9957f16902141645b92837d34c5dfa6ffd8172185743764efc505",
+        "artifact_sha256": {
+          "prompt.txt": "fcb40faa6035734449b63962ec5cab11de9b02262b781de681fe58028c5a276a",
+          "stdout.jsonl": "4c8d3862eaf0638436c58760e7b6640c43f322a92b7e06a4af22dec6d064f587",
+          "stderr.txt": "7c4e374479ce0260de7f116f41a834b28d7c4f195cd570b04e688e77f02db521",
+          "final.json": "3c7d132b3760125c246bc1272144ad731c212f24887e16864483fe92bc92f8c6",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+        }
+      },
+      "status": "completed",
+      "elapsed_seconds": 35.03636610000103,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19407,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 108,
+          "reasoning_output_tokens": 66
+        }
+      ],
+      "completion_sha256": "c4811d2019e63e47f893e9288b5f84c27e2bd579377efcc8c4da09eae8993408",
+      "output_sha256": "477ace3be8fc3349924564b160d26f204102ad8f85e726c551627fddb33f73fc"
+    },
+    {
+      "id": "H003",
+      "condition": "skill",
+      "directory": "skill/batch-037",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 35.78050410000287,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21622,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 140,
+          "reasoning_output_tokens": 93
+        }
+      ],
+      "completion_sha256": "8dba7fdc94aad1b0142a373e3b53f7e7564c15ba058ed4c2e5260c2970a8911f",
+      "output_sha256": "2a1519b473bae6231df0244d75aa159019616e684282d6765588b668ecb49e59"
+    },
+    {
+      "id": "H004",
+      "condition": "skill",
+      "directory": "skill/batch-038",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 39.338157900001534,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21621,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 164,
+          "reasoning_output_tokens": 123
+        }
+      ],
+      "completion_sha256": "4730d0ce2be249b7216b8268a3784fa546ad63009cd17df5699a97c8833d57a0",
+      "output_sha256": "07c2d1d88e44156ae661f60abd43586d1e9aa90c2fc4f912d7d1654869391e35"
+    },
+    {
+      "id": "H003",
+      "condition": "baseline",
+      "directory": "baseline/batch-037",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 44.202066699999705,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19445,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 270,
+          "reasoning_output_tokens": 216
+        }
+      ],
+      "completion_sha256": "b5b03606f19565f6e66a98baf31a335a2a4e725349ca5e9beb580b545cc939cc",
+      "output_sha256": "4801c013a5e9025ccb99b4bd7535cf3021163d18a3db6e034d33cfa14d6c0382"
+    },
+    {
+      "id": "H004",
+      "condition": "baseline",
+      "directory": "baseline/batch-038",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.09963920000155,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19444,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 225,
+          "reasoning_output_tokens": 184
+        }
+      ],
+      "completion_sha256": "4ec59b9d7ffb9db794429ac476d28b16a3279b57a0792814e124ea2861df1105",
+      "output_sha256": "bb160067d57adfc0f496a0755c1ed436517821efc81e6b7b6c1f8143c533bcb8"
+    },
+    {
+      "id": "H005",
+      "condition": "skill",
+      "directory": "skill/batch-039",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 37.352684299999964,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21624,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 118,
+          "reasoning_output_tokens": 69
+        }
+      ],
+      "completion_sha256": "bee0845586bb62dd4a5566cc4e5a3f663c7a752ae7bb3269cc6f3a7b93c31480",
+      "output_sha256": "f2071fd419bf6bb2694c63d61b8d61bf6ad28d432b517e408e9e8e56173c3f67"
+    },
+    {
+      "id": "H005",
+      "condition": "baseline",
+      "directory": "baseline/batch-039",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 38.748643099999754,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19447,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 210,
+          "reasoning_output_tokens": 155
+        }
+      ],
+      "completion_sha256": "3bee612036b00c5e32ba16ec87ab114a23aff297ee16acc26cf6c9532605f799",
+      "output_sha256": "b6ae7a7950bdf754f612f821677625fe96778b3dd05c58005e1130d82de073b8"
+    },
+    {
+      "id": "H006",
+      "condition": "skill",
+      "directory": "skill/batch-040",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 38.4671113000004,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21615,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 127,
+          "reasoning_output_tokens": 88
+        }
+      ],
+      "completion_sha256": "3c1b70e2e80a5bda4ff7209f029b4f3c7ce39fe71bd737bfb9b5778f3a66133b",
+      "output_sha256": "3e474bc23e35e322467bca5e4a88ed69b85a9306a5d97214a6f65b4616793bf1"
+    },
+    {
+      "id": "H006",
+      "condition": "baseline",
+      "directory": "baseline/batch-040",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 40.331994100000884,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19467,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 127,
+          "reasoning_output_tokens": 88
+        }
+      ],
+      "completion_sha256": "2349f7f5e243b0e591514cad3dd1d3439add26d5a8b19499e837c0c6ee9b2868",
+      "output_sha256": "996c72a4ffbe33773a3ae42279b65660bbe504f6890682be08580c53bd1d6567"
+    },
+    {
+      "id": "H007",
+      "condition": "skill",
+      "directory": "skill/batch-041",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 37.51325859999997,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21618,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 120,
+          "reasoning_output_tokens": 83
+        }
+      ],
+      "completion_sha256": "7b728c0b26191d66fa3898b8d754d24e085d2950a9e060c0f06a10a8f3da7bf6",
+      "output_sha256": "ee4eb06f227d10b2fcf23241957c6c4879b51c4f4199da1a5745d081a739fbf7"
+    },
+    {
+      "id": "H007",
+      "condition": "baseline",
+      "directory": "baseline/batch-041",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 42.10022389999722,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19441,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 195,
+          "reasoning_output_tokens": 147
+        }
+      ],
+      "completion_sha256": "42454f132421ff0389b0214d3cb4b88d3ebeb5d3e9f3160f44df70ccbb899339",
+      "output_sha256": "d9204b20d77bf7e031158af535b797d651aa59264390ecdba4d997ce148bc962"
+    },
+    {
+      "id": "H008",
+      "condition": "skill",
+      "directory": "skill/batch-042",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 41.69146510000064,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21622,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 275,
+          "reasoning_output_tokens": 220
+        }
+      ],
+      "completion_sha256": "c8f575e2d8f1b883e9b6ba9c0667a7fb7c204a9cc978f5e525b0c4288f454903",
+      "output_sha256": "49cced3d2744b6b0b2c059f5d386380b696ff6bcc083f34279de11a1ecc03762"
+    },
+    {
+      "id": "H008",
+      "condition": "baseline",
+      "directory": "baseline/batch-042",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 41.64214450000145,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19445,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 253,
+          "reasoning_output_tokens": 199
+        }
+      ],
+      "completion_sha256": "32f521bf72d8dbea20cc94e7a870e3573294d2bf1797a5093343ba8534ee56a4",
+      "output_sha256": "b5db3a17ec85b383ced1db2fbde9b867414ec482ee97d570ce5c870d1894f4fa"
+    },
+    {
+      "id": "H009",
+      "condition": "skill",
+      "directory": "skill/batch-043",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 36.86241890000019,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21619,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 133,
+          "reasoning_output_tokens": 92
+        }
+      ],
+      "completion_sha256": "f3a399dda95fefbce4048b9e44509f329dedb74edeb2743d100ccf2ad3d47e6b",
+      "output_sha256": "5e8231c886b6a431dc816e0ad48da59ead0550950f625a2cd9e465e1653a0f05"
+    },
+    {
+      "id": "H009",
+      "condition": "baseline",
+      "directory": "baseline/batch-043",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.05767620000188,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19591,
+          "cached_input_tokens": 16896,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 93,
+          "reasoning_output_tokens": 52
+        }
+      ],
+      "completion_sha256": "25c0ee8bb445816e7e8da340bdbe61772241e61dfba994f2dfe76c9c03a55581",
+      "output_sha256": "aac96f11039e86f7ad68c9d73ad3a54507ac99e9d1b843913eb7dac39e1d4020"
+    },
+    {
+      "id": "H010",
+      "condition": "skill",
+      "directory": "skill/batch-044",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 43.17640279999978,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21632,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 228,
+          "reasoning_output_tokens": 171
+        }
+      ],
+      "completion_sha256": "ba6a6d890443b9eca5978e7dc49ead78a4b339a13b9723392e940291012ed2c4",
+      "output_sha256": "0d05a9cb1b64b7cdf8950ac919799366ea4d380f15bdb3bed49dcae877476bbe"
+    },
+    {
+      "id": "H010",
+      "condition": "baseline",
+      "directory": "baseline/batch-044",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.97240790000069,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19455,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 388,
+          "reasoning_output_tokens": 329
+        }
+      ],
+      "completion_sha256": "793ea7ac1216a0032172ff0ae7f41c915f515c99bf49394c797cd7b754aef067",
+      "output_sha256": "c29a3b4accb3a36f396f67f75b5f567ff1928651fbe946bde518bc2f164067ae"
+    },
+    {
+      "id": "H011",
+      "condition": "skill",
+      "directory": "skill/batch-045",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 42.85266430000047,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21650,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 104,
+          "reasoning_output_tokens": 59
+        }
+      ],
+      "completion_sha256": "bee58144ef78f3b1ff24c7bbc8ae67bf870e8515ef87f5fd2784ac3c159683a2",
+      "output_sha256": "d4cce31d6f2174b87fef14c2cdc7154502502012de5f9babe3e12de02bc95efa"
+    },
+    {
+      "id": "H012",
+      "condition": "skill",
+      "directory": "skill/batch-046",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.267154400000436,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21619,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 228,
+          "reasoning_output_tokens": 180
+        }
+      ],
+      "completion_sha256": "3fd3f89cd2aaf552aaeab7d93b3fc89ae260b16793ab1812e86554c3ed26c6fd",
+      "output_sha256": "e98769cb48f8f0e8bcccd004a68962debf19059d2ac6b8350e75157620db9d64"
+    },
+    {
+      "id": "H011",
+      "condition": "baseline",
+      "directory": "baseline/batch-045",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 53.92800979999811,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19444,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 138,
+          "reasoning_output_tokens": 93
+        }
+      ],
+      "completion_sha256": "182720e59ed31c3b505c80c3699da9562462b0f68a68a94b2cdb423d7e22e523",
+      "output_sha256": "a3e67eda58c5276f50693fea3d923f691ab29bfb9b1fe9d6694ae9b129d5958c"
+    },
+    {
+      "id": "H012",
+      "condition": "baseline",
+      "directory": "baseline/batch-046",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.79887090000193,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19442,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 124,
+          "reasoning_output_tokens": 75
+        }
+      ],
+      "completion_sha256": "eecdc6cf4b5790352b0bcb528875cff8d226fed6d05c2297e006c216b73f25a6",
+      "output_sha256": "20fa1e80b1756d67ec794d9872cd52b69d26f1b9e955df71d78e404c10813724"
+    },
+    {
+      "id": "H013",
+      "condition": "baseline",
+      "directory": "baseline/batch-047",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.41082689999894,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19468,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 136,
+          "reasoning_output_tokens": 90
+        }
+      ],
+      "completion_sha256": "140793abbd8eb5ab5b29430818531786059a196168d754a78424d52eeb7bcfd6",
+      "output_sha256": "f4f37b4e99d75c9bf7aac91057b7739c30dc0e7177e4aa41e5a8c72a76dfe600"
+    },
+    {
+      "id": "H013",
+      "condition": "skill",
+      "directory": "skill/batch-047",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 56.03092049999759,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21871,
+          "cached_input_tokens": 16896,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 125,
+          "reasoning_output_tokens": 79
+        }
+      ],
+      "completion_sha256": "e3e71b3adae9d8d1cc16f935c57c2fa9c6d9769f1197e8b43989b24d08fc0ac3",
+      "output_sha256": "ec7e887ea6d807ed369a79576eede222263860dd130282e7f204742e47d9a91a"
+    },
+    {
+      "id": "H014",
+      "condition": "skill",
+      "directory": "skill/batch-048",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.15965170000345,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21683,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 111,
+          "reasoning_output_tokens": 67
+        }
+      ],
+      "completion_sha256": "2649221482ec547dd8f7f4f290c75f0607a0693fe8177f17c9b12549ae25b4ae",
+      "output_sha256": "f5df443910ad8ef4fa2ca311e1d3b1aa20e8463022199cb23381738ec093ff16"
+    },
+    {
+      "id": "H014",
+      "condition": "baseline",
+      "directory": "baseline/batch-048",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.717609499999526,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19429,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 122,
+          "reasoning_output_tokens": 77
+        }
+      ],
+      "completion_sha256": "02cc4a3ceb6e010586073545e62b603241b31b5f3dc40ab559eb037347ad2910",
+      "output_sha256": "cfdbb559cf7929d646a60aa3783142fcac21efc9d10eeee51e995fe7a97b72ef"
+    },
+    {
+      "id": "H015",
+      "condition": "skill",
+      "directory": "skill/batch-049",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 57.701036499998736,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21694,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 209,
+          "reasoning_output_tokens": 162
+        }
+      ],
+      "completion_sha256": "dd20d661549205050e740849b984531695cd03033581d7e7b73c12f0806a1ece",
+      "output_sha256": "d76e855d21ccb3f0282ae0ce5d352ee11dcbea538797fa4f807dccfc8e05180d"
+    },
+    {
+      "id": "H015",
+      "condition": "baseline",
+      "directory": "baseline/batch-049",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.40396369999871,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19955,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 123,
+          "reasoning_output_tokens": 76
+        }
+      ],
+      "completion_sha256": "3e39e67bca12f62915184fae43809eda89956876b67158c60a46a8385eed5636",
+      "output_sha256": "fe74e4cf156d125d5d035517a0e41f97c972cb5f1120b33f540e48543d9fb394"
+    },
+    {
+      "id": "H016",
+      "condition": "skill",
+      "directory": "skill/batch-050",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.70349559999886,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21689,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 147,
+          "reasoning_output_tokens": 107
+        }
+      ],
+      "completion_sha256": "126a046750a50a18e552e1d6f7937a6b6b1d0e3eff9e906ed6a0960b8257c6ce",
+      "output_sha256": "138b6b773fabfde4f5713648bd24dc402d51ffb465d7b3764b5cea063f8fe344"
+    },
+    {
+      "id": "H016",
+      "condition": "baseline",
+      "directory": "baseline/batch-050",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.629480600000534,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19435,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 150,
+          "reasoning_output_tokens": 108
+        }
+      ],
+      "completion_sha256": "110d10c458769f5d3c135e700ee2fe492780f3e79d9714891e41c1628458717b",
+      "output_sha256": "3afef34434e9799be4d9e6b4bd534ac08c4f97781b75bd9972e502e42a9c5b6c"
+    },
+    {
+      "id": "H017",
+      "condition": "skill",
+      "directory": "skill/batch-051",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.390954300000885,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21698,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 192,
+          "reasoning_output_tokens": 139
+        }
+      ],
+      "completion_sha256": "da4b211cf91d4d3fd4ce4959e7a6c5d39a021239999e92b1f38d2a6c341dc262",
+      "output_sha256": "a9d4877956c967c7d4a7b774c60f41d809a8d495c779ff7de84e6e20b71a12b4"
+    },
+    {
+      "id": "H017",
+      "condition": "baseline",
+      "directory": "baseline/batch-051",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 52.814458599998034,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19959,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 275,
+          "reasoning_output_tokens": 216
+        }
+      ],
+      "completion_sha256": "e7bf61407e20bb5179ef6a3b07e1fed933916c453da6a79566f96b0dccf5e837",
+      "output_sha256": "314752f0b6423449afe4b83d1c8f8d0c08c31d1172803a231d416176f078e889"
+    },
+    {
+      "id": "H018",
+      "condition": "skill",
+      "directory": "skill/batch-052",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.245524699999805,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21692,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 231,
+          "reasoning_output_tokens": 184
+        }
+      ],
+      "completion_sha256": "ba72c9c04187a2385f959a4a145ee50b44ae606de26792522614046c1ccd7a4d",
+      "output_sha256": "2f0e29a1894f80d8ff0e79618074389bb1b4d7eec5c99bebfa69f8219aa9249e"
+    },
+    {
+      "id": "H018",
+      "condition": "baseline",
+      "directory": "baseline/batch-052",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.986587500003225,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19953,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 168,
+          "reasoning_output_tokens": 121
+        }
+      ],
+      "completion_sha256": "b01c827e222de0eb3a674375dedddc8eb282ecc997d01d7c6b2724c445d1a0aa",
+      "output_sha256": "4a3b9860b8e672aaa125da411a75ed05d7ab6d27ae16d5e6f69e5531b5a65b1d"
+    },
+    {
+      "id": "H019",
+      "condition": "skill",
+      "directory": "skill/batch-053",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 60.43077980000089,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21687,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 491,
+          "reasoning_output_tokens": 439
+        }
+      ],
+      "completion_sha256": "b39c5e71af8dc478b061ef5a2f72c686e8301e42ba054f36f1de262541aafbea",
+      "output_sha256": "1ff83585daec0c9d369b65b108c6157872ea0cff4ccf89366930bb0d01d65f95"
+    },
+    {
+      "id": "H019",
+      "condition": "baseline",
+      "directory": "baseline/batch-053",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 52.74510129999908,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19433,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 122,
+          "reasoning_output_tokens": 84
+        }
+      ],
+      "completion_sha256": "f8cb8506054328185310fa0b53ab45ec25539c175809a2948ec8b57a94fa889b",
+      "output_sha256": "c841fa315cb9778b0873b1404d9ab7bdfbbcb64c106bc9370f5047bcf73c9577"
+    },
+    {
+      "id": "H020",
+      "condition": "skill",
+      "directory": "skill/batch-054",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.697172899999714,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21697,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 246,
+          "reasoning_output_tokens": 194
+        }
+      ],
+      "completion_sha256": "ef0ad33c19d4d11a04f399d593d4d2c8f03bac504ba8bd257f9640f566d17b4c",
+      "output_sha256": "31e70ca6cfd4b2b612f26fa1b8b3d7624b4e1d5a9ab32582ec0781725fcbdd7d"
+    },
+    {
+      "id": "H020",
+      "condition": "baseline",
+      "directory": "baseline/batch-054",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.71927290000167,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19443,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 137,
+          "reasoning_output_tokens": 93
+        }
+      ],
+      "completion_sha256": "69b6413230f7205bf5bdf3206eaeca559fba0bc50540427da68c83bb53296e61",
+      "output_sha256": "ed95bcb6d6c6c1fa4f32dbb45c6c83224ad88539234d2a2345ee0b6b877fa203"
+    },
+    {
+      "id": "H021",
+      "condition": "skill",
+      "directory": "skill/batch-055",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 56.403133899999375,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21690,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 164,
+          "reasoning_output_tokens": 104
+        }
+      ],
+      "completion_sha256": "cfd7f4fefd1285999ba47961c633a70423d2841039b132672c793826a3af7946",
+      "output_sha256": "763184c5b5408249f492ea0da75319c80c16bb3cb97fcbc143d81dba5e52a1e3"
+    },
+    {
+      "id": "H021",
+      "condition": "baseline",
+      "directory": "baseline/batch-055",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.9721798999999,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19436,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 129,
+          "reasoning_output_tokens": 83
+        }
+      ],
+      "completion_sha256": "b5056026099158d53c7f528b7d8b617b7ffbda21507c4169d59bd18d4424028a",
+      "output_sha256": "25d850a5b58359a691f34697db8b0842e82f629cec8453898f5b715081cdcb3c"
+    },
+    {
+      "id": "H022",
+      "condition": "skill",
+      "directory": "skill/batch-056",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.16182470000058,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21695,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 208,
+          "reasoning_output_tokens": 154
+        }
+      ],
+      "completion_sha256": "c840a74c42a88431a5ee5f3ec0ccc8be6672c888612ed9639b2ba069243b2ad7",
+      "output_sha256": "de58290bf44ffb6648fb39144d23338cbb992a4cd1842f799bb5045bdf32f568"
+    },
+    {
+      "id": "H022",
+      "condition": "baseline",
+      "directory": "baseline/batch-056",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.53837320000093,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19441,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 366,
+          "reasoning_output_tokens": 311
+        }
+      ],
+      "completion_sha256": "35a630d7e16d5ecc220d94d92310719fa10da5efb1feac46c56921db92506e1e",
+      "output_sha256": "5adf0fdf0910a81eb53294618a410666cec5400b5cfbd6511ad01615b389940c"
+    },
+    {
+      "id": "H023",
+      "condition": "skill",
+      "directory": "skill/batch-057",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 52.93214599999919,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21688,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 142,
+          "reasoning_output_tokens": 95
+        }
+      ],
+      "completion_sha256": "11541b1a388c646bbf3f6665008cb988a5f1a5662a8cd1b849fa12fccd4c742c",
+      "output_sha256": "ca7c0f653fd2b56ffac932b0d77b5b977b2288a2ac5ce42ea816f9c846d39d9c"
+    },
+    {
+      "id": "H023",
+      "condition": "baseline",
+      "directory": "baseline/batch-057",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.11946430000171,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19583,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 127,
+          "reasoning_output_tokens": 80
+        }
+      ],
+      "completion_sha256": "860c3cb4af34bcac6a8b4f52ac0eb9b8de4746a0865e4b2534274341ca2f9f48",
+      "output_sha256": "51fe0379330b0aa99ba296bb58d9ab27e269ffd3a1e71b7227d7c2b2380725e7"
+    },
+    {
+      "id": "H024",
+      "condition": "skill",
+      "directory": "skill/batch-058",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.950942999999825,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21694,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 110,
+          "reasoning_output_tokens": 67
+        }
+      ],
+      "completion_sha256": "10bb925e6c6159ad46b6ab7ac900f0fbf6ae78eb1802e0288569b089d80103b2",
+      "output_sha256": "0d4210629c16d83ecf2a0cdef7eaccdec211dbc59aaebd07e5eb52611f7cc8a1"
+    },
+    {
+      "id": "H024",
+      "condition": "baseline",
+      "directory": "baseline/batch-058",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.3853171999981,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19440,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 138,
+          "reasoning_output_tokens": 94
+        }
+      ],
+      "completion_sha256": "0957c09ab00f411921b641e1ed28d8a8ddf0edeef99cc66d6d4ef11bf00e12a3",
+      "output_sha256": "cceef807cab6be632c64197e6b9cf922c36b1582bf9d08c92822959bc81927f8"
+    },
+    {
+      "id": "H025",
+      "condition": "skill",
+      "directory": "skill/batch-059",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.63344639999923,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21587,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 129,
+          "reasoning_output_tokens": 73
+        }
+      ],
+      "completion_sha256": "d4bf82dd91ff0d82eedc445080f3bccf199c6f0f68d6a2a1f52dac74f86495fe",
+      "output_sha256": "34054baf2b0eef010d6ec3dc473afdadc99c91882fd3e2f0e1b14a1b60ac3b39"
+    },
+    {
+      "id": "H025",
+      "condition": "baseline",
+      "directory": "baseline/batch-059",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.635699499998736,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19925,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 86,
+          "reasoning_output_tokens": 41
+        }
+      ],
+      "completion_sha256": "05ca47dd4f7108c97d2ff417b66f42d3d304c3058b81facd7239902c8ce0fc0e",
+      "output_sha256": "a63dc93f1639e61c3c6506cd65494a6adb0c68edf0a831c368100f3217abeeb1"
+    },
+    {
+      "id": "H026",
+      "condition": "skill",
+      "directory": "skill/batch-060",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 44.050202599999466,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21589,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 110,
+          "reasoning_output_tokens": 52
+        }
+      ],
+      "completion_sha256": "9d9ac6e284addca98c6bcb9842d6728685cf023faccf9a7640c0fb9a7c9dfff0",
+      "output_sha256": "7dda5f4520957141b8efc7238cb67fa2e859de8130cd0241cca912f6e6be1e59"
+    },
+    {
+      "id": "H026",
+      "condition": "baseline",
+      "directory": "baseline/batch-060",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.767658600001596,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19412,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 91,
+          "reasoning_output_tokens": 31
+        }
+      ],
+      "completion_sha256": "e576f5d7d05f193ca3226edb92b95ed2731fd9cc02ea8c06d9bdf0e663ace64e",
+      "output_sha256": "a5758feef7975c319c047118ec0996687cc7ae0433a37a04062e8a60ea3f2bbe"
+    },
+    {
+      "id": "H027",
+      "condition": "skill",
+      "directory": "skill/batch-061",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.8162067000012,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21583,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 104,
+          "reasoning_output_tokens": 55
+        }
+      ],
+      "completion_sha256": "f935ce7263d85937789ed2d40f52cf9de588bb09eb1d814dd3c848cf3060d8e6",
+      "output_sha256": "734d5587bec65aa51306bec3f603f5feece1cd49136f88e68f9b2b9f709c9e05"
+    },
+    {
+      "id": "H027",
+      "condition": "baseline",
+      "directory": "baseline/batch-061",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 60.19805239999914,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19406,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 76,
+          "reasoning_output_tokens": 35
+        }
+      ],
+      "completion_sha256": "f78a50a713258e9450789cabd00f076ef602c813a5ac1180fc5ed11d480dbdcf",
+      "output_sha256": "8d458df442c4b7dee5222b4389d6a114793b2c12e9ca0d132ae3442afe056d91"
+    },
+    {
+      "id": "H028",
+      "condition": "skill",
+      "directory": "skill/batch-062",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 52.89061089999814,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21587,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 117,
+          "reasoning_output_tokens": 61
+        }
+      ],
+      "completion_sha256": "b96c571f3e1b44a2735772317755ebee5f5f9c99b2e4e25283cbdf031f0a3b1e",
+      "output_sha256": "28d111a368d65db95a28c132c5b320899f78d79440f93df718ee0114e3b8ec6d"
+    },
+    {
+      "id": "H028",
+      "condition": "baseline",
+      "directory": "baseline/batch-062",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.40145969999867,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19410,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 74,
+          "reasoning_output_tokens": 29
+        }
+      ],
+      "completion_sha256": "582e4dfad9941dff924f79b67f001c0b22f5911fe3bbb0ad84d6c9976685a0da",
+      "output_sha256": "131ea67e577596ee7bb39005bd033f565a54282f73079a969e618e96c3010944"
+    },
+    {
+      "id": "H029",
+      "condition": "skill",
+      "directory": "skill/batch-063",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.689122800002224,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21591,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 117,
+          "reasoning_output_tokens": 58
+        }
+      ],
+      "completion_sha256": "760d06935c434810be535dd82574fbbd678bce33f16099328cf45c5ac8583e5b",
+      "output_sha256": "b42c248b5c06b80214c7bb3715bdd0ba931dcbaf590722690984ff43c1fa147e"
+    },
+    {
+      "id": "H029",
+      "condition": "baseline",
+      "directory": "baseline/batch-063",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.80670159999863,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19414,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 117,
+          "reasoning_output_tokens": 68
+        }
+      ],
+      "completion_sha256": "20f60670d0579fdafee628d5f5d52922dbf230a23354436aefb4083df5aeab25",
+      "output_sha256": "77933302ccaccc0a08e7b9c78d9d1c71d2540a53d2d3739727500afc7c261947"
+    },
+    {
+      "id": "H030",
+      "condition": "skill",
+      "directory": "skill/batch-064",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.68447540000125,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 22103,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 89,
+          "reasoning_output_tokens": 43
+        }
+      ],
+      "completion_sha256": "85f5ecbe1d21fc315b6adda21d73fb9b446260b9476c5152eb812efb8b491b29",
+      "output_sha256": "36f67c90a9df311062f203adca877e0b6ade4ffe03513a2393e1361dcb852ce9"
+    },
+    {
+      "id": "H030",
+      "condition": "baseline",
+      "directory": "baseline/batch-064",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.54192709999916,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19926,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 87,
+          "reasoning_output_tokens": 41
+        }
+      ],
+      "completion_sha256": "31e5685dd46b20623ed853037ac5d0430ff6f8d207f6f6d34fcf4df99f936959",
+      "output_sha256": "11e08a67d011ca71fb19628b3d3fa50b955d37dc70d908abd5dda23be1af1538"
+    },
+    {
+      "id": "H031",
+      "condition": "skill",
+      "directory": "skill/batch-065",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 53.344738899999356,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21587,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 99,
+          "reasoning_output_tokens": 43
+        }
+      ],
+      "completion_sha256": "2f864ac77e78c4e2d275e42ae91df4843b1729a48bd16b8f4bd7a1d43d9edf18",
+      "output_sha256": "e4500cbcc6330374a9efb742d4ce7aaceef060263828af5fea9772176a58ead7"
+    },
+    {
+      "id": "H031",
+      "condition": "baseline",
+      "directory": "baseline/batch-065",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 56.75167660000079,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19925,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 91,
+          "reasoning_output_tokens": 46
+        }
+      ],
+      "completion_sha256": "979f36563372134cd3b03d6279ddc9d697561e633b3283b383a2cc28f3a3e024",
+      "output_sha256": "6f05730d15fd3b6ab5703fadb38934a96ee7660fd88943581aa7633ff250089c"
+    },
+    {
+      "id": "H032",
+      "condition": "skill",
+      "directory": "skill/batch-066",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.93903440000213,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21584,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 136,
+          "reasoning_output_tokens": 87
+        }
+      ],
+      "completion_sha256": "81c8f6e173f375c9860cc76490f70a7cd58e71096a57b90443443d61052425f8",
+      "output_sha256": "62bfa91979750f9e63f019b7945835922f36108f0f96a1ee05d45c8d2c140fae"
+    },
+    {
+      "id": "H033",
+      "condition": "skill",
+      "directory": "skill/batch-067",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.0753767999995,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21587,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 136,
+          "reasoning_output_tokens": 79
+        }
+      ],
+      "completion_sha256": "66947660c8a267c9498dda7f9974244784f1f7ab0d788bb565df8f4ef2fc1ac8",
+      "output_sha256": "2f30e92ab56af3a111eb38e0655c1db5c63a337aad06128840d0338d298d4583"
+    },
+    {
+      "id": "H032",
+      "condition": "baseline",
+      "directory": "baseline/batch-066",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 60.36044749999928,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19407,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 97,
+          "reasoning_output_tokens": 55
+        }
+      ],
+      "completion_sha256": "894713833f4440d648b978bd8c9094cd1f77e24be3334ed9de5550d2700216c5",
+      "output_sha256": "c11ba9f6aeaa43405b97f4cfccbe0fc612dfbc47be80c9ea4cb92cd1def5f9c0"
+    },
+    {
+      "id": "H033",
+      "condition": "baseline",
+      "directory": "baseline/batch-067",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.81021479999981,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19410,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 84,
+          "reasoning_output_tokens": 39
+        }
+      ],
+      "completion_sha256": "94633ae22b3350ddabf7c0fae4a2ed2393c0320bf7a3e1fef9cabb131cb03c10",
+      "output_sha256": "a6b58fb1fdea5260de0919003ce49d37c2d362c91f6f1374068d43369cbe2842"
+    },
+    {
+      "id": "H034",
+      "condition": "skill",
+      "directory": "skill/batch-068",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.11098270000002,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21580,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 92,
+          "reasoning_output_tokens": 46
+        }
+      ],
+      "completion_sha256": "84846150d48264b59d26e49d1411df9dcaff87d3cd27f87555bdf8432426c69a",
+      "output_sha256": "dddb76505365471adf9f7046d1e720f197a86338758b78207e471918a0ad360b"
+    },
+    {
+      "id": "H034",
+      "condition": "baseline",
+      "directory": "baseline/batch-068",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.151182500001596,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19403,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 70,
+          "reasoning_output_tokens": 32
+        }
+      ],
+      "completion_sha256": "dfa0126e618cb50d979781afa006a492325a5b447292839b34dfba323f7441f3",
+      "output_sha256": "f8b5c7fff0d26cbbdebdce61bc2dd445bb62c74bba57310bbd2f9ddd4930d636"
+    },
+    {
+      "id": "H035",
+      "condition": "skill",
+      "directory": "skill/batch-069",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 53.44873899999948,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21733,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 113,
+          "reasoning_output_tokens": 57
+        }
+      ],
+      "completion_sha256": "56ba686c7786168831d9036c0db5e864d1d4febe7c89e40aa816987ff17433a1",
+      "output_sha256": "63c7e8f54cfb5b4b338c89256319ae6427e5182e726f94d3763b4557214175ee"
+    },
+    {
+      "id": "H035",
+      "condition": "baseline",
+      "directory": "baseline/batch-069",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.62308580000172,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19407,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 68,
+          "reasoning_output_tokens": 26
+        }
+      ],
+      "completion_sha256": "8ec492ca6ab81c990de1539b8ebfeeaeef446fadbbef15ed414a4ffe33ea5b73",
+      "output_sha256": "54e9ebad764d75ead8bbb37d39d54516450f383e23bd98cdf52a88420c9415ac"
+    },
+    {
+      "id": "H036",
+      "condition": "skill",
+      "directory": "skill/batch-070",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.00010480000128,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21581,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 107,
+          "reasoning_output_tokens": 60
+        }
+      ],
+      "completion_sha256": "7c2b4cad91cbcf9d120c83d830e6f1fa0577e08f7f25e0c10d74cf2303859031",
+      "output_sha256": "b386976406f98800e80070522dbfbedb78064c177a9db3b67e0de89a7e632783"
+    },
+    {
+      "id": "H036",
+      "condition": "baseline",
+      "directory": "baseline/batch-070",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.716933299998345,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19404,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 69,
+          "reasoning_output_tokens": 30
+        }
+      ],
+      "completion_sha256": "42cb7da35023c52c0fc812bc95a0a888b551472f07ec28320c02d3f1f052ee73",
+      "output_sha256": "629bafc0a5ceed84cc6d70d8d1debfa8cce2afaa263ffbb259d1791eecce017f"
+    },
+    {
+      "id": "H037",
+      "condition": "baseline",
+      "directory": "baseline/batch-071",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 53.44107869999789,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19421,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 94,
+          "reasoning_output_tokens": 50
+        }
+      ],
+      "completion_sha256": "999cd64df47431fcc0ab6302707d53b44970ed0b89de68a57a764e530257258a",
+      "output_sha256": "43f05840bf5499084cd302fd5d749b16d09e5097470930a976d474dc9f3ac022"
+    },
+    {
+      "id": "H037",
+      "condition": "skill",
+      "directory": "skill/batch-071",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 60.03791710000223,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21675,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 95,
+          "reasoning_output_tokens": 39
+        }
+      ],
+      "completion_sha256": "cc91032102f87a84192daa8756db508f22a1f33cd6b81d0e947606a8bf91b32e",
+      "output_sha256": "390d552ff4dded989cb6692558186e01563015e12e82af521be19bc7033f0dd5"
+    },
+    {
+      "id": "H038",
+      "condition": "skill",
+      "directory": "skill/batch-072",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.8838324999997,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 22193,
+          "cached_input_tokens": 17280,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 238,
+          "reasoning_output_tokens": 178
+        }
+      ],
+      "completion_sha256": "4209a5c3f9df225273bc9852a2135cb3739759b465157c0d12bb71a0d2b680f0",
+      "output_sha256": "e0041894608c69fc64cd84d6f906d0ddb75fe44a15cabc052715feba8a7fd233"
+    },
+    {
+      "id": "H038",
+      "condition": "baseline",
+      "directory": "baseline/batch-072",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 57.96927819999837,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19573,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 245,
+          "reasoning_output_tokens": 198
+        }
+      ],
+      "completion_sha256": "87d3133d184bc60361c5ea5594c5937b4cfac57e920ab9e510011aa4281ddb19",
+      "output_sha256": "e2576d078819ac408d9cf03934b43c4b28b12cbccee4dd83ea9cfe1b5fc5c66f"
+    },
+    {
+      "id": "H039",
+      "condition": "skill",
+      "directory": "skill/batch-073",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 58.19797209999524,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21677,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 122,
+          "reasoning_output_tokens": 48
+        }
+      ],
+      "completion_sha256": "7f1696e2f9916ec73e6ec601d43f0da4e575c4c714a0c2bdc6fae6d27a0de052",
+      "output_sha256": "625532baf9e9ec97364d13ff27124e471bc94d935612bec4a607b3e75feebf18"
+    },
+    {
+      "id": "H039",
+      "condition": "baseline",
+      "directory": "baseline/batch-073",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 44.99613859999954,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19423,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 76,
+          "reasoning_output_tokens": 30
+        }
+      ],
+      "completion_sha256": "73d81fb4851b7278aaf37f2d7249bdc53f8b3186149d634164b743fd3372f75c",
+      "output_sha256": "612b93c4116c571876ce89def51389f813cec78c50546141c38780211408aef5"
+    },
+    {
+      "id": "H040",
+      "condition": "baseline",
+      "directory": "baseline/batch-074",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 44.70842989999801,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19420,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 103,
+          "reasoning_output_tokens": 60
+        }
+      ],
+      "completion_sha256": "2800aef5631b0fd6048bc9b04eda5dc6f17da73df449c160e461c97099f66374",
+      "output_sha256": "fa5ad35d628945f85c7a9927d9d434556208b5f8c89671f4b6dc0cb99ec353c5"
+    },
+    {
+      "id": "H040",
+      "condition": "skill",
+      "directory": "skill/batch-074",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.589444100005494,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21823,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 120,
+          "reasoning_output_tokens": 61
+        }
+      ],
+      "completion_sha256": "5e1e794d45b21c6c39b99e61a6dbf3e0dd69008159d127b4d05dc889e8247d47",
+      "output_sha256": "034822f7311a3dc797fedccede62e46f07627fa05483356e4dc7f248d34e124c"
+    },
+    {
+      "id": "H041",
+      "condition": "skill",
+      "directory": "skill/batch-075",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.99441310000111,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21678,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 228,
+          "reasoning_output_tokens": 161
+        }
+      ],
+      "completion_sha256": "9f8129ced3adaa60b473099031164c9f24e7b96e838eaa7e90ef51e2cbb2e463",
+      "output_sha256": "c37dcfca56da3f56568886a8f4bfa3a765bc47cb59c4b679a732eb5cd3cdd12d"
+    },
+    {
+      "id": "H042",
+      "condition": "skill",
+      "directory": "skill/batch-076",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.36867429999984,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21677,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 122,
+          "reasoning_output_tokens": 65
+        }
+      ],
+      "completion_sha256": "9d3f1b5151060ffde17b49d4d7bd1689c3033e54ba14e1d4bda06c5192c2873a",
+      "output_sha256": "42b3d0c63370f8a5250508e41aec5f80eab79918218de2f1e2e169680b3a6c9d"
+    },
+    {
+      "id": "H041",
+      "condition": "baseline",
+      "directory": "baseline/batch-075",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 63.56903849999799,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19573,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 212,
+          "reasoning_output_tokens": 167
+        }
+      ],
+      "completion_sha256": "051440dc9aca3a3b1b625a77dff17af937bbd0337b9e5f6ead923ea184e09079",
+      "output_sha256": "9e550f62ebfc3415593fda45cb275e40a541b90abc821f1c785dabcd85d13771"
+    },
+    {
+      "id": "H042",
+      "condition": "baseline",
+      "directory": "baseline/batch-076",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.56091319999541,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19423,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 150,
+          "reasoning_output_tokens": 104
+        }
+      ],
+      "completion_sha256": "6a4c6aa8e99fc67c9353e061ff60d83bc4cbc1a3f2533b2a5e7ce1eaf682e02c",
+      "output_sha256": "308cf188f14732a90fc8ab5a868ecc9b72eb7975ebec500f2499bfb104c77196"
+    },
+    {
+      "id": "H043",
+      "condition": "skill",
+      "directory": "skill/batch-077",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 42.35654159999831,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21680,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 108,
+          "reasoning_output_tokens": 48
+        }
+      ],
+      "completion_sha256": "2aac3002fc2d02936e8f5b40e5b922a11d6c52592a193dc252eb834d2c808149",
+      "output_sha256": "1a3e714f238e311a62cd3e3ac31607c50ff9520c3318df4c7afada2bde4eaea0"
+    },
+    {
+      "id": "H044",
+      "condition": "skill",
+      "directory": "skill/batch-078",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 43.231560200001695,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21673,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 111,
+          "reasoning_output_tokens": 55
+        }
+      ],
+      "completion_sha256": "b0351bd428d6f3b85f2a44a5eb56b11ede846a39deb7e5caba6d23cdd0c2c86c",
+      "output_sha256": "ad38949f91102fcbf4c614c3f12a76e1bf31fe2463e831982c6c475f1993e372"
+    },
+    {
+      "id": "H043",
+      "condition": "baseline",
+      "directory": "baseline/batch-077",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.723905800005014,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19426,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 195,
+          "reasoning_output_tokens": 128
+        }
+      ],
+      "completion_sha256": "6d39bf505040a11670c8a22cf528ec0866c8a1f9d9419f2b82e81e1976132c22",
+      "output_sha256": "85ede97febada923752613f94e232fd1dc7cb1a0266683e9378f003f8dad393c"
+    },
+    {
+      "id": "H044",
+      "condition": "baseline",
+      "directory": "baseline/batch-078",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 51.305819600005634,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19934,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 112,
+          "reasoning_output_tokens": 56
+        }
+      ],
+      "completion_sha256": "daa42e5756b0d1821220833a414424b6aada62a541bafe8e932ec49fc4454c0f",
+      "output_sha256": "ecf600da12ceeb2ebc4bd7797df8fe3934ced87b657c0ba6d45c4238ef22bfa9"
+    },
+    {
+      "id": "H045",
+      "condition": "baseline",
+      "directory": "baseline/batch-079",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.44448220000049,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19422,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 96,
+          "reasoning_output_tokens": 51
+        }
+      ],
+      "completion_sha256": "7f1f4ebc6a2e10268ea2ec470dffcfffb72ef91013fa92b24ed27b193918b40d",
+      "output_sha256": "02d98c1361fa4e1e03633a04502d73478f90c7953940539e4a594c8745e74972"
+    },
+    {
+      "id": "H045",
+      "condition": "skill",
+      "directory": "skill/batch-079",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 53.01469389999693,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21676,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 140,
+          "reasoning_output_tokens": 83
+        }
+      ],
+      "completion_sha256": "96d17d34bde71303efb766847947ca33f6b0052839a7b391a0ab2a0bc864b665",
+      "output_sha256": "dee2ab388dd6fcdb38f2b6ab46ad5c8d28cfc10104be5b8db4a56c9118343d59"
+    },
+    {
+      "id": "H046",
+      "condition": "baseline",
+      "directory": "baseline/batch-080",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.68611149999924,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19414,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 68,
+          "reasoning_output_tokens": 31
+        }
+      ],
+      "completion_sha256": "047ea56bf59751218838cefcc0e37377d4098e3c3f88e66228341ca3b03ee5fb",
+      "output_sha256": "0bea8729bb66e50c4306e00b43b2a9e04552fc04dc539bdbfb1560ed5643ec62"
+    },
+    {
+      "id": "H047",
+      "condition": "skill",
+      "directory": "skill/batch-081",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 42.958008900001005,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21679,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 110,
+          "reasoning_output_tokens": 50
+        }
+      ],
+      "completion_sha256": "469ad6b79f4bf2d83621df9255e375b4902a7bacf61f3047843d597372f17ae1",
+      "output_sha256": "1ea9100796012becd085dc3676c306cfc5e8b01dd5eced14ee685771c6f0456f"
+    },
+    {
+      "id": "H046",
+      "condition": "skill",
+      "directory": "skill/batch-080",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 58.95224180000514,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21817,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 140,
+          "reasoning_output_tokens": 87
+        }
+      ],
+      "completion_sha256": "673a7cead2da5de9e3ceae88dcdb7794c4547f03763bf3a4d70a81ffc0ebe2a8",
+      "output_sha256": "d89a0158006e8453a17a4d6fe2fd3dceaaa5eee6e58b1aca9f0525ba70f55ab5"
+    },
+    {
+      "id": "H047",
+      "condition": "baseline",
+      "directory": "baseline/batch-081",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 44.482739500002936,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19940,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 100,
+          "reasoning_output_tokens": 40
+        }
+      ],
+      "completion_sha256": "cffc51d2bb4193bf857cd8e5ae248a4697e28477085dc3ca23ef334c415fd545",
+      "output_sha256": "05d1d3425c31a54384d611aa2dade5f251b3229a97795fc20fbf743c1febea1c"
+    },
+    {
+      "id": "H048",
+      "condition": "skill",
+      "directory": "skill/batch-082",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.72394420000637,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21672,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 107,
+          "reasoning_output_tokens": 54
+        }
+      ],
+      "completion_sha256": "35c61bd7ad8007323346501504a5841a6302ac6aae33034922dc27ea4632148a",
+      "output_sha256": "54d618b8cea1fbcf98944d62d59eddfdcdf120e8b936d0eb9a5aa21a9f16f57e"
+    },
+    {
+      "id": "H048",
+      "condition": "baseline",
+      "directory": "baseline/batch-082",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 57.16987459999655,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19418,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 126,
+          "reasoning_output_tokens": 85
+        }
+      ],
+      "completion_sha256": "82cfbe02710dc9c84c08c86113719288583c3704cdfada71946718ef0d4cca01",
+      "output_sha256": "1d13d9075cdc72a2a604211f94b8adbb12843c0cd19d0aba9cee986ac7befa2a"
+    },
+    {
+      "id": "H049",
+      "condition": "skill",
+      "directory": "skill/batch-083",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 52.45625899999868,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21632,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 155,
+          "reasoning_output_tokens": 66
+        }
+      ],
+      "completion_sha256": "e49dee0695811b7e044aab8b929dde8b17699cd2b6d77f62ea004bb39e0c1833",
+      "output_sha256": "751f92ea1798d6f8dd0a481017c1156170bc450942b07685393afc464f9d0bd4"
+    },
+    {
+      "id": "H050",
+      "condition": "skill",
+      "directory": "skill/batch-084",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 52.15070660000492,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21682,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 193,
+          "reasoning_output_tokens": 110
+        }
+      ],
+      "completion_sha256": "7d620eba74216be9570eb67f3a978a92f779b44bdecb25d49ec4bf4f727d5db3",
+      "output_sha256": "79bb2a41b80d213d1c9eb1277922f85314110ec09e8b6f0430374cb92bf89313"
+    },
+    {
+      "id": "H049",
+      "condition": "baseline",
+      "directory": "baseline/batch-083",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 65.0017938000019,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19455,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 149,
+          "reasoning_output_tokens": 60
+        }
+      ],
+      "completion_sha256": "ef5c359600c182b47f9bb2baef2dce3e03b0ddc914b8d850987cb40f26be4175",
+      "output_sha256": "23c8a6280cdaa28519933e156d267c0d98e88232d8d4c625eb89cb4d3b7b920c"
+    },
+    {
+      "id": "H050",
+      "condition": "baseline",
+      "directory": "baseline/batch-084",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.54095460000099,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19428,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 200,
+          "reasoning_output_tokens": 138
+        }
+      ],
+      "completion_sha256": "e030c8870883099b52eddd0c26f58555b418dbb11c7f648462bcdd7b51f0425f",
+      "output_sha256": "261efd61ef841934e07d7aec70ca061934708d0cbcfdb9cdc7433035e43fb6f2"
+    },
+    {
+      "id": "H051",
+      "condition": "baseline",
+      "directory": "baseline/batch-085",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.70549899999605,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19437,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 183,
+          "reasoning_output_tokens": 111
+        }
+      ],
+      "completion_sha256": "fe305cb9a299c2129d27603c055140f30c31990982bfa69cddba77c64ed3758d",
+      "output_sha256": "6d8d8d06715e2773724ef210eab91e384429426fb7c6c23f8a4dc2a71c2723af"
+    },
+    {
+      "id": "H051",
+      "condition": "skill",
+      "directory": "skill/batch-085",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 63.674743199997465,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21763,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 250,
+          "reasoning_output_tokens": 178
+        }
+      ],
+      "completion_sha256": "28eed2db6917a6dce2782ae3870a9df17a58f360be5c64159a2673bf40ae34d6",
+      "output_sha256": "80c95bbb0f83c684ab49e33c8e731a6f2e8c6dd70cdf305c971d5908955b922d"
+    },
+    {
+      "id": "H052",
+      "condition": "skill",
+      "directory": "skill/batch-086",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 52.03535729999567,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 22187,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 165,
+          "reasoning_output_tokens": 76
+        }
+      ],
+      "completion_sha256": "4b825ca0b8d17892f8bb13601cb2bac71fa4959b77cee6e1a50b9399ad9d0d34",
+      "output_sha256": "4245f2fdffa32ab29ecbe695f373d994781f23916f374a896e860928e3fb00b0"
+    },
+    {
+      "id": "H052",
+      "condition": "baseline",
+      "directory": "baseline/batch-086",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.578585999995994,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19933,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 343,
+          "reasoning_output_tokens": 289
+        }
+      ],
+      "completion_sha256": "02b96b6758deeddf52d44c53fd021a78e3735130ccb6393d38130b2949209604",
+      "output_sha256": "9e89c207d34e2e60320ca85d22738058229dffa27fb3b623f50f68058b4d8052"
+    },
+    {
+      "id": "H053",
+      "condition": "skill",
+      "directory": "skill/batch-087",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.68512200000259,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21595,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 217,
+          "reasoning_output_tokens": 168
+        }
+      ],
+      "completion_sha256": "abe5e334b1552c8d1a44a0bdddd65bb6f884f15aeb63fdc77b1b427aab57246e",
+      "output_sha256": "4234e797951bef87d9bf0b1bbe3c160d7f819a679b6f114791864c38dda8caa7"
+    },
+    {
+      "id": "H053",
+      "condition": "baseline",
+      "directory": "baseline/batch-087",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.75184110000555,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19418,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 180,
+          "reasoning_output_tokens": 132
+        }
+      ],
+      "completion_sha256": "b91636c6f61cf67318c99efe7f444c7893ad01e1d3f9996fe4e6c9d5b01ba939",
+      "output_sha256": "e84b1366ce1ceadf50250b7bfb5efc2ec58a8d962253a647966f34ba6c12b38f"
+    },
+    {
+      "id": "H054",
+      "condition": "baseline",
+      "directory": "baseline/batch-088",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.587366199993994,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19418,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 152,
+          "reasoning_output_tokens": 101
+        }
+      ],
+      "completion_sha256": "130dfd3edf89d5eacb9148015fe2fc89aae3c5d216558312cd2d809d87222851",
+      "output_sha256": "f34fe95a299dec0729b002fc5d890c5feb8f2a595aefb1ee6d3622b004bd3cdb"
+    },
+    {
+      "id": "H054",
+      "condition": "skill",
+      "directory": "skill/batch-088",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 60.5599652000019,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21672,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 128,
+          "reasoning_output_tokens": 76
+        }
+      ],
+      "completion_sha256": "75032cb64d9919c9ebed2c8e44d8082d5482d626e88cd32379a461764791d278",
+      "output_sha256": "5405c072d27d86d01a682b15489470f552f098595555dffc67789f3bf3ce4a29"
+    },
+    {
+      "id": "H055",
+      "condition": "skill",
+      "directory": "skill/batch-089",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.52159869999741,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21592,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 123,
+          "reasoning_output_tokens": 75
+        }
+      ],
+      "completion_sha256": "687e7876c15febdf1d18af5927ab7fec5be876e59007c5c3ce375107bbc17990",
+      "output_sha256": "b75ace4386a7c02ec3deb50e4fb6c46769365221f9a5ba95d3ca885f1ca02f29"
+    },
+    {
+      "id": "H055",
+      "condition": "baseline",
+      "directory": "baseline/batch-089",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.4337721999982,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19415,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 115,
+          "reasoning_output_tokens": 67
+        }
+      ],
+      "completion_sha256": "f54c7627c0b9a8d7626e03928900c85f3ee632163575d4bd50d5db8eea060079",
+      "output_sha256": "b8d7d7d0803d6f654d3ee5c51d94dc0bafdf70bc1652b69157d0a04a39c028fd"
+    },
+    {
+      "id": "H056",
+      "condition": "skill",
+      "directory": "skill/batch-090",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.52150750000146,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21669,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 117,
+          "reasoning_output_tokens": 76
+        }
+      ],
+      "completion_sha256": "4a5c4d64dd60e3add49f24c21b7ab4579be682c9ad4bc0069f628d0795502c75",
+      "output_sha256": "24837b90c338ef31dd54e8b9fc458bddfdc9b5155fb117597025dc3d2c526fea"
+    },
+    {
+      "id": "H056",
+      "condition": "baseline",
+      "directory": "baseline/batch-090",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.82174049999594,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19415,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 91,
+          "reasoning_output_tokens": 50
+        }
+      ],
+      "completion_sha256": "23f9aaf5076107f26bf18cd7974d232a01a098e56d689080be9a01f33c342839",
+      "output_sha256": "7c48743e8f8811df5684746ae49874919be5e6ced630f74855e860a52457fcdb"
+    },
+    {
+      "id": "H057",
+      "condition": "skill",
+      "directory": "skill/batch-091",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.51471009999659,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21591,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 154,
+          "reasoning_output_tokens": 106
+        }
+      ],
+      "completion_sha256": "bbcea91bddfe3d13c8f9d1e8fccdbca0982e39126cc33c657d6d144278dd0408",
+      "output_sha256": "65e0a40d00afb19a60dece26be204db3e1ca31669b07fd3b662c7ab5c71cf111"
+    },
+    {
+      "id": "H057",
+      "condition": "baseline",
+      "directory": "baseline/batch-091",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 52.187214700003096,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19443,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 197,
+          "reasoning_output_tokens": 149
+        }
+      ],
+      "completion_sha256": "c61980352431476b7359ac23d1919c615ffa07d30986d2b07b0385068f77a8fc",
+      "output_sha256": "4cc90b4a799e66f17a2735f9ad39fbfa8396675efcac0ad52ea1fcc9f3557214"
+    },
+    {
+      "id": "H058",
+      "condition": "skill",
+      "directory": "skill/batch-092",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 51.33018849999644,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21671,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 181,
+          "reasoning_output_tokens": 111
+        }
+      ],
+      "completion_sha256": "3010124fc5e9cabada1ce8b3b4349d66fdd8dca312ce10cabf3b2eb2cbd075c7",
+      "output_sha256": "416b3c03b98d522059b967160d11f88ba29c65984b1b02dedc4cdb88f7c79326"
+    },
+    {
+      "id": "H058",
+      "condition": "baseline",
+      "directory": "baseline/batch-092",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.06987160000426,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19417,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 245,
+          "reasoning_output_tokens": 196
+        }
+      ],
+      "completion_sha256": "300030fdf0507ead0ae149ee0f5d19361f068fca79828a7feab2dc159b1b5cac",
+      "output_sha256": "deb1e68ce10c9b43a02c8d8840e8a227ca0cf1ddf87e96223e1075a9e5f44180"
+    },
+    {
+      "id": "H059",
+      "condition": "skill",
+      "directory": "skill/batch-093",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.1982027999984,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21586,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 169,
+          "reasoning_output_tokens": 127
+        }
+      ],
+      "completion_sha256": "1f6a6d154b7c99293cc288d18273373d95a88be9e8a86237b2982a1c26690984",
+      "output_sha256": "98e69fe9f333a8422cf4066be63d2845f713e9b5e1bc535429cdf886c392c338"
+    },
+    {
+      "id": "H059",
+      "condition": "baseline",
+      "directory": "baseline/batch-093",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.543030500004534,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19409,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 200,
+          "reasoning_output_tokens": 158
+        }
+      ],
+      "completion_sha256": "85bb21f92a2b7db37f17d00d22b4be377fd76727a791744c8adc4553a14b1b21",
+      "output_sha256": "b072cd9980597b7274e2f779d69daf569492a1198e768ca9cf93797243476fd8"
+    },
+    {
+      "id": "H060",
+      "condition": "skill",
+      "directory": "skill/batch-094",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.116954299999634,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 22186,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 137,
+          "reasoning_output_tokens": 92
+        }
+      ],
+      "completion_sha256": "32bea9091a65110143bb64bdaf3337c9dbe9f70faecb8ac493f13b8007c34ef5",
+      "output_sha256": "7b6bf0ef4e72f5b67415fadad38ecd57302066fa2fee76792e74e7801898f265"
+    },
+    {
+      "id": "H060",
+      "condition": "baseline",
+      "directory": "baseline/batch-094",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.745461499995145,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19417,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 95,
+          "reasoning_output_tokens": 50
+        }
+      ],
+      "completion_sha256": "b0d93673d7be199f32a33a7595295f4e0f2e3c745cfdc40a63b785985ffd34ea",
+      "output_sha256": "d4dc75ce7c848d154614fbc26d75bcbffb105ed4a73d6bfb0613413205d649a7"
+    },
+    {
+      "id": "H061",
+      "condition": "skill",
+      "directory": "skill/batch-095",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 61.01109330000327,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21669,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 256,
+          "reasoning_output_tokens": 105
+        }
+      ],
+      "completion_sha256": "ded96e618b3ab779bcae040ea2b563b70378c51b88797552e8422ff76e9e10b2",
+      "output_sha256": "a757d869fa92eaab31b4ec6b5be067d50cb5d2c16f73835a4401e7173827c38e"
+    },
+    {
+      "id": "H061",
+      "condition": "baseline",
+      "directory": "baseline/batch-095",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 58.539680699999735,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19564,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 237,
+          "reasoning_output_tokens": 113
+        }
+      ],
+      "completion_sha256": "0842924295cdfc7d27eb68f596e3d602465d88f5d1d64fa95b52f8fee0c65c6d",
+      "output_sha256": "fe8055518fa178accc2bb4a97f81e3ce9701a0ff7df919c6fa075c1ae690e932"
+    },
+    {
+      "id": "H062",
+      "condition": "skill",
+      "directory": "skill/batch-096",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 53.99273109999922,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21592,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 204,
+          "reasoning_output_tokens": 138
+        }
+      ],
+      "completion_sha256": "5838505e92823ecf850bd398c4f3b78c9144da559ef6775f90a54453351874cd",
+      "output_sha256": "c20ccf55a5af2ec971d1260d3521e20f58201688b1feb06378d072a5c4cc664e"
+    },
+    {
+      "id": "H062",
+      "condition": "baseline",
+      "directory": "baseline/batch-096",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 53.27642869999545,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19415,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 206,
+          "reasoning_output_tokens": 143
+        }
+      ],
+      "completion_sha256": "cca274213e95cf681859497347db0a6b28a490f106dec5249c3c62adf1893d99",
+      "output_sha256": "6d0310aedb1a71bdfe8bed454966bb4d84cb8e89db329d9f3e68ee9a156eaf3d"
+    },
+    {
+      "id": "H063",
+      "condition": "skill",
+      "directory": "skill/batch-097",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.29064600000129,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21670,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 298,
+          "reasoning_output_tokens": 247
+        }
+      ],
+      "completion_sha256": "73d05678b45ca4ab652d3aa6300b9a3e86b56f3abc3e7ce7bbb723c4164d7756",
+      "output_sha256": "2f2c4070eb73f7cd49ef72c1af72bc8ad57c899f4a89c531022df86274da620b"
+    },
+    {
+      "id": "H063",
+      "condition": "baseline",
+      "directory": "baseline/batch-097",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.5850500000015,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19416,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 195,
+          "reasoning_output_tokens": 145
+        }
+      ],
+      "completion_sha256": "bf9058b475bbb04290324814e6b00f400bfca665b12621dd0fc6d20af6bf2320",
+      "output_sha256": "97a25ada8a81cfefe0c50aff8bd1b2f6c26bec2578490dc9e3fb706e507006d4"
+    },
+    {
+      "id": "H064",
+      "condition": "skill",
+      "directory": "skill/batch-098",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 58.011453499995696,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21588,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 189,
+          "reasoning_output_tokens": 123
+        }
+      ],
+      "completion_sha256": "40230445037c0981c6b97192d7e1d8ec029c415849f67000f3d4666c35352bcb",
+      "output_sha256": "30cd47bfdb0a35046ecdaa5620e4212aaf300b8b7364246e294b8c69b11419b9"
+    },
+    {
+      "id": "H064",
+      "condition": "baseline",
+      "directory": "baseline/batch-098",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 51.93708399999741,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19411,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 180,
+          "reasoning_output_tokens": 130
+        }
+      ],
+      "completion_sha256": "380ac56e9693426e2cb5eb2f1c02ff14da00910c544a451fe92e5fc8bd0d0627",
+      "output_sha256": "7f928a8f313840c5379122a4c86c1577efd5e09a4f90afa41e62d7bb4019d324"
+    },
+    {
+      "id": "H065",
+      "condition": "skill",
+      "directory": "skill/batch-099",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 60.84095430000161,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21828,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 170,
+          "reasoning_output_tokens": 114
+        }
+      ],
+      "completion_sha256": "f84cc97cca67c853b9e13e47afc90d7c79782efc231da995250a08bfad51e832",
+      "output_sha256": "8cdf81fdd3f9c27511f120d05c3b6be3d7a2be206c6fda78c2dc83a866e97804"
+    },
+    {
+      "id": "H065",
+      "condition": "baseline",
+      "directory": "baseline/batch-099",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.34112520000053,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19425,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 136,
+          "reasoning_output_tokens": 80
+        }
+      ],
+      "completion_sha256": "2701e6426228b4c08e6efea9a529f4f4a176d01344076f6598a685fcc3757d73",
+      "output_sha256": "a30e9b1f58434349eea72a1da8302e3f928bbcc3f5a246afba4b0c5b4a5fe0fd"
+    },
+    {
+      "id": "H066",
+      "condition": "skill",
+      "directory": "skill/batch-100",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.62188849999802,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21582,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 98,
+          "reasoning_output_tokens": 50
+        }
+      ],
+      "completion_sha256": "52da175ac2e21f0ca765da8c3b82a2b9a22f632e9cb9fbb74ae5dbc8a9a6d8d2",
+      "output_sha256": "ce50a4baf109d735255414a68960e5258da3e7e80762a3db180fad5945617e22"
+    },
+    {
+      "id": "H066",
+      "condition": "baseline",
+      "directory": "baseline/batch-100",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 52.10539260000223,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19405,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 94,
+          "reasoning_output_tokens": 46
+        }
+      ],
+      "completion_sha256": "2a584307a86d9ba2cc657be46b06dc5622f0704fa33d950bc550771374bdfd83",
+      "output_sha256": "7bf6131ece4a5f751ad52b1ad03661fbb5447f10a44e20380f4fd2fed4a9a06f"
+    },
+    {
+      "id": "H067",
+      "condition": "skill",
+      "directory": "skill/batch-101",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.9682524000018,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21661,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 364,
+          "reasoning_output_tokens": 287
+        }
+      ],
+      "completion_sha256": "f78ceac7b4b8a40945304edd715bbdea55a6522bb31d20adc2cb37971846cdbf",
+      "output_sha256": "9f20d582dbccb5281ccdebbb7715c5e4c356b1cc8b8c06b8b39b63468fc1f33c"
+    },
+    {
+      "id": "H067",
+      "condition": "baseline",
+      "directory": "baseline/batch-101",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 57.51653510000324,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19922,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 264,
+          "reasoning_output_tokens": 210
+        }
+      ],
+      "completion_sha256": "48837032761e3cdd416eaf07f1934d2ff447971d0b140a08dbab730bcf25df8b",
+      "output_sha256": "9f772e5137ae9540107b83db28da64d37eb4955a64b63d9e09f932d9c079c66b"
+    },
+    {
+      "id": "H068",
+      "condition": "skill",
+      "directory": "skill/batch-102",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 58.594022499994026,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21589,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 96,
+          "reasoning_output_tokens": 49
+        }
+      ],
+      "completion_sha256": "473a70bec7cc447a4f283b8021f30f6255eccb4bf9f0e2e61cced023cec8ba7c",
+      "output_sha256": "4a8a20a4e6088010a50cded3bb1fb4c884a40bbafdf3d9d31389beaf26558109"
+    },
+    {
+      "id": "H068",
+      "condition": "baseline",
+      "directory": "baseline/batch-102",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.03512910000427,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19412,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 83,
+          "reasoning_output_tokens": 36
+        }
+      ],
+      "completion_sha256": "8d8d33c6a1c7daf7a0e9b278f4dd9eeb6c654abb55df0fddb66ba88dca86589a",
+      "output_sha256": "b0aee81ae5c9746c096c5624baa23e0b1426cda787e571618263a876d33b16c3"
+    },
+    {
+      "id": "H069",
+      "condition": "skill",
+      "directory": "skill/batch-103",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.04010030000063,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21576,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 301,
+          "reasoning_output_tokens": 244
+        }
+      ],
+      "completion_sha256": "6f12d50124c5778ad3e85e1e98d54632c3fc4f5566e63f261919a99820e3e964",
+      "output_sha256": "3621a0b05b0c769f50e9bb244228955804dc08b765acee1d867abac55b636dc6"
+    },
+    {
+      "id": "H069",
+      "condition": "baseline",
+      "directory": "baseline/batch-103",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.88373960000172,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19943,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 220,
+          "reasoning_output_tokens": 162
+        }
+      ],
+      "completion_sha256": "7b87eb0147516e3c27e7813826e5b0b8648786443c00403d404d37ed47c70e15",
+      "output_sha256": "dbb1ca9cc8a305d93cdeba7af1b2274f39dad2dc5954ff8ded314513667ea831"
+    },
+    {
+      "id": "H070",
+      "condition": "skill",
+      "directory": "skill/batch-104",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.07539579999866,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21600,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 162,
+          "reasoning_output_tokens": 112
+        }
+      ],
+      "completion_sha256": "99122d8f15a65a8046d849516710864e6153b7510270d5a25723fe9b8d539995",
+      "output_sha256": "08f5d475463337388470e284fb957539da1ad5dc1dc5f61126e36087dd4227b9"
+    },
+    {
+      "id": "H071",
+      "condition": "skill",
+      "directory": "skill/batch-105",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.61428370000067,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21593,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 184,
+          "reasoning_output_tokens": 133
+        }
+      ],
+      "completion_sha256": "d6a4b2cb62a020982ad640b019e6a58432c8c719639cbdc2a1626c5ab4e7f3de",
+      "output_sha256": "6a98955801fcfafb0a462d639a79798dea8aeedd1ccc165eb0d8e9ec5c108981"
+    },
+    {
+      "id": "H070",
+      "condition": "baseline",
+      "directory": "baseline/batch-104",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 64.3654841000025,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19428,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 97,
+          "reasoning_output_tokens": 47
+        }
+      ],
+      "completion_sha256": "cbc46ae2ae554a23424fcbaacc6eee4e12d821b05728d6289fe551e22773bcb0",
+      "output_sha256": "bd8cbf12e29eac5d2a86a427cad518dd8c4f3fcc1d25b94655f2b3fe2840b562"
+    },
+    {
+      "id": "H071",
+      "condition": "baseline",
+      "directory": "baseline/batch-105",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 51.1421085999973,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19427,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 146,
+          "reasoning_output_tokens": 97
+        }
+      ],
+      "completion_sha256": "790254937d4a8925ecf3c61bbe7da06bbd54023c2713f99ed7df5e68e7bd10e5",
+      "output_sha256": "3f9e13701c8c660d2ddbfc220d74448469183fb98843b00fb9803d02ee9cab1a"
+    },
+    {
+      "id": "H072",
+      "condition": "baseline",
+      "directory": "baseline/batch-106",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.429341700000805,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19403,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 155,
+          "reasoning_output_tokens": 109
+        }
+      ],
+      "completion_sha256": "1396eadc9287841110d0010c82b21c1b4b38ae4a88309704ac00441fdf1b7b8c",
+      "output_sha256": "c5769ecbe89ae2bdb1595ea59e10e5d763f59d7c17a09d9752df45e8631b3393"
+    },
+    {
+      "id": "H072",
+      "condition": "skill",
+      "directory": "skill/batch-106",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.000045699998736,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21580,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 271,
+          "reasoning_output_tokens": 211
+        }
+      ],
+      "completion_sha256": "25ce07971258e1ea861284f4d538cb90f3cbb7d875965222137454b75ad6ae81",
+      "output_sha256": "6ce076de9ec7fa82d6ad69c5b7e94847d8c9edbea9c31d2232150431b59b2739"
+    },
+    {
+      "id": "X001",
+      "condition": "skill",
+      "directory": "skill/batch-107",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.70225989999744,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 22024,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 448,
+          "reasoning_output_tokens": 110
+        }
+      ],
+      "completion_sha256": "b785187aa4c25e8fd5b553e363f3ae0bedd234a76d1dda0f5b74e8239473885d",
+      "output_sha256": "91422dca4e99ee59599f269e6b9b1a733cd5b772a8361b868747f96734870f09"
+    },
+    {
+      "id": "X002",
+      "condition": "skill",
+      "directory": "skill/batch-108",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.310114100000646,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21665,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 251,
+          "reasoning_output_tokens": 147
+        }
+      ],
+      "completion_sha256": "f3c7de3e08cb94216604ad31d83e795946aadb65d3cd649096aa84d69d091d0e",
+      "output_sha256": "f01dc0699af7ba79f4cf5204e49a78f8ce07d2fb9e2dae1d0c20eb957242b81a"
+    },
+    {
+      "id": "X002",
+      "condition": "baseline",
+      "directory": "baseline/batch-108",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.550931600002514,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19488,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 166,
+          "reasoning_output_tokens": 64
+        }
+      ],
+      "completion_sha256": "4facbc264f0dab2965bf18ec279db90c1967275a5d4a6647d61a2a84e36784da",
+      "output_sha256": "aa1742f4618ee09ecf40a577bbf215cebefe3f69887702fb574bece666eaa7e4"
+    },
+    {
+      "id": "X001",
+      "condition": "baseline",
+      "directory": "baseline/batch-107",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 61.70031949999975,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19799,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 417,
+          "reasoning_output_tokens": 92
+        }
+      ],
+      "completion_sha256": "6f4cdf02d535a48bdde1a25d5f4f4cffd33d1ec31d020fe2c9976e05956cc048",
+      "output_sha256": "87b0efa66949f97608b439a54f27fd11954ce6dd19d57b9ff36bca52f9624dba"
+    },
+    {
+      "id": "X004",
+      "condition": "skill",
+      "directory": "skill/batch-110",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.01477700000396,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21597,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 93,
+          "reasoning_output_tokens": 41
+        }
+      ],
+      "completion_sha256": "aaa9781ca575fd17bf7402d0b6c082688b81c2a0ba466299e3b7bee0fa0e0315",
+      "output_sha256": "d8b2db4c81051accdcdf2bd9c52ab74501756c694d06089ce4f2a8fa7af53d19"
+    },
+    {
+      "id": "X003",
+      "condition": "baseline",
+      "directory": "baseline/batch-109",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 51.49465329999657,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19414,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 145,
+          "reasoning_output_tokens": 95
+        }
+      ],
+      "completion_sha256": "7bfd7851ed92ae9d40f96afd2e2756687be0555a2b40dab3651d2ca79e9cdc9f",
+      "output_sha256": "e74d7b2888e1d082b81db065abed85a81566148b4a8ff2ba97fac70c92ea4bfc"
+    },
+    {
+      "id": "X003",
+      "condition": "skill",
+      "directory": "skill/batch-109",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 53.354570800001966,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21668,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 204,
+          "reasoning_output_tokens": 154
+        }
+      ],
+      "completion_sha256": "01ef2303b0f7641cfe4a64b9290e59ed81e97f5dd31d2ae646a1245dd707775d",
+      "output_sha256": "a62eef421771e4cb22f5353ceb8c9d938cb44837233c78346a4219c32f6fdaeb"
+    },
+    {
+      "id": "X004",
+      "condition": "baseline",
+      "directory": "baseline/batch-110",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 42.63383189999877,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19935,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 99,
+          "reasoning_output_tokens": 47
+        }
+      ],
+      "completion_sha256": "530faedf7abfafc621c3cd15f4981d28dce11b870e325a85c57a50191c358141",
+      "output_sha256": "e814b796147524c31e2cf71d7c6fdeb28ad927658646236cfa2b2bbc305a5d40"
+    },
+    {
+      "id": "X005",
+      "condition": "skill",
+      "directory": "skill/batch-111",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 56.94598050000059,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21764,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 339,
+          "reasoning_output_tokens": 178
+        }
+      ],
+      "completion_sha256": "3bdb31ff77fde61d70069b434ffc24e95bafe2990fac179e8510288ff4c52e10",
+      "output_sha256": "70dab8d1756ae4f9b67ba341673e205f3c07e2f5a8ad4226d96a90ee85424332"
+    },
+    {
+      "id": "X005",
+      "condition": "baseline",
+      "directory": "baseline/batch-111",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 58.0421697999991,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19509,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 229,
+          "reasoning_output_tokens": 61
+        }
+      ],
+      "completion_sha256": "e8575d551f0d1ac729aa87180e6454a2e3f3b2fdbd1305165856a0cee06593d3",
+      "output_sha256": "7a7476a8691c0dda75a3c18774bdfafb5bb7a2eeaeef309fceb44c7064a65912"
+    },
+    {
+      "id": "X006",
+      "condition": "skill",
+      "directory": "skill/batch-112",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.40591090000089,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 21846,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 347,
+          "reasoning_output_tokens": 233
+        }
+      ],
+      "completion_sha256": "f8396c07086a30ffa40a84ff8044de0e15ab8002beabc4e1fd914b287764e52f",
+      "output_sha256": "663d60e0623e2652c448ecbe40662e890eee04bd1f38cca11ef53969a386c4d1"
+    },
+    {
+      "id": "X006",
+      "condition": "baseline",
+      "directory": "baseline/batch-112",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 51.385663699998986,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 19503,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 230,
+          "reasoning_output_tokens": 128
+        }
+      ],
+      "completion_sha256": "fa90558f7b1b831fe726b6920c367e2eb90f94d2edc89977995720a3b04e7fe7",
+      "output_sha256": "0477bb888a01f7898b264befa5f0c58a6924ad82f2471da7c6c000b2d190d337"
+    }
+  ],
+  "limitations": [
+    "Infrastructure retries are additional model calls, not independent benchmark repeats.",
+    "All original failures and any original model responses remain preserved."
+  ]
+}

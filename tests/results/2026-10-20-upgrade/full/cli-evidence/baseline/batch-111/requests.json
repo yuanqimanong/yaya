@@ -1,0 +1,7 @@
+[
+  {
+    "id": "X005",
+    "request": "Rewrite only ordinary comments to describe the visible code accurately. Keep the code, docstrings, directives and line layout unchanged.",
+    "input": "def cached_value(cache: dict[str, tuple[int, str]], key: str, now: int):\n    \"\"\"Read one entry with a fixed expiry test.\"\"\"\n    # Seamlessly unlock a perfectly fresh result in all cases.\n    item = cache.get(key)\n    if item is None:\n        return None\n    expires_at, value = item\n    # Execute an incredibly powerful decision.\n    if now >= expires_at:\n        return None  # noqa: RET504\n    return value\n"
+  }
+]

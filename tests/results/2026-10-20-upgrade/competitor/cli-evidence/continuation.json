@@ -1,0 +1,804 @@
+{
+  "protocol": 1,
+  "status": "completed",
+  "original_cli_metadata_sha256": "780bfa42124482edab5b012933d1de7be9039f50d989b74c823bc89b5765885b",
+  "plan_sha256": "f27bfdd232ff9908bf2d7453426400b958e16c1df60d03aa3a7e52ad17b3f478",
+  "preserved_successes": 23,
+  "outcomes": [
+    {
+      "id": "H024",
+      "condition": "baseline",
+      "directory": "baseline/batch-024",
+      "action": "retry_infrastructure",
+      "attempt": "cli-attempt-02",
+      "prior_failure": {
+        "reason": "nonzero CLI exit with explicit memory allocation failure: memory allocation of 4248 bytes failed",
+        "returncode": 3221226505,
+        "error": "CLI exited with status 3221226505",
+        "attempt": "cli-attempt-01",
+        "completion_sha256": "4de46e339cf61ce9d1c24417e8d1dab9046ddb40c59127922b8155812f632937",
+        "started_sha256": "d39517745e528ab09806722538a5ed502e7cade0bd876ae50fd7ae7748166e15",
+        "artifact_sha256": {
+          "prompt.txt": "ed4d22e2474cf9d4ccd09397d066a69f4bc81437b335e52f3a22c215be00070e",
+          "stdout.jsonl": "97bcfb1d8ae6cf88cca7b17297e83922f1d13e2dabd2849e4d64c1eec8b6ddae",
+          "stderr.txt": "0910d2ba8fea8765a472dc9715a3df2b040de7cdecc22fc235a9608a4f97e41d",
+          "output-schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2"
+        }
+      },
+      "status": "completed",
+      "elapsed_seconds": 42.71645089999947,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25424,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 145,
+          "reasoning_output_tokens": 102
+        }
+      ],
+      "completion_sha256": "2232f753013ad05220ed9c79de41915b20f684365f525fbc477ea46b8fd9e985",
+      "output_sha256": "7a4fc68f707dd61fbcc10b62ee950ce9b1dccbf3e9807d578a0ea51b72392f84"
+    },
+    {
+      "id": "H025",
+      "condition": "baseline",
+      "directory": "baseline/batch-025",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.78868220000004,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26917,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 151,
+          "reasoning_output_tokens": 98
+        }
+      ],
+      "completion_sha256": "008621e0b483231b62d861670f0921d354daf85ec53c0ac5c3fbb341e8ce9767",
+      "output_sha256": "ff1a127700d9a4ce928fe3322b0db879ab9882e47ea7876e06a98200cac1c246"
+    },
+    {
+      "id": "H026",
+      "condition": "baseline",
+      "directory": "baseline/batch-026",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.46433260000049,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26919,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 310,
+          "reasoning_output_tokens": 252
+        }
+      ],
+      "completion_sha256": "c3aa974777c174f97ad2447f6c7a2874d1db848a56850d041e97c73fe12e039b",
+      "output_sha256": "613953f5cefb88914e82d2de258b77d411f2daae0e442fa2751c00802aeeaade"
+    },
+    {
+      "id": "H027",
+      "condition": "baseline",
+      "directory": "baseline/batch-027",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.70624349999707,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26913,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 143,
+          "reasoning_output_tokens": 91
+        }
+      ],
+      "completion_sha256": "362d7b7697cc7b639278560f7b2b3d82d00c81f953a1158e4ff7932115c7ce02",
+      "output_sha256": "9b9382f24308aa9dbc85761f743371bd58838a058601636cc5a3d99757b8e454"
+    },
+    {
+      "id": "H028",
+      "condition": "baseline",
+      "directory": "baseline/batch-028",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 43.122674799997185,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26917,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 147,
+          "reasoning_output_tokens": 87
+        }
+      ],
+      "completion_sha256": "66fdc22774ba18e9f79f7dcfd68fe79dd63eca8be1c5ced293ce63099cf63ce1",
+      "output_sha256": "90bc79547b6384b79297073754b7b7d82c9c3f3b1bdffb05b8bafc4178a51c99"
+    },
+    {
+      "id": "H029",
+      "condition": "baseline",
+      "directory": "baseline/batch-029",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.878449799994996,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26921,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 192,
+          "reasoning_output_tokens": 129
+        }
+      ],
+      "completion_sha256": "b865960b1245a4f0e3a8ee4a2673cb033fc3b5d202c9f6bc073769c76904e5c1",
+      "output_sha256": "154bb6c839eef458bd08d91c443e89b19c5e8310a12b9d0d0a99487bdbe92111"
+    },
+    {
+      "id": "H031",
+      "condition": "baseline",
+      "directory": "baseline/batch-031",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 43.78188930000033,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26917,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 161,
+          "reasoning_output_tokens": 104
+        }
+      ],
+      "completion_sha256": "ed7458b5524b28f5b084f2a80e6f6b59be07f3d595cacc304b67929e330409e4",
+      "output_sha256": "34ada416f7f42d65eb8839f964e9915170c71bda31ee64a6592f59eede79a5b0"
+    },
+    {
+      "id": "H032",
+      "condition": "baseline",
+      "directory": "baseline/batch-032",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 41.498996700000134,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26914,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 143,
+          "reasoning_output_tokens": 89
+        }
+      ],
+      "completion_sha256": "a7c5d4489f4e600a5c200864991cc4a9144b3a82c13bc5840364e3db4293a251",
+      "output_sha256": "4c8eddd50f09525d8764fa67b18438a701e83e436c7cfd15933e3ad4185808f4"
+    },
+    {
+      "id": "H030",
+      "condition": "baseline",
+      "directory": "baseline/batch-030",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.17976500000077,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 27067,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 145,
+          "reasoning_output_tokens": 88
+        }
+      ],
+      "completion_sha256": "1f978f8e54dc69058655fd4db90c92f85966aa54c325bb2bfdfaba5a9ea8b508",
+      "output_sha256": "0110dda84e2d7a284e1a9b247425db4cc96855625781704399266d8aa6f2c737"
+    },
+    {
+      "id": "H033",
+      "condition": "baseline",
+      "directory": "baseline/batch-033",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.16357369999605,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26946,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 159,
+          "reasoning_output_tokens": 100
+        }
+      ],
+      "completion_sha256": "0ad833c974e9cda435df913606e43df75370e394bc060489c6df6204ab4b3bcc",
+      "output_sha256": "c6eeb6ed49272d7bb9bdc422d59969ff28b4bcf81f692734d73b97fcfd7d97d9"
+    },
+    {
+      "id": "H035",
+      "condition": "baseline",
+      "directory": "baseline/batch-035",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 44.7968247999961,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 27408,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 130,
+          "reasoning_output_tokens": 77
+        }
+      ],
+      "completion_sha256": "5b500675ee57f30e05210f35ffae12c8ed1a9c26839fdf79a24c8ab7d4caa474",
+      "output_sha256": "20e8a9f947cb1106e49f7d7aadc85d96ebcd368a9f8b7d73ae5b2be96dca4912"
+    },
+    {
+      "id": "H034",
+      "condition": "baseline",
+      "directory": "baseline/batch-034",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.4105056000044,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 27404,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 179,
+          "reasoning_output_tokens": 134
+        }
+      ],
+      "completion_sha256": "a7e5f35999fb0b3f4926dfbae4f6fa9fbed4c545b5116f819fd453fb9cbbfb03",
+      "output_sha256": "096a2b86c4af92a2d09032fe5c4a26cac43d940765cce0661c06c0dfdcc24530"
+    },
+    {
+      "id": "H036",
+      "condition": "baseline",
+      "directory": "baseline/batch-036",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 46.24256199999945,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26890,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 128,
+          "reasoning_output_tokens": 78
+        }
+      ],
+      "completion_sha256": "e331bb71b1370015dff0243b8f5f490771aa0ce9658f8c2ed4715ec9d42d266b",
+      "output_sha256": "923204b3bddf0d89ec3428206d95d7867a8117cc8b7b7dff36468d07c0bd71e7"
+    },
+    {
+      "id": "H037",
+      "condition": "baseline",
+      "directory": "baseline/batch-037",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.21212179999566,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25384,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 89,
+          "reasoning_output_tokens": 34
+        }
+      ],
+      "completion_sha256": "660f396f86ec9a6863c7b18b135684a564e23cfc7ff326ce311099387eaa251e",
+      "output_sha256": "6d148dbeadb71626a82978b9210a4faf1177fa6ee4f25cccd94a5a8d4da9b3ce"
+    },
+    {
+      "id": "H038",
+      "condition": "baseline",
+      "directory": "baseline/batch-038",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.107729800001835,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25387,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 189,
+          "reasoning_output_tokens": 128
+        }
+      ],
+      "completion_sha256": "11338de15be021e479eed5308e12934e01bbcbf601ab13b3622b4706eff65c6b",
+      "output_sha256": "f717953fd73875946cbfeca9a7713d7902ef69e99229e2c12e319dc11f552f53"
+    },
+    {
+      "id": "H039",
+      "condition": "baseline",
+      "directory": "baseline/batch-039",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.698169499999494,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25386,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 110,
+          "reasoning_output_tokens": 50
+        }
+      ],
+      "completion_sha256": "0f3cc0047145be70f0d89e72718c3a31c7fffe52426a708244f5942754866aa0",
+      "output_sha256": "ebd41de7010082e2e755c8a1fc1bab9005a250b5608d45dbe424012d75136ec2"
+    },
+    {
+      "id": "H040",
+      "condition": "baseline",
+      "directory": "baseline/batch-040",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 41.522070600003644,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25898,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 103,
+          "reasoning_output_tokens": 46
+        }
+      ],
+      "completion_sha256": "476b1eefa1c94fc46f1ecfdfccd9fb3273b40071d3499c394a988fabcf8d03e8",
+      "output_sha256": "a0aec981749be3c2dd0ccbfbd86fee1485d018e230d8d57e86c280fb325ec8fa"
+    },
+    {
+      "id": "H041",
+      "condition": "baseline",
+      "directory": "baseline/batch-041",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 44.64079389999824,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25387,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 125,
+          "reasoning_output_tokens": 66
+        }
+      ],
+      "completion_sha256": "c4a7bb1cf2919ca942ea05f39bbea1a91ffec3e2b7d9644fd0ebc3bd9259e0fe",
+      "output_sha256": "40e1f8898c7a7833a66e4f55c5782d209ec017cb5e13d6c0de6e1285e4ed95a9"
+    },
+    {
+      "id": "H042",
+      "condition": "baseline",
+      "directory": "baseline/batch-042",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 44.56447909999406,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25386,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 100,
+          "reasoning_output_tokens": 40
+        }
+      ],
+      "completion_sha256": "c754bd240da6cd8f7d88017f8b968c9f2484aeff6f8cc2df4d7bf79fa2792138",
+      "output_sha256": "a52edad75279564929c5676fa39ae5c3e81c8f3496d565542b8c0d4fabd00925"
+    },
+    {
+      "id": "H043",
+      "condition": "baseline",
+      "directory": "baseline/batch-043",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.250615500001004,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25418,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 149,
+          "reasoning_output_tokens": 80
+        }
+      ],
+      "completion_sha256": "d646921ac0155f1c04bc754ebc8cf6b1edad733ebb09216c76b223fccf82817b",
+      "output_sha256": "b8115bb6cea89cd367515575ba339dde3b0e5da9a9450948c674363aadea604c"
+    },
+    {
+      "id": "H044",
+      "condition": "baseline",
+      "directory": "baseline/batch-044",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.575614399996994,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25897,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 95,
+          "reasoning_output_tokens": 42
+        }
+      ],
+      "completion_sha256": "4f22b15309b335cc42f2e359470220851c9be4a399b09fd33a0e495a5b1dbcc6",
+      "output_sha256": "013f5298a58ee9d14121c2aa5b841046c38a4d31bea4a3cbb65dc9c2225502d7"
+    },
+    {
+      "id": "H045",
+      "condition": "baseline",
+      "directory": "baseline/batch-045",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 53.87744479999674,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25385,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 112,
+          "reasoning_output_tokens": 53
+        }
+      ],
+      "completion_sha256": "239184b8748401ebb706cd1c07f2b08bf1a7ae17e2a15b521789ae1a2a5601df",
+      "output_sha256": "b74592ab9ec9a6514d190f954df18e1d038e1cb39a62ab73787139ed2e8dff91"
+    },
+    {
+      "id": "H046",
+      "condition": "baseline",
+      "directory": "baseline/batch-046",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 51.36162599999807,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25377,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 86,
+          "reasoning_output_tokens": 38
+        }
+      ],
+      "completion_sha256": "dee7ac2081b5d4aadf619660e056cf96d9d3d85d10ff3ea52dde19cea39b2df0",
+      "output_sha256": "7f80512d2cc548de683a9b164781fe9cb7b10d7faadd08e925fe03a3050a57a8"
+    },
+    {
+      "id": "H047",
+      "condition": "baseline",
+      "directory": "baseline/batch-047",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.22381879999739,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25388,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 121,
+          "reasoning_output_tokens": 73
+        }
+      ],
+      "completion_sha256": "e1f0670098cb983b3acad24cc4d5814748ac25a8f1c6e3867bc00fca83b46e61",
+      "output_sha256": "909cf8af223c48d1bc0f33e353bccea2df033a95e2db671776d19f565e7ebfc0"
+    },
+    {
+      "id": "H048",
+      "condition": "baseline",
+      "directory": "baseline/batch-048",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.44787460000225,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25381,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 95,
+          "reasoning_output_tokens": 43
+        }
+      ],
+      "completion_sha256": "38913e073038747c7c29c41de2be571b5b705c0311f46bdf20217819d2479b0b",
+      "output_sha256": "a4e9eaf2b66cd18f07413ac3de908c3cb330c9c6a0f2f7569db085ff23c3cf81"
+    },
+    {
+      "id": "H049",
+      "condition": "baseline",
+      "directory": "baseline/batch-049",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 45.751669699995546,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26970,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 202,
+          "reasoning_output_tokens": 113
+        }
+      ],
+      "completion_sha256": "c08548ee4bd754036415495ad024e3382e5d6e4b6cc6eb4645da9d125c02dddb",
+      "output_sha256": "23c8a6280cdaa28519933e156d267c0d98e88232d8d4c625eb89cb4d3b7b920c"
+    },
+    {
+      "id": "H050",
+      "condition": "baseline",
+      "directory": "baseline/batch-050",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.61491609999939,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25906,
+          "cached_input_tokens": 11008,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 148,
+          "reasoning_output_tokens": 85
+        }
+      ],
+      "completion_sha256": "d7d1531ab8b56ee67e20118b42fdfa6be71155534c1682bf8fadce097039fcf0",
+      "output_sha256": "762e6b86749a5a24186cb8e765d3ee483d1bb49a214611858a7edb640f9ea16b"
+    },
+    {
+      "id": "H052",
+      "condition": "baseline",
+      "directory": "baseline/batch-052",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 50.87257590000081,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25381,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 168,
+          "reasoning_output_tokens": 89
+        }
+      ],
+      "completion_sha256": "c2f1d17867d5ad74c29fef4c5719446580916491245da0e71d76430216dc7ed8",
+      "output_sha256": "a23be96e71f4b0bfa06501c90a0ce0b9e8244df75b31633339ba5a764b25cd66"
+    },
+    {
+      "id": "H051",
+      "condition": "baseline",
+      "directory": "baseline/batch-051",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.16591960000369,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26923,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 368,
+          "reasoning_output_tokens": 290
+        }
+      ],
+      "completion_sha256": "5f293da8633676973724f8d9b71cd46453f0169f82754692a396a1dc8b829568",
+      "output_sha256": "2bcfeb1cc8a3162e0a9a0b8af23ef042af93b8186f81095c57e96f07cc4ad7b2"
+    },
+    {
+      "id": "H053",
+      "condition": "baseline",
+      "directory": "baseline/batch-053",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 62.82777490000444,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 27053,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 385,
+          "reasoning_output_tokens": 322
+        }
+      ],
+      "completion_sha256": "547995a4a026db505251d041131f7280c49a3b165903fefd7b6c420339b6b87a",
+      "output_sha256": "f16c72466982e38af3d18fefedeab286a7b48d5abec8dda51e91a3beb6a3bbb8"
+    },
+    {
+      "id": "H054",
+      "condition": "baseline",
+      "directory": "baseline/batch-054",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.3901263000007,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25381,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 134,
+          "reasoning_output_tokens": 81
+        }
+      ],
+      "completion_sha256": "90fb9177a4597267057f5f1177818bd9eec8a532812cd240206c99560bf925f2",
+      "output_sha256": "059d7bba2ccd08a2d8c5ea25256b70ea88e5721093c000272e2a302f6a726372"
+    },
+    {
+      "id": "H055",
+      "condition": "baseline",
+      "directory": "baseline/batch-055",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 51.67590149999887,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26901,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 175,
+          "reasoning_output_tokens": 127
+        }
+      ],
+      "completion_sha256": "d81c39446299ac727501b56d9b10bb13c9414bdfbae99141d9d85179bacff80f",
+      "output_sha256": "b8d7d7d0803d6f654d3ee5c51d94dc0bafdf70bc1652b69157d0a04a39c028fd"
+    },
+    {
+      "id": "H056",
+      "condition": "baseline",
+      "directory": "baseline/batch-056",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 54.709866400000465,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25378,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 117,
+          "reasoning_output_tokens": 76
+        }
+      ],
+      "completion_sha256": "af4c70ba12cd45ab349716797ed771b19e77548f195dc10b557573c72d887270",
+      "output_sha256": "7c48743e8f8811df5684746ae49874919be5e6ced630f74855e860a52457fcdb"
+    },
+    {
+      "id": "H058",
+      "condition": "baseline",
+      "directory": "baseline/batch-058",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 49.290366000001086,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25380,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 131,
+          "reasoning_output_tokens": 80
+        }
+      ],
+      "completion_sha256": "303553db8601fa5c1d96f7817c9cc918f43dad762b6a6e41da3ca89374454d11",
+      "output_sha256": "a7008034e5eb1e07c405ca758d5f189181b03e028a06f160fc4d7724493e1f5d"
+    },
+    {
+      "id": "H057",
+      "condition": "baseline",
+      "directory": "baseline/batch-057",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 55.61319860000367,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26900,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 484,
+          "reasoning_output_tokens": 374
+        }
+      ],
+      "completion_sha256": "24527fa0f905dbb5665acb012792937ef976fd8a36b6a3615099a767774becdb",
+      "output_sha256": "48e04d7828622c58bbb6b3f513a3262d320e6a42c50a14f175c73d197811e6a7"
+    },
+    {
+      "id": "H059",
+      "condition": "baseline",
+      "directory": "baseline/batch-059",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 47.73679199999606,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 26895,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 155,
+          "reasoning_output_tokens": 113
+        }
+      ],
+      "completion_sha256": "afb9eb2a32eec4e5eb0cc76e6540ba4ec6e7df66eba46658fbb7a0685a675116",
+      "output_sha256": "b072cd9980597b7274e2f779d69daf569492a1198e768ca9cf93797243476fd8"
+    },
+    {
+      "id": "H060",
+      "condition": "baseline",
+      "directory": "baseline/batch-060",
+      "action": "start",
+      "attempt": "cli-attempt-01",
+      "status": "completed",
+      "elapsed_seconds": 48.43389749999915,
+      "returncode": 0,
+      "usage": [
+        {
+          "input_tokens": 25380,
+          "cached_input_tokens": 16768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 85,
+          "reasoning_output_tokens": 40
+        }
+      ],
+      "completion_sha256": "d47a0505a43f7961c49186f421de459878c9767aac89de951159767ac6bf519f",
+      "output_sha256": "d4dc75ce7c848d154614fbc26d75bcbffb105ed4a73d6bfb0613413205d649a7"
+    }
+  ],
+  "limitations": [
+    "Infrastructure retries are additional model calls, not independent benchmark repeats.",
+    "All original failures and any original model responses remain preserved."
+  ]
+}

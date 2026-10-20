@@ -1,0 +1,147 @@
+{
+  "status": "passed",
+  "saved_file_checks": {
+    "report.md_saved_matches_candidate": true,
+    "report.md_after_snapshot_matches_saved": true,
+    "metrics.py_saved_matches_candidate": true,
+    "metrics.py_after_snapshot_matches_saved": true,
+    "scoped-overview.md_saved_matches_candidate": true,
+    "scoped-overview.md_after_snapshot_matches_saved": true,
+    "styles/plain.md_saved_matches_candidate": true,
+    "styles/plain.md_after_snapshot_matches_saved": true,
+    "existing_style_bytes_unchanged": true,
+    "x002_response_is_whole_saved_document": true,
+    "original_fixture_report.md_untouched": true,
+    "original_fixture_metrics.py_untouched": true,
+    "original_fixture_request.md_untouched": true
+  },
+  "actual_saved_file_tool_results": [
+    {
+      "file": "report.md",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\before\\report.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\report.md"
+      ],
+      "exit": 0,
+      "payload": {
+        "status": "passed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "file": "metrics.py",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_comments.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\before\\metrics.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\metrics.py"
+      ],
+      "exit": 0,
+      "payload": {
+        "status": "passed",
+        "language": "python",
+        "changed_comment_lines": [
+          3
+        ],
+        "violations": [],
+        "limitations": [
+          "Only .py/.pyi sources parseable by the running Python interpreter are supported.",
+          "Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.",
+          "Docstrings, f-strings, t-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.",
+          "Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.",
+          "A pass does not verify that comments are accurate, useful, or consistent with the code.",
+          "LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported."
+        ]
+      },
+      "stderr": ""
+    },
+    {
+      "file": "scoped-overview.md",
+      "argv": [
+        "D:\\env\\miniconda3\\python.exe",
+        "-B",
+        "D:\\AIProjects\\yaya\\core\\yaya\\scripts\\check_rewrite.py",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\before\\scoped-overview.md",
+        "D:\\AIProjects\\yaya\\tests\\runs\\2026-10-20-v02-file-integration\\scoped-overview.md"
+      ],
+      "exit": 0,
+      "payload": {
+        "status": "passed",
+        "changed": true,
+        "checked_categories": [
+          "bom",
+          "frontmatter",
+          "fences",
+          "inline_code",
+          "link_targets",
+          "html",
+          "explicit_ids",
+          "placeholders",
+          "urls",
+          "blockquotes",
+          "tables",
+          "quotes",
+          "literals",
+          "numbers"
+        ],
+        "quote_protection": false,
+        "allowed_categories": [],
+        "changes": [],
+        "violations": [],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      },
+      "stderr": ""
+    }
+  ],
+  "saved_file_hashes": {
+    "report.md": "8bba9383ec2a3c157d226a2630f251ed62336ba8517ff8ce3eddc9e027e1b21f",
+    "metrics.py": "cdb5df8f73c197a0cac9a2d02df68a138fd7cec24694cc0624eac789a97db6cb",
+    "scoped-overview.md": "d920476206976afb74b70de013c7547f4b518d2e99c5d4a16b6ebf3d14af487a",
+    "styles/plain.md": "cf02f113dfc40a41e4e0f925bd60ad1fa126ededf6c625ba5240c9e532927bef",
+    "styles/existing.md": "e068d9ccb40a877aed3bc3b48987c9fe2218088518b8667ca71a5ee0df1e6269"
+  }
+}

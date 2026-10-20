@@ -1,0 +1,330 @@
+{
+  "status": "passed",
+  "issues": [],
+  "core_archive": {
+    "file": "yaya-core-0.2.0.zip",
+    "sha256": "f1f5c3e317917e268e1a0e463a84f14bbcec2ff48a49f0ab6449f126e9ad4101",
+    "source_file_count": 26,
+    "archive_file_count": 26,
+    "file_set_equal": true,
+    "files": [
+      {
+        "member": "yaya/LICENSE",
+        "archive_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+        "source_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+        "equal": true
+      },
+      {
+        "member": "yaya/SKILL.md",
+        "archive_sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "source_sha256": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "equal": true
+      },
+      {
+        "member": "yaya/agents/openai.yaml",
+        "archive_sha256": "e0f9ebc3b757c640fab09de8a85d9b22c94991ef5ba45e37a9da682825c77b5a",
+        "source_sha256": "e0f9ebc3b757c640fab09de8a85d9b22c94991ef5ba45e37a9da682825c77b5a",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/en/GUIDE.md",
+        "archive_sha256": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0",
+        "source_sha256": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/en/LICENSE",
+        "archive_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+        "source_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/en/PATTERNS.md",
+        "archive_sha256": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58",
+        "source_sha256": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/en/examples.md",
+        "archive_sha256": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3",
+        "source_sha256": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/en/pack.json",
+        "archive_sha256": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f",
+        "source_sha256": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/zh-Hans/GUIDE.md",
+        "archive_sha256": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f",
+        "source_sha256": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/zh-Hans/LICENSE",
+        "archive_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+        "source_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/zh-Hans/PATTERNS.md",
+        "archive_sha256": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601",
+        "source_sha256": "597e0cab025d3839623c5ff1430f78a7b8f160de3286218ee50788aae33b7601",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/zh-Hans/examples.md",
+        "archive_sha256": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc",
+        "source_sha256": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc",
+        "equal": true
+      },
+      {
+        "member": "yaya/languages/zh-Hans/pack.json",
+        "archive_sha256": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475",
+        "source_sha256": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475",
+        "equal": true
+      },
+      {
+        "member": "yaya/references/comments.md",
+        "archive_sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+        "source_sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+        "equal": true
+      },
+      {
+        "member": "yaya/references/humanize.md",
+        "archive_sha256": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "source_sha256": "2aca1edf0d178dbe65a5439940e8d24848cdcaa85abb60c1e0db510ecf128981",
+        "equal": true
+      },
+      {
+        "member": "yaya/references/language-packs.md",
+        "archive_sha256": "3e455a40366e4d73465c6a332e993fc4b9523b1c7908d13ecb0613ad3998562d",
+        "source_sha256": "3e455a40366e4d73465c6a332e993fc4b9523b1c7908d13ecb0613ad3998562d",
+        "equal": true
+      },
+      {
+        "member": "yaya/references/prompts.md",
+        "archive_sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "source_sha256": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+        "equal": true
+      },
+      {
+        "member": "yaya/references/style-learning.md",
+        "archive_sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+        "source_sha256": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+        "equal": true
+      },
+      {
+        "member": "yaya/references/text.md",
+        "archive_sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "source_sha256": "90552faf6d2a65113037557fb0e2785aea7d6e005e3d7f121cb48dfe92dbb2e1",
+        "equal": true
+      },
+      {
+        "member": "yaya/scripts/check_comments.py",
+        "archive_sha256": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539",
+        "source_sha256": "b9bdeeeffcd607eba23364d2aebaca731931499165c198aec67c0188082e3539",
+        "equal": true
+      },
+      {
+        "member": "yaya/scripts/check_rewrite.py",
+        "archive_sha256": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c",
+        "source_sha256": "c5789b5571a38d81930e90284c7154a461bd59ed425efb884359fcf9b6f09b4c",
+        "equal": true
+      },
+      {
+        "member": "yaya/scripts/detect_tells.py",
+        "archive_sha256": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800",
+        "source_sha256": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800",
+        "equal": true
+      },
+      {
+        "member": "yaya/scripts/packs.py",
+        "archive_sha256": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2",
+        "source_sha256": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2",
+        "equal": true
+      },
+      {
+        "member": "yaya/scripts/prose_scan.py",
+        "archive_sha256": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+        "source_sha256": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+        "equal": true
+      },
+      {
+        "member": "yaya/scripts/tell_rules.json",
+        "archive_sha256": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8",
+        "source_sha256": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8",
+        "equal": true
+      },
+      {
+        "member": "yaya/version.json",
+        "archive_sha256": "329a07bfe52861c949fcb2f410a5becfbf83529828fda414e909756f2464aad3",
+        "source_sha256": "329a07bfe52861c949fcb2f410a5becfbf83529828fda414e909756f2464aad3",
+        "equal": true
+      }
+    ]
+  },
+  "language_archives": [
+    {
+      "archive": "yaya-lang-ja-0.2.0.zip",
+      "sha256": "96a8cd2fbea76668de60e27a199e08ed74f6a5d021787c66efce481c0e836eb1",
+      "members": {
+        "GUIDE.md": {
+          "archive_sha256": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881",
+          "source_sha256": "3d8bb42158e0143c8bc503679f4bcf90cb2be6916a45f675a48189c832095881"
+        },
+        "LICENSE": {
+          "archive_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+          "source_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+        },
+        "PATTERNS.md": {
+          "archive_sha256": "1f6826b5b568233e8777e709f7b5f646bba040dad72ba9a4aeb770119106e8b1",
+          "source_sha256": "1f6826b5b568233e8777e709f7b5f646bba040dad72ba9a4aeb770119106e8b1"
+        },
+        "examples.md": {
+          "archive_sha256": "5e4df0290629a59122d149215838aeafc987e2facca4f0b93db008c94de13205",
+          "source_sha256": "5e4df0290629a59122d149215838aeafc987e2facca4f0b93db008c94de13205"
+        },
+        "pack.json": {
+          "archive_sha256": "a56b425e7ab5071d523fbe75e4a7168897239a22644ca646edcddb621cfe0446",
+          "source_sha256": "a56b425e7ab5071d523fbe75e4a7168897239a22644ca646edcddb621cfe0446"
+        }
+      },
+      "flat": true,
+      "unique": true,
+      "source_file_set_equal": true,
+      "source_bytes_equal": true,
+      "format_version": 1,
+      "passed": true
+    },
+    {
+      "archive": "yaya-lang-ko-0.2.0.zip",
+      "sha256": "07035954b0cd857e6809c20d9bc202618b2b322aefc21cf2d1873a6de2723c92",
+      "members": {
+        "GUIDE.md": {
+          "archive_sha256": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9",
+          "source_sha256": "40365d3d28fd9fd193053aadb6e873c105bdcf3f731bc264fd2e8ea141c5a6d9"
+        },
+        "LICENSE": {
+          "archive_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+          "source_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+        },
+        "PATTERNS.md": {
+          "archive_sha256": "a5a32071e475832271f308e4d1283e4577ec2976a6abaecae512b2cba142db0f",
+          "source_sha256": "a5a32071e475832271f308e4d1283e4577ec2976a6abaecae512b2cba142db0f"
+        },
+        "examples.md": {
+          "archive_sha256": "f373a5a66758614f6c624233e565e919b917de9bf33ffcb244c1b5479d2ca212",
+          "source_sha256": "f373a5a66758614f6c624233e565e919b917de9bf33ffcb244c1b5479d2ca212"
+        },
+        "pack.json": {
+          "archive_sha256": "623eab03dd51a3c521ff8593946838a97e2315b3d3f3cdcf96a3052e595a5dd8",
+          "source_sha256": "623eab03dd51a3c521ff8593946838a97e2315b3d3f3cdcf96a3052e595a5dd8"
+        }
+      },
+      "flat": true,
+      "unique": true,
+      "source_file_set_equal": true,
+      "source_bytes_equal": true,
+      "format_version": 1,
+      "passed": true
+    },
+    {
+      "archive": "yaya-lang-zh-Hant-0.2.0.zip",
+      "sha256": "ab496f5790a070aa5d62852abafa27d54f2c0326439b9a78cf8994b3fb3f385e",
+      "members": {
+        "GUIDE.md": {
+          "archive_sha256": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00",
+          "source_sha256": "7c6db2be173f72b4e082cdfb2fb453ecdb55510f28f58f004bd01c5cfa4e5f00"
+        },
+        "LICENSE": {
+          "archive_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+          "source_sha256": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31"
+        },
+        "PATTERNS.md": {
+          "archive_sha256": "ca1aa738f86582145d066bded336d4cd1e53c6bad6330519df538442c836ef35",
+          "source_sha256": "ca1aa738f86582145d066bded336d4cd1e53c6bad6330519df538442c836ef35"
+        },
+        "examples.md": {
+          "archive_sha256": "2c48ac1c68a5b2612f8afd349908995ae93a87e734ed5429010f3bac4c3093f4",
+          "source_sha256": "2c48ac1c68a5b2612f8afd349908995ae93a87e734ed5429010f3bac4c3093f4"
+        },
+        "pack.json": {
+          "archive_sha256": "009f1cb5ec6d2581a84620bb278d549ce22daf587833635714c7ea430ad728c7",
+          "source_sha256": "009f1cb5ec6d2581a84620bb278d549ce22daf587833635714c7ea430ad728c7"
+        }
+      },
+      "flat": true,
+      "unique": true,
+      "source_file_set_equal": true,
+      "source_bytes_equal": true,
+      "format_version": 1,
+      "passed": true
+    }
+  ],
+  "schema": {
+    "file": "schemas/language-pack.schema.json",
+    "sha256": "a2a28ba16164ee850872ffcb3faa31559d256c4ee370a9311e093d6f50cc6123",
+    "files": [
+      "schemas/language-pack.schema.json"
+    ],
+    "format_version_const": 1,
+    "metadata": [
+      {
+        "file": "core/yaya/languages/en/pack.json",
+        "sha256": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f",
+        "format_version": 1,
+        "passed": true,
+        "errors": []
+      },
+      {
+        "file": "core/yaya/languages/zh-Hans/pack.json",
+        "sha256": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475",
+        "format_version": 1,
+        "passed": true,
+        "errors": []
+      },
+      {
+        "file": "language-packs/ja/pack.json",
+        "sha256": "a56b425e7ab5071d523fbe75e4a7168897239a22644ca646edcddb621cfe0446",
+        "format_version": 1,
+        "passed": true,
+        "errors": []
+      },
+      {
+        "file": "language-packs/ko/pack.json",
+        "sha256": "623eab03dd51a3c521ff8593946838a97e2315b3d3f3cdcf96a3052e595a5dd8",
+        "format_version": 1,
+        "passed": true,
+        "errors": []
+      },
+      {
+        "file": "language-packs/zh-Hant/pack.json",
+        "sha256": "009f1cb5ec6d2581a84620bb278d549ce22daf587833635714c7ea430ad728c7",
+        "format_version": 1,
+        "passed": true,
+        "errors": []
+      },
+      {
+        "file": "templates/language-pack/pack.json",
+        "sha256": "a005005d2592f8dc136dfc3eaad26f9cc36bcf7b99d920b1a90e0b8429d98e5a",
+        "format_version": 1,
+        "passed": true,
+        "errors": []
+      }
+    ]
+  },
+  "sha256sums": {
+    "yaya-core-0.2.0.zip": true,
+    "yaya-lang-ja-0.2.0.zip": true,
+    "yaya-lang-ko-0.2.0.zip": true,
+    "yaya-lang-zh-Hant-0.2.0.zip": true
+  },
+  "validation_dependency": {
+    "jsonschema_module": "D:\\AIProjects\\yaya\\.tmp\\validation-deps\\jsonschema\\__init__.py",
+    "dependency_directory": "D:\\AIProjects\\yaya\\.tmp\\validation-deps",
+    "product_files_modified": false
+  }
+}

@@ -1,0 +1,7 @@
+2026-10-20T10:36:01.781379Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:36:01.850748Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-20T10:36:01.877531Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:36:01.877614Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-20T10:36:01.886918Z  WARN codex_core::shell_snapshot: Failed to create shell snapshot for powershell: Shell snapshot not supported yet for PowerShell
+memory allocation of 4248 bytes failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

@@ -1,0 +1,210 @@
+{
+  "runner_protocol": 1,
+  "runner_sha256": "3b5e33fedcde06760fc196c60c197f4601287a800ba5d05a78431d534f581dfd",
+  "schema_sha256": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+  "command": [
+    "C:/Users/12761/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe"
+  ],
+  "manifest_sha256": "ef0f2369e16701105ca21074870f33c6c731d4c497349d0fa61d5d02c29e65bc",
+  "model": {
+    "configured": {
+      "model_provider": "openai_https",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high"
+    },
+    "exact_model_revision": "not provided by this runner",
+    "sampling": "host defaults; no model, reasoning, or sampling override"
+  },
+  "conditions": [
+    "skill",
+    "baseline"
+  ],
+  "baseline_kind": "no_skill",
+  "competitor_sources": {},
+  "tool_policy": "forbidden in prompt; tool or unknown item events invalidate output",
+  "tool_claim": "no tool activity observed in accepted JSONL; tools are not physically disabled",
+  "project_instructions": "project_doc_max_bytes=0 for this process; host CLI configuration otherwise inherited",
+  "isolation": "one ephemeral CLI process and working directory per case",
+  "jobs": [
+    {
+      "directory": "skill/batch-001",
+      "id": "H019",
+      "condition": "skill",
+      "prompt_sha256": "30216311ac61cadd87ca310ff6ba9d9aa6a137a191f03cec7ae229ea02ed62d3",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b"
+      }
+    },
+    {
+      "directory": "baseline/batch-001",
+      "id": "H019",
+      "condition": "baseline",
+      "prompt_sha256": "d536ad7793f7929cca1952cfc2890973f603502b7aeaa9ceb076e09472c61ce7",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-002",
+      "id": "H007",
+      "condition": "skill",
+      "prompt_sha256": "1d6f7dd3ad745421d405435b5c6c8bce0fbac2de91f8abc7e3b4cc5ed323c139",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-002",
+      "id": "H007",
+      "condition": "baseline",
+      "prompt_sha256": "65ccaf3c4d6a90193520123f8d3565d021196d11ae13a138bbab85e6fd6d138a",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-003",
+      "id": "H031",
+      "condition": "skill",
+      "prompt_sha256": "deb33bce789a679288e7c3eb529751b00d2ef88135855b41443493ea924e18f8",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-003",
+      "id": "H031",
+      "condition": "baseline",
+      "prompt_sha256": "32ed0dd1c9c3df28c317df63bfd4e5828789848a66a04bc4057ae7cbedb2d8df",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-004",
+      "id": "H043",
+      "condition": "skill",
+      "prompt_sha256": "f9c60ea3a042efdafbf46ffde9e7a8049402768c90c303be1b0bd29b84f52e43",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b"
+      }
+    },
+    {
+      "directory": "baseline/batch-004",
+      "id": "H043",
+      "condition": "baseline",
+      "prompt_sha256": "f7f7c90c65756060e70181bea3eda19537925118f69184b52e04b677ad9b6780",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-005",
+      "id": "H067",
+      "condition": "skill",
+      "prompt_sha256": "a7bc65d73218d76adabc3abdadfcc05a3edebba6ec17ef1b7905c5db3e848db3",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b"
+      }
+    },
+    {
+      "directory": "baseline/batch-005",
+      "id": "H067",
+      "condition": "baseline",
+      "prompt_sha256": "5e716552123e4a61769bb148bad420ed08b1ad7dd9e3d721a0226fc727958ba6",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-006",
+      "id": "H025",
+      "condition": "skill",
+      "prompt_sha256": "16b880bbbdf05c026d34fe5cdc5e092e8bc16d750a342411b2c75ea0c44f5208",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-006",
+      "id": "H025",
+      "condition": "baseline",
+      "prompt_sha256": "e50ed5ddf26db506079c510f824633c7b95a9ff5b82cd568edd726f7041db9fb",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-007",
+      "id": "X001",
+      "condition": "skill",
+      "prompt_sha256": "415e316d45e2c17825fd2dcb1b747c100a99bec095c9b19b610d59a1db6a12ae",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b"
+      }
+    },
+    {
+      "directory": "baseline/batch-007",
+      "id": "X001",
+      "condition": "baseline",
+      "prompt_sha256": "e83aefe4072cc80d670a920b70ccf0572e17dfd864f9d60cb8b3b2fac0542253",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-008",
+      "id": "H061",
+      "condition": "skill",
+      "prompt_sha256": "6cc2cd7c8d1e2b6880238010d3ae680046abde2eda2ec58735e9deaaad46cad7",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b"
+      }
+    },
+    {
+      "directory": "baseline/batch-008",
+      "id": "H061",
+      "condition": "baseline",
+      "prompt_sha256": "02b6a65fc4366df6403efffb3347c27d20cb59140f0d7fdb038cff28069682d5",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-009",
+      "id": "R001",
+      "condition": "skill",
+      "prompt_sha256": "4eb362c794f2ed002fec08da0c475235f47b7846505b6c49c5ffbf30df118455",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/zh-Hans/PATTERNS.md": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b"
+      }
+    },
+    {
+      "directory": "baseline/batch-009",
+      "id": "R001",
+      "condition": "baseline",
+      "prompt_sha256": "fb9c21b81757ca9c62c7046ddf2064a9d90947a5b288339735a42b13b5c7982f",
+      "context_sha256": {}
+    },
+    {
+      "directory": "skill/batch-010",
+      "id": "R002",
+      "condition": "skill",
+      "prompt_sha256": "e8d27e7b1cabcb44396c6e6885e699eacdff5341e2b1e4c057a80601656ebcdb",
+      "context_sha256": {
+        "snapshot/yaya/SKILL.md": "b421b42b2888e97790aeb77f39ac723fa152245202879113042068e5bf18d901",
+        "snapshot/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+        "snapshot/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58"
+      }
+    },
+    {
+      "directory": "baseline/batch-010",
+      "id": "R002",
+      "condition": "baseline",
+      "prompt_sha256": "9724d84ce8ce72a94a3b1821f0c2eebd9de17f9950a5aab1e9897e577f40cb09",
+      "context_sha256": {}
+    }
+  ]
+}
