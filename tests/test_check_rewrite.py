@@ -1,6 +1,7 @@
 """Mechanical preservation, explicit exceptions, and documented blind spots."""
 
 import json
+import hashlib
 from pathlib import Path
 import subprocess
 import sys
@@ -147,14 +148,40 @@ class RewriteChecks(unittest.TestCase):
         result = self.assert_status("passed", "Do not retry after 2 failures.", "Retry after 2 failures.")
         self.assertTrue(any("associations" in line for line in result["limitations"]))
 
-    def test_allow_is_per_category_and_reported(self):
+    def test_allow_binds_exact_candidate_and_difference(self):
         original = "Count 2, `id`."
-        allowed = self.assert_status("passed", original, "Count 3, `id`.", allow=["numbers"])
+        candidate = "Count 3, `id`."
+        difference = {key: checker.compare(original, candidate)["changes"][0][key]
+                      for key in ("category", "before", "after")}
+        grant = {"schema": 1, "before_sha256": hashlib.sha256(original.encode()).hexdigest(),
+                 "after_sha256": hashlib.sha256(candidate.encode()).hexdigest(), "changes": [difference]}
+        allowed = self.assert_status("passed", original, candidate, allow=grant)
         self.assertEqual(allowed["changes"][0]["allowed"], True)
-        result = self.assert_status("failed", original, "Count 3, `other`.", allow=["numbers"])
+        changed = "Count 3, `other`."
+        grant["after_sha256"] = hashlib.sha256(changed.encode()).hexdigest()
+        result = self.assert_status("failed", original, changed, allow=grant)
         self.assertEqual([item["category"] for item in result["violations"]], ["inline_code"])
-        with self.assertRaises(prose_scan.InputError):
-            checker.compare(original, original, allow=["all"])
+        for broad in (["all"], ["numbers"], "numbers"):
+            with self.subTest(broad=broad), self.assertRaises(prose_scan.InputError):
+                checker.compare(original, candidate, allow=broad)
+        with self.assertRaisesRegex(prose_scan.InputError, "exact"):
+            checker.compare(original, "Count 4, `id`.", allow=grant)
+        grant["after_sha256"] = hashlib.sha256(candidate.encode()).hexdigest()
+        grant["changes"][0]["after"] = ["4"]
+        with self.assertRaisesRegex(prose_scan.InputError, "inexact"):
+            checker.compare(original, candidate, allow=grant)
+
+    def test_allow_manifest_validates_types_and_unused_or_unknown_entries(self):
+        old, new = "Count 2.", "Count 3."
+        base = {"schema": 1, "before_sha256": hashlib.sha256(old.encode()).hexdigest(),
+                "after_sha256": hashlib.sha256(new.encode()).hexdigest()}
+        invalid = [{"category": [], "before": [], "after": []},
+                   {"category": "numbers", "before": "2", "after": ["3"]},
+                   {"category": "unknown", "before": ["2"], "after": ["3"]},
+                   {"category": "numbers", "before": ["2"], "after": ["3"], "all": True}]
+        for entry in invalid:
+            with self.subTest(entry=entry), self.assertRaises(prose_scan.InputError):
+                checker.compare(old, new, allow={**base, "changes": [entry]})
 
     def test_noncontent_newlines_and_bom_have_explicit_boundaries(self):
         self.assert_status("passed", "正文\r\n第二行\r\n", "正文\n第二行\n")
@@ -197,7 +224,7 @@ class RewriteChecks(unittest.TestCase):
         for old, new, flags, expected in [
             ("进行分析。", "分析。", (), 0),
             ("2 ms", "3 ms", (), 1),
-            ("2 ms", "3 ms", ("--allow", "numbers"), 0),
+            ("2 ms", "3 ms", ("--allow", "numbers"), 2),
             ("```open", "```open", (), 2),
         ]:
             result, payload = self.run_cli(old.encode(), new.encode(), *flags, stdin=old.encode())

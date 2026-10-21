@@ -11,13 +11,15 @@ Let the user's purpose set the degree of change. Ordinary polishing addresses th
 
 These are editing criteria, not domain verification. A polished financial statement has not thereby been audited; an elegant technical explanation has not thereby been tested.
 
+For requested technical fact checking or a disputed engineering claim, use [engineering fidelity](engineering.md). Pure polishing preserves claims and uncertainty. Review-only work reports findings without writing. Reuse the user's existing authorization; changes to examples, runtime strings, schema metadata, or code require their own scope.
+
 ## Files and structure
 
 Keep code fences containing programs, inline code, link destinations, front matter, IDs, and table data intact. Preserve headings and anchors unless their revision is requested; check dependent links when changing them. A prose passage inside a fence is still prose when the request identifies it as the editing target.
 
 Retain operational order: a prerequisite belongs before the step it constrains. Keep independent list items and the pairing between figures and labels. Do not turn a long article into a summary unless requested. Handle rich document formats with an available document tool; do not edit their binary content as plain text.
 
-For a file rewrite with protected text or Markdown structure, use the read-only `scripts/check_rewrite.py BEFORE AFTER` on a saved original and candidate. Its JSON states the implemented protections and any unsupported syntax. A pass checks those mechanical boundaries only: still compare facts, attribution, negation, and conditions. Explicitly authorized changes can use narrowly selected `--allow` categories; do not permit a category just to make a failed check pass.
+For a file rewrite with protected text or Markdown structure, use the read-only `scripts/check_rewrite.py BEFORE AFTER` on a saved original and candidate. Its JSON states the implemented protections and any unsupported syntax. A pass checks mechanical boundaries only: still compare facts, ownership of numbers, negation, conditions, and certainty. `--allow` accepts a reviewed manifest bound to this exact input/candidate and enumerated differences; category-wide bypasses are rejected. See [validation](validation.md) for batch evidence and exact grants.
 
 ## Small examples
 

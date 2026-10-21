@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "violations": [],
+  "authorized_nodes": [
+    "fetch@1"
+  ],
+  "ast_boundary_equal": true,
+  "source_format": {
+    "before": {
+      "sha256": "591965a19e7c7523f8507b99db040ed06c1534327bbf0011c87553d1f5cf634e",
+      "bytes": 179,
+      "encoding": "utf-8",
+      "bom": false,
+      "crlf": 0,
+      "lf": 9,
+      "lone_cr": 0
+    },
+    "candidate": {
+      "sha256": "a3b79007f7d473b8ee26faa528650be5feaf4f82a8d49f43e5d9aba68fa69002",
+      "bytes": 151,
+      "encoding": "utf-8",
+      "bom": false,
+      "crlf": 0,
+      "lf": 9,
+      "lone_cr": 0
+    }
+  },
+  "evidence": {
+    "started_utc": "2026-10-21T07:11:42.200433+00:00",
+    "tool": {
+      "name": "check_docstrings.py",
+      "version": "sha256:e7e1bf372a899cd34a6194446c7250aa7b836786a5f5dcafdc59ab848aab5b66",
+      "evidence_version": "1.0",
+      "sha256": {
+        "check_comments.py": "5c64d02633ac029b99088638e6d0338bba91e52318f90dc2ad23a4fc571d38a1",
+        "check_docstrings.py": "e7e1bf372a899cd34a6194446c7250aa7b836786a5f5dcafdc59ab848aab5b66",
+        "edit_evidence.py": "146dfe75d73c18472f6570d8884557d24ee70538e78c76a2741f3886b0dd3ad7"
+      },
+      "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+      "executable": "D:\\env\\miniconda3\\python.exe"
+    },
+    "command": [
+      "D:\\env\\miniconda3\\python.exe",
+      ".tmp/check_semantic_boundaries.py"
+    ],
+    "options": {
+      "allow": {
+        "schema": 1,
+        "before_sha256": "591965a19e7c7523f8507b99db040ed06c1534327bbf0011c87553d1f5cf634e",
+        "after_sha256": "a3b79007f7d473b8ee26faa528650be5feaf4f82a8d49f43e5d9aba68fa69002",
+        "docstrings": [
+          {
+            "node": "fetch@1",
+            "before_sha256": "15c1c06b8b7c728c84bba5294dd9567b985945c023606e6d4a304a4c3fc61a36",
+            "after_sha256": "cbc836f17bca16d608d7f09bf827f81d3e075cc927a7ce9e94501eb77d80cd38"
+          }
+        ]
+      }
+    },
+    "invocation": "CLI or Python API; command records the host process",
+    "before": {
+      "path": "D:\\AIProjects\\yaya\\tests\\results\\2026-10-21-engineering\\semantic\\boundary-artifacts\\ENG09\\old\\before.py",
+      "sha256": "591965a19e7c7523f8507b99db040ed06c1534327bbf0011c87553d1f5cf634e",
+      "bytes": 179,
+      "encoding": "utf-8",
+      "bom": false,
+      "crlf": 0,
+      "lf": 9,
+      "lone_cr": 0
+    },
+    "candidate": {
+      "path": "D:\\AIProjects\\yaya\\tests\\results\\2026-10-21-engineering\\semantic\\boundary-artifacts\\ENG09\\old\\candidate.py",
+      "sha256": "a3b79007f7d473b8ee26faa528650be5feaf4f82a8d49f43e5d9aba68fa69002",
+      "bytes": 151,
+      "encoding": "utf-8",
+      "bom": false,
+      "crlf": 0,
+      "lf": 9,
+      "lone_cr": 0
+    },
+    "finished_utc": "2026-10-21T07:11:42.205418+00:00",
+    "inputs_stable": true
+  },
+  "limitations": [
+    "Only UTF-8 .py/.pyi accepted by the running interpreter; selected docstrings must be single STRING tokens.",
+    "Only granted existing docstring values may change; other bytes and physical newline sequences are protected.",
+    "Recognized doctests and the tail starting at an example/usage/code-block marker are protected, even within granted nodes.",
+    "Unmarked examples and project-specific documentation syntax require manual review; example editing needs a separate check.",
+    "AST equivalence proves only a mechanical implementation boundary, not comment correctness or invariant runtime behavior; __doc__ changes."
+  ]
+}

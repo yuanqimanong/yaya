@@ -2,21 +2,75 @@
 
 [English](README.en.md) · [安装](INSTALL.md) · [贡献语言包](CONTRIBUTING.md) · [包规范](docs/language-pack-spec.md)
 
-yaya 是一个编辑 Skill，使用你当前的 AI 工具，帮你删去空话、理清表达，也能整理代码注释、优化提示词和学习样稿风格。可以直接改写，也可以先审稿；编辑时保留原意、作者口吻和任务要求。
+yaya 是一个编辑 Skill，用你当前的 AI 工具润色正文、核对工程注释、优化提示词和学习样稿风格。可以改写、只审不改，或编辑文件中的指定部分；保留原意、作者口吻和关键约束。
 
 默认包含简体中文和英语，繁中、日语、韩语按需安装。普通编辑无需额外服务或模型 API。
 
-## 直接这样用
+## 安装
+
+### 让 AI 帮你安装
+
+把下面这段话发给能访问网络和本地文件的 AI 编程工具：
 
 ```text
-用 yaya 去掉这篇文章的 AI 味，保留作者口吻和有用细节。
-只看看这段话哪里空泛，说明原因，先不要改。
-用 yaya 以金融领域风格润色 report.md，普通读者也要看得懂。
-用计算机领域风格重写这份代码的普通注释，保留代码和工具指令。
-优化下面的提示词，去掉空泛表达，保留变量、输出格式和全部限制。
-让这个提示词要求 AI 用普通读者能懂的语言回答。
-学习下面这段话的风格，给我可复制的风格提示词和一个新例子。
-用香港繁体中文润色这段说明，保留原有地区用语。
+请阅读 https://github.com/yuanqimanong/yaya 的 INSTALL.md，按当前工具的技能目录规则安装 yaya。
+只安装 core/yaya 中的完整中英核心；其他语言包暂不安装。
+已有安装时，先把旧目录备份到技能发现路径之外，并保留本地定制。
+安装后告诉我实际目录和版本，再用一句短文验证能否调用 yaya。
+```
+
+在提供 `$skill-installer` 的 Codex 中，也可以直接发：
+
+```text
+$skill-installer 请从 https://github.com/yuanqimanong/yaya/tree/main/core/yaya 安装 yaya。
+```
+
+安装器报已有目录时，按 [升级与回滚步骤](INSTALL.md#4-update-remove-or-roll-back)处理。AI 需要有读取仓库和写入目标目录的权限；只读 `SKILL.md` 可以试用，但不代表已安装或能被自动发现。
+
+### 从源码手动安装
+
+当前核心为 **0.2.1**，尚无公开 Release 下载。先克隆仓库：
+
+```text
+git clone https://github.com/yuanqimanong/yaya.git
+cd yaya
+```
+
+将整个 `core/yaya/` 目录复制到所用工具的 Skill 目录。Codex 的常用位置如下：
+
+| 范围 | 目标目录 |
+| --- | --- |
+| 当前用户 | `~/.agents/skills/yaya/`，Windows 下为 `%USERPROFILE%\.agents\skills\yaya\` |
+| 单个项目 | `PROJECT_ROOT/.agents/skills/yaya/` |
+
+路径依据 [OpenAI 官方技能文档](https://learn.chatgpt.com/docs/build-skills)，核对日期为 2026-10-21。其他兼容工具按各自的目录规则安装。
+
+首次安装到 Windows 个人目录，可在仓库根目录运行：
+
+```powershell
+$skillTarget = Join-Path $env:USERPROFILE '.agents\skills\yaya'
+if (Test-Path -LiteralPath $skillTarget) { throw 'yaya 已存在，请先按 INSTALL.md 备份并升级。' }
+New-Item -ItemType Directory -Path (Split-Path $skillTarget -Parent) -Force | Out-Null
+Copy-Item -LiteralPath '.\core\yaya' -Destination $skillTarget -Recurse
+```
+
+复制后应有 `yaya/SKILL.md`、`references/`、`scripts/` 和 `languages/`。只需安装完整的核心目录；可选语言包使用下文的独立安装流程。Codex 通常会自动发现新技能；未出现时重启后再试。
+
+## 直接这样用
+
+安装后直接提出请求，或用 `$yaya` 显式指定。在 Codex 中也可输入 `$` 后选择 Yaya。
+
+```text
+$yaya 润色下面的文章，去掉空话，保留作者口吻和有用细节。
+用 yaya 审阅这段话，指出问题和原因，先不要改写。
+用 yaya 润色 report.md，让普通读者看懂，保留金融术语、数字和风险说明。
+用 yaya 精简这个文件的普通注释，保留代码、docstring 和工具指令。
+用 yaya 结合配置和接口样本核对这份技术说明，只修改说明文字。
+用 yaya 优化下面的提示词，保留变量、输出格式和全部限制。
+用 yaya 修改这个提示词，让 AI 用普通读者能懂的语言回答。
+用 yaya 学习这段样稿，给我可复制的风格提示词和一个新例子。
+用 yaya 以香港繁体中文润色这段说明，保留地区用语。
+用 yaya 看看“这是 AI 吗”，给出依据和不确定性，不要改写。
 ```
 
 | 功能 | 能做什么 |
@@ -24,23 +78,20 @@ yaya 是一个编辑 Skill，使用你当前的 AI 工具，帮你删去空话�
 | 去 AI 味与审稿 | 找出空泛铺垫、宣传语、翻译腔和机械重复，结合语境决定是否修改。 |
 | 正文与文件润色 | 按指定用途、读者和风格调整文字，保留事实、数字和不确定性。 |
 | 代码注释 | 结合代码改写注释，保留程序和工具指令。 |
+| 工程事实核对 | 按需追踪配置、环境与接口来源，保留数字归属、条件和确定性；代码与注释冲突时报告可能的代码缺陷。 |
+| 这是 AI 吗 | 审阅来源证据与写作迹象，给出 AI 生成倾向、人工写作倾向或无法判断；不把文本迹象当作来源鉴定。 |
 | 提示词优化 | 整理提示词的措辞和结构，保留变量、输出格式和执行要求。需要改变 AI 的回答风格时，在请求中说明。 |
 | 学习样稿风格 | 提炼表达习惯，生成可复制的风格提示词与示例。需要保存时，在请求中指定。 |
 
-说“改写”就得到修改后的文字，说“只检查”就得到问题和建议，说“修改这个文件”就编辑指定范围。原文已经合适时可以保留；要求换语气或重组时，按请求调整。学习样稿会提取表达习惯，不会把作者的身份、经历或观点带入新内容，也不涉及模型训练。
+说“改写”就得到改稿，说“只检查”就得到问题和建议，说“修改这个文件”就编辑指定范围。原文已经清楚准确时可以不改。要求换语气或重组时，说明目标读者和用途；需要修改 docstring、日志或数据库元数据时，明确指定对象。
+
+学习样稿提取的是表达习惯，不会迁移作者的身份、经历或观点，也不涉及模型训练。“这是 AI 吗”审阅写作迹象和来源材料；仅凭成文无法可靠区分人工、AI 生成与人机混写，不提供未经校准的概率或准确率。详见 [来源审阅边界](core/yaya/references/authorship.md)。
 
 ## 本地试用与开发
 
-从 [GitHub 仓库](https://github.com/yuanqimanong/yaya) 获取源码：
+暂不安装时，让 AI 读取本地 [SKILL.md](core/yaya/SKILL.md)，再提交编辑请求。完整安装、更新和回滚见 [安装指南](INSTALL.md)。
 
-```text
-git clone https://github.com/yuanqimanong/yaya.git
-cd yaya
-```
-
-临时试用时，让 AI 读取 [SKILL.md](core/yaya/SKILL.md)，再提交编辑请求。需要自动加载时，将完整的 `core/yaya/` 目录安装到所用 AI 工具的 Skill 目录，具体步骤见 [安装指南](INSTALL.md)。
-
-当前版本为 **0.2.0**，尚未提供公开 Release 下载。可在仓库根目录测试并构建：
+在仓库根目录运行测试和构建：
 
 ```text
 python -m unittest discover -s tests -v
@@ -74,7 +125,7 @@ python core/yaya/scripts/packs.py resolve --language zh-Hans
 
 | 资源 | 默认安装 | 构建产物 |
 | --- | --- | --- |
-| 简体中文 `zh-Hans`、英语 `en` | 是 | `yaya-core-0.2.0.zip` |
+| 简体中文 `zh-Hans`、英语 `en` | 是 | `yaya-core-0.2.1.zip` |
 | 繁体中文 `zh-Hant` | 否 | `yaya-lang-zh-Hant-0.2.0.zip` |
 | 日语 `ja` | 否 | `yaya-lang-ja-0.2.0.zip` |
 | 韩语 `ko` | 否 | `yaya-lang-ko-0.2.0.zip` |
@@ -93,6 +144,7 @@ python core/yaya/scripts/packs.py resolve --language zh-Hans
 python scripts/detect_tells.py draft.md --language zh-Hans
 python scripts/check_rewrite.py before.md after.md
 python scripts/check_comments.py before.py after.py
+python scripts/check_docstrings.py before.py after.py --allow approved-docstrings.json
 ```
 
 | 工具 | 实际检查范围 |
@@ -100,8 +152,14 @@ python scripts/check_comments.py before.py after.py
 | `detect_tells.py` | 仅支持 `en` 和 `zh-Hans`，扫描有限词句候选并输出位置和原因。命中需结合语境判断，不输出 AI 概率。 |
 | `check_rewrite.py` | 比较支持的 Markdown 片段、链接目标、数字及已识别单位、占位符等。支持的成对引号内容需 `--protect-quotes`，其他指定原样片段需 `--protect-literal`。 |
 | `check_comments.py` | Python `.py` / `.pyi` 普通 `#` 注释的修改边界，保护代码、字符串、行结构和已识别工具指令；不支持增删或移动注释行。 |
+| `check_docstrings.py` | 独立检查明确授权的 Python docstring 节点；绑定具体候选与字面值，保护其他代码、字符串和已识别示例。 |
+| `edit_evidence.py` | 保存任务开始的工作树原稿及 Git 基线，记录内容摘要、工具版本、命令、时间和状态；旧报告不能替代新验证。 |
 
-这些工具只读文件。前两个正文工具接受每份不超过 2 MiB 的 UTF-8 输入。检查通过后仍需核对语义：数字是否属于原来的对象，条件、否定和归因是否保留。数字检查比较未保护正文中数字与已识别单位的内容和出现次数，无法确认归属，也可能漏掉未列出的单位变化。
+检查器只读原稿和候选；证据工具仅在指定目录写快照和报告。前两个正文工具接受每份不超过 2 MiB 的 UTF-8 输入。检查通过后仍需核对语义：数字是否属于原来的对象，条件、否定、归因和确定性是否保留。数字检查比较未保护正文中数字与已识别单位的内容和出现次数，无法确认归属，也可能漏掉未列出的单位变化。
+
+`--allow` 自 0.2.1 起接受绑定具体文件摘要和差异的 JSON，拒绝旧式整类放行。docstring 改动会改变 `__doc__`，AST 比较只验证机械范围。用法、Windows 编码边界和批量统计见 [验证指南](core/yaya/references/validation.md)。普通润色仍直接交付，无需固定评分或报告。
+
+“这是 AI 吗”使用当前宿主模型审阅；`detect_tells.py` 只扫描措辞候选，两者的结果不能互相替代。
 
 Markdown 扫描器支持有限语法；识别到缩进块、列表内围栏、脚注、多行链接或原始 HTML 块等结构时，会返回不支持。它无法识别所有超出范围的结构，请一并查看 JSON 中的 `limitations`。Python 源码须能被当前解释器解析；其他编程语言的注释需要宿主解析器或人工检查。
 

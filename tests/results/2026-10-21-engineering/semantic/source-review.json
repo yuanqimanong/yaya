@@ -1,0 +1,31 @@
+{
+  "reviewer": "Primary model static source/diff review; not independent human calibration.",
+  "case": "ENG09",
+  "condition": "old",
+  "raw_judgment": {
+    "fidelity": "uncertain",
+    "task": "uncertain"
+  },
+  "resolved": {
+    "fidelity": "pass",
+    "task": "pass",
+    "preference": "tie"
+  },
+  "evidence": {
+    "path": "semantic/old-comments.md",
+    "line": 9,
+    "sha256": "2a63ac96e600c060fa60a7b1f6d49b796a5dca619a3990f9e57002f5944b0bcc",
+    "quote": "Docstrings are string objects and may be inspected at runtime. They and doctest examples stay unchanged unless explicitly requested. Editing them needs separate review; the bundled checker does not validate such changes.",
+    "archived_original": "semantic/evidence.zip!main/old/snapshot/yaya/references/comments.md"
+  },
+  "reason": "The old response accurately reports the limitation stated in its supplied old guide. The anonymous judge lacked that tool context. Code changes are identical to the new response and both passed the separate mechanical check. Do not count this uncertainty or its preference as a model-fidelity improvement.",
+  "reviewed_results": {
+    "old_hard_pass": 16,
+    "new_hard_pass": 16,
+    "preference_new": 1,
+    "preference_old": 0,
+    "tie": 15
+  },
+  "remaining_preference": "ENG11: presentation of the same valid status counts; both responses are factually correct.",
+  "authorship": "4/4 appropriate uncertainty/process reasoning in each condition; no provenance labels or classification accuracy measurement."
+}

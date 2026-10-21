@@ -1,0 +1,108 @@
+{
+  "started_utc": "2026-10-21T06:47:55.635479+00:00",
+  "finished_utc": "2026-10-21T06:49:06.340738+00:00",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "command": [
+    "D:\\env\\miniconda3\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "run": 207,
+  "failures": [],
+  "errors": [],
+  "skipped": [
+    [
+      "test_tstring_comments_are_immutable (test_comments.CommentChecks.test_tstring_comments_are_immutable)",
+      "Template strings require Python 3.14+"
+    ],
+    [
+      "test_linked_backup_directory_prevents_move (test_packs.PackChecks.test_linked_backup_directory_prevents_move)",
+      "Directory symlinks and junctions unavailable"
+    ],
+    [
+      "test_linked_data_root_and_destination_rejected (test_packs.PackChecks.test_linked_data_root_and_destination_rejected)",
+      "Directory symlinks and junctions unavailable"
+    ],
+    [
+      "test_linked_empty_resolution_root_is_invalid_not_missing (test_packs.PackChecks.test_linked_empty_resolution_root_is_invalid_not_missing)",
+      "Directory symlinks and junctions unavailable"
+    ],
+    [
+      "test_linked_pack_directory_and_backups_rejected (test_packs.PackChecks.test_linked_pack_directory_and_backups_rejected)",
+      "Directory symlinks and junctions unavailable"
+    ],
+    [
+      "test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='yaya-core-0.2.1.zip')",
+      "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test ufjv3_31\\\\unrelated file 0.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test ufjv3_31\\\\linked output 0\\\\yaya-core-0.2.1.zip'"
+    ],
+    [
+      "test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='catalog.json')",
+      "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test ufjv3_31\\\\unrelated file 1.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test ufjv3_31\\\\linked output 1\\\\catalog.json'"
+    ],
+    [
+      "test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='SHA256SUMS')",
+      "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test ufjv3_31\\\\unrelated file 2.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test ufjv3_31\\\\linked output 2\\\\SHA256SUMS'"
+    ]
+  ],
+  "passed": 199,
+  "source_sha256": {
+    "core/yaya/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "core/yaya/SKILL.md": "7e277105ce2811b005ae31534e8621dfc664fbb35132e43e8054bf46a43efa34",
+    "core/yaya/version.json": "d10b09687f0567ec69669342d732bc611e917f0b54d68e883cef32a848512e00",
+    "core/yaya/agents/openai.yaml": "84bfc4069af1119625d2493a8f38df4c697f0b0201d46933516d4f932eee5c76",
+    "core/yaya/references/authorship.md": "8c7a6c9f1ff91835ab280a8fcb38fe5355a8ab3e03715a36cfb65991e5f7236d",
+    "core/yaya/references/comments.md": "21807e29c6e13486524a602851ee7117d44974916fda124967047fc05cc1cdd8",
+    "core/yaya/references/engineering.md": "5cd5cdb686b0f590252207cacaa396e8a13b457bf5239bc693999aa4ec55127b",
+    "core/yaya/references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+    "core/yaya/references/language-packs.md": "3e455a40366e4d73465c6a332e993fc4b9523b1c7908d13ecb0613ad3998562d",
+    "core/yaya/references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+    "core/yaya/references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+    "core/yaya/references/text.md": "10531b031aee323432dd03e93cc271795d814def91a749077f5712a817bd95ed",
+    "core/yaya/references/validation.md": "7eb0d89e0cac0a1791c005f3d4fe6d8ce4e7c7a858082d7345885c73f197d581",
+    "core/yaya/scripts/check_comments.py": "5c64d02633ac029b99088638e6d0338bba91e52318f90dc2ad23a4fc571d38a1",
+    "core/yaya/scripts/check_docstrings.py": "ed5b7ba30b08f9b85d968ca6b46a8d41c48f743caa1f18dcf104784e4929ae05",
+    "core/yaya/scripts/check_rewrite.py": "61e8ea9888249ef255397fa293a43397e3b0fa7d804c2e4bb413161c633974f9",
+    "core/yaya/scripts/detect_tells.py": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800",
+    "core/yaya/scripts/edit_evidence.py": "63a79cb8211f3dac0514fdcda095e7fdd8a7f9c8bdd9ce13faa4cb7c47aa8fce",
+    "core/yaya/scripts/packs.py": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2",
+    "core/yaya/scripts/prose_scan.py": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+    "core/yaya/scripts/tell_rules.json": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8",
+    "core/yaya/languages/en/examples.md": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3",
+    "core/yaya/languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0",
+    "core/yaya/languages/en/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "core/yaya/languages/en/pack.json": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f",
+    "core/yaya/languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58",
+    "core/yaya/languages/zh-Hans/examples.md": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc",
+    "core/yaya/languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f",
+    "core/yaya/languages/zh-Hans/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "core/yaya/languages/zh-Hans/pack.json": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475",
+    "core/yaya/languages/zh-Hans/PATTERNS.md": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b",
+    "scripts/build_release.py": "8ada897bdc06984a9136bc5c47f9d165dc19a7b416c12505b5c27747d33be9e5",
+    "tests/evals/cases.json": "dd112089a20aff352e83a1a094a749627c0ed4bd512d2c055ecf176e4bbac88c",
+    "tests/evals/check_outputs.py": "67eab94e569817013c4915bf116642a6f6bb903af26a16506925cb4d7895243e",
+    "tests/evals/cli-output.schema.json": "993984b4173801b43cfedcd040369053ee38cf849144a9ea43fa10f20461f0b2",
+    "tests/evals/CLI.md": "0ccd71de1be39ee713ec85f48b9e6918eb1fab1f56c800262adf3e9c19287a3d",
+    "tests/evals/collect.py": "abf17b2535db30ccf3533bb05e731578ae6129aca1a5638a3965454cb772be1a",
+    "tests/evals/compare_runs.py": "cb3c46dde759795d5a8572b0002756a65baa1c3ea2536ba806906e1f5358629d",
+    "tests/evals/continue_cli.py": "a7cf5e3b3e7951d598919eff0461d4537d62ba9dc4c66ca170740d6d4ef7599a",
+    "tests/evals/downstream-runtime.json": "f45c2eced4a1946faf3bc0e5d721e208ecc6e52c4e3235e5e9cbb9b5b71c8792",
+    "tests/evals/downstream.json": "b34e8530f478ddb3dbaa6a7fb893a9687d6341411b12f664623a81c0a4dfb299",
+    "tests/evals/heldout.json": "3b4054009aaf052a55f639c6d0cb8ccad7af8827c3a81b11a42fadb9c5bbceac",
+    "tests/evals/humanize.json": "01213f8cbe93211585589abbfa81a928e40ee73bfafc6e78bae6ef830a224b50",
+    "tests/evals/judge-output.schema.json": "a6fe04cd571c993aa5e09042ea950bff0f8de1e4754dad7ebd04e45ea66c4d0e",
+    "tests/evals/judge_cli.py": "a5c04057fd66ff72ae4ba8cb728cbcfe5d3f89b4129f5e623c7cf5c91fe82fc8",
+    "tests/evals/prepare.py": "2fcd21de2635f2b066e7dd9e3f4dcd62e7dd6a82e2056ead6c8539c50d8f52ce",
+    "tests/evals/README.md": "e718a8ce2cb228bea6d660293a91dc893314e102a5e07e8f8356e97a27d5ec58",
+    "tests/evals/refinement.json": "b40eaf67847aaac699a6e0e9625e1e2b6542a969e91327a9bdc9ac57c53d94d2",
+    "tests/evals/run_cli.py": "3b5e33fedcde06760fc196c60c197f4601287a800ba5d05a78431d534f581dfd",
+    "tests/evals/scenarios.json": "b56429b03940d7d3120eda305d4e2b36373075504491f9a20ee5ddf58e806017",
+    "tests/evals/summarize.py": "53abd207157033b98ceac15a75fcbf913aa00fa73bb172a6dde95e13e1a3665f",
+    "tests/evals/integration/metrics.py": "1c41ee33606c2031fc7019287b71ac0066d0a0ff505895de6482f7368c21016a",
+    "tests/evals/integration/report.md": "58e5d20f13ec6ed79d075e23dd2a12c235fd4491160eeeabc18b231441a52305",
+    "tests/evals/integration/request.md": "3472e2497ef40b2da12625fe97444d9c5137b249a88ec8fae83e9d7dc2693746"
+  }
+}

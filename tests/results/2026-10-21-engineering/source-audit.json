@@ -1,0 +1,29 @@
+{
+  "worktree_clean_at_start": true,
+  "source_install_equal_at_start": true,
+  "git_head_at_start": "ae2d17d642949ad21687bf7904688fd6aeaedf28",
+  "code_changed_after_final_unittest": [],
+  "noncode_changes_after_final_unittest": [],
+  "diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  "skill_structure": {
+    "command": [
+      "D:\\env\\miniconda3\\envs\\ai_crawler\\python.exe",
+      "-X",
+      "utf8",
+      "D:\\CODEX\\skills\\.system\\skill-creator\\scripts\\quick_validate.py",
+      "core/yaya"
+    ],
+    "result": "passed (actual successful output: Skill is valid!)",
+    "earlier_attempts": "Default and bundled Python lacked PyYAML; used existing ai_crawler Python without installing packages or modifying its environment."
+  },
+  "test_setup_history": "First new-fixture invocations failed on sandbox default temp paths; fixtures moved into tests/ and rerun. No test protections or assertions were removed.",
+  "scope": "Only yaya project and the explicitly identified yaya skill installation; no finance-data-crawler business files accessed or modified.",
+  "checked_utc": "2026-10-21T07:26:21.835834+00:00"
+}

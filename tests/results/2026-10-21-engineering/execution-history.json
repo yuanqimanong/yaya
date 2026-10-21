@@ -1,0 +1,14 @@
+{
+  "current_unittest": "unittest-final.json",
+  "historical_tests": "history/unittest-initial.json (older candidate; not current evidence; passed scalar is a conservative subtractive estimate, not a successful-method count)",
+  "bootstrap_01": "CLI initialization failed under sandbox; 1 failed startup, 1 not started; retained separately and excluded from matrix.",
+  "bootstrap_02": "1 complete old/new pilot pair; excluded from final matrix.",
+  "main": "32 executions, 31 completed and 1 model-capacity failure; all raw logs retained.",
+  "recovery": "One complete AI04 old/new pair rerun under identical model/input/guidance. Both successful; replaces the entire pair in the effective matrix. Original failure and superseded successful old response retained.",
+  "model_changes": "none",
+  "mechanical_protections_relaxed": "none",
+  "recovery_zip_sha256": "313e6c5e1178849f96578a973b6f6c24020d34ffa68c33783f43429eb62a79fa",
+  "review_initial": "First 8-pair batch completed; second 8-pair batch timed out after emitting a response and was not accepted.",
+  "review_protocol_issue": "ENG09 requested notes were omitted from the initial anonymous packet. The collector now supports review_delivered_notes and has a regression test.",
+  "review_recovery": "The last 8 original pairs were rejudged once as 2 four-pair batches, including requested notes. Both completed; all original output/timeout records retained."
+}

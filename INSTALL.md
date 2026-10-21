@@ -9,11 +9,20 @@ You can ask your AI:
 
 > 阅读 https://github.com/yuanqimanong/yaya 的 INSTALL.md，安装默认中英核心。
 
+In Codex installations that provide the bundled installer, you can ask:
+
+```text
+$skill-installer Install Yaya from https://github.com/yuanqimanong/yaya/tree/main/core/yaya.
+```
+
+If the destination already exists, preserve it and follow the staged update
+procedure below; a fresh-install command is not an update command.
+
 > 按 INSTALL.md 给已安装的 yaya 增加日语支持，先构建语言包并校验哈希。
 
 ## 1. Obtain the smallest artifact
 
-**Version 0.2.0 is available from source; there is no public Release download yet.**
+**Core version 0.2.1 is available from source; there is no public Release download yet.**
 Clone the [repository](https://github.com/yuanqimanong/yaya), then build from its root:
 
 ```text
@@ -22,7 +31,7 @@ cd yaya
 python scripts/build_release.py
 ```
 
-The build writes `dist/yaya-core-0.2.0.zip`, three optional language archives,
+The build writes `dist/yaya-core-0.2.1.zip`, three optional language archives,
 `catalog.json` and `SHA256SUMS`. Install only the core unless you need another
 language. Cloning downloads all language source files, but does not install them.
 
@@ -51,7 +60,7 @@ For Codex, choose one location:
 
 These paths follow
 [OpenAI's official skill documentation](https://learn.chatgpt.com/docs/build-skills)
-(checked 2026-10-19). For another Agent Skills host, use its current documented
+(checked 2026-10-21). For another Agent Skills host, use its current documented
 location for the same `yaya/` folder. Keep one installation per intended scope to
 avoid duplicate discovery.
 
@@ -172,7 +181,7 @@ The complete package contract and contributor commands are in
 
 ## Current language-pack format
 
-Core `0.2.0` uses one current pack specification:
+Core `0.2.x` uses one current pack specification:
 `format_version: 1` with `core_major: 0`, including optional `PATTERNS.md` for
 humanizing guidance. Without that file, the host uses `GUIDE.md`. Packs are plain
 text and contain no executable rules.

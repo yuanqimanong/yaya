@@ -1,0 +1,61 @@
+{
+  "verified_utc": "2026-10-21T07:29:34.789609+00:00",
+  "all_checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--reverse",
+        "--check",
+        "D:\\AIProjects\\yaya\\.tmp\\yaya-0.2.1-recovery\\upgrade.patch"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\env\\miniconda3\\python.exe",
+        "D:\\AIProjects\\yaya\\.tmp\\yaya-0.2.1-recovery\\restore.py",
+        "--scope",
+        "source"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\env\\miniconda3\\python.exe",
+        "D:\\AIProjects\\yaya\\.tmp\\yaya-0.2.1-recovery\\restore.py",
+        "--scope",
+        "installed"
+      ],
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "installed_runtime_equal": true,
+  "runtime_files": 31,
+  "tested_source_unchanged": true,
+  "doc_links_missing": [],
+  "recovery_test": {
+    "verified_utc": "2026-10-21T07:29:34.311258+00:00",
+    "isolated_restore": "passed",
+    "restored_existing": 20,
+    "removed_upgrade_additions": 10,
+    "subsequent_edit_protection": "passed",
+    "refusal_exit": 1,
+    "restore_exit": 0,
+    "actual_user_source_unchanged": true
+  },
+  "recoverable_diff_sha256": "5a16534a54433d429948a082ba7ed9fcd9cb51be34f435ed807a7e27bf3bf19f",
+  "recovery_zip_sha256": "313e6c5e1178849f96578a973b6f6c24020d34ffa68c33783f43429eb62a79fa"
+}

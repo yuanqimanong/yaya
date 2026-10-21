@@ -11,6 +11,7 @@ from collections import Counter
 import sys
 
 from prose_scan import InputError, JsonParser, LIMITATIONS, Unsupported, emit, numbers, read_utf8, snapshot
+from edit_evidence import bound_check, exact_grant, strict_json
 
 CATEGORIES = (
     "bom", "frontmatter", "fences", "inline_code", "link_targets", "html",
@@ -20,9 +21,19 @@ CATEGORIES = (
 
 
 def compare(before, after, allow=(), protect_quotes=False, literals=()):
-    invalid = set(allow) - set(CATEGORIES)
-    if invalid:
-        raise InputError("Unknown allowed category: " + ", ".join(sorted(invalid)))
+    permitted = []
+    if allow:
+        try:
+            permitted = exact_grant(allow, before.encode("utf-8"), after.encode("utf-8"), "changes")
+        except (TypeError, ValueError) as exc:
+            raise InputError(str(exc)) from exc
+        if any(not isinstance(entry, dict) or set(entry) != {"category", "before", "after"}
+               or not isinstance(entry["category"], str) or entry["category"] not in CATEGORIES
+               or not all(isinstance(entry[field], list) and all(isinstance(value, str) for value in entry[field])
+                          for field in ("before", "after")) for entry in permitted):
+            raise InputError("Allow entries must enumerate exact category/before/after differences.")
+        if len({entry["category"] for entry in permitted}) != len(permitted):
+            raise InputError("Duplicate authorized category difference.")
     if any(not literal or literal not in before for literal in literals):
         raise InputError("Each protected literal must be nonempty and present in BEFORE.")
     try:
@@ -37,17 +48,18 @@ def compare(before, after, allow=(), protect_quotes=False, literals=()):
         prior, current = old.get(category, []), new.get(category, [])
         equal = Counter(prior) == Counter(current) if category == "numbers" else prior == current
         if not equal:
-            changes.append({
-                "category": category, "allowed": category in allow,
-                "before": prior, "after": current,
-            })
+            difference = {"category": category, "before": prior, "after": current}
+            changes.append({**difference, "allowed": difference in permitted})
+    actual = [{key: change[key] for key in ("category", "before", "after")} for change in changes]
+    if any(entry not in actual for entry in permitted):
+        raise InputError("Grant contains a stale, unused, or inexact difference.")
     violations = [change for change in changes if not change["allowed"]]
     return {
         "status": "failed" if violations else "passed",
         "changed": before != after,
         "checked_categories": list(CATEGORIES),
         "quote_protection": protect_quotes,
-        "allowed_categories": sorted(set(allow)),
+        "authorized_differences": permitted,
         "changes": changes, "violations": violations,
         "limitations": LIMITATIONS + [
             "Numbers are compared as a multiset of number/recognized-unit lexemes in unprotected prose; unlisted units and reordered associations can pass.",
@@ -60,7 +72,13 @@ def compare(before, after, allow=(), protect_quotes=False, literals=()):
 def check_files(before, after, allow=(), protect_quotes=False, literals=()):
     if str(before) == "-" and str(after) == "-":
         raise InputError("Only one input may use stdin.")
-    return compare(read_utf8(before), read_utf8(after), allow, protect_quotes, literals)
+    operation = lambda: compare(read_utf8(before), read_utf8(after), allow, protect_quotes, literals)
+    if str(before) == "-" or str(after) == "-":
+        result = operation()
+        result["evidence"] = {"status": "unbound", "reason": "stdin input has no stable file identity; save files for batch evidence."}
+        return result
+    return bound_check(before, after, __file__, operation,
+                       {"allow": allow, "protect_quotes": protect_quotes, "literals": list(literals)})
 
 
 def main(argv=None):
@@ -69,13 +87,14 @@ def main(argv=None):
     parser.add_argument("after")
     parser.add_argument("--language", help="Optional metadata only; mechanical checks are language independent")
     parser.add_argument("--json", action="store_true", help="Compatibility flag; JSON is always emitted")
-    parser.add_argument("--allow", action="append", choices=CATEGORIES, default=[])
+    parser.add_argument("--allow", help="Path to reviewed JSON binding exact file hashes and category differences; broad categories are rejected")
     parser.add_argument("--protect-quotes", action="store_true", help="Preserve paired double/curly/East Asian quoted spans")
     parser.add_argument("--protect-literal", action="append", default=[], help="Preserve exact occurrences; repeat for each literal")
     args = parser.parse_args(argv)
     try:
-        result = check_files(args.before, args.after, args.allow, args.protect_quotes, args.protect_literal)
-    except (InputError, OSError) as exc:
+        grant = strict_json(args.allow) if args.allow else ()
+        result = check_files(args.before, args.after, grant, args.protect_quotes, args.protect_literal)
+    except (InputError, OSError, ValueError) as exc:
         result = {"status": "error", "error": str(exc), "limitations": LIMITATIONS}
     emit(result)
     return {"passed": 0, "failed": 1}.get(result["status"], 2)

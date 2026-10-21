@@ -1,0 +1,34 @@
+{
+  "conditions": {
+    "old": {
+      "fidelity": {
+        "pass": 15,
+        "uncertain": 1
+      },
+      "task": {
+        "pass": 15,
+        "uncertain": 1
+      },
+      "hard_pass": 15
+    },
+    "new": {
+      "fidelity": {
+        "pass": 16
+      },
+      "task": {
+        "pass": 16
+      },
+      "hard_pass": 16
+    }
+  },
+  "preferences": {
+    "old": 0,
+    "new": 2,
+    "tie": 14,
+    "uncertain": 0
+  },
+  "cases": 16,
+  "generation": "32 effective responses, including one complete-pair infrastructure recovery; initial failure retained.",
+  "review": "First 8 pairs from initial successful batch; final 8 from successful 4-pair recovery batches. Initial second batch timed out and was not accepted. ENG09 requested delivered notes were added to correct an omitted review field.",
+  "source": "Anonymous model judgments, then direct source/diff review; not human calibration or authorship classification accuracy."
+}

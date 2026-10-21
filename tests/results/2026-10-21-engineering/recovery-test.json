@@ -1,0 +1,10 @@
+{
+  "verified_utc": "2026-10-21T07:29:34.311258+00:00",
+  "isolated_restore": "passed",
+  "restored_existing": 20,
+  "removed_upgrade_additions": 10,
+  "subsequent_edit_protection": "passed",
+  "refusal_exit": 1,
+  "restore_exit": 0,
+  "actual_user_source_unchanged": true
+}

@@ -157,7 +157,7 @@ def _result(status: str, **details) -> dict:
     return {"status": status, "language": "python", **details, "limitations": LIMITATIONS}
 
 
-def check_files(before: Path | str, after: Path | str) -> dict:
+def _check_files(before: Path | str, after: Path | str) -> dict:
     """Read two files and return a JSON-serializable result without modifying them."""
     before, after = Path(before), Path(after)
     if before.suffix.lower() not in {".py", ".pyi"}:
@@ -201,6 +201,11 @@ def check_files(before: Path | str, after: Path | str) -> dict:
         changed_comment_lines=changed,
         violations=violations,
     )
+
+
+def check_files(before: Path | str, after: Path | str) -> dict:
+    from edit_evidence import bound_check
+    return bound_check(before, after, __file__, lambda: _check_files(before, after))
 
 
 def main(argv: list[str] | None = None) -> int:
