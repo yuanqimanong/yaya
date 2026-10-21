@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.1 — Unreleased
+
+- Separate polishing, evidence-backed editing and review-only work, with explicit
+  boundaries for comments, docstrings, runtime strings and schema metadata.
+- Add exact-node Python docstring checks and content-bound validation evidence;
+  replace broad prose-checker bypasses with exact candidate/difference grants.
+- Add cautious “Is this AI?” assessment without claiming calibrated authorship accuracy.
+- Add 16 directed old/new semantic cases, retain infrastructure failures and
+  distinguish anonymous judgments from source review.
+- Document AI-assisted installation, manual installation and direct usage in
+  English and Chinese; retain formal evidence while removing temporary artifacts.
+
 ## 0.2.0 — Unreleased
 
 - Add humanizing guidance with original editing and preservation examples

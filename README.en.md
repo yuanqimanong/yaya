@@ -2,54 +2,98 @@
 
 [简体中文](README.md) · [Installation](INSTALL.md) · [Contributing](CONTRIBUTING.md) · [Pack specification](docs/language-pack-spec.md)
 
-Yaya is an editing Skill for your existing AI host. Use it to remove padding,
-clarify prose, improve code comments and prompts, or learn a sample's style.
-Ask for a rewrite or a review; edits should preserve the meaning, the author's
-voice and the task's requirements.
+Yaya is an editing Skill for your existing AI host. Use it to polish prose,
+check engineering comments, improve prompts, or learn a sample's style.
+Ask for a rewrite, a review, or a scoped file edit while preserving the meaning,
+the author's voice and the task's constraints.
 
 Simplified Chinese and English are included. Traditional Chinese, Japanese and
 Korean are optional packs. Ordinary editing needs no extra service or model API.
 
-## Use it directly
+## Install
 
-- “Humanize this article. Keep the writer's voice and all substantive detail.”
-- “Point out awkward or inflated passages first. Don't rewrite yet.”
-- “Polish this financial report in plain English.”
-- “Improve only the ordinary comments in this Python file.”
-- “Remove inflated wording from this prompt; preserve every constraint.”
-- “Make this prompt ask for answers that beginners can understand.”
-- “Learn this sample's style and give me reusable instructions plus an example.”
-- “Polish this note in Hong Kong Traditional Chinese; keep its regional wording.”
+### Ask your AI to install it
 
-| Task | What Yaya does |
-| --- | --- |
-| Humanizing and review | Finds empty framing, promotional language, translation artifacts and repetitive wording, then judges them in context. |
-| Prose and file editing | Adapts writing to its purpose, audience and style while preserving facts, quantities and uncertainty. |
-| Code comments | Uses the code to clarify comments while preserving the program and tooling directives. |
-| Prompt editing | Organizes wording and structure while preserving variables, output formats and execution requirements. Specify when you also want to change the downstream answer style. |
-| Learning a style | Produces reusable style instructions and an example. Ask explicitly if you want them saved. |
+Send this to an AI coding tool that can access GitHub and local files:
 
-Ask for a rewrite to receive revised text, a review to receive findings, or a file
-edit to change the specified scope. Clear text may stay unchanged; a request to
-change tone or structure still calls for that change. Learning a sample's style
-does not transfer its author's identity, experiences or opinions, and does not
-train a model.
+```text
+Read INSTALL.md at https://github.com/yuanqimanong/yaya and install Yaya using this tool's skill-directory rules.
+Install the complete core/yaya directory for English and Simplified Chinese; skip optional language packs for now.
+If Yaya is already installed, back it up outside skill discovery paths and preserve local customizations.
+Report the actual path and version, then try a short edit to check that Yaya can be invoked.
+```
 
-## Try and develop
+In Codex installations that provide `$skill-installer`, you can also ask:
 
-Get the source from [GitHub](https://github.com/yuanqimanong/yaya):
+```text
+$skill-installer Install Yaya from https://github.com/yuanqimanong/yaya/tree/main/core/yaya.
+```
+
+If the installer reports an existing directory, follow [update and rollback](INSTALL.md#4-update-remove-or-roll-back). The AI needs access to the repository and permission to write the target directory. Reading `SKILL.md` can test the guidance; it does not verify installation or automatic discovery.
+
+### Install from source
+
+The current core is **0.2.1**, with no public Release download yet. Clone the source:
 
 ```text
 git clone https://github.com/yuanqimanong/yaya.git
 cd yaya
 ```
 
-For a direct trial, ask your AI host to read [SKILL.md](core/yaya/SKILL.md), then
-give it an editing request. For automatic discovery, install the complete
-`core/yaya/` directory in your host's Skill location; see [INSTALL.md](INSTALL.md).
+Copy the complete `core/yaya/` folder into your host's Skill directory. Common Codex locations are:
 
-The current version is **0.2.0**. There is no public Release download yet. Test
-and build from the repository root:
+| Scope | Destination |
+| --- | --- |
+| Current user | `~/.agents/skills/yaya/`, or `%USERPROFILE%\.agents\skills\yaya\` on Windows |
+| One project | `PROJECT_ROOT/.agents/skills/yaya/` |
+
+These paths follow the [official OpenAI skill documentation](https://learn.chatgpt.com/docs/build-skills), checked on 2026-10-21. Other compatible hosts use their own directory rules.
+
+For a first Windows user installation, run from the repository root:
+
+```powershell
+$skillTarget = Join-Path $env:USERPROFILE '.agents\skills\yaya'
+if (Test-Path -LiteralPath $skillTarget) { throw 'Yaya already exists; back it up and follow INSTALL.md to update.' }
+New-Item -ItemType Directory -Path (Split-Path $skillTarget -Parent) -Force | Out-Null
+Copy-Item -LiteralPath '.\core\yaya' -Destination $skillTarget -Recurse
+```
+
+The destination should contain `yaya/SKILL.md`, `references/`, `scripts/` and `languages/`. Optional packs are installed separately below. Codex normally discovers new skills automatically; restart if Yaya does not appear.
+
+## Use it directly
+
+Make a request by name, use `$yaya` explicitly, or type `$` and select Yaya in Codex.
+
+- “$yaya Humanize this article. Keep the writer's voice and all substantive detail.”
+- “Use Yaya to review this passage. Explain the issues without rewriting.”
+- “Use Yaya to polish this financial report in plain English. Keep its figures and risk qualifications.”
+- “Use Yaya to improve only the ordinary comments in this Python file. Preserve code, docstrings and directives.”
+- “Use Yaya to check this technical explanation against the supplied configuration and API samples.”
+- “Use Yaya to simplify this prompt; preserve variables, output formats and every constraint.”
+- “Use Yaya to make this prompt ask for answers that beginners can understand.”
+- “Use Yaya to learn this sample's style. Give me reusable instructions and an example.”
+- “Use Yaya to polish this note in Hong Kong Traditional Chinese; keep its regional wording.”
+- “Use Yaya to assess whether this is AI-written. Give evidence and uncertainty without rewriting.”
+
+| Task | What Yaya does |
+| --- | --- |
+| Humanizing and review | Finds empty framing, promotional language, translation artifacts and repetitive wording, then judges them in context. |
+| Prose and file editing | Adapts writing to its purpose, audience and style while preserving facts, quantities and uncertainty. |
+| Code comments | Uses the code to clarify comments while preserving the program and tooling directives. |
+| Engineering fact checking | Traces relevant configuration, environment and API evidence; preserves relationships and uncertainty without silently fixing business code. |
+| Is this AI? | Assesses provenance and writing signals with a tentative AI/human leaning or an indeterminate result; text signals do not authenticate origin. |
+| Prompt editing | Organizes wording and structure while preserving variables, output formats and execution requirements. Specify when you also want to change the downstream answer style. |
+| Learning a style | Produces reusable style instructions and an example. Ask explicitly if you want them saved. |
+
+Ask for a rewrite to receive revised text, a review to receive findings, or a file edit to change the specified scope. Clear, accurate text may stay unchanged. Specify the audience and purpose when changing tone or structure; name docstrings, runtime messages or schema metadata explicitly when those are included.
+
+Learning a sample's style does not transfer its author's identity, experiences or opinions, and does not train a model. “Is this AI?” assesses writing signals and provenance material. Text alone cannot reliably distinguish human, generated and mixed-origin writing, and no calibrated accuracy or probability is claimed. See [authorship assessment](core/yaya/references/authorship.md).
+
+## Try and develop
+
+For a trial without installation, ask your AI host to read the local [SKILL.md](core/yaya/SKILL.md), then give it an editing request. See [INSTALL.md](INSTALL.md) for full installation, updates and rollback.
+
+Test and build from the repository root:
 
 ```text
 python -m unittest discover -s tests -v
@@ -88,7 +132,7 @@ the input.
 
 | Language | Included by default | Build artifact |
 | --- | --- | --- |
-| Simplified Chinese `zh-Hans`, English `en` | Yes | `yaya-core-0.2.0.zip` |
+| Simplified Chinese `zh-Hans`, English `en` | Yes | `yaya-core-0.2.1.zip` |
 | Traditional Chinese `zh-Hant` | No | `yaya-lang-zh-Hant-0.2.0.zip` |
 | Japanese `ja` | No | `yaya-lang-ja-0.2.0.zip` |
 | Korean `ko` | No | `yaya-lang-ko-0.2.0.zip` |
@@ -116,6 +160,7 @@ From an installed `yaya/` directory:
 python scripts/detect_tells.py draft.md --language en
 python scripts/check_rewrite.py before.md after.md
 python scripts/check_comments.py before.py after.py
+python scripts/check_docstrings.py before.py after.py --allow approved-docstrings.json
 ```
 
 | Tool | What it checks |
@@ -123,13 +168,19 @@ python scripts/check_comments.py before.py after.py
 | `detect_tells.py` | A small set of wording candidates in `en` and `zh-Hans`, with locations and reasons. Findings need contextual review; no AI probability is produced. |
 | `check_rewrite.py` | Supported Markdown fragments, link destinations, placeholders, numbers and recognized units. Use `--protect-quotes` for supported paired quotations and `--protect-literal` for other exact text. |
 | `check_comments.py` | Changes to ordinary Python `.py` / `.pyi` `#` comments, protecting code, strings, line structure and recognized directives. Adding, deleting or moving comment lines is unsupported. |
+| `check_docstrings.py` | Exact grants for existing Python docstring nodes, preserving other code, strings and recognized examples. |
+| `edit_evidence.py` | Task-start working-tree snapshots, a separate Git baseline, content-bound check records and explicit status accounting. |
 
-All helpers are read-only. The first two accept UTF-8 inputs of up to 2 MiB each.
+Checkers do not write source files; the evidence helper writes snapshots and reports only to the selected directory. The first two accept UTF-8 inputs of up to 2 MiB each.
 After a passing check, review the meaning: quantities can still refer to different
 objects, and conditions, negation or attribution can change. The number check
 compares numbers and recognized units in unprotected prose, including their
 occurrence counts. It cannot establish ownership and may miss changes to unlisted
 units.
+
+Since 0.2.1, `--allow` takes an exact file/difference-bound JSON grant; broad category bypasses are rejected. Docstring edits change `__doc__`; AST checks establish mechanical scope only. See [validation](core/yaya/references/validation.md) for grants, Windows encoding boundaries and batch evidence. Ordinary polishing still returns the result directly.
+
+“Is this AI?” uses the existing host model; `detect_tells.py` only scans wording candidates. Their results are not interchangeable.
 
 The Markdown scanner covers a limited subset. It reports recognized unsupported
 constructs such as indented blocks, fences inside lists, footnotes, multiline
