@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "before_sha256": "591965a19e7c7523f8507b99db040ed06c1534327bbf0011c87553d1f5cf634e",
+  "after_sha256": "a3b79007f7d473b8ee26faa528650be5feaf4f82a8d49f43e5d9aba68fa69002",
+  "docstrings": [
+    {
+      "node": "fetch@1",
+      "before_sha256": "15c1c06b8b7c728c84bba5294dd9567b985945c023606e6d4a304a4c3fc61a36",
+      "after_sha256": "cbc836f17bca16d608d7f09bf827f81d3e075cc927a7ce9e94501eb77d80cd38"
+    }
+  ]
+}

@@ -133,3 +133,20 @@ python tests/evals/summarize.py tests/results/my-run
 历史报告与原始输出留在 `tests/results/`；新试验从准备步骤重新开始。
 
 2026-10-20 的 0.1 首轮采用早期 protocol 1、每批最多 5 题：运行前已快照 Skill，评审条件未提前哈希；收集时核对了全部生成请求与用例。旧结果仍按旧协议读取。当前 protocol 2 冻结条件、请求和外部语言包，并核对完整文件集；这些保证不能追溯到旧运行。
+
+## 工程保真与“这是 AI 吗”的旧版对照
+
+`engineering.json` 的 12 个工程案例和 4 个来源审阅案例带有预设检查条件。它们是定向回归，不是隐藏测试集或来源分类准确率基准。机械约束由 `test_comments.py`、`test_docstrings.py`、`test_edit_evidence.py` 和 `test_check_rewrite.py` 单独验证。
+
+先取得任务开始时的旧技能副本，再冻结两组相同请求；生成者不会看到 checks。以下命令使用已有 CLI 和宿主模型配置，会产生模型用量：
+
+```text
+python tests/evals/engineering_compare.py prepare tests/runs/paired --old PATH_TO_OLD_YAYA
+python tests/evals/engineering_compare.py run tests/runs/paired --workers 1 --timeout 180
+python tests/evals/engineering_compare.py collect tests/runs/paired --destination tests/results/paired
+python tests/evals/judge_cli.py tests/runs/paired/review tests/results/paired --workers 1
+```
+
+旧版/新版按题交错，各题独立上下文。共同输入、接口样本、模型设置保持一致；仅任务相关的技能指导不同，新增规则不会伪装成旧版材料。CLI 退出码、事件、完整回答、工具活动、内容摘要和缺失结果均保留。生成失败时停止追加；`--resume` 仅复用经校验的成功记录，不覆盖失败。匿名评审仍是模型判断，必须复核具体证据，不能代替人工标注或跨模型重复测试。不要把同一题的试跑、基础设施失败或未启动项计为通过样本。
+
+明确要求交付验证说明的案例使用 `review_delivered_notes: true`，将实际交付的 notes 一起传给评审，避免把收集器隐藏字段误判为模型遗漏。这个标记和 checks 一样不传给生成者。其他案例继续只审用户可见正文；无关生成元数据不进入匿名材料。已启动运行冻结收集器版本；改动脚本后使用新运行目录，旧证据保留原脚本及摘要。

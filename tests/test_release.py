@@ -81,10 +81,12 @@ class ReleaseBuildTests(unittest.TestCase):
             "yaya/scripts/packs.py", "yaya/scripts/check_comments.py",
             "yaya/scripts/detect_tells.py", "yaya/scripts/check_rewrite.py",
             "yaya/scripts/prose_scan.py", "yaya/scripts/tell_rules.json",
+            "yaya/scripts/check_docstrings.py", "yaya/scripts/edit_evidence.py",
             "yaya/agents/openai.yaml", "yaya/references/text.md",
             "yaya/references/comments.md", "yaya/references/prompts.md",
             "yaya/references/style-learning.md", "yaya/references/language-packs.md",
             "yaya/references/humanize.md",
+            "yaya/references/engineering.md", "yaya/references/validation.md", "yaya/references/authorship.md",
             "yaya/languages/en/PATTERNS.md", "yaya/languages/zh-Hans/PATTERNS.md",
         }
         self.assertTrue(required <= set(names))

@@ -30,7 +30,7 @@ class ProseOutputChecks(unittest.TestCase):
         self.write(self.run / "snapshot/yaya/SKILL.md", "Synthetic frozen skill.")
         scripts = self.run / "snapshot/yaya/scripts"
         scripts.mkdir()
-        for name in ("check_rewrite.py", "prose_scan.py"):
+        for name in ("check_rewrite.py", "prose_scan.py", "edit_evidence.py"):
             shutil.copyfile(TESTS.parent / "core/yaya/scripts" / name, scripts / name)
         cases = [
             {"id": identifier, "task": "humanize", "request": "Retain the supplied fact.",

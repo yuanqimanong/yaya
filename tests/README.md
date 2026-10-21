@@ -19,6 +19,8 @@ python -m unittest discover -s tests -v
 脚本测试不调用模型。编辑评测需要实际模型执行，步骤见 [evals/README.md](evals/README.md)；
 表达质量、事实保真和任务完成分别评审。
 
+0.2.1 的 [工程保真与来源审阅验收](results/2026-10-21-engineering/README.md) 单列机械回归和旧版同模型语义对照。定向案例及预期在 `evals/engineering.json`，运行方法见 `evals/README.md`。作者来源案例验证审慎推理，不是准确率基准。
+
 0.1 记录：[2026-10-20 全量测试与迭代](results/2026-10-20/README.md)。
 包含脚本回归、34 组有无 Skill 对照、文件操作和提示词执行测试；限制和跳过项单独列出。
 

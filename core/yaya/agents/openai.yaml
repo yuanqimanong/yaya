@@ -1,4 +1,4 @@
 interface:
   display_name: "Yaya · 牙牙学语"
-  short_description: "去掉空泛套话，润色正文、代码注释和提示词，支持只审不改与样稿风格学习"
+  short_description: "保真润色、工程注释核对、提示词与风格学习；支持只审不改和“这是 AI 吗”审慎评估"
   default_prompt: "用 $yaya 优化这段内容，保留原意和关键约束，并按我指定的风格表达。"

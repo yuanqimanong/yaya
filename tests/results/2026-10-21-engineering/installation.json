@@ -1,0 +1,101 @@
+{
+  "verified_utc": "2026-10-21T07:12:45.056339+00:00",
+  "status": "installed",
+  "version": "0.2.1",
+  "destination": "C:\\Users\\12761\\.agents\\skills\\yaya",
+  "all_runtime_sha256_equal": true,
+  "files": {
+    "LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "SKILL.md": "7e277105ce2811b005ae31534e8621dfc664fbb35132e43e8054bf46a43efa34",
+    "version.json": "d10b09687f0567ec69669342d732bc611e917f0b54d68e883cef32a848512e00",
+    "agents/openai.yaml": "84bfc4069af1119625d2493a8f38df4c697f0b0201d46933516d4f932eee5c76",
+    "references/authorship.md": "8c7a6c9f1ff91835ab280a8fcb38fe5355a8ab3e03715a36cfb65991e5f7236d",
+    "references/comments.md": "21807e29c6e13486524a602851ee7117d44974916fda124967047fc05cc1cdd8",
+    "references/engineering.md": "5cd5cdb686b0f590252207cacaa396e8a13b457bf5239bc693999aa4ec55127b",
+    "references/humanize.md": "814949fbb073065e6bf50f5925c0c2e9b64498cabfa9e9a620ba6646595b89f5",
+    "references/language-packs.md": "6df414506a959bed071d84fdea7b4aa028691762ec56df36abc149faa7961ab6",
+    "references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+    "references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+    "references/text.md": "10531b031aee323432dd03e93cc271795d814def91a749077f5712a817bd95ed",
+    "references/validation.md": "7eb0d89e0cac0a1791c005f3d4fe6d8ce4e7c7a858082d7345885c73f197d581",
+    "scripts/check_comments.py": "5c64d02633ac029b99088638e6d0338bba91e52318f90dc2ad23a4fc571d38a1",
+    "scripts/check_docstrings.py": "e7e1bf372a899cd34a6194446c7250aa7b836786a5f5dcafdc59ab848aab5b66",
+    "scripts/check_rewrite.py": "8c5c89d6c61e1f93ce90a6d266313606a3d822b68a8f51404b060a4435b7f975",
+    "scripts/detect_tells.py": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800",
+    "scripts/edit_evidence.py": "146dfe75d73c18472f6570d8884557d24ee70538e78c76a2741f3886b0dd3ad7",
+    "scripts/packs.py": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2",
+    "scripts/prose_scan.py": "273b5d879a909721f8bf6f914a3e9303dbf0b3f54b67567d00651e9ec74ea596",
+    "scripts/tell_rules.json": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8",
+    "languages/en/examples.md": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3",
+    "languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0",
+    "languages/en/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "languages/en/pack.json": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f",
+    "languages/en/PATTERNS.md": "fd9153d7a9b64561051cac152b3ad12e61ddd698ba1174df296d40f55db9ef58",
+    "languages/zh-Hans/examples.md": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc",
+    "languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f",
+    "languages/zh-Hans/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "languages/zh-Hans/pack.json": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475",
+    "languages/zh-Hans/PATTERNS.md": "e8026200458d919d91dd21ee53739f049e3cd6b461e77f90658948a115656c9b"
+  },
+  "changed_files": 13,
+  "checks": [
+    {
+      "command": [
+        "D:\\env\\miniconda3\\python.exe",
+        "C:\\Users\\12761\\.agents\\skills\\yaya\\scripts\\check_comments.py",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-21-engineering\\semantic\\boundary-artifacts\\ENG08\\new\\before.py",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-21-engineering\\semantic\\boundary-artifacts\\ENG08\\new\\candidate.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"language\": \"python\", \"changed_comment_lines\": [3], \"violations\": [], \"limitations\": [\"Only .py/.pyi sources parseable by the running Python interpreter are supported.\", \"Only ordinary # comment text may change; line count, line endings, BOM, and all other bytes must remain identical.\", \"Docstrings, f-strings, t-strings, and doctests inside strings are immutable; recognized comment directives and comment doctest blocks are protected.\", \"Unknown external-tool directives cannot be exhaustively recognized; review the diff and run the host project's checks.\", \"A pass does not verify that comments are accurate, useful, or consistent with the code.\", \"LF and CRLF are supported; lone-CR newlines and encodings that cannot be mapped exactly are unsupported.\"], \"evidence\": {\"started_utc\": \"2026-10-21T07:12:44.484068+00:00\", \"tool\": {\"name\": \"check_comments.py\", \"version\": \"sha256:5c64d02633ac029b99088638e6d0338bba91e52318f90dc2ad23a4fc571d38a1\", \"evidence_version\": \"1.0\", \"sha256\": {\"check_comments.py\": \"5c64d02633ac029b99088638e6d0338bba91e52318f90dc2ad23a4fc571d38a1\", \"edit_evidence.py\": \"146dfe75d73c18472f6570d8884557d24ee70538e78c76a2741f3886b0dd3ad7\"}, \"python\": \"3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]\", \"executable\": \"D:\\\\env\\\\miniconda3\\\\python.exe\"}, \"command\": [\"D:\\\\env\\\\miniconda3\\\\python.exe\", \"C:\\\\Users\\\\12761\\\\.agents\\\\skills\\\\yaya\\\\scripts\\\\check_comments.py\", \"D:\\\\AIProjects\\\\yaya\\\\tests\\\\results\\\\2026-10-21-engineering\\\\semantic\\\\boundary-artifacts\\\\ENG08\\\\new\\\\before.py\", \"D:\\\\AIProjects\\\\yaya\\\\tests\\\\results\\\\2026-10-21-engineering\\\\semantic\\\\boundary-artifacts\\\\ENG08\\\\new\\\\candidate.py\"], \"options\": {}, \"invocation\": \"CLI or Python API; command records the host process\", \"before\": {\"path\": \"D:\\\\AIProjects\\\\yaya\\\\tests\\\\results\\\\2026-10-21-engineering\\\\semantic\\\\boundary-artifacts\\\\ENG08\\\\new\\\\before.py\", \"sha256\": \"5d3504bb1817511a64311afa697690afb7b136c2d9b0f97c345806a1be3da77b\", \"bytes\": 267, \"encoding\": \"utf-8\", \"bom\": false, \"crlf\": 0, \"lf\": 7, \"lone_cr\": 0}, \"candidate\": {\"path\": \"D:\\\\AIProjects\\\\yaya\\\\tests\\\\results\\\\2026-10-21-engineering\\\\semantic\\\\boundary-artifacts\\\\ENG08\\\\new\\\\candidate.py\", \"sha256\": \"011f6ad5faeb4cd9d28ac8422eb465f2706bd72589b3a04ad50b4ddd3560d94c\", \"bytes\": 246, \"encoding\": \"utf-8\", \"bom\": false, \"crlf\": 0, \"lf\": 7, \"lone_cr\": 0}, \"finished_utc\": \"2026-10-21T07:12:44.489280+00:00\", \"inputs_stable\": true}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\env\\miniconda3\\python.exe",
+        "C:\\Users\\12761\\.agents\\skills\\yaya\\scripts\\check_docstrings.py",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-21-engineering\\semantic\\boundary-artifacts\\ENG09\\new\\before.py",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-21-engineering\\semantic\\boundary-artifacts\\ENG09\\new\\candidate.py",
+        "--allow",
+        "D:\\AIProjects\\yaya\\tests\\results\\2026-10-21-engineering\\semantic\\boundary-artifacts\\ENG09\\new\\exact-grant.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"violations\": [], \"authorized_nodes\": [\"fetch@1\"], \"ast_boundary_equal\": true, \"source_format\": {\"before\": {\"sha256\": \"591965a19e7c7523f8507b99db040ed06c1534327bbf0011c87553d1f5cf634e\", \"bytes\": 179, \"encoding\": \"utf-8\", \"bom\": false, \"crlf\": 0, \"lf\": 9, \"lone_cr\": 0}, \"candidate\": {\"sha256\": \"a3b79007f7d473b8ee26faa528650be5feaf4f82a8d49f43e5d9aba68fa69002\", \"bytes\": 151, \"encoding\": \"utf-8\", \"bom\": false, \"crlf\": 0, \"lf\": 9, \"lone_cr\": 0}}, \"evidence\": {\"started_utc\": \"2026-10-21T07:12:44.694754+00:00\", \"tool\": {\"name\": \"check_docstrings.py\", \"version\": \"sha256:e7e1bf372a899cd34a6194446c7250aa7b836786a5f5dcafdc59ab848aab5b66\", \"evidence_version\": \"1.0\", \"sha256\": {\"check_comments.py\": \"5c64d02633ac029b99088638e6d0338bba91e52318f90dc2ad23a4fc571d38a1\", \"check_docstrings.py\": \"e7e1bf372a899cd34a6194446c7250aa7b836786a5f5dcafdc59ab848aab5b66\", \"edit_evidence.py\": \"146dfe75d73c18472f6570d8884557d24ee70538e78c76a2741f3886b0dd3ad7\"}, \"python\": \"3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]\", \"executable\": \"D:\\\\env\\\\miniconda3\\\\python.exe\"}, \"command\": [\"D:\\\\env\\\\miniconda3\\\\python.exe\", \"C:\\\\Users\\\\12761\\\\.agents\\\\skills\\\\yaya\\\\scripts\\\\check_docstrings.py\", \"D:\\\\AIProjects\\\\yaya\\\\tests\\\\results\\\\2026-10-21-engineering\\\\semantic\\\\boundary-artifacts\\\\ENG09\\\\new\\\\before.py\", \"D:\\\\AIProjects\\\\yaya\\\\tests\\\\results\\\\2026-10-21-engineering\\\\semantic\\\\boundary-artifacts\\\\ENG09\\\\new\\\\candidate.py\", \"--allow\", \"D:\\\\AIProjects\\\\yaya\\\\tests\\\\results\\\\2026-10-21-engineering\\\\semantic\\\\boundary-artifacts\\\\ENG09\\\\new\\\\exact-grant.json\"], \"options\": {\"allow\": {\"schema\": 1, \"before_sha256\": \"591965a19e7c7523f8507b99db040ed06c1534327bbf0011c87553d1f5cf634e\", \"after_sha256\": \"a3b79007f7d473b8ee26faa528650be5feaf4f82a8d49f43e5d9aba68fa69002\", \"docstrings\": [{\"node\": \"fetch@1\", \"before_sha256\": \"15c1c06b8b7c728c84bba5294dd9567b985945c023606e6d4a304a4c3fc61a36\", \"after_sha256\": \"cbc836f17bca16d608d7f09bf827f81d3e075cc927a7ce9e94501eb77d80cd38\"}]}}, \"invocation\": \"CLI or Python API; command records the host process\", \"before\": {\"path\": \"D:\\\\AIProjects\\\\yaya\\\\tests\\\\results\\\\2026-10-21-engineering\\\\semantic\\\\boundary-artifacts\\\\ENG09\\\\new\\\\before.py\", \"sha256\": \"591965a19e7c7523f8507b99db040ed06c1534327bbf0011c87553d1f5cf634e\", \"bytes\": 179, \"encoding\": \"utf-8\", \"bom\": false, \"crlf\": 0, \"lf\": 9, \"lone_cr\": 0}, \"candidate\": {\"path\": \"D:\\\\AIProjects\\\\yaya\\\\tests\\\\results\\\\2026-10-21-engineering\\\\semantic\\\\boundary-artifacts\\\\ENG09\\\\new\\\\candidate.py\", \"sha256\": \"a3b79007f7d473b8ee26faa528650be5feaf4f82a8d49f43e5d9aba68fa69002\", \"bytes\": 151, \"encoding\": \"utf-8\", \"bom\": false, \"crlf\": 0, \"lf\": 9, \"lone_cr\": 0}, \"finished_utc\": \"2026-10-21T07:12:44.700421+00:00\", \"inputs_stable\": true}, \"limitations\": [\"Only UTF-8 .py/.pyi accepted by the running interpreter; selected docstrings must be single STRING tokens.\", \"Only granted existing docstring values may change; other bytes and physical newline sequences are protected.\", \"Recognized doctests and the tail starting at an example/usage/code-block marker are protected, even within granted nodes.\", \"Unmarked examples and project-specific documentation syntax require manual review; example editing needs a separate check.\", \"AST equivalence proves only a mechanical implementation boundary, not comment correctness or invariant runtime behavior; __doc__ changes.\"]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "apply",
+        "--reverse",
+        "--check",
+        "D:\\AIProjects\\yaya\\.tmp\\yaya-0.2.1-recovery\\upgrade.patch"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\env\\miniconda3\\python.exe",
+        "D:\\AIProjects\\yaya\\.tmp\\yaya-0.2.1-recovery\\restore.py",
+        "--scope",
+        "source"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"scope\": \"source\", \"root\": \"D:\\\\AIProjects\\\\yaya\", \"files\": [\"INSTALL.md\", \"README.en.md\", \"README.md\", \"core/yaya/SKILL.md\", \"core/yaya/agents/openai.yaml\", \"core/yaya/references/authorship.md\", \"core/yaya/references/comments.md\", \"core/yaya/references/engineering.md\", \"core/yaya/references/language-packs.md\", \"core/yaya/references/text.md\", \"core/yaya/references/validation.md\", \"core/yaya/scripts/check_comments.py\", \"core/yaya/scripts/check_docstrings.py\", \"core/yaya/scripts/check_rewrite.py\", \"core/yaya/scripts/edit_evidence.py\", \"core/yaya/version.json\", \"docs/design.md\", \"docs/upgrade-0.2.md\", \"scripts/build_release.py\", \"tests/README.md\", \"tests/evals/README.md\", \"tests/evals/engineering.json\", \"tests/evals/engineering_compare.py\", \"tests/test_check_outputs.py\", \"tests/test_check_rewrite.py\", \"tests/test_comments.py\", \"tests/test_docstrings.py\", \"tests/test_edit_evidence.py\", \"tests/test_engineering_compare.py\", \"tests/test_release.py\"], \"action\": \"preview\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\env\\miniconda3\\python.exe",
+        "D:\\AIProjects\\yaya\\.tmp\\yaya-0.2.1-recovery\\restore.py",
+        "--scope",
+        "installed"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"scope\": \"installed\", \"root\": \"C:\\\\Users\\\\12761\\\\.agents\\\\skills\\\\yaya\", \"files\": [\"SKILL.md\", \"version.json\", \"agents/openai.yaml\", \"references/authorship.md\", \"references/comments.md\", \"references/engineering.md\", \"references/language-packs.md\", \"references/text.md\", \"references/validation.md\", \"scripts/check_comments.py\", \"scripts/check_docstrings.py\", \"scripts/check_rewrite.py\", \"scripts/edit_evidence.py\"], \"action\": \"preview\"}\n",
+      "stderr": ""
+    }
+  ]
+}
