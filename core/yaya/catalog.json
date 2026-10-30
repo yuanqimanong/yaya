@@ -6,9 +6,9 @@
       "summary": "运行只读机械检查，比较原稿与候选稿的受保护内容；不核定事实或自动修稿。",
       "scope": "mechanical-prose",
       "delivery": "findings",
-      "options": ["before", "after", "kind"],
+      "options": ["before", "after", "kind", "literal", "quotes"],
       "references": ["references/check.md"],
-      "examples": ["yaya check --before original.md --after candidate.md", "yaya check --kind comments --before before.py --after after.py"]
+      "examples": ["yaya check --before original.md --after candidate.md", "yaya check --kind comments --before before.py --after after.py", "yaya check --before original.md --after candidate.md --literal retry_limit --quotes"]
     },
     "polish": {
       "title": "润色正文",
@@ -84,6 +84,8 @@
     }
   },
   "options": {
+    "literal": {"help": "原稿中必须原样保留的术语或标识符，可重复；仅用于 prose", "metavar": "TEXT", "repeat": true},
+    "quotes": {"help": "保护成对双引号、弯引号及中日韩引文；仅用于 prose", "flag": true},
     "before": {"help": "修改前的原始文件；只读", "metavar": "PATH"},
     "after": {"help": "待检查的候选文件；只读", "metavar": "PATH"},
     "kind": {"help": "prose 检查正文保护项；comments 检查 Python 普通注释边界", "choices": ["prose", "comments"], "default": "prose"},
