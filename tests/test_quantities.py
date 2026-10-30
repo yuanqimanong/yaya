@@ -13,6 +13,23 @@ import prose_scan
 
 
 class QuantityChecks(unittest.TestCase):
+    def test_ratio_and_fraction_operands_keep_order_and_spelling(self):
+        for before, after in (("1:3", "3:1"), ("1/4", "4/1"), ("1.5 : 2.5", "2.5 : 1.5"),
+                              ("1∶2∶3", "3∶2∶1"), ("-1⁄4", "4⁄-1"),
+                              ("1/4", "1:4"), ("1/4", "1 / 4"), ("1e3/2e3", "2e3/1e3")):
+            with self.subTest(before=before):
+                self.assert_change("Ratio: " + before, "Ratio: " + after)
+                self.assertEqual(prose_scan.numbers(prose_scan.snapshot(before)), [before])
+        self.assertEqual(checker.compare("A: 1:3. B: 1/4.", "B: 1/4. A: 1:3.")["status"], "passed")
+
+    def test_ratio_recognition_does_not_bridge_hidden_content_or_physical_lines(self):
+        for source in ("1\n/4", "1 / `x` 4", "1 :\n3", "1;3", "1 and 3"):
+            with self.subTest(source=source):
+                self.assertEqual(len(prose_scan.numbers(prose_scan.snapshot(source))), 2)
+        self.assertEqual(checker.compare("Ratio `1:3`", "Ratio `3:1`")["violations"][0]["category"], "inline_code")
+        self.assertEqual(prose_scan.numbers(prose_scan.snapshot("2026/10/30 at 12:34:56")),
+                         ["2026/10/30", "12:34:56"])
+
     def test_range_endpoints_and_separator_spelling_are_protected_together(self):
         for separator in ("–", "—", "-", " - ", "..", "…"):
             before = "Forecast: 5%" + separator + "10%."

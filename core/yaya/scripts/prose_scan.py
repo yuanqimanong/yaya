@@ -557,9 +557,9 @@ def numbers(scan):
         if values:
             prior_start, prior_end = values[-1]
             gap = visible[prior_end:value_start]
-            # Join explicit dash/ellipsis pairs without interpreting their units.
+            # Preserve ordered ranges, ratios and fractions as literal expressions.
             # In 5-10, the quantity scanner owns the minus sign in the second atom.
-            joined = re.fullmatch(r"[ \t]*(?:[-–—…]|\.\.)[ \t]*", gap)
+            joined = re.fullmatch(r"[ \t]*(?:[-–—…/:∶⁄]|\.\.)[ \t]*", gap)
             adjacent_minus = (re.fullmatch(r"[ \t]*", gap)
                               and visible[value_start:value_start + 1] == "-")
             if joined or adjacent_minus:

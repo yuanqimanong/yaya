@@ -58,6 +58,12 @@ ranges can still move with their sentences. This is source protection, not a
 judgment that the expression is a valid interval; verbal ranges and mathematical
 interval brackets still need explicit literals or semantic review.
 
+Numeric ratios/fractions joined by `:`, `∶`, `/` or `⁄` also retain operand order
+and separator spelling, including horizontal spaces and multi-part chains. Thus
+`1:3` cannot become `3:1`, nor `1/4` become `4/1`. These checks do not simplify
+fractions, establish the expression's meaning, or protect symbolic denominators;
+equivalent conversions and changes in number-to-entity associations need review.
+
 Symbolic comparisons immediately before a quantity (`<`, `<=`, `>`, `>=`, `=`,
 `==`, `!=`, `≤`, `≥`, `≠`, `≈`, `~`) are part of its literal token. Changing a
 strict threshold to an inclusive one or removing approximation requires review.

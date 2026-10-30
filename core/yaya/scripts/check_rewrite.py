@@ -78,7 +78,7 @@ def compare(before, after, allow=(), protect_quotes=False, literals=()):
         "authorized_differences": permitted,
         "changes": changes, "violations": violations,
         "limitations": LIMITATIONS + [
-            "Numbers are compared as a multiset of literal quantities, dash/ellipsis-connected pairs and recognized numeric dates/times; no unit, calendar or timezone conversion is inferred.",
+            "Numbers are compared as a multiset of literal quantities, ranges, numeric ratios/fractions and recognized numeric dates/times; no unit, calendar or timezone conversion is inferred.",
             "Unlisted units, written-out numbers, decimal-comma/space-grouped notation, and reordered associations can pass; units/currencies on separate lines or in headers are not associated with values.",
             "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
             "A pass says only that these mechanical checks found no unauthorized changes.",
