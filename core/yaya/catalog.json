@@ -42,9 +42,9 @@
       "summary": "按代码、配置或提供的来源核对主张；返回证据与未确认项，不改稿。",
       "scope": "evidence-backed-findings",
       "delivery": "findings",
-      "options": ["domain", "lang", "file"],
+      "options": ["domain", "lang", "file", "source"],
       "references": ["references/verify.md"],
-      "examples": ["yaya verify --domain tech --file docs/deploy.md", "yaya verify --domain finance --file report.md"]
+      "examples": ["yaya verify --domain tech --file docs/deploy.md --source config.py --source prod.env", "yaya verify --domain finance --file report.md --source quarterly-results.md"]
     },
     "comment": {
       "title": "整理注释",
@@ -84,6 +84,7 @@
     }
   },
   "options": {
+    "source": {"help": "用于核对的证据文件，可重复；与 --file 待核对材料分开，均只读", "metavar": "PATH", "repeat": true},
     "style": {"help": "选用已保存的风格卡；仅调整表达，不修改风格卡或扩大任务范围", "metavar": "PATH"},
     "literal": {"help": "原稿中必须原样保留的术语或标识符，可重复；仅用于 prose", "metavar": "TEXT", "repeat": true},
     "quotes": {"help": "保护成对双引号、弯引号及中日韩引文；仅用于 prose", "flag": true},

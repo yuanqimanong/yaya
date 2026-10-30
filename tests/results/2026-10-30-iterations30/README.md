@@ -102,3 +102,11 @@ file-operation authority. Parser checks and an [independent three-case test](sty
 cover normal reuse, direct-focus scope and a missing card. All frozen inputs stayed
 unchanged. The checkpoint suite ran 313 unittest methods with no failures/errors
 and 8 environment skips; test discovery completed successfully.
+
+## 13 / cumulative 33 — Explicit verification sources
+
+`verify --file CLAIMS --source EVIDENCE` now distinguishes claims from repeatable
+evidence selections. Both remain read-only. Parser tests and an [independent
+technical/financial run](verify-sources/README.md) cover source citations, missing
+evidence, runtime/annual-scope limits and embedded instructions. Input hashes stayed
+unchanged; neither test claimed external authentication or complete verification.

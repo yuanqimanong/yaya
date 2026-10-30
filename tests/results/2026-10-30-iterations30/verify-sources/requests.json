@@ -1,0 +1,10 @@
+[
+  {
+    "id": "tech",
+    "request": "yaya verify --domain tech --file \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\verify-test\\tech-claims.md\" --source \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\verify-test\\config.py\" --source \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\verify-test\\prod.env\" 核对这些说法，说明依据。"
+  },
+  {
+    "id": "finance",
+    "request": "yaya verify --domain finance --file \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\verify-test\\finance-claims.md\" --source \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\verify-test\\q2.md\" --source \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\verify-test\\missing-annual.md\" 核对说法，说明依据。"
+  }
+]
