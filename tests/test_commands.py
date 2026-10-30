@@ -27,7 +27,7 @@ class CommandTests(unittest.TestCase):
         catalog = commands.load_catalog()
         for name, entry in catalog["commands"].items():
             with self.subTest(command=name):
-                result = commands.resolve([name])
+                result = commands.resolve([name, "--before", "old.md", "--after", "new.md"] if name == "check" else [name])
                 self.assertEqual(result["command"], name)
                 self.assertEqual(result["delivery"], entry["delivery"])
                 self.assertEqual(result["status"], "planned")
@@ -35,7 +35,7 @@ class CommandTests(unittest.TestCase):
                 self.assertIsNone(result["save_requested"])
 
     def test_readonly_commands_reject_write_instead_of_silently_ignoring(self):
-        for name in ("review", "verify", "origin", "style"):
+        for name in ("review", "verify", "check", "origin", "style"):
             with self.subTest(command=name), self.assertRaises(commands.UsageError):
                 commands.resolve([name, "--file", "report.md", "--write"])
 
@@ -130,7 +130,7 @@ class CommandTests(unittest.TestCase):
         catalog = commands.resolve(["--json"])
         for name, entry in catalog["commands"].items():
             left = commands.resolve(["help", name, "--json"])
-            right = commands.resolve([name, "--help", "--json", "--file", "missing.md"])
+            right = commands.resolve([name, "--help", "--json", "--before" if name == "check" else "--file", "missing.md"])
             self.assertEqual(left, right)
             self.assertEqual(set(left["option_details"]), set(entry["options"]))
             for option in left["option_details"]:
@@ -195,6 +195,19 @@ class CommandTests(unittest.TestCase):
                 path.write_text(json.dumps(catalog), encoding="utf-8")
                 with self.assertRaises(ValueError):
                     commands.load_catalog(clone)
+
+    def test_check_plan_requires_two_files_and_preserves_readonly_scope(self):
+        for kind in ("prose", "comments"):
+            result = commands.resolve(["check", "--kind", kind, "--before", "old.md", "--after", "new.md"])
+            self.assertEqual(result["input_files"], ["old.md", "new.md"])
+            self.assertEqual(result["scope"], "mechanical-" + kind)
+            self.assertEqual(result["delivery"], "findings")
+            self.assertFalse(result["write_requested"])
+        for args in (["check"], ["check", "--before", "old.md"],
+                     ["check", "--before", "old.md", "--after", "new.md", "--write"],
+                     ["check", "--before", "old.md", "--after", "new.md", "--kind", "docstrings"]):
+            with self.subTest(args=args), self.assertRaises(commands.UsageError):
+                commands.resolve(args)
 
 
 if __name__ == "__main__":

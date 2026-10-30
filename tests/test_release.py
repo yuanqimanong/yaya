@@ -90,6 +90,7 @@ class ReleaseBuildTests(unittest.TestCase):
             "yaya/languages/en/PATTERNS.md", "yaya/languages/zh-Hans/PATTERNS.md",
             "yaya/catalog.json", "yaya/scripts/yaya.py", "yaya/references/commands.md",
             "yaya/references/domains.md", "yaya/references/verify.md",
+            "yaya/references/check.md",
             *{f"yaya/references/domains/{name}.md" for name in ("tech", "finance", "data", "academic", "business")},
         }
         self.assertTrue(required <= set(names))
@@ -216,6 +217,9 @@ class ReleaseBuildTests(unittest.TestCase):
         version = self.run_script(script, "--version", "--json")
         self.assertEqual(version.returncode, 0, version.stderr)
         self.assertEqual(json.loads(version.stdout)["version"], self.core_asset["version"])
+        comparison = self.run_script(script, "check", "--before", "old.md", "--after", "new.md")
+        self.assertEqual(comparison.returncode, 0, comparison.stderr)
+        self.assertEqual(json.loads(comparison.stdout)["scope"], "mechanical-prose")
         plan = self.run_script(script, "polish", "--domain", "finance")
         self.assertEqual(plan.returncode, 0, plan.stderr)
         resolved = json.loads(plan.stdout)

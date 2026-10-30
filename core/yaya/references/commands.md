@@ -36,6 +36,10 @@ It does not read input files, call a model, install anything or execute payloads
 
 ## Task boundaries
 
+- `check`: compare explicit original/candidate files using the selected mechanical
+  checker. Require `--before` and `--after`; `--kind prose|comments` defaults to prose.
+  Report the executed result without rewriting files or granting differences. See
+  `check.md`. This is separate from evidence-based factual verification.
 - `polish`: improve prose for its purpose; do not infer factual correction authority.
 - `human`: address formulaic expression, with clear passages allowed unchanged.
   This includes unnecessary contrasts, defensive framing and redundant caveats.
@@ -76,7 +80,7 @@ remain. `review --focus direct` still returns findings only.
 `--write` is available only on rewriting commands and requires explicit input files.
 Earlier clear file-edit authorization for these same files still counts: normalize
 it into the plan instead of asking again. A read-only command selected now overrides
-an earlier general edit request. `review`, `verify` and `origin` never accept `--write`.
+an earlier general edit request. `review`, `verify`, `check` and `origin` never accept `--write`.
 Inspect and preserve originals and use existing validation guidance for file edits.
 
 `--domain ID` loads one listed domain. `--audience TEXT`, `--tone TEXT` and `--lang TAG`

@@ -19,6 +19,7 @@ For requested domain adaptation, read [Domains](references/domains.md) and only 
 
 | Requested work | Read when needed |
 | --- | --- |
+| Compare an original and candidate with a mechanical checker | [Check](references/check.md) |
 | Humanize writing or review formulaic / defensive wording | [Humanize](references/humanize.md) |
 | Polish or adapt prose, including a document | [Text](references/text.md) |
 | Rewrite comments in source code | [Comments](references/comments.md) |
