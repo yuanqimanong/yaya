@@ -52,6 +52,12 @@ No wildcard, new/deleted/moved node, encoding/BOM change, delimiter change, or l
 
 ## Quantities in prose
 
+Parentheses immediately enclosing a recognized currency amount are retained as
+part of its literal token: `(USD 5 million)` must not silently become `USD 5 million`.
+They may express an accounting negative. Ordinary parenthetical prose remains
+editable. Bare accounting values such as `(5)` without a currency still need
+explicit literal protection or semantic review.
+
 Numeric dates (`YYYY-MM-DD`, `YYYY/MM/DD`, `YYYY年M月D日`) and clock times
 (`H:MM`, optional seconds/fraction and ISO offset) are compared as complete literal
 tokens, including a date/time joined by `T` or one space. This catches component

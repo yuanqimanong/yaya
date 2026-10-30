@@ -425,6 +425,7 @@ _QUANTITY_UNITS = (
 _Q_SPACE = r"[ \t]*"
 _Q_SIGN = r"[-+−]"
 _Q_CURRENCY = _quantity_terms(_QUANTITY_CURRENCIES)
+_MONEY_MARK = re.compile(_quantity_terms((*_QUANTITY_CURRENCIES, "元")))
 _Q_UNIT = _quantity_terms((*_QUANTITY_CURRENCIES, *_QUANTITY_UNITS))
 _Q_SCALE = "(?i:" + _quantity_terms(_QUANTITY_SCALES) + ")"
 _Q_COEFFICIENT = r"(?:(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|\.\d+)"
@@ -450,4 +451,16 @@ def numbers(scan):
     # A masked code/quote span must not join distant currency and amount tokens.
     visible = "".join("\x00" if original != masked else masked
                       for original, masked in zip(scan.text, scan.masked))
-    return [match.group(0) for match in _QUANTITY.finditer(visible)]
+    values = []
+    for match in _QUANTITY.finditer(visible):
+        value = match.group(0)
+        if _MONEY_MARK.search(value):
+            start, end = match.span()
+            while start > 0 and visible[start - 1] in " \t":
+                start -= 1
+            while end < len(visible) and visible[end] in " \t":
+                end += 1
+            if {"(": ")", "（": "）"}.get(visible[start - 1:start]) == visible[end:end + 1]:
+                value = visible[start - 1:end + 1]
+        values.append(value)
+    return values
