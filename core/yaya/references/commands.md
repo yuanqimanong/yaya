@@ -1,5 +1,10 @@
 # Explicit commands
 
+`--lang` uses the same language-tag subset as the pack resolver: for example
+`zh-Hans`, `zh-Hant-TW`, `en-GB`, or `es-419`. The planner normalizes casing and
+rejects malformed tags before creating a task. A valid tag such as `fr` does not
+mean a pack is installed or reviewed; resolve language guidance separately.
+
 `catalog.json` is the single catalog for commands, options, domains and their references.
 Read this guide for an explicit command, an unknown command-like invocation, or help.
 The protocol works in chat as `$yaya COMMAND ...` or `yaya COMMAND ...`.

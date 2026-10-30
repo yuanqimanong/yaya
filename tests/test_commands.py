@@ -145,6 +145,17 @@ class CommandTests(unittest.TestCase):
             self.assertEqual(commands.resolve(["domains", key, "--json"]), value)
             self.assertTrue(all(value[field] for field in ("covers", "preserves", "excludes", "quality")))
 
+    def test_explicit_language_tags_are_canonical_without_claiming_pack_support(self):
+        for requested, expected in (("EN-gb", "en-GB"), ("ZH-hant-tw", "zh-Hant-TW"),
+                                    ("es-419", "es-419"), ("fr", "fr")):
+            result = commands.resolve(["polish", "--lang", requested])
+            self.assertEqual(result["options"]["lang"], expected)
+            self.assertEqual(result["execution"], "host-required")
+            self.assertNotIn("language_available", result)
+        for value in ("not-a-tag", "English", "zh_CN", "en-US-x-private", "en--GB", "en-1901-1901"):
+            with self.subTest(value=value), self.assertRaisesRegex(commands.UsageError, "--lang"):
+                commands.resolve(["polish", "--lang", value])
+
     def test_help_examples_resolve_to_the_advertised_bounded_action(self):
         for name, spec in commands.load_catalog()["commands"].items():
             self.assertTrue(spec["examples"], name)

@@ -78,3 +78,10 @@ code inside labels. Cross-category rearrangement still needs semantic review.
 width, precision and `%%`, preserving their spelling and order. Regression cases
 also keep normal percentage prose editable and protect code with its own category.
 Space-flag forms remain outside this finite subset and require explicit literals.
+
+## 10 / cumulative 30 — Explicit language selectors
+
+`polish --lang not-a-tag` previously produced a usable-looking plan. Validate
+selectors with the pack resolver's existing tag grammar and normalize casing.
+Tests preserve regions/scripts, reject malformed/private-use syntax and accept
+valid tags without claiming that a language pack is present or reviewed.
