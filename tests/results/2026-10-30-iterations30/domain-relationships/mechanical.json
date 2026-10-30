@@ -1,0 +1,152 @@
+[
+  {
+    "id": "REL-TECH-1",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-TECH-1",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-TECH-2",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-TECH-2",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-TECH-3",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-TECH-3",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-FIN-1",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-FIN-1",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-FIN-2",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-FIN-2",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-FIN-3",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-FIN-3",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-DATA-1",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-DATA-1",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-DATA-2",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-DATA-2",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-DATA-3",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-DATA-3",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-ACA-1",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-ACA-1",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-ACA-2",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-ACA-2",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-ACA-3",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-ACA-3",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-BIZ-1",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-BIZ-1",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-BIZ-2",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-BIZ-2",
+    "condition": "baseline",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-BIZ-3",
+    "condition": "skill",
+    "literal_failures": []
+  },
+  {
+    "id": "REL-BIZ-3",
+    "condition": "baseline",
+    "literal_failures": []
+  }
+]

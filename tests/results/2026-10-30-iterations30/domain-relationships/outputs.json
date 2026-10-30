@@ -1,0 +1,186 @@
+{
+  "skill": {
+    "REL-TECH-1": {
+      "id": "REL-TECH-1",
+      "text": "首次请求失败后，只有连接超时才会重试，最多重试 2 次，首次请求不计入这 2 次。认证失败直接返回错误。",
+      "notes": "使用 tech 领域指南和简体中文语言包，删去开头铺垫并调整句式；未核验实际实现。",
+      "skill_used": true
+    },
+    "REL-TECH-2": {
+      "id": "REL-TECH-2",
+      "text": "配置键 TTL 未提供时，使用默认值 60 秒；显式设为 0 时，禁用缓存；设为 null 时，配置校验失败。当前未提供生产环境的配置内容。",
+      "notes": "使用 tech 领域指南和简体中文语言包，删去开头铺垫；未检查生产配置或补充实现细节。",
+      "skill_used": true
+    },
+    "REL-TECH-3": {
+      "id": "REL-TECH-3",
+      "text": "The patch mitigates the timeout; it does not fix the connection leak. Deployment is planned for Friday, pending approval.",
+      "notes": "使用 tech 领域指南和英文语言包检视后保留原文；未核验补丁或部署状态。",
+      "skill_used": true
+    },
+    "REL-FIN-1": {
+      "id": "REL-FIN-1",
+      "text": "2026 年上半年，公司合并营业收入为人民币 800 万元，同比增长 6%；按固定汇率计算，同比增长 9%。子公司同期单体净利润为人民币 40 万元，未经审计。",
+      "notes": "使用 finance 领域指南和简体中文语言包，删去空泛赞语并补回句中主语；未核验财务数据。",
+      "skill_used": true
+    },
+    "REL-FIN-2": {
+      "id": "REL-FIN-2",
+      "text": "The scenario estimates an annual return of 5% before fees, assuming reinvestment. The estimate is neither a realized return nor a guarantee. Investors may lose principal and cannot redeem during the first 90 days.",
+      "notes": "使用 finance 领域指南和英文语言包，删去开头铺垫；未重新计算收益或核验产品条款。",
+      "skill_used": true
+    },
+    "REL-FIN-3": {
+      "id": "REL-FIN-3",
+      "text": "本季度毛利率从去年同期的 20% 升至 23%，提高 3 个百分点。净利润同比下降 3%，不是下降 3 个百分点。",
+      "notes": "使用 finance 领域指南和简体中文语言包，删去开头铺垫；未核验财务数据。",
+      "skill_used": true
+    },
+    "REL-DATA-1": {
+      "id": "REL-DATA-1",
+      "text": "本次调研邀请了 1000 人，其中 200 人作答；作答者中 60% 支持新方案，未作答者的态度未知。不能把该比例直接视为全部受邀者的支持率。",
+      "notes": "使用 data 领域指南和简体中文语言包，删去空泛评价并衔接调查背景；未重算指标或核验原始调查数据。",
+      "skill_used": true
+    },
+    "REL-DATA-2": {
+      "id": "REL-DATA-2",
+      "text": "The experiment did not detect a difference at the prespecified threshold. This does not establish that the two treatments are equivalent; the confidence interval still includes effects that matter operationally.",
+      "notes": "使用 data 领域指南和英文语言包，删去开头铺垫；未重新分析实验数据。",
+      "skill_used": true
+    },
+    "REL-DATA-3": {
+      "id": "REL-DATA-3",
+      "text": "缺失值不参与均值计算；零值参与计算。两组样本量不同，图中的柱高不能直接代表总量。",
+      "notes": "使用 data 领域指南和简体中文语言包检视后保留原文；未检查原图或原始数据。",
+      "skill_used": true
+    },
+    "REL-ACA-1": {
+      "id": "REL-ACA-1",
+      "text": "林等人在 2024 年的研究中提出，这一机制可能解释部分差异。本文的观察结果与该解释相容，但没有直接检验该机制，也不能据此确立因果关系。",
+      "notes": "使用 academic 领域指南和简体中文语言包，删去开头铺垫和冗余代词；未检索或补充文献。",
+      "skill_used": true
+    },
+    "REL-ACA-2": {
+      "id": "REL-ACA-2",
+      "text": "Participants were recruited from one hospital. The findings may apply to similar patients, but their applicability to community populations remains unknown.",
+      "notes": "使用 academic 领域指南和英文语言包，删去承认局限的引导语；未核验研究或外推范围。",
+      "skill_used": true
+    },
+    "REL-ACA-3": {
+      "id": "REL-ACA-3",
+      "text": "该研究观察到暴露与结局相关，未进行随机分组。作者没有将这种相关性解释为因果关系。",
+      "notes": "使用 academic 领域指南和简体中文语言包检视后保留原文；未核验研究设计或作者原文。",
+      "skill_used": true
+    },
+    "REL-BIZ-1": {
+      "id": "REL-BIZ-1",
+      "text": "我们正在推进报价审批。拟报价为人民币 8 万元，包含培训，不包含安装；价格尚待财务批准，不能作为已确认报价。",
+      "notes": "使用 business 领域指南和简体中文语言包，精简进度描述；未核验或变更审批状态。",
+      "skill_used": true
+    },
+    "REL-BIZ-2": {
+      "id": "REL-BIZ-2",
+      "text": "We are reviewing whether Friday delivery is possible. The client must confirm the field list by Wednesday at 17:00 Singapore time before we can commit to a date.",
+      "notes": "使用 business 领域指南和英文语言包，精简进度描述；未核验项目进度或向客户作出承诺。",
+      "skill_used": true
+    },
+    "REL-BIZ-3": {
+      "id": "REL-BIZ-3",
+      "text": "抱歉，昨天发送的报价已过期。请以今天附件中的报价为准，有效期至 11 月 15 日。若您已按旧报价下单，请回复订单号，我们会核对处理。",
+      "notes": "使用 business 领域指南和简体中文语言包，结合请求中的误发背景检视后保留原文；未核验附件或发送邮件。",
+      "skill_used": true
+    }
+  },
+  "baseline": {
+    "REL-TECH-1": {
+      "id": "REL-TECH-1",
+      "text": "首次请求失败后，只在连接超时时重试，最多重试 2 次，首次请求不计入重试次数。认证失败直接返回错误。",
+      "notes": "删除开头套话，调整措辞。",
+      "skill_used": false
+    },
+    "REL-TECH-2": {
+      "id": "REL-TECH-2",
+      "text": "TTL 未提供时，使用默认值 60 秒；显式设为 0 时，禁用缓存；设为 null 时，配置校验失败。目前未提供生产环境配置。",
+      "notes": "删除开头套话，精简末句。",
+      "skill_used": false
+    },
+    "REL-TECH-3": {
+      "id": "REL-TECH-3",
+      "text": "The patch mitigates the timeout; it does not fix the connection leak. Deployment is planned for Friday, pending approval.",
+      "notes": "原文未改动。",
+      "skill_used": false
+    },
+    "REL-FIN-1": {
+      "id": "REL-FIN-1",
+      "text": "2026 年上半年，公司合并营业收入为人民币 800 万元，同比增长 6%；按固定汇率计算，同比增长 9%。子公司同期单体净利润为人民币 40 万元，未经审计。",
+      "notes": "删除评价性开场，调整语序和标点。",
+      "skill_used": false
+    },
+    "REL-FIN-2": {
+      "id": "REL-FIN-2",
+      "text": "The scenario estimates a 5% annual return before fees, assuming reinvestment. The estimate is neither a realized return nor a guarantee. Investors may lose principal and cannot redeem during the first 90 days.",
+      "notes": "删除开头套话，调整收益率的表达顺序。",
+      "skill_used": false
+    },
+    "REL-FIN-3": {
+      "id": "REL-FIN-3",
+      "text": "本季度毛利率从去年同期的 20% 升至 23%，提高 3 个百分点。净利润同比下降 3%，不是下降 3 个百分点。",
+      "notes": "删除开头套话。",
+      "skill_used": false
+    },
+    "REL-DATA-1": {
+      "id": "REL-DATA-1",
+      "text": "本次调研邀请了 1000 人，其中 200 人作答。作答者中 60% 支持新方案，未作答者的态度未知，不能将 60% 直接视为全部受邀者的支持率。",
+      "notes": "删除评价性开场，调整句子衔接。",
+      "skill_used": false
+    },
+    "REL-DATA-2": {
+      "id": "REL-DATA-2",
+      "text": "The experiment did not detect a difference at the prespecified threshold. This does not establish that the two treatments are equivalent; the confidence interval still includes effects that matter operationally.",
+      "notes": "删除开头强调语。",
+      "skill_used": false
+    },
+    "REL-DATA-3": {
+      "id": "REL-DATA-3",
+      "text": "缺失值不参与均值计算；零值参与计算。两组样本量不同，图中的柱高不能直接代表总量。",
+      "notes": "原文未改动。",
+      "skill_used": false
+    },
+    "REL-ACA-1": {
+      "id": "REL-ACA-1",
+      "text": "林等人（2024）提出，这一机制可能解释部分差异。本文的观察结果与该解释相容，但未直接检验该机制，也不能据此确立因果关系。",
+      "notes": "删除开头套话，精简研究年份和否定句的表述。",
+      "skill_used": false
+    },
+    "REL-ACA-2": {
+      "id": "REL-ACA-2",
+      "text": "Participants were recruited from one hospital. The findings may apply to similar patients, but their applicability to community populations remains unknown.",
+      "notes": "删除开头套话。",
+      "skill_used": false
+    },
+    "REL-ACA-3": {
+      "id": "REL-ACA-3",
+      "text": "该研究观察到暴露与结局相关，未进行随机分组。作者没有将这种相关性解释为因果关系。",
+      "notes": "原文未改动。",
+      "skill_used": false
+    },
+    "REL-BIZ-1": {
+      "id": "REL-BIZ-1",
+      "text": "报价正在审批中。拟报价为人民币 8 万元，包含培训，不包含安装；价格尚待财务批准，不能作为已确认报价。",
+      "notes": "精简首句。",
+      "skill_used": false
+    },
+    "REL-BIZ-2": {
+      "id": "REL-BIZ-2",
+      "text": "We are reviewing whether Friday delivery is possible. The client must confirm the field list by Wednesday at 17:00 Singapore time before we can commit to a date.",
+      "notes": "精简首句。",
+      "skill_used": false
+    },
+    "REL-BIZ-3": {
+      "id": "REL-BIZ-3",
+      "text": "抱歉，昨天发送的报价已过期。请以今天附件中的报价为准，有效期至 11 月 15 日。若您已按旧报价下单，请回复订单号，我们会核对处理。",
+      "notes": "原文未改动。",
+      "skill_used": false
+    }
+  }
+}

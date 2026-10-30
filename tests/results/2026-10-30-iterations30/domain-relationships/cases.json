@@ -1,0 +1,197 @@
+[
+  {
+    "id": "REL-TECH-1",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "tech",
+    "request": "按技术领域风格去掉空话，给新手看。只返回改稿。",
+    "input": "为了充分保障系统可靠性，首次请求失败后，仅对连接超时重试，最多重试 2 次；首次请求不计入这 2 次。认证失败直接返回错误。",
+    "checks": [
+      "Keep two retries in addition to the initial attempt, only on connection timeout.",
+      "Keep authentication failures nonretryable and remove empty reliability framing."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-TECH-2",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "tech",
+    "request": "按技术领域风格精简，不补充实现细节。只返回改稿。",
+    "input": "这里需要特别说明一下：配置键 TTL 未提供时使用默认值 60 秒；显式设为 0 时禁用缓存；设为 null 时配置校验失败。当前未提供生产环境的配置内容。",
+    "checks": [
+      "Keep absent=60 seconds, zero=disabled and null=validation failure distinct.",
+      "Keep production configuration unknown, with no guessed configuration mechanism."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-TECH-3",
+    "task": "text",
+    "language": "en",
+    "domain": "tech",
+    "request": "Edit in a technical style. If already clear, leave it unchanged. Return only the text.",
+    "input": "The patch mitigates the timeout; it does not fix the connection leak. Deployment is planned for Friday, pending approval.",
+    "checks": [
+      "Return the clear text unchanged.",
+      "Preserve mitigation versus fix, planned deployment and pending approval."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-FIN-1",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "finance",
+    "request": "按金融领域风格写得自然直接，普通读者能读懂。只返回改稿。",
+    "input": "公司交出了令人瞩目的答卷。2026 年上半年合并营业收入为人民币 800 万元，同比增长 6%；按固定汇率计算同比增长 9%。子公司同期单体净利润为人民币 40 万元，未经审计。",
+    "checks": [
+      "Preserve consolidated revenue versus subsidiary standalone net profit and each amount.",
+      "Preserve actual YoY 6 versus constant-currency 9, period and unaudited subsidiary profit; remove empty praise."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-FIN-2",
+    "task": "text",
+    "language": "en",
+    "domain": "finance",
+    "request": "Use plain financial writing and remove padding. Return only the revised text.",
+    "input": "It is important to note that the scenario estimates an annual return of 5% before fees, assuming reinvestment. The estimate is neither a realized return nor a guarantee. Investors may lose principal and cannot redeem during the first 90 days.",
+    "checks": [
+      "Keep annual projected 5%, before fees and reinvestment assumption.",
+      "Keep both loss exposure and initial 90-day lockup, plus forecast/nonrealized/nonguaranteed status."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-FIN-3",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "finance",
+    "request": "按金融领域风格精简，只交文字，不改数字或口径。",
+    "input": "我们需要明确指出的是，本季度毛利率从去年同期的 20% 升至 23%，提高 3 个百分点。净利润同比下降 3%，不是下降 3 个百分点。",
+    "checks": [
+      "Preserve gross-margin 20 to 23 with YoY baseline and 3 percentage points.",
+      "Preserve net-profit relative decline 3%, including its distinct unit; do not recalculate or conflate metrics."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-DATA-1",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "data",
+    "request": "按数据分析领域风格去空话，保留统计含义。只返回改稿。",
+    "input": "本次调研取得了很有价值的成果。邀请了 1000 人，其中 200 人作答；作答者中 60% 支持新方案，未作答者的态度未知。不能把该比例直接视为全部受邀者的支持率。",
+    "checks": [
+      "Keep invited=1000, respondents=200, support=60% of respondents only.",
+      "Keep nonrespondent attitudes unknown and restriction on generalizing to all invitees."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-DATA-2",
+    "task": "text",
+    "language": "en",
+    "domain": "data",
+    "request": "Make this statistical explanation concise without changing its meaning. Return only the text.",
+    "input": "It is worth emphasizing that the experiment did not detect a difference at the prespecified threshold. This does not establish that the two treatments are equivalent; the confidence interval still includes effects that matter operationally.",
+    "checks": [
+      "Keep no detected difference at a prespecified threshold, not proven equality.",
+      "Preserve operationally meaningful effects inside the interval; do not invent p-values or confidence levels."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-DATA-3",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "data",
+    "request": "按数据分析领域风格润色。已经清楚就保持原样，只返回文字。",
+    "input": "缺失值不参与均值计算；零值参与计算。两组样本量不同，图中的柱高不能直接代表总量。",
+    "checks": [
+      "Return unchanged clear wording.",
+      "Preserve excluded missing versus included zeros and unequal-sample warning."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-ACA-1",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "academic",
+    "request": "按学术领域风格精简，不补文献。只返回改稿。",
+    "input": "值得注意的是，林等人在其 2024 年的研究中提出，这一机制可能解释部分差异。本文的观察结果与该解释相容，但没有直接检验该机制，也不能据此确立因果关系。",
+    "checks": [
+      "Retain Lin et al. 2024 as origin of tentative mechanism explaining some differences.",
+      "Keep compatibility rather than direct test or causal evidence; no invented citation metadata."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-ACA-2",
+    "task": "text",
+    "language": "en",
+    "domain": "academic",
+    "request": "Polish this research limitation in an academic style. Return only the text.",
+    "input": "We would like to acknowledge that participants were recruited from one hospital. The findings may apply to similar patients, but their applicability to community populations remains unknown.",
+    "checks": [
+      "Keep one-hospital recruitment, tentative similar-patient relevance and unknown community applicability.",
+      "Do not generalize, invent participant counts or add a multicenter study claim."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-ACA-3",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "academic",
+    "request": "去掉学术文字中的套话，已经明确的句子不必改。只返回文字。",
+    "input": "该研究观察到暴露与结局相关，未进行随机分组。作者没有将这种相关性解释为因果关系。",
+    "checks": [
+      "Preserve observational association, no random assignment and attributed causal restraint.",
+      "Avoid adding irrelevant academic disclaimers or missing methods."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-BIZ-1",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "business",
+    "request": "按商务沟通风格改得简洁、自信，直接交改稿。",
+    "input": "我们目前正在积极推进报价审批。拟报价为人民币 8 万元，包含培训，不包含安装；价格尚待财务批准，不能作为已确认报价。",
+    "checks": [
+      "Preserve proposed CNY 80000, training included and installation excluded.",
+      "Keep pending finance approval and unconfirmed price despite confident tone."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-BIZ-2",
+    "task": "text",
+    "language": "en",
+    "domain": "business",
+    "request": "Make this project update concise and natural. Return only the text.",
+    "input": "We are currently in the process of reviewing whether delivery on Friday is possible. The client must confirm the field list by Wednesday at 17:00 Singapore time before we can commit to a date.",
+    "checks": [
+      "Keep Friday feasibility under review, not a commitment.",
+      "Keep client as confirming actor, field list and Wednesday 17:00 Singapore time prerequisite."
+    ],
+    "suite": "domain-relationships"
+  },
+  {
+    "id": "REL-BIZ-3",
+    "task": "text",
+    "language": "zh-Hans",
+    "domain": "business",
+    "request": "帮我去掉邮件里的套话；背景是我昨天误发了过期报价，今天给客户更正。只返回邮件正文。",
+    "input": "抱歉，昨天发送的报价已过期。请以今天附件中的报价为准，有效期至 11 月 15 日。若您已按旧报价下单，请回复订单号，我们会核对处理。",
+    "checks": [
+      "Preserve warranted apology and correction in the supplied context.",
+      "Keep expiry date and conditional order-number request without inventing a price or promise of refund."
+    ],
+    "suite": "domain-relationships"
+  }
+]
