@@ -29,6 +29,11 @@ def detect(text, language):
         return {"status": "unsupported", "language": language, "findings": [],
                 "error": str(exc), "limitations": LIMITATIONS}
     line_starts = [0] + [match.end() for match in re.finditer("\n", text)]
+    # Keep source offsets, but never let flexible whitespace bridge hidden markup.
+    visible = list(scan.masked)
+    for span in scan.spans:
+        visible[span.start:span.end] = "\x00" * (span.end - span.start)
+    visible = "".join(visible)
     findings = []
     for rule in load_rules():
         if rule["language"] != language:
@@ -36,8 +41,10 @@ def detect(text, language):
         for phrase in rule["phrases"]:
             pattern = re.escape(phrase)
             if language == "en":
-                pattern = r"(?<![A-Za-z])" + pattern + r"(?![A-Za-z])"
-            for match in re.finditer(pattern, scan.masked, re.I if language == "en" else 0):
+                pattern = pattern.replace(r"\ ", r"(?:[ \t]+|[ \t]*\r?\n[ \t]*)")
+                # Unicode letters/digits extend words; underscores may be emphasis.
+                pattern = r"(?<![^\W_])" + pattern + r"(?![^\W_])"
+            for match in re.finditer(pattern, visible, re.I if language == "en" else 0):
                 findings.append({
                     "id": rule["id"], "severity": rule["severity"],
                     "line": bisect.bisect_right(line_starts, match.start()),
@@ -55,6 +62,7 @@ def detect(text, language):
             "No authorship probability, semantic judgment, or instruction to delete a matching phrase.",
             "Code, quoted spans, blockquotes, tables, and recognized markup are excluded.",
             "Only paired quotes are excluded; unmatched quotation marks are treated as punctuation.",
+            "English phrases allow spaces, tabs and soft line wraps, but not blank paragraphs or protected spans.",
         ] + LIMITATIONS[:2],
     }
 

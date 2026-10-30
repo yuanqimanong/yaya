@@ -87,6 +87,27 @@ class DetectionTests(unittest.TestCase):
         self.assertEqual(len(result["findings"]), 1)
         self.assertEqual(result["findings"][0]["quote"], "ONLY TIME WILL TELL")
 
+    def test_wrapped_literal_candidates_keep_original_offsets(self):
+        for source in ("Only  time\twill tell.", "Only time\nwill tell.", "Only time\r\nwill tell."):
+            with self.subTest(source=source):
+                findings = detector.detect(source, "en")["findings"]
+                self.assertEqual(len(findings), 1)
+                row = findings[0]
+                self.assertEqual(source[row["start"]:row["end"]], source[:-1])
+                self.assertEqual(row["quote"], source[:-1])
+
+    def test_candidate_matching_respects_unicode_words_and_markdown_emphasis(self):
+        for source in ("2only time will tell", "only time will tell2", "éonly time will tell", "only time will tellé"):
+            with self.subTest(source=source):
+                self.assertEqual(detector.detect(source, "en")["findings"], [])
+        for source in ("_Only time will tell_", "**Only time will tell**"):
+            self.assertEqual(len(detector.detect(source, "en")["findings"]), 1)
+
+    def test_wrapped_detection_does_not_cross_protected_spans_or_paragraphs(self):
+        for source in ("Only time `x` will tell.", "Only time\n\nwill tell.", "Only time <!-- x --> will tell."):
+            with self.subTest(source=source):
+                self.assertEqual(detector.detect(source, "en")["findings"], [])
+
     def test_clear_prose_and_unlisted_common_words_are_not_candidates(self):
         for language, text in [
             ("en", "The request failed because the token expired. Retry after signing in."),
