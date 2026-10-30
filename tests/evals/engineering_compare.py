@@ -87,6 +87,7 @@ def jobs(run):
 
 
 def execute(run, command, workers=1, timeout=120, limit=None, resume=False):
+    run_cli.validate_timeout(timeout)
     _, pending = jobs(run)
     metadata = {"command": command, "model": configured_model(), "workers": workers,
                 "timeout": timeout, "manifest_sha256": digest((run / "manifest.json").read_bytes()),
@@ -163,7 +164,8 @@ def main():
     parser.add_argument("--executable", default=shutil.which("codex"))
     args = parser.parse_args()
     try:
-        if args.workers < 1 or args.workers > 3 or args.timeout <= 0 or (args.limit is not None and args.limit < 1):
+        run_cli.validate_timeout(args.timeout)
+        if args.workers < 1 or args.workers > 3 or (args.limit is not None and args.limit < 1):
             raise ValueError("Use 1..3 workers and positive timeout/limit.")
         if args.action == "prepare":
             if args.old is None:

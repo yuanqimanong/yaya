@@ -157,6 +157,7 @@ def verify_completed(job: ReviewJob) -> dict:
 
 
 def run_one(job: ReviewJob, command: list[str], timeout: float, resume: bool = False) -> dict:
+    run_cli.validate_timeout(timeout)
     attempt = job.directory / "attempt-01"
     if job.directory.exists():
         if resume:
@@ -213,12 +214,13 @@ def publish(jobs: list[ReviewJob], destination: Path, resume: bool) -> None:
 
 def judge_cli(review: Path, destination: Path, command: list[str], workers: int = 3,
               timeout: float = 180, limit: int | None = None, resume: bool = False) -> list[dict]:
+    run_cli.validate_timeout(timeout)
     review, destination = review.resolve(), destination.resolve()
     if not review.is_relative_to((TESTS / "runs").resolve()):
         raise ValueError("Anonymous review packets must be under tests/runs/")
     if not destination.is_relative_to((TESTS / "results").resolve()) or not destination.is_dir():
         raise ValueError("Use the existing collected result directory under tests/results/")
-    if workers < 1 or timeout <= 0 or (limit is not None and limit < 1):
+    if workers < 1 or (limit is not None and limit < 1):
         raise ValueError("workers, timeout and limit must be positive")
     jobs = prepare_jobs(review)
     metadata = {
@@ -273,6 +275,7 @@ def main() -> int:
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
     try:
+        run_cli.validate_timeout(args.timeout)
         if not args.executable:
             raise ValueError("Codex CLI not found; supply --executable")
         results = judge_cli(args.review, args.destination, [args.executable],

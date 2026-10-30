@@ -15,6 +15,8 @@ python tests/evals/run_cli.py tests/runs/humanize-cli --executable PATH_TO_CODEX
 
 `--limit 1` 表示每个所选条件各生成一题。默认运行 `skill`、`baseline` 两组，
 默认并发为 3 个进程，每题超时 180 秒；可用 `--workers`、`--timeout` 调整。
+所有生成、评审、恢复和新旧比较入口要求超时为有限正数秒，支持小数；
+`nan`、`inf`、零与负数会在创建尝试记录或启动进程前报错。
 仅执行一组时指定 `--conditions skill` 或 `--conditions baseline`。
 
 CLI 使用 `exec --ephemeral --sandbox read-only --skip-git-repo-check --color never --json`，
