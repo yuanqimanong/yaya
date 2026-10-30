@@ -59,7 +59,8 @@ class CatalogTests(unittest.TestCase):
     def test_current_catalog_still_supports_help_and_plans(self):
         for name in self.catalog["commands"]:
             self.assertIn("usage:", commands.resolve([name, "--help"], core=self.core))
-            self.assertEqual(commands.resolve([name], core=self.core)["command"], name)
+            args = [name, "--before", "old.md", "--after", "new.md"] if name == "check" else [name]
+            self.assertEqual(commands.resolve(args, core=self.core)["command"], name)
 
 
 if __name__ == "__main__":

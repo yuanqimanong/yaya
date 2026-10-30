@@ -1,6 +1,15 @@
 {
   "format_version": 1,
   "commands": {
+    "check": {
+      "title": "比较改稿边界",
+      "summary": "运行只读机械检查，比较原稿与候选稿的受保护内容；不核定事实或自动修稿。",
+      "scope": "mechanical-prose",
+      "delivery": "findings",
+      "options": ["before", "after", "kind"],
+      "references": ["references/check.md"],
+      "examples": ["yaya check --before original.md --after candidate.md", "yaya check --kind comments --before before.py --after after.py"]
+    },
     "polish": {
       "title": "润色正文",
       "summary": "改善表达、结构和可读性，保留原意；不自动核定事实。",
@@ -75,6 +84,9 @@
     }
   },
   "options": {
+    "before": {"help": "修改前的原始文件；只读", "metavar": "PATH"},
+    "after": {"help": "待检查的候选文件；只读", "metavar": "PATH"},
+    "kind": {"help": "prose 检查正文保护项；comments 检查 Python 普通注释边界", "choices": ["prose", "comments"], "default": "prose"},
     "focus": {"help": "编辑重点：all 覆盖全部；direct 只处理无效对比、防御性铺垫与重复限定", "choices": ["all", "direct"], "default": "all"},
     "domain": {"help": "领域 ID；用 yaya domains 查看支持范围", "metavar": "ID"},
     "audience": {"help": "目标读者，如 普通读者、开发者、管理层", "metavar": "TEXT"},

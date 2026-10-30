@@ -90,11 +90,11 @@ def load_catalog(core=CORE):
             string_list(option["choices"], f"{context}.choices", nonempty=True)
             if "default" in option and option["default"] not in option["choices"]:
                 raise ValueError(f"{context}.default must be one of its choices")
-        if name in {"file", "save", "domain"} and "default" in option:
+        if name in {"file", "save", "domain", "before", "after"} and "default" in option:
             raise ValueError(f"{context} requires an explicit selection")
         if ((name == "write" and not option.get("flag"))
                 or (name == "file" and (not option.get("repeat") or option.get("flag")))
-                or (name in {"save", "domain"} and (option.get("flag") or option.get("repeat")))):
+                or (name in {"save", "domain", "before", "after"} and (option.get("flag") or option.get("repeat")))):
             raise ValueError(f"Invalid action shape for {context}")
     for name, command in catalog["commands"].items():
         context = f"commands.{name}"
@@ -240,6 +240,8 @@ def resolve(argv, core=CORE):
         raise UsageError("Option values must not be empty")
     if options.get("write") and not options.get("file"):
         raise UsageError("--write requires at least one explicit --file")
+    if name == "check" and (not options.get("before") or not options.get("after")):
+        raise UsageError("check requires --before ORIGINAL and --after CANDIDATE")
     domain_id = options.get("domain")
     domain = choose(domain_id, catalog["domains"], "domain") if domain_id else None
     refs = ["references/commands.md", *spec["references"]]
@@ -252,10 +254,12 @@ def resolve(argv, core=CORE):
     scope = options.get("scope", spec["scope"])
     if name == "prompt":
         scope = "prompt-" + options["target"]
+    if name == "check":
+        scope = "mechanical-" + options["kind"]
     return {
         "status": "planned", "execution": "host-required", "command": name,
         "scope": scope, "delivery": spec["delivery"],
-        "input_files": options.get("file") or [],
+        "input_files": [options["before"], options["after"]] if name == "check" else options.get("file") or [],
         "write_requested": bool(options.get("write")), "save_requested": options.get("save"),
         "options": options, "domain": {"id": domain_id, **domain} if domain else None,
         "references": [resource(core, ref) for ref in dict.fromkeys(refs)],
