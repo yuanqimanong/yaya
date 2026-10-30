@@ -12,7 +12,7 @@ from __future__ import annotations
 from collections import Counter
 import sys
 
-from prose_scan import InputError, JsonParser, LIMITATIONS, Unsupported, emit, numbers, read_utf8, snapshot
+from prose_scan import InputError, JsonParser, LIMITATIONS, MAX_BYTES, Unsupported, emit, numbers, read_utf8, snapshot
 from edit_evidence import bound_check, exact_grant, strict_json
 
 CATEGORIES = (
@@ -81,7 +81,8 @@ def check_files(before, after, allow=(), protect_quotes=False, literals=()):
         result["evidence"] = {"status": "unbound", "reason": "stdin input has no stable file identity; save files for batch evidence."}
         return result
     return bound_check(before, after, __file__, operation,
-                       {"allow": allow, "protect_quotes": protect_quotes, "literals": list(literals)})
+                       {"allow": allow, "protect_quotes": protect_quotes, "literals": list(literals)},
+                       max_bytes=MAX_BYTES)
 
 
 def main(argv=None):

@@ -68,24 +68,32 @@ def tool_identity(tool):
             "python": sys.version, "executable": sys.executable}
 
 
-def bound_check(before, after, tool, operation, options=None):
+def bound_check(before, after, tool, operation, options=None, *, max_bytes=None):
     """Bind a checker result to stable raw files and all its local dependencies."""
     started = now()
     evidence = {"started_utc": started, "tool": tool_identity(tool),
                 "command": [sys.executable, *sys.argv], "options": options or {},
                 "invocation": "CLI or Python API; command records the host process"}
     paths = {"before": Path(before), "candidate": Path(after)}
+    def read(path):
+        if max_bytes is None:
+            return path.read_bytes()
+        with path.open("rb") as stream:
+            data = stream.read(max_bytes + 1)
+        if len(data) > max_bytes:
+            raise ValueError(f"Input exceeds {max_bytes} bytes.")
+        return data
     try:
-        raw = {key: path.read_bytes() for key, path in paths.items()}
+        raw = {key: read(path) for key, path in paths.items()}
     except OSError as exc:
-        return {"status": "unsupported", "reason": f"Cannot read inputs: {type(exc).__name__}",
+        return {"status": "unsupported", "reason": f"Cannot read inputs: {type(exc).__name__}: {exc}",
                 "evidence": {**evidence, "finished_utc": now()}}
     evidence.update({key: {"path": str(paths[key].resolve()), **content_info(data)}
                      for key, data in raw.items()})
     result = operation()
     try:
-        stable = all(path.read_bytes() == raw[key] for key, path in paths.items())
-    except OSError:
+        stable = all(read(path) == raw[key] for key, path in paths.items())
+    except (OSError, ValueError):
         stable = False
     if not stable:
         result = {"status": "failed", "reason": "Input changed while checking; discard this result.",
