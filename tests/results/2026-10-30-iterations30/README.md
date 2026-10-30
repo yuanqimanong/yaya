@@ -238,3 +238,12 @@ Preparing all 15 relationship cases verifies 30 paired jobs: each Skill context
 contains only its selected profile, baseline contexts remain empty and criteria
 remain hidden. This is preparation validation, not new model-generation evidence;
 the earlier subagent-based domain evaluation remains a separate unchanged record.
+
+## 29 / cumulative 49 — Usable workflows and diagnostic instructions
+
+User-facing docs omitted scan/doctor, saved style reuse and verification sources,
+and incorrectly described every main CLI action as planning only. The README,
+installation guidance and new workflow guide now distinguish plans from executed
+checks, explain scopes/results, and show technical/financial examples. Disposable
+fixtures exercise the documented diagnostic, scan and comparison commands. No
+editing-quality claim follows from these documentation smoke checks.

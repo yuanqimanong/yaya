@@ -65,6 +65,8 @@ Copy-Item -LiteralPath '.\core\yaya' -Destination $skillTarget -Recurse
 ```text
 $yaya --help
 $yaya --version
+$yaya doctor
+$yaya scan --file draft.md --lang zh-Hans --rule zh-stock-close
 $yaya check --before original.md --after candidate.md
 $yaya human --focus direct -- 下面这段有多余的否定对比和免责声明……
 $yaya polish --domain finance --audience 普通读者 -- 下面这段财报说明……
@@ -82,23 +84,31 @@ $yaya help prompt
 | `review` | 只审表达，给问题与建议，不交完整改稿 |
 | `verify` | 按证据核对主张，给依据与未确认项，不改稿 |
 | `check` | 比较原稿和候选稿的机械保护项；`--kind comments` 检查 Python 普通注释边界 |
+| `scan` | 按字面规则定位措辞候选；`--rule` 可限定规则，不改稿 |
 | `comment` | 默认只改普通注释；`--scope docstrings` 选择明确的 docstring 节点 |
 | `prompt` | 默认优化提示词措辞；`--target output` 改下游回答风格，`both` 兼顾两者 |
 | `style` | 从样稿提炼风格指令与示例；`--save PATH` 明确保存位置 |
 | `origin` | 审阅“这是 AI 吗”的证据与不确定性 |
 
 一个显式命令只执行一种任务。发现拼错的命令、未知领域或不适用的选项时，会报错并提示帮助，
-不会悄悄扩大范围。`review`、`verify`、`check`、`origin` 保持只读。
+不会悄悄扩大范围。`review`、`verify`、`check`、`scan`、`origin` 保持只读。
 改写类命令默认返回候选；`--file` 指定输入，`--write` 要求修改指定文件。
 同一范围此前明确给过的文件修改授权仍有效，不必重复确认。
 
 这是 **Skill 的聊天命令协议**，也接受 `yaya polish ...`；不会安装全局 shell 命令。
-终端可运行 `python core/yaya/scripts/yaya.py --help`。该辅助入口只输出帮助或 JSON 任务计划，
+终端可运行 `python core/yaya/scripts/yaya.py --help`。任务命令输出 JSON 计划，
 实际改稿由当前 AI 宿主执行。完整选项以 `help COMMAND` / `COMMAND --help` 为准，
 帮助与路由共用 [能力目录](core/yaya/catalog.json)。
 
+`doctor [--json]` 直接执行本地只读诊断，检查运行文件、Python 语法、目录和指南链接。
+它不验证编辑质量或宿主是否自动发现技能。`scan` 和 `check` 的计划由宿主运行对应检查器；
+终端直接执行检查器的例子、结果解释和常见错误见 [操作指南](docs/workflows.md)。
+
 `help COMMAND` 现在附有可复制示例；`--version --json` 可确认当前安装版本。
 `check` 由宿主运行实际检查器，返回通过、失败或不支持；不会自动修稿或补发差异授权。
+可用 `--literal retry_limit --quotes` 额外保护指定术语和引文。
+改稿命令可用 `--style team-style.md` 复用风格卡；`verify --source evidence.md`
+可重复指定证据，待核对主张仍由 `--file` 提供。
 
 ### 定向处理过度防御表达
 

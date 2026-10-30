@@ -22,7 +22,7 @@ professional certification. Update the release build and relocation checks when
 adding runtime resources. Never replace actual execution evidence with intended checks.
 - `tests/`: editing evaluations and helper tests. File-operation tests use temporary directories.
 
-Language packs follow one current [specification](docs/language-pack-spec.md): `format_version: 1` with `core_major: 0` for core `0.2.0`. They may include `PATTERNS.md` for language-specific humanizing guidance. All five current packs are `experimental`.
+Language packs follow one current [specification](docs/language-pack-spec.md): `format_version: 1` with `core_major: 0` for the current core's major version. They may include `PATTERNS.md` for language-specific humanizing guidance. All five current packs are `experimental`.
 
 For a new language, copy the pack files from the [French (`fr`) template](templates/language-pack/README.md) into a new directory. The template demonstrates authoring; French is not a released or validated pack. Leave the template's README out of the pack and ZIP.
 

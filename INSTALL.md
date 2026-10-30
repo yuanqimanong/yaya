@@ -85,10 +85,19 @@ guides in `references/domains/`; 0.4 adds `references/check.md`. In chat, run
 `$yaya --help` and `$yaya domains`. From the installed Skill directory, run
 `python scripts/yaya.py --version --json` to verify the runtime version, then
 `python scripts/yaya.py check --help` to inspect the comparison command.
-The helper prints help or a host task plan; it does not call a model or edit files,
+Newer checkouts also include `scripts/doctor.py` and `references/scan.md`. Run
+`python scripts/yaya.py doctor --json` from the installed directory: `ready` means
+the local structure and Python syntax checks passed; `degraded` exits 1 and names
+the failed checks. It does not repair files, certify editing quality or establish
+host discovery. Replace a broken runtime from the staged verified copy, then rerun.
+
+Task commands print help or a host task plan; `doctor` performs local diagnostics.
+The helper does not call a model or edit user files,
 and installing the Skill does not put a `yaya` executable on your shell's PATH.
 If Yaya does not appear, follow the host's reload/restart procedure. Reading a
 source file directly can test editing, but does not verify automatic discovery.
+See [scoped workflows](docs/workflows.md) for reusable style cards, selected
+verification sources, literal scans and executed preservation checks.
 
 ## 3. Add a requested language
 
