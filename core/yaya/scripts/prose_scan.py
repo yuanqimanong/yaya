@@ -21,6 +21,7 @@ LIMITATIONS = [
     "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
     "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
     "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+    "Backslash-delimited math is protected only when paired; dollar notation and unpaired escapes need explicit literals.",
 ]
 
 
@@ -143,10 +144,21 @@ def _inline_code_end(text, start):
     raise Unsupported("Unclosed inline code.")
 
 
+def _math_end(text, start):
+    closing = {"\\(": "\\)", "\\[": "\\]"}[text[start:start + 2]]
+    cursor = start + 2
+    while cursor < len(text):
+        if text.startswith(closing, cursor):
+            return cursor + 2
+        cursor += 2 if text[cursor] == "\\" else 1
+    return None
+
+
 def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
     validate_text(text)
     spans = []
     occupied = bytearray(len(text))
+    unmatched_math = set()
 
     def add(start, end, category, overlap=False):
         if end > start and (overlap or not any(occupied[start:end])):
@@ -201,6 +213,14 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
                     cursor += 1
                     continue
                 if text[cursor] == "\\":
+                    marker = text[cursor:cursor + 2]
+                    if marker in {"\\(", "\\["} and marker not in unmatched_math:
+                        closing = _math_end(text, cursor)
+                        if closing is not None:
+                            add(cursor, closing, "math", overlap=True)
+                            cursor = closing
+                            continue
+                        unmatched_math.add(marker)
                     cursor += 2
                     continue
                 if text[cursor] == "`":

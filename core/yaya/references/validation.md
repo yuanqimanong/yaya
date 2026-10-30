@@ -99,6 +99,12 @@ existing whole-span checks; quantities are not assembled across those spans.
 
 ## What a pass cannot establish
 
+Backslash-delimited LaTeX spans (`\(...\)` and `\[...\]`) retain their exact
+formula source, including multiline display content. Unpaired delimiters remain
+ordinary Markdown escapes so literal brackets/parentheses stay editable. This does
+not verify a formula's meaning or correctness. Dollar-delimited, unpaired and
+unmarked mathematics remain outside this protection; use explicit literals.
+
 Angle-bracket email and scheme-based URI autolinks retain their full target
 spelling, including `mailto:`. The scanner checks source syntax, not deliverability,
 URI validity or remote content. Bare/escaped email addresses need explicit literal
