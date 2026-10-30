@@ -211,3 +211,11 @@ A second read suppresses stale findings when the source changed or disappeared
 during scanning. Stdin retains a content hash but no stable-file claim. Tests
 cover BOM/CRLF bytes, unchanged inputs, stdin and edits/removal during execution;
 consumers still need to rerun after any later edit.
+
+## 26 / cumulative 46 — Ordered ratios and fractions
+
+Both `1:3` → `3:1` and `1/4` → `4/1` previously passed numeric comparison.
+Explicit ratio/fraction connectors now preserve the whole expression and operand
+order while allowing the unchanged expression to move with prose. Tests cover
+multi-part, signed, decimal and scientific values plus line/code boundaries.
+This compares source spelling; it does not evaluate or simplify the expression.
