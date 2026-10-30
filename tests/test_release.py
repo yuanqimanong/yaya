@@ -342,6 +342,26 @@ class ReleaseBuildTests(unittest.TestCase):
         self.assertNotIn("Traceback", run.stderr)
         self.assertFalse(output.exists())
 
+    def test_skill_and_archive_versions_must_agree(self):
+        source = self.scratch / "skill version source"
+        shutil.copytree(self.source, source)
+        path = source / "core/yaya/SKILL.md"
+        original = path.read_text(encoding="utf-8")
+        current = self.core_asset["version"]
+        declaration = f'  version: "{current}"'
+        self.assertIn(declaration, original)
+        for index, replacement in enumerate(('  version: "99.0.0"',
+                                               '  release: "' + current + '"',
+                                               declaration + "\n" + declaration)):
+            with self.subTest(replacement=replacement):
+                path.write_text(original.replace(declaration, replacement), encoding="utf-8")
+                output = self.scratch / f"mismatched skill output {index}"
+                run = self.run_script(source / "scripts/build_release.py", "--output", output)
+                self.assertEqual(run.returncode, 1)
+                self.assertIn("SKILL.md", run.stderr)
+                self.assertNotIn("Traceback", run.stderr)
+                self.assertFalse(output.exists())
+
     def test_existing_output_links_do_not_overwrite_their_targets(self):
         for index, filename in enumerate((self.core_asset["file"], "catalog.json", "SHA256SUMS")):
             with self.subTest(filename=filename):
