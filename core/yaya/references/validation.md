@@ -52,6 +52,12 @@ No wildcard, new/deleted/moved node, encoding/BOM change, delimiter change, or l
 
 ## Quantities in prose
 
+Numeric dates (`YYYY-MM-DD`, `YYYY/MM/DD`, `YYYY年M月D日`) and clock times
+(`H:MM`, optional seconds/fraction and ISO offset) are compared as complete literal
+tokens, including a date/time joined by `T` or one space. This catches component
+swaps. It does not validate calendar dates or infer timezone equivalence; localized
+month names, ambiguous day-first dates and date-to-event associations need review.
+
 `check_rewrite.py` compares the spelling and occurrence count of recognized quantities
 outside protected spans. It recognizes decimal and scientific numerals (such as
 `1e-3`), selected currency prefixes/suffixes, scales such as `million` and `万`,
