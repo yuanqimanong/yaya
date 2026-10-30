@@ -6,6 +6,30 @@ from test_check_rewrite import checker, prose_scan, SCRIPTS
 
 
 class PlaceholderChecks(unittest.TestCase):
+    def test_brace_fields_preserve_names_accessors_conversions_and_formats(self):
+        for before, after in (("{name}", "{user}"), ("{user.name}", "{user.id}"),
+                              ("{items[0]}", "{items[1]}"), ("{data[key]}", "{data[value]}"),
+                              ("{value!r}", "{value!s}"), ("{amount:,.2f}", "{total:,.2f}"),
+                              ("{0:08d}", "{0:8d}"), ("{:.2f}", "{:.3f}"), ("{}", "")):
+            with self.subTest(before=before):
+                result = checker.compare("Use " + before, "Use " + after)
+                self.assertEqual(result["status"], "failed", result)
+                self.assertIn("placeholders", {row["category"] for row in result["violations"]})
+                self.assertEqual(checker.compare("Please use " + before, "Use " + before)["status"], "passed")
+
+    def test_brace_subset_does_not_consume_general_expressions_or_protected_code(self):
+        for source in ('{ "key": "value" }', '{x + y}', '{ first choice }', '{a,b}'):
+            self.assertNotIn("placeholders", prose_scan.snapshot(source).items())
+        result = checker.compare("`{name}`", "`{value}`")
+        self.assertEqual({row["category"] for row in result["violations"]}, {"inline_code"})
+        for source in ("{{ name }}", "${name}", "{value!r:>8}"):
+            self.assertEqual(prose_scan.snapshot(source).items()["placeholders"], [source])
+
+    def test_long_unclosed_braces_finish(self):
+        script = "from prose_scan import snapshot; snapshot('{'*100000); snapshot('{name:'+ 'x'*100000)"
+        result = subprocess.run([sys.executable, "-B", "-c", script], cwd=SCRIPTS, capture_output=True, timeout=10)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
     def test_long_invalid_printf_fields_have_bounded_runtime(self):
         script = "from prose_scan import snapshot; snapshot('%'+'0'*100000+'z'); snapshot('%1'*40000)"
         process = subprocess.run([sys.executable, "-B", "-c", script], cwd=SCRIPTS,

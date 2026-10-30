@@ -116,6 +116,13 @@ format subset, not an interpolation parser for every language; space-flag forms
 such as `% d` need explicit literal protection because they overlap ordinary prose.
 Unusual flag orders such as `%0+5d` also need explicit protection; `%+05d` is covered.
 
+Single-brace interpolation fields such as `{name}`, `{user.name}`, `{items[0]}`,
+`{value!r}`, `{amount:,.2f}`, `{0}` and `{}` are protected as complete spans.
+Names/indexes and non-nested format specs use a bounded subset; nested formatting,
+arbitrary expressions, alignment syntax from other template languages and unusually
+long fields need explicit literals. This does not evaluate templates or confirm
+their runtime validity. General brace prose such as `{ first choice }` stays editable.
+
 Images and hyperlinks retain their roles as well as destinations, including
 supported reference forms. Inline image alt text and ordinary link labels remain
 editable. Reordering roles and destinations across a document still needs review;
