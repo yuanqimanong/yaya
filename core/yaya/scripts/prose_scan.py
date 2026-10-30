@@ -144,7 +144,8 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
             return True
         return False
 
-    lines = text.splitlines(keepends=True)
+    # CommonMark lines end at LF/CRLF, not Unicode separators or form feeds.
+    lines = re.findall(r"[^\n]*\n|[^\n]+$", text)
     offsets = []
     offset = 0
     for line in lines:
@@ -214,7 +215,7 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
             marker = fence.group(1)
             if marker.startswith("`") and "`" in fence.group(2):
                 raise Unsupported("Invalid backtick fence information string.")
-            closer = re.compile(r" {0,3}" + re.escape(marker[0]) + "{" + str(len(marker)) + r",}\s*$")
+            closer = re.compile(r" {0,3}" + re.escape(marker[0]) + "{" + str(len(marker)) + r",}[ \t]*$")
             end = next((i for i in range(index + 1, len(lines)) if closer.fullmatch(lines[i].rstrip("\r\n"))), None)
             if end is None:
                 raise Unsupported("Unclosed fenced code block.")
