@@ -26,6 +26,7 @@ LIMITATIONS = [
     "Only UTF-8 .py/.pyi accepted by the running interpreter; selected docstrings must be single STRING tokens.",
     "Only granted existing docstring values may change; other bytes and physical newline sequences are protected.",
     "Recognized doctests and the tail starting at an example/usage/code-block marker are protected, even within granted nodes.",
+    "Example headings include selected English, Chinese, Japanese and Korean forms; this is not exhaustive language coverage.",
     "Unmarked examples and project-specific documentation syntax require manual review; example editing needs a separate check.",
     "AST equivalence proves only a mechanical implementation boundary, not comment correctness or invariant runtime behavior; __doc__ changes.",
 ]
@@ -78,7 +79,9 @@ def examples(text):
     protected = [(example.source, example.want, example.exc_msg, example.options, example.indent)
                  for example in tests]
     # Freeze a recognized example section in full, including output and prose.
-    marker = re.compile(r"^\s*(?:```|~~~|>>>|\.\.\s+(?:code|code-block|sourcecode)::|(?:examples?|usage)\s*:?[ \t]*$)", re.I)
+    marker = re.compile(
+        r"^\s*(?:```|~~~|>>>|\.\.\s+(?:code|code-block|sourcecode)::|"
+        r"(?:examples?|usage|示例|示例代码|用法|範例|使用例|예제|사용법)[ \t]*[:：]?[ \t]*$)", re.I)
     lines = text.splitlines(keepends=True)
     for index, line in enumerate(lines):
         if marker.search(line) or line.rstrip().endswith("::"):
