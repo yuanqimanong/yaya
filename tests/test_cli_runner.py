@@ -255,6 +255,40 @@ class CliRunner(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "GUIDE"):
             RUNNER.skill_context(run, {"task": "humanize", "language": "zh-HK"})
 
+    def test_real_domain_suite_loads_only_selected_frozen_guidance(self):
+        spec = importlib.util.spec_from_file_location("domain_packet_prepare", TESTS / "evals/prepare.py")
+        prepare = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(prepare)
+        run = self.root / "domains"
+        with patch("builtins.print"):
+            prepare.prepare(run, ["domain-relationships"], False)
+        cases = {row["id"]: row for row in json.loads((run / "criteria.json").read_text(encoding="utf-8"))}
+        _, jobs = RUNNER.prepare_jobs(run, ["skill", "baseline"], None)
+        self.assertEqual(len(jobs), 30)
+        for job in jobs:
+            case = cases[job.identifier]
+            if job.condition == "baseline":
+                self.assertEqual(job.context_hashes, {})
+                continue
+            profiles = {name for name in job.context_hashes if "/references/domains/" in name}
+            self.assertEqual(profiles, {f"snapshot/yaya/references/domains/{case['domain']}.md"})
+            self.assertIn("snapshot/yaya/references/domains.md", job.context_hashes)
+            for criterion in case["checks"]:
+                self.assertNotIn(criterion, job.prompt)
+
+    def test_invalid_or_missing_domain_context_cannot_silently_be_generic(self):
+        run = self.frozen_run()
+        snapshot = run / "snapshot/yaya"
+        path = snapshot / "catalog.json"
+        (snapshot / "references/domains.md").write_text("Domain rules", encoding="utf-8")
+        for guide in ("../outside.md", "/absolute.md", "references/missing.md", "references/../SKILL.md"):
+            path.write_text(json.dumps({"domains": {"tech": {"guide": guide}}}), encoding="utf-8")
+            with self.subTest(guide=guide), self.assertRaises(ValueError):
+                RUNNER.skill_context(run, {"task": "text", "domain": "tech"})
+        for domain in ("unknown", [], ""):
+            with self.subTest(domain=domain), self.assertRaises(ValueError):
+                RUNNER.skill_context(run, {"task": "text", "domain": domain})
+
     def test_input_hash_change_prevents_any_generation(self):
         run = self.frozen_run()
         (run / "snapshot/yaya/SKILL.md").write_text("Changed after freezing.", encoding="utf-8")

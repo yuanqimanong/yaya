@@ -9,7 +9,7 @@ import hashlib
 import json
 import math
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import shutil
 import subprocess
@@ -113,6 +113,24 @@ def skill_context(run: Path, case: dict) -> list[Path]:
     if task not in TASK_FILES:
         raise ValueError(f"Unknown task for context selection: {task}")
     files.append(snapshot / "references" / TASK_FILES[task])
+    if "domain" in case:
+        domain = case["domain"]
+        catalog = read_json(snapshot / "catalog.json")
+        domains = catalog.get("domains") if isinstance(catalog, dict) else None
+        if not isinstance(domain, str) or not isinstance(domains, dict) or domain not in domains:
+            raise ValueError("Case domain must select a domain in the frozen catalog")
+        profile = domains[domain]
+        guide = profile.get("guide") if isinstance(profile, dict) else None
+        if (not isinstance(guide, str) or not guide or "\\" in guide or ":" in guide
+                or PurePosixPath(guide).is_absolute() or ".." in PurePosixPath(guide).parts
+                or PurePosixPath(guide).as_posix() != guide):
+            raise ValueError("Unsafe or missing frozen domain guide path")
+        for relative in ("references/domains.md", guide):
+            path = snapshot / relative
+            if not path.resolve().is_relative_to(snapshot.resolve()) or not path.is_file():
+                raise ValueError(f"Missing or escaping frozen domain guide: {relative}")
+            if path not in files:
+                files.append(path)
     candidates = locale_candidates(case.get("language", ""))
     # Location priority precedes specificity, matching an explicit frozen --data-dir.
     for root in (run / "data/language-packs", snapshot / "languages"):

@@ -228,3 +228,13 @@ normalizes the supported tag subset, uses full region/script parent candidates,
 and applies frozen external-location priority before specificity. Contract tests
 compare runtime candidate sequences and exercise actual competing guide files.
 The policy stays inside the hashed runner; existing results are not regenerated.
+
+## 28 / cumulative 48 — Domain guidance in frozen CLI contexts
+
+The CLI evaluator omitted domain guides even when a case declared its domain and
+generation forbade reading other files. It now loads the selected frozen profile
+and domain overview, records their hashes and rejects absent/unsafe resources.
+Preparing all 15 relationship cases verifies 30 paired jobs: each Skill context
+contains only its selected profile, baseline contexts remain empty and criteria
+remain hidden. This is preparation validation, not new model-generation evidence;
+the earlier subagent-based domain evaluation remains a separate unchanged record.
