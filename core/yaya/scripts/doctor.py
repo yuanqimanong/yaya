@@ -41,6 +41,19 @@ def diagnose(core=CORE):
         from yaya import version_info
         return version_info(core)
 
+    def syntax():
+        errors = []
+        for name in HELPERS:
+            path = core / "scripts" / name
+            try:
+                # Compile in memory: no helper execution, import or bytecode write.
+                compile(path.read_bytes(), str(path), "exec", dont_inherit=True)
+            except (OSError, SyntaxError, ValueError) as exc:
+                errors.append(f"{name}: {exc}")
+        if errors:
+            raise ValueError("; ".join(errors))
+        return {"compiled_helpers": len(HELPERS), "executed": False}
+
     def catalog():
         from yaya import load_catalog
         value = load_catalog(core)
@@ -77,12 +90,12 @@ def diagnose(core=CORE):
                 checked += 1
         return {"local_file_links": checked, "anchors_checked": False}
 
-    for name, operation in (("runtime-files", files), ("version", version), ("catalog", catalog),
+    for name, operation in (("runtime-files", files), ("python-syntax", syntax), ("version", version), ("catalog", catalog),
                             ("tell-rules", rules), ("bundled-languages", bundled), ("guide-links", links)):
         check(name, operation)
     return {"status": "ready" if all(row["status"] == "passed" for row in checks) else "degraded",
             "runtime": str(core), "read_only": True, "checks": checks,
-            "limitations": ["Checks local runtime structure, not editorial quality or host Skill discovery.",
+            "limitations": ["Checks local runtime structure and Python syntax, not helper behavior, editorial quality or host Skill discovery.",
                             "User/project language overrides, remote links and document anchors are not checked."]}
 
 

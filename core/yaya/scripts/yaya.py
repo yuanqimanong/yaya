@@ -212,7 +212,7 @@ def resolve(argv, core=CORE):
             raise UsageError("Use doctor [--json] without user files or task material")
         if "--help" in flags or "-h" in flags:
             return ({"command": "doctor", "options": ["--json"], "read_only": True} if "--json" in flags else
-                    "yaya doctor [--json]\n只读检查 Python、版本、命令目录、规则、内置语言包与本地指南链接；不自动修复。\n")
+                    "yaya doctor [--json]\n只读检查 Python、脚本语法、版本、命令目录、规则、内置语言包与本地指南链接；不自动修复。\n")
         sys.dont_write_bytecode = True
         from doctor import diagnose
         result = diagnose(core)
