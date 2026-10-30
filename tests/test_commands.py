@@ -18,6 +18,20 @@ spec.loader.exec_module(commands)
 
 
 class CommandTests(unittest.TestCase):
+    def test_verification_sources_stay_separate_from_claims_and_write_scope(self):
+        plan = commands.resolve(["verify", "--file", "claims.md", "--source", "record.md",
+                                 "--source", "missing.md", "--domain", "finance"])
+        self.assertEqual(plan["input_files"], ["claims.md"])
+        self.assertEqual(plan["evidence_files"], ["record.md", "missing.md"])
+        self.assertFalse(plan["write_requested"])
+        self.assertEqual(plan["delivery"], "findings")
+        self.assertEqual(commands.resolve(["verify"])["evidence_files"], [])
+        for name in ("polish", "human", "review", "comment", "prompt", "style", "origin", "check"):
+            with self.subTest(name=name), self.assertRaises(commands.UsageError):
+                commands.resolve([name, "--source", "record.md"])
+        with self.assertRaises(commands.UsageError):
+            commands.resolve(["verify", "--source", "record.md", "--write"])
+
     def test_saved_style_is_explicit_and_separate_from_edit_targets(self):
         for name in ("polish", "human", "comment", "prompt"):
             plan = commands.resolve([name, "--file", "draft.md", "--style", "team.md", "--write"])

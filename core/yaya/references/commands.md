@@ -53,6 +53,7 @@ It does not read input files, call a model, install anything or execute payloads
   issues; do not return a replacement article or edit a file.
 - `verify`: evidence-backed findings only. Mark unsupported claims as unresolved;
   do not turn them into corrections or silently rewrite. See `verify.md`.
+  `--file` selects claims and repeatable `--source` selects evidence; both are read-only.
 - `comment`: ordinary comments by default. `--scope docstrings` selects specifically
   identified docstring nodes instead. Never widen this to logs, UI text, prompt strings,
   schema metadata or code. A local code read that grounds a comment is supporting

@@ -90,10 +90,10 @@ def load_catalog(core=CORE):
             string_list(option["choices"], f"{context}.choices", nonempty=True)
             if "default" in option and option["default"] not in option["choices"]:
                 raise ValueError(f"{context}.default must be one of its choices")
-        if name in {"file", "save", "domain", "before", "after", "style"} and "default" in option:
+        if name in {"file", "save", "domain", "before", "after", "style", "source"} and "default" in option:
             raise ValueError(f"{context} requires an explicit selection")
         if ((name == "write" and not option.get("flag"))
-                or (name == "file" and (not option.get("repeat") or option.get("flag")))
+                or (name in {"file", "source"} and (not option.get("repeat") or option.get("flag")))
                 or (name in {"save", "domain", "before", "after", "style"} and (option.get("flag") or option.get("repeat")))):
             raise ValueError(f"Invalid action shape for {context}")
     for name, command in catalog["commands"].items():
@@ -113,6 +113,8 @@ def load_catalog(core=CORE):
             raise ValueError(f"{context}: save requires style-card delivery")
         if "style" in command["options"] and command["delivery"] != "rewrite":
             raise ValueError(f"{context}: style requires rewrite delivery")
+        if "source" in command["options"] and command["scope"] != "evidence-backed-findings":
+            raise ValueError(f"{context}: source requires evidence-backed verification")
         for reference in command["references"]:
             resource(core, reference)
     for name, domain in catalog["domains"].items():
@@ -273,6 +275,7 @@ def resolve(argv, core=CORE):
         "input_files": [options["before"], options["after"]] if name == "check" else options.get("file") or [],
         "write_requested": bool(options.get("write")), "save_requested": options.get("save"),
         "style_file": options.get("style"),
+        "evidence_files": options.get("source") or [],
         "options": options, "domain": {"id": domain_id, **domain} if domain else None,
         "references": [resource(core, ref) for ref in dict.fromkeys(refs)],
         "request_tokens": payload,

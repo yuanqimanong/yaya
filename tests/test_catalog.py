@@ -33,6 +33,7 @@ class CatalogTests(unittest.TestCase):
             ("focus", "nargs", "+"), ("focus", "dest", "write"),
             ("write", "flag", False), ("file", "repeat", False),
             ("save", "flag", True),
+            ("source", "repeat", False), ("source", "flag", True), ("style", "default", "team.md"),
         ):
             with self.subTest(key=key, field=field, value=value):
                 self.reject(lambda c: c["options"][key].update({field: value}))
@@ -50,6 +51,8 @@ class CatalogTests(unittest.TestCase):
         self.reject(lambda c: c["commands"]["review"]["options"].append("write"))
         self.reject(lambda c: c["commands"]["origin"]["options"].append("save"))
         self.reject(lambda c: c["commands"]["human"]["options"].remove("file"))
+        self.reject(lambda c: c["commands"]["human"]["options"].append("source"))
+        self.reject(lambda c: c["commands"]["review"]["options"].append("style"))
 
     def test_reserved_selectors_and_incomplete_domain(self):
         self.reject(lambda c: c["options"].update({"help": {"help": "collision"}}))
