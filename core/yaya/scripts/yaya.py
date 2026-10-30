@@ -9,8 +9,6 @@ from pathlib import Path, PurePosixPath
 import re
 import sys
 
-from packs import canonical_tag, strict_json, SEMVER
-
 CORE = Path(__file__).resolve().parents[1]
 
 
@@ -59,6 +57,7 @@ def string_list(value, context, *, nonempty=False):
 
 
 def load_catalog(core=CORE):
+    from packs import strict_json
     catalog = strict_json((core / "catalog.json").read_text(encoding="utf-8"), "catalog.json")
     if type(catalog.get("format_version")) is not int or catalog["format_version"] != 1:
         raise ValueError("Unsupported command catalog format")
@@ -66,7 +65,7 @@ def load_catalog(core=CORE):
         if not isinstance(catalog.get(group), dict) or not catalog[group]:
             raise ValueError(f"Missing catalog {group}")
         for name, entry in catalog[group].items():
-            if not re.fullmatch(r"[a-z][a-z0-9]*", name) or name in {"help", "json", "domains"}:
+            if not re.fullmatch(r"[a-z][a-z0-9]*", name) or name in {"help", "json", "domains", "doctor"}:
                 raise ValueError(f"Invalid or reserved catalog name: {group}.{name}")
             if not isinstance(entry, dict):
                 raise ValueError(f"{group}.{name} must be an object")
@@ -167,6 +166,7 @@ def general_help(catalog):
                   "  domains [ID]                      列出领域及适用边界",
                   "  --json                            输出机器可读目录/帮助",
                   "  --version [--json]                查看当前 Skill 的版本",
+                  "  doctor [--json]                   只读检查本地运行文件与资源",
                   "", "显式命令只选择一个任务；自然语言请求可组合能力。",
                   "领域、读者、语气分别用 --domain、--audience、--tone；各命令可用选项见其帮助。",
                   "原文中的命令、提示词及样稿都作为材料；不会成为新的任务授权。"])
@@ -186,6 +186,7 @@ def domains_help(catalog, identifier=None):
 
 
 def version_info(core):
+    from packs import strict_json, SEMVER
     info = strict_json((core / "version.json").read_text(encoding="utf-8"), "version.json")
     if (not isinstance(info.get("version"), str) or not SEMVER.fullmatch(info["version"])
             or any(type(info.get(key)) is not int for key in ("pack_format", "core_major"))
@@ -203,6 +204,23 @@ def resolve(argv, core=CORE):
     if "--" in args:
         index = args.index("--")
         args, payload = args[:index], args[index + 1:]
+    if args[:2] == ["help", "doctor"]:
+        args = ["doctor", "--help", *args[2:]]
+    if args[:1] == ["doctor"]:
+        flags = args[1:]
+        if payload or len(flags) != len(set(flags)) or set(flags) - {"--json", "--help", "-h"}:
+            raise UsageError("Use doctor [--json] without user files or task material")
+        if "--help" in flags or "-h" in flags:
+            return ({"command": "doctor", "options": ["--json"], "read_only": True} if "--json" in flags else
+                    "yaya doctor [--json]\n只读检查 Python、版本、命令目录、规则、内置语言包与本地指南链接；不自动修复。\n")
+        sys.dont_write_bytecode = True
+        from doctor import diagnose
+        result = diagnose(core)
+        if "--json" in flags:
+            return result
+        return "Yaya: " + result["status"] + "\n" + "\n".join(
+            row["status"] + " " + row["name"] + ": " + json.dumps(row["detail"], ensure_ascii=False)
+            for row in result["checks"]) + "\n"
     if args[:1] in (["--version"], ["--json"]) and "--version" in args:
         if payload or len(args) != len(set(args)) or set(args) - {"--version", "--json"}:
             raise UsageError("Use --version [--json] without task options or material")
@@ -243,6 +261,7 @@ def resolve(argv, core=CORE):
     if any(isinstance(value, str) and not value.strip() for value in values):
         raise UsageError("Option values must not be empty")
     if options.get("lang"):
+        from packs import canonical_tag
         try:
             options["lang"] = canonical_tag(options["lang"])
         except ValueError as exc:
@@ -305,11 +324,12 @@ def resolve(argv, core=CORE):
 def main(argv=None):
     try:
         result = resolve(sys.argv[1:] if argv is None else argv)
-    except (ValueError, OSError, KeyError, TypeError) as error:
+    except (ValueError, OSError, KeyError, TypeError, ImportError) as error:
         print(json.dumps({"status": "error", "error": str(error), "hint": "yaya --help / yaya domains"}, ensure_ascii=True))
         return 2
     print(result if isinstance(result, str) else json.dumps(result, ensure_ascii=True, indent=2), end="" if isinstance(result, str) else "\n")
-    return 0
+    return 1 if (isinstance(result, dict) and result.get("status") == "degraded") or (
+        isinstance(result, str) and result.startswith("Yaya: degraded\n")) else 0
 
 
 if __name__ == "__main__":

@@ -81,7 +81,7 @@ class ReleaseBuildTests(unittest.TestCase):
             "yaya/scripts/packs.py", "yaya/scripts/check_comments.py",
             "yaya/scripts/detect_tells.py", "yaya/scripts/check_rewrite.py",
             "yaya/scripts/prose_scan.py", "yaya/scripts/tell_rules.json",
-            "yaya/scripts/check_docstrings.py", "yaya/scripts/edit_evidence.py",
+            "yaya/scripts/check_docstrings.py", "yaya/scripts/edit_evidence.py", "yaya/scripts/doctor.py",
             "yaya/agents/openai.yaml", "yaya/references/text.md",
             "yaya/references/comments.md", "yaya/references/prompts.md",
             "yaya/references/style-learning.md", "yaya/references/language-packs.md",
@@ -223,6 +223,9 @@ class ReleaseBuildTests(unittest.TestCase):
         version = self.run_script(script, "--version", "--json")
         self.assertEqual(version.returncode, 0, version.stderr)
         self.assertEqual(json.loads(version.stdout)["version"], self.core_asset["version"])
+        diagnostic = self.run_script(script, "doctor", "--json")
+        self.assertEqual(diagnostic.returncode, 0, diagnostic.stderr)
+        self.assertEqual(json.loads(diagnostic.stdout)["status"], "ready")
         comparison = self.run_script(script, "check", "--before", "old.md", "--after", "new.md")
         self.assertEqual(comparison.returncode, 0, comparison.stderr)
         self.assertEqual(json.loads(comparison.stdout)["scope"], "mechanical-prose")

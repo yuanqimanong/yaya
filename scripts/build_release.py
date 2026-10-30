@@ -93,7 +93,7 @@ def build(output: Path) -> dict:
         "SKILL.md", "LICENSE", "version.json", "agents/openai.yaml", "catalog.json",
         "scripts/packs.py", "scripts/check_comments.py", "scripts/detect_tells.py",
         "scripts/check_rewrite.py", "scripts/prose_scan.py", "scripts/tell_rules.json",
-        "scripts/check_docstrings.py", "scripts/edit_evidence.py", "scripts/yaya.py",
+        "scripts/check_docstrings.py", "scripts/edit_evidence.py", "scripts/yaya.py", "scripts/doctor.py",
     )]
     source_files.extend(sorted((CORE / "references").rglob("*.md")))
     for directory in bundled:
