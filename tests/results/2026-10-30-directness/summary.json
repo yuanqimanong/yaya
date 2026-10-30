@@ -1,0 +1,27 @@
+{
+  "version": "0.3.1",
+  "runs": {
+    "initial": {
+      "cases": 24,
+      "batch_size": 8,
+      "criteria_hidden_from_generator": true,
+      "baseline_executed": false,
+      "issues": [
+        "DIR16"
+      ]
+    },
+    "retest": {
+      "cases": 3,
+      "batch_size": 3,
+      "criteria_hidden_from_generator": true,
+      "baseline_executed": false,
+      "issues": []
+    }
+  },
+  "unique_cases": 26,
+  "archive_members": 143,
+  "archive_sha256": "aa0a6d175fbbd3f13351d14c9e8bc0b121b20aa69c5d262ff10399f6422770cd",
+  "runtime_files": 41,
+  "source_matches_installation": true,
+  "comparative_or_cross_provider_evaluation": false
+}

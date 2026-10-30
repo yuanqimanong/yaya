@@ -1,0 +1,22 @@
+{
+  "version": "0.3.2",
+  "tests_run": 241,
+  "reproduced_false_passes_before": 6,
+  "detected_changes_after": 6,
+  "ordinary_edit_control": "passed",
+  "file_edits_verified": 2,
+  "runtime_files": 41,
+  "source_matches_installation": true,
+  "archive_members": 157,
+  "archive_sha256": "f4d2dd32d5d0621923fb9caa1ec688186cbfe7a0fc65526bad8a138fe4d4e9c7",
+  "core_archive": {
+    "version": "0.3.2",
+    "bundled_languages": [
+      "en",
+      "zh-Hans"
+    ],
+    "file": "yaya-core-0.3.2.zip",
+    "sha256": "4bb71c0e2291cb8c2faa08ffb55cb330eb7cf8850d6803c537f6725641541484",
+    "bytes": 82729
+  }
+}

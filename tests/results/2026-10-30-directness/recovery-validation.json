@@ -1,0 +1,16 @@
+[
+  {
+    "scope": "source",
+    "files": 18,
+    "refuses_later_edit": true,
+    "restores_before_bytes_and_removes_added_files": true,
+    "root": "D:\\AIProjects\\yaya\\.yaya\\directness-20261030\\recovery-simulation\\source"
+  },
+  {
+    "scope": "installed",
+    "files": 7,
+    "refuses_later_edit": true,
+    "restores_before_bytes_and_removes_added_files": true,
+    "root": "D:\\AIProjects\\yaya\\.yaya\\directness-20261030\\recovery-simulation\\installed"
+  }
+]

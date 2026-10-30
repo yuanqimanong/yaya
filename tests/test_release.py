@@ -88,6 +88,9 @@ class ReleaseBuildTests(unittest.TestCase):
             "yaya/references/humanize.md",
             "yaya/references/engineering.md", "yaya/references/validation.md", "yaya/references/authorship.md",
             "yaya/languages/en/PATTERNS.md", "yaya/languages/zh-Hans/PATTERNS.md",
+            "yaya/catalog.json", "yaya/scripts/yaya.py", "yaya/references/commands.md",
+            "yaya/references/domains.md", "yaya/references/verify.md",
+            *{f"yaya/references/domains/{name}.md" for name in ("tech", "finance", "data", "academic", "business")},
         }
         self.assertTrue(required <= set(names))
         languages = {PurePosixPath(name).parts[2] for name in names if name.startswith("yaya/languages/")}
@@ -204,15 +207,29 @@ class ReleaseBuildTests(unittest.TestCase):
             self.assertFalse(any("yaya-lang-fr-" in path.name for path in self.first.iterdir()))
         self.assertFalse(any("/templates/" in name or "/languages/fr/" in name for name in self.read_core_names()))
 
+    def test_command_help_and_domain_routing_work_in_relocated_release(self):
+        core = self.unpack_core(self.scratch / "command relocation")
+        script = core / "scripts/yaya.py"
+        help_result = self.run_script(script, "--help")
+        self.assertEqual(help_result.returncode, 0, help_result.stderr)
+        self.assertIn("polish", help_result.stdout)
+        plan = self.run_script(script, "polish", "--domain", "finance")
+        self.assertEqual(plan.returncode, 0, plan.stderr)
+        resolved = json.loads(plan.stdout)
+        self.assertEqual(resolved["domain"]["id"], "finance")
+        self.assertTrue(all(Path(ref).is_relative_to(core) for ref in resolved["references"]))
+        self.assertTrue(all(Path(ref).is_file() for ref in resolved["references"]))
+
     def test_output_cannot_escape_into_sources_through_dotdot(self):
         # An existing parent makes this a real filesystem alias on every platform.
         alias_parent = self.source / "unused output"
         alias_parent.mkdir()
         output = alias_parent / ".." / "core" / "yaya"
+        source_catalog = (self.core_source / "catalog.json").read_bytes()
         run = self.run_script(self.builder, "--output", output)
         self.assertNotEqual(run.returncode, 0, "Builder accepted an output alias into the core source")
         self.assertFalse(any(self.core_source.glob("*.zip")))
-        self.assertFalse((self.core_source / "catalog.json").exists())
+        self.assertEqual((self.core_source / "catalog.json").read_bytes(), source_catalog)
 
     def test_output_cannot_target_core_source_parent(self):
         output = self.source / "core"

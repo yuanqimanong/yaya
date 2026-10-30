@@ -50,6 +50,29 @@ For Python docstrings, inspect `python scripts/check_docstrings.py --inventory B
 
 No wildcard, new/deleted/moved node, encoding/BOM change, delimiter change, or line-count/ending change is allowed. Single-token UTF-8 docstrings are supported; implicit concatenation and other languages return unsupported. Recognized doctests and example/code sections remain protected even inside an authorized docstring. Unmarked examples require manual review. Example changes, docstring reflow, and runtime/schema strings need separately authorized, appropriate checks; this mode intentionally does not relax its boundary for them.
 
+## Quantities in prose
+
+`check_rewrite.py` compares the spelling and occurrence count of recognized quantities
+outside protected spans. It recognizes decimal and scientific numerals (such as
+`1e-3`), selected currency prefixes/suffixes, scales such as `million` and `万`,
+percentages/percentage points/basis points, and common time, storage and rate units.
+The finite inventory is in `scripts/prose_scan.py`; it is not an arbitrary unit parser.
+
+Changes such as `USD 5 million` to `EUR 5 billion`, `1e-3` to `1e+3`, or `8 MiB`
+to `8 GiB` fail the number check. Surrounding wording may change. Whole sentences
+may move when the quantities remain the same. Raw spelling is conservative: even
+equivalent conversions and spacing changes within a quantity need review and,
+when authorized, a content-bound exact grant. The tool does not convert currencies,
+recalculate values, or infer that two spellings mean the same thing.
+
+Keep checking which entity, period and condition each value belongs to. Swapping
+unchanged quantities between entities can pass. Written-out numbers, unlisted units,
+decimal-comma notation and digit grouping with spaces are not reliably covered;
+currency/unit labels on another line or in a heading are not linked to a value.
+Use `--protect-literal` for exact source spans that need explicit protection, and
+semantic review for their relationships. Code, tables and blockquotes keep their
+existing whole-span checks; quantities are not assembled across those spans.
+
 ## What a pass cannot establish
 
 AST and byte comparisons establish mechanical scope only. They cannot prove meaning, accuracy, absence of a latent code defect, or unchanged runtime behavior: `__doc__`, line tracing, reflection, doctests, and integrations can matter. Prose checks allow plain-prose newline changes and cannot associate numbers with entities; Python checks preserve line endings. JSON is ASCII-escaped for Windows consoles; source bytes retain UTF-8/BOM/CRLF details.

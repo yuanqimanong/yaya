@@ -1,0 +1,35 @@
+{
+  "reviewer": "independent model review; exact model revision unavailable",
+  "cases": [
+    {
+      "id": "DIR16",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "删除重新定义人机交流的无关对照；首句使用“目的是保存一段样稿”的说明句式，保留保存样稿的目的并消除首轮无主语动词短句的指令歧义。引用逐字保留，drafts.md 保留；未输出来源判断或新增文件写入声明。",
+      "issues": []
+    },
+    {
+      "id": "DIR25",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "删除宏大技术叙事的修辞对照，保留页面记录测试机当前配置的说明。页面仍是陈述句的主语，未变为要求读者记录或检查配置的命令；Linux 版本和内存容量均保留，未虚构具体值。",
+      "issues": []
+    },
+    {
+      "id": "DIR26",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "仅删除 grand ritual 的无关铺垫，逐字保留重启测试机前保存备份的指令和作业运行期间禁止重启的限制。祈使语气、操作顺序及禁止条件均保持，未改写为已完成备份或重启的事实。",
+      "issues": []
+    }
+  ],
+  "limitations": [
+    "本次新增读取仅限 directness-20261030-retest/criteria.json 与该运行目录 skill/batch-001/outputs.json；未查看技能修正、源码、研究资料或生成者执行记录，也未修改首轮报告及输出。",
+    "本次复核继承首轮评审上下文，包括 DIR16 曾出现说明语气可能被读成指令语气的发现；属于同一评审会话的复测，不是无先验上下文的独立盲评。",
+    "复核依据是实际请求、原文含义及预先定义的检查条件，不按禁用词或字数评分。三案均有实际删除冗余的修改，quality 因此记为 improved。",
+    "这是对交付文本的语义复核，不能验证生成时是否发生未在输出中披露的工具调用或文件副作用，也未对素材事实进行外部核验。精确模型修订版本不可获得。"
+  ]
+}

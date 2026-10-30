@@ -1,0 +1,123 @@
+{
+  "format_version": 1,
+  "commands": {
+    "polish": {
+      "title": "润色正文",
+      "summary": "改善表达、结构和可读性，保留原意；不自动核定事实。",
+      "scope": "prose",
+      "delivery": "rewrite",
+      "options": ["domain", "audience", "tone", "lang", "file", "write"],
+      "references": ["references/text.md"]
+    },
+    "human": {
+      "title": "去 AI 味",
+      "summary": "处理套话、空泛铺垫、机械重复和过度防御表达；不判断作者来源。",
+      "scope": "formulaic-prose",
+      "delivery": "rewrite",
+      "options": ["focus", "domain", "audience", "tone", "lang", "file", "write"],
+      "references": ["references/humanize.md"]
+    },
+    "review": {
+      "title": "只审不改",
+      "summary": "列出表达问题、依据和建议；不交完整改稿，不写文件。",
+      "scope": "editorial-findings",
+      "delivery": "findings",
+      "options": ["focus", "domain", "audience", "tone", "lang", "file"],
+      "references": ["references/text.md", "references/humanize.md"]
+    },
+    "verify": {
+      "title": "核对事实",
+      "summary": "按代码、配置或提供的来源核对主张；返回证据与未确认项，不改稿。",
+      "scope": "evidence-backed-findings",
+      "delivery": "findings",
+      "options": ["domain", "lang", "file"],
+      "references": ["references/verify.md"]
+    },
+    "comment": {
+      "title": "整理注释",
+      "summary": "默认只改普通注释；docstring 需显式选择，代码和运行时字符串保持不变。",
+      "scope": "comments",
+      "delivery": "rewrite",
+      "options": ["domain", "audience", "tone", "lang", "file", "write", "scope"],
+      "references": ["references/comments.md", "references/engineering.md"]
+    },
+    "prompt": {
+      "title": "优化提示词",
+      "summary": "默认只整理提示词措辞；改变下游回答风格需 --target output 或 both。",
+      "scope": "prompt-wording",
+      "delivery": "rewrite",
+      "options": ["domain", "audience", "tone", "lang", "file", "write", "target"],
+      "references": ["references/prompts.md"]
+    },
+    "style": {
+      "title": "提炼样稿风格",
+      "summary": "输出可复用风格指令及小例子；不迁移样稿身份与事实，保存需 --save。",
+      "scope": "style-instructions",
+      "delivery": "style-card",
+      "options": ["domain", "audience", "tone", "lang", "file", "save"],
+      "references": ["references/style-learning.md"]
+    },
+    "origin": {
+      "title": "审阅作者来源",
+      "summary": "评估人写、AI 或混写的证据与不确定性；不改稿，不给未经校准的概率。",
+      "scope": "authorship-evidence",
+      "delivery": "assessment",
+      "options": ["lang", "file"],
+      "references": ["references/authorship.md"]
+    }
+  },
+  "options": {
+    "focus": {"help": "编辑重点：all 覆盖全部；direct 只处理无效对比、防御性铺垫与重复限定", "choices": ["all", "direct"], "default": "all"},
+    "domain": {"help": "领域 ID；用 yaya domains 查看支持范围", "metavar": "ID"},
+    "audience": {"help": "目标读者，如 普通读者、开发者、管理层", "metavar": "TEXT"},
+    "tone": {"help": "语气，如 简明、正式、亲切；不改变事实与承诺", "metavar": "TEXT"},
+    "lang": {"help": "目标语言/地区标签；不填则保留原文语言", "metavar": "TAG"},
+    "file": {"help": "输入文件，可重复；路径本身不授权写入", "metavar": "PATH", "repeat": true},
+    "write": {"help": "由宿主修改指定输入文件；需同时给 --file", "flag": true},
+    "scope": {"help": "注释对象，默认 comments；docstrings 仍需明确节点", "choices": ["comments", "docstrings"], "default": "comments"},
+    "target": {"help": "提示词措辞、下游回答风格或两者；默认 wording", "choices": ["wording", "output", "both"], "default": "wording"},
+    "save": {"help": "将风格卡保存到指定路径；不覆盖已有文件", "metavar": "PATH"}
+  },
+  "domains": {
+    "tech": {
+      "title": "技术 / 软件工程",
+      "covers": "README、API 说明、运行手册、故障说明、代码注释",
+      "preserves": "接口与版本、前置条件、失败路径、默认值与实际配置、计划与已完成状态",
+      "excludes": "代码正确性证明、生产验收、安全审计",
+      "guide": "references/domains/tech.md",
+      "quality": "experimental"
+    },
+    "finance": {
+      "title": "金融 / 财务沟通",
+      "covers": "财报解读、经营指标说明、投资者沟通、已有产品风险说明",
+      "preserves": "币种与期间、指标口径、同比与环比、基点与百分点、已实现与预测、审计及风险限定",
+      "excludes": "投资建议、会计审计、监管合规认证、自动补充行情或法规",
+      "guide": "references/domains/finance.md",
+      "quality": "experimental"
+    },
+    "data": {
+      "title": "数据分析",
+      "covers": "指标解读、实验结果、看板说明、调查与分析报告",
+      "preserves": "分母与样本、时间窗、缺失值、百分比与百分点、相关与因果、不确定性",
+      "excludes": "自动重算原始数据、统计方法审计、因果识别认证",
+      "guide": "references/domains/data.md",
+      "quality": "experimental"
+    },
+    "academic": {
+      "title": "学术写作",
+      "covers": "研究摘要、方法和结果说明、讨论、局限、文献综述表达",
+      "preserves": "研究设计、样本与适用范围、结果与解释、引用归属、证据强度与局限",
+      "excludes": "虚构引用、补做研究、期刊合规认证、全学科术语核定",
+      "guide": "references/domains/academic.md",
+      "quality": "experimental"
+    },
+    "business": {
+      "title": "商务沟通",
+      "covers": "工作邮件、项目进展、提案、产品说明、客户通知",
+      "preserves": "责任人、日期、交付条件、报价与范围、审批状态、承诺和可用范围",
+      "excludes": "代发邮件、代作承诺、合同效力认定、自动生成营销数据",
+      "guide": "references/domains/business.md",
+      "quality": "experimental"
+    }
+  }
+}

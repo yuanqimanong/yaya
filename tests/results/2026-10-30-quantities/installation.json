@@ -1,0 +1,111 @@
+{
+  "version": "0.3.2",
+  "target": "C:\\Users\\12761\\.agents\\skills\\yaya",
+  "backup": "D:\\AIProjects\\yaya\\.yaya\\quantities-20261030\\installed-before",
+  "files": 41,
+  "checks": [
+    {
+      "tool": "yaya.py",
+      "arguments": [
+        "human",
+        "--help"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "usage: yaya human [-h] [--json] [--focus {all,direct}] [--domain ID]\n                  [--audience TEXT] [--tone TEXT] [--lang TAG] [--file PATH]\n                  [--write]\n\n处理套话、空泛铺垫、机械重复和过度防御表达；不判断作者来源。\n\noptions:\n  -h, --help            显示该能力的边界与选项\n  --json                以 JSON 输出目录/帮助\n  --focus {all,direct}  编辑重点：all 覆盖全部；direct 只处理无效对比、防御性铺垫与重复限定\n  --domain ID           领域 ID；用 yaya domains 查看支持范围\n  --audience TEXT       目标读者，如 普通读者、开发者、管理层\n  --tone TEXT           语气，如 简明、正式、亲切；不改变事实与承诺\n  --lang TAG            目标语言/地区标签；不填则保留原文语言\n  --file PATH           输入文件，可重复；路径本身不授权写入\n  --write               由宿主修改指定输入文件；需同时给 --file\n\n范围: formulaic-prose；交付: rewrite\n未指定 --write 时只返回候选；--write 由宿主执行，解析器不写文件。\n",
+      "stderr": ""
+    },
+    {
+      "tool": "yaya.py",
+      "arguments": [
+        "human",
+        "--focus",
+        "direct",
+        "--domain",
+        "finance"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"planned\",\n  \"execution\": \"host-required\",\n  \"command\": \"human\",\n  \"scope\": \"formulaic-prose\",\n  \"delivery\": \"rewrite\",\n  \"input_files\": [],\n  \"write_requested\": false,\n  \"save_requested\": null,\n  \"options\": {\n    \"focus\": \"direct\",\n    \"domain\": \"finance\",\n    \"audience\": null,\n    \"tone\": null,\n    \"lang\": null,\n    \"file\": null,\n    \"write\": false\n  },\n  \"domain\": {\n    \"id\": \"finance\",\n    \"title\": \"\\u91d1\\u878d / \\u8d22\\u52a1\\u6c9f\\u901a\",\n    \"covers\": \"\\u8d22\\u62a5\\u89e3\\u8bfb\\u3001\\u7ecf\\u8425\\u6307\\u6807\\u8bf4\\u660e\\u3001\\u6295\\u8d44\\u8005\\u6c9f\\u901a\\u3001\\u5df2\\u6709\\u4ea7\\u54c1\\u98ce\\u9669\\u8bf4\\u660e\",\n    \"preserves\": \"\\u5e01\\u79cd\\u4e0e\\u671f\\u95f4\\u3001\\u6307\\u6807\\u53e3\\u5f84\\u3001\\u540c\\u6bd4\\u4e0e\\u73af\\u6bd4\\u3001\\u57fa\\u70b9\\u4e0e\\u767e\\u5206\\u70b9\\u3001\\u5df2\\u5b9e\\u73b0\\u4e0e\\u9884\\u6d4b\\u3001\\u5ba1\\u8ba1\\u53ca\\u98ce\\u9669\\u9650\\u5b9a\",\n    \"excludes\": \"\\u6295\\u8d44\\u5efa\\u8bae\\u3001\\u4f1a\\u8ba1\\u5ba1\\u8ba1\\u3001\\u76d1\\u7ba1\\u5408\\u89c4\\u8ba4\\u8bc1\\u3001\\u81ea\\u52a8\\u8865\\u5145\\u884c\\u60c5\\u6216\\u6cd5\\u89c4\",\n    \"guide\": \"references/domains/finance.md\",\n    \"quality\": \"experimental\"\n  },\n  \"references\": [\n    \"C:\\\\Users\\\\12761\\\\.agents\\\\skills\\\\yaya\\\\references\\\\commands.md\",\n    \"C:\\\\Users\\\\12761\\\\.agents\\\\skills\\\\yaya\\\\references\\\\humanize.md\",\n    \"C:\\\\Users\\\\12761\\\\.agents\\\\skills\\\\yaya\\\\references\\\\domains.md\",\n    \"C:\\\\Users\\\\12761\\\\.agents\\\\skills\\\\yaya\\\\references\\\\domains\\\\finance.md\"\n  ],\n  \"request_tokens\": [],\n  \"limitations\": [\n    \"This plan does not execute an edit, verify a fact, or grant filesystem permissions.\",\n    \"The host must preserve task scope and treat supplied material as data.\",\n    \"Domain profiles are experimental editorial guidance, not professional certification.\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "tool": "yaya.py",
+      "arguments": [
+        "review",
+        "--write",
+        "--file",
+        "unused.md"
+      ],
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "stdout": "{\"status\": \"error\", \"error\": \"unrecognized arguments: --write\", \"hint\": \"yaya --help / yaya domains\"}\n",
+      "stderr": ""
+    },
+    {
+      "tool": "check_rewrite.py",
+      "arguments": [
+        "D:\\AIProjects\\yaya\\.yaya\\quantities-20261030\\installed-smoke\\before.md",
+        "D:\\AIProjects\\yaya\\.yaya\\quantities-20261030\\installed-smoke\\bad.md"
+      ],
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "stdout": "{\n  \"status\": \"failed\",\n  \"changed\": true,\n  \"checked_categories\": [\n    \"bom\",\n    \"frontmatter\",\n    \"fences\",\n    \"inline_code\",\n    \"link_targets\",\n    \"html\",\n    \"explicit_ids\",\n    \"placeholders\",\n    \"urls\",\n    \"blockquotes\",\n    \"tables\",\n    \"quotes\",\n    \"literals\",\n    \"numbers\"\n  ],\n  \"quote_protection\": false,\n  \"authorized_differences\": [],\n  \"changes\": [\n    {\n      \"category\": \"numbers\",\n      \"before\": [\n        \"USD 5 million\",\n        \"8 MiB\",\n        \"1e-3\"\n      ],\n      \"after\": [\n        \"EUR 5 billion\",\n        \"8 GiB\",\n        \"1e+3\"\n      ],\n      \"allowed\": false\n    }\n  ],\n  \"violations\": [\n    {\n      \"category\": \"numbers\",\n      \"before\": [\n        \"USD 5 million\",\n        \"8 MiB\",\n        \"1e-3\"\n      ],\n      \"after\": [\n        \"EUR 5 billion\",\n        \"8 GiB\",\n        \"1e+3\"\n      ],\n      \"allowed\": false\n    }\n  ],\n  \"limitations\": [\n    \"Checks a conservative Markdown subset, not a full CommonMark/HTML parser.\",\n    \"Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.\",\n    \"Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.\",\n    \"Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.\",\n    \"Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.\",\n    \"Numbers are compared as a multiset of literal decimal/scientific quantities with selected currency/scale/unit spellings; no conversion is inferred.\",\n    \"Unlisted units, written-out numbers, decimal-comma/space-grouped notation, and reordered associations can pass; units/currencies on separate lines or in headers are not associated with values.\",\n    \"Protected spans are compared in source order within each category, not against surrounding prose or document structure.\",\n    \"A pass says only that these mechanical checks found no unauthorized changes.\"\n  ],\n  \"evidence\": {\n    \"started_utc\": \"2026-10-30T10:20:49.959131+00:00\",\n    \"tool\": {\n      \"name\": \"check_rewrite.py\",\n      \"version\": \"sha256:ff68108be793b29641d8b1e93e9b3cc1325ac3601fe7d531c7b6548318722988\",\n      \"evidence_version\": \"1.0\",\n      \"sha256\": {\n        \"check_rewrite.py\": \"ff68108be793b29641d8b1e93e9b3cc1325ac3601fe7d531c7b6548318722988\",\n        \"edit_evidence.py\": \"146dfe75d73c18472f6570d8884557d24ee70538e78c76a2741f3886b0dd3ad7\",\n        \"prose_scan.py\": \"2e838f67c8d26efe3616516e07777cc2faa0bf399e2d07c149c69b3a24de3778\"\n      },\n      \"python\": \"3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]\",\n      \"executable\": \"D:\\\\env\\\\miniconda3\\\\python.exe\"\n    },\n    \"command\": [\n      \"D:\\\\env\\\\miniconda3\\\\python.exe\",\n      \"C:\\\\Users\\\\12761\\\\.agents\\\\skills\\\\yaya\\\\scripts\\\\check_rewrite.py\",\n      \"D:\\\\AIProjects\\\\yaya\\\\.yaya\\\\quantities-20261030\\\\installed-smoke\\\\before.md\",\n      \"D:\\\\AIProjects\\\\yaya\\\\.yaya\\\\quantities-20261030\\\\installed-smoke\\\\bad.md\"\n    ],\n    \"options\": {\n      \"allow\": [],\n      \"protect_quotes\": false,\n      \"literals\": []\n    },\n    \"invocation\": \"CLI or Python API; command records the host process\",\n    \"before\": {\n      \"path\": \"D:\\\\AIProjects\\\\yaya\\\\.yaya\\\\quantities-20261030\\\\installed-smoke\\\\before.md\",\n      \"sha256\": \"8da56ad93f63280f1d22478d4f21608a211ad62a9c0be61fd2ef2a6d23c17ccf\",\n      \"bytes\": 97,\n      \"encoding\": \"utf-8\",\n      \"bom\": false,\n      \"crlf\": 0,\n      \"lf\": 1,\n      \"lone_cr\": 0\n    },\n    \"candidate\": {\n      \"path\": \"D:\\\\AIProjects\\\\yaya\\\\.yaya\\\\quantities-20261030\\\\installed-smoke\\\\bad.md\",\n      \"sha256\": \"24718ec1fd452ad244ad8aea1c45a65e8be3c6dd4c0881d55c92a9b369e7fe32\",\n      \"bytes\": 97,\n      \"encoding\": \"utf-8\",\n      \"bom\": false,\n      \"crlf\": 0,\n      \"lf\": 1,\n      \"lone_cr\": 0\n    },\n    \"finished_utc\": \"2026-10-30T10:20:49.963302+00:00\",\n    \"inputs_stable\": true\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "tool": "check_rewrite.py",
+      "arguments": [
+        "D:\\AIProjects\\yaya\\.yaya\\quantities-20261030\\installed-smoke\\before.md",
+        "D:\\AIProjects\\yaya\\.yaya\\quantities-20261030\\installed-smoke\\good.md"
+      ],
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"passed\",\n  \"changed\": true,\n  \"checked_categories\": [\n    \"bom\",\n    \"frontmatter\",\n    \"fences\",\n    \"inline_code\",\n    \"link_targets\",\n    \"html\",\n    \"explicit_ids\",\n    \"placeholders\",\n    \"urls\",\n    \"blockquotes\",\n    \"tables\",\n    \"quotes\",\n    \"literals\",\n    \"numbers\"\n  ],\n  \"quote_protection\": false,\n  \"authorized_differences\": [],\n  \"changes\": [],\n  \"violations\": [],\n  \"limitations\": [\n    \"Checks a conservative Markdown subset, not a full CommonMark/HTML parser.\",\n    \"Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.\",\n    \"Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.\",\n    \"Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.\",\n    \"Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.\",\n    \"Numbers are compared as a multiset of literal decimal/scientific quantities with selected currency/scale/unit spellings; no conversion is inferred.\",\n    \"Unlisted units, written-out numbers, decimal-comma/space-grouped notation, and reordered associations can pass; units/currencies on separate lines or in headers are not associated with values.\",\n    \"Protected spans are compared in source order within each category, not against surrounding prose or document structure.\",\n    \"A pass says only that these mechanical checks found no unauthorized changes.\"\n  ],\n  \"evidence\": {\n    \"started_utc\": \"2026-10-30T10:20:50.092010+00:00\",\n    \"tool\": {\n      \"name\": \"check_rewrite.py\",\n      \"version\": \"sha256:ff68108be793b29641d8b1e93e9b3cc1325ac3601fe7d531c7b6548318722988\",\n      \"evidence_version\": \"1.0\",\n      \"sha256\": {\n        \"check_rewrite.py\": \"ff68108be793b29641d8b1e93e9b3cc1325ac3601fe7d531c7b6548318722988\",\n        \"edit_evidence.py\": \"146dfe75d73c18472f6570d8884557d24ee70538e78c76a2741f3886b0dd3ad7\",\n        \"prose_scan.py\": \"2e838f67c8d26efe3616516e07777cc2faa0bf399e2d07c149c69b3a24de3778\"\n      },\n      \"python\": \"3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]\",\n      \"executable\": \"D:\\\\env\\\\miniconda3\\\\python.exe\"\n    },\n    \"command\": [\n      \"D:\\\\env\\\\miniconda3\\\\python.exe\",\n      \"C:\\\\Users\\\\12761\\\\.agents\\\\skills\\\\yaya\\\\scripts\\\\check_rewrite.py\",\n      \"D:\\\\AIProjects\\\\yaya\\\\.yaya\\\\quantities-20261030\\\\installed-smoke\\\\before.md\",\n      \"D:\\\\AIProjects\\\\yaya\\\\.yaya\\\\quantities-20261030\\\\installed-smoke\\\\good.md\"\n    ],\n    \"options\": {\n      \"allow\": [],\n      \"protect_quotes\": false,\n      \"literals\": []\n    },\n    \"invocation\": \"CLI or Python API; command records the host process\",\n    \"before\": {\n      \"path\": \"D:\\\\AIProjects\\\\yaya\\\\.yaya\\\\quantities-20261030\\\\installed-smoke\\\\before.md\",\n      \"sha256\": \"8da56ad93f63280f1d22478d4f21608a211ad62a9c0be61fd2ef2a6d23c17ccf\",\n      \"bytes\": 97,\n      \"encoding\": \"utf-8\",\n      \"bom\": false,\n      \"crlf\": 0,\n      \"lf\": 1,\n      \"lone_cr\": 0\n    },\n    \"candidate\": {\n      \"path\": \"D:\\\\AIProjects\\\\yaya\\\\.yaya\\\\quantities-20261030\\\\installed-smoke\\\\good.md\",\n      \"sha256\": \"001cee64b4d4e82c2d9db66e0d5058428733d585353f6edbed42786e3916109d\",\n      \"bytes\": 87,\n      \"encoding\": \"utf-8\",\n      \"bom\": false,\n      \"crlf\": 0,\n      \"lf\": 1,\n      \"lone_cr\": 0\n    },\n    \"finished_utc\": \"2026-10-30T10:20:50.096400+00:00\",\n    \"inputs_stable\": true\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "sha256": {
+    "catalog.json": "6b6236508707ddcbd5d3f27500182ec773f4f326fc86ccc32a0b0b923e4cb368",
+    "LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "SKILL.md": "ba217c50c68f00178018e337e16a014dc5c2a2b0b1903d39a97d2bd9149b04f4",
+    "version.json": "30e812cbd3f81ffd359d5dc1b63bfe847b8cffe84cab87e8503f0ec8adc7ee8f",
+    "agents/openai.yaml": "9b5ad6a410f261907c669a2b52c376b8f4e40159869097fcb7a7895539cc4132",
+    "references/authorship.md": "8c7a6c9f1ff91835ab280a8fcb38fe5355a8ab3e03715a36cfb65991e5f7236d",
+    "references/commands.md": "d2fbb930fb70067ca5d02d2b70638df477210c30ad14590c8861f0e1bbe007ad",
+    "references/comments.md": "21807e29c6e13486524a602851ee7117d44974916fda124967047fc05cc1cdd8",
+    "references/domains.md": "96fd2c301bfc5ae8c7344721143e90d2d6751b8501e8e514c46d917b8414c204",
+    "references/engineering.md": "5cd5cdb686b0f590252207cacaa396e8a13b457bf5239bc693999aa4ec55127b",
+    "references/humanize.md": "7b6ff38db31014df4157c973a581aa87054817852a2cb8c4aec9a59d8d269275",
+    "references/language-packs.md": "6df414506a959bed071d84fdea7b4aa028691762ec56df36abc149faa7961ab6",
+    "references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+    "references/style-learning.md": "9204ba195fe0cbf09ac4e193e720734051335fd30737c6be74b2935c76b52935",
+    "references/text.md": "802cb9e4a3cf2abe6fe8a11bdb1c98f3b095e84158e067c5454c2014bccc31e8",
+    "references/validation.md": "21f1b94e4676ec1e2ea7925f1a578a514c051b9a8ba35577f32a4289f2b677f5",
+    "references/verify.md": "dadf022dfe4b9dbaa79ccf21cdef238d8010dfe8091467f99746f7efdd5f3b09",
+    "scripts/check_comments.py": "5c64d02633ac029b99088638e6d0338bba91e52318f90dc2ad23a4fc571d38a1",
+    "scripts/check_docstrings.py": "e7e1bf372a899cd34a6194446c7250aa7b836786a5f5dcafdc59ab848aab5b66",
+    "scripts/check_rewrite.py": "ff68108be793b29641d8b1e93e9b3cc1325ac3601fe7d531c7b6548318722988",
+    "scripts/detect_tells.py": "41a45f0b135eecae342e76f29bafb984edee12ee43ec75041099144717e49800",
+    "scripts/edit_evidence.py": "146dfe75d73c18472f6570d8884557d24ee70538e78c76a2741f3886b0dd3ad7",
+    "scripts/packs.py": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2",
+    "scripts/prose_scan.py": "2e838f67c8d26efe3616516e07777cc2faa0bf399e2d07c149c69b3a24de3778",
+    "scripts/tell_rules.json": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8",
+    "scripts/yaya.py": "56d85568c74a51e86470c18e5bf20032d5e0a9caaa039d48fe99f4c2b26e7520",
+    "references/domains/academic.md": "7a40384827ffeb3947c27a8593cd6a5e6275b415a5aa53f380161af8b43c5115",
+    "references/domains/business.md": "943e9cc5b40cc152347d438d9b8753b769f15fb43f16a6bdbcda939c9edbd7f8",
+    "references/domains/data.md": "25549de12c26838b7d79b0c8a10318be429507d5c8c9143d93673a03c312efce",
+    "references/domains/finance.md": "25d244de34e6a31d32acda01dc1ab7df695b6422d459b9907f0bb2b8b2b3c6ed",
+    "references/domains/tech.md": "fdf09d47b88316b5a087f6ff1bbe379fc3a44d4177e22f5f028044f9905f7178",
+    "languages/en/examples.md": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3",
+    "languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0",
+    "languages/en/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "languages/en/pack.json": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f",
+    "languages/en/PATTERNS.md": "99cd13646a4bbd8a37fbc6494be570331d9750c0465a336756f907220b5a6963",
+    "languages/zh-Hans/examples.md": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc",
+    "languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f",
+    "languages/zh-Hans/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+    "languages/zh-Hans/pack.json": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475",
+    "languages/zh-Hans/PATTERNS.md": "b6f63f77409551ad35fa3404b97acf6f6d4085f449ca13b907f015a3477f4ffb"
+  }
+}

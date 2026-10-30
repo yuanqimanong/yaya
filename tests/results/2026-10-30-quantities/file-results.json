@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "id": "QFILE01",
+      "request": "yaya human --domain finance --file D:/AIProjects/yaya/tests/runs/quantities-20261030/workspace/finance.md --write -- 精简说明，保留具体信息。交付一句简短说明。",
+      "delivery_response": "已精简 [finance.md](D:/AIProjects/yaya/tests/runs/quantities-20261030/workspace/finance.md)，保留具体财务信息，原文已备份，机械保护检查通过。",
+      "content": "# 季度说明 {#quarter}\n\n本季度收入为 USD 5 million，数据未经审计。毛利率提高 3 个百分点。预计下季度收入为 EUR 6 million，预测尚未经过审计。\n",
+      "actual_diff": "--- originals/finance.md\n+++ workspace/finance.md\n@@ -1,3 +1,3 @@\n # 季度说明 {#quarter}\n \n-我们需要郑重说明的是，本季度收入为 USD 5 million，数据未经审计。毛利率提高 3 个百分点。预计下季度收入为 EUR 6 million，预测尚未经过审计。\n+本季度收入为 USD 5 million，数据未经审计。毛利率提高 3 个百分点。预计下季度收入为 EUR 6 million，预测尚未经过审计。\n",
+      "verification": {
+        "mechanical": {
+          "exit_code": 0,
+          "status": "passed",
+          "report_file": "D:/AIProjects/yaya/tests/runs/quantities-20261030/file-forward-evidence/finance-check.json",
+          "before_sha256": "f0b925e368697247daad3515fd5a7b1016bb7f483452469de5f9906d0416ff47",
+          "after_sha256": "e23d2888e2ad9ece68281eb147e361c0c805e92f4c5adfbc67c65c60be102f11",
+          "violations": [],
+          "inputs_stable": true
+        },
+        "manual": {
+          "status": "manual_review",
+          "disposition": "accepted",
+          "notes": "Reviewed the actual full diff. Only “我们需要郑重说明的是，” was removed. The current-quarter USD 5 million revenue, unaudited data, gross-margin increase of 3 个百分点, and forecast next-quarter EUR 6 million revenue with its separate unaudited qualification remain attached to their original statements. Heading and anchor are unchanged."
+        },
+        "format": {
+          "file": "D:\\AIProjects\\yaya\\tests\\runs\\quantities-20261030\\workspace\\finance.md",
+          "backup": "D:\\AIProjects\\yaya\\tests\\runs\\quantities-20261030\\file-forward-evidence\\originals\\finance.md",
+          "before_sha256": "f0b925e368697247daad3515fd5a7b1016bb7f483452469de5f9906d0416ff47",
+          "after_sha256": "e23d2888e2ad9ece68281eb147e361c0c805e92f4c5adfbc67c65c60be102f11",
+          "before_bytes": 218,
+          "after_bytes": 185,
+          "bom_preserved": true,
+          "line_endings_preserved": true
+        },
+        "facts_verified_against_external_evidence": false,
+        "unexecuted_checks": [
+          "Git baseline and Git diffs"
+        ],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of literal decimal/scientific quantities with selected currency/scale/unit spellings; no conversion is inferred.",
+          "Unlisted units, written-out numbers, decimal-comma/space-grouped notation, and reordered associations can pass; units/currencies on separate lines or in headers are not associated with values.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      }
+    },
+    {
+      "id": "QFILE02",
+      "request": "yaya polish --domain tech --file D:/AIProjects/yaya/tests/runs/quantities-20261030/workspace/engineering.md --write -- Make the note direct. Give a short completion note.",
+      "delivery_response": "Updated [engineering.md](D:/AIProjects/yaya/tests/runs/quantities-20261030/workspace/engineering.md) for directness; the original is backed up and the mechanical protection checks passed.",
+      "content": "# Runtime limits {#limits}\n\nThe buffer limit is 8 MiB and the tolerance is 1e-3. This mitigates the timeout; the underlying connection leak is not fixed.\n",
+      "actual_diff": "--- originals/engineering.md\n+++ workspace/engineering.md\n@@ -1,3 +1,3 @@\n # Runtime limits {#limits}\n \n-It is worth noting that the buffer limit is 8 MiB and the tolerance is 1e-3. This mitigates the timeout; the underlying connection leak is not fixed.\n+The buffer limit is 8 MiB and the tolerance is 1e-3. This mitigates the timeout; the underlying connection leak is not fixed.\n",
+      "verification": {
+        "mechanical": {
+          "exit_code": 0,
+          "status": "passed",
+          "report_file": "D:/AIProjects/yaya/tests/runs/quantities-20261030/file-forward-evidence/engineering-check.json",
+          "before_sha256": "aecb0ae746895587f68585ffa23cda718598a85f0f7335ef9f854f304092a025",
+          "after_sha256": "f3e6c8c142921da43be4968e2d83fbcd1a66561745a474683da03f876cb2dab4",
+          "violations": [],
+          "inputs_stable": true
+        },
+        "manual": {
+          "status": "manual_review",
+          "disposition": "accepted",
+          "notes": "Reviewed the actual full diff. The phrase “It is worth noting that the buffer limit” became “The buffer limit”; the remaining body is unchanged. 8 MiB still belongs to the buffer limit, 1e-3 still belongs to tolerance, timeout mitigation remains mitigation, and the underlying connection leak remains explicitly not fixed. Heading and anchor are unchanged."
+        },
+        "format": {
+          "file": "D:\\AIProjects\\yaya\\tests\\runs\\quantities-20261030\\workspace\\engineering.md",
+          "backup": "D:\\AIProjects\\yaya\\tests\\runs\\quantities-20261030\\file-forward-evidence\\originals\\engineering.md",
+          "before_sha256": "aecb0ae746895587f68585ffa23cda718598a85f0f7335ef9f854f304092a025",
+          "after_sha256": "f3e6c8c142921da43be4968e2d83fbcd1a66561745a474683da03f876cb2dab4",
+          "before_bytes": 178,
+          "after_bytes": 154,
+          "bom_preserved": true,
+          "line_endings_preserved": true
+        },
+        "facts_verified_against_external_evidence": false,
+        "unexecuted_checks": [
+          "Git baseline and Git diffs"
+        ],
+        "limitations": [
+          "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+          "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+          "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+          "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+          "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+          "Numbers are compared as a multiset of literal decimal/scientific quantities with selected currency/scale/unit spellings; no conversion is inferred.",
+          "Unlisted units, written-out numbers, decimal-comma/space-grouped notation, and reordered associations can pass; units/currencies on separate lines or in headers are not associated with values.",
+          "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+          "A pass says only that these mechanical checks found no unauthorized changes."
+        ]
+      }
+    }
+  ],
+  "execution_sequence_notes": [
+    "The two input files were read in the reference-reading batch before selector plans were run. Both selectors were successfully planned before any edit.",
+    "The edit_evidence.py start helper was not run because its Git commands can read the surrounding repository. Byte-preserving local backups and edit-manifest.json were created instead.",
+    "Git HEAD, status and staged/unstaged diffs were not collected; they remain unverified under the isolated read boundary."
+  ],
+  "review_note": "The parent agent inspected both original/candidate pairs and found quantities, status, scope and anchors retained; no external factual audit was requested."
+}

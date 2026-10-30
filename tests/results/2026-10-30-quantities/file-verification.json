@@ -1,0 +1,25 @@
+{
+  "frozen_inputs_verified": true,
+  "final_check_files": [
+    {
+      "file": "finance.md",
+      "exit_code": 0,
+      "status": "passed",
+      "changed": true,
+      "before_sha256": "f0b925e368697247daad3515fd5a7b1016bb7f483452469de5f9906d0416ff47",
+      "candidate_sha256": "e23d2888e2ad9ece68281eb147e361c0c805e92f4c5adfbc67c65c60be102f11"
+    },
+    {
+      "file": "engineering.md",
+      "exit_code": 0,
+      "status": "passed",
+      "changed": true,
+      "before_sha256": "aecb0ae746895587f68585ffa23cda718598a85f0f7335ef9f854f304092a025",
+      "candidate_sha256": "f3e6c8c142921da43be4968e2d83fbcd1a66561745a474683da03f876cb2dab4"
+    }
+  ],
+  "snapshot_to_final_changed_files": [
+    "scripts/prose_scan.py"
+  ],
+  "note": "File execution used the pre-bullet-fix snapshot; final checker was executed above against the unchanged original/candidate pairs."
+}

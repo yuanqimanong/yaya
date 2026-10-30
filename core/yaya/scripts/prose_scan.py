@@ -389,9 +389,48 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
     return Snapshot(text, spans, masked)
 
 
+def _quantity_terms(values):
+    # Longer spellings precede their prefixes; an English word may use tabs/spaces.
+    return "(?:" + "|".join(re.escape(value).replace(r"\ ", r"[ \t]+")
+                            for value in sorted(set(values), key=lambda s: (-len(s), s))) + ")"
+
+
+_QUANTITY_CURRENCIES = (
+    "USD", "EUR", "GBP", "CNY", "RMB", "JPY", "HKD", "SGD", "AUD", "CAD", "CHF", "INR", "KRW",
+    "人民币", "美元", "欧元", "英镑", "日元", "港元", "港币", "新加坡元", "澳元", "加元", "瑞士法郎", "卢比", "韩元",
+    "$", "€", "£", "¥", "￥", "₹", "₩",
+)
+_QUANTITY_SCALES = ("万亿", "亿", "万", "千", "百", "trillion", "billion", "million", "thousand")
+_QUANTITY_UNITS = (
+    "%", "％", "个百分点", "百分点", "个基点", "基点", "percentage points", "percentage point",
+    "basis points", "basis point", "percent", "bp", "bps", "pp", "元",
+    "TiB/s", "GiB/s", "MiB/s", "KiB/s", "TB/s", "GB/s", "MB/s", "KB/s", "B/s",
+    "TiB", "GiB", "MiB", "KiB", "TB", "GB", "MB", "KB", "B", "Tb", "Gb", "Mb", "Kb",
+    "Tbps", "Gbps", "Mbps", "Kbps", "kbps", "bit/s", "bits/s", "bytes", "byte", "bits", "bit",
+    "纳秒", "微秒", "毫秒", "秒", "分钟", "小时", "天", "年",
+    "nanoseconds", "nanosecond", "microseconds", "microsecond", "milliseconds", "millisecond",
+    "seconds", "second", "minutes", "minute", "hours", "hour", "days", "day", "years", "year",
+    "ns", "μs", "µs", "us", "ms", "min", "s", "h", "kg", "km", "cm", "g", "m",
+)
+_Q_SPACE = r"[ \t]*"
+_Q_SIGN = r"[-+−]"
+_Q_CURRENCY = _quantity_terms(_QUANTITY_CURRENCIES)
+_Q_UNIT = _quantity_terms((*_QUANTITY_CURRENCIES, *_QUANTITY_UNITS))
+_Q_SCALE = "(?i:" + _quantity_terms(_QUANTITY_SCALES) + ")"
+_Q_COEFFICIENT = r"(?:(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|\.\d+)"
+_QUANTITY = re.compile(
+    r"(?<![A-Za-z_\d])"
+    # Signs adjoin their currency or numeral; a Markdown '- ' is not a sign.
+    + rf"(?:{_Q_SIGN}(?:{_Q_CURRENCY}{_Q_SPACE})?|{_Q_CURRENCY}{_Q_SPACE}{_Q_SIGN}?)?"
+    + _Q_COEFFICIENT + r"(?:[eE][-+−]?\d+)?"
+    + rf"(?:{_Q_SPACE}(?:{_Q_SCALE}(?:{_Q_SPACE}{_Q_UNIT})?|{_Q_UNIT}))?"
+    + r"(?![A-Za-z_\d])"
+)
+
+
 def numbers(scan):
-    """Number/unit lexemes in unprotected prose; equality does not imply meaning."""
-    # Unicode word boundaries exclude numbers adjoining CJK; scan with a Latin
-    # boundary instead so Chinese prose keeps its ordinary numeric quantities.
-    pattern = re.compile(r"(?<![A-Za-z0-9_])(?:[-+−](?:[$€£¥￥][ \t]*)?|[$€£¥￥][ \t]*[-+−]?)?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?:[ \t]*(?:%|％|万元|亿元|元|万|亿|毫秒|秒|分钟|小时|天|年|MB|GB|KB|milliseconds?|seconds?|minutes?|hours?|days?|years?|bytes?|percent|ms|min|kg|km|cm|USD|EUR|s|h|g|m|[$€£¥￥]))?(?![A-Za-z0-9_])")
-    return [match.group(0) for match in pattern.finditer(scan.masked)]
+    """Literal quantities in visible prose; no conversion or semantic inference."""
+    # A masked code/quote span must not join distant currency and amount tokens.
+    visible = "".join("\x00" if original != masked else masked
+                      for original, masked in zip(scan.text, scan.masked))
+    return [match.group(0) for match in _QUANTITY.finditer(visible)]

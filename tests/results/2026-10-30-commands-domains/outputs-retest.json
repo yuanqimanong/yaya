@@ -1,0 +1,50 @@
+[
+  {
+    "id": "CMD03",
+    "text": "核对发现：原说明未区分代码默认值与生产配置。\n\n- `config.py:9`：代码默认保留 7 天。\n- `prod.env:4`：生产配置将 `RETENTION_DAYS` 设为 30。\n- `loader.py:12`：优先读取环境变量；变量不存在时才使用默认值。\n\n若生产进程已加载所给 `prod.env`，保留期为 30 天。现有片段无法确认运行中的进程是否已加载该配置；以上结论仅依据所提供的代码与配置，未核验线上状态。",
+    "notes": "已调用快照 yaya.py verify --domain tech，返回 planned、findings 范围。模型逐项对照了所给 3 行证据，区分默认值、配置值与尚未确认的运行时加载；交付核对发现，未提供替换稿，未访问生产环境。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD04",
+    "text": "```python\ndef count(items):\n    \"\"\"现在开始进行项目数量的计算。\"\"\"\n    # 返回列表长度。\n    message = '现在开始进行统计'\n    return len(items)\n```",
+    "notes": "已调用快照 yaya.py comment --domain tech，范围为默认 comments。对原始输入和候选的 UTF-8 字节在内存中调用 check_comments._check_files；只将两个虚拟输入路径的 read_bytes 适配为内存数据，未改动检查逻辑。结果 passed，changed_comment_lines 为 [3]、violations 为空，直接子进程返回 0。模型另对照了注释与可见代码；docstring、message 字符串及其他字节保持不变。此项不是文件 CLI 检查，也未执行该函数。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH01",
+    "text": "缓存默认保留 60 秒；线上可用 `CACHE_TTL` 覆盖默认值，目前尚未取得该变量的线上值。",
+    "notes": "已调用快照 yaya.py polish --domain tech --audience 新手。模型对照了 60 秒的默认值归属、线上可覆盖条件、CACHE_TTL 标识符和线上值未取得的状态；未将默认值写成线上实际值，也未补充配置传入机制。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH02",
+    "text": "Retry only after a connection timeout, at most twice. Do not retry an authentication failure.",
+    "notes": "已调用快照 yaya.py polish --domain tech。模型对照了 only 条件、at most twice 上限和 authentication failure 禁止重试的例外；保留完整原文，输出写入时另做字符串相等检查。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH03",
+    "text": "We plan to enable streaming in version 4.2. It is not available in version 4.1, and the rollout date is unconfirmed.",
+    "notes": "已调用快照 yaya.py human --domain tech，并读取英文 PATTERNS.md。模型只删除空泛开场，逐句对照保留了 we plan、version 4.2、version 4.1 不可用与 rollout date 未确认的状态；未作作者来源判断。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH04",
+    "text": "改稿：作者来自搜索接口，摘要来自详情接口。\n\n依据：所给 `search-sample.json:1` 包含 `author`，`detail-sample.json:1` 包含 `summary`；`join.py:8` 分别从 `search_item['author']` 和 `detail['summary']` 取值。",
+    "notes": "按自然语言请求执行证据核对与改写，没有强制转换为单一 verify 命令。模型逐字段对照了用户提供的两个 JSON 样本和 join.py:8 的取值关系；依据仅来自题内片段，没有读取同名本地文件或独立认证接口响应。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH05",
+    "text": "RETRY_LIMIT can override the default of 2 attempts. How this setting is supplied is not documented.",
+    "notes": "已调用快照 yaya.py polish --domain tech --audience beginners。模型对照保留了 RETRY_LIMIT、默认 2 attempts、可覆盖关系与传入方式未记录；没有将 attempts 改成 retries，也未添加环境变量、文件或 API 等实现细节。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH06",
+    "text": "`config.json` 的 `TIMEOUT` 字段可覆盖默认的 10 秒超时；该字段不会从环境变量读取。",
+    "notes": "已调用快照 yaya.py polish --domain tech --audience 新手。模型对照保留了 config.json 的 TIMEOUT 字段、默认 10 秒、覆盖关系以及不从环境变量读取的否定条件，仅去掉冗长引导语。",
+    "skill_used": true
+  }
+]

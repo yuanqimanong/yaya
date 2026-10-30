@@ -1,0 +1,39 @@
+{
+  "before": "- USD 5 million\n- 8 MiB\n",
+  "after": "USD 5 million; 8 MiB.",
+  "result": {
+    "status": "passed",
+    "changed": true,
+    "checked_categories": [
+      "bom",
+      "frontmatter",
+      "fences",
+      "inline_code",
+      "link_targets",
+      "html",
+      "explicit_ids",
+      "placeholders",
+      "urls",
+      "blockquotes",
+      "tables",
+      "quotes",
+      "literals",
+      "numbers"
+    ],
+    "quote_protection": false,
+    "authorized_differences": [],
+    "changes": [],
+    "violations": [],
+    "limitations": [
+      "Checks a conservative Markdown subset, not a full CommonMark/HTML parser.",
+      "Indented blocks, nested containers with fences, footnotes, multiline links, and raw HTML blocks are unsupported.",
+      "Blockquotes (including lazy continuation lines) are protected; ordinary quoted prose is protected only with --protect-quotes or --protect-literal.",
+      "Literal equality cannot verify facts, attribution, negation, conditions, author identity, or number-to-entity associations.",
+      "Unmarked identifiers, paths, and names require explicit --protect-literal when their exact spelling must be preserved.",
+      "Numbers are compared as a multiset of literal decimal/scientific quantities with selected currency/scale/unit spellings; no conversion is inferred.",
+      "Unlisted units, written-out numbers, decimal-comma/space-grouped notation, and reordered associations can pass; units/currencies on separate lines or in headers are not associated with values.",
+      "Protected spans are compared in source order within each category, not against surrounding prose or document structure.",
+      "A pass says only that these mechanical checks found no unauthorized changes."
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "reviewer": "independent model review; exact model revision unavailable",
+  "cases": [
+    {
+      "id": "DIR01",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "删除重新定义协作世界的无关对照，直接说明按部门筛选、导出 CSV 和方便查找联系人，未增加速度或上线状态。",
+      "issues": []
+    },
+    {
+      "id": "DIR02",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "preserved",
+      "reason": "原样返回，保留仅缓解超时、泄漏尚未修复，以及认证失败禁重试和连接超时最多重试 2 次的区别。",
+      "issues": []
+    },
+    {
+      "id": "DIR03",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "删除重塑团队合作和改变工作本质的修辞，保留查找同事联系方式的用途及按部门分组，未增加字段或行为。",
+      "issues": []
+    },
+    {
+      "id": "DIR04",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "preserved",
+      "reason": "原样返回，费用包含交付但不包含安装及周五前确认报价两项信息均保留。",
+      "issues": []
+    },
+    {
+      "id": "DIR05",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "只留下同事需要的周四报名截止日期，去掉无实际争执背景的自辩，未补入称赞或免责声明。",
+      "issues": []
+    },
+    {
+      "id": "DIR06",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "删除空泛开场和末尾重复的不保证收益；年收益率预测 6%、假设、未扣费用、非已实现收益、不保证收益和本金亏损可能性均保留。",
+      "issues": []
+    },
+    {
+      "id": "DIR07",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "删除自述坦诚的铺垫，保留 Linux 已测试、Windows 未测试和部署日期未确认，未增添兼容性或编辑者验证声明。",
+      "issues": []
+    },
+    {
+      "id": "DIR08",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "preserved",
+      "reason": "原样保留 84 位受访者与全体客户的区别、相关而非因果，以及缺失回答被排除而非计零的三个独立限制。",
+      "issues": []
+    },
+    {
+      "id": "DIR09",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "将叠加的可能性表述合并为可能，保留试点负责人这一来源、初步判断和没有对照数据，未写成已测得改善。",
+      "issues": []
+    },
+    {
+      "id": "DIR10",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "preserved",
+      "reason": "全文保持原样，摘要与正文各自保留不可推广的限制，并保留 12 名教师、访谈、一所学校及受访者反映备课时间不足。",
+      "issues": []
+    },
+    {
+      "id": "DIR11",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "只删除重定义文明的无效对照，按限定范围逐字保留宣传首句，并保留日历显示会议室可用情况。",
+      "issues": []
+    },
+    {
+      "id": "DIR12",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "not-applicable",
+      "reason": "以短引文准确指出夸大对照和假想质疑并解释影响，仅交问题与理由；未将工作日及节假日限制判为缺陷，也未提供整段改写。",
+      "issues": []
+    },
+    {
+      "id": "DIR13",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "preserved",
+      "reason": "文学对白原样返回，保留记住与原谅的刻意对比，未增加剧情或评论。",
+      "issues": []
+    },
+    {
+      "id": "DIR14",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "preserved",
+      "reason": "原样保留临时安排与长期承诺的实质区别，未因上下文缺失删除否定或追加问题。",
+      "issues": []
+    },
+    {
+      "id": "DIR15",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "preserved",
+      "reason": "原样保留针对三天等待的道歉、退款已提交、预计周五到账及银行处理条件，未升级为到账保证。",
+      "issues": []
+    },
+    {
+      "id": "DIR16",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "issue",
+      "reason": "无效对比已删除，保存样稿的含义、drafts.md 和引用原文均保留，且未输出来源判断或文件写入声明；但首句删成无主语动词短句，存在说明语气转为指令语气的歧义。",
+      "issues": [
+        "轻微语气疑点：原文说明这段内容只是保存样稿，改为“保存一段样稿。”后也可被读成要求读者执行保存操作。建议保留说明句式，例如“这里只是保存一段样稿。”；这是潜在歧义，不能据此确定发生了事实或任务边界错误。"
+      ]
+    },
+    {
+      "id": "DIR17",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "删除空赞、宣布拆解及泛用结尾，保留右上角导出按钮和点击下载 CSV 的操作，未确认模型品牌、推断来源或添加免责声明。",
+      "issues": []
+    },
+    {
+      "id": "DIR18",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "删除称赞、讲解预告、夸大对照和泛用结尾，准确保留离线笔记及设备重新连接时同步的条件，未添加同步保证或冲突处理。",
+      "issues": []
+    },
+    {
+      "id": "DIR19",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "只删郑重提醒的仪式性铺垫，保留截至 2026 年 9 月、人民币 300 万元现金、未经审计、非全年余额及不可推断全部分配给股东。",
+      "issues": []
+    },
+    {
+      "id": "DIR20",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "improved",
+      "reason": "删除避免误解的开场和重复的周五不构成承诺，保留正在评估、周五交付、客户批准字段的前提及尚未承诺的状态。",
+      "issues": []
+    },
+    {
+      "id": "DIR21",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "preserved",
+      "reason": "原样保留等待时间和取消次数两项结果及均在试点期间测量的来源，未因 not only 结构删除信息或索要额外数据。",
+      "issues": []
+    },
+    {
+      "id": "DIR22",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "preserved",
+      "reason": "原样保留针对读者实际疑问的否定回答，以及仅删除本地副本、不删除共享原件的边界，未添加实现细节或操作。",
+      "issues": []
+    },
+    {
+      "id": "DIR23",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "not-applicable",
+      "reason": "准确指出关于改变文明的无关自辩并建议删除，未越过 direct 范围批评宣传首句，未整段重写或判断作者来源。",
+      "issues": []
+    },
+    {
+      "id": "DIR24",
+      "scope_pass": true,
+      "fidelity_pass": true,
+      "quality": "not-applicable",
+      "reason": "明确拒绝未知 focus opus 并展示 all/direct 及可用命令，未静默选择品牌预设、改写素材或声称提供 Opus 检测。",
+      "issues": []
+    }
+  ],
+  "limitations": [
+    "仅阅读指定的 criteria.json 和三个 skill/batch-00N/outputs.json；未阅读 Skill、源码、研究文档、其他报告或生成者执行记录。",
+    "这是基于交付文本的语义复核，不能验证生成时是否发生未在输出中披露的工具调用或文件副作用，也未对素材事实进行外部核验。",
+    "review 和 routing 案例的 quality 记为 not-applicable，表示不存在需要评价改善程度的改稿；其交付正确性由 scope_pass、fidelity_pass 和理由记录。",
+    "DIR16 的问题为轻微、上下文相关的语气歧义；字面事实和指定检查点均保留，因此未将 scope_pass 或 fidelity_pass 判为失败。",
+    "判断依据是实际请求、原文含义和预先定义的检查条件，不以禁用词命中或字数变化评分。精确模型修订版本不可获得。"
+  ]
+}
