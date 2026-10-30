@@ -6,6 +6,10 @@ The protocol works in chat as `$yaya COMMAND ...` or `yaya COMMAND ...`.
 It is not a globally installed shell executable. The portable Python helper only
 prints help or a task plan; the current host model performs the actual work.
 
+`yaya --version` reports this Skill's version; add `--json` for compatibility
+metadata. It reads only version.json, so it can help diagnose an incomplete command
+catalog. Version discovery accepts no task options or material.
+
 ## Select the scope before reading task material
 
 1. `yaya --help`, `yaya help`, `yaya COMMAND --help`, `yaya help COMMAND`, and

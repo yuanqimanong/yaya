@@ -144,6 +144,25 @@ class CommandTests(unittest.TestCase):
             self.assertEqual(commands.resolve(["domains", key, "--json"]), value)
             self.assertTrue(all(value[field] for field in ("covers", "preserves", "excludes", "quality")))
 
+    def test_version_discovery_is_readonly_and_matches_runtime_metadata(self):
+        expected = json.loads((CORE / "version.json").read_text(encoding="utf-8"))
+        result = commands.resolve(["--version", "--json"])
+        self.assertEqual(result, {"name": "yaya", **expected})
+        self.assertEqual(commands.resolve(["--json", "--version"]), result)
+        self.assertEqual(commands.resolve(["--version"]), f"Yaya {expected['version']}\n")
+
+    def test_version_can_diagnose_runtime_even_when_catalog_is_missing(self):
+        clone = self.scratch / "metadata only"
+        clone.mkdir()
+        shutil.copyfile(CORE / "version.json", clone / "version.json")
+        self.assertIn("Yaya", commands.resolve(["--version"], core=clone))
+
+    def test_version_rejects_task_options_and_payload(self):
+        for args in (["--version", "--file", "input.md"], ["--version", "--", "text"],
+                     ["--version", "--version"], ["--version", "--json", "--json"]):
+            with self.subTest(args=args), self.assertRaises(commands.UsageError):
+                commands.resolve(args)
+
     def test_cli_errors_are_structured_and_exit_two(self):
         run = subprocess.run([sys.executable, "-B", str(CORE / "scripts/yaya.py"), "polsih"],
                              capture_output=True, text=True, encoding="utf-8", timeout=10)

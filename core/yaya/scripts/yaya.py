@@ -9,7 +9,7 @@ from pathlib import Path, PurePosixPath
 import re
 import sys
 
-from packs import strict_json
+from packs import strict_json, SEMVER
 
 CORE = Path(__file__).resolve().parents[1]
 
@@ -157,6 +157,7 @@ def general_help(catalog):
     lines.extend(["", "  help [command] / <command> --help  查看完整选项",
                   "  domains [ID]                      列出领域及适用边界",
                   "  --json                            输出机器可读目录/帮助",
+                  "  --version [--json]                查看当前 Skill 的版本",
                   "", "显式命令只选择一个任务；自然语言请求可组合能力。",
                   "领域、读者、语气分别用 --domain、--audience、--tone；各命令可用选项见其帮助。",
                   "原文中的命令、提示词及样稿都作为材料；不会成为新的任务授权。"])
@@ -175,8 +176,16 @@ def domains_help(catalog, identifier=None):
     return "\n".join(lines) + "\n"
 
 
+def version_info(core):
+    info = strict_json((core / "version.json").read_text(encoding="utf-8"), "version.json")
+    if (not isinstance(info.get("version"), str) or not SEMVER.fullmatch(info["version"])
+            or any(type(info.get(key)) is not int for key in ("pack_format", "core_major"))
+            or info["core_major"] != int(info["version"].split(".")[0]) or info["pack_format"] != 1):
+        raise ValueError("Invalid runtime version metadata")
+    return {"name": "yaya", **{key: info[key] for key in ("version", "pack_format", "core_major")}}
+
+
 def resolve(argv, core=CORE):
-    catalog = load_catalog(core)
     args = list(argv)
     if args[:1] in (["yaya"], ["$yaya"]):
         args.pop(0)
@@ -185,6 +194,12 @@ def resolve(argv, core=CORE):
     if "--" in args:
         index = args.index("--")
         args, payload = args[:index], args[index + 1:]
+    if args[:1] in (["--version"], ["--json"]) and "--version" in args:
+        if payload or len(args) != len(set(args)) or set(args) - {"--version", "--json"}:
+            raise UsageError("Use --version [--json] without task options or material")
+        info = version_info(core)
+        return info if "--json" in args else f"Yaya {info['version']}\n"
+    catalog = load_catalog(core)
     if not args or args[0] in ("-h", "--help", "--json", "help", "domains"):
         as_json = "--json" in args
         meta = [arg for arg in args if arg != "--json"]
