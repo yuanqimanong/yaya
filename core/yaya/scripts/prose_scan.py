@@ -105,7 +105,13 @@ _RAW_HTML = re.compile(
     r"fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|"
     r"legend|li|link|main|menu|nav|ol|optgroup|option|p|param|summary|tbody|td|tfoot|"
     r"th|thead|title|tr|ul)\b", re.I)
-_PLACEHOLDER = re.compile(r"\{\{[^{}\r\n]{1,256}\}\}|\$\{[^{}\r\n]{1,256}\}|%(?:\([A-Za-z_]\w{0,63}\))?[sdfr]|(?<![\w:]):[A-Za-z_]\w{0,63}\b")
+# A leading zero belongs to width; overlapping zero flags/width cause quadratic
+# backtracking on long invalid fields. Unusual flag orders need explicit literals.
+_PRINTF = (r"%%|%(?:\([A-Za-z_]\w{0,63}\)|[1-9]\d*\$)?[#+\-]*"
+           r"(?:\d+|\*(?:[1-9]\d*\$)?)?(?:\.(?:\d+|\*(?:[1-9]\d*\$)?))?"
+           r"[hlL]?[diouxXeEfFgGcrsa](?![A-Za-z])")
+_PLACEHOLDER = re.compile(r"\{\{[^{}\r\n]{1,256}\}\}|\$\{[^{}\r\n]{1,256}\}|"
+                          + _PRINTF + r"|(?<![\w:]):[A-Za-z_]\w{0,63}\b")
 _URL = re.compile(r"https?://[^\s<>\"“”「」]+")
 
 

@@ -71,3 +71,10 @@ or bind a marker to its description after arbitrary rearrangement.
 Track image/link roles for inline and reference forms while allowing descriptive
 label edits. Regressions include escaped exclamation marks, nested labels and
 code inside labels. Cross-category rearrangement still needs semantic review.
+
+## 9 / cumulative 29 — Formatted placeholders
+
+`%1$s` could change to `%1$d` unnoticed. Recognize positional/mapping fields,
+width, precision and `%%`, preserving their spelling and order. Regression cases
+also keep normal percentage prose editable and protect code with its own category.
+Space-flag forms remain outside this finite subset and require explicit literals.
