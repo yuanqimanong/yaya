@@ -260,7 +260,7 @@ diagnostics. Full outcomes and limits are in [delivery validation](release-050/R
 
 ## Delivery index
 
-29/30 PRs recorded. Each link shows the incremental diff; review and merge in dependency order. The last branch contains the cumulative runtime. No PR was automatically merged.
+30/30 PRs recorded. Each link shows the incremental diff; review and merge in dependency order. The last branch contains the cumulative runtime. No PR was automatically merged.
 
 | Batch | Cumulative | PR | Change |
 | --- | --- | --- | --- |
@@ -293,5 +293,6 @@ diagnostics. Full outcomes and limits are in [delivery validation](release-050/R
 | 27 | 47 | [#48](https://github.com/yuanqimanong/yaya/pull/48) | Match evaluation language fallback to runtime precedence |
 | 28 | 48 | [#49](https://github.com/yuanqimanong/yaya/pull/49) | Load selected frozen domain guides for domain evaluations |
 | 29 | 49 | [#50](https://github.com/yuanqimanong/yaya/pull/50) | Document scoped workflows and installation diagnostics |
+| 30 | 50 | [#51](https://github.com/yuanqimanong/yaya/pull/51) | Prepare Yaya 0.5.0 with verified upgrade and thirty-PR evidence |
 
 See [0.5.0 delivery validation](release-050/README.md) and [machine-readable index](pr-index.json).
