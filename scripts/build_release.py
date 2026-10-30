@@ -6,6 +6,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import re
 import sys
 import zipfile
 
@@ -17,6 +18,30 @@ from yaya import load_catalog
 spec = importlib.util.spec_from_file_location("yaya_packs", CORE / "scripts" / "packs.py")
 packs = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(packs)
+
+
+def skill_version(path: Path) -> str:
+    """Read the repository's simple metadata.version scalar, not arbitrary YAML."""
+    packs.no_links(path)
+    lines = path.read_text(encoding="utf-8-sig").splitlines()
+    if not lines or lines[0] != "---" or "---" not in lines[1:]:
+        raise ValueError("SKILL.md needs closed YAML frontmatter")
+    header = lines[1:lines.index("---", 1)]
+    metadata = [i for i, line in enumerate(header) if line == "metadata:"]
+    if len(metadata) != 1:
+        raise ValueError("SKILL.md needs one metadata mapping")
+    block = []
+    for line in header[metadata[0] + 1:]:
+        if line and not line[0].isspace():
+            break
+        block.append(line)
+    declarations = [line for line in block if re.match(r"^  version:", line)]
+    if len(declarations) != 1:
+        raise ValueError("SKILL.md needs one metadata.version scalar")
+    match = re.fullmatch(r'''  version: *(?:"([^"]+)"|'([^']+)'|([^\s#]+)) *(?:#.*)?''', declarations[0])
+    if not match:
+        raise ValueError("SKILL.md metadata.version must be a simple scalar")
+    return next(value for value in match.groups() if value is not None)
 
 
 def zip_files(destination: Path, items: list[tuple[str, Path]]) -> dict:
@@ -53,6 +78,8 @@ def build(output: Path) -> dict:
         raise ValueError("Core version and pack compatibility constants disagree")
     if int(version["version"].split(".")[0]) != version["core_major"]:
         raise ValueError("core_major must equal the SemVer major version")
+    if skill_version(CORE / "SKILL.md") != version["version"]:
+        raise ValueError("SKILL.md metadata.version and version.json disagree")
     bundled = sorted((CORE / "languages").iterdir())
     if {p.name for p in bundled} != {"en", "zh-Hans"}:
         raise ValueError("Core must bundle exactly en and zh-Hans")
