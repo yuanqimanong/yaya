@@ -428,13 +428,20 @@ _Q_CURRENCY = _quantity_terms(_QUANTITY_CURRENCIES)
 _Q_UNIT = _quantity_terms((*_QUANTITY_CURRENCIES, *_QUANTITY_UNITS))
 _Q_SCALE = "(?i:" + _quantity_terms(_QUANTITY_SCALES) + ")"
 _Q_COEFFICIENT = r"(?:(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|\.\d+)"
+_MONTH = r"(?:0?[1-9]|1[0-2])"
+_DAY = r"(?:0?[1-9]|[12]\d|3[01])"
+_DATE = rf"\d{{4}}(?:-{_MONTH}-{_DAY}|/{_MONTH}/{_DAY}|年{_MONTH}月{_DAY}日)"
+_TIME = r"(?:[01]?\d|2[0-3]):[0-5]\d(?::[0-5]\d(?:\.\d+)?)?"
+_ZONE = r"(?:Z|[+-](?:[01]\d|2[0-3]):?[0-5]\d)"
+_DATETIME = rf"(?:{_DATE}(?:[T ]{_TIME}{_ZONE}?)?|{_TIME}{_ZONE}?)"
 _QUANTITY = re.compile(
     r"(?<![A-Za-z_\d])"
+    + rf"(?:{_DATETIME}|"
     # Signs adjoin their currency or numeral; a Markdown '- ' is not a sign.
     + rf"(?:{_Q_SIGN}(?:{_Q_CURRENCY}{_Q_SPACE})?|{_Q_CURRENCY}{_Q_SPACE}{_Q_SIGN}?)?"
     + _Q_COEFFICIENT + r"(?:[eE][-+−]?\d+)?"
     + rf"(?:{_Q_SPACE}(?:{_Q_SCALE}(?:{_Q_SPACE}{_Q_UNIT})?|{_Q_UNIT}))?"
-    + r"(?![A-Za-z_\d])"
+    + r")(?![A-Za-z_\d])"
 )
 
 
