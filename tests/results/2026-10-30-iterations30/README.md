@@ -47,3 +47,12 @@ accepted. Collection also accepted outputs without their request packet. Require
 an exact request/output file-set match and unique, nonempty request packets.
 Regression tests cover both valid publication and each rejected case. These are
 evidence-integrity tests, not model-quality measurements.
+
+## 6 / cumulative 26 — Five-domain relationship evaluation
+
+Add 15 predeclared relationship-preservation cases and execute both Skill and
+baseline in fresh contexts. Complete inputs/outputs, runtime and assessments are
+in [domain-relationships](domain-relationships/README.md). Both conditions met
+the assessed semantic criteria; this supports regression coverage, not a claim
+of improvement over the baseline. A duplicated percentage shows why literal
+checker failures must remain separate from editorial judgments.

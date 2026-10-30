@@ -1,0 +1,62 @@
+{
+  "REL-TECH-1": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "REL-TECH-2": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "REL-TECH-3": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "REL-FIN-1": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "REL-FIN-2": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "REL-FIN-3": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "REL-DATA-1": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "REL-DATA-2": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "REL-DATA-3": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "REL-ACA-1": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "REL-ACA-2": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "REL-ACA-3": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "REL-BIZ-1": {
+    "A": "baseline",
+    "B": "skill"
+  },
+  "REL-BIZ-2": {
+    "A": "skill",
+    "B": "baseline"
+  },
+  "REL-BIZ-3": {
+    "A": "baseline",
+    "B": "skill"
+  }
+}

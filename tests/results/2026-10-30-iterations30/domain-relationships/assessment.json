@@ -1,0 +1,366 @@
+{
+  "method": "Two fresh fork_turns=none contexts, one 15-case packet per condition; criteria hidden from generators.",
+  "model": "Inherited Codex host model; exact model revision/settings unavailable; no overrides requested.",
+  "conditions": {
+    "skill": "Frozen Yaya with task/domain/language references",
+    "baseline": "Same requests, no Skill or project sources"
+  },
+  "assessment": "Nonblind parent-agent assessment; no human professional review; one run, not cross-model evidence.",
+  "conclusion": "No meaning/task failure found on these 15 cases in either condition. No superiority claim is supported.",
+  "records": [
+    {
+      "id": "REL-TECH-1",
+      "assessment": "Both retain initial request plus two timeout-only retries and nonretryable authentication failures. Baseline removes a repeated 2 while retaining its scope; the literal-count checker flags this.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "failed",
+        "mechanical_violations": [
+          {
+            "category": "numbers",
+            "before": [
+              "2",
+              "2"
+            ],
+            "after": [
+              "2"
+            ],
+            "allowed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "REL-TECH-2",
+      "assessment": "Both retain absent, zero and null behavior and unknown production settings.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-TECH-3",
+      "assessment": "Both leave the clear mitigation/fix and pending deployment statement unchanged.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": true,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": true,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-FIN-1",
+      "assessment": "Both preserve periods, consolidated/standalone scope, currency, both growth bases and unaudited status.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-FIN-2",
+      "assessment": "Both preserve projected annual return, before-fee and reinvestment assumptions, principal loss and redemption lockup.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-FIN-3",
+      "assessment": "Both preserve YoY gross margin and percentage-point change separately from relative net-profit decline.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-DATA-1",
+      "assessment": "Both preserve respondent denominator and unknown nonrespondents. Baseline repeats 60% for clarity without changing meaning.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "failed",
+        "mechanical_violations": [
+          {
+            "category": "numbers",
+            "before": [
+              "1000",
+              "200",
+              "60%"
+            ],
+            "after": [
+              "1000",
+              "200",
+              "60%",
+              "60%"
+            ],
+            "allowed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "REL-DATA-2",
+      "assessment": "Both retain absence of detected difference without asserting equivalence and preserve meaningful interval effects.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-DATA-3",
+      "assessment": "Both preserve clear missing/zero and unequal-sample distinctions unchanged.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": true,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": true,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-ACA-1",
+      "assessment": "Both retain attribution/year, possible partial mechanism, compatibility, absence of direct test and causal restraint. Baseline uses a parenthetical citation year, which changes the literal quantity spelling but preserves the year.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "failed",
+        "mechanical_violations": [
+          {
+            "category": "numbers",
+            "before": [
+              "2024 年"
+            ],
+            "after": [
+              "2024"
+            ],
+            "allowed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "REL-ACA-2",
+      "assessment": "Both retain single-hospital recruitment, tentative similar-patient scope and unknown community applicability.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-ACA-3",
+      "assessment": "Both preserve clear observational design and attributed causal restraint unchanged.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": true,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": true,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-BIZ-1",
+      "assessment": "Both retain proposed amount, training/installation scope and pending finance approval; no firm quote is created.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-BIZ-2",
+      "assessment": "Both retain Friday feasibility, client ownership and Wednesday 17:00 Singapore prerequisite before a commitment.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": false,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    },
+    {
+      "id": "REL-BIZ-3",
+      "assessment": "Both preserve the warranted apology, corrected quote, expiry and conditional order-number request unchanged.",
+      "reviewer": "parent Codex agent; nonblind editorial review",
+      "skill": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": true,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      },
+      "baseline": {
+        "meaning": "preserved on listed criteria",
+        "task": "satisfied",
+        "expression": "appropriate on this case",
+        "unchanged": true,
+        "mechanical_status": "passed",
+        "mechanical_violations": []
+      }
+    }
+  ]
+}
