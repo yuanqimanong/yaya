@@ -94,7 +94,7 @@ $yaya help prompt
 | `comment` | Ordinary comments; `--scope docstrings` selects specifically identified docstrings |
 | `prompt` | Prompt wording by default; `--target output` changes downstream style, `both` permits both |
 | `style` | Extract reusable style instructions and an example; `--save PATH` requests persistence |
-| `origin` | Assess authorship evidence with uncertainty |
+| `origin` | Assess whether text may be AI-written, with evidence and an AI/human leaning or an indeterminate result |
 
 An explicit command selects one bounded task. Unknown names, unsupported domain IDs
 and incompatible options fail without silently choosing another workflow.
@@ -114,6 +114,22 @@ For verification, `--file claims.md` selects claims and repeatable `--source evi
 selects the evidence. Both stay read-only. See [workflows](docs/workflows.md) for
 examples and direct terminal checker commands. A `ready` doctor result covers local
 structure and syntax; confirm host discovery with a short editing request.
+
+### Is this text AI-written?
+
+Use `origin` to assess writing signals and provenance evidence:
+
+```text
+$yaya origin -- Paste the text to assess here.
+$yaya origin --file article.md
+$yaya help origin
+```
+
+You can also ask: “Use Yaya to assess whether this is AI-written. Explain the evidence without rewriting.”
+
+The result gives a tentative **AI-generated leaning**, **human-written leaning**, or **indeterminate** assessment, with quoted passages and reasons. The source stays unchanged.
+
+Text alone usually cannot establish authorship. When evidence is insufficient, Yaya returns an indeterminate result rather than inventing an AI probability. Drafts, revision history or generation records can help. See the [authorship assessment guide](core/yaya/references/authorship.md).
 
 ### Focus on unnecessary defensive wording
 
