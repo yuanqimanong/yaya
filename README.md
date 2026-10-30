@@ -29,7 +29,8 @@ $skill-installer 请从 https://github.com/yuanqimanong/yaya/tree/main/core/yaya
 
 ### 从源码手动安装
 
-当前核心为 **0.4.0**，尚无公开 Release 下载。先克隆仓库：
+本分支核心为 **0.5.0**，尚无公开 Release 下载。PR 合并前，默认分支可能不含本批更新；
+请从选定并审阅过的提交构建，以 `core/yaya/version.json` 为准。先克隆仓库：
 
 ```text
 git clone https://github.com/yuanqimanong/yaya.git
@@ -218,7 +219,7 @@ python core/yaya/scripts/packs.py resolve --language zh-Hans
 
 | 资源 | 默认安装 | 构建产物 |
 | --- | --- | --- |
-| 简体中文 `zh-Hans`、英语 `en` | 是 | `yaya-core-0.4.0.zip` |
+| 简体中文 `zh-Hans`、英语 `en` | 是 | `yaya-core-0.5.0.zip` |
 | 繁体中文 `zh-Hant` | 否 | `yaya-lang-zh-Hant-0.2.0.zip` |
 | 日语 `ja` | 否 | `yaya-lang-ja-0.2.0.zip` |
 | 韩语 `ko` | 否 | `yaya-lang-ko-0.2.0.zip` |
@@ -253,6 +254,11 @@ python scripts/check_docstrings.py before.py after.py --allow approved-docstring
 0.4.0 进一步保护完整日期/时间、币种金额的会计括号和相邻比较符号，修复引用链接与换行检测问题。
 20 轮改进的具体边界和验证见 [迭代记录](tests/results/2026-10-30-iterations/README.md)。
 
+0.5.0 增加限定规则的 `scan`、安装诊断 `doctor`、风格卡复用和核对证据选择，
+补充任务状态、图片/链接角色、公式、格式占位符、区间及比例保护，并收紧评测证据校验。
+新增 30 轮的 PR、完整输入输出与验证边界见 [本批台账](tests/results/2026-10-30-iterations30/README.md)，
+升级方式见 [0.5 升级说明](docs/upgrade-0.5.md)。
+
 0.3.2 补上了 `USD 5 million → EUR 5 billion`、`1e-3 → 1e+3`、`3 个百分点 → 3 个基点`、
 `8 MiB → 8 GiB` 等变化的漏检。数量检查比较原样表达与出现次数，单位换算和数字格式变化也需复核。
 它无法确认数字归属、跨行币种标签或未列出的单位；支持范围见 [数量检查说明](core/yaya/references/validation.md#quantities-in-prose)，
@@ -272,6 +278,6 @@ Markdown 扫描器支持有限语法；识别到缩进块、列表内围栏、�
 
 语言标识、版本、文件格式和审核要求见 [语言包规范](docs/language-pack-spec.md)。模板中的 `fr` 是法语编写示例，尚未作为支持包发布。
 
-安装、升级和回滚见 [安装指南](INSTALL.md)；版本改动见 [0.2 升级说明](docs/upgrade-0.2.md)；设计和实测结果见 [设计说明](docs/design.md)、[验收记录](tests/README.md)。
+安装、升级和回滚见 [安装指南](INSTALL.md)；当前版本改动见 [0.5 升级说明](docs/upgrade-0.5.md)，历史设计见 [0.2 升级说明](docs/upgrade-0.2.md)；设计和实测结果见 [设计说明](docs/design.md)、[验收记录](tests/README.md)。
 
 [MIT License](LICENSE)

@@ -1,0 +1,160 @@
+{
+  "version": "0.5.0",
+  "local_suite": {
+    "tests_run": 350,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 8,
+    "seconds": 109.913,
+    "python": "3.13",
+    "platform": "Windows",
+    "skip_reasons": [
+      "Python 3.14 template-string case",
+      "Directory symlink/junction privileges unavailable",
+      "Output symlink privileges unavailable"
+    ],
+    "log_sha256": "b1df929ff9f6d5797cffa0a59514202b841e308a96e70111f08c4678dd0350d0"
+  },
+  "final_help_retest": {
+    "command_tests": 28,
+    "failures": 0
+  },
+  "skill_validation": "passed",
+  "reproducible_builds": {
+    "identical": true,
+    "artifacts": {
+      "catalog_version": 1,
+      "core": {
+        "version": "0.5.0",
+        "bundled_languages": [
+          "en",
+          "zh-Hans"
+        ],
+        "file": "yaya-core-0.5.0.zip",
+        "sha256": "60d85c05ae9870e8cd2b65f6f5f184037df3e2ae646c1d9c88f016fe6ee01e37",
+        "bytes": 98468
+      },
+      "language_packs": [
+        {
+          "format_version": 1,
+          "id": "ja",
+          "version": "0.2.0",
+          "core_major": 0,
+          "name": "日本語",
+          "license": "MIT",
+          "quality": "experimental",
+          "direction": "ltr",
+          "file": "yaya-lang-ja-0.2.0.zip",
+          "sha256": "96a8cd2fbea76668de60e27a199e08ed74f6a5d021787c66efce481c0e836eb1",
+          "bytes": 5384
+        },
+        {
+          "format_version": 1,
+          "id": "ko",
+          "version": "0.2.0",
+          "core_major": 0,
+          "name": "한국어",
+          "license": "MIT",
+          "quality": "experimental",
+          "direction": "ltr",
+          "file": "yaya-lang-ko-0.2.0.zip",
+          "sha256": "07035954b0cd857e6809c20d9bc202618b2b322aefc21cf2d1873a6de2723c92",
+          "bytes": 5183
+        },
+        {
+          "format_version": 1,
+          "id": "zh-Hant",
+          "version": "0.2.0",
+          "core_major": 0,
+          "name": "繁體中文",
+          "license": "MIT",
+          "quality": "experimental",
+          "direction": "ltr",
+          "file": "yaya-lang-zh-Hant-0.2.0.zip",
+          "sha256": "ab496f5790a070aa5d62852abafa27d54f2c0326439b9a78cf8994b3fb3f385e",
+          "bytes": 5176
+        }
+      ]
+    }
+  },
+  "installation": {
+    "previous_version": "0.4.0",
+    "previous_files": 42,
+    "version": "0.5.0",
+    "files": 44,
+    "customization_preflight": "exactly matched prior receipt",
+    "backup": "independent prior-version backup retained",
+    "relocated_smoke_checks": 10,
+    "installed_smoke_checks": 10,
+    "runtime_sha256": {
+      "catalog.json": "f3e1ae66a074f2287d58fab35ca28d9f39110ff72bcacde1ce925e37342f8e3d",
+      "LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+      "SKILL.md": "3c845526d3808bd68febcab4e60e075a9b8e0d0825e99812704b13cc9bb4c64a",
+      "version.json": "59e7a16b0763e13790dafc45565a3a4b5275789e2f50893a73efa54285abde9a",
+      "agents/openai.yaml": "9b5ad6a410f261907c669a2b52c376b8f4e40159869097fcb7a7895539cc4132",
+      "references/authorship.md": "8c7a6c9f1ff91835ab280a8fcb38fe5355a8ab3e03715a36cfb65991e5f7236d",
+      "references/check.md": "0b0187d399073de29131b75da1e8f41a9b8fab7b394de0fa98ce2f872191fa44",
+      "references/commands.md": "9b499ca84155b9520520e02d947a6a7a9d3b84a7745772d060753fd0e9a8b0ab",
+      "references/comments.md": "21807e29c6e13486524a602851ee7117d44974916fda124967047fc05cc1cdd8",
+      "references/domains.md": "96fd2c301bfc5ae8c7344721143e90d2d6751b8501e8e514c46d917b8414c204",
+      "references/engineering.md": "5cd5cdb686b0f590252207cacaa396e8a13b457bf5239bc693999aa4ec55127b",
+      "references/humanize.md": "7b6ff38db31014df4157c973a581aa87054817852a2cb8c4aec9a59d8d269275",
+      "references/language-packs.md": "8d2556f74cc0d6a870c701558c62f4b8b4f590fe9ea94e30b132f7e3024a7f09",
+      "references/prompts.md": "3f3e47dc8ce1a6d337471a4ea2eae6c1fe48970c73c77dd4185ffbec69a4b75c",
+      "references/scan.md": "ef4aa57cfa4dda102ac813fee8f6d98627f86d9e451294ab3753c8ac08f42d2e",
+      "references/style-learning.md": "cea2f5b0837776352d40433642ad2fd62eeaafaefdce19e7b4365fc957a3ef5a",
+      "references/text.md": "802cb9e4a3cf2abe6fe8a11bdb1c98f3b095e84158e067c5454c2014bccc31e8",
+      "references/validation.md": "a4534321d3ef58b974c57c1eee50d46a6d7f6d9438f9695e5fab3dabc08b353a",
+      "references/verify.md": "c06ce1104f43bdaf82153393df5acb362e8fb8dc83ff221d16b5e93c0b157690",
+      "scripts/check_comments.py": "5c64d02633ac029b99088638e6d0338bba91e52318f90dc2ad23a4fc571d38a1",
+      "scripts/check_docstrings.py": "ed3364b4c92b544d7756eb6cf690422141392e00da1d17d3fce9c93e4a2d3988",
+      "scripts/check_rewrite.py": "b0316ed20ee5f325acf84acf4c241dfa94e57370bd73d0099a84fe559be863b2",
+      "scripts/detect_tells.py": "321c881d649b0dfcd838e29c5554c739f32b1bd6eec797333633156303e44246",
+      "scripts/doctor.py": "a6c3468c618609b8a12524152e43228a30bd6afd9ea12924dacbee63cba9b4d4",
+      "scripts/edit_evidence.py": "37167703e26d94a5aebca04c57a63198774b345d05c29fad645551eacd0390b3",
+      "scripts/packs.py": "2d27b70a85ace87cc291012d79e5c0b1c1f9dae14d9ac991d7cc340297ee34c2",
+      "scripts/prose_scan.py": "bf7a8ab99578d378212e32e8f0880d5a0680728c8a94db2996b6716fb8cac6e3",
+      "scripts/tell_rules.json": "607a1db6813bfb26d04b00fdc108a94fa3322f12ceb87b28143692a7375838d8",
+      "scripts/yaya.py": "44eb3081f8028e36f45085f58b4a3802ce556abe737f1c1e24350d178b2daa40",
+      "references/domains/academic.md": "7a40384827ffeb3947c27a8593cd6a5e6275b415a5aa53f380161af8b43c5115",
+      "references/domains/business.md": "943e9cc5b40cc152347d438d9b8753b769f15fb43f16a6bdbcda939c9edbd7f8",
+      "references/domains/data.md": "25549de12c26838b7d79b0c8a10318be429507d5c8c9143d93673a03c312efce",
+      "references/domains/finance.md": "25d244de34e6a31d32acda01dc1ab7df695b6422d459b9907f0bb2b8b2b3c6ed",
+      "references/domains/tech.md": "fdf09d47b88316b5a087f6ff1bbe379fc3a44d4177e22f5f028044f9905f7178",
+      "languages/en/examples.md": "a8bb8ea005f348d3e8a7386cb8f6d6c6ebf6ebefa0a16c90dbc623996b95f7f3",
+      "languages/en/GUIDE.md": "bf36b9d9d8f04b4929ab7fd4eccf1a156de839176045560a1302280ee75d50f0",
+      "languages/en/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+      "languages/en/pack.json": "e0761dee4c89d3abbceefb5e42891c758bf2cad2da442b06b62f12950866aa2f",
+      "languages/en/PATTERNS.md": "99cd13646a4bbd8a37fbc6494be570331d9750c0465a336756f907220b5a6963",
+      "languages/zh-Hans/examples.md": "4f512c3c7e670730a54c21edd994fbc8dcb3d463d5f2fa714ee40b4e63f972cc",
+      "languages/zh-Hans/GUIDE.md": "26989f04cca2a1333472b8295e827edac071384c13d48fc9df368ec2d3f37e9f",
+      "languages/zh-Hans/LICENSE": "d2697a71125635ec15dc2d25a8b0060db58b244cc2c4f3300223b9201517da31",
+      "languages/zh-Hans/pack.json": "f16bc9a66641601fed32d03b2311196f04e8a6417173e39be2b838ebd621a475",
+      "languages/zh-Hans/PATTERNS.md": "b6f63f77409551ad35fa3404b97acf6f6d4085f449ca13b907f015a3477f4ffb"
+    }
+  },
+  "rollback": {
+    "status": "passed",
+    "restore_files": 16,
+    "prior_file_count": 42,
+    "restored_version": "0.4.0",
+    "new_file_removal": [
+      "references/scan.md",
+      "scripts/doctor.py"
+    ],
+    "dry_run_readonly": true,
+    "later_edits_refused": true,
+    "idempotent": true,
+    "actual_install_preserved": "0.5.0"
+  },
+  "predecessor_ci": {
+    "pull_requests": 29,
+    "conclusion": "success"
+  },
+  "final_pr_ci": "See the final PR Checks for its current head; local ledger retains the final observation.",
+  "limits": [
+    "No GitHub Release published; PR stack unmerged at delivery.",
+    "Local helper execution does not prove host automatic Skill discovery.",
+    "No cross-model superiority, authorship probability or domain certification claim."
+  ]
+}

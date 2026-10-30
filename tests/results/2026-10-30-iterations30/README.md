@@ -247,3 +247,51 @@ installation guidance and new workflow guide now distinguish plans from executed
 checks, explain scopes/results, and show technical/financial examples. Disposable
 fixtures exercise the documented diagnostic, scan and comparison commands. No
 editing-quality claim follows from these documentation smoke checks.
+
+## 30 / cumulative 50 — Coherent 0.5.0 delivery
+
+Align runtime/Skill/archive versions, document compatibility and publish the PR
+index. Complete the regression suite and reproducible builds, install from verified
+bytes after comparing the prior receipt, and rehearse guarded rollback in isolation.
+The final help text explicitly distinguishes planned tasks from executed doctor
+diagnostics. Full outcomes and limits are in [delivery validation](release-050/README.md).
+
+<!-- DELIVERY INDEX -->
+
+## Delivery index
+
+29/30 PRs recorded. Each link shows the incremental diff; review and merge in dependency order. The last branch contains the cumulative runtime. No PR was automatically merged.
+
+| Batch | Cumulative | PR | Change |
+| --- | --- | --- | --- |
+| 1 | 21 | [#22](https://github.com/yuanqimanong/yaya/pull/22) | Preserve explicit literals from one-shot iterables |
+| 2 | 22 | [#23](https://github.com/yuanqimanong/yaya/pull/23) | Reject discarded grants and conflicting review options |
+| 3 | 23 | [#24](https://github.com/yuanqimanong/yaya/pull/24) | Use physical Markdown line boundaries |
+| 4 | 24 | [#25](https://github.com/yuanqimanong/yaya/pull/25) | Expose literal and quotation protection in check |
+| 5 | 25 | [#26](https://github.com/yuanqimanong/yaya/pull/26) | Require exact evaluation request and output packet sets |
+| 6 | 26 | [#27](https://github.com/yuanqimanong/yaya/pull/27) | Add five-domain relationship preservation evaluations |
+| 7 | 27 | [#28](https://github.com/yuanqimanong/yaya/pull/28) | Preserve Markdown task completion markers |
+| 8 | 28 | [#29](https://github.com/yuanqimanong/yaya/pull/29) | Preserve image versus hyperlink roles in Markdown |
+| 9 | 29 | [#30](https://github.com/yuanqimanong/yaya/pull/30) | Protect positional and formatted printf placeholders |
+| 10 | 30 | [#31](https://github.com/yuanqimanong/yaya/pull/31) | Validate and normalize explicit language tags |
+| 11 | 31 | [#32](https://github.com/yuanqimanong/yaya/pull/32) | Preserve ordered endpoints in numeric ranges |
+| 12 | 32 | [#33](https://github.com/yuanqimanong/yaya/pull/33) | Apply selected saved style cards through explicit commands |
+| 13 | 33 | [#34](https://github.com/yuanqimanong/yaya/pull/34) | Select verification evidence files explicitly |
+| 14 | 34 | [#35](https://github.com/yuanqimanong/yaya/pull/35) | Expose read-only literal wording scans as scan |
+| 15 | 35 | [#36](https://github.com/yuanqimanong/yaya/pull/36) | Keep verification findings concise without losing evidence limits |
+| 16 | 36 | [#37](https://github.com/yuanqimanong/yaya/pull/37) | Add read-only runtime diagnostics with doctor |
+| 17 | 37 | [#38](https://github.com/yuanqimanong/yaya/pull/38) | Support protected email and URI autolinks |
+| 18 | 38 | [#39](https://github.com/yuanqimanong/yaya/pull/39) | Preserve explicitly delimited LaTeX formulas |
+| 19 | 39 | [#40](https://github.com/yuanqimanong/yaya/pull/40) | Keep check inputs bound to explicit files |
+| 20 | 40 | [#41](https://github.com/yuanqimanong/yaya/pull/41) | Reject nonfinite evaluation timeouts before execution |
+| 21 | 41 | [#42](https://github.com/yuanqimanong/yaya/pull/42) | Diagnose unusable Python helpers without executing them |
+| 22 | 42 | [#43](https://github.com/yuanqimanong/yaya/pull/43) | Select named scan rules and report the executed scope |
+| 23 | 43 | [#44](https://github.com/yuanqimanong/yaya/pull/44) | Preserve common single-brace interpolation fields |
+| 24 | 44 | [#45](https://github.com/yuanqimanong/yaya/pull/45) | Reject ambiguous and unknown evaluation event records |
+| 25 | 45 | [#46](https://github.com/yuanqimanong/yaya/pull/46) | Bind scan locations to the exact input content |
+| 26 | 46 | [#47](https://github.com/yuanqimanong/yaya/pull/47) | Preserve operand order in numeric ratios and fractions |
+| 27 | 47 | [#48](https://github.com/yuanqimanong/yaya/pull/48) | Match evaluation language fallback to runtime precedence |
+| 28 | 48 | [#49](https://github.com/yuanqimanong/yaya/pull/49) | Load selected frozen domain guides for domain evaluations |
+| 29 | 49 | [#50](https://github.com/yuanqimanong/yaya/pull/50) | Document scoped workflows and installation diagnostics |
+
+See [0.5.0 delivery validation](release-050/README.md) and [machine-readable index](pr-index.json).

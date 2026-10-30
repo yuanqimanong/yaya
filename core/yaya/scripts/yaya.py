@@ -160,7 +160,7 @@ def command_help(name, catalog):
 def general_help(catalog):
     lines = ["Yaya · 命令与能力", "", "聊天: $yaya <command> [options] <材料或请求>",
              "终端: python scripts/yaya.py <command> [options] [-- 材料或请求]",
-             "终端辅助工具只显示帮助或解析任务；实际编辑由当前 AI 宿主完成。", ""]
+             "任务命令输出计划，由当前 AI 宿主完成；doctor 直接运行本地只读诊断。", ""]
     lines.extend(f"  {key:9} {value['title']} — {value['summary']}" for key, value in catalog["commands"].items())
     lines.extend(["", "  help [command] / <command> --help  查看完整选项",
                   "  domains [ID]                      列出领域及适用边界",
