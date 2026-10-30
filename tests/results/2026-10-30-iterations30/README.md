@@ -127,3 +127,11 @@ beside its conclusion once. A [fresh same-request retest](verify-concise/README.
 retained citations, environment-loading conditions, missing sources and unresolved
 claims while removing the repeated framing. This is one observed retest, not a
 measured cross-model improvement or permission to remove substantive uncertainty.
+
+## 16 / cumulative 36 — Read-only installation diagnostics
+
+Version discovery alone could not identify broken runtime dependencies. Add
+`doctor [--json]` for helpers, metadata, bundled languages and local resource links.
+It continues reporting when catalog data or the pack helper is missing. Tests
+cover healthy/changed files, separate failed checks, no repairs and relocated
+release execution. It does not validate host discovery, external packs or quality.

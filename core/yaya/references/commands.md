@@ -15,6 +15,13 @@ prints help or a task plan; the current host model performs the actual work.
 metadata. It reads only version.json, so it can help diagnose an incomplete command
 catalog. Version discovery accepts no task options or material.
 
+`yaya doctor [--json]` performs read-only local runtime checks: Python version,
+required helpers, version/catalog/rule metadata, bundled languages and local guide
+links. Return its actual failed items; it performs no repairs or network requests.
+It can report a damaged catalog or missing pack helper. If command startup itself
+fails, the standalone fallback is `python scripts/doctor.py`. `ready` covers local
+structure only, not host discovery or writing quality. Exit 1 means degraded.
+
 ## Select the scope before reading task material
 
 1. `yaya --help`, `yaya help`, `yaya COMMAND --help`, `yaya help COMMAND`, and
