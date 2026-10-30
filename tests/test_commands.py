@@ -3,6 +3,7 @@ import importlib.util
 import json
 from pathlib import Path
 import shutil
+import shlex
 import subprocess
 import sys
 import tempfile
@@ -143,6 +144,18 @@ class CommandTests(unittest.TestCase):
         for key, value in domains.items():
             self.assertEqual(commands.resolve(["domains", key, "--json"]), value)
             self.assertTrue(all(value[field] for field in ("covers", "preserves", "excludes", "quality")))
+
+    def test_help_examples_resolve_to_the_advertised_bounded_action(self):
+        for name, spec in commands.load_catalog()["commands"].items():
+            self.assertTrue(spec["examples"], name)
+            for example in spec["examples"]:
+                with self.subTest(command=name, example=example):
+                    result = commands.resolve(shlex.split(example))
+                    self.assertEqual(result["command"], name)
+                    self.assertEqual(result["delivery"], spec["delivery"])
+                    self.assertIn(example, commands.resolve(["help", name]))
+                    if spec["delivery"] != "rewrite":
+                        self.assertFalse(result["write_requested"])
 
     def test_version_discovery_is_readonly_and_matches_runtime_metadata(self):
         expected = json.loads((CORE / "version.json").read_text(encoding="utf-8"))

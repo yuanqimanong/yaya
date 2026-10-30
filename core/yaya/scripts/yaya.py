@@ -101,6 +101,8 @@ def load_catalog(core=CORE):
         text_fields(command, ("title", "summary", "scope", "delivery"), context)
         string_list(command.get("options"), f"{context}.options")
         string_list(command.get("references"), f"{context}.references", nonempty=True)
+        if "examples" in command:
+            string_list(command["examples"], f"{context}.examples", nonempty=True)
         if command["delivery"] not in {"rewrite", "findings", "style-card", "assessment"}:
             raise ValueError(f"Unknown delivery in {context}")
         if not set(command["options"]) <= catalog["options"].keys():
@@ -142,11 +144,14 @@ def parser_for(name, catalog):
 def command_help(name, catalog):
     spec = catalog["commands"][name]
     text = parser_for(name, catalog).format_help()
-    return text + f"\n范围: {spec['scope']}；交付: {spec['delivery']}\n" + (
+    boundary = text + f"\n范围: {spec['scope']}；交付: {spec['delivery']}\n" + (
         "未指定 --write 时只返回候选；--write 由宿主执行，解析器不写文件。\n"
         if "write" in spec["options"] else
         "不修改输入文件。\n"
     )
+    examples = spec.get("examples", [])
+    return boundary + ("\n示例（聊天命令；终端用 python scripts/yaya.py 替换 yaya）:\n"
+                       + "\n".join("  " + example for example in examples) + "\n" if examples else "")
 
 
 def general_help(catalog):

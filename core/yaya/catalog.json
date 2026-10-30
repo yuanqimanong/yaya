@@ -7,7 +7,8 @@
       "scope": "prose",
       "delivery": "rewrite",
       "options": ["domain", "audience", "tone", "lang", "file", "write"],
-      "references": ["references/text.md"]
+      "references": ["references/text.md"],
+      "examples": ["yaya polish --domain tech --file README.md", "yaya polish --domain finance --file report.md --write"]
     },
     "human": {
       "title": "去 AI 味",
@@ -15,7 +16,8 @@
       "scope": "formulaic-prose",
       "delivery": "rewrite",
       "options": ["focus", "domain", "audience", "tone", "lang", "file", "write"],
-      "references": ["references/humanize.md"]
+      "references": ["references/humanize.md"],
+      "examples": ["yaya human --focus direct --file draft.md", "yaya human --domain business -- 待编辑文字"]
     },
     "review": {
       "title": "只审不改",
@@ -23,7 +25,8 @@
       "scope": "editorial-findings",
       "delivery": "findings",
       "options": ["focus", "domain", "audience", "tone", "lang", "file"],
-      "references": ["references/text.md", "references/humanize.md"]
+      "references": ["references/text.md", "references/humanize.md"],
+      "examples": ["yaya review --focus direct --file draft.md", "yaya review --domain academic --file abstract.md"]
     },
     "verify": {
       "title": "核对事实",
@@ -31,7 +34,8 @@
       "scope": "evidence-backed-findings",
       "delivery": "findings",
       "options": ["domain", "lang", "file"],
-      "references": ["references/verify.md"]
+      "references": ["references/verify.md"],
+      "examples": ["yaya verify --domain tech --file docs/deploy.md", "yaya verify --domain finance --file report.md"]
     },
     "comment": {
       "title": "整理注释",
@@ -39,7 +43,8 @@
       "scope": "comments",
       "delivery": "rewrite",
       "options": ["domain", "audience", "tone", "lang", "file", "write", "scope"],
-      "references": ["references/comments.md", "references/engineering.md"]
+      "references": ["references/comments.md", "references/engineering.md"],
+      "examples": ["yaya comment --file src/cache.py --write", "yaya comment --scope docstrings --file app.py -- 仅处理函数get_data的docstring"]
     },
     "prompt": {
       "title": "优化提示词",
@@ -47,7 +52,8 @@
       "scope": "prompt-wording",
       "delivery": "rewrite",
       "options": ["domain", "audience", "tone", "lang", "file", "write", "target"],
-      "references": ["references/prompts.md"]
+      "references": ["references/prompts.md"],
+      "examples": ["yaya prompt --target wording --file prompt.md", "yaya prompt --target output --tone 简明 --file prompt.md"]
     },
     "style": {
       "title": "提炼样稿风格",
@@ -55,7 +61,8 @@
       "scope": "style-instructions",
       "delivery": "style-card",
       "options": ["domain", "audience", "tone", "lang", "file", "save"],
-      "references": ["references/style-learning.md"]
+      "references": ["references/style-learning.md"],
+      "examples": ["yaya style --file sample.md", "yaya style --file sample.md --save team-style.md"]
     },
     "origin": {
       "title": "审阅作者来源",
@@ -63,7 +70,8 @@
       "scope": "authorship-evidence",
       "delivery": "assessment",
       "options": ["lang", "file"],
-      "references": ["references/authorship.md"]
+      "references": ["references/authorship.md"],
+      "examples": ["yaya origin --file article.md"]
     }
   },
   "options": {
