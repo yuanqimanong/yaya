@@ -318,6 +318,24 @@ class CommandTests(unittest.TestCase):
             with self.subTest(args=args), self.assertRaises(commands.UsageError):
                 commands.resolve(args)
 
+    def test_scan_rule_help_selection_and_execution(self):
+        from detect_tells import load_rules
+        catalog = commands.load_catalog()
+        self.assertEqual(set(catalog["options"]["rule"]["choices"]), {row["id"] for row in load_rules()})
+        self.assertIn("en-stock-close", commands.resolve(["scan", "--help"]))
+        path = self.scratch / "text.md"
+        source = "Only time will tell. Conduct an analysis of this."
+        path.write_text(source, encoding="utf-8")
+        plan = commands.resolve(["scan", "--file", str(path), "--lang", "en", "--rule", "en-stock-close"])
+        process = subprocess.run([sys.executable, "-B", plan["scanner"]["script"], *plan["scanner"]["args"]],
+                                 capture_output=True, timeout=10)
+        self.assertEqual(process.returncode, 0, process.stderr)
+        self.assertEqual(json.loads(process.stdout)["enabled_rules"], ["en-stock-close"])
+        self.assertEqual(path.read_text(encoding="utf-8"), source)
+        for name in ("unknown", "zh-stock-close"):
+            with self.assertRaises(commands.UsageError):
+                commands.resolve(["scan", "--file", str(path), "--lang", "en", "--rule", name])
+
 
 if __name__ == "__main__":
     unittest.main()

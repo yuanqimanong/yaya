@@ -279,6 +279,12 @@ def resolve(argv, core=CORE):
             raise UsageError("scan requires exactly one --file PATH; stdin is not a file selection")
         if options.get("lang") not in {"en", "zh-Hans"}:
             raise UsageError("scan requires --lang en or --lang zh-Hans; other editing commands have broader language guidance")
+        if options.get("rule"):
+            from detect_tells import load_rules, select_rules
+            try:
+                select_rules(load_rules(core / "scripts/tell_rules.json"), options["lang"], options["rule"])
+            except ValueError as exc:
+                raise UsageError(str(exc)) from exc
     domain_id = options.get("domain")
     domain = choose(domain_id, catalog["domains"], "domain") if domain_id else None
     refs = ["references/commands.md", *spec["references"]]
@@ -318,8 +324,9 @@ def resolve(argv, core=CORE):
         result["checker"] = {"script": str((core / "scripts" / helper).resolve()),
                              "args": [*flags, *separator, options["before"], options["after"]]}
     if name == "scan":
+        flags = ["--rule=" + name for name in options.get("rule") or []]
         result["scanner"] = {"script": str((core / "scripts/detect_tells.py").resolve()),
-                             "args": ["--language", options["lang"], "--", options["file"][0]]}
+                             "args": ["--language", options["lang"], *flags, "--", options["file"][0]]}
     return result
 
 
