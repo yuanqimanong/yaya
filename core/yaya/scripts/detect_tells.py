@@ -4,19 +4,43 @@
 from __future__ import annotations
 
 import bisect
-import json
 from pathlib import Path
 import re
 import sys
 
 from prose_scan import InputError, JsonParser, LIMITATIONS, Unsupported, emit, read_utf8, snapshot
+from packs import strict_json
 
 RULES_PATH = Path(__file__).with_name("tell_rules.json")
 
 
-def load_rules():
-    data = json.loads(RULES_PATH.read_text(encoding="utf-8"))
-    return data["rules"]
+def load_rules(path=None):
+    data = strict_json((Path(path) if path else RULES_PATH).read_text(encoding="utf-8"), "tell_rules.json")
+    if type(data.get("format_version")) is not int or data["format_version"] != 1:
+        raise ValueError("Unsupported tell rule format_version")
+    rules = data.get("rules")
+    if not isinstance(rules, list) or not rules:
+        raise ValueError("Tell rules must be a nonempty list")
+    identifiers = set()
+    for index, rule in enumerate(rules):
+        context = f"tell_rules.json rules[{index}]"
+        if not isinstance(rule, dict) or set(rule) != {"id", "language", "severity", "phrases", "message"}:
+            raise ValueError(f"{context}: expected id, language, severity, phrases and message")
+        if any(not isinstance(rule[key], str) or not rule[key].strip() for key in ("id", "language", "severity", "message")):
+            raise ValueError(f"{context}: metadata must be nonempty strings")
+        if rule["id"] in identifiers or not re.fullmatch(r"[a-z][a-z0-9-]*", rule["id"]):
+            raise ValueError(f"{context}: invalid or duplicate rule id")
+        identifiers.add(rule["id"])
+        if rule["language"] not in {"en", "zh-Hans"} or rule["severity"] not in {"P1", "P2"}:
+            raise ValueError(f"{context}: unsupported language or severity")
+        phrases = rule["phrases"]
+        if (not isinstance(phrases, list) or not phrases
+                or any(not isinstance(value, str) or not value.strip() or "\n" in value or "\r" in value for value in phrases)):
+            raise ValueError(f"{context}: phrases must be nonempty single-line strings")
+        normalized = [value.casefold() if rule["language"] == "en" else value for value in phrases]
+        if len(normalized) != len(set(normalized)):
+            raise ValueError(f"{context}: duplicate phrases")
+    return rules
 
 
 def detect(text, language):

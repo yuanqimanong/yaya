@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CORE = ROOT / "core" / "yaya"
 sys.path.insert(0, str(CORE / "scripts"))
 from yaya import load_catalog
+from detect_tells import load_rules
 
 spec = importlib.util.spec_from_file_location("yaya_packs", CORE / "scripts" / "packs.py")
 packs = importlib.util.module_from_spec(spec)
@@ -102,6 +103,7 @@ def build(output: Path) -> dict:
         if not source.is_file():
             raise ValueError(f"Required runtime file missing: {source.relative_to(CORE)}")
     load_catalog(CORE)
+    load_rules(CORE / "scripts/tell_rules.json")
     output.mkdir(parents=True, exist_ok=True)
     # Reject existing links before writing any asset or index.
     for filename in [f"yaya-core-{version['version']}.zip", "catalog.json", "SHA256SUMS", *[f"yaya-lang-{p.name}-{packs.validate(p)['version']}.zip" for p in optional]]:
