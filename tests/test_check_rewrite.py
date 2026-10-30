@@ -15,6 +15,26 @@ import prose_scan
 
 
 class RewriteChecks(unittest.TestCase):
+    def test_one_shot_literal_protections_match_lists_and_file_evidence(self):
+        before, after = "Use retry_limit.", "Use retry_count."
+        expected = checker.compare(before, after, literals=["retry_limit"])
+        self.assertEqual(expected["status"], "failed")
+        self.assertEqual(checker.compare(before, after, literals=iter(["retry_limit"])), expected)
+        self.assertEqual(checker.compare(before, after, literals=["retry_limit"] * 2), expected)
+        with tempfile.TemporaryDirectory(dir=SCRIPTS.parents[2]) as temp:
+            old, new = Path(temp) / "old.md", Path(temp) / "new.md"
+            old.write_text(before, encoding="utf-8")
+            new.write_text(after, encoding="utf-8")
+            result = checker.check_files(old, new, literals=iter(["retry_limit"]))
+            self.assertEqual(result["status"], "failed")
+            self.assertEqual(result["evidence"]["options"]["literals"], ["retry_limit"])
+            self.assertEqual(checker.check_files(old, old, literals=iter(["retry_limit"]))["status"], "passed")
+
+    def test_invalid_literal_containers_are_input_errors(self):
+        for values in ("retry_limit", b"retry_limit", None, 1, [1], [None], [""]):
+            with self.subTest(values=values), self.assertRaises(prose_scan.InputError):
+                checker.compare("Use retry_limit.", "Use retry_limit.", literals=values)
+
     def assert_status(self, status, before, after, **options):
         result = checker.compare(before, after, **options)
         self.assertEqual(result["status"], status, result)

@@ -22,7 +22,21 @@ CATEGORIES = (
 )
 
 
+def literal_values(literals):
+    """Freeze one-shot inputs so both scans and evidence use the same values."""
+    if isinstance(literals, (str, bytes)):
+        raise InputError("Protected literals must be an iterable of strings, not one string.")
+    try:
+        values = tuple(literals)
+    except TypeError as exc:
+        raise InputError("Protected literals must be an iterable of strings.") from exc
+    if any(not isinstance(value, str) or not value for value in values):
+        raise InputError("Each protected literal must be a nonempty string.")
+    return tuple(dict.fromkeys(values))
+
+
 def compare(before, after, allow=(), protect_quotes=False, literals=()):
+    literals = literal_values(literals)
     permitted = []
     if allow:
         try:
@@ -73,6 +87,7 @@ def compare(before, after, allow=(), protect_quotes=False, literals=()):
 
 
 def check_files(before, after, allow=(), protect_quotes=False, literals=()):
+    literals = literal_values(literals)
     if str(before) == "-" and str(after) == "-":
         raise InputError("Only one input may use stdin.")
     operation = lambda: compare(read_utf8(before), read_utf8(after), allow, protect_quotes, literals)
