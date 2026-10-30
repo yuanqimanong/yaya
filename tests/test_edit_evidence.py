@@ -41,6 +41,23 @@ class EvidenceChecks(unittest.TestCase):
         self.assertEqual(evidence.summarize(self.snapshot)["counts"]["passed"], 1)
         self.assertIn(b"x = 7", self.source.read_bytes())
 
+    def test_snapshot_still_works_without_git(self):
+        with patch.object(evidence.subprocess, "run", side_effect=FileNotFoundError("git missing")) as run:
+            manifest = self.start()
+        self.assertEqual(run.call_count, 1)
+        self.assertIsNone(manifest["git_baseline"]["head"])
+        self.assertTrue(manifest["git_baseline"]["error"])
+        self.assertEqual((self.snapshot / "before/sample.py").read_bytes(), self.source.read_bytes())
+        self.assertFalse((self.snapshot / "git-unstaged.patch").exists())
+
+    def test_slow_git_is_bounded_and_snapshot_reports_missing_metadata(self):
+        with patch.object(evidence.subprocess, "run", side_effect=subprocess.TimeoutExpired("git", 10)) as run:
+            manifest = self.start()
+        self.assertEqual(run.call_count, 1)
+        self.assertEqual(run.call_args.kwargs["timeout"], 10)
+        self.assertIn("TimeoutExpired", manifest["git_baseline"]["error"])
+        self.assertEqual(manifest["files"]["sample.py"]["sha256"], evidence.digest(self.source.read_bytes()))
+
     def test_unexecuted_stale_pass_and_tool_change_never_pass(self):
         self.start()
         self.assertEqual(evidence.summarize(self.snapshot)["counts"]["unverified"], 1)
