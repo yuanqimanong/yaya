@@ -12,6 +12,19 @@
 | `refinement.json` | H019 首轮失败后新增的 2 条具体观点保留控制例；仅用于显式选择的修正复测，不计入默认主矩阵 |
 | `integration/` | 真实文件编辑与保存风格的隔离素材 |
 | `downstream.json` | 原提示词和改写后提示词的执行检查 |
+| `commands-domains.json` | 29 条显式命令边界及五类领域表达案例：27 条首轮与 2 条后续配置来源控制例；不属于默认 112 条矩阵 |
+| `directness.json` | 26 条中英去防御表达、保留必要限定、定向范围与只读案例：24 条首轮及 2 条句子功能控制例；不属于默认矩阵或品牌识别基准 |
+
+0.3 命令/领域前向验证可用现有准备器生成隔离素材：
+
+```text
+python tests/evals/prepare.py tests/runs/commands-domains --suite commands-domains --batch-size 9
+python tests/evals/prepare.py tests/runs/directness --suite directness --batch-size 8
+```
+
+准备器同时生成 skill/baseline 包，但生成文件不代表已执行任一条件。若只运行 Skill 前向验证，
+必须明确 baseline 未运行，不输出对照提升率。上述设置下每批至多 9 题共享上下文，不能宣称每题独立。
+评审条件仍单独保存在 `criteria.json`，生成者仅看请求包和对应 Skill 快照。
 
 ## 准备和生成
 

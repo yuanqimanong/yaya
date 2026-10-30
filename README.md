@@ -29,7 +29,7 @@ $skill-installer 请从 https://github.com/yuanqimanong/yaya/tree/main/core/yaya
 
 ### 从源码手动安装
 
-当前核心为 **0.2.1**，尚无公开 Release 下载。先克隆仓库：
+当前核心为 **0.3.2**，尚无公开 Release 下载。先克隆仓库：
 
 ```text
 git clone https://github.com/yuanqimanong/yaya.git
@@ -59,6 +59,83 @@ Copy-Item -LiteralPath '.\core\yaya' -Destination $skillTarget -Recurse
 ## 直接这样用
 
 安装后直接提出请求，或用 `$yaya` 显式指定。在 Codex 中也可输入 `$` 后选择 Yaya。
+
+### 用短命令固定任务范围
+
+```text
+$yaya --help
+$yaya human --focus direct -- 下面这段有多余的否定对比和免责声明……
+$yaya polish --domain finance --audience 普通读者 -- 下面这段财报说明……
+$yaya comment --file src/cache.py --write
+$yaya prompt --target output --audience 新手 -- 让这个助手解释得容易懂：……
+$yaya domains
+$yaya domains tech
+$yaya help prompt
+```
+
+| 命令 | 固定能力 |
+| --- | --- |
+| `polish` | 润色正文，保留原意与事实限定 |
+| `human` | 去套话、空泛铺垫、机械重复和过度防御表达 |
+| `review` | 只审表达，给问题与建议，不交完整改稿 |
+| `verify` | 按证据核对主张，给依据与未确认项，不改稿 |
+| `comment` | 默认只改普通注释；`--scope docstrings` 选择明确的 docstring 节点 |
+| `prompt` | 默认优化提示词措辞；`--target output` 改下游回答风格，`both` 兼顾两者 |
+| `style` | 从样稿提炼风格指令与示例；`--save PATH` 明确保存位置 |
+| `origin` | 审阅“这是 AI 吗”的证据与不确定性 |
+
+一个显式命令只执行一种任务。发现拼错的命令、未知领域或不适用的选项时，会报错并提示帮助，
+不会悄悄扩大范围。`review`、`verify`、`origin` 保持只读。
+改写类命令默认返回候选；`--file` 指定输入，`--write` 要求修改指定文件。
+同一范围此前明确给过的文件修改授权仍有效，不必重复确认。
+
+这是 **Skill 的聊天命令协议**，也接受 `yaya polish ...`；不会安装全局 shell 命令。
+终端可运行 `python core/yaya/scripts/yaya.py --help`。该辅助入口只输出帮助或 JSON 任务计划，
+实际改稿由当前 AI 宿主执行。完整选项以 `help COMMAND` / `COMMAND --help` 为准，
+帮助与路由共用 [能力目录](core/yaya/catalog.json)。
+
+### 定向处理过度防御表达
+
+`human` 默认会检查“这是 X，而不是 Y”中的多余对比、替读者预设误解的辩解、
+反复免责声明、重复缓和词，以及空泛夸赞和固定收尾。需要集中处理时：
+
+```text
+$yaya human --focus direct -- 只清理无效对比、防御性铺垫和重复限定，其余风格保留：……
+$yaya review --focus direct -- 先指出这些问题和理由，不改稿：……
+$yaya human --help
+```
+
+`--focus all` 是默认值；`direct` 只处理上述限定范围，仍可结合 `--domain tech`
+或 `--domain finance`。例如“这不是要重新定义协作。通讯录新增按部门筛选。”
+可改为“通讯录新增按部门筛选。”
+
+判断依据是删后是否损失信息。“费用包含配送，不含安装”“尚未修复根因”
+“本金可能亏损”等会影响理解或行动，应保留。用户未主动问到某项限制，也可能需要知道它。
+已有清楚表述可以不改；不会通过虚构经历、补造事实或强行口语化制造“人味”。
+
+这些规则按表达模式工作，未提供 GPT、Opus、DeepSeek、豆包的品牌预设或来源鉴定。
+开源依据及证据限制见 [调研记录](tests/research/directness.md)，
+本轮用例与实际输出见 [验证记录](tests/results/2026-10-30-directness/README.md)。
+
+### 明确的领域规则
+
+| `--domain` | 适用内容 | 重点保护 |
+| --- | --- | --- |
+| `tech` | 技术说明、API、运行手册、注释 | 接口语义、前置条件、有效配置、失败路径与发布状态 |
+| `finance` | 财报解读、经营指标、投资者沟通 | 币种、期间、指标口径、同比/环比、收益和风险限定 |
+| `data` | 指标、实验、调查和看板说明 | 样本与分母、时间窗、缺失值、相关/因果和不确定性 |
+| `academic` | 摘要、方法、结果、讨论与综述 | 研究设计、引用归属、证据强度、局限与适用范围 |
+| `business` | 工作邮件、进展、提案、客户通知 | 责任、日期、报价、交付条件、审批与承诺状态 |
+
+领域、读者和语气分别选择。例如 `--domain finance --audience 普通读者 --tone 简明`，
+既保留财务口径，也让非专业读者读懂。它不会为了“行业味”补造术语、数据或事实。
+五类规则均有具体指南、原创改写/保留例和验收案例，目前标记为 **experimental**，
+不等于行业认证或所有场景下的准确率保证。覆盖与排除项用 `yaya domains ID` 查询；
+验证边界见 [领域说明](core/yaya/references/domains.md)。
+
+### 自然语言可组合能力
+
+原有调用方式继续有效，例如“用 yaya 核对并润色”会结合已请求的能力：
 
 ```text
 $yaya 润色下面的文章，去掉空话，保留作者口吻和有用细节。
@@ -125,7 +202,7 @@ python core/yaya/scripts/packs.py resolve --language zh-Hans
 
 | 资源 | 默认安装 | 构建产物 |
 | --- | --- | --- |
-| 简体中文 `zh-Hans`、英语 `en` | 是 | `yaya-core-0.2.1.zip` |
+| 简体中文 `zh-Hans`、英语 `en` | 是 | `yaya-core-0.3.2.zip` |
 | 繁体中文 `zh-Hant` | 否 | `yaya-lang-zh-Hant-0.2.0.zip` |
 | 日语 `ja` | 否 | `yaya-lang-ja-0.2.0.zip` |
 | 韩语 `ko` | 否 | `yaya-lang-ko-0.2.0.zip` |
@@ -150,12 +227,17 @@ python scripts/check_docstrings.py before.py after.py --allow approved-docstring
 | 工具 | 实际检查范围 |
 | --- | --- |
 | `detect_tells.py` | 仅支持 `en` 和 `zh-Hans`，扫描有限词句候选并输出位置和原因。命中需结合语境判断，不输出 AI 概率。 |
-| `check_rewrite.py` | 比较支持的 Markdown 片段、链接目标、数字及已识别单位、占位符等。支持的成对引号内容需 `--protect-quotes`，其他指定原样片段需 `--protect-literal`。 |
+| `check_rewrite.py` | 比较 Markdown 保护片段、链接、占位符，以及已识别的币种、数量级、科学计数法和单位。成对引号内容需 `--protect-quotes`，其他指定原样片段需 `--protect-literal`。 |
 | `check_comments.py` | Python `.py` / `.pyi` 普通 `#` 注释的修改边界，保护代码、字符串、行结构和已识别工具指令；不支持增删或移动注释行。 |
 | `check_docstrings.py` | 独立检查明确授权的 Python docstring 节点；绑定具体候选与字面值，保护其他代码、字符串和已识别示例。 |
 | `edit_evidence.py` | 保存任务开始的工作树原稿及 Git 基线，记录内容摘要、工具版本、命令、时间和状态；旧报告不能替代新验证。 |
 
-检查器只读原稿和候选；证据工具仅在指定目录写快照和报告。前两个正文工具接受每份不超过 2 MiB 的 UTF-8 输入。检查通过后仍需核对语义：数字是否属于原来的对象，条件、否定、归因和确定性是否保留。数字检查比较未保护正文中数字与已识别单位的内容和出现次数，无法确认归属，也可能漏掉未列出的单位变化。
+检查器只读原稿和候选；证据工具仅在指定目录写快照和报告。前两个正文工具接受每份不超过 2 MiB 的 UTF-8 输入。检查通过后仍需核对语义：数字是否属于原来的对象，条件、否定、归因和确定性是否保留。
+
+0.3.2 补上了 `USD 5 million → EUR 5 billion`、`1e-3 → 1e+3`、`3 个百分点 → 3 个基点`、
+`8 MiB → 8 GiB` 等变化的漏检。数量检查比较原样表达与出现次数，单位换算和数字格式变化也需复核。
+它无法确认数字归属、跨行币种标签或未列出的单位；支持范围见 [数量检查说明](core/yaya/references/validation.md#quantities-in-prose)，
+实际修复对照见 [验证记录](tests/results/2026-10-30-quantities/README.md)。
 
 `--allow` 自 0.2.1 起接受绑定具体文件摘要和差异的 JSON，拒绝旧式整类放行。docstring 改动会改变 `__doc__`，AST 比较只验证机械范围。用法、Windows 编码边界和批量统计见 [验证指南](core/yaya/references/validation.md)。普通润色仍直接交付，无需固定评分或报告。
 

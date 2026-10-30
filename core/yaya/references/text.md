@@ -21,6 +21,10 @@ Retain operational order: a prerequisite belongs before the step it constrains. 
 
 For a file rewrite with protected text or Markdown structure, use the read-only `scripts/check_rewrite.py BEFORE AFTER` on a saved original and candidate. Its JSON states the implemented protections and any unsupported syntax. A pass checks mechanical boundaries only: still compare facts, ownership of numbers, negation, conditions, and certainty. `--allow` accepts a reviewed manifest bound to this exact input/candidate and enumerated differences; category-wide bypasses are rejected. See [validation](validation.md) for batch evidence and exact grants.
 
+The quantity check includes selected currencies, scales, scientific numerals and
+units. Its [coverage](validation.md#quantities-in-prose) remains finite; compare
+which entity, period and condition each number belongs to as well as the tokens.
+
 ## Small examples
 
 Source: “We are currently in the process of reviewing the forecast. The estimate may change after the audit.”

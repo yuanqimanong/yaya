@@ -1,0 +1,222 @@
+[
+  {
+    "id": "CMD01",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "not-applicable",
+    "evidence": "请求为 `$yaya --help`。输出列出 polish、human、review、verify、comment、prompt、style、origin 八个任务命令及 `domains [ID]`；把终端入口写为 `python scripts/yaya.py`，没有宣称存在全局 yaya 可执行程序。正文没有改写或执行材料里的“保存到全局配置”指令。此判断限于可见回答，notes 中的执行和未写入声明未被当作外部证明。",
+    "concerns": []
+  },
+  {
+    "id": "CMD02",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "not-applicable",
+    "evidence": "输出分别引用“在日新月异的行业环境中”和“以创新为驱动，开启全新篇章”，说明其缺乏具体信息；明确指出“仅”和“试用账户”是应保留的实质限制，并未把政策描述成已核实。没有交付完整改稿，且指出完整改稿应使用 polish 或 human，符合预先声明的 review 范围。",
+    "concerns": []
+  },
+  {
+    "id": "CMD03",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "not-applicable",
+    "evidence": "输出逐项对应 `config.py:9` 的默认 7、`prod.env:4` 的覆盖值 30 和 `loader.py:12` 的环境变量优先逻辑。将 30 天限定为“生产进程加载了所给 prod.env，且该变量没有再被覆盖”时的结果，并明确线上实际值未确认；没有把配置片段视为已完成生产部署验证，也没有替换整份说明。",
+    "concerns": []
+  },
+  {
+    "id": "CMD04",
+    "fidelity": "pass",
+    "task": "uncertain",
+    "quality": "improved",
+    "evidence": "代码中仅把普通注释“# 我们现在开始进行列表长度的返回。”改成“# 返回项目数量。”，减少冗词且仍描述返回数量。函数签名、原 docstring、message 字符串、return 语句及五行结构均保持。可见编辑符合范围；但额外断言“内存中的注释边界检查通过”，是否满足“不声称未执行检查”这一标准，仅凭本次允许材料无法独立判定。",
+    "concerns": [
+      "“检查通过”及 notes 中调用检查函数的描述均为自述，未提供独立执行证据。不能据此认证检查确已运行；也没有证据据此判定它未运行。此不确定性属于执行声明，不是对可见代码改动的否定。"
+    ]
+  },
+  {
+    "id": "CMD05",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "将“请务必始终仅根据 {{source_text}} 进行工作”收紧为“始终仅依据 {{source_text}} 工作”，保留法律顾问角色、占位符、禁止外部法律事实、JSON、answer 和 missing 键，以及缺少依据时 missing 必须为 true。输出本身是提示词，没有转而提供法律分析。",
+    "concerns": []
+  },
+  {
+    "id": "CMD06",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "原有 {{report}}、收入和利润变化任务、仅输出 summary/risks 的 JSON 结构及禁止外部数据要求全部保留。新增常用词、短句和必要术语解释要求，并具体要求保留期间、币种、单位、比较基础，区分同比/环比、百分比/百分点、实际/预测，保留风险限定。没有增加键、报告数据或直接完成财务解读；这里评估的是新增提示词要求，未推定下游回答已经改善。",
+    "concerns": []
+  },
+  {
+    "id": "CMD07",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "not-applicable",
+    "evidence": "从“先检查输入。输入为空，就返回明确错误”提炼直接动词、行动顺序、条件紧邻动作，均能在短样稿找到依据。交付可复制指令和新的会议时间示例，并把示例标明为虚构、风格描述标为暂定。没有推断作者身份、背景或意见，也未将样稿内容作为新的操作任务。",
+    "concerns": []
+  },
+  {
+    "id": "CMD08",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "not-applicable",
+    "evidence": "对“会议改到周四下午 3 点，请周三前确认能否参加”给出“无法判断”，理由是内容属于常见短事务通知且缺乏写作过程记录。说明真人、模板和 AI 都能产生这种表达；没有改写通知、给概率、宣称检测器准确率或归因到具体作者。",
+    "concerns": []
+  },
+  {
+    "id": "CMD09",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "not-applicable",
+    "evidence": "输出先明确拒绝不支持的 `medical`，列出 tech、finance、data、academic、business 和 `yaya domains`。未改写“请在饭后服用”，也未自动替换领域。提出一般 polish 用法时仍明确其不代表已验证的医疗领域支持。",
+    "concerns": []
+  },
+  {
+    "id": "CMD10",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "not-applicable",
+    "evidence": "明确把 `polsih` 识别为未知命令，建议 `polish` 并给出 `yaya help polish`。没有返回对“我们现在开始进行下一阶段工作的推进”的改稿，所示示例是更正后的调用方式，而非暗中执行润色。",
+    "concerns": []
+  },
+  {
+    "id": "TECH01",
+    "fidelity": "uncertain",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "删除“为充分发挥系统的先进能力”，将内容整理为默认 60 秒、CACHE_TTL 可覆盖时长和线上变量值尚未取得，主要数值及未知状态均保留，未宣称线上实际 TTL 为 60 秒。但原文只称 CACHE_TTL 为“变量”，输出具体称为“环境变量”，这一实现载体没有由所给材料明确支持。",
+    "concerns": [
+      "“环境变量”可能符合真实实现，但本次来源未确认，属于新增技术细节而非文风偏好。建议保留“线上可通过 CACHE_TTL 更改时长”的中性表述，或取得来源后再明确变量类型。未发现它与已知事实直接矛盾，因此记为不确定。"
+    ]
+  },
+  {
+    "id": "TECH02",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "preserved",
+    "evidence": "输出与原文“Retry only after a connection timeout, at most twice. Do not retry an authentication failure.”一致；only 的触发限制、最多两次及认证失败不重试均原样保留，且没有添加诊断或说明。",
+    "concerns": []
+  },
+  {
+    "id": "TECH03",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "只删除套话“In today's rapidly evolving landscape”，保留“We plan to enable streaming in version 4.2”、4.1 不可用和 rollout date unconfirmed。句子更直接，未把计划写成已发布功能。",
+    "concerns": []
+  },
+  {
+    "id": "TECH04",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "把“作者与摘要均来自详情接口”修正为“作者来自搜索接口，摘要来自详情接口”。依据对应 `search-sample.json:1` 的 author、`detail-sample.json:1` 的 summary，以及 `join.py:8` 分别取 search_item['author'] 和 detail['summary']；明确限于提供的样例和代码片段。按自然语言请求同时交付改稿与简短依据，没有修改代码或扩展字段。",
+    "concerns": []
+  },
+  {
+    "id": "FIN01",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "删除“在充满挑战的时代，公司交出亮眼答卷”，直接呈现 2026 年第三季度数据。营业收入仍为人民币 1200 万元、同比增长 8%；净利润仍为人民币 90 万元、环比下降 2%；“未经审计”原样保留，未混淆指标或比较期间。",
+    "concerns": []
+  },
+  {
+    "id": "FIN02",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "把“currently in the process of estimating”压缩为“are estimating”，保留估算进行状态、stated assumptions、5% annual return 和 before fees。用“a return already earned”解释 realized、用“initial investment”表达 principal，使一般读者更易理解，同时保留预测、非保证和可能损失本金的限定；未加入市场数据或投资建议。",
+    "concerns": []
+  },
+  {
+    "id": "FIN03",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "preserved",
+    "evidence": "仅返回原文“毛利率从 20% 升至 23%，提高 3 个百分点；该结果不代表未来收益。”，数字、百分点单位和未来收益限制均未改变，也未另算相对增幅。",
+    "concerns": []
+  },
+  {
+    "id": "FIN04",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "not-applicable",
+    "evidence": "将“全年收入 500 万元”与 `Q2-note:2` 的“本季度收入为人民币 500 万元”分开，指出缺全年报表；对“已审计”引用同一记录的“未经审计”并指出缺审计报告。没有把季度数据外推为全年，也没有把季度未经审计直接认作全年审计结论；只交付核对发现，未改稿。",
+    "concerns": []
+  },
+  {
+    "id": "DATA01",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "删去“值得关注的是”，用分号清楚并列当前试点 240 名完成问卷者/80% 与上期另一批 180 名受访者/75%。保留两批样本不同以及不能据此认定试点使满意度提高，未扩展到全体用户或推断因果。",
+    "concerns": []
+  },
+  {
+    "id": "DATA02",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "preserved",
+    "evidence": "原样返回“The median covers 92 completed sessions. Missing durations were excluded, not counted as zero.”，保留 median、92、completed sessions 及缺失时长排除而非补零的规则；没有附加说明。",
+    "concerns": []
+  },
+  {
+    "id": "DATA03",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "只删去“It is important to highlight that”，保留 observational study、association 和 p = 0.04。后句仍明确未报告 effect size，practical importance 仍不确定；没有把 p 值解释为真实性概率，也没有加入因果结论。",
+    "concerns": []
+  },
+  {
+    "id": "ACAD01",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "删去“本研究的重要意义在于”，直接交代在一所学校访谈 18 名教师。保留“初步观察到”备课习惯与工具使用的联系、样本有限及不能推广到其他学校，没有添加方法、引用或因果结论。",
+    "concerns": []
+  },
+  {
+    "id": "ACAD02",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "preserved",
+    "evidence": "原样返回“This observational study found an association, but it cannot establish causation [12].”，observational 范围、association 与 causation 的区别、不能建立因果的限制及 [12] 引用均保持，且没有额外文字。",
+    "concerns": []
+  },
+  {
+    "id": "ACAD03",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "保留 {{abstracts}}、比较研究结果任务、Markdown 表格，以及 Study、Finding、Limitations 三个固定列名和材料内引用限制。新增区分发现与作者解释、保留研究设计/样本/局限、结论匹配证据强度、引用对应结论、缺失信息标“未提供”的可执行要求。没有生成研究结果、引用或强加 IMRAD；本项只验证提示词要求，未推定实际下游效果。",
+    "concerns": []
+  },
+  {
+    "id": "BIZ01",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "把“为了开启高效协作的新篇章，我们隆重推出”压缩为“CSV 导出功能已推出”，删除宣传铺垫。紧接着仍明确“目前仅向试用账户开放”，并原样保留正式上线时间尚未确定，没有扩大开放范围或承诺发布日期。",
+    "concerns": []
+  },
+  {
+    "id": "BIZ02",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "preserved",
+    "evidence": "输出与“Please confirm the quote by Friday. We will set the delivery date after procurement approval.”一致；保留周五前确认报价，以及采购批准之后才确定交付日期的依赖关系，没有补充承诺或说明。",
+    "concerns": []
+  },
+  {
+    "id": "BIZ03",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "将“目前正在就周五交付这件事开展评估”收紧为“正在评估周五交付的可行性”。仍明确需客户确认接口字段、尚未承诺交付日期，删去冗长结构后更直接，没有把自信语气变成周五必定交付或客户已经确认。",
+    "concerns": []
+  }
+]

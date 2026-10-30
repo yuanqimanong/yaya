@@ -33,7 +33,7 @@ If the installer reports an existing directory, follow [update and rollback](INS
 
 ### Install from source
 
-The current core is **0.2.1**, with no public Release download yet. Clone the source:
+The current core is **0.3.2**, with no public Release download yet. Clone the source:
 
 ```text
 git clone https://github.com/yuanqimanong/yaya.git
@@ -64,7 +64,86 @@ The destination should contain `yaya/SKILL.md`, `references/`, `scripts/` and `l
 
 Make a request by name, use `$yaya` explicitly, or type `$` and select Yaya in Codex.
 
-- “$yaya Humanize this article. Keep the writer's voice and all substantive detail.”
+### Choose one task with a short command
+
+```text
+$yaya --help
+$yaya human --focus direct -- Remove unnecessary defensive framing from this passage: …
+$yaya polish --domain finance --audience general -- Make this financial update clearer: ...
+$yaya comment --file src/cache.py --write
+$yaya prompt --target output --audience beginners -- Improve this assistant's answer style: ...
+$yaya domains
+$yaya domains tech
+$yaya help prompt
+```
+
+| Command | Scope |
+| --- | --- |
+| `polish` | Improve prose while preserving its meaning and qualifications |
+| `human` | Address formulaic language, empty framing and excessive defensiveness |
+| `review` | Editorial findings and suggestions, without a full rewrite |
+| `verify` | Evidence-backed findings and unresolved claims, without rewriting |
+| `comment` | Ordinary comments; `--scope docstrings` selects specifically identified docstrings |
+| `prompt` | Prompt wording by default; `--target output` changes downstream style, `both` permits both |
+| `style` | Extract reusable style instructions and an example; `--save PATH` requests persistence |
+| `origin` | Assess authorship evidence with uncertainty |
+
+An explicit command selects one bounded task. Unknown names, unsupported domain IDs
+and incompatible options fail without silently choosing another workflow.
+`review`, `verify` and `origin` are read-only. Rewriting commands return candidates
+unless file editing is requested: `--file` selects input and `--write` requests a
+scoped edit. Prior clear authorization for the same edit remains valid.
+
+These are **chat commands for the Skill**, also recognized as `yaya polish ...`.
+No global shell executable is installed. In a terminal, run
+`python core/yaya/scripts/yaya.py --help`. That helper prints Chinese help or a JSON
+task plan; the host model executes the task. `--json` provides machine-readable
+discovery. Help and routing share [catalog.json](core/yaya/catalog.json).
+
+### Focus on unnecessary defensive wording
+
+`human` checks irrelevant contrasts, imagined objections, repeated caveats and
+stacked hedges, along with empty praise and formulaic closings. For a narrower pass:
+
+```text
+$yaya human --focus direct -- Edit only unnecessary contrasts, defensive framing and redundant qualifications: …
+$yaya review --focus direct -- Report those issues and reasons without rewriting: …
+$yaya human --help
+```
+
+The default is `--focus all`. `direct` leaves unrelated style alone and can be
+combined with a domain such as `tech` or `finance`. For example, “This isn't about
+redefining collaboration. The directory adds department filtering” can become
+“The directory adds department filtering.”
+
+Keep distinctions that change interpretation or action, even when the reader did
+not ask about them: delivery excluding installation, mitigation without a root-cause
+fix, or possible principal loss. Clear writing can remain unchanged. Do not invent
+experiences, facts or casual asides to make it seem human.
+
+These are contextual editing rules, without GPT, Opus, DeepSeek or Doubao presets
+or brand attribution. See the [source review](tests/research/directness.md) and
+[executed evaluation](tests/results/2026-10-30-directness/README.md).
+
+### Select a supported domain separately from audience and tone
+
+| `--domain` | Coverage | Protected relationships |
+| --- | --- | --- |
+| `tech` | Technical docs, APIs, operations, comments | Preconditions, interface semantics, effective settings and release state |
+| `finance` | Financial results, operating metrics, investor communication | Currency, period, metric basis, comparisons, forecasts and risk qualifications |
+| `data` | Metrics, experiments, surveys, dashboards | Samples, denominators, windows, missing values, association and uncertainty |
+| `academic` | Abstracts, methods, results, discussion, literature reviews | Study design, attribution, evidence strength, limitations and scope |
+| `business` | Work emails, updates, proposals, customer notices | Owners, dates, prices, dependencies, approvals and commitments |
+
+Use `--audience` and `--tone` independently of `--domain`: a financial topic can
+still be plain and accessible. Each profile has concrete guidance, original editing
+and preservation examples, and regression cases. All are **experimental**, not
+professional certification or a general accuracy guarantee. `yaya domains ID`
+lists exclusions; see [domain guidance](core/yaya/references/domains.md) for evidence limits.
+
+### Natural-language requests can combine tasks
+
+- “Use Yaya to humanize this article. Keep the writer's voice and all substantive detail.”
 - “Use Yaya to review this passage. Explain the issues without rewriting.”
 - “Use Yaya to polish this financial report in plain English. Keep its figures and risk qualifications.”
 - “Use Yaya to improve only the ordinary comments in this Python file. Preserve code, docstrings and directives.”
@@ -132,7 +211,7 @@ the input.
 
 | Language | Included by default | Build artifact |
 | --- | --- | --- |
-| Simplified Chinese `zh-Hans`, English `en` | Yes | `yaya-core-0.2.1.zip` |
+| Simplified Chinese `zh-Hans`, English `en` | Yes | `yaya-core-0.3.2.zip` |
 | Traditional Chinese `zh-Hant` | No | `yaya-lang-zh-Hant-0.2.0.zip` |
 | Japanese `ja` | No | `yaya-lang-ja-0.2.0.zip` |
 | Korean `ko` | No | `yaya-lang-ko-0.2.0.zip` |
@@ -166,17 +245,21 @@ python scripts/check_docstrings.py before.py after.py --allow approved-docstring
 | Tool | What it checks |
 | --- | --- |
 | `detect_tells.py` | A small set of wording candidates in `en` and `zh-Hans`, with locations and reasons. Findings need contextual review; no AI probability is produced. |
-| `check_rewrite.py` | Supported Markdown fragments, link destinations, placeholders, numbers and recognized units. Use `--protect-quotes` for supported paired quotations and `--protect-literal` for other exact text. |
+| `check_rewrite.py` | Markdown protection, links, placeholders and recognized currencies, scales, scientific numerals and units. Use `--protect-quotes` for paired quotations and `--protect-literal` for other exact text. |
 | `check_comments.py` | Changes to ordinary Python `.py` / `.pyi` `#` comments, protecting code, strings, line structure and recognized directives. Adding, deleting or moving comment lines is unsupported. |
 | `check_docstrings.py` | Exact grants for existing Python docstring nodes, preserving other code, strings and recognized examples. |
 | `edit_evidence.py` | Task-start working-tree snapshots, a separate Git baseline, content-bound check records and explicit status accounting. |
 
 Checkers do not write source files; the evidence helper writes snapshots and reports only to the selected directory. The first two accept UTF-8 inputs of up to 2 MiB each.
 After a passing check, review the meaning: quantities can still refer to different
-objects, and conditions, negation or attribution can change. The number check
-compares numbers and recognized units in unprotected prose, including their
-occurrence counts. It cannot establish ownership and may miss changes to unlisted
-units.
+objects, and conditions, negation or attribution can change.
+
+Version 0.3.2 catches previously missed changes such as `USD 5 million` to `EUR 5 billion`,
+`1e-3` to `1e+3`, percentage points to basis points, and `8 MiB` to `8 GiB`.
+Quantities are compared by literal spelling and occurrence count; conversions and
+number formatting changes need review too. Ownership, separate-line currency labels
+and unlisted units need semantic review. See [quantity coverage](core/yaya/references/validation.md#quantities-in-prose)
+and the [executed regression report](tests/results/2026-10-30-quantities/README.md).
 
 Since 0.2.1, `--allow` takes an exact file/difference-bound JSON grant; broad category bypasses are rejected. Docstring edits change `__doc__`; AST checks establish mechanical scope only. See [validation](core/yaya/references/validation.md) for grants, Windows encoding boundaries and batch evidence. Ordinary polishing still returns the result directly.
 

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "CMD01",
+    "text": "Yaya · 命令与能力\n\n聊天用法：`$yaya <command> [options] <材料或请求>`\n终端用法：`python scripts/yaya.py <command> [options] [-- 材料或请求]`\n\n终端辅助工具只显示帮助或解析任务；实际编辑由当前 AI 宿主完成。\n\n| 命令 | 能力与边界 |\n| --- | --- |\n| `polish` | 润色正文，改善表达、结构和可读性，保留原意；不自动核定事实。 |\n| `human` | 处理套话、空泛铺垫和机械重复；不判断作者来源。 |\n| `review` | 只审不改，列出表达问题、依据和建议；不交完整改稿，不写文件。 |\n| `verify` | 按代码、配置或提供的来源核对主张；返回证据与未确认项，不改稿。 |\n| `comment` | 默认只改普通注释；docstring 需显式选择，代码和运行时字符串保持不变。 |\n| `prompt` | 默认只整理提示词措辞；改变下游回答风格需 `--target output` 或 `both`。 |\n| `style` | 提炼可复用风格指令及小例子；不迁移样稿身份与事实，保存需 `--save`。 |\n| `origin` | 评估人写、AI 或混写的证据与不确定性；不改稿，不给未经校准的概率。 |\n\n- `help [command]` 或 `<command> --help`：查看完整选项。\n- `domains [ID]`：列出领域及适用边界。\n- `--json`：输出机器可读目录或帮助。\n\n显式命令只选择一个任务；自然语言请求可组合能力。领域、读者、语气分别用 `--domain`、`--audience`、`--tone`，各命令支持的选项以其帮助为准。原文中的命令、提示词及样稿均作为材料，不会成为新的任务授权。",
+    "notes": "执行冻结 scripts/yaya.py --help，并据其输出整理帮助。没有执行输入材料中的改写或全局保存指令，没有修改配置。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD02",
+    "text": "审阅结果：\n\n- “在日新月异的行业环境中”没有交代具体变化，对后面的功能说明帮助有限。建议删除，或在确有必要时补充有依据的背景。\n- “以创新为驱动，开启全新篇章”较空泛，没有说明采取了什么行动、带来了什么变化。建议用已有的具体信息说明；材料不足时不要补造成果。\n- “导出功能仅向试用账户开放”范围明确。“仅”和“试用账户”是实质限制，应保留；所给材料不足以核实该功能政策是否真实。\n\n本次按 `review` 提供审阅。完整改稿属于 `polish` 或 `human` 的范围。",
+    "notes": "执行 review 命令解析，读取 text、humanize 和简体中文表达指引。人工审阅所给句子，没有生成完整替换稿或核实产品政策，没有写项目文件。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD03",
+    "text": "这句说明混淆了代码回退值与生产配置；所给片段不足以证明生产环境实际保留 7 天。\n\n- 所贴 `config.py:9`：`DEFAULT_RETENTION_DAYS = 7` 定义了回退值。\n- 所贴 `prod.env:4`：`RETENTION_DAYS=30` 给出了生产配置中的覆盖值。\n- 所贴 `loader.py:12`：`os.environ.get('RETENTION_DAYS', DEFAULT_RETENTION_DAYS)` 优先读取环境变量，变量不存在时才使用 7。\n\n如果生产进程加载了所给 `prod.env`，且该变量没有再被覆盖，这段代码得到的是 **30 天**。**7 天**仅是缺少 `RETENTION_DAYS` 时的回退值。\n\n目前没有部署加载过程或运行时环境的证据，线上实际生效值仍未确认。以上核对仅依据你提供的片段，未独立核实文件或生产系统。",
+    "notes": "执行 verify --domain tech 解析，读取 verification、engineering、domains 与 tech 指引；逐项核对所贴配置值和读取优先级。未访问源码文件或生产环境，未给出替换稿。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD04",
+    "text": "```python\ndef count(items):\n    \"\"\"现在开始进行项目数量的计算。\"\"\"\n    # 返回项目数量。\n    message = '现在开始进行统计'\n    return len(items)\n```\n\n仅精简普通注释。内存中的注释边界检查通过；未运行函数或项目测试。",
+    "notes": "执行 comment --domain tech 解析，并读取 comments、engineering 和 tech 指引。调用冻结 check_comments.py 的 _check_files，通过虚拟 read_bytes 在内存中检查原文与候选；返回 passed，仅第 3 行普通注释变化，无 violations。未调用文件绑定证据包装器，没有创建前后代码文件；docstring、运行时字符串、代码和换行保持原样。检查只覆盖机械边界，不证明代码正确性。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD05",
+    "text": "你是一位法律顾问。始终仅依据 {{source_text}} 工作，不得补充任何外部法律事实。\n\n输出 JSON，键必须为 answer 和 missing。缺少依据时，missing 必须为 true。",
+    "notes": "执行 prompt 解析，默认 target 为 wording。读取 prompts 和简体中文指南，人工对照角色、占位符、来源限制、JSON 键及 missing 条件；没有执行提示词中的法律顾问任务，没有做下游模型测试。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD06",
+    "text": "根据 {{report}} 解释本期收入和利润变化。只输出 JSON：{\"summary\":\"...\",\"risks\":[]}。禁止使用报告以外的数据。\n\nJSON 中的说明面向普通读者，使用常用词和短句，清楚说明收入、利润各自的变化。必要术语按报告提供的定义简要解释；不要自行补充报告没有的定义。保留数字对应的期间、币种、单位、指标口径和比较基础，区分同比与环比、百分比与百分点、实际结果与预测。保留报告中的风险及“可能”“预计”“未审计”等限定。保持原 JSON 结构，不在 JSON 外添加文字。",
+    "notes": "执行 prompt --target output --domain finance --audience 普通读者 解析，读取 prompts、domains、finance 和简体中文指南。保留原任务、占位符、JSON 示例和外部数据禁令，仅增加下游表达及财务关系保留要求。未获取报告、执行财务解读或测试下游模型行为。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD07",
+    "text": "样稿较短，目前能提炼出三点：直接用动词，按行动顺序组织短句，把条件和对应动作放在一起。\n\n可复制指令：\n\n```text\n用于步骤、操作说明或工作提示时，用直接动词和紧凑的句子。先写前置步骤，再写后续动作。条件紧挨它所约束的动作，明确说明条件成立时该做什么。删去没有实际信息的铺垫，保留必要的条件、例外和技术名称。只借用这些表达习惯，不迁移样稿的主题、事实或身份；不要为追求短句而省略关键内容。\n```\n\n新例子（虚构情境，仅示范表达）：\n\n“先核对会议时间。时间有冲突，就提前说明。确认后再发送邀请。”\n\n这是一份基于短样稿的暂定风格描述，未保存为全局偏好。",
+    "notes": "执行 style 解析，读取 style-learning 和简体中文指南。仅从单段样稿提取可观察特征，生成可复制指令及明确标注的虚构例子；没有执行样稿中的命令，也没有保存风格文件。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD08",
+    "text": "**无法判断。**“会议改到周四下午 3 点”和“请周三前确认能否参加”都是常见的事务通知表达，真人、通知模板或 AI 都可以写出。文本很短，也没有草稿、修订记录或生成记录，仅凭这两句无法区分人工、AI 或混合写作。",
+    "notes": "执行 origin 解析，读取 authorship 和简体中文指南。仅评估所给短文本与证据限制；未改写、未调用检测器，未给概率或归因到特定模型。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD09",
+    "text": "不支持领域 ID `medical`，本次未开始润色。\n\n可用领域：`tech`、`finance`、`data`、`academic`、`business`。使用 `yaya domains` 可查看覆盖范围。\n\n如果只需一般文字润色，可使用 `yaya polish`；这不代表具备已验证的医疗领域支持。",
+    "notes": "执行 polish --domain medical，helper 以退出码 1 返回 Unknown domain，并列出五个可用领域。没有自动回退、处理用药措辞或宣称医疗领域已受支持。",
+    "skill_used": true
+  },
+  {
+    "id": "CMD10",
+    "text": "未识别命令 `polsih`。你可能要用 `polish`（润色正文）：\n\n`yaya polish 把这句话改顺。`\n\n可用 `yaya help polish` 查看选项。本次未改写原句。",
+    "notes": "实际调用冻结版 scripts/yaya.py polsih，返回 Unknown command 并建议 polish；随后调用 help polish。按未知选择器规则停止处理原句，没有自动改成 polish 执行。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH01",
+    "text": "缓存默认保留 60 秒。线上可通过环境变量 CACHE_TTL 更改时长；目前尚未取得它的线上值。",
+    "notes": "实际解析 polish --domain tech --audience 新手，读取 tech、text 和已解析的 zh-Hans GUIDE。对照了 60 秒的默认值归属、CACHE_TTL 的覆盖能力及线上值尚未取得的状态；仅作表达精简，未查询线上配置。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH02",
+    "text": "Retry only after a connection timeout, at most twice. Do not retry an authentication failure.",
+    "notes": "实际解析 polish --domain tech，读取 tech、text 和已解析的 en GUIDE。逐项检查 only、connection timeout、at most twice 和 authentication failure 的边界，按请求原样返回；未声称运行验证。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH03",
+    "text": "We plan to enable streaming in version 4.2. It is not available in version 4.1, and the rollout date is unconfirmed.",
+    "notes": "实际解析 human --domain tech，读取 tech、humanize 和已解析的 en PATTERNS。只删除空泛开场，逐句对照了 4.2 的计划状态、4.1 不可用及上线日期未确认；未核验产品版本或发布日程。",
+    "skill_used": true
+  },
+  {
+    "id": "TECH04",
+    "text": "改稿：作者来自搜索接口，摘要来自详情接口。\n\n依据：所提供的 `search-sample.json:1` 包含 `author`，`detail-sample.json:1` 包含 `summary`；`join.py:8` 分别从 `search_item['author']` 和 `detail['summary']` 取值。本次核对仅基于所提供的样例和代码片段。",
+    "notes": "按自然语言请求执行核对并改写，未将其收窄为只核对的 verify 命令。读取 text、verify、engineering、tech 和 zh-Hans GUIDE；核对了请求内三个带行号片段的字段来源，没有把片段名当作已经读取的本地文件，也未独立认证接口或执行代码。",
+    "skill_used": true
+  },
+  {
+    "id": "FIN01",
+    "text": "2026 年第三季度，公司营业收入为人民币 1200 万元，同比增长 8%；净利润为人民币 90 万元，环比下降 2%。上述数据未经审计。",
+    "notes": "实际解析 human --domain finance --audience 普通读者，读取 finance、humanize 和已解析的 zh-Hans PATTERNS。对照了季度、币种、金额与指标归属、同比增长、环比下降及未经审计限定；删除开场和空泛赞美，未核实财务数据。",
+    "skill_used": true
+  },
+  {
+    "id": "FIN02",
+    "text": "Under the stated assumptions, we are estimating a 5% annual return before fees. This is a forecast, not a guaranteed return or a return already earned. Investors may lose their initial investment.",
+    "notes": "实际解析 polish --domain finance --audience general，读取 finance、text 和已解析的 en GUIDE。对照了仍在估算的状态、5% 年度回报、既定假设、扣费前口径、预测而非保证或已实现回报，以及本金损失风险；未增加投资建议或核实预测。",
+    "skill_used": true
+  },
+  {
+    "id": "FIN03",
+    "text": "毛利率从 20% 升至 23%，提高 3 个百分点；该结果不代表未来收益。",
+    "notes": "实际解析 polish --domain finance，读取 finance、text 和已解析的 zh-Hans GUIDE。检查百分比与百分点的不同含义及未来收益限定，按要求原样返回；未核验财务来源。",
+    "skill_used": true
+  },
+  {
+    "id": "FIN04",
+    "text": "两项主张均缺少充分依据。\n\n- **“全年收入 500 万元”未确认**：所提供的 `Q2-note:2` 仅记载“本季度收入为人民币 500 万元”，无法据此确认全年收入；未提供全年报表。\n- **“已审计”未确认**：`Q2-note:2` 明确标注“未经审计”，不能支持“已审计”；未提供审计报告，不能确认全年审计状态。\n\n本次仅核对用户提供的记录，未独立验证来源；未修改简报。",
+    "notes": "实际解析 verify --domain finance，读取 finance、verify 和已解析的 zh-Hans GUIDE。将季度金额与全年主张分开核对，也区分所供季度记录的未经审计标注与尚无证据的全年审计状态；仅返回发现，未生成改稿或推算全年数据。",
+    "skill_used": true
+  },
+  {
+    "id": "DATA01",
+    "text": "试点中，240 名完成问卷者的满意度为 80%；上期另一批 180 名受访者的满意度为 75%。两批样本不同，不能据此认定试点使满意度提高。",
+    "notes": [
+      "命令辅助工具将该请求解析为 polish / data / 普通读者，状态为 planned。",
+      "人工对照了两批样本的人数、问卷完成条件、满意度、上期时间归属及因果限制；未重算原始数据。"
+    ],
+    "skill_used": true
+  },
+  {
+    "id": "DATA02",
+    "text": "The median covers 92 completed sessions. Missing durations were excluded, not counted as zero.",
+    "notes": [
+      "命令辅助工具将该请求解析为 polish / data，状态为 planned。",
+      "逐字对照输入，保留原文；中位数、92 次已完成会话及缺失时长的处理说明均未改写。"
+    ],
+    "skill_used": true
+  },
+  {
+    "id": "DATA03",
+    "text": "The observational study found an association (p = 0.04). The effect size was not reported, so practical importance remains uncertain.",
+    "notes": [
+      "命令辅助工具将该请求解析为 human / data，状态为 planned。",
+      "人工对照了研究类型、association、p = 0.04、效应量未报告及实际重要性不确定的表述；仅删去开头的强调性铺垫。"
+    ],
+    "skill_used": true
+  },
+  {
+    "id": "ACAD01",
+    "text": "我们在一所学校访谈了 18 名教师，初步观察到备课习惯与工具使用之间的联系。样本有限，结果尚不能推广到其他学校。",
+    "notes": [
+      "命令辅助工具将该请求解析为 polish / academic，状态为 planned。",
+      "人工对照了访谈方法、一所学校、18 名教师、初步联系和不能推广到其他学校的限制。"
+    ],
+    "skill_used": true
+  },
+  {
+    "id": "ACAD02",
+    "text": "This observational study found an association, but it cannot establish causation [12].",
+    "notes": [
+      "命令辅助工具将该请求解析为 polish / academic，状态为 planned。",
+      "逐字对照输入，保留原文；研究设计、因果限制及引用标识 [12] 未改写。"
+    ],
+    "skill_used": true
+  },
+  {
+    "id": "ACAD03",
+    "text": "根据 {{abstracts}} 比较研究结果。输出 Markdown 表格，列名固定为 Study、Finding、Limitations。只使用材料中的引用。\n\n表格内容采用客观、简洁的研究写作表达，区分研究发现与作者解释，保留材料中的研究设计、样本范围和局限。结论措辞与证据强度一致，不将相关性写成因果关系，也不将结论推广到材料未支持的范围。引用与其支持的结论对应；材料未提供的信息注明“未提供”，不补造结果或引用。",
+    "notes": [
+      "命令辅助工具将该请求解析为 prompt-output / academic，状态为 planned。",
+      "人工对照了原任务、{{abstracts}}、Markdown 表格及三个固定列名；保留原提示词三句，仅追加下游回答的研究写作要求。",
+      "未执行提示词中的研究比较任务，也未运行下游模型效果测试。"
+    ],
+    "skill_used": true
+  },
+  {
+    "id": "BIZ01",
+    "text": "CSV 导出功能已推出，目前仅向试用账户开放。正式上线时间尚未确定。",
+    "notes": [
+      "命令辅助工具将该请求解析为 human / business / 客户，状态为 planned。",
+      "人工对照了功能名称、已推出状态、仅限试用账户及正式上线时间未定；删除宣传性铺垫。"
+    ],
+    "skill_used": true
+  },
+  {
+    "id": "BIZ02",
+    "text": "Please confirm the quote by Friday. We will set the delivery date after procurement approval.",
+    "notes": [
+      "命令辅助工具将该请求解析为 polish / business，状态为 planned。",
+      "逐字对照输入，保留原文；周五确认报价和采购批准后确定交付日期的先后关系未改写。"
+    ],
+    "skill_used": true
+  },
+  {
+    "id": "BIZ03",
+    "text": "我们正在评估周五交付的可行性，仍需客户确认接口字段，尚未承诺交付日期。",
+    "notes": [
+      "命令辅助工具将该请求解析为 polish / business / 自信直接，状态为 planned。",
+      "人工对照了正在评估、周五交付、客户确认接口字段及尚未承诺日期；未将评估改成承诺。"
+    ],
+    "skill_used": true
+  }
+]

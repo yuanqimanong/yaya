@@ -11,6 +11,9 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ROOT / "core" / "yaya"
+sys.path.insert(0, str(CORE / "scripts"))
+from yaya import load_catalog
+
 spec = importlib.util.spec_from_file_location("yaya_packs", CORE / "scripts" / "packs.py")
 packs = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(packs)
@@ -59,18 +62,19 @@ def build(output: Path) -> dict:
         if meta["id"] != directory.name:
             raise ValueError("Pack directory must equal its ID")
     source_files = [CORE / name for name in (
-        "SKILL.md", "LICENSE", "version.json", "agents/openai.yaml",
+        "SKILL.md", "LICENSE", "version.json", "agents/openai.yaml", "catalog.json",
         "scripts/packs.py", "scripts/check_comments.py", "scripts/detect_tells.py",
         "scripts/check_rewrite.py", "scripts/prose_scan.py", "scripts/tell_rules.json",
-        "scripts/check_docstrings.py", "scripts/edit_evidence.py",
+        "scripts/check_docstrings.py", "scripts/edit_evidence.py", "scripts/yaya.py",
     )]
-    source_files.extend(sorted((CORE / "references").glob("*.md")))
+    source_files.extend(sorted((CORE / "references").rglob("*.md")))
     for directory in bundled:
         source_files.extend(sorted(directory.iterdir()))
     for source in source_files:
         packs.no_links(source)
         if not source.is_file():
             raise ValueError(f"Required runtime file missing: {source.relative_to(CORE)}")
+    load_catalog(CORE)
     output.mkdir(parents=True, exist_ok=True)
     # Reject existing links before writing any asset or index.
     for filename in [f"yaya-core-{version['version']}.zip", "catalog.json", "SHA256SUMS", *[f"yaya-lang-{p.name}-{packs.validate(p)['version']}.zip" for p in optional]]:

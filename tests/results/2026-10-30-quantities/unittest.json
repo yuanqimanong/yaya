@@ -1,0 +1,40 @@
+{
+  "tests_run": 241,
+  "failures": [],
+  "errors": [],
+  "skipped": [
+    [
+      "test_tstring_comments_are_immutable (test_comments.CommentChecks.test_tstring_comments_are_immutable)",
+      "Template strings require Python 3.14+"
+    ],
+    [
+      "test_linked_backup_directory_prevents_move (test_packs.PackChecks.test_linked_backup_directory_prevents_move)",
+      "Directory symlinks and junctions unavailable"
+    ],
+    [
+      "test_linked_data_root_and_destination_rejected (test_packs.PackChecks.test_linked_data_root_and_destination_rejected)",
+      "Directory symlinks and junctions unavailable"
+    ],
+    [
+      "test_linked_empty_resolution_root_is_invalid_not_missing (test_packs.PackChecks.test_linked_empty_resolution_root_is_invalid_not_missing)",
+      "Directory symlinks and junctions unavailable"
+    ],
+    [
+      "test_linked_pack_directory_and_backups_rejected (test_packs.PackChecks.test_linked_pack_directory_and_backups_rejected)",
+      "Directory symlinks and junctions unavailable"
+    ],
+    [
+      "test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='yaya-core-0.3.2.zip')",
+      "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test _bswaxzg\\\\unrelated file 0.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test _bswaxzg\\\\linked output 0\\\\yaya-core-0.3.2.zip'"
+    ],
+    [
+      "test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='catalog.json')",
+      "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test _bswaxzg\\\\unrelated file 1.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test _bswaxzg\\\\linked output 1\\\\catalog.json'"
+    ],
+    [
+      "test_existing_output_links_do_not_overwrite_their_targets (test_release.ReleaseBuildTests.test_existing_output_links_do_not_overwrite_their_targets) (filename='SHA256SUMS')",
+      "This host cannot create symbolic links: [WinError 1314] 客户端没有所需的特权。: 'D:\\\\AIProjects\\\\yaya\\\\.release test _bswaxzg\\\\unrelated file 2.txt' -> 'D:\\\\AIProjects\\\\yaya\\\\.release test _bswaxzg\\\\linked output 2\\\\SHA256SUMS'"
+    ]
+  ],
+  "successful": true
+}

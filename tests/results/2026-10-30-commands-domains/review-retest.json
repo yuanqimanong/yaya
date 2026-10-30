@@ -1,0 +1,70 @@
+[
+  {
+    "id": "CMD03",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "not-applicable",
+    "evidence": "输出将 `config.py:9` 的代码默认 7 天、`prod.env:4` 的配置值 30 和 `loader.py:12` 的环境变量优先读取逻辑分别列明。将 30 天限定在生产进程加载了所给配置的前提下，并明确片段无法确认实际加载、未核验线上状态。交付核对发现而非完整替换稿，符合当前 verify 请求。判断依据为当前正文与所给片段，不把 notes 的工具调用自述当作独立执行证据。",
+    "concerns": []
+  },
+  {
+    "id": "CMD04",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "正文只返回完整代码，将普通注释“# 我们现在开始进行列表长度的返回。”精简为“# 返回列表长度。”，仍准确描述 len(items)。函数签名、docstring、message 字符串、return 语句、缩进和五行结构保持，未改动注释之外的可见代码。正文没有宣称检查已执行或通过；本项通过依据是对当前原文与代码块的直接比较，而非 notes 中的检查结果。",
+    "concerns": [
+      "notes 声称在内存中调用检查函数并获得 passed、changed_comment_lines=[3] 和退出码 0；这些仍是自述，允许读取的材料没有独立执行记录，无法据此认证实际运行或测试通过。该限制不影响对可见改动范围的判断，也不构成检查未执行的证据。"
+    ]
+  },
+  {
+    "id": "TECH01",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "删除“为充分发挥系统的先进能力”，直接说明缓存默认保留 60 秒，线上可由 CACHE_TTL 覆盖默认值，且目前尚未取得该变量的线上值。没有把默认值写成线上实际值，也没有给 CACHE_TTL 增添环境变量、文件字段等未提供的传入机制。判断来自当前正文；notes 的工具调用与核对过程只是自述。",
+    "concerns": []
+  },
+  {
+    "id": "TECH02",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "preserved",
+    "evidence": "当前输出与原文“Retry only after a connection timeout, at most twice. Do not retry an authentication failure.”一致。保留仅连接超时可重试、最多两次和认证失败不重试，且只交文字，没有附加诊断。原样保留可由两份文本直接对照，不需要依赖 notes 所述字符串相等检查。",
+    "concerns": [
+      "notes 中“输出写入时另做字符串相等检查”未经独立执行证据确认；本项不把该自述作为已运行自动检查的证明。"
+    ]
+  },
+  {
+    "id": "TECH03",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "只删去“In today's rapidly evolving landscape”这一空泛开场。保留“We plan to enable streaming in version 4.2”、4.1 不可用，以及 rollout date unconfirmed，未将计划状态变为已发布。正文实际更简洁，判断不依赖 notes 中工具调用或读取指南的自述。",
+    "concerns": []
+  },
+  {
+    "id": "TECH04",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "将“作者与摘要均来自详情接口”修正为“作者来自搜索接口，摘要来自详情接口”。简短依据对应 `search-sample.json:1` 的 author、`detail-sample.json:1` 的 summary 和 `join.py:8` 的两处取值，未新增字段或修改代码。同时交付核对依据与改稿，满足当前自然语言组合请求；引用“所给”片段没有声称独立认证接口。",
+    "concerns": []
+  },
+  {
+    "id": "TECH05",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "删除“We would like to point out that”，把后句收紧为“How this setting is supplied is not documented.”。完整保留 RETRY_LIMIT 可覆盖默认 2 attempts 以及传入方式未记录，没有把 attempts 换成 retries，也未把设置称为环境变量、文件项或 CLI 参数。未新增实现细节，符合面向初学者的直接表达请求；notes 中执行陈述仅作自述看待。",
+    "concerns": []
+  },
+  {
+    "id": "TECH06",
+    "fidelity": "pass",
+    "task": "pass",
+    "quality": "improved",
+    "evidence": "只去掉“我们需要特别说明的是”，明确保留 `config.json` 的 `TIMEOUT` 字段、可覆盖默认 10 秒超时，以及“该字段不会从环境变量读取”。配置来源与否定条件均未泛化或省略；反引号帮助区分文件名和字段名，没有增加行为。判断来自当前原文与正文，不将 notes 中调用工具的描述当作外部证明。",
+    "concerns": []
+  }
+]

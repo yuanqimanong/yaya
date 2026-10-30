@@ -5,10 +5,21 @@ Contributions to Yaya (牙牙学语) can improve an edit, add language guidance,
 ## Choose the right place
 
 - `core/yaya/SKILL.md`: discovery, shared editing boundaries, and task selection.
+- `core/yaya/catalog.json`: command contracts, options and domain inventory. Help and
+  task planning use this same data through `scripts/yaya.py`.
 - `core/yaya/references/`: guidance specific to text, comments, prompts, style learning, or language-pack use.
 - `core/yaya/languages/`: the bundled `zh-Hans` and `en` packs.
 - `language-packs/`: optional `zh-Hant`, `ja`, and `ko` packs.
 - `core/yaya/scripts/`: local helpers, using the Python standard library without third-party runtime dependencies.
+
+For a new command, define one bounded action, its permitted options and delivery;
+test rejected combinations as well as successful routing. For a domain profile,
+state concrete coverage, exclusions, protected relationships and source rationale.
+Add editing, preservation and counterexample cases to `tests/evals/commands-domains.json`.
+Keep profiles experimental until stronger evidence warrants a documented change.
+A source citation, successful parser test or uncalibrated model judgment is not
+professional certification. Update the release build and relocation checks when
+adding runtime resources. Never replace actual execution evidence with intended checks.
 - `tests/`: editing evaluations and helper tests. File-operation tests use temporary directories.
 
 Language packs follow one current [specification](docs/language-pack-spec.md): `format_version: 1` with `core_major: 0` for core `0.2.0`. They may include `PATTERNS.md` for language-specific humanizing guidance. All five current packs are `experimental`.
