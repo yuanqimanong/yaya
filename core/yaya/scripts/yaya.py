@@ -9,7 +9,7 @@ from pathlib import Path, PurePosixPath
 import re
 import sys
 
-from packs import strict_json, SEMVER
+from packs import canonical_tag, strict_json, SEMVER
 
 CORE = Path(__file__).resolve().parents[1]
 
@@ -238,6 +238,11 @@ def resolve(argv, core=CORE):
     values = [item for value in options.values() for item in (value if isinstance(value, list) else [value])]
     if any(isinstance(value, str) and not value.strip() for value in values):
         raise UsageError("Option values must not be empty")
+    if options.get("lang"):
+        try:
+            options["lang"] = canonical_tag(options["lang"])
+        except ValueError as exc:
+            raise UsageError(f"Invalid --lang tag: {exc}. Use a tag such as zh-Hans or en-GB.") from exc
     if options.get("write") and not options.get("file"):
         raise UsageError("--write requires at least one explicit --file")
     if name == "check" and (not options.get("before") or not options.get("after")):
