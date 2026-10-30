@@ -39,6 +39,26 @@ class DoctorTests(unittest.TestCase):
         report = json.loads(self.run_doctor("--json").stdout)
         self.assertIn("packs.py", next(x for x in report["checks"] if x["name"] == "runtime-files")["detail"])
 
+    def test_syntactically_broken_helpers_are_not_ready(self):
+        for name, source in (("check_rewrite.py", "def broken(:\n"),
+                             ("check_comments.py", "return 1\n")):
+            (self.core / "scripts" / name).write_text(source, encoding="utf-8")
+        process = self.run_doctor("--json")
+        self.assertEqual(process.returncode, 1, process.stderr)
+        report = json.loads(process.stdout)
+        failure = next(row for row in report["checks"] if row["name"] == "python-syntax")
+        self.assertEqual(failure["status"], "failed")
+        self.assertIn("check_rewrite.py", failure["detail"])
+        self.assertIn("check_comments.py", failure["detail"])
+        self.assertFalse(list(self.core.rglob("*.pyc")))
+
+    def test_syntax_check_does_not_execute_checked_helpers(self):
+        (self.core / "scripts/check_rewrite.py").write_text(
+            "raise RuntimeError('This helper must not execute during diagnosis')\n", encoding="utf-8")
+        process = self.run_doctor("--json")
+        self.assertEqual(process.returncode, 0, process.stderr)
+        self.assertFalse(list(self.core.rglob("*.pyc")))
+
     def test_damaged_catalog_and_broken_guide_are_reported_separately(self):
         (self.core / "catalog.json").write_text("{broken", encoding="utf-8")
         (self.core / "references/validation.md").unlink()

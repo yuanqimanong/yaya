@@ -169,3 +169,11 @@ execution or nonstandard JSON evidence. A shared guard now rejects these and
 nonpositive values before any attempt files or processes. Entry-point checks
 cover generation, judging, continuation, paired runs and direct execution;
 finite fractional deadlines still work in the existing local stub suite.
+
+## 21 / cumulative 41 — Diagnose broken helper syntax
+
+A present `check_rewrite.py` containing invalid Python still reported `ready`.
+Diagnostics now compile all runtime helpers in memory and name each syntax
+failure, including compile-time errors such as a top-level return. A control
+helper that raises at runtime proves compilation does not execute it. Diagnostics
+remain read-only with no bytecode cache; compilation cannot establish behavior.
