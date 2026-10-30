@@ -1,6 +1,6 @@
 # Engineering fidelity
 
-Use this for technical fact checking, disputed comments, docstrings, and operational documentation. Ordinary polishing stays lightweight: preserve the original claim, inspect actual changes, and deliver directly. Do not force a report or turn domain examples into universal business rules.
+Use this for technical fact checking, disputed comments, docstrings, and operational documentation. For ordinary polishing, preserve the original claim, inspect the changes and deliver directly. Report findings when the task needs them, and apply domain examples only where the evidence supports them.
 
 ## Evidence and scope
 

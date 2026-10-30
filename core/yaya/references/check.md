@@ -31,10 +31,8 @@ helper when explicitly requested outside this bounded command. Extra protections
 apply only when selected; they do not authorize changes to protected content.
 
 Report the helper's JSON status and concrete finding first. Include an exit code
-only when captured from the checker process itself; host shells can remap it. Add
-only limitations needed to interpret this result, rather than reciting its entire
-limitations array. A `passed` result
-means only that its checked boundaries held; it does not establish factual accuracy,
+only when captured from the checker process itself; host shells can remap it. Mention the limitations needed to interpret this result. A `passed` result
+means that its checked boundaries held; it does not establish factual accuracy,
 comment correctness, author origin, or date/number-to-entity associations. Use
 `verify` for evidence-based factual claims. Preserve `failed`, `unsupported` and
 input errors as distinct outcomes. If execution is unavailable, state that no check

@@ -2,6 +2,10 @@
 
 ## 0.5.0 — Unreleased
 
+- Replace the long READMEs with capability summaries and add complete command and
+  local-tool manuals. Clarify authorship assessment, file writes, task plans and
+  checker results; refresh supporting documentation and ordinary code comments.
+
 - Add bounded `scan` with named rule selection, source hashes and stable-input
   checks; add read-only `doctor` diagnostics for runtime resources and Python syntax.
 - Reuse saved style cards with `--style`, select verification evidence with repeatable
@@ -17,7 +21,7 @@
   verification-delivery retest with full artifacts and limitations. These observations
   do not establish cross-model superiority or certify domain accuracy.
 - Keep pack format 1 / core major 0 and existing optional language packs compatible.
-  See the [30-iteration ledger](tests/results/2026-10-30-iterations30/README.md).
+  See the [0.5 validation index](tests/results/2026-10-30-iterations30/README.md).
 
 ## 0.4.0 — Unreleased
 
@@ -34,7 +38,7 @@
 - Isolate frozen evaluation checkers and recheck collection freshness. Reject empty
   or inconsistent task manifests; preserve file snapshots when Git is unavailable.
 - Retain regressions, controls and independent check-command execution in the
-  [iteration evidence](tests/results/2026-10-30-iterations/README.md). Domain profiles
+  [0.4 validation index](tests/results/2026-10-30-iterations/README.md). Domain profiles
   remain experimental; mechanical passes do not establish semantic fidelity.
 
 ## 0.3.2 — Unreleased

@@ -16,12 +16,17 @@ yaya 的脚本测试、编辑评测、参考项目调研和运行证据均存放
 python -m unittest discover -s tests -v
 ```
 
+当前版本的证据入口：[0.5 验证](results/2026-10-30-iterations30/README.md)、
+[0.4 验证](results/2026-10-30-iterations/README.md)、
+[显式命令与领域](results/2026-10-30-commands-domains/README.md)、
+[直接性编辑](results/2026-10-30-directness/README.md)。报告描述各自记录时的版本与执行范围。
+
 脚本测试不调用模型。编辑评测需要实际模型执行，步骤见 [evals/README.md](evals/README.md)；
 表达质量、事实保真和任务完成分别评审。
 
 0.2.1 的 [工程保真与来源审阅验收](results/2026-10-21-engineering/README.md) 单列机械回归和旧版同模型语义对照。定向案例及预期在 `evals/engineering.json`，运行方法见 `evals/README.md`。作者来源案例验证审慎推理，不是准确率基准。
 
-0.1 记录：[2026-10-20 全量测试与迭代](results/2026-10-20/README.md)。
+0.1 记录：[2026-10-20 验收记录](results/2026-10-20/README.md)。
 包含脚本回归、34 组有无 Skill 对照、文件操作和提示词执行测试；限制和跳过项单独列出。
 
 0.2 结果见 [升级验收](results/2026-10-20-upgrade/README.md)，专项记录包括：

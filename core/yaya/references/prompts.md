@@ -14,7 +14,7 @@ For example, “use a computing style” can make a prompt's inputs, constraints
 
 Keep goals, scope, priority, obligations, prohibitions, roles, tool permissions, output schemas, placeholders, examples, and stop conditions consistent with the original. Preserve exact variable names such as `{{source_text}}`, `${locale}`, and schema keys. “Must” and “may,” “before” and “after,” and “missing” and “empty” are different instructions.
 
-Merge genuinely duplicate instructions. Reorganize for readability where useful; do not force every prompt into a large template. State desired behavior positively when that makes it clearer, while retaining meaningful prohibitions. Remove ceremonial praise and repeated demands for quality without weakening the actual task.
+Merge instructions that repeat the same requirement. Reorganize for readability where useful; do not force every prompt into a large template. State desired behavior positively when that makes it clearer, while retaining meaningful prohibitions. Remove ceremonial praise and repeated demands for quality without weakening the actual task.
 
 When requirements conflict, expose the conflict and provide a proposed resolution separately unless the user's intended choice is clear. Do not silently delete an inconvenient requirement. Mark optional new instructions as suggestions rather than mixing them into a faithful rewrite.
 

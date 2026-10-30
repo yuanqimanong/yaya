@@ -16,7 +16,7 @@
 | `directness.json` | 26 条中英去防御表达、保留必要限定、定向范围与只读案例：24 条首轮及 2 条句子功能控制例；不属于默认矩阵或品牌识别基准 |
 | `domain-relationships.json` | 15 条五领域关系保真案例：重试计数、财务口径、统计分母、引用与外推、商务承诺；每领域 3 条，含保持原样的控制例 |
 
-0.3 命令/领域前向验证可用现有准备器生成隔离素材：
+命令、领域与直接性验证可用准备器生成隔离素材：
 
 ```text
 python tests/evals/prepare.py tests/runs/commands-domains --suite commands-domains --batch-size 9
@@ -131,7 +131,7 @@ python tests/evals/summarize.py tests/results/my-run
 
 汇总器校验完整性和硬项，保存 `summary.json`，并按用例的 group 汇总质量判断与偏好。原始输出和评审不被重写。文字发生变化不等于误改；清楚文本是否被过度修改，需要结合请求和评审证据判断。
 
-## 迭代与补充验证
+## 复测与补充验证
 
 保留首轮输出、失败、快照哈希和条件映射。确认问题后修改相关规则或程序，在新目录
 复测失败场景及相邻正常场景。参与调参的新增用例转为回归，不再计入未见留出集。

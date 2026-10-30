@@ -70,7 +70,7 @@ def detect(text, language, rule_ids=None):
         return {"status": "unsupported", "language": language, "findings": [],
                 "error": str(exc), "limitations": LIMITATIONS}
     line_starts = [0] + [match.end() for match in re.finditer("\n", text)]
-    # Keep source offsets, but never let flexible whitespace bridge hidden markup.
+    # Preserve source offsets while blocking matches across hidden markup.
     visible = list(scan.masked)
     for span in scan.spans:
         visible[span.start:span.end] = "\x00" * (span.end - span.start)

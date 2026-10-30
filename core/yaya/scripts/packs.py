@@ -263,7 +263,7 @@ def install(archive: Path, checksum: str, data_dir=None, project=None, replace=F
     stage = Path(tempfile.mkdtemp(prefix=".stage-", dir=root))
     previous = None
     try:
-        # Read the verified bytes, not a second possibly changed archive.
+        # Open the verified bytes so a later archive change cannot alter this install.
         import io
         with zipfile.ZipFile(io.BytesIO(raw)) as zf:
             members = zf.infolist()

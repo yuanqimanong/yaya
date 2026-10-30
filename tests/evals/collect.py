@@ -172,7 +172,7 @@ def verify_run(run: Path) -> tuple[dict, list[dict]]:
 
 
 def check_comments(script: Path, before: Path, after: Path) -> dict:
-    # Resolve every helper beside the frozen checker, never from host sys.modules.
+    # Use a subprocess to load the frozen helpers independently of the host module cache.
     try:
         run = subprocess.run([sys.executable, "-B", str(script), str(before), str(after)],
                              capture_output=True, timeout=30, check=False)

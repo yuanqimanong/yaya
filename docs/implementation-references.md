@@ -1,9 +1,9 @@
-# Implementation references, October 2026
+# Local-tool design references
 
 The [Vale CLI documentation](https://docs.vale.sh/topics/cli) exposes resolved
 configuration and resource locations through dedicated commands. Yaya's `doctor`
-adopts the useful idea of inspectable runtime state: it reports local structural
-checks without editing user material or repairing an installation. It does not
+reports local runtime structure and resource checks. It leaves user material and
+the installation unchanged. It does not
 implement Vale configuration, import its rules or claim equivalent coverage.
 
 [write-good](https://github.com/btford/write-good) exposes suggestions with source

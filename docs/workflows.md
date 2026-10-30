@@ -1,12 +1,14 @@
-# Yaya 操作指南
+# Yaya 组合工作流
 
 聊天中用 `$yaya` 选择任务。自然语言可请求组合任务；每条显式命令只处理选定范围。
 先用 `$yaya --help` 查看目录，再用 `$yaya help COMMAND` 查看选项和例子。
+每条命令的完整参数见[使用手册](usage.md)，终端脚本与退出码见[本地工具](local-tools.md)。
 
 | 当前需求 | 选择 |
 | --- | --- |
 | 只清理多余否定对比、重复免责声明 | `human --focus direct` |
 | 先看表达问题和建议 | `review` |
+| 评估一段文字是否有 AI 写作迹象 | `origin` |
 | 用给定资料核对主张 | `verify --file CLAIMS --source EVIDENCE` |
 | 找已列出的字面措辞 | `scan --file PATH --lang en` 或 `zh-Hans` |
 | 检查原稿与候选稿的保护项 | `check --before ORIGINAL --after CANDIDATE` |

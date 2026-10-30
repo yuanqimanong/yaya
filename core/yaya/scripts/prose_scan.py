@@ -113,7 +113,7 @@ _PRINTF = (r"%%|%(?:\([A-Za-z_]\w{0,63}\)|[1-9]\d*\$)?[#+\-]*"
            r"[hlL]?[diouxXeEfFgGcrsa](?![A-Za-z])")
 _FIELD_NAME = (r"(?:[A-Za-z_]\w{0,63}|[0-9]{1,16})"
                r"(?:\.[A-Za-z_]\w{0,63}|\[(?:[A-Za-z_]\w{0,63}|[0-9]{1,16})\]){0,8}")
-# A bounded, non-nested str.format-style subset; not arbitrary brace expressions.
+# Match bounded str.format fields with non-nested format specifications.
 _BRACE_FIELD = r"\{(?:" + _FIELD_NAME + r")?(?:![ars])?(?::[^{}\r\n]{0,128})?\}"
 _PLACEHOLDER = re.compile(r"\{\{[^{}\r\n]{1,256}\}\}|\$\{[^{}\r\n]{1,256}\}|"
                           + _BRACE_FIELD + "|" + _PRINTF + r"|(?<![\w:]):[A-Za-z_]\w{0,63}\b")
@@ -171,7 +171,7 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
             return True
         return False
 
-    # CommonMark lines end at LF/CRLF, not Unicode separators or form feeds.
+    # Split on LF so Unicode separators and form feeds stay within the source line.
     lines = re.findall(r"[^\n]*\n|[^\n]+$", text)
     offsets = []
     offset = 0
@@ -481,7 +481,7 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
 
 
 def _quantity_terms(values):
-    # Longer spellings precede their prefixes; an English word may use tabs/spaces.
+    # Match longer terms first; allow horizontal whitespace within multiword terms.
     return "(?:" + "|".join(re.escape(value).replace(r"\ ", r"[ \t]+")
                             for value in sorted(set(values), key=lambda s: (-len(s), s))) + ")"
 
@@ -529,7 +529,7 @@ _QUANTITY = re.compile(
 
 def numbers(scan):
     """Literal quantities in visible prose; no conversion or semantic inference."""
-    # A masked code/quote span must not join distant currency and amount tokens.
+    # Keep masked code and quotes as boundaries between currency and amount tokens.
     visible = "".join("\x00" if original != masked else masked
                       for original, masked in zip(scan.text, scan.masked))
     values = []
@@ -558,7 +558,7 @@ def numbers(scan):
             prior_start, prior_end = values[-1]
             gap = visible[prior_end:value_start]
             # Preserve ordered ranges, ratios and fractions as literal expressions.
-            # In 5-10, the quantity scanner owns the minus sign in the second atom.
+            # In 5-10, the second quantity token includes the minus sign.
             joined = re.fullmatch(r"[ \t]*(?:[-–—…/:∶⁄]|\.\.)[ \t]*", gap)
             adjacent_minus = (re.fullmatch(r"[ \t]*", gap)
                               and visible[value_start:value_start + 1] == "-")

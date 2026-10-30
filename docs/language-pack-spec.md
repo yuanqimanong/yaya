@@ -2,7 +2,7 @@
 
 Language packs provide local editorial guidance and examples for Yaya. They contain only data and must follow the user's request, the core editing contract, and tool permissions.
 
-This document defines Yaya's supported metadata profile. Validation covers a restricted subset of BCP 47 and SPDX syntax; it does not consult the IANA or SPDX registries.
+This specification defines the supported metadata, files and resolution rules. Validation checks a restricted subset of BCP 47 and SPDX syntax without consulting their registries.
 
 The machine-readable [JSON Schema](../schemas/language-pack.schema.json) covers the metadata shape. The local validator additionally checks file contents, duplicate JSON keys and variant subtags, canonical casing, review evidence presence, and compatibility. References: [BCP 47 / RFC 5646](https://www.rfc-editor.org/rfc/rfc5646), [SemVer 2.0.0](https://semver.org/spec/v2.0.0.html), [JSON Schema 2020-12](https://json-schema.org/draft/2020-12), and [SPDX identifiers](https://spdx.org/licenses/).
 
@@ -45,7 +45,7 @@ A standalone pack ZIP has the same flat root layout, without an enclosing direct
 | `format_version` | Integer `1`, the initial format. |
 | `id` | A canonical language tag in the restricted profile below. |
 | `version` | Strict Semantic Versioning, such as `0.1.0` or `0.2.0-rc.1`; no `v` prefix. |
-| `core_major` | Nonnegative integer matching the consuming core's major version. Yaya `0.2.0` has major `0`. |
+| `core_major` | Nonnegative integer matching the consuming core's major version. Yaya `0.5.0` has major `0`. |
 | `name` | Nonempty display name, at most 100 characters. |
 | `license` | Syntax of a single SPDX identifier, such as `MIT` or `Apache-2.0`; no compound expression. Registry membership is not verified. |
 | `quality` | `experimental` or `reviewed`. |

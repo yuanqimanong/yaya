@@ -118,7 +118,7 @@ def _snapshot(data: bytes, filename: str) -> Snapshot:
             prefix, body, suffix = (piece.encode(fragment_encoding) for piece in pieces)
         except (UnicodeError, LookupError) as exc:
             raise UnsupportedSource("Comment encoding cannot be mapped exactly.") from exc
-        # Do not infer byte positions from character columns or normalize source bytes.
+        # Check that character slices map back to the exact original bytes.
         if prefix + body + suffix != lines[row - 1] or pieces[1] != token.string:
             raise UnsupportedSource("Comment encoding cannot be mapped exactly.")
         comment = Comment(prefix, body, suffix, token.string, not pieces[0].strip())
@@ -131,7 +131,7 @@ def _snapshot(data: bytes, filename: str) -> Snapshot:
         ):
             protected.add(row)
 
-    # A commented doctest includes its output lines, not just its >>> prompt.
+    # Protect the complete commented doctest, including its output lines.
     block: list[int] = []
 
     def protect_doctest_block() -> None:

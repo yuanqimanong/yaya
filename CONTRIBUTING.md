@@ -1,6 +1,6 @@
 # Contributing to Yaya
 
-Contributions to Yaya (牙牙学语) can improve an edit, add language guidance, or fix a local helper. Start with a concrete case and show how the change helps. Keep ordinary editing simple.
+Start with a concrete editing failure, language need or helper bug, and show how your change addresses it. Keep ordinary editing simple.
 
 ## Choose the right place
 
@@ -11,7 +11,9 @@ Contributions to Yaya (牙牙学语) can improve an edit, add language guidance,
 - `core/yaya/languages/`: the bundled `zh-Hans` and `en` packs.
 - `language-packs/`: optional `zh-Hant`, `ja`, and `ko` packs.
 - `core/yaya/scripts/`: local helpers, using the Python standard library without third-party runtime dependencies.
+- `tests/`: editing evaluations and helper tests. File-operation tests use temporary directories.
 
+Keep the [usage manual](docs/usage.md) and both READMEs consistent with the catalog.
 For a new command, define one bounded action, its permitted options and delivery;
 test rejected combinations as well as successful routing. For a domain profile,
 state concrete coverage, exclusions, protected relationships and source rationale.
@@ -19,8 +21,7 @@ Add editing, preservation and counterexample cases to `tests/evals/commands-doma
 Keep profiles experimental until stronger evidence warrants a documented change.
 A source citation, successful parser test or uncalibrated model judgment is not
 professional certification. Update the release build and relocation checks when
-adding runtime resources. Never replace actual execution evidence with intended checks.
-- `tests/`: editing evaluations and helper tests. File-operation tests use temporary directories.
+adding runtime resources. Record executed checks and their results separately from planned validation.
 
 Language packs follow one current [specification](docs/language-pack-spec.md): `format_version: 1` with `core_major: 0` for the current core's major version. They may include `PATTERNS.md` for language-specific humanizing guidance. All five current packs are `experimental`.
 
