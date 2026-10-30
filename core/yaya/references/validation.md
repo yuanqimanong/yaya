@@ -99,6 +99,11 @@ existing whole-span checks; quantities are not assembled across those spans.
 
 ## What a pass cannot establish
 
+Angle-bracket email and scheme-based URI autolinks retain their full target
+spelling, including `mailto:`. The scanner checks source syntax, not deliverability,
+URI validity or remote content. Bare/escaped email addresses need explicit literal
+protection when their exact spelling matters.
+
 Recognized printf-style fields include positional/mapping selectors, width,
 precision and escaped `%%`. Their exact spellings are preserved. This is a finite
 format subset, not an interpolation parser for every language; space-flag forms

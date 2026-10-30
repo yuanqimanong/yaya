@@ -6,6 +6,24 @@ from test_check_rewrite import checker, SCRIPTS
 
 
 class ReferenceChecks(unittest.TestCase):
+    def test_email_and_uri_autolinks_preserve_targets_and_allow_prose_edits(self):
+        for target in ("<team@example.com>", "<team+reports@example.com>", "<mailto:team@example.com>",
+                       "<https://example.com/report>", "<ftp://example.com/report>", "<urn:example:report>"):
+            with self.subTest(target=target):
+                source = "Please read " + target + "."
+                self.assertEqual(checker.compare(source, "Read " + target + ".")["status"], "passed")
+                result = checker.compare(source, source.replace("example", "changed"))
+                self.assertEqual(result["status"], "failed")
+                self.assertIn("urls", {v["category"] for v in result["violations"]})
+
+    def test_malformed_autolinks_remain_unsupported_and_code_stays_shielded(self):
+        for source in ("<mailto:team name@example.com>", "<https://example.com", "<a@@example.com>"):
+            self.assertEqual(checker.compare(source, source)["status"], "unsupported")
+        source = "`<team@example.com>`"
+        result = checker.compare(source, source.replace("team", "other"))
+        self.assertEqual({v["category"] for v in result["violations"]}, {"inline_code"})
+        self.assertEqual(checker.compare("<span>Old</span>", "<span>New</span>")["status"], "passed")
+
     def test_long_escaped_link_label_has_bounded_runtime(self):
         script = "from check_rewrite import compare; s='[ '+chr(92)*100000+' ](target)'; assert compare(s,s)['status']=='passed'"
         process = subprocess.run([sys.executable, "-B", "-c", script], cwd=SCRIPTS,

@@ -113,6 +113,11 @@ _PRINTF = (r"%%|%(?:\([A-Za-z_]\w{0,63}\)|[1-9]\d*\$)?[#+\-]*"
 _PLACEHOLDER = re.compile(r"\{\{[^{}\r\n]{1,256}\}\}|\$\{[^{}\r\n]{1,256}\}|"
                           + _PRINTF + r"|(?<![\w:]):[A-Za-z_]\w{0,63}\b")
 _URL = re.compile(r"https?://[^\s<>\"“”「」]+")
+_URI_START = re.compile(r"<[A-Za-z][A-Za-z0-9+.-]{1,31}:")
+_MAIL_DOMAIN = r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?"
+_AUTOLINK = re.compile(r"<(?:[A-Za-z][A-Za-z0-9+.-]{1,31}:[^\x00-\x20<>]*|"
+                       r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@" + _MAIL_DOMAIN
+                       + r"(?:\." + _MAIL_DOMAIN + r")*)>")
 
 
 def _table_separator(line):
@@ -296,15 +301,15 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
             index = closing
             continue
         if text[index] == "<":
+            autolink = _AUTOLINK.match(text, index)
+            if autolink:
+                add(index, autolink.end(), "urls")
+                index = autolink.end()
+                continue
+            if _URI_START.match(text, index):
+                raise Unsupported("Malformed or unclosed URI autolink.")
             if _RAW_HTML.match(text, index):
                 raise Unsupported("Raw HTML blocks are unsupported.")
-            if text.startswith("<http://", index) or text.startswith("<https://", index):
-                end = text.find(">", index + 1)
-                if end < 0 or "\n" in text[index:end]:
-                    raise Unsupported("Unclosed autolink.")
-                add(index, end + 1, "urls")
-                index = end + 1
-                continue
             tag = _HTML_START.match(text, index)
             if tag:
                 cursor, quote = tag.end(), None
