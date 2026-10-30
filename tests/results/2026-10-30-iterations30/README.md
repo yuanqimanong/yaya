@@ -93,3 +93,12 @@ dash/ellipsis-connected quantities as one literal token, including signs and
 separator spelling. Tests retain whole-sentence movement and prevent joining
 across line breaks or protected spans. This does not parse verbal intervals or
 validate the mathematics of a range.
+
+## 12 / cumulative 32 — Reuse saved style cards
+
+Add explicit `--style CARD.md` to rewriting commands, separate from editable input
+files. Cards guide expression within the selected task and cannot supply facts or
+file-operation authority. Parser checks and an [independent three-case test](style-use/README.md)
+cover normal reuse, direct-focus scope and a missing card. All frozen inputs stayed
+unchanged. The checkpoint suite ran 313 unittest methods with no failures/errors
+and 8 environment skips; test discovery completed successfully.

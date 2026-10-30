@@ -90,11 +90,11 @@ def load_catalog(core=CORE):
             string_list(option["choices"], f"{context}.choices", nonempty=True)
             if "default" in option and option["default"] not in option["choices"]:
                 raise ValueError(f"{context}.default must be one of its choices")
-        if name in {"file", "save", "domain", "before", "after"} and "default" in option:
+        if name in {"file", "save", "domain", "before", "after", "style"} and "default" in option:
             raise ValueError(f"{context} requires an explicit selection")
         if ((name == "write" and not option.get("flag"))
                 or (name == "file" and (not option.get("repeat") or option.get("flag")))
-                or (name in {"save", "domain", "before", "after"} and (option.get("flag") or option.get("repeat")))):
+                or (name in {"save", "domain", "before", "after", "style"} and (option.get("flag") or option.get("repeat")))):
             raise ValueError(f"Invalid action shape for {context}")
     for name, command in catalog["commands"].items():
         context = f"commands.{name}"
@@ -111,6 +111,8 @@ def load_catalog(core=CORE):
             raise ValueError(f"{context}: write requires rewrite delivery and file input")
         if "save" in command["options"] and command["delivery"] != "style-card":
             raise ValueError(f"{context}: save requires style-card delivery")
+        if "style" in command["options"] and command["delivery"] != "rewrite":
+            raise ValueError(f"{context}: style requires rewrite delivery")
         for reference in command["references"]:
             resource(core, reference)
     for name, domain in catalog["domains"].items():
@@ -258,6 +260,8 @@ def resolve(argv, core=CORE):
         refs.append("references/engineering.md")
     if options.get("file") and (options.get("write") or name == "comment"):
         refs.append("references/validation.md")
+    if options.get("style"):
+        refs.append("references/style-learning.md")
     scope = options.get("scope", spec["scope"])
     if name == "prompt":
         scope = "prompt-" + options["target"]
@@ -268,6 +272,7 @@ def resolve(argv, core=CORE):
         "scope": scope, "delivery": spec["delivery"],
         "input_files": [options["before"], options["after"]] if name == "check" else options.get("file") or [],
         "write_requested": bool(options.get("write")), "save_requested": options.get("save"),
+        "style_file": options.get("style"),
         "options": options, "domain": {"id": domain_id, **domain} if domain else None,
         "references": [resource(core, ref) for ref in dict.fromkeys(refs)],
         "request_tokens": payload,

@@ -18,6 +18,21 @@ spec.loader.exec_module(commands)
 
 
 class CommandTests(unittest.TestCase):
+    def test_saved_style_is_explicit_and_separate_from_edit_targets(self):
+        for name in ("polish", "human", "comment", "prompt"):
+            plan = commands.resolve([name, "--file", "draft.md", "--style", "team.md", "--write"])
+            self.assertEqual(plan["style_file"], "team.md")
+            self.assertEqual(plan["input_files"], ["draft.md"])
+            self.assertIn(str((CORE / "references/style-learning.md").resolve()), plan["references"])
+        for name in ("check", "review", "verify", "origin", "style"):
+            with self.subTest(name=name), self.assertRaises(commands.UsageError):
+                commands.resolve([name, "--style", "team.md"])
+        with self.assertRaises(commands.UsageError):
+            commands.resolve(["polish", "--style", "one.md", "--style", "two.md"])
+        plan = commands.resolve(["human", "--focus", "direct", "--style", "missing.md"])
+        self.assertEqual(plan["options"]["focus"], "direct")
+        self.assertFalse(plan["write_requested"])
+
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory(prefix=".commands-", dir=ROOT)
         self.addCleanup(self.temporary.cleanup)

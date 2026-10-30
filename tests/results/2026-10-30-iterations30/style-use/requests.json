@@ -1,0 +1,14 @@
+[
+  {
+    "id": "style-card",
+    "request": "yaya polish --domain tech --style \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\style-test\\card.md\" --file \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\style-test\\draft.md\" 只给改稿。"
+  },
+  {
+    "id": "direct-scope",
+    "request": "yaya human --focus direct --style \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\style-test\\card.md\" --file \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\style-test\\direct.md\" 只给改稿。"
+  },
+  {
+    "id": "missing-card",
+    "request": "yaya polish --style \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\style-test\\missing.md\" --file \"D:\\AIProjects\\yaya\\.yaya\\iterations30\\style-test\\draft.md\" 请按选定风格卡润色。"
+  }
+]
