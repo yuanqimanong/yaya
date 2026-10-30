@@ -1,6 +1,15 @@
 {
   "format_version": 1,
   "commands": {
+    "scan": {
+      "title": "扫描措辞候选",
+      "summary": "运行本地字面规则，定位待审阅措辞；不改稿、不判定作者来源。",
+      "scope": "literal-candidates",
+      "delivery": "findings",
+      "options": ["file", "lang"],
+      "references": ["references/scan.md"],
+      "examples": ["yaya scan --file draft.md --lang zh-Hans", "yaya scan --file draft.md --lang en"]
+    },
     "check": {
       "title": "比较改稿边界",
       "summary": "运行只读机械检查，比较原稿与候选稿的受保护内容；不核定事实或自动修稿。",

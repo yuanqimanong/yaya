@@ -90,7 +90,7 @@ class ReleaseBuildTests(unittest.TestCase):
             "yaya/languages/en/PATTERNS.md", "yaya/languages/zh-Hans/PATTERNS.md",
             "yaya/catalog.json", "yaya/scripts/yaya.py", "yaya/references/commands.md",
             "yaya/references/domains.md", "yaya/references/verify.md",
-            "yaya/references/check.md",
+            "yaya/references/check.md", "yaya/references/scan.md",
             *{f"yaya/references/domains/{name}.md" for name in ("tech", "finance", "data", "academic", "business")},
         }
         self.assertTrue(required <= set(names))
@@ -193,6 +193,12 @@ class ReleaseBuildTests(unittest.TestCase):
         detected = self.run_script(core / "scripts" / "detect_tells.py", before, "--language", "en")
         self.assertEqual(detected.returncode, 0, detected.stdout + detected.stderr)
         self.assertEqual(json.loads(detected.stdout)["status"], "ok")
+        plan_run = self.run_script(core / "scripts/yaya.py", "scan", "--file", before, "--lang", "en")
+        self.assertEqual(plan_run.returncode, 0, plan_run.stderr)
+        plan = json.loads(plan_run.stdout)
+        self.assertEqual(Path(plan["scanner"]["script"]), (core / "scripts/detect_tells.py").resolve())
+        scanned = self.run_script(Path(plan["scanner"]["script"]), *plan["scanner"]["args"])
+        self.assertEqual(json.loads(scanned.stdout)["status"], "ok")
         checked = self.run_script(core / "scripts" / "check_rewrite.py", before, after)
         self.assertEqual(checked.returncode, 0, checked.stdout + checked.stderr)
         self.assertEqual(json.loads(checked.stdout)["status"], "passed")
