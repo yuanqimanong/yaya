@@ -64,3 +64,10 @@ task markers while leaving descriptions editable. Checks cover unordered/ordered
 lists, completion changes in both directions, ordinary bracketed text and code
 boundaries. The checker cannot establish whether a task was actually completed
 or bind a marker to its description after arbitrary rearrangement.
+
+## 8 / cumulative 28 — Images remain images
+
+`![diagram](flow.svg)` could become `[diagram](flow.svg)` without a violation.
+Track image/link roles for inline and reference forms while allowing descriptive
+label edits. Regressions include escaped exclamation marks, nested labels and
+code inside labels. Cross-category rearrangement still needs semantic review.
