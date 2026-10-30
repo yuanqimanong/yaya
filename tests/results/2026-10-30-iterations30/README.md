@@ -185,3 +185,12 @@ Users can now narrow a literal scan to named rule families with repeatable
 fail instead of producing a misleading empty scan. Reports name the executed
 rules, defaults retain full language coverage, and thresholds apply only to the
 selected candidates. Executed command plans confirm scope and unchanged input.
+
+## 23 / cumulative 43 — Single-brace interpolation fields
+
+Renaming `{user.name}` or changing `{value!r}` to `{value!s}` passed prose checking.
+Protect a bounded single-brace field subset, including names, positional fields,
+attribute/index access, conversions and non-nested format specifications. Tests
+retain editable surrounding prose, code boundaries and general brace expressions,
+and exercise long unclosed inputs. Nested formatting and arbitrary expressions
+still need explicit literal protection; this is not a template interpreter.

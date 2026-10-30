@@ -111,8 +111,12 @@ _RAW_HTML = re.compile(
 _PRINTF = (r"%%|%(?:\([A-Za-z_]\w{0,63}\)|[1-9]\d*\$)?[#+\-]*"
            r"(?:\d+|\*(?:[1-9]\d*\$)?)?(?:\.(?:\d+|\*(?:[1-9]\d*\$)?))?"
            r"[hlL]?[diouxXeEfFgGcrsa](?![A-Za-z])")
+_FIELD_NAME = (r"(?:[A-Za-z_]\w{0,63}|[0-9]{1,16})"
+               r"(?:\.[A-Za-z_]\w{0,63}|\[(?:[A-Za-z_]\w{0,63}|[0-9]{1,16})\]){0,8}")
+# A bounded, non-nested str.format-style subset; not arbitrary brace expressions.
+_BRACE_FIELD = r"\{(?:" + _FIELD_NAME + r")?(?:![ars])?(?::[^{}\r\n]{0,128})?\}"
 _PLACEHOLDER = re.compile(r"\{\{[^{}\r\n]{1,256}\}\}|\$\{[^{}\r\n]{1,256}\}|"
-                          + _PRINTF + r"|(?<![\w:]):[A-Za-z_]\w{0,63}\b")
+                          + _BRACE_FIELD + "|" + _PRINTF + r"|(?<![\w:]):[A-Za-z_]\w{0,63}\b")
 _URL = re.compile(r"https?://[^\s<>\"“”「」]+")
 _URI_START = re.compile(r"<[A-Za-z][A-Za-z0-9+.-]{1,31}:")
 _MAIL_DOMAIN = r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?"
