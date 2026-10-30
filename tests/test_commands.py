@@ -56,7 +56,9 @@ class CommandTests(unittest.TestCase):
         catalog = commands.load_catalog()
         for name, entry in catalog["commands"].items():
             with self.subTest(command=name):
-                result = commands.resolve([name, "--before", "old.md", "--after", "new.md"] if name == "check" else [name])
+                args = ([name, "--before", "old.md", "--after", "new.md"] if name == "check" else
+                        [name, "--file", "draft.md", "--lang", "en"] if name == "scan" else [name])
+                result = commands.resolve(args)
                 self.assertEqual(result["command"], name)
                 self.assertEqual(result["delivery"], entry["delivery"])
                 self.assertEqual(result["status"], "planned")
@@ -64,7 +66,7 @@ class CommandTests(unittest.TestCase):
                 self.assertIsNone(result["save_requested"])
 
     def test_readonly_commands_reject_write_instead_of_silently_ignoring(self):
-        for name in ("review", "verify", "check", "origin", "style"):
+        for name in ("review", "verify", "check", "origin", "style", "scan"):
             with self.subTest(command=name), self.assertRaises(commands.UsageError):
                 commands.resolve([name, "--file", "report.md", "--write"])
 
@@ -281,6 +283,26 @@ class CommandTests(unittest.TestCase):
             self.assertEqual(process.returncode, code)
             self.assertEqual(json.loads(process.stdout)["status"], status)
         self.assertEqual(old.read_bytes(), b"x = 1 # old\n")
+
+    def test_scan_plan_runs_local_candidates_and_preserves_input(self):
+        path = self.scratch / "source with spaces.md"
+        source = "在这个日新月异的时代，我们进行分析。\n"
+        path.write_text(source, encoding="utf-8")
+        plan = commands.resolve(["scan", "--file", str(path), "--lang", "ZH-hans"])
+        process = subprocess.run([sys.executable, "-B", plan["scanner"]["script"], *plan["scanner"]["args"]],
+                                 capture_output=True, timeout=10)
+        self.assertEqual(process.returncode, 0)
+        result = json.loads(process.stdout)
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual({v["id"] for v in result["findings"]}, {"zh-empty-opener", "zh-light-verb"})
+        self.assertNotIn("probability", result)
+        self.assertEqual(path.read_text(encoding="utf-8"), source)
+        for args in (["scan"], ["scan", "--file", str(path)],
+                     ["scan", "--file", str(path), "--lang", "ja"],
+                     ["scan", "--file", "-", "--lang", "en"],
+                     ["scan", "--file", str(path), "--file", "other.md", "--lang", "en"]):
+            with self.subTest(args=args), self.assertRaises(commands.UsageError):
+                commands.resolve(args)
 
 
 if __name__ == "__main__":

@@ -41,6 +41,10 @@ It does not read input files, call a model, install anything or execute payloads
 
 ## Task boundaries
 
+- `scan`: execute the local literal wording scanner for exactly one `--file` and
+  explicit `--lang en|zh-Hans`. Return candidate locations and explanations without
+  rewriting or making an authorship judgment. See `scan.md`.
+
 - `check`: compare explicit original/candidate files using the selected mechanical
   checker. Require `--before` and `--after`; `--kind prose|comments` defaults to prose.
   Report the executed result without rewriting files or granting differences. See

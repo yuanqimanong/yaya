@@ -110,3 +110,11 @@ evidence selections. Both remain read-only. Parser tests and an [independent
 technical/financial run](verify-sources/README.md) cover source citations, missing
 evidence, runtime/annual-scope limits and embedded instructions. Input hashes stayed
 unchanged; neither test claimed external authentication or complete verification.
+
+## 14 / cumulative 34 — Discoverable literal scan
+
+Expose the existing local detector as `scan --file PATH --lang en|zh-Hans` with
+one-file, read-only scope. The plan names the actual helper/arguments, and the
+guide keeps candidates, unsupported input and authorship claims distinct.
+Integration checks execute a scan, verify findings and unchanged source, reject
+unsupported selectors, and run the command from a relocated release.

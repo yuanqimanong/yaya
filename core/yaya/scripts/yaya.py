@@ -253,6 +253,11 @@ def resolve(argv, core=CORE):
         raise UsageError("check requires --before ORIGINAL and --after CANDIDATE")
     if name == "check" and options["kind"] != "prose" and (options.get("literal") or options.get("quotes")):
         raise UsageError("--literal and --quotes require --kind prose")
+    if name == "scan":
+        if len(options.get("file") or []) != 1 or options["file"][0] == "-":
+            raise UsageError("scan requires exactly one --file PATH; stdin is not a file selection")
+        if options.get("lang") not in {"en", "zh-Hans"}:
+            raise UsageError("scan requires --lang en or --lang zh-Hans; other editing commands have broader language guidance")
     domain_id = options.get("domain")
     domain = choose(domain_id, catalog["domains"], "domain") if domain_id else None
     refs = ["references/commands.md", *spec["references"]]
@@ -291,6 +296,9 @@ def resolve(argv, core=CORE):
         separator = ["--"] if options["kind"] == "prose" else []
         result["checker"] = {"script": str((core / "scripts" / helper).resolve()),
                              "args": [*flags, *separator, options["before"], options["after"]]}
+    if name == "scan":
+        result["scanner"] = {"script": str((core / "scripts/detect_tells.py").resolve()),
+                             "args": ["--language", options["lang"], "--", options["file"][0]]}
     return result
 
 
