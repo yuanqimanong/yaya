@@ -15,6 +15,13 @@ import prose_scan
 
 
 class RewriteChecks(unittest.TestCase):
+    def test_explicit_empty_grants_do_not_disappear(self):
+        for grant in ({}, [], False, 0, ""):
+            with self.subTest(grant=grant), self.assertRaises(prose_scan.InputError):
+                checker.compare("unchanged", "unchanged", allow=grant)
+        for grant in (None, ()):
+            self.assertEqual(checker.compare("unchanged", "unchanged", allow=grant)["status"], "passed")
+
     def test_one_shot_literal_protections_match_lists_and_file_evidence(self):
         before, after = "Use retry_limit.", "Use retry_count."
         expected = checker.compare(before, after, literals=["retry_limit"])
