@@ -43,6 +43,20 @@ def emit(value):
     print(json.dumps(value, ensure_ascii=True, indent=2))
 
 
+def validate_text(text):
+    if not isinstance(text, str):
+        raise InputError("Input must be text.")
+    try:
+        size = len(text.encode("utf-8"))
+    except UnicodeEncodeError as exc:
+        raise InputError("Input must be valid UTF-8 text.") from exc
+    if size > MAX_BYTES:
+        raise InputError("Input exceeds 2 MiB.")
+    if "\x00" in text or re.search(r"\r(?!\n)", text):
+        raise InputError("NUL and lone-CR newlines are unsupported.")
+    return text
+
+
 def read_utf8(path):
     try:
         if str(path) == "-":
@@ -58,9 +72,7 @@ def read_utf8(path):
         text = raw.decode("utf-8")
     except UnicodeDecodeError as exc:
         raise InputError("Input must be valid UTF-8.") from exc
-    if "\x00" in text or re.search(r"\r(?!\n)", text):
-        raise InputError("NUL and lone-CR newlines are unsupported.")
-    return text
+    return validate_text(text)
 
 
 @dataclass(frozen=True)
@@ -121,8 +133,7 @@ def _inline_code_end(text, start):
 
 
 def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
-    if len(text.encode("utf-8")) > MAX_BYTES:
-        raise InputError("Input exceeds 2 MiB.")
+    validate_text(text)
     spans = []
     occupied = bytearray(len(text))
 

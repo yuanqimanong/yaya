@@ -117,6 +117,13 @@ class DetectionTests(unittest.TestCase):
             with self.subTest(language=language):
                 self.assertEqual(detector.detect(text, language)["findings"], [])
 
+    def test_api_invalid_text_is_unsupported_not_a_clean_scan(self):
+        for text in ("text\x00tail", "text\rtail", "unpaired\ud800"):
+            with self.subTest(text=repr(text)):
+                result = detector.detect(text, "en")
+                self.assertEqual(result["status"], "unsupported")
+                self.assertEqual(result["findings"], [])
+
     def test_other_languages_and_ambiguous_markdown_are_unsupported(self):
         for language in ["ja", "ko", "zh-Hant", "zh", "en-US"]:
             self.assertEqual(detector.detect("text", language)["status"], "unsupported")

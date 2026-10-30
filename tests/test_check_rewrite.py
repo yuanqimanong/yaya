@@ -30,6 +30,14 @@ class RewriteChecks(unittest.TestCase):
         ]:
             self.assert_status("passed", before, after)
 
+    def test_python_api_rejects_inputs_outside_the_utf8_newline_contract(self):
+        for text in ("before\x00after", "before\rafter", "unpaired\ud800"):
+            with self.subTest(text=repr(text)), self.assertRaises(prose_scan.InputError):
+                checker.compare(text, text)
+
+    def test_api_retains_bom_crlf_and_non_ascii_prose(self):
+        self.assert_status("passed", "\ufeff进行分析。\r\n", "\ufeff分析。\r\n")
+
     def test_protected_categories_reject_changes_removal_and_duplication(self):
         cases = [
             ("frontmatter", "---\ntitle: old\n---\n正文", "old", "new"),
