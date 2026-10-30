@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import bisect
+import hashlib
 from pathlib import Path
 import re
 import sys
@@ -106,6 +107,26 @@ def detect(text, language, rule_ids=None):
     }
 
 
+def scan_file(path, language, rule_ids=None):
+    source = read_utf8(path)
+    raw = source.encode("utf-8")
+    evidence = {"source": {"kind": "stdin" if str(path) == "-" else "file",
+                            "path": None if str(path) == "-" else str(Path(path).resolve()),
+                            "sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)},
+                "input_stable": None}
+    result = detect(source, language, rule_ids)
+    if str(path) != "-":
+        try:
+            evidence["input_stable"] = read_utf8(path) == source
+        except InputError:
+            evidence["input_stable"] = False
+        if not evidence["input_stable"]:
+            result = {"status": "error", "error": "Input changed or became unreadable during scanning; rerun on current content.",
+                      "findings": []}
+    result["evidence"] = evidence
+    return result
+
+
 def main(argv=None):
     parser = JsonParser(description=__doc__)
     parser.add_argument("file", nargs="?", default="-", help="UTF-8 file, or - for stdin")
@@ -115,7 +136,7 @@ def main(argv=None):
     parser.add_argument("--fail-on", choices=("P1", "P2"), help="Explicit candidate threshold for exit 1")
     args = parser.parse_args(argv)
     try:
-        result = detect(read_utf8(args.file), args.language, args.rule)
+        result = scan_file(args.file, args.language, args.rule)
     except (InputError, OSError, ValueError, KeyError) as exc:
         result = {"status": "error", "error": str(exc)}
     emit(result)

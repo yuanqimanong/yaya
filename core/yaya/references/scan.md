@@ -22,6 +22,13 @@ Resolve the command, then execute `scanner.script` with `scanner.args` as separa
 arguments using the host's Python executable. The plan is not a scan result. Keep
 the input file intact and do not silently switch tools if it returns unsupported.
 
+The executed scanner records the input's SHA-256, byte length and absolute file
+path. Locations refer to that content version; rerun after editing it. If a second
+read finds changed/unreadable input, the scan returns an error without stale
+findings. The specialized helper also accepts stdin: its content hash is recorded,
+but `input_stable: null` indicates no stable file identity. The `scan` command
+continues to require a selected file. A matching hash does not assess writing quality.
+
 For an `ok` result, report the matched phrases and source lines, with the rule's
 review question. A match is a candidate, not an instruction to delete it. An empty
 list means the finite rules found no candidates, not that the text is natural or
