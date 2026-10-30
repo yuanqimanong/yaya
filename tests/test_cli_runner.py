@@ -230,6 +230,31 @@ class CliRunner(unittest.TestCase):
         self.assertIn("Traditional PATTERNS.", jobs[0].prompt)
         self.assertNotIn("English PATTERNS.", jobs[0].prompt)
 
+    def test_locale_candidates_match_the_runtime_without_guessing_bare_chinese(self):
+        spec = importlib.util.spec_from_file_location("runtime_pack_policy", TESTS.parent / "core/yaya/scripts/packs.py")
+        runtime = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(runtime)
+        for language in ("zh", "zh-HK", "zh-CN", "zh-Hant-HK", "ZH-hans-tw", "en-GB", "sl-rozaj", "es-419"):
+            with self.subTest(language=language):
+                self.assertEqual(RUNNER.locale_candidates(language), runtime.candidates(language))
+        self.assertEqual(RUNNER.locale_candidates(""), [])
+        for language in ("../en", "en_US", "en--GB", "x-private", "en-1901-1901"):
+            with self.subTest(language=language), self.assertRaises(ValueError):
+                RUNNER.locale_candidates(language)
+
+    def test_frozen_external_fallback_precedes_bundled_exact_locale(self):
+        run = self.frozen_run(language="zh-HK")
+        bundled = run / "snapshot/yaya/languages/zh-HK"
+        bundled.mkdir(parents=True)
+        (bundled / "GUIDE.md").write_text("Bundled exact", encoding="utf-8")
+        selected = RUNNER.skill_context(run, {"task": "humanize", "language": "zh-HK"})
+        self.assertEqual(selected[-1], run / "data/language-packs/zh-Hant/PATTERNS.md")
+        selected = RUNNER.skill_context(run, {"task": "humanize", "language": "zh"})
+        self.assertEqual(len(selected), 2)
+        (run / "data/language-packs/zh-Hant/GUIDE.md").unlink()
+        with self.assertRaisesRegex(ValueError, "GUIDE"):
+            RUNNER.skill_context(run, {"task": "humanize", "language": "zh-HK"})
+
     def test_input_hash_change_prevents_any_generation(self):
         run = self.frozen_run()
         (run / "snapshot/yaya/SKILL.md").write_text("Changed after freezing.", encoding="utf-8")

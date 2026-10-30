@@ -219,3 +219,12 @@ Explicit ratio/fraction connectors now preserve the whole expression and operand
 order while allowing the unchanged expression to move with prose. Tests cover
 multi-part, signed, decimal and scientific values plus line/code boundaries.
 This compares source spelling; it does not evaluate or simplify the expression.
+
+## 27 / cumulative 47 — Frozen locale selection fidelity
+
+The CLI evaluator guessed Hans for bare `zh` and preferred bundled exact locales
+over external fallback packs, disagreeing with runtime policy. Selection now
+normalizes the supported tag subset, uses full region/script parent candidates,
+and applies frozen external-location priority before specificity. Contract tests
+compare runtime candidate sequences and exercise actual competing guide files.
+The policy stays inside the hashed runner; existing results are not regenerated.
