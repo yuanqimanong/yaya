@@ -36,3 +36,6 @@ The specialized prose helper supported term/quote preservation, but the bounded
 document their prose-only scope, and return an executable argument array in the
 plan. An integration test runs that plan against changed terms/quotes and checks
 the violations and unchanged source. Incompatible comment-mode options fail.
+Expanded execution checks found the comment helper accepts two positional values
+without an argparse `--` separator. Corrected its plan in the same PR and added
+actual passed/failed comment executions, rather than relying on plan shape alone.

@@ -275,8 +275,9 @@ def resolve(argv, core=CORE):
         if options.get("quotes"):
             flags.append("--protect-quotes")
         helper = "check_rewrite.py" if options["kind"] == "prose" else "check_comments.py"
+        separator = ["--"] if options["kind"] == "prose" else []
         result["checker"] = {"script": str((core / "scripts" / helper).resolve()),
-                             "args": [*flags, "--", options["before"], options["after"]]}
+                             "args": [*flags, *separator, options["before"], options["after"]]}
     return result
 
 
