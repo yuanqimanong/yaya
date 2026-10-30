@@ -77,12 +77,22 @@ def verify_hashes(base: Path, hashes: dict, label: str) -> None:
 
 def load_outputs(run: Path, condition: str, expected: set[str]) -> dict:
     outputs = {}
-    for path in sorted((run / condition).glob("batch-*/outputs.json")):
+    requests = set((run / condition).glob("batch-*/requests.json"))
+    paths = set((run / condition).glob("batch-*/outputs.json"))
+    if not requests or paths != {path.with_name("outputs.json") for path in requests}:
+        raise ValueError(f"{condition} output file set must match every request packet")
+    for path in sorted(paths):
         value = read_json(path)
         if not isinstance(value, list):
             raise ValueError(f"Expected an output array: {path}")
         requested = path.with_name("requests.json")
-        packet_ids = {row["id"] for row in read_json(requested)} if requested.is_file() else None
+        packet = read_json(requested)
+        if (not isinstance(packet, list) or not packet
+                or any(not isinstance(row, dict) or not isinstance(row.get("id"), str) for row in packet)):
+            raise ValueError(f"Malformed or empty request packet: {requested}")
+        packet_ids = {row["id"] for row in packet}
+        if len(packet_ids) != len(packet):
+            raise ValueError(f"Duplicate request IDs: {requested}")
         output_ids = set()
         for row in value:
             if (not isinstance(row, dict) or set(row) != {"id", "text", "notes", "skill_used"}
@@ -95,11 +105,11 @@ def load_outputs(run: Path, condition: str, expected: set[str]) -> dict:
                 raise ValueError(f"Duplicate, unknown or malformed result: {identifier}")
             if condition == "baseline" and row["skill_used"]:
                 raise ValueError(f"Baseline used the skill: {identifier}")
-            if packet_ids is not None and identifier not in packet_ids:
+            if identifier not in packet_ids:
                 raise ValueError(f"Result does not belong to its request packet: {identifier}")
             outputs[identifier] = row
             output_ids.add(identifier)
-        if packet_ids is not None and output_ids != packet_ids:
+        if output_ids != packet_ids:
             raise ValueError(f"Incomplete output packet: {path}")
     if set(outputs) != expected:
         raise ValueError(f"{condition} incomplete; missing {sorted(expected - set(outputs))}")

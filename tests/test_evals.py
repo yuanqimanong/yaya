@@ -30,6 +30,7 @@ class EvaluationIntegrity(unittest.TestCase):
         self.output = self.root / "baseline/batch-01/outputs.json"
         self.output.parent.mkdir(parents=True)
         self.row = {"id": "sample", "text": "Synthetic output.", "notes": "", "skill_used": False}
+        self.write(self.output.with_name("requests.json"), [{"id": "sample"}])
 
     def write(self, path, value):
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -48,6 +49,28 @@ class EvaluationIntegrity(unittest.TestCase):
                     COLLECT.load_outputs(self.root, "baseline", {"sample"})
         self.write(self.output, [self.row])
         self.assertEqual(COLLECT.load_outputs(self.root, "baseline", {"sample"}), {"sample": self.row})
+
+    def test_extra_or_missing_packet_files_cannot_disappear(self):
+        self.write(self.output, [self.row])
+        extra = self.root / "baseline/batch-99/outputs.json"
+        self.write(extra, [])
+        with self.assertRaisesRegex(ValueError, "file set"):
+            COLLECT.load_outputs(self.root, "baseline", {"sample"})
+        extra.unlink()
+        self.write(extra.with_name("requests.json"), [{"id": "extra"}])
+        with self.assertRaisesRegex(ValueError, "file set"):
+            COLLECT.load_outputs(self.root, "baseline", {"sample"})
+        extra.with_name("requests.json").unlink()
+        self.output.with_name("requests.json").unlink()
+        with self.assertRaisesRegex(ValueError, "file set"):
+            COLLECT.load_outputs(self.root, "baseline", {"sample"})
+
+    def test_request_packets_require_unique_nonempty_ids(self):
+        self.write(self.output, [self.row])
+        for packet in ([], [{"id": "sample"}] * 2, {}, [None], [{"id": 1}]):
+            self.write(self.output.with_name("requests.json"), packet)
+            with self.subTest(packet=packet), self.assertRaises(ValueError):
+                COLLECT.load_outputs(self.root, "baseline", {"sample"})
 
     def test_reject_empty_malformed_or_contaminated_outputs(self):
         for row in (None, {}, {**self.row, "text": " \n"}, {**self.row, "text": 42},

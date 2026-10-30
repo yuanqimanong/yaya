@@ -36,3 +36,11 @@ The specialized prose helper supported term/quote preservation, but the bounded
 document their prose-only scope, and return an executable argument array in the
 plan. An integration test runs that plan against changed terms/quotes and checks
 the violations and unchanged source. Incompatible comment-mode options fail.
+
+## 5 / cumulative 25 — Complete evaluation packets
+
+A synthetic run with a valid result plus an unexpected empty `outputs.json` was
+accepted. Collection also accepted outputs without their request packet. Require
+an exact request/output file-set match and unique, nonempty request packets.
+Regression tests cover both valid publication and each rejected case. These are
+evidence-integrity tests, not model-quality measurements.
