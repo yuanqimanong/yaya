@@ -15,7 +15,7 @@ import shutil
 import subprocess
 import time
 
-from collect import read_json, verify_run
+from collect import decode_json, read_json, verify_run
 
 TESTS = Path(__file__).resolve().parents[1]
 SCHEMA = Path(__file__).with_name("cli-output.schema.json")
@@ -207,20 +207,25 @@ def validate_output(value, job: Job) -> None:
 
 def inspect_events(stdout: str) -> dict:
     events, malformed = [], 0
-    for line in stdout.splitlines():
+    for line in stdout.split("\n"):
         if not line.strip():
             continue
         try:
-            event = json.loads(line)
+            event = decode_json(line, "CLI JSONL")
             if not isinstance(event, dict):
                 raise ValueError("Non-object JSONL event")
             events.append(event)
         except (json.JSONDecodeError, ValueError):
             malformed += 1
     usage = [event["usage"] for event in events if event.get("type") == "turn.completed" and "usage" in event]
-    tools, diagnostics = [], []
+    tools, diagnostics, failed = [], [], []
+    event_types = {"thread.started", "turn.started", "turn.completed", "turn.failed", "error",
+                   "item.started", "item.updated", "item.completed"}
     # The allowed item types are intentionally narrow. A new CLI type needs review.
     for event in events:
+        kind = event.get("type")
+        if not isinstance(kind, str) or kind not in event_types or kind in {"error", "turn.failed"}:
+            failed.append(event)
         item = event.get("item")
         if (event.get("type") == "item.completed" and isinstance(item, dict)
                 and set(item) <= {"id", "type", "message"}
@@ -228,14 +233,17 @@ def inspect_events(stdout: str) -> dict:
                 and IGNORED_PROVIDER_CONFIG.fullmatch(item["message"])):
             diagnostics.append({"classification": "ignored_provider_configuration", "event": event})
             continue
-        if isinstance(item, dict) and item.get("type") not in {"reasoning", "agent_message"}:
-            tools.append(item.get("type", "unknown_item"))
+        if "item" in event or kind in ("item.started", "item.updated", "item.completed"):
+            if not isinstance(item, dict) or not isinstance(item.get("type"), str):
+                tools.append("malformed_item")
+            elif item["type"] not in {"reasoning", "agent_message"}:
+                tools.append(item["type"])
     return {
         "usage": usage, "tool_or_unknown_items": sorted(set(tools)),
         "diagnostics": diagnostics,
         "malformed_jsonl_lines": malformed,
         "completed_turns": sum(event.get("type") == "turn.completed" for event in events),
-        "failed_events": [event for event in events if event.get("type") in {"error", "turn.failed"}],
+        "failed_events": failed,
     }
 
 

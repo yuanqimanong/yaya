@@ -67,6 +67,33 @@ if mode == "inherited-timeout":
 
 
 class CliRunner(unittest.TestCase):
+    def test_ambiguous_and_nonfinite_events_do_not_hide_invalid_evidence(self):
+        sources = ['{"type":"item.completed","item":{"type":"command_execution","type":"reasoning"}}',
+                   '{"type":"error","type":"turn.completed"}']
+        sources += ['{"type":"turn.completed","usage":{"input_tokens":' + value + '}}'
+                    for value in ("NaN", "Infinity", "-Infinity", "1e999")]
+        for source in sources:
+            with self.subTest(source=source):
+                result = RUNNER.inspect_events(source)
+                self.assertEqual(result["malformed_jsonl_lines"], 1)
+                self.assertEqual(result["completed_turns"], 0)
+
+    def test_unknown_events_and_malformed_items_invalidate_runs(self):
+        for event in ({"type": "future.tool.event"}, {"type": ["turn.completed"]}, {},
+                      {"type": "item.completed"}, {"type": "item.updated", "item": "text"},
+                      {"type": "item.started", "item": {"type": []}}):
+            with self.subTest(event=event):
+                result = RUNNER.inspect_events(json.dumps(event))
+                self.assertTrue(result["failed_events"] or result["tool_or_unknown_items"])
+
+    def test_unicode_separators_inside_json_strings_are_not_record_boundaries(self):
+        source = json.dumps({"type": "item.completed", "item": {"type": "agent_message", "text": "a\u2028b\u2029c"}},
+                            ensure_ascii=False) + '\r\n{"type":"turn.completed"}\n'
+        result = RUNNER.inspect_events(source)
+        self.assertEqual(result["malformed_jsonl_lines"], 0)
+        self.assertEqual(result["completed_turns"], 1)
+        self.assertEqual(result["failed_events"], [])
+
     def setUp(self):
         (TESTS / "runs").mkdir(exist_ok=True)
         self.temporary = tempfile.TemporaryDirectory(prefix="cli-unit-", dir=TESTS / "runs")

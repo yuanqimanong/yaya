@@ -23,6 +23,12 @@ finally:
 
 
 class EvaluationIntegrity(unittest.TestCase):
+    def test_nonfinite_numbers_are_not_valid_evidence_json(self):
+        for number in ("NaN", "Infinity", "-Infinity", "1e999"):
+            with self.subTest(number=number), self.assertRaisesRegex(ValueError, "Nonfinite"):
+                COLLECT.decode_json('{"usage":[' + number + ']}')
+        self.assertEqual(COLLECT.decode_json('{"text":"NaN", "count":1.25}'), {"text": "NaN", "count": 1.25})
+
     def setUp(self):
         self.directory = tempfile.TemporaryDirectory(dir=TESTS)
         self.addCleanup(self.directory.cleanup)
