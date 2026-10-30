@@ -113,6 +113,18 @@ class QuantityChecks(unittest.TestCase):
     def test_accounting_parentheses_do_not_cross_protected_spans(self):
         self.assertEqual(prose_scan.numbers(prose_scan.snapshot("(USD 5 `estimated`)")), ["USD 5"])
 
+    def test_numeric_comparison_direction_and_inclusivity_are_preserved(self):
+        for before, after in (("p < 0.05", "p > 0.05"), ("delay <= 5 ms", "delay < 5 ms"),
+                              ("利润 ≥ USD 5 million", "利润 ≤ USD 5 million"),
+                              ("Value ≈ 3", "Value = 3"), ("count != 2", "count == 2")):
+            with self.subTest(before=before):
+                self.assert_change(before, after)
+
+    def test_numeric_bounds_keep_normal_prose_and_markup_boundaries(self):
+        self.assertEqual(checker.compare("Retry while delay <= 5 ms.", "While delay <= 5 ms, retry.")["status"], "passed")
+        self.assertEqual(prose_scan.numbers(prose_scan.snapshot("limit <= `threshold` 5")), ["5"])
+        self.assertEqual(prose_scan.numbers(prose_scan.snapshot("Profit < (USD 5)")), ["< (USD 5)"])
+
     def test_list_bullets_do_not_become_negative_quantities(self):
         before = "- USD 5 million\n- 8 MiB\n"
         after = "USD 5 million; 8 MiB."
