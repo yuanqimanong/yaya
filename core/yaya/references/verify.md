@@ -25,6 +25,12 @@ from a result, and an observed number from an inference. Missing source material
 must not be replaced with a plausible number, citation, regulation or API behavior.
 Expand research only where the task requires it and the host has the needed access.
 
-Return useful findings without a mandatory template or numeric score. If no
-discrepancy is found, state what evidence was actually examined and the material
-limits. Do not claim an audit, live-system acceptance or exhaustive verification.
+Lead with the useful findings and their source locations, without a mandatory
+template or numeric score. State each material limit once, next to the conclusion
+it qualifies; avoid repeating it in an introduction, table and closing paragraph.
+Keep conditions such as an environment file actually being loaded, or a missing
+annual report. Ordinary file comparisons need no generic audit/certification
+disclaimer or narration of ignored source instructions. Describe the evidence
+actually checked and any unresolved claims; reserve audit, live-acceptance and
+exhaustive-verification labels for work that establishes them. If no discrepancy
+is found, identify the examined sources and relevant gaps briefly.

@@ -118,3 +118,12 @@ one-file, read-only scope. The plan names the actual helper/arguments, and the
 guide keeps candidates, unsupported input and authorship claims distinct.
 Integration checks execute a scan, verify findings and unchanged source, reject
 unsupported selectors, and run the command from a relocated release.
+
+## 15 / cumulative 35 — Concise verification findings
+
+Actual verification responses repeated material limits and appended generic audit
+and process disclaimers. A narrow delivery rule now places each necessary limit
+beside its conclusion once. A [fresh same-request retest](verify-concise/README.md)
+retained citations, environment-loading conditions, missing sources and unresolved
+claims while removing the repeated framing. This is one observed retest, not a
+measured cross-model improvement or permission to remove substantive uncertainty.
