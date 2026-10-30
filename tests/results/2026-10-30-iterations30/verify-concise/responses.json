@@ -1,0 +1,12 @@
+[
+  {
+    "id": "tech",
+    "text": "- **“配置生效后，日志保留 7 天”与所给配置不符。** [config.py:2](D:/AIProjects/yaya/.yaya/iterations30/verify-test/config.py:2) 将 7 设为默认值，[config.py:3](D:/AIProjects/yaya/.yaya/iterations30/verify-test/config.py:3) 优先读取环境变量；[prod.env:1](D:/AIProjects/yaya/.yaya/iterations30/verify-test/prod.env:1) 设置了 `RETENTION_DAYS=30`。若该文件已加载到进程环境，`retention` 的值应为 30。现有文件未展示日志保留逻辑或实际运行结果。\n- **“所有部署均已验证”未获证实。** 提供的代码和环境文件没有部署清单、验证记录或运行结果，不能据此确认所有部署的状态。",
+    "notes": "执行了指定 Skill 的 Python scripts/yaya.py verify --domain tech 进行命令解析，使用 scripts/packs.py resolve --language zh-Hans 解析语言指导，并通过 PowerShell Get-Content 读取所需 Skill 资源及 tech-claims.md、config.py、prod.env。语义核对由当前宿主模型完成；未执行 config.py、加载环境或检查部署。原始材料保持不变。"
+  },
+  {
+    "id": "finance",
+    "text": "- **“全年收入人民币 500 万元，已审计”未获证实。** 所给样本 [q2.md:2](D:/AIProjects/yaya/.yaya/iterations30/verify-test/q2.md:2) 记载的是“本季度营业收入为人民币 500 万元，未经审计”，其期间与审计状态均不支持原说法。指定的 [missing-annual.md](D:/AIProjects/yaya/.yaya/iterations30/verify-test/missing-annual.md) 不存在，无法进一步核对全年收入及其审计状态。\n- **“净利润人民币 50 万元”未获证实。** [q2.md:3](D:/AIProjects/yaya/.yaya/iterations30/verify-test/q2.md:3) 明确未提供净利润指标，现有材料没有支持该金额的依据。",
+    "notes": "执行了指定 Skill 的 Python scripts/yaya.py verify --domain finance 进行命令解析，使用 scripts/packs.py resolve --language zh-Hans 解析语言指导，并通过 PowerShell Get-Content 读取所需 Skill 资源及 finance-claims.md、q2.md。尝试读取指定的 missing-annual.md 时返回文件不存在。仅对所提供样本进行语义核对，未独立认证来源或补充其他材料。原始材料保持不变。"
+  }
+]
