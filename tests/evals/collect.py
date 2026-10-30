@@ -2,11 +2,11 @@
 from __future__ import annotations
 import argparse
 import hashlib
-import importlib.util
 import json
 from pathlib import Path, PurePosixPath
 import random
 import re
+import subprocess
 import sys
 
 TESTS = Path(__file__).resolve().parents[1]
@@ -149,6 +149,25 @@ def verify_run(run: Path) -> tuple[dict, list[dict]]:
     return manifest, source_cases
 
 
+def check_comments(script: Path, before: Path, after: Path) -> dict:
+    # Resolve every helper beside the frozen checker, never from host sys.modules.
+    try:
+        run = subprocess.run([sys.executable, "-B", str(script), str(before), str(after)],
+                             capture_output=True, timeout=30, check=False)
+    except subprocess.TimeoutExpired:
+        return {"status": "error", "reason": "Frozen comment checker exceeded 30 seconds."}
+    try:
+        result = json.loads(run.stdout)
+    except (ValueError, UnicodeError) as exc:
+        raise ValueError("Frozen comment checker did not return JSON") from exc
+    codes = {"passed": 0, "failed": 1, "unsupported": 2, "error": 2}
+    if not isinstance(result, dict) or result.get("status") not in codes:
+        raise ValueError("Frozen comment checker returned an unknown status")
+    if run.returncode != codes[result["status"]]:
+        raise ValueError("Frozen comment checker status and exit code disagree")
+    return result
+
+
 def collect(run: Path, destination: Path) -> dict:
     run, destination = run.resolve(), destination.resolve()
     if not run.is_relative_to(TESTS / "runs") or not destination.is_relative_to(TESTS / "results"):
@@ -162,10 +181,6 @@ def collect(run: Path, destination: Path) -> dict:
         raise ValueError("Review directory already exists; refusing to overwrite anonymous evidence")
     destination.mkdir(parents=True, exist_ok=False)
     script = run / "snapshot/yaya/scripts/check_comments.py"
-    spec = importlib.util.spec_from_file_location("evaluation_comment_checker", script)
-    checker = importlib.util.module_from_spec(spec)
-    sys.modules[spec.name] = checker
-    spec.loader.exec_module(checker)
     mechanical = []
     for case in source_cases:
         for mode in outputs:
@@ -190,7 +205,7 @@ def collect(run: Path, destination: Path) -> dict:
                 before, after = work / ("before" + extension), work / ("after" + extension)
                 before.write_text(case["input"], encoding="utf-8", newline="\n")
                 after.write_text(text, encoding="utf-8", newline="\n")
-                record["comment_boundary"] = checker.check_files(before, after)
+                record["comment_boundary"] = check_comments(script, before, after)
             mechanical.append(record)
     # Reviewers receive criteria and anonymous text only, without self-reported notes.
     rng = random.Random(20261020)
