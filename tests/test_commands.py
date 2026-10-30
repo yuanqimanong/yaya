@@ -229,6 +229,19 @@ class CommandTests(unittest.TestCase):
         plan = commands.resolve(["check", "--before=-old.md", "--after=new.md", "--literal=" + literal])
         self.assertEqual(plan["checker"]["args"], ["--protect-literal=" + literal, "--", "-old.md", "new.md"])
 
+    def test_check_comment_plan_executes_the_helpers_positional_contract(self):
+        old, new = self.scratch / "before.py", self.scratch / "after.py"
+        old.write_bytes(b"x = 1 # old\n")
+        for content, status, code in ((b"x = 1 # revised\n", "passed", 0),
+                                      (b"x = 2 # revised\n", "failed", 1)):
+            new.write_bytes(content)
+            plan = commands.resolve(["check", "--kind", "comments", "--before", str(old), "--after", str(new)])
+            process = subprocess.run([sys.executable, "-B", plan["checker"]["script"], *plan["checker"]["args"]],
+                                     capture_output=True, timeout=10)
+            self.assertEqual(process.returncode, code)
+            self.assertEqual(json.loads(process.stdout)["status"], status)
+        self.assertEqual(old.read_bytes(), b"x = 1 # old\n")
+
 
 if __name__ == "__main__":
     unittest.main()
