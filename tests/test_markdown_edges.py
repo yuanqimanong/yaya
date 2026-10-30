@@ -1,9 +1,36 @@
 """Markdown preservation regressions using rendered-link semantics."""
+import subprocess
+import sys
 import unittest
-from test_check_rewrite import checker
+from test_check_rewrite import checker, SCRIPTS
 
 
 class ReferenceChecks(unittest.TestCase):
+    def test_long_escaped_link_label_has_bounded_runtime(self):
+        script = "from check_rewrite import compare; s='[ '+chr(92)*100000+' ](target)'; assert compare(s,s)['status']=='passed'"
+        process = subprocess.run([sys.executable, "-B", "-c", script], cwd=SCRIPTS,
+                                 capture_output=True, timeout=10)
+        self.assertEqual(process.returncode, 0, process.stderr)
+
+    def test_image_link_role_changes_fail_for_each_supported_link_form(self):
+        for source in ("![diagram](flow.svg)", "![diagram][id]\n\n[id]: flow.svg\n",
+                       "![id][]\n\n[id]: flow.svg\n", "![id]\n\n[id]: flow.svg\n",
+                       "![a [nested] label](flow.svg)", "![array `a[0]`](flow.svg)"):
+            with self.subTest(source=source):
+                result = checker.compare(source, source[1:])
+                self.assertEqual(result["status"], "failed")
+                self.assertIn("link_roles", {v["category"] for v in result["violations"]})
+                self.assertEqual(checker.compare(source[1:], source)["status"], "failed")
+
+    def test_image_alt_text_and_escaped_image_punctuation_are_editable(self):
+        for source in ("![old](flow.svg)", "![old][id]\n\n[id]: flow.svg\n", r"\![old](flow.svg)"):
+            self.assertEqual(checker.compare(source, source.replace("old", "new"))["status"], "passed")
+        self.assertEqual(checker.compare(r"\![old](flow.svg)", "[old](flow.svg)")["status"], "passed")
+        self.assertEqual(checker.compare(r"\\![old](flow.svg)", r"\\[old](flow.svg)")["status"], "failed")
+        source = "`![old](flow.svg)`"
+        result = checker.compare(source, source.replace("!", ""))
+        self.assertEqual({v["category"] for v in result["violations"]}, {"inline_code"})
+
     def test_task_completion_state_is_protected_while_labels_can_change(self):
         for prefix in ("- ", "* ", "+ ", "1. ", "  2) "):
             for before, after in (("[ ]", "[x]"), ("[X]", "[ ]")):

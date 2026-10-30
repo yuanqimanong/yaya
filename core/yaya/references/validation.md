@@ -93,6 +93,11 @@ existing whole-span checks; quantities are not assembled across those spans.
 
 ## What a pass cannot establish
 
+Images and hyperlinks retain their roles as well as destinations, including
+supported reference forms. Inline image alt text and ordinary link labels remain
+editable. Reordering roles and destinations across a document still needs review;
+these category sequences are not a rendered document tree.
+
 Markdown task markers (`- [ ]`, `- [x]`, `1. [X]`) are protected separately from
 their editable descriptions. Changing, adding or removing a marker changes the
 completion-state check. This does not verify the work described or associate a

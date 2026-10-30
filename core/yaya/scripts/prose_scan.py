@@ -239,6 +239,32 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
         index += 1
 
     # Inline spans. Scan from left to right so code and comments shield syntax.
+    escapes = bytearray(len(text))
+    slash_count = 0
+    for position, char in enumerate(text):
+        escapes[position] = slash_count % 2
+        slash_count = slash_count + 1 if char == "\\" else 0
+
+    def escaped(position):
+        return bool(escapes[position])
+
+    def label_start(end):
+        depth = 1
+        for cursor in range(end - 1, -1, -1):
+            if occupied[cursor] or escaped(cursor):
+                continue
+            if text[cursor] == "]":
+                depth += 1
+            elif text[cursor] == "[":
+                depth -= 1
+                if depth == 0:
+                    return cursor
+        raise Unsupported("Link target has no supported opening label.")
+
+    def link_role(start):
+        image = start > 0 and text[start - 1] == "!" and not escaped(start - 1)
+        spans.append(Span(start, start + 1, "link_roles", "image" if image else "link"))
+
     index = 0
     while index < len(text):
         if occupied[index]:
@@ -296,6 +322,7 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
             if _HTML_LIKE.match(text, index):
                 raise Unsupported("Unsupported or incomplete HTML-like markup.")
         if text.startswith("](", index):
+            opening = label_start(index)
             start = index + 2
             cursor, depth, quote = start, 1, None
             while cursor < len(text):
@@ -323,17 +350,20 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
                 raise Unsupported("Unclosed inline link.")
             if not add(index, cursor + 1, "link_targets"):
                 raise Unsupported("Overlapping link markup.")
+            link_role(opening)
             index = cursor + 1
             continue
         if text.startswith("][", index):
+            opening = label_start(index)
             end = text.find("]", index + 2)
             if end < 0 or "\n" in text[index:end]:
                 raise Unsupported("Unclosed link reference.")
             # Include the whole link label for collapsed references.
-            start = text.rfind("[", 0, index) if end == index + 2 else index
+            start = opening if end == index + 2 else index
             if start < 0:
                 raise Unsupported("Unsupported reference syntax.")
             add(start, end + 1, "link_targets", overlap=True)
+            link_role(opening)
             index = end + 1
             continue
         index += 1
@@ -356,12 +386,13 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
         slash = start
         while slash > 0 and text[slash - 1] == "\\":
             slash -= 1
-        escaped = (start - slash) % 2 == 1
+        is_escaped = (start - slash) % 2 == 1
         explicit = text[end + 1:end + 2] in {"(", "["}
-        if normalize_label(label) in labels and not occupied[start] and not escaped and not explicit:
+        if normalize_label(label) in labels and not occupied[start] and not is_escaped and not explicit:
             if "\n" in label or "\r" in label:
                 raise Unsupported("Multiline shortcut references are unsupported.")
             add(start, end + 1, "link_targets", overlap=True)
+            link_role(start)
         cursor = end + 1
     for pattern, category in (
         (re.compile(r"\{#[A-Za-z_][\w:.-]*\}"), "explicit_ids"),
