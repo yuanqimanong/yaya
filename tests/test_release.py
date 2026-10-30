@@ -328,6 +328,20 @@ class ReleaseBuildTests(unittest.TestCase):
         self.assertIn("Required runtime file missing", run.stderr)
         self.assertFalse(output.exists())
 
+    def test_invalid_command_default_prevents_release(self):
+        source = self.scratch / "bad command catalog"
+        shutil.copytree(self.source, source)
+        path = source / "core/yaya/catalog.json"
+        catalog = json.loads(path.read_text(encoding="utf-8"))
+        catalog["options"]["focus"]["default"] = "unsupported"
+        path.write_text(json.dumps(catalog), encoding="utf-8")
+        output = self.scratch / "bad catalog output"
+        run = self.run_script(source / "scripts/build_release.py", "--output", output)
+        self.assertEqual(run.returncode, 1)
+        self.assertIn("options.focus.default", run.stderr)
+        self.assertNotIn("Traceback", run.stderr)
+        self.assertFalse(output.exists())
+
     def test_existing_output_links_do_not_overwrite_their_targets(self):
         for index, filename in enumerate((self.core_asset["file"], "catalog.json", "SHA256SUMS")):
             with self.subTest(filename=filename):

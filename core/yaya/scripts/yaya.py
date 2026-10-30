@@ -6,6 +6,7 @@ import argparse
 import difflib
 import json
 from pathlib import Path, PurePosixPath
+import re
 import sys
 
 from packs import strict_json
@@ -43,6 +44,20 @@ def resource(core, relative):
     return str(resolved)
 
 
+def text_fields(entry, fields, context):
+    for field in fields:
+        if not isinstance(entry.get(field), str) or not entry[field].strip():
+            raise ValueError(f"{context}.{field} must be a nonempty string")
+
+
+def string_list(value, context, *, nonempty=False):
+    if (not isinstance(value, list) or (nonempty and not value)
+            or any(not isinstance(item, str) or not item.strip() for item in value)):
+        raise ValueError(f"{context} must be a list of nonempty strings")
+    if len(value) != len(set(value)):
+        raise ValueError(f"{context} must not contain duplicates")
+
+
 def load_catalog(core=CORE):
     catalog = strict_json((core / "catalog.json").read_text(encoding="utf-8"), "catalog.json")
     if type(catalog.get("format_version")) is not int or catalog["format_version"] != 1:
@@ -50,12 +65,54 @@ def load_catalog(core=CORE):
     for group in ("commands", "options", "domains"):
         if not isinstance(catalog.get(group), dict) or not catalog[group]:
             raise ValueError(f"Missing catalog {group}")
-    for command in catalog["commands"].values():
+        for name, entry in catalog[group].items():
+            if not re.fullmatch(r"[a-z][a-z0-9]*", name) or name in {"help", "json", "domains"}:
+                raise ValueError(f"Invalid or reserved catalog name: {group}.{name}")
+            if not isinstance(entry, dict):
+                raise ValueError(f"{group}.{name} must be an object")
+    for name, option in catalog["options"].items():
+        context = f"options.{name}"
+        if set(option) - {"help", "metavar", "choices", "default", "flag", "repeat"}:
+            raise ValueError(f"Unsupported fields in {context}")
+        text_fields(option, ["help", *(["metavar"] if "metavar" in option else [])], context)
+        for field in ("flag", "repeat"):
+            if field in option and type(option[field]) is not bool:
+                raise ValueError(f"{context}.{field} must be boolean")
+        if option.get("flag"):
+            if option.get("repeat") or {"choices", "metavar"} & option.keys() or option.get("default", False) is not False:
+                raise ValueError(f"{context} flag must default to false and take no values")
+        elif option.get("repeat"):
+            if "default" in option:
+                raise ValueError(f"{context} repeated values must be explicit")
+        elif "default" in option:
+            text_fields(option, ["default"], context)
+        if "choices" in option:
+            string_list(option["choices"], f"{context}.choices", nonempty=True)
+            if "default" in option and option["default"] not in option["choices"]:
+                raise ValueError(f"{context}.default must be one of its choices")
+        if name in {"file", "save", "domain"} and "default" in option:
+            raise ValueError(f"{context} requires an explicit selection")
+        if ((name == "write" and not option.get("flag"))
+                or (name == "file" and (not option.get("repeat") or option.get("flag")))
+                or (name in {"save", "domain"} and (option.get("flag") or option.get("repeat")))):
+            raise ValueError(f"Invalid action shape for {context}")
+    for name, command in catalog["commands"].items():
+        context = f"commands.{name}"
+        text_fields(command, ("title", "summary", "scope", "delivery"), context)
+        string_list(command.get("options"), f"{context}.options")
+        string_list(command.get("references"), f"{context}.references", nonempty=True)
+        if command["delivery"] not in {"rewrite", "findings", "style-card", "assessment"}:
+            raise ValueError(f"Unknown delivery in {context}")
         if not set(command["options"]) <= catalog["options"].keys():
-            raise ValueError("Command references an unknown option")
+            raise ValueError(f"{context} references an unknown option")
+        if "write" in command["options"] and (command["delivery"] != "rewrite" or "file" not in command["options"]):
+            raise ValueError(f"{context}: write requires rewrite delivery and file input")
+        if "save" in command["options"] and command["delivery"] != "style-card":
+            raise ValueError(f"{context}: save requires style-card delivery")
         for reference in command["references"]:
             resource(core, reference)
-    for domain in catalog["domains"].values():
+    for name, domain in catalog["domains"].items():
+        text_fields(domain, ("title", "covers", "preserves", "excludes", "guide", "quality"), f"domains.{name}")
         resource(core, domain["guide"])
     return catalog
 
