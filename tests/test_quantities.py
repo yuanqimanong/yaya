@@ -13,6 +13,23 @@ import prose_scan
 
 
 class QuantityChecks(unittest.TestCase):
+    def test_range_endpoints_and_separator_spelling_are_protected_together(self):
+        for separator in ("–", "—", "-", " - ", "..", "…"):
+            before = "Forecast: 5%" + separator + "10%."
+            after = "Forecast: 10%" + separator + "5%."
+            with self.subTest(separator=separator):
+                self.assert_change(before, after)
+                self.assertEqual(prose_scan.numbers(prose_scan.snapshot(before)), ["5%" + separator + "10%"])
+        for before, after in (("-5--1", "-1--5"), ("5–10", "10–5"), ("5–10", "5-10")):
+            self.assert_change(before, after)
+        self.assertEqual(prose_scan.numbers(prose_scan.snapshot("5.0..10.5")), ["5.0..10.5"])
+
+    def test_range_checks_allow_prose_reordering_without_crossing_boundaries(self):
+        self.assertEqual(checker.compare("A: 5%–10%. B: 2–3 ms.", "B: 2–3 ms. A: 5%–10%.")["status"], "passed")
+        for source in ("5%\n-10%", "5% – `middle` 10%", "5% and 10%"):
+            self.assertEqual(len(prose_scan.numbers(prose_scan.snapshot(source))), 2)
+        self.assertEqual(checker.compare("First: 5%. Next: 10%.", "Next: 10%. First: 5%.")["status"], "passed")
+
     def assert_change(self, before, after):
         result = checker.compare(before, after)
         self.assertEqual(result["status"], "failed", result)
