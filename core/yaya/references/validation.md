@@ -93,6 +93,12 @@ existing whole-span checks; quantities are not assembled across those spans.
 
 ## What a pass cannot establish
 
+Recognized printf-style fields include positional/mapping selectors, width,
+precision and escaped `%%`. Their exact spellings are preserved. This is a finite
+format subset, not an interpolation parser for every language; space-flag forms
+such as `% d` need explicit literal protection because they overlap ordinary prose.
+Unusual flag orders such as `%0+5d` also need explicit protection; `%+05d` is covered.
+
 Images and hyperlinks retain their roles as well as destinations, including
 supported reference forms. Inline image alt text and ordinary link labels remain
 editable. Reordering roles and destinations across a document still needs review;
