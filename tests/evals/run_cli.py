@@ -73,14 +73,35 @@ def configured_model() -> dict:
 
 
 def locale_candidates(language: str) -> list[str]:
-    if language == "zh":
-        return ["zh-Hans"]
-    if language.startswith("zh-Hant") or language in {"zh-HK", "zh-TW", "zh-MO"}:
-        return [language, "zh-Hant"]
-    if language.startswith("zh-Hans") or language in {"zh-CN", "zh-SG"}:
-        return [language, "zh-Hans"]
+    # Keep this policy within the hashed runner, without importing live Skill code.
+    # Contract tests compare it with packs.candidates; bare zh never guesses a script.
+    if language == "":
+        return []
+    if not isinstance(language, str):
+        raise ValueError("Case language must be a supported language tag")
     parts = language.split("-")
-    return ["-".join(parts[:size]) for size in range(len(parts), 0, -1)]
+    if not re.fullmatch(r"[A-Za-z]{2,3}", parts[0]):
+        raise ValueError("Case language must be a supported language tag")
+    canonical = [parts.pop(0).lower()]
+    if parts and re.fullmatch(r"[A-Za-z]{4}", parts[0]):
+        canonical.append(parts.pop(0).title())
+    if parts and re.fullmatch(r"[A-Za-z]{2}|[0-9]{3}", parts[0]):
+        canonical.append(parts.pop(0).upper())
+    seen = set()
+    for part in parts:
+        if not re.fullmatch(r"[A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}", part) or part.lower() in seen:
+            raise ValueError("Unsupported or duplicate language subtag")
+        seen.add(part.lower())
+        canonical.append(part.lower())
+    result = ["-".join(canonical)]
+    if canonical[0] == "zh" and len(canonical) > 1 and canonical[1] in {"CN", "SG", "TW", "HK", "MO"}:
+        canonical.insert(1, "Hans" if canonical[1] in {"CN", "SG"} else "Hant")
+    while canonical:
+        tag = "-".join(canonical)
+        if tag not in result:
+            result.append(tag)
+        canonical.pop()
+    return result
 
 
 def skill_context(run: Path, case: dict) -> list[Path]:
@@ -92,14 +113,18 @@ def skill_context(run: Path, case: dict) -> list[Path]:
     if task not in TASK_FILES:
         raise ValueError(f"Unknown task for context selection: {task}")
     files.append(snapshot / "references" / TASK_FILES[task])
-    for locale in locale_candidates(case.get("language", "")):
-        # Frozen external packages take precedence, matching an explicit --data-dir.
-        directories = (run / "data/language-packs" / locale, snapshot / "languages" / locale)
-        pack = next((directory for directory in directories if (directory / "GUIDE.md").is_file()), None)
-        if pack is not None:
+    candidates = locale_candidates(case.get("language", ""))
+    # Location priority precedes specificity, matching an explicit frozen --data-dir.
+    for root in (run / "data/language-packs", snapshot / "languages"):
+        for locale in candidates:
+            pack = root / locale
+            if not pack.exists():
+                continue
+            if not (pack / "GUIDE.md").is_file():
+                raise ValueError(f"Frozen language pack lacks GUIDE.md: {pack}")
             filename = "PATTERNS.md" if task == "humanize" and (pack / "PATTERNS.md").is_file() else "GUIDE.md"
             files.append(pack / filename)
-            break
+            return files
     return files
 
 
