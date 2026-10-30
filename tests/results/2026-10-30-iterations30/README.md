@@ -203,3 +203,11 @@ rejects duplicates/nonfinite numbers (including overflowed exponents); event
 inspection rejects unknown types and malformed items. LF/CRLF record splitting
 retains valid Unicode separators inside JSON strings. Regression stubs validate
 the protocol only; these checks do not establish model quality or disable tools.
+
+## 25 / cumulative 45 — Content-bound scan locations
+
+CLI scan findings now identify the exact source bytes by SHA-256, length and path.
+A second read suppresses stale findings when the source changed or disappeared
+during scanning. Stdin retains a content hash but no stable-file claim. Tests
+cover BOM/CRLF bytes, unchanged inputs, stdin and edits/removal during execution;
+consumers still need to rerun after any later edit.

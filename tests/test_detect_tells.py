@@ -1,11 +1,13 @@
 """Literal candidate detection, exclusions, and CLI error boundaries."""
 
 import json
+import hashlib
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "core" / "yaya" / "scripts"
 sys.path.insert(0, str(SCRIPTS))
@@ -181,7 +183,36 @@ class DetectionTests(unittest.TestCase):
                                      "--language", "en", "--json"], capture_output=True, check=False)
             self.assertEqual(result.returncode, 0, result.stdout)
             self.assertEqual(len(json.loads(result.stdout)["findings"]), 1)
+            evidence = json.loads(result.stdout)["evidence"]
+            self.assertEqual(evidence["source"]["sha256"], hashlib.sha256(original).hexdigest())
+            self.assertEqual(evidence["source"]["bytes"], len(original))
+            self.assertEqual(evidence["source"]["path"], str(path.resolve()))
+            self.assertIs(evidence["input_stable"], True)
             self.assertEqual(path.read_bytes(), original)
+
+    def test_stdin_has_a_content_hash_but_no_stable_file_claim(self):
+        raw = b"Only time will tell.\r\n"
+        process, result = self.run_cli(raw)
+        self.assertEqual(process.returncode, 0)
+        self.assertIsNone(result["evidence"]["input_stable"])
+        self.assertIsNone(result["evidence"]["source"]["path"])
+        self.assertEqual(result["evidence"]["source"]["sha256"], hashlib.sha256(raw).hexdigest())
+
+    def test_changed_or_removed_input_cannot_publish_stale_locations(self):
+        with tempfile.TemporaryDirectory(dir=Path(__file__).parent) as directory:
+            path = Path(directory) / "text.md"
+            original = detector.detect
+            for remove in (False, True):
+                path.write_text("Only time will tell.", encoding="utf-8")
+                def changed(*args):
+                    result = original(*args)
+                    path.unlink() if remove else path.write_text("A clear replacement.", encoding="utf-8")
+                    return result
+                with patch.object(detector, "detect", side_effect=changed):
+                    result = detector.scan_file(path, "en")
+                self.assertEqual(result["status"], "error")
+                self.assertEqual(result["findings"], [])
+                self.assertIs(result["evidence"]["input_stable"], False)
 
     def test_missing_file_is_structured_error(self):
         result = subprocess.run([sys.executable, str(SCRIPTS / "detect_tells.py"), str(SCRIPTS / "absent-input.md"),
