@@ -1,5 +1,6 @@
 """Collector runs the frozen checker and its dependencies in one isolated process."""
 import json
+import copy
 from pathlib import Path
 import sys
 import tempfile
@@ -24,10 +25,10 @@ class FrozenCheckerTests(unittest.TestCase):
                      "input": "x = 1 # old\n", "checks": ["Preserve code"]}
         self.row = {"id": "example", "text": "x = 1 # new\n", "notes": "", "skill_used": False}
 
-    def collect(self):
+    def collect(self, output_loader=None):
         with patch.object(COLLECT, "TESTS", self.tests), \
-             patch.object(COLLECT, "verify_run", return_value=({}, [self.case])), \
-             patch.object(COLLECT, "load_outputs", return_value={"example": self.row}), \
+             patch.object(COLLECT, "verify_run", side_effect=lambda run: (json.loads((run / "manifest.json").read_text()), [self.case])), \
+             patch.object(COLLECT, "load_outputs", side_effect=output_loader or (lambda *args: {"example": copy.deepcopy(self.row)})), \
              patch.object(compare_runs, "audit_published_outputs", return_value={}):
             return COLLECT.collect(self.run, self.tests / "results/report")
 
@@ -50,6 +51,36 @@ class FrozenCheckerTests(unittest.TestCase):
             'if __name__ == "__main__":\n    print(\'{"status":"passed"}\')\n    raise SystemExit(2)\n', encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "exit"):
             self.collect()
+
+    def test_changed_manifest_prevents_report_and_review_publication(self):
+        self.script.write_text('from pathlib import Path\n'
+                               'Path(__file__).parents[3].joinpath("manifest.json").write_text(\'{"changed":true}\')\n'
+                               'print(\'{"status":"passed"}\')\n', encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "changed"):
+            self.collect()
+        self.assertFalse((self.tests / "results/report").exists())
+        self.assertFalse((self.run / "review").exists())
+
+    def test_changed_outputs_prevent_publication(self):
+        self.script.write_text('print(\'{"status":"passed"}\')\n', encoding="utf-8")
+        calls = []
+        def load(*args):
+            calls.append(args)
+            row = dict(self.row)
+            if len(calls) > 2:
+                row["text"] = "x = 9 # changed after comparison\n"
+            return {"example": row}
+        with self.assertRaisesRegex(ValueError, "changed"):
+            self.collect(output_loader=load)
+        self.assertFalse((self.tests / "results/report").exists())
+
+    def test_failed_checker_leaves_destination_available_for_retry(self):
+        self.script.write_text('print("invalid checker output")\n', encoding="utf-8")
+        with self.assertRaises(ValueError):
+            self.collect()
+        self.assertFalse((self.tests / "results/report").exists())
+        self.script.write_text('print(\'{"status":"passed"}\')\n', encoding="utf-8")
+        self.assertEqual(self.collect()["comment_statuses"]["passed"], 2)
 
 
 if __name__ == "__main__":

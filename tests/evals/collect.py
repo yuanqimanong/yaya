@@ -179,7 +179,8 @@ def collect(run: Path, destination: Path) -> dict:
     execution_audit = audit_published_outputs(run, source_cases)
     if (run / "review").exists():
         raise ValueError("Review directory already exists; refusing to overwrite anonymous evidence")
-    destination.mkdir(parents=True, exist_ok=False)
+    if destination.exists():
+        raise ValueError("Result destination already exists; refusing to overwrite evidence")
     script = run / "snapshot/yaya/scripts/check_comments.py"
     mechanical = []
     for case in source_cases:
@@ -207,6 +208,10 @@ def collect(run: Path, destination: Path) -> dict:
                 after.write_text(text, encoding="utf-8", newline="\n")
                 record["comment_boundary"] = check_comments(script, before, after)
             mechanical.append(record)
+    final_manifest, final_cases = verify_run(run)
+    final_outputs = {mode: load_outputs(run, mode, expected) for mode in ("skill", "baseline")}
+    if final_manifest != manifest or final_cases != source_cases or final_outputs != outputs:
+        raise ValueError("Run inputs or outputs changed during collection; rerun checks")
     # Reviewers receive criteria and anonymous text only, without self-reported notes.
     rng = random.Random(20261020)
     blind, key = [], {}
@@ -217,7 +222,8 @@ def collect(run: Path, destination: Path) -> dict:
         blind.append({"id": case["id"], "request": case["request"], "input": case["input"],
                       "checks": case["checks"], "A": outputs[order[0]][case["id"]]["text"],
                       "B": outputs[order[1]][case["id"]]["text"]})
-    (run / "review").mkdir(exist_ok=True)
+    destination.mkdir(parents=True, exist_ok=False)
+    (run / "review").mkdir(exist_ok=False)
     for number in range(0, len(blind), 12):
         (run / "review" / f"batch-{number // 12 + 1:02d}.json").write_text(
             json.dumps(blind[number:number + 12], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -226,6 +232,7 @@ def collect(run: Path, destination: Path) -> dict:
         (destination / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (destination / "manifest.json").write_bytes((run / "manifest.json").read_bytes())
     summary = {"cases_per_condition": len(expected), "outputs": sum(map(len, outputs.values())),
+               "inputs_unchanged": True,
                "protocol": manifest.get("protocol", 1),
                "criteria_frozen_before_generation": manifest.get("protocol", 1) >= 2,
                "literal_failures": sum(bool(row["literal_failures"]) for row in mechanical),
