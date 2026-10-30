@@ -118,6 +118,37 @@ class EvidenceChecks(unittest.TestCase):
         self.assertEqual(process.returncode, 1)
         self.assertEqual(json.loads(process.stdout)["counts"]["unverified"], 1)
 
+    def test_bound_check_rejects_oversized_input_before_operation(self):
+        from check_rewrite import check_files
+        from prose_scan import MAX_BYTES
+        self.source.write_bytes(b"x" * (MAX_BYTES + 1))
+        with patch("check_rewrite.compare") as operation:
+            with self.assertRaisesRegex(ValueError, "exceeds"):
+                check_files(self.source, self.source)
+        operation.assert_not_called()
+
+    def test_bounded_evidence_avoids_unlimited_path_reads(self):
+        from check_rewrite import check_files
+        original = Path.read_bytes
+        def guarded(path):
+            if path == self.source:
+                self.fail("Prose evidence must use a bounded read")
+            return original(path)
+        with patch.object(Path, "read_bytes", guarded):
+            result = check_files(self.source, self.source)
+        self.assertEqual(result["status"], "passed")
+        self.assertEqual(result["evidence"]["before"]["bytes"], self.source.stat().st_size)
+
+    def test_bounded_evidence_detects_file_growth(self):
+        self.source.write_bytes(b"a" * 16)
+        def operation():
+            self.source.write_bytes(b"b" * 17)
+            return {"status": "passed"}
+        row = evidence.bound_check(self.source, self.source, SCRIPTS / "check_comments.py",
+                                   operation, max_bytes=16)
+        self.assertEqual(row["status"], "failed")
+        self.assertFalse(row["evidence"]["inputs_stable"])
+
 
 if __name__ == "__main__":
     unittest.main()
