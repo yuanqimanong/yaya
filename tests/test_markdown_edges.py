@@ -4,6 +4,23 @@ from test_check_rewrite import checker
 
 
 class ReferenceChecks(unittest.TestCase):
+    def test_task_completion_state_is_protected_while_labels_can_change(self):
+        for prefix in ("- ", "* ", "+ ", "1. ", "  2) "):
+            for before, after in (("[ ]", "[x]"), ("[X]", "[ ]")):
+                source = prefix + before + " Review the draft.\n"
+                with self.subTest(prefix=prefix, before=before):
+                    result = checker.compare(source, source.replace(before, after))
+                    self.assertEqual(result["status"], "failed")
+                    self.assertIn("task_markers", {v["category"] for v in result["violations"]})
+                    self.assertEqual(checker.compare(source, source.replace("Review the draft", "Review draft"))["status"], "passed")
+
+    def test_task_markers_do_not_capture_prose_or_escape_code_boundaries(self):
+        self.assertEqual(checker.compare("Use [x] as a label.", "Use [y] as a label.")["status"], "passed")
+        for source, category in (("`- [ ] task`", "inline_code"), ("```\n- [ ] task\n```\n", "fences"),
+                                 ("> - [ ] task\n", "blockquotes")):
+            result = checker.compare(source, source.replace("[ ]", "[x]"))
+            self.assertEqual({v["category"] for v in result["violations"]}, {category})
+
     def test_unicode_and_control_separators_do_not_create_markdown_lines(self):
         for separator in ("\v", "\f", "\x1c", "\x1d", "\x1e", "\x85", "\u2028", "\u2029"):
             with self.subTest(separator=repr(separator)):

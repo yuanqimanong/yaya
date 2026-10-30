@@ -233,6 +233,9 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
             if not re.fullmatch(r" {0,3}\[[^\]\r\n]+\]:\s*(?:<[^<>\r\n]+>|[^\s]+)(?:\s+(?:\"[^\"\r\n]*\"|'[^'\r\n]*'|\([^()\r\n]*\)))?\s*", body):
                 raise Unsupported("Unsupported link reference definition.")
             add(start, start + len(line), "link_targets", overlap=True)
+        task = re.match(r" {0,3}(?:[-+*]|\d+[.)])[ \t]+(\[[ xX]\])(?=[ \t]|$)", body)
+        if task:
+            add(start + task.start(1), start + task.end(1), "task_markers")
         index += 1
 
     # Inline spans. Scan from left to right so code and comments shield syntax.

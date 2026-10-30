@@ -93,6 +93,11 @@ existing whole-span checks; quantities are not assembled across those spans.
 
 ## What a pass cannot establish
 
+Markdown task markers (`- [ ]`, `- [x]`, `1. [X]`) are protected separately from
+their editable descriptions. Changing, adding or removing a marker changes the
+completion-state check. This does not verify the work described or associate a
+marker with its task if unchanged markers and descriptions are rearranged.
+
 AST and byte comparisons establish mechanical scope only. They cannot prove meaning, accuracy, absence of a latent code defect, or unchanged runtime behavior: `__doc__`, line tracing, reflection, doctests, and integrations can matter. Prose checks allow plain-prose newline changes and cannot associate numbers with entities; Python checks preserve line endings. JSON is ASCII-escaped for Windows consoles; source bytes retain UTF-8/BOM/CRLF details.
 
 Test mechanics with scripts. Evaluate model decisions separately using predeclared expected outcomes, frozen old/new guidance, identical inputs/context, and the same target-model settings. Keep execution failures and missing outputs visible; report repeated-run/cross-model limits. No vocabulary hit rate proves naturalness, factual fidelity, or authorship accuracy.

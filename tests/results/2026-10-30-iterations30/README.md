@@ -56,3 +56,11 @@ in [domain-relationships](domain-relationships/README.md). Both conditions met
 the assessed semantic criteria; this supports regression coverage, not a claim
 of improvement over the baseline. A duplicated percentage shows why literal
 checker failures must remain separate from editorial judgments.
+
+## 7 / cumulative 27 — Task completion markers
+
+Changing `- [ ] Ship release` to `- [x] Ship release` previously passed. Protect
+task markers while leaving descriptions editable. Checks cover unordered/ordered
+lists, completion changes in both directions, ordinary bracketed text and code
+boundaries. The checker cannot establish whether a task was actually completed
+or bind a marker to its description after arbitrary rearrangement.
