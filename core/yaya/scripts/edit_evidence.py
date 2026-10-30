@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path, PurePosixPath
+import re
 import subprocess
 import sys
 import uuid
@@ -185,8 +186,30 @@ def start(root, out, targets):
 def load_task(directory):
     directory = Path(directory).resolve()
     manifest = strict_json(directory / "manifest.json")
+    if (not isinstance(manifest, dict) or type(manifest.get("schema")) is not int or manifest["schema"] != 1
+            or not isinstance(manifest.get("root"), str) or not Path(manifest["root"]).is_absolute()
+            or not isinstance(manifest.get("files"), dict) or not manifest["files"]
+            or not isinstance(manifest.get("targets"), list) or not manifest["targets"]):
+        raise ValueError("Invalid task manifest: expected schema 1, absolute root and nonempty files/targets.")
+    selected = set()
+    for item in manifest["targets"]:
+        if (not isinstance(item, dict) or set(item) != {"path", "kind"}
+                or not isinstance(item["path"], str) or not isinstance(item["kind"], str)
+                or item["kind"] not in KINDS or item["path"] not in manifest["files"]):
+            raise ValueError("Invalid task target or missing snapshot file.")
+        key = (item["path"], item["kind"])
+        if key in selected:
+            raise ValueError("Duplicate task target.")
+        selected.add(key)
+    if {path for path, _ in selected} != set(manifest["files"]):
+        raise ValueError("Snapshot files and task targets disagree.")
     for name, info in manifest["files"].items():
-        if digest(safe_file(directory / "before", name).read_bytes()) != info["sha256"]:
+        if (not isinstance(info, dict) or not isinstance(info.get("sha256"), str)
+                or not re.fullmatch(r"[0-9a-f]{64}", info["sha256"])
+                or type(info.get("bytes")) is not int or info["bytes"] < 0):
+            raise ValueError("Invalid snapshot file metadata.")
+        raw = safe_file(directory / "before", name).read_bytes()
+        if digest(raw) != info["sha256"] or len(raw) != info["bytes"]:
             raise ValueError("Task-start snapshot changed.")
     return directory, manifest
 

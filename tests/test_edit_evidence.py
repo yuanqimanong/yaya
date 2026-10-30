@@ -112,6 +112,29 @@ class EvidenceChecks(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "snapshot changed"):
             evidence.summarize(self.snapshot)
 
+    def test_empty_or_inconsistent_manifests_cannot_claim_completion(self):
+        original = self.start()
+        path = self.snapshot / "manifest.json"
+        variants = [
+            {**original, "files": {}, "targets": []}, {**original, "schema": True},
+            {**original, "targets": original["targets"] * 2},
+            {**original, "targets": [{"path": "sample.py", "kind": "unknown"}]},
+            {**original, "targets": [{"path": "missing.py", "kind": "comments"}]},
+            {**original, "root": "relative/path"}, [],
+        ]
+        for index, manifest in enumerate(variants):
+            with self.subTest(case=index):
+                path.write_text(json.dumps(manifest), encoding="utf-8")
+                with self.assertRaises(ValueError):
+                    evidence.summarize(self.snapshot)
+
+    def test_manifest_byte_count_is_bound_to_snapshot(self):
+        manifest = self.start()
+        manifest["files"]["sample.py"]["bytes"] += 1
+        (self.snapshot / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "snapshot changed"):
+            evidence.summarize(self.snapshot)
+
     def test_read_race_fails_and_utf8_bom_crlf_reported(self):
         self.source.write_bytes(b"\xef\xbb\xbf# old\r\n")
         candidate = self.root / "after.py"
