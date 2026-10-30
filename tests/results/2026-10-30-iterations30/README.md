@@ -194,3 +194,12 @@ attribute/index access, conversions and non-nested format specifications. Tests
 retain editable surrounding prose, code boundaries and general brace expressions,
 and exercise long unclosed inputs. Nested formatting and arbitrary expressions
 still need explicit literal protection; this is not a template interpreter.
+
+## 24 / cumulative 44 — Strict evaluation event evidence
+
+Duplicate JSON fields could conceal a tool item, unknown top-level event types
+were ignored, and nonfinite usage values were accepted. Evaluation JSON now
+rejects duplicates/nonfinite numbers (including overflowed exponents); event
+inspection rejects unknown types and malformed items. LF/CRLF record splitting
+retains valid Unicode separators inside JSON strings. Regression stubs validate
+the protocol only; these checks do not establish model quality or disable tools.

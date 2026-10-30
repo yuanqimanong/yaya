@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path, PurePosixPath
 import random
 import re
@@ -12,15 +13,26 @@ import sys
 TESTS = Path(__file__).resolve().parents[1]
 
 
-def read_json(path: Path):
+def decode_json(text: str, source="JSON"):
     def unique(pairs):
         result = {}
         for key, value in pairs:
             if key in result:
-                raise ValueError(f"Duplicate JSON key {key!r}: {path}")
+                raise ValueError(f"Duplicate JSON key {key!r}: {source}")
             result[key] = value
         return result
-    return json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=unique)
+    def constant(value):
+        raise ValueError(f"Nonfinite JSON number {value}: {source}")
+    def number(value):
+        result = float(value)
+        if not math.isfinite(result):
+            constant(value)
+        return result
+    return json.loads(text, object_pairs_hook=unique, parse_constant=constant, parse_float=number)
+
+
+def read_json(path: Path):
+    return decode_json(path.read_text(encoding="utf-8"), str(path))
 
 
 def cases() -> list[dict]:

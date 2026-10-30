@@ -28,6 +28,9 @@ CLI 使用 `exec --ephemeral --sandbox read-only --skip-git-repo-check --color n
 任务和语言仅用于选择指导文件；`checks`、`group`、评分与答案不传给生成者。
 
 stdout 和 stderr 直接写入证据文件，保留原始字节，避免等待后代进程关闭继承的 PIPE 句柄。
+JSONL 仅按 LF/CRLF 分记录，字符串中的 Unicode 分隔符不会拆成新记录。
+重复 JSON 字段、非有限数字、未知事件类型和损坏的 item 结构均使记录无效，
+不能用后一个字段覆盖前一个工具事件，也不能把未识别事件当成“未调用工具”。
 即使日志含 `turn.completed`，进程超时仍记为失败；未取得的退出码记为 `null`。
 
 - Skill 组从本次运行的固定快照加载入口、一个任务参考和对应语言指南。humanize 使用语言 `PATTERNS.md`，缺少该文件时回退 `GUIDE.md`。繁体香港请求可回退到独立 `zh-Hant` 包。超出 Skill 范围的题只提供入口，让模型判断适用性。
