@@ -161,3 +161,11 @@ read an empty stream rather than a stable original file. Reject lone-dash file
 selectors for either kind. Actual dash filenames remain usable via explicit paths,
 with executed stable-file evidence. Direct specialized stdin checks remain
 available and keep their existing unbound-evidence label.
+
+## 20 / cumulative 40 — Finite evaluation deadlines
+
+`float('nan')` and infinity bypassed the positive timeout condition, reaching
+execution or nonstandard JSON evidence. A shared guard now rejects these and
+nonpositive values before any attempt files or processes. Entry-point checks
+cover generation, judging, continuation, paired runs and direct execution;
+finite fractional deadlines still work in the existing local stub suite.

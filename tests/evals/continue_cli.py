@@ -109,6 +109,7 @@ def successful_attempt(job, run: Path, command: list[str]) -> tuple[Path, dict, 
 
 
 def retry_once(job, command: list[str], timeout: float) -> dict:
+    run_cli.validate_timeout(timeout)
     failure = failed_infrastructure(job, command)
     attempt = job.directory / "cli-attempt-02"
     if attempt.exists() or (job.directory / "outputs.json").exists():
@@ -152,10 +153,11 @@ def retry_once(job, command: list[str], timeout: float) -> dict:
 
 def continue_run(run: Path, retry_infrastructure: bool = False, workers: int = 3,
                  timeout: float = 180, competitors: Path | None = None) -> dict:
+    run_cli.validate_timeout(timeout)
     run = run.resolve()
     if not run.is_relative_to((TESTS / "runs").resolve()):
         raise ValueError("Use an existing frozen run under tests/runs/")
-    if workers < 1 or workers > 3 or timeout <= 0:
+    if workers < 1 or workers > 3:
         raise ValueError("Continuation allows 1 to 3 workers and a positive timeout")
     if (run / "continuation-started.json").exists() or (run / "continuation.json").exists():
         raise ValueError("A continuation was already attempted; no automatic third attempts or overwrites")
@@ -252,6 +254,7 @@ def main() -> int:
     parser.add_argument("--competitors-dir", type=Path)
     args = parser.parse_args()
     try:
+        run_cli.validate_timeout(args.timeout)
         result = continue_run(args.run, args.retry_infrastructure, args.workers, args.timeout, args.competitors_dir)
         return 0 if result["status"] in {"completed", "already_complete"} else 1
     except (ValueError, OSError, KeyError, TypeError) as exc:

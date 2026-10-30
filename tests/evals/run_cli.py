@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -37,6 +38,11 @@ IGNORED_PROVIDER_CONFIG = re.compile(
 
 def digest(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def validate_timeout(value) -> None:
+    if type(value) not in (int, float) or not math.isfinite(value) or value <= 0:
+        raise ValueError("timeout must be a finite positive number of seconds")
 
 
 def write_json(path: Path, value) -> None:
@@ -244,6 +250,7 @@ def command_for(command: list[str], directory: Path, schema: Path) -> list[str]:
 
 def execute_cli(argv: list[str], prompt: str, attempt: Path, timeout: float) -> tuple[str, str, int | None, str | None]:
     """Stream logs to files so inherited child handles cannot hold PIPE EOF open."""
+    validate_timeout(timeout)
     returncode, error = None, None
     stdout_path, stderr_path = attempt / "stdout.jsonl", attempt / "stderr.txt"
     with stdout_path.open("xb") as stdout_file, stderr_path.open("xb") as stderr_file:
@@ -325,6 +332,7 @@ def verify_completed(job: Job, attempt: Path) -> dict:
 
 
 def run_one(job: Job, command: list[str], timeout: float, resume: bool = False) -> dict:
+    validate_timeout(timeout)
     attempt = job.directory / "cli-attempt-01"
     if attempt.exists() or (job.directory / "outputs.json").exists():
         if resume and attempt.is_dir():
@@ -373,12 +381,13 @@ def run_one(job: Job, command: list[str], timeout: float, resume: bool = False) 
 def run_cli(run: Path, command: list[str], conditions: list[str], workers: int = 3,
             timeout: float = 180, limit: int | None = None, resume: bool = False,
             competitors: Path | None = None) -> list[dict]:
+    validate_timeout(timeout)
     run = run.resolve()
     if not run.is_relative_to((TESTS / "runs").resolve()):
         raise ValueError("CLI evaluation directories must be under tests/runs/")
     if len(set(conditions)) != len(conditions) or not conditions or set(conditions) - {"skill", "baseline"}:
         raise ValueError("Choose unique skill/baseline conditions")
-    if workers < 1 or timeout <= 0 or (limit is not None and limit < 1):
+    if workers < 1 or (limit is not None and limit < 1):
         raise ValueError("workers, timeout and limit must be positive")
     if competitors is not None:
         competitors = competitors.resolve()
@@ -439,6 +448,7 @@ def main() -> int:
     parser.add_argument("--competitors-dir", type=Path, help="Frozen humanizer/ and humanizer-zh/ source evidence")
     args = parser.parse_args()
     try:
+        validate_timeout(args.timeout)
         if not args.executable:
             raise ValueError("Codex CLI not found; supply --executable")
         results = run_cli(args.run, [args.executable], args.conditions, args.workers, args.timeout,
