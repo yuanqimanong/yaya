@@ -324,7 +324,10 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
         index += 1
 
     # Shortcut reference labels resolve through definitions already preserved.
-    labels = {re.match(r"\s*\[([^\]]+)\]", span.value).group(1).casefold()
+    def normalize_label(label):
+        return " ".join(label.split()).casefold()
+
+    labels = {normalize_label(re.match(r"\s*\[([^\]]+)\]", span.value).group(1))
               for span in spans if span.category == "link_targets" and re.match(r"\s*\[[^\]]+\]:", span.value)}
     cursor = 0
     while labels and cursor < len(text):
@@ -335,7 +338,14 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
         if end < 0:
             break
         label = text[start + 1:end]
-        if "\n" not in label and label.casefold() in labels and not occupied[start]:
+        slash = start
+        while slash > 0 and text[slash - 1] == "\\":
+            slash -= 1
+        escaped = (start - slash) % 2 == 1
+        explicit = text[end + 1:end + 2] in {"(", "["}
+        if normalize_label(label) in labels and not occupied[start] and not escaped and not explicit:
+            if "\n" in label or "\r" in label:
+                raise Unsupported("Multiline shortcut references are unsupported.")
             add(start, end + 1, "link_targets", overlap=True)
         cursor = end + 1
     for pattern, category in (
