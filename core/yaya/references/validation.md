@@ -52,6 +52,12 @@ No wildcard, new/deleted/moved node, encoding/BOM change, delimiter change, or l
 
 ## Quantities in prose
 
+Adjacent quantities connected by a dash or ellipsis (`5%–10%`, `5-10`, `5..10`)
+form one literal token, preserving endpoint order and separator spelling. Whole
+ranges can still move with their sentences. This is source protection, not a
+judgment that the expression is a valid interval; verbal ranges and mathematical
+interval brackets still need explicit literals or semantic review.
+
 Symbolic comparisons immediately before a quantity (`<`, `<=`, `>`, `>=`, `=`,
 `==`, `!=`, `≤`, `≥`, `≠`, `≈`, `~`) are part of its literal token. Changing a
 strict threshold to an inclusive one or removing approximation requires review.

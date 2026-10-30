@@ -480,7 +480,7 @@ _Q_CURRENCY = _quantity_terms(_QUANTITY_CURRENCIES)
 _MONEY_MARK = re.compile(_quantity_terms((*_QUANTITY_CURRENCIES, "元")))
 _Q_UNIT = _quantity_terms((*_QUANTITY_CURRENCIES, *_QUANTITY_UNITS))
 _Q_SCALE = "(?i:" + _quantity_terms(_QUANTITY_SCALES) + ")"
-_Q_COEFFICIENT = r"(?:(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|\.\d+)"
+_Q_COEFFICIENT = r"(?:(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|(?<!\.)\.\d+)"
 _MONTH = r"(?:0?[1-9]|1[0-2])"
 _DAY = r"(?:0?[1-9]|[12]\d|3[01])"
 _DATE = rf"\d{{4}}(?:-{_MONTH}-{_DAY}|/{_MONTH}/{_DAY}|年{_MONTH}月{_DAY}日)"
@@ -525,5 +525,16 @@ def numbers(scan):
             operator_start = prefix - len(operator)
             if operator_start == 0 or visible[operator_start - 1] not in "<>=!≤≥≠≈~":
                 value_start = operator_start
-        values.append(visible[value_start:value_end])
-    return values
+        if values:
+            prior_start, prior_end = values[-1]
+            gap = visible[prior_end:value_start]
+            # Join explicit dash/ellipsis pairs without interpreting their units.
+            # In 5-10, the quantity scanner owns the minus sign in the second atom.
+            joined = re.fullmatch(r"[ \t]*(?:[-–—…]|\.\.)[ \t]*", gap)
+            adjacent_minus = (re.fullmatch(r"[ \t]*", gap)
+                              and visible[value_start:value_start + 1] == "-")
+            if joined or adjacent_minus:
+                values[-1] = (prior_start, value_end)
+                continue
+        values.append((value_start, value_end))
+    return [visible[start:end] for start, end in values]

@@ -85,3 +85,11 @@ Space-flag forms remain outside this finite subset and require explicit literals
 selectors with the pack resolver's existing tag grammar and normalize casing.
 Tests preserve regions/scripts, reject malformed/private-use syntax and accept
 valid tags without claiming that a language pack is present or reviewed.
+
+## 11 / cumulative 31 — Ordered numeric endpoints
+
+Reversing `5%–10%` passed when only the quantity multiset was compared. Preserve
+dash/ellipsis-connected quantities as one literal token, including signs and
+separator spelling. Tests retain whole-sentence movement and prevent joining
+across line breaks or protected spans. This does not parse verbal intervals or
+validate the mathematics of a range.
