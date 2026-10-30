@@ -39,3 +39,11 @@ the violations and unchanged source. Incompatible comment-mode options fail.
 Expanded execution checks found the comment helper accepts two positional values
 without an argparse `--` separator. Corrected its plan in the same PR and added
 actual passed/failed comment executions, rather than relying on plan shape alone.
+
+## 5 / cumulative 25 — Complete evaluation packets
+
+A synthetic run with a valid result plus an unexpected empty `outputs.json` was
+accepted. Collection also accepted outputs without their request packet. Require
+an exact request/output file-set match and unique, nonempty request packets.
+Regression tests cover both valid publication and each rejected case. These are
+evidence-integrity tests, not model-quality measurements.
