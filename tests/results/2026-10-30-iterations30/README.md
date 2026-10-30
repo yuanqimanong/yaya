@@ -28,3 +28,11 @@ closing fence inside a physical code line. The latter allowed edits after that
 fake closer to pass. Split only at LF/CRLF, and limit fence trailing whitespace
 to spaces/tabs. Regressions cover eight nonphysical separators, real code changes
 and both supported newline encodings. The scanner remains a Markdown subset.
+
+## 4 / cumulative 24 — Explicit term and quotation protection
+
+The specialized prose helper supported term/quote preservation, but the bounded
+`check` command could not select it. Add repeatable `--literal` and `--quotes`,
+document their prose-only scope, and return an executable argument array in the
+plan. An integration test runs that plan against changed terms/quotes and checks
+the violations and unchanged source. Incompatible comment-mode options fail.

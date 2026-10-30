@@ -209,6 +209,26 @@ class CommandTests(unittest.TestCase):
             with self.subTest(args=args), self.assertRaises(commands.UsageError):
                 commands.resolve(args)
 
+    def test_check_literal_and_quote_plan_executes_with_exact_arguments(self):
+        old, new = self.scratch / "old text.md", self.scratch / "new text.md"
+        old.write_text('Use retry_limit and "quoted claim".', encoding="utf-8")
+        new.write_text('Use retry_count and "changed claim".', encoding="utf-8")
+        args = ["check", "--before", str(old), "--after", str(new),
+                "--literal", "retry_limit", "--quotes"]
+        plan = commands.resolve(args)
+        self.assertFalse(plan["write_requested"])
+        process = subprocess.run([sys.executable, "-B", plan["checker"]["script"], *plan["checker"]["args"]],
+                                 capture_output=True, timeout=10)
+        self.assertEqual(process.returncode, 1)
+        result = json.loads(process.stdout)
+        self.assertEqual({row["category"] for row in result["violations"]}, {"literals", "quotes"})
+        self.assertEqual(old.read_text(encoding="utf-8"), 'Use retry_limit and "quoted claim".')
+        with self.assertRaises(commands.UsageError):
+            commands.resolve([*args, "--kind", "comments"])
+        literal = "--write; $(not-code)"
+        plan = commands.resolve(["check", "--before=-old.md", "--after=new.md", "--literal=" + literal])
+        self.assertEqual(plan["checker"]["args"], ["--protect-literal=" + literal, "--", "-old.md", "new.md"])
+
 
 if __name__ == "__main__":
     unittest.main()

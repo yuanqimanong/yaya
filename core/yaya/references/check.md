@@ -9,11 +9,21 @@ the files. The plan is not a check result; execute the selected checker.
 | `prose` (default) | `scripts/check_rewrite.py BEFORE AFTER` | Supported Markdown protections and literal quantities |
 | `comments` | `scripts/check_comments.py BEFORE AFTER` | Python ordinary-comment edits; other bytes stay fixed |
 
+Execute `checker.script` with the plan's `checker.args` as separate argument
+values, using the host's Python executable. Do not concatenate them into shell
+code. The plan does not execute the checker itself.
+
+For prose, `--literal TEXT` protects exact occurrences of a term or identifier;
+repeat it for multiple terms. Each must be present in the original. `--quotes`
+protects paired double/curly/East Asian quotations. These options are rejected
+for comments. Example:
+`yaya check --before original.md --after candidate.md --literal retry_limit --quotes`.
+
 Pass paths as argument values through the host's execution tool. Keep both files
 unchanged. Do not generate an allow grant, repair a candidate, or select another
-kind to obtain a pass. Docstring grants and extra protection options remain
-available through the specialized helpers when explicitly requested outside this
-bounded command; `check` does not silently add them.
+kind to obtain a pass. Docstring grants remain available through the specialized
+helper when explicitly requested outside this bounded command. Extra protections
+apply only when selected; they do not authorize changes to protected content.
 
 Report the helper's JSON status and concrete finding first. Include an exit code
 only when captured from the checker process itself; host shells can remap it. Add
