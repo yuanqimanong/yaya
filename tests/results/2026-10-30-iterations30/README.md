@@ -153,3 +153,11 @@ escaped delimiters, code/quote boundaries and ordinary unpaired Markdown escapes
 An initial check exposed a conflict with escaped literal brackets; paired-only
 recognition fixes it, with a long-input regression for repeated unpaired escapes.
 Dollar/unpaired notation and mathematical correctness remain outside protection.
+
+## 19 / cumulative 39 — File inputs stay file-bound
+
+`check --before -` previously selected the prose helper's stdin path, which can
+read an empty stream rather than a stable original file. Reject lone-dash file
+selectors for either kind. Actual dash filenames remain usable via explicit paths,
+with executed stable-file evidence. Direct specialized stdin checks remain
+available and keep their existing unbound-evidence label.

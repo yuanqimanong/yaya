@@ -251,6 +251,20 @@ class CommandTests(unittest.TestCase):
             with self.subTest(args=args), self.assertRaises(commands.UsageError):
                 commands.resolve(args)
 
+    def test_check_rejects_stdin_but_allows_explicit_dash_file_paths(self):
+        for kind in ("prose", "comments"):
+            for before, after in (("-", "new.md"), ("old.md", "-"), ("-", "-")):
+                with self.subTest(kind=kind, before=before, after=after), self.assertRaisesRegex(commands.UsageError, "stdin"):
+                    commands.resolve(["check", "--kind", kind, "--before", before, "--after", after])
+        path = self.scratch / "-"
+        path.write_text("Original text.", encoding="utf-8")
+        plan = commands.resolve(["check", "--before", str(path), "--after", str(path)])
+        process = subprocess.run([sys.executable, "-B", plan["checker"]["script"], *plan["checker"]["args"]],
+                                 capture_output=True, timeout=10)
+        self.assertEqual(process.returncode, 0)
+        self.assertTrue(json.loads(process.stdout)["evidence"]["inputs_stable"])
+        self.assertEqual(commands.resolve(["check", "--before", "./-", "--after", "./-"])["input_files"], ["./-", "./-"])
+
     def test_check_literal_and_quote_plan_executes_with_exact_arguments(self):
         old, new = self.scratch / "old text.md", self.scratch / "new text.md"
         old.write_text('Use retry_limit and "quoted claim".', encoding="utf-8")
