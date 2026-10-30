@@ -177,3 +177,11 @@ Diagnostics now compile all runtime helpers in memory and name each syntax
 failure, including compile-time errors such as a top-level return. A control
 helper that raises at runtime proves compilation does not execute it. Diagnostics
 remain read-only with no bytecode cache; compilation cannot establish behavior.
+
+## 22 / cumulative 42 — Named scan rule selection
+
+Users can now narrow a literal scan to named rule families with repeatable
+`--rule ID`, discovered in `scan --help`. Unknown and wrong-language selections
+fail instead of producing a misleading empty scan. Reports name the executed
+rules, defaults retain full language coverage, and thresholds apply only to the
+selected candidates. Executed command plans confirm scope and unchanged input.

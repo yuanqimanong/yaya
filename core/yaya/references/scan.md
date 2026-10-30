@@ -5,6 +5,19 @@ It requires one file and an explicit `en` or `zh-Hans` language. Pack availabili
 does not extend the detector's language inventory. Use `review` for contextual
 editorial judgment and `human` for rewriting, including directness decisions.
 
+Use repeatable `--rule ID` to select only named rules; `yaya scan --help` lists IDs.
+For example, `--lang en --rule en-stock-close` scans only generic endings. Without
+this option, all rules for the selected language run. Unknown or wrong-language
+IDs are errors. Results name `enabled_rules`; describe an empty selected-rule
+result within that scope, without implying that the other rules were checked.
+
+| Suffix (prefix `en-` or `zh-`) | Candidate family |
+| --- | --- |
+| `empty-opener` | Generic opening context |
+| `hype` | Stock promotional claims |
+| `stock-close` | Generic conclusions |
+| `light-verb` | Indirect verb phrases |
+
 Resolve the command, then execute `scanner.script` with `scanner.args` as separate
 arguments using the host's Python executable. The plan is not a scan result. Keep
 the input file intact and do not silently switch tools if it returns unsupported.

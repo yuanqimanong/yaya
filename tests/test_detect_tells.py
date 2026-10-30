@@ -14,6 +14,29 @@ import prose_scan
 
 
 class DetectionTests(unittest.TestCase):
+    def test_selected_rules_limit_findings_and_report_coverage(self):
+        source = "Only time will tell. Conduct an analysis of this."
+        result = detector.detect(source, "en", ["en-stock-close", "en-stock-close"])
+        self.assertEqual(result["enabled_rules"], ["en-stock-close"])
+        self.assertEqual([row["id"] for row in result["findings"]], ["en-stock-close"])
+        self.assertEqual(len(detector.detect(source, "en")["enabled_rules"]), 4)
+        result = detector.detect("Conduct an analysis of this.", "en", ["en-stock-close"])
+        self.assertEqual(result["findings"], [])
+        self.assertEqual(result["enabled_rules"], ["en-stock-close"])
+        for values in ([], ["typo"], ["zh-stock-close"], "en-stock-close", [None]):
+            with self.subTest(values=values), self.assertRaises(ValueError):
+                detector.detect(source, "en", values)
+
+    def test_selected_rules_cli_and_thresholds(self):
+        process, result = self.run_cli(b"Only time will tell.", "--rule", "en-light-verb", "--fail-on", "P2")
+        self.assertEqual(process.returncode, 0)
+        self.assertEqual(result["findings"], [])
+        self.assertEqual(result["enabled_rules"], ["en-light-verb"])
+        for name in ("unknown", "zh-stock-close"):
+            process, result = self.run_cli(b"text", "--rule", name)
+            self.assertEqual(process.returncode, 2)
+            self.assertEqual(result["status"], "error")
+
     def test_literal_candidates_are_not_authorship_claims(self):
         result = detector.detect("In today's fast-paced world, conduct an analysis of the result.", "en")
         self.assertEqual(result["status"], "ok")

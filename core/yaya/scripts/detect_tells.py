@@ -43,10 +43,26 @@ def load_rules(path=None):
     return rules
 
 
-def detect(text, language):
+def select_rules(rules, language, rule_ids=None):
+    available = {rule["id"]: rule for rule in rules if rule["language"] == language}
+    if rule_ids is None:
+        return list(available.values())
+    if isinstance(rule_ids, (str, bytes)):
+        raise ValueError("Rule selection must be a list of rule IDs")
+    try:
+        selected = list(rule_ids)
+    except TypeError as exc:
+        raise ValueError("Rule selection must be a list of rule IDs") from exc
+    if not selected or any(not isinstance(name, str) or name not in available for name in selected):
+        raise ValueError(f"Choose rules for {language}: {', '.join(available)}")
+    return [available[name] for name in dict.fromkeys(selected)]
+
+
+def detect(text, language, rule_ids=None):
     if language not in ("en", "zh-Hans"):
         return {"status": "unsupported", "language": language, "findings": [],
                 "error": "Literal candidate detection supports en and zh-Hans only."}
+    rules = select_rules(load_rules(), language, rule_ids)
     try:
         scan = snapshot(text, protect_quotes=True, strict_quotes=False)
     except (InputError, Unsupported) as exc:
@@ -59,9 +75,7 @@ def detect(text, language):
         visible[span.start:span.end] = "\x00" * (span.end - span.start)
     visible = "".join(visible)
     findings = []
-    for rule in load_rules():
-        if rule["language"] != language:
-            continue
+    for rule in rules:
         for phrase in rule["phrases"]:
             pattern = re.escape(phrase)
             if language == "en":
@@ -79,6 +93,7 @@ def detect(text, language):
     findings.sort(key=lambda item: (item["start"], item["id"]))
     return {
         "status": "ok", "language": language, "findings": findings,
+        "enabled_rules": [rule["id"] for rule in rules],
         "metrics": {"characters": len(text), "candidates": len(findings),
                     "protected_spans": len(scan.spans)},
         "limitations": [
@@ -95,11 +110,12 @@ def main(argv=None):
     parser = JsonParser(description=__doc__)
     parser.add_argument("file", nargs="?", default="-", help="UTF-8 file, or - for stdin")
     parser.add_argument("--language", required=True)
+    parser.add_argument("--rule", action="append", help="Run only this rule ID; repeat to select more")
     parser.add_argument("--json", action="store_true", help="Compatibility flag; JSON is always emitted")
     parser.add_argument("--fail-on", choices=("P1", "P2"), help="Explicit candidate threshold for exit 1")
     args = parser.parse_args(argv)
     try:
-        result = detect(read_utf8(args.file), args.language)
+        result = detect(read_utf8(args.file), args.language, args.rule)
     except (InputError, OSError, ValueError, KeyError) as exc:
         result = {"status": "error", "error": str(exc)}
     emit(result)

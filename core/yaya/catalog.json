@@ -6,9 +6,9 @@
       "summary": "运行本地字面规则，定位待审阅措辞；不改稿、不判定作者来源。",
       "scope": "literal-candidates",
       "delivery": "findings",
-      "options": ["file", "lang"],
+      "options": ["file", "lang", "rule"],
       "references": ["references/scan.md"],
-      "examples": ["yaya scan --file draft.md --lang zh-Hans", "yaya scan --file draft.md --lang en"]
+      "examples": ["yaya scan --file draft.md --lang zh-Hans", "yaya scan --file draft.md --lang en --rule en-stock-close"]
     },
     "check": {
       "title": "比较改稿边界",
@@ -93,6 +93,7 @@
     }
   },
   "options": {
+    "rule": {"help": "只运行指定字面规则，可重复；不填则运行该语言全部规则", "repeat": true, "choices": ["en-empty-opener", "en-hype", "en-stock-close", "en-light-verb", "zh-empty-opener", "zh-light-verb", "zh-hype", "zh-stock-close"]},
     "source": {"help": "用于核对的证据文件，可重复；与 --file 待核对材料分开，均只读", "metavar": "PATH", "repeat": true},
     "style": {"help": "选用已保存的风格卡；仅调整表达，不修改风格卡或扩大任务范围", "metavar": "PATH"},
     "literal": {"help": "原稿中必须原样保留的术语或标识符，可重复；仅用于 prose", "metavar": "TEXT", "repeat": true},
