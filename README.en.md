@@ -33,7 +33,7 @@ If the installer reports an existing directory, follow [update and rollback](INS
 
 ### Install from source
 
-The current core is **0.3.2**, with no public Release download yet. Clone the source:
+The current core is **0.4.0**, with no public Release download yet. Clone the source:
 
 ```text
 git clone https://github.com/yuanqimanong/yaya.git
@@ -68,6 +68,8 @@ Make a request by name, use `$yaya` explicitly, or type `$` and select Yaya in C
 
 ```text
 $yaya --help
+$yaya --version
+$yaya check --before original.md --after candidate.md
 $yaya human --focus direct -- Remove unnecessary defensive framing from this passage: …
 $yaya polish --domain finance --audience general -- Make this financial update clearer: ...
 $yaya comment --file src/cache.py --write
@@ -83,6 +85,7 @@ $yaya help prompt
 | `human` | Address formulaic language, empty framing and excessive defensiveness |
 | `review` | Editorial findings and suggestions, without a full rewrite |
 | `verify` | Evidence-backed findings and unresolved claims, without rewriting |
+| `check` | Mechanical original/candidate comparison; `--kind comments` checks Python ordinary-comment boundaries |
 | `comment` | Ordinary comments; `--scope docstrings` selects specifically identified docstrings |
 | `prompt` | Prompt wording by default; `--target output` changes downstream style, `both` permits both |
 | `style` | Extract reusable style instructions and an example; `--save PATH` requests persistence |
@@ -90,7 +93,7 @@ $yaya help prompt
 
 An explicit command selects one bounded task. Unknown names, unsupported domain IDs
 and incompatible options fail without silently choosing another workflow.
-`review`, `verify` and `origin` are read-only. Rewriting commands return candidates
+`review`, `verify`, `check` and `origin` are read-only. Rewriting commands return candidates
 unless file editing is requested: `--file` selects input and `--write` requests a
 scoped edit. Prior clear authorization for the same edit remains valid.
 
@@ -211,7 +214,7 @@ the input.
 
 | Language | Included by default | Build artifact |
 | --- | --- | --- |
-| Simplified Chinese `zh-Hans`, English `en` | Yes | `yaya-core-0.3.2.zip` |
+| Simplified Chinese `zh-Hans`, English `en` | Yes | `yaya-core-0.4.0.zip` |
 | Traditional Chinese `zh-Hant` | No | `yaya-lang-zh-Hant-0.2.0.zip` |
 | Japanese `ja` | No | `yaya-lang-ja-0.2.0.zip` |
 | Korean `ko` | No | `yaya-lang-ko-0.2.0.zip` |
@@ -253,6 +256,11 @@ python scripts/check_docstrings.py before.py after.py --allow approved-docstring
 Checkers do not write source files; the evidence helper writes snapshots and reports only to the selected directory. The first two accept UTF-8 inputs of up to 2 MiB each.
 After a passing check, review the meaning: quantities can still refer to different
 objects, and conditions, negation or attribution can change.
+
+Version 0.4.0 additionally protects complete numeric dates/times, accounting currency
+parentheses and adjacent comparison symbols. Command help includes copyable examples;
+`--version --json` identifies the installed version. See the [iteration evidence](tests/results/2026-10-30-iterations/README.md)
+for actual checks and remaining limits.
 
 Version 0.3.2 catches previously missed changes such as `USD 5 million` to `EUR 5 billion`,
 `1e-3` to `1e+3`, percentage points to basis points, and `8 MiB` to `8 GiB`.

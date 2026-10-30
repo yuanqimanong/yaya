@@ -2,7 +2,7 @@
 name: yaya
 description: Humanizes writing and edits prose, engineering comments, technical documents, and prompts while preserving meaning; supports review-only work, style learning, and cautious authorship assessment (这是 AI 吗). Use for rewriting, editorial review, comment cleanup, prompt optimization, or assessing AI-writing signals with uncertainty.
 metadata:
-  version: "0.3.2"
+  version: "0.4.0"
 ---
 
 # Yaya · 牙牙学语

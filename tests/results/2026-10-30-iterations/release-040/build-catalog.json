@@ -1,0 +1,54 @@
+{
+  "catalog_version": 1,
+  "core": {
+    "version": "0.4.0",
+    "bundled_languages": [
+      "en",
+      "zh-Hans"
+    ],
+    "file": "yaya-core-0.4.0.zip",
+    "sha256": "c0de4ce57157f709fbed554e86da0be1f7e04a1be08dc7912b3b881f89978655",
+    "bytes": 88555
+  },
+  "language_packs": [
+    {
+      "format_version": 1,
+      "id": "ja",
+      "version": "0.2.0",
+      "core_major": 0,
+      "name": "日本語",
+      "license": "MIT",
+      "quality": "experimental",
+      "direction": "ltr",
+      "file": "yaya-lang-ja-0.2.0.zip",
+      "sha256": "96a8cd2fbea76668de60e27a199e08ed74f6a5d021787c66efce481c0e836eb1",
+      "bytes": 5384
+    },
+    {
+      "format_version": 1,
+      "id": "ko",
+      "version": "0.2.0",
+      "core_major": 0,
+      "name": "한국어",
+      "license": "MIT",
+      "quality": "experimental",
+      "direction": "ltr",
+      "file": "yaya-lang-ko-0.2.0.zip",
+      "sha256": "07035954b0cd857e6809c20d9bc202618b2b322aefc21cf2d1873a6de2723c92",
+      "bytes": 5183
+    },
+    {
+      "format_version": 1,
+      "id": "zh-Hant",
+      "version": "0.2.0",
+      "core_major": 0,
+      "name": "繁體中文",
+      "license": "MIT",
+      "quality": "experimental",
+      "direction": "ltr",
+      "file": "yaya-lang-zh-Hant-0.2.0.zip",
+      "sha256": "ab496f5790a070aa5d62852abafa27d54f2c0326439b9a78cf8994b3fb3f385e",
+      "bytes": 5176
+    }
+  ]
+}
