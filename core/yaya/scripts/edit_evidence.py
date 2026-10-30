@@ -215,6 +215,10 @@ def load_task(directory):
 
 
 def record(directory, selected, grant=None, disposition=None, note=None):
+    if disposition is not None and grant is not None:
+        raise ValueError("Choose a checker grant or a manual disposition, not both.")
+    if disposition is None and note is not None:
+        raise ValueError("A note requires a manual disposition.")
     directory, manifest = load_task(directory)
     item = target(selected)
     if item not in manifest["targets"]:
@@ -236,7 +240,7 @@ def record(directory, selected, grant=None, disposition=None, note=None):
         result = check_files(before, after, grant)
     elif item["kind"] == "prose":
         from check_rewrite import check_files
-        result = check_files(before, after, allow=grant or ())
+        result = check_files(before, after, allow=grant)
     else:
         raise ValueError("Manual targets require --disposition and --note.")
     entry = {"target": item, "manifest_sha256": digest((directory / "manifest.json").read_bytes()),

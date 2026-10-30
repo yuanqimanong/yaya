@@ -50,6 +50,18 @@ class EvidenceChecks(unittest.TestCase):
         self.assertEqual((self.snapshot / "before/sample.py").read_bytes(), self.source.read_bytes())
         self.assertFalse((self.snapshot / "git-unstaged.patch").exists())
 
+    def test_review_options_cannot_be_silently_discarded(self):
+        self.start(("sample.py:prose",))
+        for options in ({"grant": {}}, {"note": "ignored"},
+                        {"grant": {}, "disposition": "accepted", "note": "Reviewed"}):
+            with self.subTest(options=options), self.assertRaises(ValueError):
+                evidence.record(self.snapshot, "sample.py:prose", **options)
+        self.assertFalse((self.snapshot / "records").exists())
+        result = evidence.record(self.snapshot, "sample.py:prose")
+        self.assertEqual(result["result"]["status"], "passed")
+        manual = evidence.record(self.snapshot, "sample.py:prose", disposition="accepted", note="Scope reviewed.")
+        self.assertEqual(manual["result"]["status"], "manual_review")
+
     def test_slow_git_is_bounded_and_snapshot_reports_missing_metadata(self):
         with patch.object(evidence.subprocess, "run", side_effect=subprocess.TimeoutExpired("git", 10)) as run:
             manifest = self.start()

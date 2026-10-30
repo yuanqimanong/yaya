@@ -38,7 +38,7 @@ def literal_values(literals):
 def compare(before, after, allow=(), protect_quotes=False, literals=()):
     literals = literal_values(literals)
     permitted = []
-    if allow:
+    if allow is not None and not (type(allow) is tuple and not allow):
         try:
             permitted = exact_grant(allow, before.encode("utf-8"), after.encode("utf-8"), "changes")
         except (TypeError, ValueError) as exc:
