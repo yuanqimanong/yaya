@@ -18,7 +18,7 @@ from edit_evidence import bound_check, exact_grant, strict_json
 CATEGORIES = (
     "bom", "frontmatter", "fences", "inline_code", "link_targets", "html",
     "explicit_ids", "placeholders", "urls", "blockquotes", "tables", "quotes",
-    "literals", "numbers", "task_markers", "link_roles",
+    "literals", "numbers", "task_markers", "link_roles", "math",
 )
 
 

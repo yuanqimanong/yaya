@@ -143,3 +143,13 @@ document unsupported. Recognize email and scheme autolinks as protected targets,
 allow surrounding prose edits, and retain errors for malformed/unclosed forms.
 Tests cover destination changes, HTML/code boundaries and ordinary URI schemes.
 This does not check whether an address delivers or a URI is reachable.
+
+## 18 / cumulative 38 — Explicit formula spans
+
+Changing `\(E=mc^2\)` to `\(E=mv^2\)` passed because the number stayed unchanged.
+Preserve backslash-delimited inline/display formulas in full and shield their
+contents from Markdown scanning. Tests cover changed symbols, multiline spans,
+escaped delimiters, code/quote boundaries and ordinary unpaired Markdown escapes.
+An initial check exposed a conflict with escaped literal brackets; paired-only
+recognition fixes it, with a long-input regression for repeated unpaired escapes.
+Dollar/unpaired notation and mathematical correctness remain outside protection.
