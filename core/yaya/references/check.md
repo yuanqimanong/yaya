@@ -4,6 +4,11 @@
 Resolve `--before`, `--after` and `--kind` through `scripts/yaya.py` before reading
 the files. The plan is not a check result; execute the selected checker.
 
+Both selectors name files. A lone `-` is rejected because the prose helper treats
+it as stdin, which has no stable file identity. Use `./-` for a file literally named
+`-`. Deliberate streaming checks remain available through `check_rewrite.py`
+directly; their evidence is explicitly unbound and is not this file command.
+
 | Kind | Helper beside this installed Skill | Boundary |
 | --- | --- | --- |
 | `prose` (default) | `scripts/check_rewrite.py BEFORE AFTER` | Supported Markdown protections and literal quantities |

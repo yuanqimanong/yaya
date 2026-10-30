@@ -270,6 +270,8 @@ def resolve(argv, core=CORE):
         raise UsageError("--write requires at least one explicit --file")
     if name == "check" and (not options.get("before") or not options.get("after")):
         raise UsageError("check requires --before ORIGINAL and --after CANDIDATE")
+    if name == "check" and "-" in (options["before"], options["after"]):
+        raise UsageError("check requires two file paths, not stdin; use ./- for a file literally named -")
     if name == "check" and options["kind"] != "prose" and (options.get("literal") or options.get("quotes")):
         raise UsageError("--literal and --quotes require --kind prose")
     if name == "scan":
