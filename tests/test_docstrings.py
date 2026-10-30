@@ -80,6 +80,21 @@ class DocstringChecks(unittest.TestCase):
                 self.prepare(old, new.replace("f()\n", "f(2)\n"))
                 self.assertEqual(self.check(self.grant(["f@1"]))["status"], "failed")
 
+    def test_localized_example_sections_preserve_code_and_output(self):
+        for heading in ("示例：", "示例代码:", "用法", "範例：", "使用例:", "예제:", "사용법"):
+            old = 'def f():\n    """Old.\n\n    ' + heading + '\n        f()\n        1\n    """\n    return 1\n'
+            new = old.replace("Old.", "New.")
+            with self.subTest(heading=heading):
+                self.prepare(old, new)
+                self.assertEqual(self.check(self.grant(["f@1"]))["status"], "passed")
+                self.prepare(old, new.replace("f()\n", "f(2)\n"))
+                self.assertEqual(self.check(self.grant(["f@1"]))["status"], "failed")
+
+    def test_example_word_in_ordinary_prose_does_not_freeze_tail(self):
+        old = 'def f():\n    """使用示例说明方法的行为。\n    返回结果。\n    """\n    return 1\n'
+        self.prepare(old, old.replace("返回结果。", "返回一个值。"))
+        self.assertEqual(self.check(self.grant(["f@1"]))["status"], "passed")
+
     def test_bom_crlf_and_literal_form_are_protected(self):
         old = codecs.BOM_UTF8 + b'def f():\r\n    """Old."""\r\n    return 1\r\n'
         self.prepare(old, old.replace(b"Old", b"New"))
