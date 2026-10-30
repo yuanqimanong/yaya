@@ -97,6 +97,22 @@ class QuantityChecks(unittest.TestCase):
             with self.subTest(before=before, after=after):
                 self.assert_change(before, after)
 
+    def test_accounting_parentheses_are_part_of_currency_values(self):
+        for amount in ("(USD 5 million)", "($1,250.00)", "(5 million USD)", "（500 万元）", "( EUR 50 )"):
+            with self.subTest(amount=amount):
+                self.assertEqual(prose_scan.numbers(prose_scan.snapshot(amount)), [amount])
+                self.assert_change("Balance: " + amount, "Balance: " + amount[1:-1].strip())
+
+    def test_parenthetical_prose_is_editable_and_negative_values_can_move(self):
+        self.assertEqual(checker.compare("Balance (estimated): USD 5 million.",
+                                        "Estimated balance: USD 5 million.")["status"], "passed")
+        self.assertEqual(checker.compare("A: (USD 5 million); B: EUR 6 million.",
+                                        "B: EUR 6 million; A: (USD 5 million).")["status"], "passed")
+        self.assert_change("Balance: (USD 5).", "Balance: -USD 5.")
+
+    def test_accounting_parentheses_do_not_cross_protected_spans(self):
+        self.assertEqual(prose_scan.numbers(prose_scan.snapshot("(USD 5 `estimated`)")), ["USD 5"])
+
     def test_list_bullets_do_not_become_negative_quantities(self):
         before = "- USD 5 million\n- 8 MiB\n"
         after = "USD 5 million; 8 MiB."
