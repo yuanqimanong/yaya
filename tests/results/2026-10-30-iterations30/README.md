@@ -20,3 +20,11 @@ treated as absent, and a manual disposition could discard a supplied checker
 grant. Reject these combinations and notes without dispositions before writing
 records. Normal omitted grants and explicit manual reviews remain supported.
 This validates option intent; it does not turn manual review into a checker pass.
+
+## 3 / cumulative 23 — Markdown physical lines
+
+A Unicode line separator manufactured a blockquote in ordinary prose and a
+closing fence inside a physical code line. The latter allowed edits after that
+fake closer to pass. Split only at LF/CRLF, and limit fence trailing whitespace
+to spaces/tabs. Regressions cover eight nonphysical separators, real code changes
+and both supported newline encodings. The scanner remains a Markdown subset.
