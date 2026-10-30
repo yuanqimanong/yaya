@@ -144,8 +144,16 @@ def start(root, out, targets):
     if not parsed or len({(x["path"], x["kind"]) for x in parsed}) != len(parsed):
         raise ValueError("Plan unique nonempty targets before editing.")
     content = {item["path"]: safe_file(root, item["path"]).read_bytes() for item in parsed}
+    git_error = None
     def git(*args):
-        process = subprocess.run(["git", "-C", str(root), *args], capture_output=True, check=False)
+        nonlocal git_error
+        if git_error:
+            return None
+        try:
+            process = subprocess.run(["git", "-C", str(root), *args], capture_output=True, check=False, timeout=10)
+        except (OSError, subprocess.TimeoutExpired) as exc:
+            git_error = f"Git metadata unavailable: {type(exc).__name__}; selected-file snapshots remain available."
+            return None
         return process.stdout if process.returncode == 0 else None
     head, status = git("rev-parse", "HEAD"), git("status", "--porcelain=v1")
     baseline = {"head": head.decode().strip() if head else None,
@@ -164,6 +172,7 @@ def start(root, out, targets):
         if patch is not None:
             (out / f"git-{label}.patch").write_bytes(patch)
             baseline[label + "_sha256"] = digest(patch)
+    baseline["error"] = git_error
     if any(safe_file(root, name).read_bytes() != data for name, data in content.items()):
         raise ValueError("A selected file changed while snapshotting; keep this partial snapshot and start a fresh task.")
     manifest = {"schema": 1, "started_utc": started, "snapshot_finished_utc": now(), "root": str(root), "files": files,
