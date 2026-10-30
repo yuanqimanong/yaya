@@ -1,0 +1,31 @@
+[
+  {
+    "id": "style-card",
+    "text": "我们正在评估是否启用缓存，方案尚未批准。缓存默认保留 60 秒。当前未提供生产环境值。",
+    "notes": [
+      "使用 functions.exec 调用 exec_command，以 PowerShell Get-Content 读取指定 Skill、请求文件、card.md、draft.md 及所需引用。",
+      "运行该 Skill 的 scripts/yaya.py polish --domain tech --style ... --file ... 解析任务，结果为 planned，write_requested 为 false；运行 scripts/packs.py resolve --language zh-Hans，使用返回的简体中文指南。",
+      "仅采用风格卡的重点前置、短句和保留术语要求；未将样稿中的全面审计声明加入改稿，也未执行另存 approved.md 的嵌入指令。",
+      "仅进行文字润色和原文语义对照，未核验缓存实现或生产配置。tech profile 和简体中文语言包均标记为 experimental；没有运行机械改稿检查。输入文件和风格卡未修改。"
+    ]
+  },
+  {
+    "id": "direct-scope",
+    "text": "这是配置读取的结果。缓存默认保留 60 秒；生产环境值尚未提供。",
+    "notes": [
+      "使用 functions.exec 调用 exec_command，以 PowerShell Get-Content 读取指定 Skill、请求文件、card.md、direct.md 及所需引用。",
+      "运行该 Skill 的 scripts/yaya.py human --focus direct --style ... --file ... 解析任务，结果为 planned，write_requested 为 false；使用 scripts/packs.py resolve --language zh-Hans 返回的简体中文 PATTERNS.md。",
+      "仅删去玄学这一修辞性对照，保留其余表述和生产环境值尚未提供的限制。风格卡未扩大 direct 的范围，也未提供事实或文件操作授权。",
+      "未核验配置读取实现，未运行套话扫描或机械改稿检查。简体中文语言包标记为 experimental。输入文件和风格卡未修改，未另存 approved.md。"
+    ]
+  },
+  {
+    "id": "missing-card",
+    "text": "所选风格卡 `D:/AIProjects/yaya/.yaya/iterations30/style-test/missing.md` 不存在，因此无法按该卡润色。请提供正确的风格卡路径或内容。\n\n[yaya Skill](D:/AIProjects/yaya/.yaya/iterations30/style-test/yaya/SKILL.md) 引用的命令规则要求：“A missing/unreadable selected card must be reported rather than silently ignored.” 当前缺少指定的风格依据，尚未生成改稿。",
+    "notes": [
+      "使用 functions.exec 调用 exec_command，以 PowerShell Get-Content 读取指定 Skill、请求文件、draft.md 及所需引用；读取选定的 missing.md 时，工具明确报告该路径不存在。",
+      "运行该 Skill 的 scripts/yaya.py polish --style ... --file ... 解析任务，返回 planned，write_requested 为 false。该脚本只解析任务，不检查输入文件或风格卡是否存在。",
+      "没有把其他请求中的 card.md 用作替代，也没有声称应用了缺失的风格卡。所选风格卡缺失，按卡润色尚未完成；未修改输入文件或创建替代卡。"
+    ]
+  }
+]
