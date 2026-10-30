@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.4.0 — Unreleased
+
+- Add bounded `check --before ORIGINAL --after CANDIDATE` with prose/comments
+  kinds, `--version` discovery, and catalog-owned command examples.
+- Validate command catalogs and tell rules before use or packaging. Require the
+  skill and archive versions to agree, and enforce prose size/encoding limits
+  consistently across file and Python entrypoints.
+- Preserve normalized Markdown reference links, complete numeric dates/times,
+  accounting parentheses on currency amounts, and symbolic numeric bounds.
+- Detect English tell phrases across ordinary soft wraps while keeping protected
+  spans and Unicode word boundaries intact; recognize selected localized docstring
+  example headings.
+- Isolate frozen evaluation checkers and recheck collection freshness. Reject empty
+  or inconsistent task manifests; preserve file snapshots when Git is unavailable.
+- Retain regressions, controls and independent check-command execution in the
+  [iteration evidence](tests/results/2026-10-30-iterations/README.md). Domain profiles
+  remain experimental; mechanical passes do not establish semantic fidelity.
+
 ## 0.3.2 — Unreleased
 
 - Fix false passes for changes to recognized currency prefixes/suffixes, financial

@@ -29,7 +29,7 @@ $skill-installer 请从 https://github.com/yuanqimanong/yaya/tree/main/core/yaya
 
 ### 从源码手动安装
 
-当前核心为 **0.3.2**，尚无公开 Release 下载。先克隆仓库：
+当前核心为 **0.4.0**，尚无公开 Release 下载。先克隆仓库：
 
 ```text
 git clone https://github.com/yuanqimanong/yaya.git
@@ -64,6 +64,8 @@ Copy-Item -LiteralPath '.\core\yaya' -Destination $skillTarget -Recurse
 
 ```text
 $yaya --help
+$yaya --version
+$yaya check --before original.md --after candidate.md
 $yaya human --focus direct -- 下面这段有多余的否定对比和免责声明……
 $yaya polish --domain finance --audience 普通读者 -- 下面这段财报说明……
 $yaya comment --file src/cache.py --write
@@ -79,13 +81,14 @@ $yaya help prompt
 | `human` | 去套话、空泛铺垫、机械重复和过度防御表达 |
 | `review` | 只审表达，给问题与建议，不交完整改稿 |
 | `verify` | 按证据核对主张，给依据与未确认项，不改稿 |
+| `check` | 比较原稿和候选稿的机械保护项；`--kind comments` 检查 Python 普通注释边界 |
 | `comment` | 默认只改普通注释；`--scope docstrings` 选择明确的 docstring 节点 |
 | `prompt` | 默认优化提示词措辞；`--target output` 改下游回答风格，`both` 兼顾两者 |
 | `style` | 从样稿提炼风格指令与示例；`--save PATH` 明确保存位置 |
 | `origin` | 审阅“这是 AI 吗”的证据与不确定性 |
 
 一个显式命令只执行一种任务。发现拼错的命令、未知领域或不适用的选项时，会报错并提示帮助，
-不会悄悄扩大范围。`review`、`verify`、`origin` 保持只读。
+不会悄悄扩大范围。`review`、`verify`、`check`、`origin` 保持只读。
 改写类命令默认返回候选；`--file` 指定输入，`--write` 要求修改指定文件。
 同一范围此前明确给过的文件修改授权仍有效，不必重复确认。
 
@@ -93,6 +96,9 @@ $yaya help prompt
 终端可运行 `python core/yaya/scripts/yaya.py --help`。该辅助入口只输出帮助或 JSON 任务计划，
 实际改稿由当前 AI 宿主执行。完整选项以 `help COMMAND` / `COMMAND --help` 为准，
 帮助与路由共用 [能力目录](core/yaya/catalog.json)。
+
+`help COMMAND` 现在附有可复制示例；`--version --json` 可确认当前安装版本。
+`check` 由宿主运行实际检查器，返回通过、失败或不支持；不会自动修稿或补发差异授权。
 
 ### 定向处理过度防御表达
 
@@ -202,7 +208,7 @@ python core/yaya/scripts/packs.py resolve --language zh-Hans
 
 | 资源 | 默认安装 | 构建产物 |
 | --- | --- | --- |
-| 简体中文 `zh-Hans`、英语 `en` | 是 | `yaya-core-0.3.2.zip` |
+| 简体中文 `zh-Hans`、英语 `en` | 是 | `yaya-core-0.4.0.zip` |
 | 繁体中文 `zh-Hant` | 否 | `yaya-lang-zh-Hant-0.2.0.zip` |
 | 日语 `ja` | 否 | `yaya-lang-ja-0.2.0.zip` |
 | 韩语 `ko` | 否 | `yaya-lang-ko-0.2.0.zip` |
@@ -233,6 +239,9 @@ python scripts/check_docstrings.py before.py after.py --allow approved-docstring
 | `edit_evidence.py` | 保存任务开始的工作树原稿及 Git 基线，记录内容摘要、工具版本、命令、时间和状态；旧报告不能替代新验证。 |
 
 检查器只读原稿和候选；证据工具仅在指定目录写快照和报告。前两个正文工具接受每份不超过 2 MiB 的 UTF-8 输入。检查通过后仍需核对语义：数字是否属于原来的对象，条件、否定、归因和确定性是否保留。
+
+0.4.0 进一步保护完整日期/时间、币种金额的会计括号和相邻比较符号，修复引用链接与换行检测问题。
+20 轮改进的具体边界和验证见 [迭代记录](tests/results/2026-10-30-iterations/README.md)。
 
 0.3.2 补上了 `USD 5 million → EUR 5 billion`、`1e-3 → 1e+3`、`3 个百分点 → 3 个基点`、
 `8 MiB → 8 GiB` 等变化的漏检。数量检查比较原样表达与出现次数，单位换算和数字格式变化也需复核。

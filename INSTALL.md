@@ -22,7 +22,7 @@ procedure below; a fresh-install command is not an update command.
 
 ## 1. Obtain the smallest artifact
 
-**Core version 0.3.2 is available from source; there is no public Release download yet.**
+**Core version 0.4.0 is available from source; there is no public Release download yet.**
 Clone the [repository](https://github.com/yuanqimanong/yaya), then build from its root:
 
 ```text
@@ -31,7 +31,7 @@ cd yaya
 python scripts/build_release.py
 ```
 
-The build writes `dist/yaya-core-0.3.2.zip`, three optional language archives,
+The build writes `dist/yaya-core-0.4.0.zip`, three optional language archives,
 `catalog.json` and `SHA256SUMS`. Install only the core unless you need another
 language. Cloning downloads all language source files, but does not install them.
 
@@ -80,9 +80,11 @@ host's normal permission flow for writing outside the current workspace.
 
 Verify `yaya/SKILL.md`, `yaya/references/`, `yaya/scripts/`, and the bundled `en` and
 `zh-Hans` directories. Ask the host to list or select Yaya and perform a short edit.
-Version 0.3 also requires `catalog.json`, `scripts/yaya.py`, and the five guides in
-`references/domains/`. In chat, run `$yaya --help` and `$yaya domains`. For a portable
-local check, run `python scripts/yaya.py --help` from the installed Skill directory.
+Versions 0.3 and later also require `catalog.json`, `scripts/yaya.py`, and the five
+guides in `references/domains/`; 0.4 adds `references/check.md`. In chat, run
+`$yaya --help` and `$yaya domains`. From the installed Skill directory, run
+`python scripts/yaya.py --version --json` to verify the runtime version, then
+`python scripts/yaya.py check --help` to inspect the comparison command.
 The helper prints help or a host task plan; it does not call a model or edit files,
 and installing the Skill does not put a `yaya` executable on your shell's PATH.
 If Yaya does not appear, follow the host's reload/restart procedure. Reading a
@@ -186,7 +188,7 @@ The complete package contract and contributor commands are in
 
 ## Current language-pack format
 
-Core `0.2.x` and `0.3.x` use one current pack specification:
+Core `0.2.x`, `0.3.x` and `0.4.x` use one current pack specification:
 `format_version: 1` with `core_major: 0`, including optional `PATTERNS.md` for
 humanizing guidance. Without that file, the host uses `GUIDE.md`. Packs are plain
 text and contain no executable rules.

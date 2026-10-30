@@ -1,0 +1,21 @@
+{
+  "version": "0.4.0",
+  "runtime_files": 42,
+  "source_installed_equal": true,
+  "restored_files": 12,
+  "recovery_matches_previous_installation": true,
+  "later_edits_refused": true,
+  "guard_message": "Later edit would be overwritten: scripts/yaya.py",
+  "core_archive_sha256": "c0de4ce57157f709fbed554e86da0be1f7e04a1be08dc7912b3b881f89978655",
+  "unit_tests": {
+    "methods": 290,
+    "failures": 0,
+    "errors": 0,
+    "skip_records": 8
+  },
+  "skill_validation": "passed",
+  "pack_compatibility": {
+    "format": 1,
+    "core_major": 0
+  }
+}
