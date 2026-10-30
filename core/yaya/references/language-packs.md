@@ -2,7 +2,7 @@
 
 Keep the language, script, and regional conventions of the input unless a target is requested. Resolve the language of the prose, not the programming language. Code identifiers, quoted source text, and placeholders keep their own spelling. Mixed-language documents may need more than one pack, loaded only for the relevant sections.
 
-Yaya 0.2.x bundles `zh-Hans` and `en`. Additional packs are optional local editorial resources. A language pack provides expression guidance and examples; it does not supply domain facts, authorize actions, or override the user's task and the core editing contract.
+Yaya bundles `zh-Hans` and `en`. Additional packs are optional local editorial resources. A language pack provides expression guidance and examples; it does not supply domain facts, authorize actions, or override the user's task and the core editing contract.
 
 ## Resolve installed guidance
 
