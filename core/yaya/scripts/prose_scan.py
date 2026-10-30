@@ -453,6 +453,7 @@ def numbers(scan):
                       for original, masked in zip(scan.text, scan.masked))
     values = []
     for match in _QUANTITY.finditer(visible):
+        value_start, value_end = match.span()
         value = match.group(0)
         if _MONEY_MARK.search(value):
             start, end = match.span()
@@ -461,6 +462,16 @@ def numbers(scan):
             while end < len(visible) and visible[end] in " \t":
                 end += 1
             if {"(": ")", "（": "）"}.get(visible[start - 1:start]) == visible[end:end + 1]:
-                value = visible[start - 1:end + 1]
-        values.append(value)
+                value_start, value_end = start - 1, end + 1
+        prefix = value_start
+        while prefix > 0 and visible[prefix - 1] in " \t":
+            prefix -= 1
+        operator = visible[max(0, prefix - 2):prefix]
+        if operator not in {"<=", ">=", "==", "!="}:
+            operator = visible[max(0, prefix - 1):prefix]
+        if operator in {"<=", ">=", "==", "!=", "<", ">", "=", "≤", "≥", "≠", "≈", "~"}:
+            operator_start = prefix - len(operator)
+            if operator_start == 0 or visible[operator_start - 1] not in "<>=!≤≥≠≈~":
+                value_start = operator_start
+        values.append(visible[value_start:value_end])
     return values

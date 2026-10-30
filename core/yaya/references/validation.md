@@ -52,6 +52,12 @@ No wildcard, new/deleted/moved node, encoding/BOM change, delimiter change, or l
 
 ## Quantities in prose
 
+Symbolic comparisons immediately before a quantity (`<`, `<=`, `>`, `>=`, `=`,
+`==`, `!=`, `≤`, `≥`, `≠`, `≈`, `~`) are part of its literal token. Changing a
+strict threshold to an inclusive one or removing approximation requires review.
+This does not interpret verbal bounds such as "at most" or verify the surrounding
+condition; equivalent rewrites between symbols and words also need review.
+
 Parentheses immediately enclosing a recognized currency amount are retained as
 part of its literal token: `(USD 5 million)` must not silently become `USD 5 million`.
 They may express an accounting negative. Ordinary parenthetical prose remains
