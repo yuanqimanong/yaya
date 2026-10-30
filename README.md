@@ -26,15 +26,15 @@ Yaya 是写作编辑 Skill，在当前 AI 工具中完成去 AI 味、正文润�
 
 ## 安装
 
-本分支为 **0.5.0**，尚未发布 GitHub Release。这批改动仍在 PR 分支，默认分支可能是旧版；安装前确认所选提交，安装后核对版本。
+当前核心版本为 **0.5.0**，从 `main` 分支安装，尚未发布 GitHub Release。安装后核对实际版本。
 
 ### 让 AI 安装
 
 把下面的请求交给可以访问仓库和本地文件的 AI 编程工具：
 
 ```text
-请阅读 https://github.com/yuanqimanong/yaya 的 INSTALL.md，
-从 deepspeak/yaya-iter-50-release-050 分支安装完整的 core/yaya。
+请阅读 https://github.com/yuanqimanong/yaya/blob/main/INSTALL.md，
+从 https://github.com/yuanqimanong/yaya/tree/main/core/yaya 安装完整核心。
 只安装默认中英核心。已有安装时，先比较本地定制，
 将旧目录备份到 Skill 发现路径之外，再按文档升级。
 完成后报告安装路径和版本，运行 doctor，再用一句短文验证调用。
@@ -45,7 +45,7 @@ Yaya 是写作编辑 Skill，在当前 AI 工具中完成去 AI 味、正文润�
 先取得本 README 对应的核心版本：
 
 ```text
-git clone --branch deepspeak/yaya-iter-50-release-050 --single-branch https://github.com/yuanqimanong/yaya.git
+git clone --branch main --single-branch https://github.com/yuanqimanong/yaya.git
 cd yaya
 python core/yaya/scripts/yaya.py --version
 ```

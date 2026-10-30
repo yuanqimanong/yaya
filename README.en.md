@@ -17,8 +17,8 @@ Korean are optional packs. Ordinary editing needs no extra service or model API.
 Send this to an AI coding tool that can access GitHub and local files:
 
 ```text
-Read INSTALL.md at https://github.com/yuanqimanong/yaya and install Yaya using this tool's skill-directory rules.
-Install the complete core/yaya directory for English and Simplified Chinese; skip optional language packs for now.
+Read https://github.com/yuanqimanong/yaya/blob/main/INSTALL.md and install Yaya using this tool's skill-directory rules.
+Install the complete core/yaya directory from main for English and Simplified Chinese; skip optional language packs for now.
 If Yaya is already installed, back it up outside skill discovery paths and preserve local customizations.
 Report the actual path and version, then try a short edit to check that Yaya can be invoked.
 ```
@@ -33,11 +33,12 @@ If the installer reports an existing directory, follow [update and rollback](INS
 
 ### Install from source
 
-The current core is **0.4.0**, with no public Release download yet. Clone the source:
+The current core is **0.5.0**, available from `main`, with no public Release download yet. Clone the source:
 
 ```text
-git clone https://github.com/yuanqimanong/yaya.git
+git clone --branch main --single-branch https://github.com/yuanqimanong/yaya.git
 cd yaya
+python core/yaya/scripts/yaya.py --version
 ```
 
 Copy the complete `core/yaya/` folder into your host's Skill directory. Common Codex locations are:
@@ -69,6 +70,8 @@ Make a request by name, use `$yaya` explicitly, or type `$` and select Yaya in C
 ```text
 $yaya --help
 $yaya --version
+$yaya doctor
+$yaya scan --file draft.md --lang en --rule en-stock-close
 $yaya check --before original.md --after candidate.md
 $yaya human --focus direct -- Remove unnecessary defensive framing from this passage: …
 $yaya polish --domain finance --audience general -- Make this financial update clearer: ...
@@ -86,6 +89,8 @@ $yaya help prompt
 | `review` | Editorial findings and suggestions, without a full rewrite |
 | `verify` | Evidence-backed findings and unresolved claims, without rewriting |
 | `check` | Mechanical original/candidate comparison; `--kind comments` checks Python ordinary-comment boundaries |
+| `scan` | Read-only wording candidates from finite literal rules; `--rule` selects specific rules |
+| `doctor` | Read-only checks of installed files, Python syntax and local resources |
 | `comment` | Ordinary comments; `--scope docstrings` selects specifically identified docstrings |
 | `prompt` | Prompt wording by default; `--target output` changes downstream style, `both` permits both |
 | `style` | Extract reusable style instructions and an example; `--save PATH` requests persistence |
@@ -93,15 +98,22 @@ $yaya help prompt
 
 An explicit command selects one bounded task. Unknown names, unsupported domain IDs
 and incompatible options fail without silently choosing another workflow.
-`review`, `verify`, `check` and `origin` are read-only. Rewriting commands return candidates
+`review`, `verify`, `check`, `scan`, `doctor` and `origin` are read-only. Rewriting commands return candidates
 unless file editing is requested: `--file` selects input and `--write` requests a
 scoped edit. Prior clear authorization for the same edit remains valid.
 
 These are **chat commands for the Skill**, also recognized as `yaya polish ...`.
 No global shell executable is installed. In a terminal, run
-`python core/yaya/scripts/yaya.py --help`. That helper prints Chinese help or a JSON
-task plan; the host model executes the task. `--json` provides machine-readable
+`python core/yaya/scripts/yaya.py --help`. The helper prints Chinese help or a JSON
+task plan; `doctor` directly executes local diagnostics. The host executes planned
+editing, scan and comparison tasks. `--json` provides machine-readable
 discovery. Help and routing share [catalog.json](core/yaya/catalog.json).
+
+Rewriting commands accept `--style team-style.md` to reuse a saved style card.
+For verification, `--file claims.md` selects claims and repeatable `--source evidence.md`
+selects the evidence. Both stay read-only. See [workflows](docs/workflows.md) for
+examples and direct terminal checker commands. A `ready` doctor result covers local
+structure and syntax; confirm host discovery with a short editing request.
 
 ### Focus on unnecessary defensive wording
 
@@ -214,7 +226,7 @@ the input.
 
 | Language | Included by default | Build artifact |
 | --- | --- | --- |
-| Simplified Chinese `zh-Hans`, English `en` | Yes | `yaya-core-0.4.0.zip` |
+| Simplified Chinese `zh-Hans`, English `en` | Yes | `yaya-core-0.5.0.zip` |
 | Traditional Chinese `zh-Hant` | No | `yaya-lang-zh-Hant-0.2.0.zip` |
 | Japanese `ja` | No | `yaya-lang-ja-0.2.0.zip` |
 | Korean `ko` | No | `yaya-lang-ko-0.2.0.zip` |
@@ -257,7 +269,12 @@ Checkers do not write source files; the evidence helper writes snapshots and rep
 After a passing check, review the meaning: quantities can still refer to different
 objects, and conditions, negation or attribution can change.
 
-Version 0.4.0 additionally protects complete numeric dates/times, accounting currency
+Version 0.5.0 adds scoped scanning, installation diagnostics, saved-style reuse and
+explicit verification sources. It also protects task states, image/link roles,
+supported formula and placeholder forms, numeric ranges and ratios. See the
+[0.5 upgrade guide](docs/upgrade-0.5.md) and [30-iteration evidence](tests/results/2026-10-30-iterations30/README.md).
+
+Version 0.4.0 added protection for complete numeric dates/times, accounting currency
 parentheses and adjacent comparison symbols. Command help includes copyable examples;
 `--version --json` identifies the installed version. See the [iteration evidence](tests/results/2026-10-30-iterations/README.md)
 for actual checks and remaining limits.
@@ -295,7 +312,7 @@ file formats and review requirements. The `fr` template is a French authoring
 example, not a released supported pack.
 
 See [installation](INSTALL.md) for updates and rollback,
-[the 0.2 upgrade](docs/upgrade-0.2.md) for version changes,
+[the 0.5 upgrade](docs/upgrade-0.5.md) for current version changes,
 [design](docs/design.md) for the architecture, and
 [validation](tests/README.md) for evidence and limits.
 
