@@ -135,3 +135,11 @@ Version discovery alone could not identify broken runtime dependencies. Add
 It continues reporting when catalog data or the pack helper is missing. Tests
 cover healthy/changed files, separate failed checks, no repairs and relocated
 release execution. It does not validate host discovery, external packs or quality.
+
+## 17 / cumulative 37 — Contact and URI autolinks
+
+An unchanged `<team@example.com>` or `<mailto:team@example.com>` made an entire
+document unsupported. Recognize email and scheme autolinks as protected targets,
+allow surrounding prose edits, and retain errors for malformed/unclosed forms.
+Tests cover destination changes, HTML/code boundaries and ordinary URI schemes.
+This does not check whether an address delivers or a URI is reachable.
