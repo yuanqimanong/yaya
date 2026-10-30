@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.5.0 — Unreleased
+
+- Add bounded `scan` with named rule selection, source hashes and stable-input
+  checks; add read-only `doctor` diagnostics for runtime resources and Python syntax.
+- Reuse saved style cards with `--style`, select verification evidence with repeatable
+  `--source`, and expose explicit literal/quote protection through `check`.
+- Preserve Markdown task completion, image/link roles, email/URI autolinks,
+  backslash-delimited formulas, common printf/single-brace fields, ordered numeric
+  ranges and ratios/fractions. Reject stdin in file-bound `check` plans.
+- Fix one-shot literal inputs, discarded grants and physical Markdown line boundaries.
+  Retain source/evidence conditions while making verification delivery more concise.
+- Require complete evaluation packets, finite deadlines and strict event evidence;
+  match frozen language precedence and load declared domain profiles in CLI contexts.
+- Record 15 five-domain relationship cases, file-based style/source trials and a
+  verification-delivery retest with full artifacts and limitations. These observations
+  do not establish cross-model superiority or certify domain accuracy.
+- Keep pack format 1 / core major 0 and existing optional language packs compatible.
+  See the [30-iteration ledger](tests/results/2026-10-30-iterations30/README.md).
+
 ## 0.4.0 — Unreleased
 
 - Add bounded `check --before ORIGINAL --after CANDIDATE` with prose/comments

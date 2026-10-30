@@ -22,7 +22,9 @@ procedure below; a fresh-install command is not an update command.
 
 ## 1. Obtain the smallest artifact
 
-**Core version 0.4.0 is available from source; there is no public Release download yet.**
+**This branch contains core 0.5.0; there is no public Release download yet.**
+Before the PR stack is merged, the default branch may have an earlier version.
+Build the reviewed commit you selected and confirm `core/yaya/version.json`.
 Clone the [repository](https://github.com/yuanqimanong/yaya), then build from its root:
 
 ```text
@@ -31,7 +33,7 @@ cd yaya
 python scripts/build_release.py
 ```
 
-The build writes `dist/yaya-core-0.4.0.zip`, three optional language archives,
+The build writes `dist/yaya-core-0.5.0.zip`, three optional language archives,
 `catalog.json` and `SHA256SUMS`. Install only the core unless you need another
 language. Cloning downloads all language source files, but does not install them.
 
@@ -85,7 +87,7 @@ guides in `references/domains/`; 0.4 adds `references/check.md`. In chat, run
 `$yaya --help` and `$yaya domains`. From the installed Skill directory, run
 `python scripts/yaya.py --version --json` to verify the runtime version, then
 `python scripts/yaya.py check --help` to inspect the comparison command.
-Newer checkouts also include `scripts/doctor.py` and `references/scan.md`. Run
+Version 0.5 also includes `scripts/doctor.py` and `references/scan.md`. Run
 `python scripts/yaya.py doctor --json` from the installed directory: `ready` means
 the local structure and Python syntax checks passed; `degraded` exits 1 and names
 the failed checks. It does not repair files, certify editing quality or establish
@@ -197,7 +199,7 @@ The complete package contract and contributor commands are in
 
 ## Current language-pack format
 
-Core `0.2.x`, `0.3.x` and `0.4.x` use one current pack specification:
+Core `0.2.x` through `0.5.x` use one current pack specification:
 `format_version: 1` with `core_major: 0`, including optional `PATTERNS.md` for
 humanizing guidance. Without that file, the host uses `GUIDE.md`. Packs are plain
 text and contain no executable rules.
