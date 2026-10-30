@@ -7,7 +7,7 @@ Python 3.10+ and use only its standard library.
 
 You can ask your AI:
 
-> 阅读 https://github.com/yuanqimanong/yaya 的 INSTALL.md，安装默认中英核心。
+> 阅读 https://github.com/yuanqimanong/yaya/blob/main/INSTALL.md，从 main 分支安装默认中英核心。
 
 In Codex installations that provide the bundled installer, you can ask:
 
@@ -22,13 +22,12 @@ procedure below; a fresh-install command is not an update command.
 
 ## 1. Obtain the smallest artifact
 
-**This branch contains core 0.5.0; there is no public Release download yet.**
-Before the PR stack is merged, the default branch may have an earlier version.
-Build the reviewed commit you selected and confirm `core/yaya/version.json`.
+**Core 0.5.0 is available from `main`; there is no public Release download yet.**
+Confirm `core/yaya/version.json` in the checkout you install.
 Clone the [repository](https://github.com/yuanqimanong/yaya), then build from its root:
 
 ```text
-git clone https://github.com/yuanqimanong/yaya.git
+git clone --branch main --single-branch https://github.com/yuanqimanong/yaya.git
 cd yaya
 python scripts/build_release.py
 ```
