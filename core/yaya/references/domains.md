@@ -2,8 +2,8 @@
 
 `catalog.json` lists the supported domain IDs, concrete coverage, protected
 relationships, exclusions and guidance paths. `python scripts/yaya.py domains`
-renders that list. A domain is a set of editorial constraints and expression
-choices, not an industry credential or a promise to verify every fact in that field.
+renders that list. A domain supplies editorial constraints and expression choices. Its coverage is
+limited to the listed material and relationships; factual verification needs evidence.
 
 ## Load and apply
 

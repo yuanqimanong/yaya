@@ -1,8 +1,8 @@
 # 升级到 Yaya 0.5
 
-0.5.0 整合 0.4.0 之后的 30 轮改进，每轮保留独立 PR 和验证记录。
-从 `main` 分支获取核心源码；尚未发布 GitHub Release。本机安装版本需单独检查。
-完整变更和证据见 [迭代台账](../tests/results/2026-10-30-iterations30/README.md)。
+0.5.0 增加字面扫描、安装诊断、风格卡复用与核对来源选择，并扩充改稿保护项。
+从 `main` 分支获取核心源码；尚未发布 GitHub Release。已安装版本需单独检查。
+完整用法见[使用手册](usage.md)，执行证据见[验证索引](../tests/results/2026-10-30-iterations30/README.md)。
 
 ## 可以直接使用的变化
 
@@ -14,7 +14,7 @@
 | 选择核对来源 | `$yaya verify --file claims.md --source evidence.md` | 主张、来源分开，均只读 |
 | 保护术语与引文 | `$yaya check --before old.md --after new.md --literal API_KEY --quotes` | 检查原样保留，不核定语义 |
 
-技术和金融领域优先验证，同时保留数据分析、学术和商务规则。
+五类领域均有表达与关系保护规则；验证范围以对应报告为准。
 过度防御表达仍由 `human --focus direct` 或 `review --focus direct` 处理；
 必要条件、实际风险、归因和不确定性继续保留。五领域质量标签仍为 `experimental`。
 
@@ -51,4 +51,4 @@ python scripts/yaya.py check --help
 
 需要回滚时，核对当前文件是否有升级后的修改；备份新修改后，从旧备份恢复已升级文件，
 仅移除本次新增且未被修改的运行文件。重跑旧版版本检查和相关检查器。
-本批本机安装收据、隔离回滚演练与验证限制见 [交付验收](../tests/results/2026-10-30-iterations30/release-050/README.md)。
+该版本的安装收据、隔离回滚演练与验证限制见 [交付验收](../tests/results/2026-10-30-iterations30/release-050/README.md)。

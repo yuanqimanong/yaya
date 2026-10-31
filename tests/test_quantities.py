@@ -176,7 +176,7 @@ class QuantityChecks(unittest.TestCase):
             with self.subTest(category=category):
                 result = checker.compare(before, before.replace("USD", "EUR"))
                 self.assertEqual({c["category"] for c in result["violations"]}, {category})
-        # Masked content is a boundary, not whitespace joining a currency to a value.
+        # Masked content separates currency labels from later amounts.
         text = "USD `price` 5 million."
         self.assertEqual(prose_scan.numbers(prose_scan.snapshot(text)), ["5 million"])
         self.assertEqual(prose_scan.numbers(prose_scan.snapshot("USD\n5 million")), ["5 million"])

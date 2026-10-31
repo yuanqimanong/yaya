@@ -1,6 +1,6 @@
 # Learn from writing samples
 
-Extract useful expression habits from the supplied samples, then apply them to the requested topic, text, or prompt. This is in-context style adaptation, not model training or proof of authorship.
+Extract useful expression habits from the supplied samples, then apply them to the requested topic, text, or prompt. The samples guide expression in the current context. This does not train a model or establish authorship.
 
 ## What to extract
 

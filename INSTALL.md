@@ -37,8 +37,7 @@ The build writes `dist/yaya-core-0.5.0.zip`, three optional language archives,
 language. Cloning downloads all language source files, but does not install them.
 
 The three optional files are `yaya-lang-zh-Hant-VERSION.zip`,
-`yaya-lang-ja-VERSION.zip`, and `yaya-lang-ko-VERSION.zip`. They are data archives,
-installed with `packs.py`, rather than standalone Skills.
+`yaya-lang-ja-VERSION.zip`, and `yaya-lang-ko-VERSION.zip`. Install these data archives with `packs.py`.
 
 For a future published version, obtain `catalog.json` and the selected archives
 from the same trusted, versioned Release. The catalog records relative filenames,
@@ -97,8 +96,9 @@ The helper does not call a model or edit user files,
 and installing the Skill does not put a `yaya` executable on your shell's PATH.
 If Yaya does not appear, follow the host's reload/restart procedure. Reading a
 source file directly can test editing, but does not verify automatic discovery.
-See [scoped workflows](docs/workflows.md) for reusable style cards, selected
-verification sources, literal scans and executed preservation checks.
+See the [usage manual](docs/usage.md) for every command and option,
+[workflows](docs/workflows.md) for combined tasks, and
+[local tools](docs/local-tools.md) for scans, checks and exit codes (Chinese).
 
 ## 3. Add a requested language
 

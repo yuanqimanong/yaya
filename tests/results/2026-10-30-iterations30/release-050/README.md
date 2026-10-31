@@ -1,9 +1,9 @@
 # Yaya 0.5.0 delivery validation
 
-This release candidate combines cumulative iterations 21–50 after 0.4.0. Every
-iteration has its own dependent PR; see the [index](../pr-index.json). The final
-branch contains the cumulative runtime. No PR was automatically merged and no
-GitHub Release was published. `main` and the installed runtime are separate states.
+This report records the 0.5.0 candidate's validation at the time of execution.
+It covers local tests, package reproducibility, installation and recovery. No
+GitHub Release had been published at that point. Check the repository and installed
+runtime separately for their current state.
 
 ## Executed validation
 
@@ -12,8 +12,8 @@ GitHub Release was published. `main` and the installed runtime are separate stat
   skips concern unavailable symlink/junction creation privileges).
 - The final main-help correction was followed by all 28 command tests passing.
   The Skill validator passed. The remote workflow tests Ubuntu/Windows with
-  Python 3.10, 3.13 and 3.14; the 29 predecessor PRs passed at their recorded
-  implementation commits. The final PR's Checks show validation of its current head.
+  Python 3.10, 3.13 and 3.14. Remote results are tied to their recorded commits;
+  later changes require checks on their own commit.
 - Two complete builds produced byte-identical assets. Core archive SHA-256:
   `60d85c05ae9870e8cd2b65f6f5f184037df3e2ae646c1d9c88f016fe6ee01e37`.
 - Both the relocated archive and personal installation passed ten smoke checks:

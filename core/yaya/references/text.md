@@ -1,6 +1,6 @@
 # Text editing
 
-Let the user's purpose set the degree of change. Ordinary polishing addresses the stated problem; use [Humanize](humanize.md) when formulaic wording is the focus. Reorganize sentences and remove empty repetition where that helps, retaining substantive meaning. A request to edit an article does not authorize replacing it with a summary.
+Let the user's purpose set the degree of change. Ordinary polishing addresses the stated problem; use [Humanize](humanize.md) when formulaic wording is the focus. Reorganize sentences and remove empty repetition where that helps, retaining substantive meaning. Keep the article's useful detail; summarize only when requested.
 
 ## Adapt expression
 

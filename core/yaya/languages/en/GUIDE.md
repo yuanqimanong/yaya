@@ -1,6 +1,6 @@
 # English expression guide
 
-Status: experimental first version; not reviewed by a native-language editor. These are editing suggestions, not evidence that a person used AI.
+Status: experimental editorial guidance, awaiting native-editor review. Use `origin` separately to assess authorship evidence.
 
 ## Shared principles
 
