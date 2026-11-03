@@ -117,7 +117,7 @@ _FIELD_NAME = (r"(?:[A-Za-z_]\w{0,63}|[0-9]{1,16})"
 _BRACE_FIELD = r"\{(?:" + _FIELD_NAME + r")?(?:![ars])?(?::[^{}\r\n]{0,128})?\}"
 _PLACEHOLDER = re.compile(r"\{\{[^{}\r\n]{1,256}\}\}|\$\{[^{}\r\n]{1,256}\}|"
                           + _BRACE_FIELD + "|" + _PRINTF + r"|(?<![\w:]):[A-Za-z_]\w{0,63}\b")
-_URL = re.compile(r"https?://[^\s<>\"“”「」]+")
+_URL = re.compile(r"https?://[^\s<>\"“”‘’「」『』《》（）【】、，。！？；：]+")
 _URI_START = re.compile(r"<[A-Za-z][A-Za-z0-9+.-]{1,31}:")
 _MAIL_DOMAIN = r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?"
 _AUTOLINK = re.compile(r"<(?:[A-Za-z][A-Za-z0-9+.-]{1,31}:[^\x00-\x20<>]*|"
@@ -437,8 +437,16 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
         for match in pattern.finditer(text):
             end = match.end()
             if category == "urls":
-                while end > match.start() and text[end - 1] in ".,;!?，。！？；":
-                    end -= 1
+                while end > match.start():
+                    last = text[end - 1]
+                    if last in ".,;!?':，。！？；：、":
+                        end -= 1
+                    elif last == ")" and text[match.start():end].count(")") > text[match.start():end].count("("):
+                        end -= 1
+                    elif last == "]" and text[match.start():end].count("]") > text[match.start():end].count("["):
+                        end -= 1
+                    else:
+                        break
             add(match.start(), end, category)
     if protect_quotes:
         visible = "".join("\n" if char == "\n" else " " if occupied[i] else char for i, char in enumerate(text))
@@ -477,7 +485,7 @@ def snapshot(text, protect_quotes=False, literals=(), strict_quotes=True):
             occupied[found:found + len(literal)] = b"\x01" * len(literal)
             cursor = found + len(literal)
     masked = "".join("\n" if char == "\n" else " " if occupied[i] else char for i, char in enumerate(text))
-    return Snapshot(text, spans, masked)
+    return Snapshot(text, sorted(spans, key=lambda item: (item.start, item.end)), masked)
 
 
 def _quantity_terms(values):
@@ -558,10 +566,10 @@ def numbers(scan):
             prior_start, prior_end = values[-1]
             gap = visible[prior_end:value_start]
             # Preserve ordered ranges, ratios and fractions as literal expressions.
-            # In 5-10, the second quantity token includes the minus sign.
-            joined = re.fullmatch(r"[ \t]*(?:[-–—…/:∶⁄]|\.\.)[ \t]*", gap)
+            # In 5-10 or 5~10, the second quantity token includes the sign or tilde.
+            joined = re.fullmatch(r"[ \t]*(?:[-–—…~～〜/:∶⁄]|\.\.)[ \t]*", gap)
             adjacent_minus = (re.fullmatch(r"[ \t]*", gap)
-                              and visible[value_start:value_start + 1] == "-")
+                              and visible[value_start:value_start + 1] in {"-", "~"})
             if joined or adjacent_minus:
                 values[-1] = (prior_start, value_end)
                 continue

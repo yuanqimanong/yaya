@@ -167,6 +167,15 @@ class RewriteChecks(unittest.TestCase):
         self.assert_status("failed", "{#section:part}", "{#other:part}")
         self.assert_status("failed", "https://example.test/:id", "https://changed.test/:id")
 
+    def test_bare_urls_strip_unmatched_prose_brackets_and_cjk_delimiters(self):
+        self.assert_status("passed", "See (https://example.test/docs).", "See https://example.test/docs.")
+        self.assert_status("passed", "详见官网（https://example.test/a、https://example.test/b）。",
+                           "官网：https://example.test/a 与 https://example.test/b。")
+        self.assert_status("passed", "See (https://en.wikipedia.org/wiki/Python_(programming_language)).",
+                           "See https://en.wikipedia.org/wiki/Python_(programming_language).")
+        self.assert_status("failed", "See (https://en.wikipedia.org/wiki/Python_(programming_language)).",
+                           "See https://en.wikipedia.org/wiki/Python_(programming).")
+
     def test_number_units_signs_decimals_counts_and_percentages(self):
         source = "甲975万元，同比-7%；乙640万元，同比+4.5%。Retry after 2 ms at 10%."
         for old, new in [("975", "976"), ("-7", "+7"), ("4.5", "45"), ("万元", "亿元"), ("2 ms", "2 s"), ("10%", "10")]:

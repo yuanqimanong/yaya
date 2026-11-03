@@ -167,7 +167,23 @@ class CommandTests(unittest.TestCase):
             for option in left["option_details"]:
                 self.assertIn("--" + option, commands.resolve([name, "--help"]))
         self.assertEqual(commands.resolve(["domains", "--help"]), commands.resolve(["help", "domains"]))
+        self.assertEqual(commands.resolve(["help", "--help"]), commands.resolve(["--help"]))
+        self.assertEqual(commands.resolve(["help", "-h"]), commands.resolve(["--help"]))
+        self.assertEqual(commands.resolve(["help", "domains", "finance"]), commands.resolve(["domains", "finance"]))
+        self.assertEqual(commands.resolve(["domains", "finance", "--help"]), commands.resolve(["domains", "finance"]))
         self.assertEqual(commands.resolve(["yaya", "--help"]), commands.resolve(["$yaya", "--help"]))
+        with self.assertRaises(commands.UsageError):
+            commands.resolve(["--json", "--json"])
+
+    def test_common_command_and_domain_synonyms_suggest_intended_target(self):
+        for alias, expected in (("docstring", "comment"), ("docstrings", "comment"), ("rewrite", "polish"),
+                                ("detect", "scan"), ("authorship", "origin"), ("diff", "check")):
+            with self.subTest(alias=alias), self.assertRaisesRegex(commands.UsageError, f"Did you mean {expected}\\?"):
+                commands.resolve([alias])
+        for alias, expected in (("engineering", "tech"), ("research", "academic"), ("analytics", "data"),
+                                ("financial", "finance"), ("corporate", "business")):
+            with self.subTest(domain_alias=alias), self.assertRaisesRegex(commands.UsageError, f"Did you mean {expected}\\?"):
+                commands.resolve(["polish", "--domain", alias])
 
     def test_domain_discovery_reports_scope_and_quality(self):
         domains = commands.resolve(["domains", "--json"])

@@ -7,7 +7,8 @@ Status: experimental editorial guidance, awaiting native-editor review. Use `ori
 - Follow the requested audience, locale, register, and language. Editing alone does not authorize translation or a change between US and UK conventions.
 - Preserve quantities, units, dates, scope, negation, causality, uncertainty, and attribution. Do not turn “may” into “will.”
 - Remove empty framing or repetition when it obscures the task. Passive voice, adverbs, transitions, and dashes can all be appropriate.
-- Do not invent facts, feelings, personal experience, identity, or conclusions to make writing sound human.
+- Keep natural sentence cadence: avoid both inflated throat-clearing (“At its core,” “It is worth noting that”) and choppy, staccato “telegram” fragments. Let a direct sentence land the main point and let fuller sentences connect related causes, conditions, or contrasts.
+- Do not invent facts, feelings, personal experience, identity, or conclusions to make writing sound human. Preserve genuine warmth, courtesy, or candor already present in the draft.
 - Keep proper names, technical terms, identifiers, paths, quotations, and links accurate. Explicit preservation instructions take priority over these preferences.
 
 ## Text and files

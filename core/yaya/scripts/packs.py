@@ -195,6 +195,8 @@ def inventory(data_dir=None, project=None) -> dict:
         no_links(root)
         if not root.exists():
             continue
+        if not root.is_dir():
+            raise PackError(f"Pack root is not a directory: {root}")
         for item in sorted(root.iterdir()):
             try:
                 meta = validate(item, compatible=False)
@@ -207,13 +209,16 @@ def inventory(data_dir=None, project=None) -> dict:
     return {"status": "listed", "packs": packs}
 
 
-def data_root(data_dir=None, project=None) -> Path:
+def data_root(data_dir=None, project=None, create=True) -> Path:
+    if data_dir and project:
+        raise PackError("Specify either data_dir or project, not both")
     root = (Path(project).absolute() / ".yaya") if project else (Path(data_dir).absolute() if data_dir else Path.home() / ".yaya")
     no_links(root)
     root = root.resolve()
     if root == CORE or root.is_relative_to(CORE):
         raise PackError("External packs must be outside the core Skill directory")
-    root.mkdir(parents=True, exist_ok=True)
+    if create:
+        root.mkdir(parents=True, exist_ok=True)
     return root
 
 
@@ -311,7 +316,7 @@ def install(archive: Path, checksum: str, data_dir=None, project=None, replace=F
 
 def remove(identifier: str, data_dir=None, project=None) -> dict:
     pack_id(identifier)
-    root = data_root(data_dir, project)
+    root = data_root(data_dir, project, create=False)
     destination = inside(root / "language-packs" / identifier, root)
     if not destination.exists():
         return {"status": "missing", "id": identifier}
@@ -322,7 +327,7 @@ def remove(identifier: str, data_dir=None, project=None) -> dict:
 
 def rollback(identifier: str, data_dir=None, project=None) -> dict:
     pack_id(identifier)
-    root = data_root(data_dir, project)
+    root = data_root(data_dir, project, create=False)
     parent = inside(root / "backups" / identifier, root)
     choices = sorted(parent.iterdir(), reverse=True) if parent.exists() else []
     if not choices:

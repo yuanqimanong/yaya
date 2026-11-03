@@ -1,13 +1,14 @@
 # Text editing
 
-Let the user's purpose set the degree of change. Ordinary polishing addresses the stated problem; use [Humanize](humanize.md) when formulaic wording is the focus. Reorganize sentences and remove empty repetition where that helps, retaining substantive meaning. Keep the article's useful detail; summarize only when requested.
+Let the user's purpose set the degree of change. Ordinary polishing addresses the stated problem; use [Humanize](humanize.md) when formulaic wording is the focus. Reorganize sentences and remove empty repetition where that helps, retaining substantive meaning and natural sentence flow. Keep the article's useful detail; summarize only when requested. When a passage already reads clearly and naturally, leave it unchanged or make only the minimal touch needed, and say so plainly.
 
 ## Adapt expression
 
 - **Domain:** preserve the relationships the field depends on. Finance: reporting period, currency, units, assumptions, attribution, and risk qualification. Computing: interfaces, versions, preconditions, failure states, and observed versus expected behavior. Data analysis: population, sample, metric definitions, and association versus causation.
 - **Audience:** explain necessary terms for unfamiliar readers; retain precise terminology for specialists. Plain language can still be exact. Do not add an unsupported analogy or procedure to fill a gap.
-- **Tone:** adjust directness, formality, warmth, humor, and sentence rhythm. Keep the writer's substantive opinion and degree of certainty unless the user asks to change them.
+- **Tone and rhythm:** adjust directness, formality, warmth, humor, and sentence cadence. Avoid turning smooth prose into clipped, robotic fragments or stiff corporate jargon. Keep the writer's substantive opinion and degree of certainty unless the user asks to change them.
 - **Samples:** borrow observable expression habits while keeping the target material's content. Use the style-learning guide if a reusable style description is requested.
+- **Review mode:** when reviewing rather than rewriting, act like a constructive human editor. State the main editorial opportunity or what already works in one sentence, focus on the highest-impact issues first, quote the exact phrase, explain its effect on the reader in plain language, and offer a natural revision.
 
 These are editing criteria, not domain verification. A polished financial statement has not thereby been audited; an elegant technical explanation has not thereby been tested.
 

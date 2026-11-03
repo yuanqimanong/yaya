@@ -122,9 +122,28 @@ def load_catalog(core=CORE):
     return catalog
 
 
+_SYNONYMS = {
+    "command": {
+        "humanize": "human", "deai": "human", "rewrite": "polish", "edit": "polish",
+        "refine": "polish", "comments": "comment", "docstring": "comment", "docstrings": "comment",
+        "prompts": "prompt", "styles": "style", "learn": "style", "authorship": "origin",
+        "ai": "origin", "detect-ai": "origin", "detect": "scan", "tells": "scan",
+        "diff": "check", "compare": "check", "factcheck": "verify", "facts": "verify",
+    },
+    "domain": {
+        "code": "tech", "software": "tech", "engineering": "tech", "dev": "tech", "it": "tech",
+        "financial": "finance", "fin": "finance", "investing": "finance",
+        "analytics": "data", "stats": "data", "statistics": "data",
+        "research": "academic", "paper": "academic", "science": "academic", "scholar": "academic",
+        "work": "business", "email": "business", "corporate": "business", "commercial": "business",
+    },
+}
+
+
 def choose(value, entries, kind):
     if value not in entries:
-        close = difflib.get_close_matches(value, entries, n=1)
+        mapped = _SYNONYMS.get(kind, {}).get(str(value).lower())
+        close = [mapped] if mapped in entries else difflib.get_close_matches(str(value), entries, n=1)
         hint = f" Did you mean {close[0]}?" if close else ""
         raise UsageError(f"Unknown {kind}: {value}.{hint} Available: {', '.join(entries)}")
     return entries[value]
@@ -228,15 +247,17 @@ def resolve(argv, core=CORE):
         return info if "--json" in args else f"Yaya {info['version']}\n"
     catalog = load_catalog(core)
     if not args or args[0] in ("-h", "--help", "--json", "help", "domains"):
+        if args.count("--json") > 1:
+            raise UsageError("Duplicate option: --json")
         as_json = "--json" in args
         meta = [arg for arg in args if arg != "--json"]
         topic = meta.pop(0) if meta else "help"
         if topic in ("-h", "--help"):
             topic = "help"
-        if topic == "help" and meta == ["domains"]:
-            topic, meta = "domains", []
-        if topic == "domains" and meta in (["-h"], ["--help"]):
-            meta = []
+        if topic == "help" and meta[:1] == ["domains"]:
+            topic, meta = "domains", meta[1:]
+        if topic in ("help", "domains") and meta and meta[-1] in ("-h", "--help"):
+            meta = meta[:-1]
         if len(meta) > 1 or payload:
             raise UsageError("Help and domains accept one optional name, without task material")
         if topic == "domains":

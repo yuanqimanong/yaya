@@ -671,6 +671,13 @@ class PackChecks(unittest.TestCase):
         self.assertEqual(run.returncode, 2)
         self.assertFalse(self.data.exists())
         self.assertFalse(self.project.exists())
+        self.assertEqual(PACKS.remove("ja", data_dir=str(self.data))["status"], "missing")
+        self.assertFalse(self.data.exists())
+        with self.assertRaises(PACKS.PackError):
+            PACKS.rollback("ja", data_dir=str(self.data))
+        self.assertFalse(self.data.exists())
+        with self.assertRaises(PACKS.PackError):
+            PACKS.remove("ja", data_dir=str(self.data), project=str(self.project))
 
 
 if __name__ == "__main__":

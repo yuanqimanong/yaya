@@ -31,15 +31,17 @@ class QuantityChecks(unittest.TestCase):
                          ["2026/10/30", "12:34:56"])
 
     def test_range_endpoints_and_separator_spelling_are_protected_together(self):
-        for separator in ("–", "—", "-", " - ", "..", "…"):
+        for separator in ("–", "—", "-", " - ", "..", "…", "~", " ~ ", "～", "〜"):
             before = "Forecast: 5%" + separator + "10%."
             after = "Forecast: 10%" + separator + "5%."
             with self.subTest(separator=separator):
                 self.assert_change(before, after)
                 self.assertEqual(prose_scan.numbers(prose_scan.snapshot(before)), ["5%" + separator + "10%"])
-        for before, after in (("-5--1", "-1--5"), ("5–10", "10–5"), ("5–10", "5-10")):
+        for before, after in (("-5--1", "-1--5"), ("5–10", "10–5"), ("5–10", "5-10"),
+                              ("5~10", "10~5"), ("5~10", "5-10"), ("5～10", "10～5")):
             self.assert_change(before, after)
         self.assertEqual(prose_scan.numbers(prose_scan.snapshot("5.0..10.5")), ["5.0..10.5"])
+        self.assertEqual(prose_scan.numbers(prose_scan.snapshot("Wait ~10 ms.")), ["~10 ms"])
 
     def test_range_checks_allow_prose_reordering_without_crossing_boundaries(self):
         self.assertEqual(checker.compare("A: 5%–10%. B: 2–3 ms.", "B: 2–3 ms. A: 5%–10%.")["status"], "passed")

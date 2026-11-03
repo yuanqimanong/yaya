@@ -112,7 +112,8 @@ class EvidenceChecks(unittest.TestCase):
         self.assertEqual(summary["targets"][0]["history"], 4)
 
     def test_snapshot_tampering_path_escape_and_unauthorized_target_rejected(self):
-        for name in ("../escape.py:comments", "D:/outside.py:comments", "sample.py:all"):
+        for name in ("../escape.py:comments", "D:/outside.py:comments", "sample.py:all",
+                     "sample.py", ":comments", "a//b.py:comments"):
             with self.subTest(name=name), self.assertRaises(ValueError):
                 self.start((name,))
         self.start()
@@ -123,6 +124,17 @@ class EvidenceChecks(unittest.TestCase):
         (self.snapshot / "before/sample.py").write_bytes(b"tampered")
         with self.assertRaisesRegex(ValueError, "snapshot changed"):
             evidence.summarize(self.snapshot)
+
+    def test_same_timestamp_records_preserve_insertion_order(self):
+        self.start()
+        self.source.write_bytes(b"x = 2 # bad\r\n")
+        with patch.object(evidence, "now", return_value="2026-11-03T00:00:00+00:00"):
+            evidence.record(self.snapshot, "sample.py:comments")
+            self.source.write_bytes(b"x = 1 # fixed\r\n")
+            evidence.record(self.snapshot, "sample.py:comments")
+        summary = evidence.summarize(self.snapshot)
+        self.assertTrue(summary["complete"])
+        self.assertEqual(summary["open_failures"], [])
 
     def test_empty_or_inconsistent_manifests_cannot_claim_completion(self):
         original = self.start()

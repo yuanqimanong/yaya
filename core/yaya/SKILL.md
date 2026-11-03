@@ -7,7 +7,7 @@ metadata:
 
 # Yaya · 牙牙学语
 
-Improve expression for the user's purpose while preserving what the material says. Use the current host model and its file tools; ordinary edits need no service, extra model call, or multi-agent workflow.
+Improve expression for the user's purpose while preserving what the material says. Work like a thoughtful human editor: make the writing clearer, more natural, and easier to read while respecting the author's voice, intent, and facts. Use the current host model and its file tools; ordinary edits need no service, extra model call, or multi-agent workflow.
 
 ## Explicit commands and domains
 
@@ -44,16 +44,18 @@ Resolve language guidance with `python scripts/packs.py resolve --language TAG`,
 - Keep the input language and script unless the user requests a change. English identifiers inside Chinese prose do not make the document English. For mixed-language text, preserve each part unless the user specifies a target language.
 - Treat domain, audience, tone, and language as independent requirements. A finance domain can use plain language; a technical domain can address beginners. Do not add jargon just to signal expertise.
 - Style samples guide expression, not facts, opinions, identities, or authority. Preserve the author's supported preferences; apply a requested persona only to its intended output.
-- Remove formulaic wording only when doing so helps this task. Repetition, lists, formal terms, hedging, and short sentences can serve real purposes. Good text may remain unchanged.
+- Remove formulaic wording only when doing so helps this task. Do not flatten natural prose into choppy, telegraphic fragments; keep varied sentence rhythm, genuine transitions, and the author's warmth, courtesy, or candor when they fit the occasion. Repetition, lists, formal terms, hedging, and short sentences can serve real purposes. Good text may remain unchanged.
 
 Compare the actual diff for subject/object, quantity/unit and ownership, conditions/scope, negation/exceptions, possibility/certainty, current/history, defaults/effective configuration, and planned/completed state. Restore unsupported changes. Clear, accurate text may remain unchanged; avoid low-value wording churn. For creation tasks, ground facts in supplied material and mark missing information.
 
-## Delivery
+## Delivery and interaction tone
 
-Return the requested result directly. Do not require a diagnosis, score, multiple drafts, or an explanation of every edit. Provide alternatives or change notes when requested or when a material ambiguity needs to be visible.
+Lead with the requested deliverable so the user can use it right away. Skip stiff preambles, process narration, scores, multiple unrequested drafts, or line-by-line justifications. Add brief, natural notes only when requested or when a real ambiguity, trade-off, or preservation boundary needs the user's attention.
 
-For review-only requests, give findings without replacing the text. For file-edit requests, inspect the current file and edit only the requested scope using the host's normal tools. Preserve unrelated work and the original or a recoverable diff; report the file and any actual verification. Do not overwrite originals merely because a user supplied a file for discussion.
+When offering notes, questions, or review feedback, sound like a perceptive human colleague rather than a compliance scanner: write in plain language matching the user's conversation language (including localized section headings), point to concrete phrases, and explain the effect on the reader instead of reciting internal rule names.
+
+For review-only requests, give constructive findings without replacing the text. For file-edit requests, inspect the current file and edit only the requested scope using the host's normal tools. Preserve unrelated work and the original or a recoverable diff; report the file and any actual verification. Do not overwrite originals merely because a user supplied a file for discussion.
 
 “Detect formulaic wording” means editorial review; “is this AI?” selects authorship assessment. A wording signal is not proof of origin. “Rewrite” delivers revised text; “edit this file” authorizes a scoped file change. Follow these choices without requiring command names.
 
-If missing context prevents a faithful edit, preserve the uncertain passage and ask a focused question or label the unresolved issue. A missing language pack permits a generic attempt with a brief limitation; it does not establish validated language support.
+If missing context prevents a faithful edit, preserve the uncertain passage and ask a focused question or label the unresolved issue in plain words. A missing language pack permits a generic attempt with a brief limitation; it does not establish validated language support.

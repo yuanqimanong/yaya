@@ -118,13 +118,14 @@ def exact_grant(grant, before, after, key):
 def safe_file(root, relative):
     relative_path = PurePosixPath(relative)
     if (not relative or "\\" in relative or ":" in relative or relative_path.is_absolute()
-            or any(part in {".", ".."} for part in relative.split("/"))):
+            or any(part in {"", ".", ".."} for part in relative.split("/"))):
         raise ValueError("Use a safe root-relative file path with forward slashes.")
     path = root / relative
     for part in (path, *path.parents):
         if part == root.parent:
             break
-        if part.is_symlink() or (hasattr(part, "is_junction") and part.is_junction()):
+        if (part.is_symlink() or (hasattr(part, "is_junction") and part.is_junction())
+                or (part.exists() and getattr(part.lstat(), "st_file_attributes", 0) & 0x400)):
             raise ValueError("Linked paths are not supported for snapshots.")
     if not path.resolve().is_relative_to(root.resolve()):
         raise ValueError("Path escaped the task root.")
@@ -132,8 +133,10 @@ def safe_file(root, relative):
 
 
 def target(value):
+    if not isinstance(value, str) or ":" not in value:
+        raise ValueError("Target syntax: relative/path:comments|docstrings|prose|manual")
     name, kind = value.rsplit(":", 1)
-    if kind not in KINDS:
+    if not name or kind not in KINDS:
         raise ValueError("Target syntax: relative/path:comments|docstrings|prose|manual")
     return {"path": name, "kind": kind}
 
@@ -245,18 +248,23 @@ def record(directory, selected, grant=None, disposition=None, note=None):
         raise ValueError("Manual targets require --disposition and --note.")
     entry = {"target": item, "manifest_sha256": digest((directory / "manifest.json").read_bytes()),
              "recorded_utc": now(), "result": result}
-    write_json(directory / "records" / (uuid.uuid4().hex + ".json"), entry)
+    records_dir = directory / "records"
+    seq = len(list(records_dir.glob("*.json"))) if records_dir.exists() else 0
+    write_json(records_dir / f"{seq:06d}-{uuid.uuid4().hex}.json", entry)
     return entry
 
 
 def summarize(directory):
     directory, manifest = load_task(directory)
     manifest_hash = digest((directory / "manifest.json").read_bytes())
-    records = [strict_json(path) for path in (directory / "records").glob("*.json")]
+    records = [(path.name, strict_json(path)) for path in sorted((directory / "records").glob("*.json"))]
     counts = dict.fromkeys(("passed", "failed", "unsupported", "manual_review", "unverified"), 0)
     details, open_failures = [], []
     for item in manifest["targets"]:
-        history = sorted((row for row in records if row["target"] == item), key=lambda x: x["recorded_utc"])
+        history = [row for _, row in sorted(
+            ((name, row) for name, row in records if isinstance(row, dict) and row.get("target") == item),
+            key=lambda pair: (pair[1].get("recorded_utc", ""), pair[0]),
+        )]
         latest = history[-1] if history else None
         status, reason = "unverified", "No check executed."
         if latest:
