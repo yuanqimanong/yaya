@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Yaya language pack manifest",
-  "description": "The initial format permits optional data-only PATTERNS.md. Restricted BCP 47 profile; registry membership and editorial quality require contribution review.",
+  "description": "Format 1 permits optional data-only PATTERNS.md. Restricted BCP 47 profile; registry membership and editorial quality require contribution review.",
   "type": "object",
   "additionalProperties": false,
   "required": ["format_version", "id", "version", "core_major", "name", "license", "quality", "direction"],

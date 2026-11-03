@@ -1,45 +1,23 @@
-# 测试与评测
+# 测试
 
-yaya 的脚本测试、编辑评测、参考项目调研和运行证据均存放于此。
-
-| 位置 | 内容 |
-| --- | --- |
-| `test_*.py` | 包安装、解析、回滚、注释与正文保护、候选检测、评测协议和发布构建的确定性测试 |
-| `evals/` | 编辑请求、原文、评审条件，以及准备和收集结果的脚本 |
-| `research/` | 参考项目的评测方法与源码证据 |
-| `results/` | 已完成运行的原始输出、问题记录和报告 |
-| `runs/` | 隔离的运行目录、Skill 快照和临时文件，Git 忽略 |
-
-在项目根目录运行脚本测试：
+这里是本地脚本和发布构建的单元测试，不调用模型。从仓库根目录运行：
 
 ```text
 python -m unittest discover -s tests -v
 ```
 
-当前版本的证据入口：[0.5 验证](results/2026-10-30-iterations30/README.md)、
-[0.4 验证](results/2026-10-30-iterations/README.md)、
-[显式命令与领域](results/2026-10-30-commands-domains/README.md)、
-[直接性编辑](results/2026-10-30-directness/README.md)。报告描述各自记录时的版本与执行范围。
+| 文件 | 覆盖内容 |
+| --- | --- |
+| `test_commands.py` | 命令解析、帮助、任务计划、目录（catalog）校验 |
+| `test_check_rewrite.py` | 改稿前后的机械保护检查与显式授权 |
+| `test_prose_scan.py` | 链接、公式、占位符、日期时间与数量的保护范围 |
+| `test_detect_tells.py` | 本地措辞扫描、排除区域与规则文件校验 |
+| `test_comments.py`、`test_docstrings.py` | Python 普通注释与 docstring 的修改边界 |
+| `test_edit_evidence.py` | 批量编辑证据的快照与核对 |
+| `test_packs.py` | 语言标签、包的解析、安装、替换、删除与回滚 |
+| `test_doctor.py` | 安装诊断 |
+| `test_release.py` | 发布包内容、校验和、可重复构建与迁移后的运行 |
 
-脚本测试不调用模型。编辑评测需要实际模型执行，步骤见 [evals/README.md](evals/README.md)；
-表达质量、事实保真和任务完成分别评审。
+文件操作都在临时目录中完成，测试结束后自动删除。每个命令行入口只保留一次子进程调用，其余输入变化在进程内检查。
 
-0.2.1 的 [工程保真与来源审阅验收](results/2026-10-21-engineering/README.md) 单列机械回归和旧版同模型语义对照。定向案例及预期在 `evals/engineering.json`，运行方法见 `evals/README.md`。作者来源案例验证审慎推理，不是准确率基准。
-
-0.1 记录：[2026-10-20 验收记录](results/2026-10-20/README.md)。
-包含脚本回归、34 组有无 Skill 对照、文件操作和提示词执行测试；限制和跳过项单独列出。
-
-0.2 结果见 [升级验收](results/2026-10-20-upgrade/README.md)，专项记录包括：
-
-- [正文工具及性能](results/2026-10-20-upgrade/prose-tools.md)
-- [独立工具审查](results/2026-10-20-upgrade/prose-audit.md)
-- [单一语言包规范](results/2026-10-20-upgrade/pack-single-format.md)
-- [真实文件操作](results/2026-10-20-upgrade/file-integration.md)
-- [CLI 执行问题与保留的失败](results/2026-10-20-upgrade/cli-shutdown.md)
-
-默认主矩阵为 112 条，另有定向控制例和下游执行用例。
-各报告保留实际运行、失败与复测结果。整理后可删除已归档的临时运行目录；
-复现时重新准备运行，不依赖原机器的 `runs/` 内容。
-
-参考方法：[同类项目的评测实现](research/reference-evaluations.md)。
-历史记录：[2026-10-19 初次验收](results/2026-10-19/validation.md)。
+测试通过只说明脚本行为符合预期。改稿是否忠实、自然，仍需人工阅读判断。

@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "id": "zh-Hant-HK",
+  "version": "1.0.0",
+  "core_major": 1,
+  "name": "繁體中文（香港）",
+  "license": "MIT",
+  "quality": "experimental",
+  "direction": "ltr"
+}

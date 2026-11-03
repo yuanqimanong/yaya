@@ -2,7 +2,7 @@
 
 [返回 README](../README.md) · [组合工作流](workflows.md) · [本地工具](local-tools.md) · [安装与更新](../INSTALL.md)
 
-适用于核心 0.5.0。命令与参数以 [catalog.json](../core/yaya/catalog.json) 和当前安装的帮助为准。
+适用于核心 1.0.0。命令与参数以 [catalog.json](../core/yaya/catalog.json) 和当前安装的帮助为准。
 本文中的文件名是示例，请换成宿主可访问的真实路径。
 
 ## start
@@ -15,7 +15,7 @@ $yaya polish --domain tech --file README.md
 $yaya polish --domain tech --file README.md --write
 ```
 
-第一条改写粘贴的文字。第二条读取文件并返回候选。第三条直接修改指定文件。
+第一条改写粘贴的文字，第二条读取文件并返回候选，第三条直接修改指定文件。
 普通改稿保留原意、数字、条件、归因和不确定性。自然语言也可使用：
 
 > 用 Yaya 核对这份部署说明与 config.py，再润色已确认的部分，直接修改 deploy.md。
@@ -42,7 +42,7 @@ python core/yaya/scripts/yaya.py human --domain tech --file README.md
 ```
 
 已安装的 Skill 中，将路径换成 `scripts/yaya.py`。任务命令返回 `status: planned` 的 JSON：
-它记录任务、文件、选项和要读的指导，接下来由 AI 宿主执行。终端调用本身不会生成改稿。
+它记录任务、文件、选项和要读的指导，接下来由 AI 宿主执行。任务命令在终端只返回计划，不生成改稿。
 `doctor` 是直接执行本地诊断的入口；要在终端实际运行扫描或比较，见[本地工具](local-tools.md)。
 本地助手需要 Python 3.10+；安装 Skill 不会创建全局 `yaya` 可执行文件。
 
@@ -63,13 +63,13 @@ $yaya domains finance --json
 ```
 
 `--help` 列能力，`help COMMAND` 或 `COMMAND --help` 列该命令的选项、默认值和示例。
-`domains [ID]` 列领域与适用范围。`--version` 读当前安装版本；`--json` 用于机器可读的目录或帮助。
+`domains [ID]` 列领域与适用范围。`--version` 显示当前安装的版本；`--json` 用于机器可读的目录或帮助。
 帮助、版本和领域查询只读，不处理输入材料。命令帮助也接受 `-h`。
 
 ## options
 
 每节的“支持参数”列出该任务的完整参数集，另均支持 `--help` / `-h`、`--json`。
-任务计划本来就输出 JSON，任务上的 `--json` 不会新增执行步骤。
+任务计划输出的就是 JSON，任务上的 `--json` 不会增加执行步骤。
 
 | 参数 | 含义与默认行为 |
 | --- | --- |
@@ -109,7 +109,7 @@ $yaya human --focus direct --domain finance --file report.md
 $yaya human --style team-style.md --file draft.md
 ```
 
-第一条例子可以改为：“新版本支持导出 CSV，目前仅向试用账户开放。”
+第一条可以改为：“新版本支持导出 CSV，目前仅向试用账户开放。”
 
 默认 `--focus all` 覆盖全部表达问题。`direct` 只处理无效对比、假想反驳、防御性铺垫和重复限定，
 例如删掉功能介绍中无关的“这不是要重新定义协作”。它仍保留“仅支持 Linux”“本金可能亏损”等实质条件。
@@ -169,7 +169,7 @@ $yaya verify --domain data -- 实验摘要称转化率提高；请按已提供�
 
 如说明写“生产超时为 30 秒”，代码只显示默认值，报告应区分默认值与生产实际配置。
 没有足够证据的结论保持未确认；来源文件不可读时会说明影响。来源选择不等于来源已独立认证。
-`--source` 可省略，宿主按任务查找可访问的相关证据；本地命令本身不会联网或读取输入。
+`--source` 可省略，宿主按任务查找可访问的相关证据；本地命令不联网，也不读取输入。
 修正文稿是另一个步骤，`verify` 不接受 `--write`。
 
 ## comment
@@ -186,10 +186,10 @@ $yaya comment --file src/cache.py --file src/client.py --write
 $yaya comment --scope docstrings --file app.py -- 仅处理函数 get_data 的 docstring，返回候选。
 ```
 
-默认 `--scope comments` 只改普通注释。代码、日志、报错、UI 字符串、数据库 comment 元数据和工具指令各有独立用途，
-不包含在普通注释修改中。注释与代码冲突时，需要核对依据，不能编造设计意图。
+默认 `--scope comments` 只改普通注释。代码、日志、报错、UI 字符串、数据库 comment 元数据和工具指令不在这个范围内，各有独立用途。
+注释与代码冲突时，需要核对依据，不能编造设计意图。
 
-`--scope docstrings` 要进一步指定具体函数、类或模块节点。Python docstring 会改变 `__doc__`，
+`--scope docstrings` 还要指定具体函数、类或模块节点。Python docstring 会改变 `__doc__`，
 应保存原稿并用专用节点授权检查；完整步骤见[本地工具](local-tools.md#docstrings)。
 
 Python 普通注释检查支持 `.py` / `.pyi`，保持代码、字符串、物理行和编码不变；不支持增删、移动或重新折行注释。
@@ -285,8 +285,8 @@ $yaya scan --file draft.md --lang zh-Hans --rule zh-empty-opener --rule zh-light
 不填 `--rule` 时运行该语言全部规则；可重复选择同语言规则。未知规则或语言不匹配会报错。
 报告的 `enabled_rules` 是实际扫描范围，`evidence` 记录路径、SHA-256、字节数和输入稳定性；改稿后需要重扫。
 
-命中项需要结合上下文判断。空结果仅表示所选字面规则未命中。过度防御需要上下文判断，请用 `review --focus direct`。
-安装日语等语言包不会增加扫描规则。文件选项不接受单独的 `-`；名为 `-` 的文件使用 `./-`。
+命中项要结合上下文判断；空结果只说明所选字面规则未命中。过度防御不在字面规则范围内，用 `review --focus direct`。
+安装其他语言包不会增加扫描规则。文件选项不接受单独的 `-`；名为 `-` 的文件使用 `./-`。
 终端实际扫描命令见[本地工具](local-tools.md#scan)。
 
 ## check
@@ -336,7 +336,7 @@ $yaya help doctor
 
 ## domains
 
-五类领域用于约束表达和重要事实关系，可以与读者、语气、语言独立组合：
+五类领域约束表达和重要事实关系，可以与读者、语气、语言独立组合：
 
 ```text
 $yaya domains tech
@@ -388,23 +388,33 @@ $yaya polish --file README.md --write -- 仅修改简介，保留命令、链接
 | --- | --- | --- |
 | 简体中文 | `zh-Hans` | 核心自带 |
 | 英语 | `en` | 核心自带 |
-| 繁体中文 | `zh-Hant` | 可选语言包 |
-| 日语 | `ja` | 可选语言包 |
-| 韩语 | `ko` | 可选语言包 |
+| 繁体中文（台湾） | `zh-Hant-TW` | 单独安装 |
+| 繁体中文（香港） | `zh-Hant-HK` | 单独安装 |
+| 日语 | `ja` | 单独安装 |
+| 韩语 | `ko` | 单独安装 |
+| 法语 | `fr` | 单独安装 |
+| 西班牙语 | `es` | 单独安装 |
+| 巴西葡萄牙语 | `pt-BR` | 单独安装 |
+| 俄语 | `ru` | 单独安装 |
+| 阿拉伯语 | `ar` | 单独安装（从右到左） |
 
 ```text
 $yaya polish --lang zh-HK --file notice.md
 $yaya human --lang en-GB --file article.md
 ```
 
-没有指定 `--lang` 时保留原文语言和地区习惯。`zh-HK` 可使用繁中包，同时保留香港用语；裸 `zh` 不自动选择简繁。
-所有包目前均为实验性指导。法语目录是贡献模板，尚未作为支持包发布。
+没有指定 `--lang` 时保留原文语言和地区习惯。`zh-TW` 解析为 `zh-Hant-TW`，`zh-HK` 解析为 `zh-Hant-HK`；
+`zh-MO` 按 CLDR 回退到 `zh-Hant-HK`。台湾包和香港包不能互相替代，裸 `zh` 或 `zh-Hant` 不选择地区或包。
+`es-MX`、`es-419` 回退到 `es`，保留各自的地区习惯；`pt-PT` 不解析为 `pt-BR`。
+所有语言包均为 `experimental`，格式为 `format_version: 1`、`core_major: 1`。
 
-可选包从源码构建：
+可选语言包从源码构建：
 
 ```text
 python scripts/build_release.py
 ```
+
+默认写入 `dist/`：`yaya-core-1.0.0.zip`、九个可选语言包归档（`yaya-lang-<ID>-1.0.0.zip`）、`catalog.json` 和 `SHA256SUMS`。
 
 在已安装的 `yaya/` 目录运行以下命令；将 `ARCHIVE` 和 `EXPECTED_SHA256` 换成构建输出路径与可信 catalog 中的摘要：
 
@@ -414,11 +424,11 @@ python scripts/packs.py resolve --language ja
 python scripts/packs.py list
 ```
 
-安装后无需额外启用。解析顺序为显式项目、用户、内置资源；每个位置内先匹配具体地区，再回退较宽标签。
+安装后不需要额外启用。解析顺序是显式项目、用户、内置资源；每个位置内先匹配具体地区，再回退较宽标签。
 项目安装与自定义数据目录分别用 `--project PROJECT_ROOT`、`--data-dir DATA_DIRECTORY`，后续操作沿用同一目标。
 缺少专门指导时，宿主可说明限制后尝试通用编辑；不会自动下载。
 
-升级、移除和恢复分别执行所需命令：
+替换、移除和恢复使用以下命令：
 
 ```text
 python scripts/packs.py install ARCHIVE --sha256 EXPECTED_SHA256 --replace
@@ -426,8 +436,8 @@ python scripts/packs.py remove ja
 python scripts/packs.py rollback ja
 ```
 
-替换和移除会保留旧包；`rollback` 验证并恢复最新备份。核心更新另按[安装与恢复步骤](../INSTALL.md#4-update-remove-or-roll-back)，
-备份旧核心到 Skill 发现目录之外，保留独立的语言包和风格卡。新核心有后续修改时先保存，再恢复旧版。
+被替换或移除的包会留在备份目录；`rollback` 校验并恢复最新备份。核心更新的步骤见[安装与恢复步骤](../INSTALL.md#4-update-remove-or-roll-back)：
+把原核心备份到 Skill 发现目录之外，语言包和风格卡留在独立的 `.yaya/` 中；当前核心有需要保留的改动时，先保存再恢复。
 
 ## troubleshooting
 

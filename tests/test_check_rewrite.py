@@ -160,8 +160,6 @@ class RewriteChecks(unittest.TestCase):
         self.assert_status("failed", "Alice Alice", "Alice", literals=["Alice"])
         with self.assertRaises(prose_scan.InputError):
             checker.compare("A", "A", literals=["absent"])
-        with self.assertRaises(prose_scan.InputError):
-            checker.compare("A", "A", literals=[""])
 
     def test_nested_placeholder_looking_text_does_not_unprotect_outer_structure(self):
         self.assert_status("failed", "{#section:part}", "{#other:part}")

@@ -1,53 +1,53 @@
-# Exemples pédagogiques en français
+# [Language name] teaching examples
 
-Modèle de contribution non publié. Tous les scénarios sont fictifs ; chaque révision utilise uniquement les informations fournies.
+All examples are fictional. Each revision uses only the information given in its input. Write the examples in the pack's language and replace every bracketed instruction.
 
-## 1. Réviser un paragraphe financier
+## 1. Financial paragraph
 
-Entrée : Le chiffre d'affaires de la période est de 12 millions d'euros, soit 8 % de plus qu'à la même période l'an dernier. La marge brute passe de 20 % à 23 %. L'entreprise pense que la demande pourrait se redresser, mais ne fournit pas de données sur les commandes.
+Input: [Revenue of 1.2 million in a local currency, up 8% year on year. Gross margin rose from 20% to 23%. The company thinks demand may recover but gave no order data.]
 
-Acceptable : Le chiffre d'affaires de la période atteint 12 millions d'euros, en hausse de 8 % sur un an. La marge brute passe de 20 % à 23 %, soit une hausse de 3 points de pourcentage. L'entreprise estime que la demande pourrait se redresser, sans fournir de données sur les commandes.
+Acceptable: [A clearer version that keeps the currency, period, comparison basis, the 3 percentage-point change and the company's uncertain view.]
 
-Inacceptable : La forte hausse des commandes confirme la reprise durable de la demande.
+Unacceptable: [A version that claims strong orders and a confirmed recovery.]
 
-Raison : Cette version invente des données et transforme une possibilité en certitude.
+Reason: [It invents order data and turns a possibility into a fact.]
 
-## 2. Réviser un commentaire de code
+## 2. Code comment
 
-Entrée :
+Input:
 
 ```python
 def should_retry(status):
-    # Ici, on vérifie intelligemment si cet état nécessite une nouvelle tentative.
+    # [A vague comment in the pack's language]
     return status == 429
 ```
 
-Modifier uniquement le commentaire : `# Renvoie True pour le statut 429 afin d'indiquer qu'une nouvelle tentative est nécessaire.`
+Change only the comment: `# [Returns True for status 429 to indicate that a retry is needed.]`
 
-Inacceptable : `# Réessaie automatiquement toutes les erreurs serveur jusqu'au succès.`
+Unacceptable: `# [Claims that all server errors are retried automatically until success.]`
 
-Raison : Le code vérifie une valeur ; il n'effectue aucune nouvelle tentative et n'en fixe pas le nombre. La fonction et le code restent inchangés.
+Reason: [The code checks one value. It does not retry and sets no retry count. The function and code stay unchanged.]
 
-## 3. Alléger un prompt
+## 3. Shorter prompt
 
-Entrée : Tu es le meilleur expert mondial du résumé. Utilise tes capacités exceptionnelles pour résumer uniquement {{text}} en trois points de 20 mots maximum chacun. Si le contenu est insuffisant, pose une question et attends la réponse avant de résumer.
+Input: [A prompt with a decorative expert title that asks for exactly three points from {{text}}, at most 50 words each, and asks one question and waits if the material is insufficient.]
 
-Acceptable : Résume uniquement {{text}} en trois points de 20 mots maximum chacun. Si le contenu est insuffisant, pose une question de clarification et attends la réponse avant de résumer.
+Acceptable: [The same instructions without the decorative title, keeping {{text}}, the count, the length and the waiting condition.]
 
-Inacceptable : Utilise tes connaissances pour expliquer le sujet en détail.
+Unacceptable: [A prompt that asks for a detailed explanation from general knowledge.]
 
-Raison : Cette version perd la variable, la restriction des sources, le nombre de points, la longueur et la condition d'attente.
+Reason: [It loses the variable, the source restriction, the count, the length and the waiting condition.]
 
-## 4. Transférer le style d'un extrait
+## 4. Style transfer
 
-Extrait : Vérifie d'abord que cela fonctionne. Ensuite, cherche ce qui ralentit. Si tu n'as pas testé un point, ne conclus pas encore.
+Sample: [Three short sentences: check that it works, then find what is slow, and do not conclude about untested parts.]
 
-Choix transférables : phrases courtes, ordre explicite, actions directes, incertitude conservée.
+Transferable choices: [Short sentences, explicit order, direct actions, kept uncertainty.]
 
-Nouvelle tâche : rédiger un prompt pour examiner des journaux fournis.
+New task: write a prompt for reviewing a supplied log.
 
-Acceptable : Repère les erreurs dans {{log}}. Classe-les dans leur ordre d'apparition. Utilise seulement le journal. Signale ce que tu ne peux pas déterminer.
+Acceptable: [Find the errors in {{log}}, list them in order of appearance, use only the log and state what cannot be determined.]
 
-Inacceptable : J'ai réparé des centaines de serveurs, tu peux donc croire mon diagnostic.
+Unacceptable: [A claim to have repaired hundreds of servers.]
 
-Raison : Cette version invente une expérience et une identité au lieu de transférer la structure de l'extrait.
+Reason: [It invents experience and identity instead of transferring the sample's structure.]

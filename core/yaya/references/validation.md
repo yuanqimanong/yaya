@@ -22,7 +22,7 @@ Count **passed**, **failed**, **unsupported**, **manual_review**, and **unverifi
 
 ## Exact grants
 
-`--allow FILE` is a reviewed permission record, not a way to silence a failing category. Retain the user's authorization basis with the task. Do not auto-approve differences from the candidate merely because a checker detected them. Broad legacy forms such as `--allow numbers` are rejected in 0.2.1.
+`--allow FILE` is a reviewed permission record, not a way to silence a failing category. Retain the user's authorization basis with the task. Do not auto-approve differences from the candidate merely because a checker detected them. Broad category forms such as `--allow numbers` are rejected.
 
 For prose, the JSON binds the raw UTF-8 file hashes and complete exact protected-category changes:
 

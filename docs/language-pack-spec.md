@@ -31,9 +31,9 @@ A standalone pack ZIP has the same flat root layout, without an enclosing direct
 {
   "format_version": 1,
   "id": "ja",
-  "version": "0.2.0",
-  "core_major": 0,
-  "name": "Japanese",
+  "version": "1.0.0",
+  "core_major": 1,
+  "name": "日本語",
   "license": "MIT",
   "quality": "experimental",
   "direction": "ltr"
@@ -42,24 +42,24 @@ A standalone pack ZIP has the same flat root layout, without an enclosing direct
 
 | Field | Requirement |
 | --- | --- |
-| `format_version` | Integer `1`, the initial format. |
+| `format_version` | Integer `1`. |
 | `id` | A canonical language tag in the restricted profile below. |
-| `version` | Strict Semantic Versioning, such as `0.1.0` or `0.2.0-rc.1`; no `v` prefix. |
-| `core_major` | Nonnegative integer matching the consuming core's major version. Yaya `0.5.0` has major `0`. |
-| `name` | Nonempty display name, at most 100 characters. |
+| `version` | Strict Semantic Versioning, such as `1.0.0` or `1.1.0-rc.1`; no `v` prefix. |
+| `core_major` | Nonnegative integer matching the consuming core's major version. Yaya `1.0.0` has major `1`. |
+| `name` | Nonempty display name, at most 100 characters, normally written in the pack's own language. |
 | `license` | Syntax of a single SPDX identifier, such as `MIT` or `Apache-2.0`; no compound expression. Registry membership is not verified. |
 | `quality` | `experimental` or `reviewed`. |
 | `direction` | `ltr` or `rtl`. This declares writing direction; it does not ensure every host renders it correctly. |
 
 Include the full applicable license text in `LICENSE` and satisfy its attribution requirements.
 
-Pack versions are independent of the core's patch/minor version. `core_major` declares compatibility; record the core versions actually tested in review evidence.
+Pack versions are independent of the core's minor and patch versions. `core_major` declares compatibility; record the core versions actually tested in review evidence.
 
-The data contract remains stable within a core major, including major `0`. An incompatible change must increment the pack format or core major. Independent publishers may distribute a pack ZIP with a trusted checksum from any repository. There is no central language allowlist; the same validation, licensing, and review rules apply.
+The data contract stays stable within a core major. An incompatible change must increment the pack format or the core major. Independent publishers may distribute a pack ZIP with a trusted checksum from any repository. There is no central language allowlist; the same validation, licensing and review rules apply.
 
 ### Compatibility
 
-The initial release uses one format: `format_version: 1` with `core_major: 0`. `PATTERNS.md` is optional; a pack without it resolves with `patterns: null` and its guide and examples remain usable.
+Core 1.x reads one format: `format_version: 1` with `core_major: 1`. `PATTERNS.md` is optional; a pack without it resolves with `patterns: null`, and its guide and examples remain usable.
 
 Pack content can be updated independently. Use `--replace` and `rollback` so complete pack versions move together.
 
@@ -78,7 +78,7 @@ language[-Script][-REGION][-variant...]
 - Optional `REGION`: two uppercase ASCII letters or three digits.
 - Each optional variant: five to eight ASCII alphanumeric characters, or one digit followed by three ASCII alphanumeric characters.
 
-Use canonical casing in pack metadata, including lowercase variant subtags. Examples within this profile include `en`, `en-GB`, `zh-Hans`, `zh-Hant-HK`, `sl-rozaj`, and `de-1901`.
+Use canonical casing in pack metadata, including lowercase variant subtags. Examples within this profile include `en`, `en-GB`, `zh-Hans`, `zh-Hant-HK`, `pt-BR`, `es-419`, `sl-rozaj` and `de-1901`.
 
 Extensions, private-use tags, grandfathered tags, and other BCP 47 forms are outside this profile. Validation checks the supported shape and casing; it does not look up whether every subtag is registered or semantically appropriate. The resolver can normalize request casing, but `pack.json` must already use a canonical ID.
 
@@ -94,7 +94,7 @@ Use `experimental` until human review is complete. Claiming `reviewed` requires 
 
 When review evidence claims humanize coverage, include `PATTERNS.md` and the cases and native-editor findings that support that claim. A reviewed pack without `PATTERNS.md` can cover its guide and examples; it does not imply reviewed humanize patterns.
 
-The initial `zh-Hans`, `en`, `zh-Hant`, `ja`, and `ko` packs are all `experimental`. A supplied `fr` template demonstrates authoring; it is not an additional released language.
+All current packs are `experimental`: the bundled `zh-Hans` and `en`, and the optional `zh-Hant-TW`, `zh-Hant-HK`, `ja`, `ko`, `fr`, `es`, `pt-BR`, `ru` and `ar`. The [template](../templates/language-pack/README.md) uses the ID `und` and is never built or published.
 
 ## Resolution and fallback
 
@@ -105,15 +105,18 @@ PROJECT_ROOT/.yaya/language-packs/ID
 HOME/.yaya/language-packs/ID
 ```
 
-Location priority is **explicit project, user, bundled**. Within each location, try the most specific candidate before broader parent candidates. Location priority comes first: a project `zh-Hant` pack can override a user `zh-Hant-HK` pack for a `zh-Hant-HK` request.
+Location priority is **explicit project, user, bundled**. Within each location, try the most specific candidate before broader parent candidates. Location priority comes first: a project `fr` pack overrides a user `fr-CA` pack for an `fr-CA` request.
 
-Use a project directory only when its root is explicitly provided by the user or calling host. Do not search parent directories. `--data-dir` replaces `HOME/.yaya`; it denotes the data directory itself, not its `language-packs` child.
+Use a project directory only when the user or calling host explicitly provides its root. Do not search parent directories. `--data-dir` replaces `HOME/.yaya`; it names the data directory itself, not its `language-packs` child.
 
-Resolution recognizes these Chinese script hints while retaining the requested locale:
+Candidates come from removing subtags from the right, with these additions, while the requested locale is retained:
 
-- `zh-CN` and `zh-SG`: use `Hans` candidates.
-- `zh-TW`, `zh-HK`, and `zh-MO`: use `Hant` candidates.
-- Bare `zh`: do not guess a script or region.
+- `zh-CN` and `zh-SG`: insert the `Hans` script, for example `zh-CN`, `zh-Hans-CN`, `zh-Hans`, `zh`.
+- `zh-TW`, `zh-HK` and `zh-MO`: insert the `Hant` script.
+- `zh-Hant-MO`: try `zh-Hant-HK` next, following the CLDR parent locale.
+- Bare `zh` does not guess a script, and `zh-Hant` does not guess a region: with only the regional packs installed, `zh-Hant` resolves as `missing`. The Taiwan and Hong Kong packs never stand in for each other.
+
+So `es-MX` resolves to `es`, while `pt-PT` does not resolve to `pt-BR`.
 
 A broader match supplies guidance without changing the user's requested output locale. A missing or incompatible pack allows a generic model attempt with a disclosed limitation; it must not be described as language-specific validation. Pack discovery and fallback do not download anything.
 
@@ -143,6 +146,6 @@ python scripts/packs.py rollback ja --data-dir DATA_DIRECTORY
 
 Each mutation also accepts `--project PROJECT_ROOT` instead of `--data-dir`; those target options are mutually exclusive. `--replace` is the explicit choice to replace an existing installed pack.
 
-Installation requires SHA-256. Obtain it with the archive from the publisher's trusted, versioned distribution. For a local build, use its generated checksum and retain the source revision. Yaya has no public Release yet. A matching digest confirms file integrity against that value; it does not establish publisher trust or editorial quality.
+Installation requires a SHA-256 digest. Obtain it with the archive from the publisher's trusted, versioned distribution. For a local build, use the generated checksum and record the source revision. Yaya has no public Release yet. A matching digest confirms the file against that value; it does not establish publisher trust or editorial quality.
 
 A successful replacement or removal retains the previous pack as a backup. `rollback ID` validates and restores the latest backup in the selected target. If that backup is invalid or incompatible, rollback reports an error and leaves older backups untouched. Manage backup retention yourself; these files recover language packs only.

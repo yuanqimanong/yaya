@@ -36,12 +36,10 @@ inform specific writing decisions; they do not endorse Yaya, certify the profile
 or establish Chinese-language or cross-domain effectiveness.
 
 Validation must distinguish deterministic command/scope checks from model-produced
-edits and semantic review. The development suite is `tests/evals/commands-domains.json`;
-execution evidence is under `tests/results/2026-10-30-commands-domains/` in the source
-repository. Only a completed report can establish which cases were exercised.
-Passing constructed cases does not establish general accuracy, professional review,
-or a measured improvement over the old version. Language quality is also subject
-to the language packs' own limitations.
+edits and semantic review. The repository tests cover command routing and scope;
+they do not show that a profile's edits are correct. Passing constructed cases does
+not establish general accuracy or professional review. Language quality is also
+subject to the language packs' own limitations.
 
 To add a profile, add its catalog record and guide; supply cases that need editing,
 cases that should stay unchanged, and tempting but wrong rewrites. Record sources,

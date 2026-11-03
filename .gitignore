@@ -11,6 +11,5 @@ dist/
 .yaya/
 .tmp/
 tests/tmp*/
-tests/runs/
 .DS_Store
 Thumbs.db

@@ -1,6 +1,7 @@
 """Snapshot, status accounting, freshness, and failure lifecycle constraints."""
 
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -17,6 +18,11 @@ class EvidenceChecks(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent)
         self.addCleanup(self.tmp.cleanup)
+        # The temporary project sits inside this repository. Stop Git discovery
+        # there so snapshots never record the host checkout's status or diffs.
+        ceiling = patch.dict(os.environ, {"GIT_CEILING_DIRECTORIES": str(Path(self.tmp.name).resolve())})
+        ceiling.start()
+        self.addCleanup(ceiling.stop)
         self.root = Path(self.tmp.name) / "project"
         self.root.mkdir()
         self.snapshot = Path(self.tmp.name) / "snapshot"
@@ -42,6 +48,8 @@ class EvidenceChecks(unittest.TestCase):
         self.assertIn(b"x = 7", self.source.read_bytes())
 
     def test_snapshot_still_works_without_git(self):
+        outside = evidence.start(self.root, Path(self.tmp.name) / "no-repository", ["sample.py:comments"])
+        self.assertEqual((outside["git_baseline"]["head"], outside["git_baseline"]["error"]), (None, None))
         with patch.object(evidence.subprocess, "run", side_effect=FileNotFoundError("git missing")) as run:
             manifest = self.start()
         self.assertEqual(run.call_count, 1)

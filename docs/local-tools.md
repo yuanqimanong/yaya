@@ -2,8 +2,8 @@
 
 [使用手册](usage.md) · [安装与更新](../INSTALL.md) · [保护范围与授权格式](../core/yaya/references/validation.md)
 
-以下命令从源码仓库根目录运行，需要 Python 3.10+，仅使用标准库。在已安装的 `yaya/` 目录运行时，
-去掉路径前的 `core/yaya/`。示例文件名与大写占位符需替换为实际路径或值。
+以下命令适用于核心 1.0.0，从源码仓库根目录运行，需要 Python 3.10+，仅使用标准库。在已安装的 `yaya/` 目录运行时，
+去掉路径前的 `core/yaya/`。示例文件名与大写占位符要替换成实际路径或值。
 
 ## execution
 
@@ -36,7 +36,7 @@ python core/yaya/scripts/detect_tells.py draft.md --language en --rule en-stock-
 
 `findings` 包含位置和审阅提示，`enabled_rules` 列实际规则；`evidence` 记录输入摘要和稳定性。
 stdin 的 `input_stable` 为 `null`，没有稳定文件身份。文件改变后应重扫。
-候选需要语境判断，扫描不产出改稿或作者概率。支持的 Markdown 代码、表格、引文等片段被排除。
+候选需要语境判断，扫描不产出改稿或作者概率。代码、表格、引文等已支持的 Markdown 片段会被跳过。
 
 ## rewrite
 
@@ -119,7 +119,7 @@ python core/yaya/scripts/edit_evidence.py check SNAPSHOT_DIRECTORY --target READ
 python core/yaya/scripts/edit_evidence.py summary SNAPSHOT_DIRECTORY
 ```
 
-第一条必须在编辑前执行，之后的检查针对编辑后的文件。不要在尚未审阅时照抄人工接受说明。
+第一条必须在编辑前执行，之后的检查针对编辑后的文件。人工接受说明要在审阅之后填写，不要未经审阅就照抄。
 
 | 子命令 | 参数与产物 |
 | --- | --- |
@@ -133,7 +133,7 @@ python core/yaya/scripts/edit_evidence.py summary SNAPSHOT_DIRECTORY
 
 报告分别统计 `passed`、`failed`、`unsupported`、`manual_review`、`unverified`。
 工具或候选改变会让旧报告过期。只有全部机械通过时 `complete` 才为 true；人工检查需要阅读具体记录。
-新增/删除文件、全文重构或混合编辑链另建清单，记录原因和验证，不要自动生成授权来消除差异。
+新增或删除文件、全文重构、混合编辑链要另建清单，记录原因和验证；不要为了消除差异而自动生成授权。
 证据助手只向指定证据目录写快照与报告。
 
 ## packs
@@ -159,6 +159,8 @@ python core/yaya/scripts/packs.py rollback ja
 | `install` | 归档路径与必填 `--sha256`；已有不同内容时需 `--replace`；目标用 `--project` 或 `--data-dir`。 |
 | `remove` / `rollback` | 包 ID；目标用 `--project` 或 `--data-dir`。 |
 
+核心自带 `zh-Hans` 和 `en`。可选包为 `zh-Hant-TW`、`zh-Hant-HK`、`ja`、`ko`、`fr`、`es`、`pt-BR`、`ru` 和 `ar`；`ar` 从右到左书写。没有单独的 `zh-Hant` 包。所有包当前都是 `experimental`，格式为 `format_version: 1`、`core_major: 1`。
+
 默认用户数据目录为 `HOME/.yaya/`，项目目标为 `PROJECT_ROOT/.yaya/`。
 `--data-dir` 指数据根目录本身，不是其 `language-packs/` 子目录。
 修改操作的两个目标参数互斥；查询可同时指定显式项目和自定义用户数据目录，仍按项目优先解析。
@@ -178,4 +180,4 @@ python core/yaya/scripts/packs.py rollback ja
 | `packs.py` | 操作完成；解析可能为 ready 或 missing，须读 status | invalid / incompatible 或操作错误 | 命令行参数错误 |
 
 检查结果以工具 JSON 与实际进程退出码为准。脚本参数一般可加 `--help`；普通注释检查器采用上面的两个位置参数接口。
-写作行为评测会调用模型，独立于这些本地检查；开发者用法见[评测流程](../tests/evals/README.md)和[CLI 执行说明](../tests/evals/CLI.md)。
+写作行为评测会调用模型，与这些本地检查分开。仓库的 `tests/` 只包含本地脚本和发布构建的确定性单元测试，不调用模型，可用 `python -m unittest discover -s tests -v` 运行。

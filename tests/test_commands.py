@@ -1,5 +1,6 @@
 """Exercise scope boundaries and portable discovery without invoking a model."""
 import importlib.util
+import copy
 import json
 from pathlib import Path
 import shutil
@@ -164,8 +165,9 @@ class CommandTests(unittest.TestCase):
             right = commands.resolve([name, "--help", "--json", "--before" if name == "check" else "--file", "missing.md"])
             self.assertEqual(left, right)
             self.assertEqual(set(left["option_details"]), set(entry["options"]))
+            text = commands.resolve([name, "--help"])
             for option in left["option_details"]:
-                self.assertIn("--" + option, commands.resolve([name, "--help"]))
+                self.assertIn("--" + option, text)
         self.assertEqual(commands.resolve(["domains", "--help"]), commands.resolve(["help", "domains"]))
         self.assertEqual(commands.resolve(["help", "--help"]), commands.resolve(["--help"]))
         self.assertEqual(commands.resolve(["help", "-h"]), commands.resolve(["--help"]))
@@ -351,6 +353,62 @@ class CommandTests(unittest.TestCase):
         for name in ("unknown", "zh-stock-close"):
             with self.assertRaises(commands.UsageError):
                 commands.resolve(["scan", "--file", str(path), "--lang", "en", "--rule", name])
+
+
+class CatalogTests(unittest.TestCase):
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix=".catalog-", dir=ROOT)
+        self.addCleanup(temporary.cleanup)
+        self.core = Path(temporary.name) / "yaya"
+        shutil.copytree(CORE, self.core, ignore=shutil.ignore_patterns("__pycache__"))
+        self.catalog = commands.load_catalog(self.core)
+
+    def reject(self, change):
+        catalog = copy.deepcopy(self.catalog)
+        change(catalog)
+        (self.core / "catalog.json").write_text(json.dumps(catalog), encoding="utf-8")
+        with self.assertRaises(ValueError):
+            commands.resolve(["human"], core=self.core)
+
+    def test_invalid_defaults_and_action_shapes(self):
+        for key, field, value in (
+            ("focus", "default", "opus"), ("focus", "choices", []),
+            ("focus", "choices", ["all", "all"]), ("focus", "choices", "all"),
+            ("write", "default", True), ("write", "flag", "yes"),
+            ("write", "repeat", True), ("file", "default", ["secret.md"]),
+            ("focus", "nargs", "+"), ("focus", "dest", "write"),
+            ("write", "flag", False), ("file", "repeat", False),
+            ("save", "flag", True),
+            ("source", "repeat", False), ("source", "flag", True), ("style", "default", "team.md"),
+        ):
+            with self.subTest(key=key, field=field, value=value):
+                self.reject(lambda c: c["options"][key].update({field: value}))
+
+    def test_duplicate_and_malformed_command_fields(self):
+        for field, value in (
+            ("options", ["focus", "focus"]), ("options", "focus"),
+            ("references", []), ("references", [None]), ("summary", ""),
+            ("delivery", "unknown"),
+        ):
+            with self.subTest(field=field):
+                self.reject(lambda c: c["commands"]["human"].update({field: value}))
+
+    def test_readonly_delivery_cannot_gain_write_options(self):
+        self.reject(lambda c: c["commands"]["review"]["options"].append("write"))
+        self.reject(lambda c: c["commands"]["origin"]["options"].append("save"))
+        self.reject(lambda c: c["commands"]["human"]["options"].remove("file"))
+        self.reject(lambda c: c["commands"]["human"]["options"].append("source"))
+        self.reject(lambda c: c["commands"]["review"]["options"].append("style"))
+
+    def test_reserved_selectors_and_incomplete_domain(self):
+        self.reject(lambda c: c["options"].update({"help": {"help": "collision"}}))
+        self.reject(lambda c: c["commands"].update({"domains": c["commands"]["human"]}))
+        self.reject(lambda c: c["domains"]["tech"].pop("preserves"))
+
+    def test_unchanged_catalog_passes_the_same_check(self):
+        # Control for reject(); CommandTests covers help and plans for every command.
+        (self.core / "catalog.json").write_text(json.dumps(self.catalog), encoding="utf-8")
+        self.assertEqual(commands.resolve(["human"], core=self.core)["command"], "human")
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@
 
 Yaya is a writing Skill for AI assistants. It humanizes and polishes prose, checks claims against supplied evidence, edits code comments and prompts, learns writing styles, and assesses AI-writing signals.
 
-Your current AI assistant does the editing. Local Python tools handle command planning, scans and preservation checks. No additional model account, API key or background service is required. Core **0.5.0** is available from `main`; no GitHub Release has been published yet.
+Your current AI assistant does the editing. Local Python tools only plan commands, scan wording and check protected content, so you need no extra model account, API key or background service. The current version is **1.0.0**, available from `main`; no GitHub Release has been published yet.
 
 ## Start
 
@@ -20,15 +20,15 @@ $yaya human --domain tech --file README.md
 $yaya origin -- Paste the text to assess here.
 ```
 
-The second command returns a candidate. Add `--write` to edit the file. Natural-language requests work too: “Use Yaya to humanize this README for software developers and edit the file.”
+The second command returns a revised draft. Add `--write` to edit the file instead. Plain requests work too: “Use Yaya to humanize this README for software developers and edit the file.”
 
-`$yaya` and `yaya` select tasks in chat. Installation does not add a global shell command. For terminal help, run:
+`$yaya` and `yaya` work in chat only; installation adds no shell command. For help in a terminal, run:
 
 ```text
 python core/yaya/scripts/yaya.py --help
 ```
 
-This path assumes the repository root. From an installed `yaya/` directory, omit `core/yaya/`. Input files must be accessible to the host. The helper prints Chinese help or a JSON task plan; `doctor` executes local diagnostics directly. The host executes the other tasks. See [invocation and file rules](docs/usage.md#start).
+Run this from the repository root. From an installed `yaya/` directory, drop `core/yaya/`. Input files must be readable by the host. The helper prints Chinese help or a JSON task plan, `doctor` runs local diagnostics itself, and the host carries out every other task. See [invocation and file rules](docs/usage.md#start).
 
 ## Capabilities
 
@@ -46,11 +46,9 @@ This path assumes the repository root. From an installed `yaya/` directory, omit
 | Compare drafts | `check` | Check protected content or Python ordinary-comment boundaries; [usage](docs/usage.md#check) |
 | Diagnose installation | `doctor` | Check local runtime files, syntax and resources; [usage](docs/usage.md#doctor) |
 
-Each explicit command selects one task. Natural language can combine tasks: “Check the deployment guide against these sources, then polish the confirmed passages.” The [usage manual](docs/usage.md) lists every option, default, input and result, with examples. It is currently in Chinese; the [host command reference](core/yaya/references/commands.md) is in English.
+Each command performs one task. Natural language can combine tasks: “Check the deployment guide against these sources, then polish the confirmed passages.” The [usage manual](docs/usage.md) lists every option, default, input and result, with examples. It is in Chinese; the [host command reference](core/yaya/references/commands.md) is in English.
 
 ## Is this text AI-written?
-
-Use `origin`:
 
 ```text
 $yaya origin --file article.md
@@ -58,7 +56,7 @@ $yaya origin --file article.md --file revision-history.md
 $yaya help origin
 ```
 
-The result gives an **AI-generated leaning**, **human-written leaning**, or **indeterminate** assessment, with quoted passages and reasons. It leaves the source unchanged. Drafts, revision history and generation records can help establish provenance. Text alone usually cannot establish authorship; Yaya does not invent an AI percentage. See [authorship assessment](core/yaya/references/authorship.md).
+The result is an **AI-generated leaning**, a **human-written leaning** or **indeterminate**, with quoted passages and reasons. The source stays unchanged. Drafts, revision history and generation records can add provenance evidence. Text alone usually cannot establish authorship, so Yaya gives no AI percentage. See [authorship assessment](core/yaya/references/authorship.md).
 
 ## Remove unnecessary defensive wording
 
@@ -67,13 +65,13 @@ $yaya human --focus direct --domain tech --file draft.md
 $yaya review --focus direct --file draft.md
 ```
 
-`direct` focuses on irrelevant contrasts, imagined objections and repeated qualifications. For example:
+`direct` handles only irrelevant contrasts, imagined objections and repeated qualifications. For example:
 
 > Before: This isn't about redefining collaboration. The directory adds department filtering.
 >
 > After: The directory adds department filtering.
 
-Keep conditions that affect use, such as “Retry only after a connection timeout, at most twice.” The guidance uses context and applies to text from GPT, Opus, DeepSeek, Doubao and other sources. There are no model-brand presets. See [humanizing guidance](core/yaya/references/humanize.md).
+Conditions that affect use stay, such as “Retry only after a connection timeout, at most twice.” The guidance works from context and applies equally to text from GPT, Opus, DeepSeek, Doubao or any other source; there are no model-brand presets. See [humanizing guidance](core/yaya/references/humanize.md).
 
 ## Domains and languages
 
@@ -91,9 +89,19 @@ $yaya domains finance
 $yaya polish --domain finance --audience "general readers" --tone concise --file report.md
 ```
 
-Choose domain, audience, tone and language separately. All five profiles are `experimental`; [domain guidance](core/yaya/references/domains.md) explains coverage and evidence limits.
+Domain, audience, tone and language are chosen separately. All five profiles are `experimental`; the [domain guidance](core/yaya/references/domains.md) explains their coverage and evidence limits.
 
-The core bundles **Simplified Chinese `zh-Hans` and English `en`**. Install **Traditional Chinese `zh-Hant`, Japanese `ja` and Korean `ko`** as needed. All five packs are experimental. The local `scan` rules currently cover only Simplified Chinese and English. See [language-pack installation](INSTALL.md#3-add-a-requested-language).
+The core bundles **Simplified Chinese `zh-Hans`** and **English `en`**. Install other languages as needed:
+
+| Language | ID | Language | ID |
+| --- | --- | --- | --- |
+| Traditional Chinese (Taiwan) | `zh-Hant-TW` | Spanish | `es` |
+| Traditional Chinese (Hong Kong) | `zh-Hant-HK` | Brazilian Portuguese | `pt-BR` |
+| Japanese | `ja` | Russian | `ru` |
+| Korean | `ko` | Arabic (right to left) | `ar` |
+| French | `fr` | | |
+
+Taiwan and Hong Kong differ in vocabulary, character forms and register, so each has its own pack and neither stands in for the other; `zh-MO` uses the Hong Kong pack. Every pack is experimental editorial guidance. The local `scan` rules cover only Simplified Chinese and English. See [language-pack installation](INSTALL.md#3-add-a-requested-language).
 
 ## Documentation
 
@@ -103,9 +111,8 @@ The core bundles **Simplified Chinese `zh-Hans` and English `en`**. Install **Tr
 | [Workflows](docs/workflows.md) | Technical verification, financial editing and style reuse (Chinese) |
 | [Local tools](docs/local-tools.md) | Scans, checks, docstring grants, batch evidence and exit codes (Chinese) |
 | [Install and update](INSTALL.md) | Core and pack installation, checks, updates, removal and rollback |
-| [0.5 upgrade](docs/upgrade-0.5.md) | Current changes and compatibility (Chinese) |
 | [Design](docs/design.md) / [Contributing](CONTRIBUTING.md) | Architecture, extension and development checks |
-| [Tests and evaluations](tests/README.md) | Regression tests, writing evaluations and execution evidence |
+| [Tests](tests/README.md) | Unit tests for the local scripts and release build (Chinese) |
 | [Language-pack specification](docs/language-pack-spec.md) | Format, resolution and language contributions |
 
 Run development checks from the repository root with Python 3.10+:
@@ -115,6 +122,6 @@ python -m unittest discover -s tests -v
 python scripts/build_release.py
 ```
 
-Builds go to `dist/`. Local tools use only the Python standard library. File edits retain a recoverable original or diff; review their meaning and usefulness alongside mechanical checks.
+Builds go to `dist/`. Local tools use only the Python standard library. File edits keep a recoverable original or diff. A passing mechanical check does not settle meaning or readability; read the result as well.
 
 [MIT License](LICENSE)

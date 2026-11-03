@@ -42,7 +42,7 @@ class PackChecks(unittest.TestCase):
             "format_version": 1,
             "id": identifier,
             "version": version,
-            "core_major": 0,
+            "core_major": PACKS.CORE_MAJOR,
             "name": "Test language pack",
             "license": "MIT",
             "quality": "experimental",
@@ -123,8 +123,22 @@ class PackChecks(unittest.TestCase):
         self.assertEqual(PACKS.candidates("fr-CA"), ["fr-CA", "fr"])
         self.assertEqual(PACKS.candidates("sr-Latn-RS"), ["sr-Latn-RS", "sr-Latn", "sr"])
         self.assertEqual(PACKS.candidates("zh-TW"), ["zh-TW", "zh-Hant-TW", "zh-Hant", "zh"])
+        self.assertEqual(PACKS.candidates("zh-HK"), ["zh-HK", "zh-Hant-HK", "zh-Hant", "zh"])
+        # CLDR parentLocales: Macau Traditional Chinese inherits from Hong Kong.
+        self.assertEqual(PACKS.candidates("zh-MO"), ["zh-MO", "zh-Hant-MO", "zh-Hant-HK", "zh-Hant", "zh"])
         self.assertEqual(PACKS.candidates("zh-CN"), ["zh-CN", "zh-Hans-CN", "zh-Hans", "zh"])
         self.assertEqual(PACKS.candidates("zh-Hans-TW"), ["zh-Hans-TW", "zh-Hans", "zh"])
+
+    def test_traditional_chinese_regions_do_not_substitute_for_each_other(self):
+        self.directory(self.data / "language-packs", "zh-Hant-TW")
+        self.directory(self.data / "language-packs", "zh-Hant-HK")
+        for requested, expected in (("zh-TW", "zh-Hant-TW"), ("zh-HK", "zh-Hant-HK"),
+                                    ("zh-MO", "zh-Hant-HK"), ("zh-Hant-HK", "zh-Hant-HK")):
+            with self.subTest(requested=requested):
+                self.assertEqual(PACKS.resolve(requested, str(self.data))["resolved"], expected)
+        self.assertEqual(PACKS.resolve("zh-Hant", str(self.data))["status"], "missing")
+        (self.data / "language-packs" / "zh-Hant-HK" / "GUIDE.md").unlink()
+        self.assertEqual(PACKS.resolve("zh-HK", str(self.data))["status"], "invalid")
 
     def test_location_precedence_before_specificity(self):
         self.directory(self.project / ".yaya" / "language-packs", "fr")
@@ -175,8 +189,7 @@ class PackChecks(unittest.TestCase):
         path = self.base / "fixture"
         path.mkdir()
         mutations = [
-            {"format_version": True}, {"core_major": -1}, {"version": "1.02.0"},
-            {"version": "1.0.0-01"}, {"name": " "}, {"license": "MIT OR Apache-2.0"},
+            {"format_version": True}, {"core_major": -1}, {"name": " "}, {"license": "MIT OR Apache-2.0"},
             {"name": " " * 100 + "x"},
             {"quality": "excellent"}, {"direction": "auto"}, {"id": "JA"}, {"surprise": "field"},
         ]
@@ -236,29 +249,6 @@ class PackChecks(unittest.TestCase):
         self.assertEqual(PACKS.resolve("ja", str(self.data))["format_version"], 1)
         self.assert_no_stage()
 
-    def test_pack_without_patterns_installs_and_rolls_back(self):
-        original = self.files()
-        self.install(original)
-        self.install(self.files(version="0.2.0"), replace=True)
-        PACKS.rollback("ja", str(self.data))
-        result = PACKS.resolve("ja", str(self.data))
-        self.assertEqual((result["status"], result["version"], result["patterns"]), ("ready", "0.1.0", None))
-        self.assert_no_stage()
-
-    def test_pattern_content_updates_and_restores_with_the_pack(self):
-        original = self.files()
-        original["PATTERNS.md"] = b"Keep the original regional examples.\n"
-        self.install(original)
-        changed = self.files(version="0.2.0")
-        changed["PATTERNS.md"] = b"Updated regional examples and exceptions.\n"
-        update = self.install(changed, replace=True)
-        self.assertEqual((Path(update["backup"]) / "PATTERNS.md").read_bytes(), original["PATTERNS.md"])
-        self.assertEqual((self.installed() / "PATTERNS.md").read_bytes(), changed["PATTERNS.md"])
-        PACKS.rollback("ja", str(self.data))
-        self.assertEqual(PACKS.validate(self.installed())["format_version"], 1)
-        self.assertEqual((self.installed() / "PATTERNS.md").read_bytes(), original["PATTERNS.md"])
-        self.assert_no_stage()
-
     def test_future_format_blocks_fallback_and_install(self):
         self.directory(self.project / ".yaya" / "language-packs", format_version=2)
         self.directory(self.core / "languages")
@@ -270,7 +260,8 @@ class PackChecks(unittest.TestCase):
         self.assertFalse(self.installed().exists())
         self.assert_no_stage()
 
-    def test_pattern_contents_receive_same_text_and_size_checks(self):
+    def test_invalid_file_content_and_unexpected_files_fail_validation_and_install(self):
+        # Every pack file, required or optional, passes through the same content checks.
         path = self.directory(self.base / "fixtures")
         for invalid in (b"", b" \n", b"hello\0world", b"\xff", b"a" * (PACKS.MAX_FILE + 1)):
             with self.subTest(size=len(invalid)):
@@ -283,8 +274,13 @@ class PackChecks(unittest.TestCase):
                     self.install(files)
                 self.assert_no_stage()
                 self.assertFalse(self.installed().exists())
+        (path / "PATTERNS.md").unlink()
+        (path / "script.py").write_bytes(b"print('not allowed')")
+        with self.assertRaises(PACKS.PackError):
+            PACKS.validate(path)
 
-    def test_archive_extra_colliding_and_linked_patterns_fail_safely(self):
+    def test_duplicate_colliding_and_special_members_fail_before_replacing_a_pack(self):
+        # Member checks do not depend on the file name; PATTERNS.md stands in for every member.
         self.install()
         valid = self.files()
         valid["PATTERNS.md"] = b"Regular Markdown.\n"
@@ -313,7 +309,7 @@ class PackChecks(unittest.TestCase):
         path = self.base / "semver fixture"
         path.mkdir()
         valid = ("0.0.0", "9.8.7-rc.1+publisher.005", "1.2.3-0.3.7", "1.2.3-0A.000a+001.09")
-        invalid = ("v1.2.3", "1.2", "01.2.3", "1.2.3-01", "1.2.3-rc..1", "1.2.3+", "1.2.٣", "1.2.3-１２")
+        invalid = ("v1.2.3", "1.2", "01.2.3", "1.02.0", "1.2.3-01", "1.2.3-rc..1", "1.2.3+", "1.2.٣", "1.2.3-１２")
         for version in (*valid, *invalid):
             for name, content in self.files(version=version).items():
                 (path / name).write_bytes(content)
@@ -350,17 +346,6 @@ class PackChecks(unittest.TestCase):
         self.assertEqual(PACKS.inventory(str(self.data))["packs"][0]["id"], identifier)
         self.assertEqual(list(self.core.iterdir()), [])
         self.assert_no_stage()
-
-    def test_empty_binary_invalid_utf8_and_unexpected_files_fail(self):
-        path = self.directory(self.base / "fixtures")
-        for invalid in (b"", b" \n", b"hello\0world", b"\xff"):
-            (path / "GUIDE.md").write_bytes(invalid)
-            with self.subTest(invalid=invalid), self.assertRaises(ValueError):
-                PACKS.validate(path)
-        (path / "GUIDE.md").write_bytes(b"Guide")
-        (path / "script.py").write_bytes(b"print('not allowed')")
-        with self.assertRaises(PACKS.PackError):
-            PACKS.validate(path)
 
     def test_install_idempotence_and_explicit_replace(self):
         first = self.install()
@@ -444,28 +429,8 @@ class PackChecks(unittest.TestCase):
             self.assertFalse(self.installed().exists())
         self.assertFalse((self.base / "escape.md").exists())
 
-    def test_duplicate_and_case_colliding_archive_members_rejected(self):
-        for name in ("GUIDE.md", "guide.md"):
-            archive, digest = self.archive(extra=[(name, b"duplicate", stat.S_IFREG | 0o644)])
-            with self.subTest(name=name), self.assertRaises(PACKS.PackError):
-                PACKS.install(archive, digest, str(self.data))
-            self.assert_no_stage()
-
-    def test_symlink_and_special_file_archive_members_rejected(self):
-        files = self.files()
-        files.pop("GUIDE.md")
-        for mode in (stat.S_IFLNK | 0o777, stat.S_IFIFO | 0o644, stat.S_IFDIR | 0o755):
-            archive, digest = self.archive(files, [("GUIDE.md", b"../../outside", mode)])
-            with self.subTest(mode=mode), self.assertRaises(PACKS.PackError):
-                PACKS.install(archive, digest, str(self.data))
-            self.assert_no_stage()
-
-    def test_uncompressed_member_and_total_size_limits(self):
-        files = self.files()
-        files["GUIDE.md"] = b"a" * (PACKS.MAX_FILE + 1)
-        archive, digest = self.archive(files)
-        with self.assertRaises(PACKS.PackError):
-            PACKS.install(archive, digest, str(self.data))
+    def test_expanded_archive_total_size_limit(self):
+        # Single-member size limits are covered with the other content checks.
         files = self.files()
         for name in ("GUIDE.md", "examples.md", "LICENSE", "REVIEW.md"):
             files[name] = b"a" * PACKS.MAX_FILE

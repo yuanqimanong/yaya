@@ -1,8 +1,8 @@
 {
   "format_version": 1,
   "id": "en",
-  "version": "0.2.0",
-  "core_major": 0,
+  "version": "1.0.0",
+  "core_major": 1,
   "name": "English",
   "license": "MIT",
   "quality": "experimental",

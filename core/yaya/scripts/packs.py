@@ -17,13 +17,15 @@ import zipfile
 
 CORE = Path(__file__).resolve().parents[1]
 FORMAT = 1
-CORE_MAJOR = 0
+CORE_MAJOR = 1
 REQUIRED = {"pack.json", "GUIDE.md", "examples.md", "LICENSE"}
 ALLOWED = REQUIRED | {"REVIEW.md", "PATTERNS.md"}
 FIELDS = {"format_version", "id", "version", "core_major", "name", "license", "quality", "direction"}
 MAX_FILE = 512 * 1024
 MAX_TOTAL = 2 * 1024 * 1024
 MAX_ARCHIVE = 8 * 1024 * 1024
+# CLDR parentLocales entries that differ from plain subtag truncation.
+PARENT_LOCALES = {"zh-Hant-MO": "zh-Hant-HK"}
 SEMVER = re.compile(r"(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*)(?:\.(?:0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*))*))?(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?", re.ASCII)
 
 
@@ -64,8 +66,9 @@ def candidates(value: str) -> list[str]:
         parts.insert(1, script)
     while parts:
         tag = "-".join(parts)
-        if tag not in result:
-            result.append(tag)
+        for item in (tag, PARENT_LOCALES.get(tag)):
+            if item and item not in result:
+                result.append(item)
         parts.pop()
     return result
 

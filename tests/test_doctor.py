@@ -36,7 +36,7 @@ class DoctorTests(unittest.TestCase):
             run = self.run_doctor(*flags)
             self.assertEqual(run.returncode, 1, run.stderr)
             self.assertNotIn(b"Traceback", run.stderr)
-        report = json.loads(self.run_doctor("--json").stdout)
+        report = json.loads(run.stdout)
         self.assertIn("packs.py", next(x for x in report["checks"] if x["name"] == "runtime-files")["detail"])
 
     def test_syntactically_broken_helpers_are_not_ready(self):

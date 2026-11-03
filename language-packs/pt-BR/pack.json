@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "id": "pt-BR",
+  "version": "1.0.0",
+  "core_major": 1,
+  "name": "Português (Brasil)",
+  "license": "MIT",
+  "quality": "experimental",
+  "direction": "ltr"
+}

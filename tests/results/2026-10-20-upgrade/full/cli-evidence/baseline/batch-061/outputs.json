@@ -1,8 +1,0 @@
-[
-  {
-    "id": "H027",
-    "text": "Only retry after the transaction has rolled back. Never retry authentication failures.",
-    "notes": "",
-    "skill_used": false
-  }
-]

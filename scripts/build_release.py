@@ -64,7 +64,7 @@ def build(output: Path) -> dict:
     packs.no_links(output)
     output = output.resolve()
     # Never mix generated assets into source directories.
-    if output == ROOT or any(output.is_relative_to(ROOT / p) for p in ("core", "language-packs", "templates", "scripts", "schemas", "tests", "evals", "docs")):
+    if output == ROOT or any(output.is_relative_to(ROOT / p) for p in ("core", "language-packs", "templates", "scripts", "schemas", "tests", "docs")):
         raise ValueError("Choose a separate output directory, normally dist/")
     version_path = CORE / "version.json"
     packs.no_links(version_path)

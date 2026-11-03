@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "id": "ru",
+  "version": "1.0.0",
+  "core_major": 1,
+  "name": "Русский",
+  "license": "MIT",
+  "quality": "experimental",
+  "direction": "ltr"
+}

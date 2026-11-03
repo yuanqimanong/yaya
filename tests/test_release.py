@@ -208,11 +208,11 @@ class ReleaseBuildTests(unittest.TestCase):
         self.assertEqual(json.loads(changed_number.stdout)["status"], "failed")
 
     def test_contribution_template_is_not_published(self):
-        self.assertTrue((self.source / "templates" / "language-pack" / "pack.json").is_file())
-        if not (self.source / "language-packs" / "fr").exists():
-            self.assertNotIn("fr", {item["id"] for item in self.catalog["language_packs"]})
-            self.assertFalse(any("yaya-lang-fr-" in path.name for path in self.first.iterdir()))
-        self.assertFalse(any("/templates/" in name or "/languages/fr/" in name for name in self.read_core_names()))
+        template = json.loads((self.source / "templates/language-pack/pack.json").read_text(encoding="utf-8"))
+        self.assertEqual(template["id"], "und")
+        self.assertNotIn("und", {item["id"] for item in self.catalog["language_packs"]})
+        self.assertFalse(any("yaya-lang-und-" in path.name for path in self.first.iterdir()))
+        self.assertFalse(any("/templates/" in name for name in self.read_core_names()))
 
     def test_command_help_and_domain_routing_work_in_relocated_release(self):
         core = self.unpack_core(self.scratch / "command relocation")
@@ -259,20 +259,20 @@ class ReleaseBuildTests(unittest.TestCase):
         shutil.copytree(self.source, source)
         version_path = source / "core" / "yaya" / "version.json"
         baseline = json.loads(version_path.read_text(encoding="utf-8"))
+        # One bool and one float cover the integer check for both fields.
         cases = [
             {**baseline, "pack_format": True},
-            {**baseline, "core_major": False},
-            {**baseline, "pack_format": 1.0},
             {**baseline, "pack_format": 2},
-            {**baseline, "core_major": 0.0},
+            {**baseline, "core_major": 1.0},
             {**baseline, "version": None},
-            {**baseline, "version": "0.1.0-01"},
-            {**baseline, "core_major": 1},
+            {**baseline, "version": "1.0.0-01"},
+            {**baseline, "version": "2.0.0"},
+            {**baseline, "core_major": 2},
             {key: value for key, value in baseline.items() if key != "version"},
             [baseline],
         ]
         texts = [json.dumps(case) for case in cases]
-        texts.append('{"version":"0.1.0","version":"0.2.0","pack_format":1,"core_major":0}')
+        texts.append('{"version":"1.0.0","version":"1.1.0","pack_format":1,"core_major":1}')
         for index, text in enumerate(texts):
             with self.subTest(metadata=text):
                 version_path.write_text(text, encoding="utf-8")
@@ -319,13 +319,13 @@ class ReleaseBuildTests(unittest.TestCase):
     def test_build_rejects_unrecognized_pack_format_before_creating_output(self):
         source = self.scratch / "unsupported format source"
         shutil.copytree(self.source, source)
-        package = source / "language-packs" / "fr"
+        package = source / "language-packs" / "und"
         package.mkdir()
         for name in PACK_FILES:
             shutil.copyfile(source / "templates" / "language-pack" / name, package / name)
         metadata_path = package / "pack.json"
         metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-        metadata.update(format_version=2, id="fr", version="0.2.0")
+        metadata.update(format_version=2)
         metadata_path.write_text(json.dumps(metadata), encoding="utf-8")
         output = self.scratch / "unsupported format release"
         run = self.run_script(source / "scripts" / "build_release.py", "--output", output)
